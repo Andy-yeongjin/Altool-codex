@@ -28,7 +28,7 @@
 [2] /al design    │
 [3] /al run        ├─ /al oneshot [기능 설명] 하나로 자동 완주
 [4] /al analyze   │   (독립 검증 에이전트 + Match Rate 4축)
-[5] /al fix   │   (< 90% 시, 자동)
+[5] /al fix   │   (갭 발견 시, 자동)
 [6] 브라우저 검증  ─┘
 [7] /al report   ← 완료 보고서
 ```

@@ -51,8 +51,8 @@
 |------|------|:----:|
 | Plan | [{기능명}.plan.md](../01-plan/features/{기능명}.plan.md) | Finalized |
 | Design | [{기능명}.design.md](../02-design/features/{기능명}.design.md) | Finalized |
-| Analysis | [{기능명}.analysis.md](../03-analysis/{기능명}.analysis.md) | 완료 |
-| Fix | {[{기능명}.fix.md](../03-analysis/{기능명}.fix.md) 또는 "실행 안 함 (첫 분석 ≥90%)"} | |
+| Analyze | [{기능명}.analyze.md](../03-analyze/{기능명}.analyze.md) | 완료 |
+| Fix | {[{기능명}.fix.md](../03-analyze/{기능명}.fix.md) 또는 "실행 안 함 (첫 분석 갭 0건)"} | |
 
 ## 4. 완료·미완 항목
 

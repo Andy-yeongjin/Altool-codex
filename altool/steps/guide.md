@@ -15,7 +15,7 @@
 [ ] designs/*.pen, designs/stitch/  — 디자인 소스
 [ ] docs/01-plan/  docs/02-design/  — 계획·설계
 [ ] src/ 또는 app/                  — 구현
-[ ] docs/03-analysis/  docs/04-report/ — 분석·보고서
+[ ] docs/03-analyze/  docs/04-report/ — 분석·보고서
 ```
 
 ## Step 2: 단계 판단 → 다음 명령
@@ -30,9 +30,9 @@
 | 01-plan 없음 | 계획 필요 | `/al plan {기능명}` |
 | 01-plan ✅, 02-design 없음 | 계획 완료 | `/al design {기능명}` |
 | 02-design ✅, 소스코드 미완 | 설계 완료 | `/al run {기능명}` |
-| 소스코드 ✅, analysis 없음 | 구현 완료 | `/al analyze {기능명}` |
-| analysis ✅, Match Rate < 90% | 개선 필요 | `/al fix {기능명}` |
-| analysis ✅, Match Rate ≥ 90% | 검증 통과 | `/simplify` (코드 정리, 선택) → `/al report {기능명}` |
+| 소스코드 ✅, analyze 문서 없음 | 구현 완료 | `/al analyze {기능명}` |
+| analyze ✅, 미해소 갭 존재 | 개선 필요 | `/al fix {기능명}` (Match Rate ≥90%여도) |
+| analyze ✅, 미해소 갭 0건 | 검증 통과 | `/simplify` (코드 정리, 선택) → `/al report {기능명}` |
 | report ✅ | 🐥 사이클 완료 | 다음 기능 `/al oneshot …` 또는 배포 가이드 |
 
 ## Step 3: 출력 형식

@@ -16,6 +16,8 @@
 
 ### 4~5. Decision Record Chain + Success Criteria 표시
 
+> **자동 파이프라인 모드에서는 아래 표 출력을 생략**하고 `📋 결정: {핵심 1줄} | 🎯 SC {N}개 추적` 한 줄 요약만 출력한다 (장황 방지). 표 전체 출력은 수동 실행 시에만.
+
 구현 시작 전 대화에 출력:
 
 ```
@@ -80,7 +82,7 @@ AskUserQuestion: **"이 범위로 구현을 시작해도 되겠습니까?"** —
 
 ### 14~15. 상태 갱신 + 보고
 
-`.altool/state/status.json`: `phase: "run"`.
+`.altool/state/status.json`: `phase: "run"`, **`buildVerified: true`** (빌드 성공 확인 후에만).
 **문서 동기화** (CLAUDE.md 규칙): plan §2.1 포함(In Scope)의 구현된 항목 체크, plan §3.1 FR Status를 `Pending` → `✅ 완료`로, design §11.2 Implementation Order의 완료 항목 체크.
 
 ```

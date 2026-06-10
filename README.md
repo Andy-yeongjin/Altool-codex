@@ -3,6 +3,8 @@
 **헌법 기반 통합 AI 개발 시스템** — 계획부터 검증·보고까지의 개발 사이클을 `/al` 명령어 하나로 완주합니다.
 플러그인 설치가 필요 없습니다. 마크다운 엔진(`altool/`)이 전부 자체 수행합니다.
 
+> 📖 **처음이세요?** [**Altool 전체 가이드**](guides/altool-guide.html)를 브라우저로 여세요 — 설치(setup.bat)부터 개발·검증·배포까지 복사 버튼과 함께 한 페이지로 안내합니다.
+
 ---
 
 ## 이게 뭔가요?
@@ -15,13 +17,13 @@ Altool은 세 가지를 모든 구현의 기준으로 삼아 개발 사이클을
 | **디자인 헌법** | `designs/design-constitution.md` | 정부 UIUX 가이드라인 — 대비 4.5:1, 터치 44px, 키보드 접근성 |
 | **디자인 시스템** | `designs/design.md` + `design-tokens.css` | 프로젝트 고유 색상·폰트·간격 토큰 |
 
-sb-flow·bkit 대비 핵심 개선:
+핵심 특징:
 
 - **플러그인 불필요** — 개발 사이클 엔진을 마크다운 지침으로 내장 (네트워크·마켓플레이스 접근 불필요)
 - **헌법·토큰 강제가 엔진 내장** — 명령어에 긴 지시문을 붙일 필요 없음
 - **독립 검증 에이전트** — 갭 분석을 별도 에이전트가 수행해 자기 채점 편향 차단
-- **Match Rate 4축** — Structural/Functional/Contract/Runtime 가중 공식 (bkit v2.3.0 호환)
-- **문서 상태 동기화** — 단계 완료 시 상류 문서의 체크박스·Status 자동 갱신 (bkit에 없던 기능)
+- **Match Rate 4축** — Structural/Functional/Contract/Runtime 가중 공식으로 일치율 측정
+- **문서 상태 동기화** — 단계 완료 시 상류 문서의 체크박스·Status 자동 갱신 (문서만 열어도 진행 상황이 보임)
 - **상태 + 이력** — `.altool/state/status.json`에 phase·matchRate·append-only history 기록
 
 ---
@@ -76,8 +78,8 @@ sb-flow·bkit 대비 핵심 개선:
 | `/al plan {기능명}` | 개발 계획 → `docs/01-plan/features/` |
 | `/al design {기능명}` | 상세 설계 (아키텍처 3안 비교) → `docs/02-design/features/` |
 | `/al run {기능명}` | 코드 구현 (Depth-First + 빌드 검증) |
-| `/al analyze {기능명}` | 갭 분석 (독립 에이전트, 4축 Match Rate) → `docs/03-analysis/` |
-| `/al fix {기능명}` | Match Rate < 90% 시 자동 개선 (최대 5회) |
+| `/al analyze {기능명}` | 갭 분석 (독립 에이전트, 4축 Match Rate) → `docs/03-analyze/` |
+| `/al fix {기능명}` | 갭 발견 시 자동 개선 → 재검증 (최대 5회) |
 | `/al report {기능명}` | 완료 보고서 → `docs/04-report/` |
 | `/al status` | 기능별 진행 현황 + 최근 이력 |
 
@@ -87,7 +89,7 @@ sb-flow·bkit 대비 핵심 개선:
 
 | 파일/폴더 | 용도 |
 |----------|------|
-| `altool/` | **엔진** — 공통 규칙(CLAUDE.md) + 단계별 절차(steps/ 11종) + 산출물 템플릿(templates/ 6종) |
+| `altool/` | **엔진** — 공통 규칙(CLAUDE.md) + 단계별 절차(steps/ 12종) + 산출물 템플릿(templates/ 6종) |
 | `.claude/commands/al.md` | `/al` 명령어 라우터 |
 | `CLAUDE.md` | 세션 시작 시 자동으로 읽히는 프로젝트 컨텍스트 |
 | `constitution.md` | 개발 헌법 (19개 조항) |
@@ -113,11 +115,11 @@ sb-flow·bkit 대비 핵심 개선:
 
 ## 자주 묻는 질문
 
-**Q. bkit을 설치해야 하나요?**
-아니요. Altool 엔진이 개발 사이클을 자체 수행합니다. 플러그인·네트워크 불필요.
+**Q. 별도 플러그인이나 도구를 설치해야 하나요?**
+아니요. Altool 엔진(마크다운 지침)이 개발 사이클을 자체 수행합니다. 플러그인·네트워크 불필요.
 
-**Q. sb-flow와 뭐가 다른가요?**
-sb-flow는 외부 플러그인에 의존하고 명령 체계가 둘로 나뉘어 있었습니다. Altool은 `/al` 단일 체계로 합치고 플러그인 의존을 제거했으며, 독립 검증 에이전트·문서 동기화·이력 추적을 추가했습니다.
+**Q. 다른 AI 개발 워크플로우 도구와 뭐가 다른가요?**
+대부분 외부 플러그인에 의존하거나 검증을 같은 AI가 스스로 합니다. Altool은 플러그인 없이 동작하고, 갭 분석을 독립 검증 에이전트에 분리하며, 문서 동기화·교훈(lesson) 누적으로 쓸수록 정확해집니다.
 
 **Q. 헌법을 커스터마이징하고 싶어요**
 프로젝트의 `constitution.md`를 직접 수정하면 됩니다.

@@ -1,6 +1,6 @@
 # /al fix — Fix 단계 (자동 개선)
 
-**산출물**: 개선된 소스 코드 + `docs/03-analysis/{기능명}.fix.md` (iteration report)
+**산출물**: 개선된 소스 코드 + `docs/03-analyze/{기능명}.fix.md` (iteration report)
 
 ---
 
@@ -8,15 +8,16 @@
 
 ### 1. 실행 조건 확인
 
-- `docs/03-analysis/{기능명}.analysis.md`의 Gap 목록과 `.altool/state/status.json`의 `matchRate` 확인.
-  - analysis 문서가 없으면 → `/al analyze {기능명}` 먼저 실행 안내 후 중단.
-- **matchRate ≥ 90%면** → `✅ Match Rate {N}% — 개선 불필요. /al report {기능명}로 진행하세요.` 출력 후 종료.
+- `docs/03-analyze/{기능명}.analyze.md`의 Gap 목록과 `.altool/state/status.json`의 `matchRate` 확인.
+  - analyze 문서가 없으면 → `/al analyze {기능명}` 먼저 실행 안내 후 중단.
+- **analyze 문서 §3에 미해소 갭이 0건이면** → `✅ 미해소 갭 없음 (Match Rate {N}%) — 개선 불필요. /al report {기능명}로 진행하세요.` 출력 후 종료.
+  - Match Rate ≥ 90%여도 **갭이 남아 있으면 수정한다** — 90%는 통과선이지 수정 면제선이 아니다 (CLAUDE.md Fix 규칙).
 - Checkpoint 5에서 "Critical만 수정"이 선택됐으면 Critical 갭만 대상으로 한다.
 
 ### 2~3. Gap 목록 기반 자동 수정
 
 각 갭을 **하나씩** 수정한다:
-- analysis 문서의 "수정 방향"을 따른다
+- analyze 문서의 "수정 방향"을 따른다
 - Functional 갭(SHALLOW 파일)은 run 단계의 Depth-First 기준으로 완성한다: TODO 제거, 실데이터 연결, Page UI Checklist 항목 충족
 - Contract 갭은 Design §4 스키마에 맞춰 서버·클라이언트 양쪽 정렬
 - **설계 자체가 잘못된 경우** → 코드를 끼워 맞추지 말고 Design 문서를 수정한 후 해당 갭을 갱신 (헌법 제9조: 명세-코드 동기화)
@@ -32,11 +33,11 @@
 
 `.altool/state/status.json`: `iterationCount` +1, `matchRate` 갱신, `phase: "fix"`.
 
-- **Match Rate ≥ 90%** → 종료, 보고로
-- **< 90% 그리고 iterationCount < 5** → 2~5번 반복 (최대 5회)
-- **< 90% 그리고 iterationCount ≥ 5** → 중단 후 안내:
+- **미해소 갭 0건** → 종료, 보고로
+- **갭 잔존 그리고 iterationCount < 5** → 2~5번 반복 (최대 5회)
+- **갭 잔존 그리고 iterationCount ≥ 5** → 중단 후 안내:
   ```
-  ⚠️ 최대 반복(5회) 후에도 Match Rate가 {N}%입니다.
+  ⚠️ 최대 반복(5회) 후에도 갭 {N}건이 남았습니다 (Match Rate {N}%).
   남은 갭: {요약}
   선택 A (권장): 남은 갭을 직접 확인 후 개별 지시로 수정
   선택 B: 이 상태로 /al report {기능명} 진행
@@ -50,9 +51,9 @@
 
 ### 7. Fix Report 작성
 
-`altool/templates/fix.template.md` 구조로 `docs/03-analysis/{기능명}.fix.md`를 작성/갱신한다:
+`altool/templates/fix.template.md` 구조로 `docs/03-analyze/{기능명}.fix.md`를 작성/갱신한다:
 - §1 Match Rate 추이 (회차별·축별)
-- §2 해소된 갭 (analysis 갭 번호와 일치시킴)
+- §2 해소된 갭 (analyze 문서의 갭 번호와 일치시킴)
 - §3 회차별 상세 (수정 내용·파일·재분석 결과)
 - §4 잔여 갭 (자동 수정 불가 사유 + 제안)
 
@@ -60,6 +61,6 @@
 
 ```
 🐣 [al:fix] {기능명} 완료 — Match Rate {이전}% → {현재}% ({iterationCount}회차)
-   산출물: docs/03-analysis/{기능명}.fix.md
+   산출물: docs/03-analyze/{기능명}.fix.md
    다음 단계: /al report {기능명}  (또는 남은 갭 안내)
 ```
