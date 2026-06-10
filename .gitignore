@@ -1,0 +1,24 @@
+# Altool state
+.altool/
+
+# Playwright MCP
+.playwright-mcp/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Env / secrets
+.env
+.env*.local
+
+# Local DB (sqlite dev)
+*.db
+*.db-journal
