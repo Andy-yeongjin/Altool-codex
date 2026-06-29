@@ -164,5 +164,10 @@ Altool은 특정 스택을 강제하지 않습니다. plan/spec에서 요청 범
 
 ## License
 
-MIT
+Original Altool-codex source code, scripts, templates, and documentation are
+licensed under the [MIT License](LICENSE).
+
+Bundled third-party materials, including the Vercel React Best Practices skill,
+the Digital Government Service UI/UX guideline PDF, and guide screenshots, keep
+their original ownership and terms. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
