@@ -528,7 +528,7 @@ textarea { resize: vertical; min-height: 80px; font-family: inherit; }
     <div class="howto-step">
       <div class="num">3</div>
       <div class="label">prd/ 폴더에 넣기</div>
-      <div class="desc">/al oneshot이 자동 감지</div>
+      <div class="desc">$altool oneshot이 자동 감지</div>
     </div>
   </div>
 
@@ -640,7 +640,7 @@ textarea { resize: vertical; min-height: 80px; font-family: inherit; }
       <span class="field-num">7</span>
       <span class="field-title">하지 말 것 (Out of Scope)<span class="field-optional">선택</span></span>
     </div>
-    <div class="field-hint">"이건 이번에 안 만든다"를 명시하면 Claude가 과하게 만드는 걸 막을 수 있어요. 예: <code>SNS 공유 기능 안 함</code></div>
+    <div class="field-hint">"이건 이번에 안 만든다"를 명시하면 Codex가 과하게 만드는 걸 막을 수 있어요. 예: <code>SNS 공유 기능 안 함</code></div>
     <div class="items" id="out">
       <div class="item-row">
         <input type="text" placeholder="예: SNS 공유 기능 안 함">
@@ -656,7 +656,7 @@ textarea { resize: vertical; min-height: 80px; font-family: inherit; }
       <span class="field-num">📎</span>
       <span class="field-title">참고 문서 업로드<span class="field-optional">선택</span></span>
     </div>
-    <div class="field-hint">기존 요구사항 문서·와이어프레임·기획서 등이 있다면 첨부하세요. PRD와 함께 ZIP으로 묶여 다운로드되고, 압축을 풀면 <code>prd/refs/</code> 폴더에 자동 배치됩니다. <strong>Claude는 PRD를 읽을 때 같은 폴더의 <code>refs/</code> 안 모든 파일을 함께 읽습니다.</strong></div>
+    <div class="field-hint">기존 요구사항 문서·와이어프레임·기획서 등이 있다면 첨부하세요. PRD와 함께 ZIP으로 묶여 다운로드되고, 압축을 풀면 <code>prd/refs/</code> 폴더에 자동 배치됩니다. <strong>Codex는 PRD를 읽을 때 같은 폴더의 <code>refs/</code> 안 모든 파일을 함께 읽습니다.</strong></div>
     <div class="dropzone" id="dropzone" onclick="document.getElementById('file-picker').click()">
       <div class="dropzone-icon">📁</div>
       <div class="dropzone-title">파일을 여기로 드래그하거나 클릭해서 선택</div>
@@ -743,7 +743,7 @@ textarea { resize: vertical; min-height: 80px; font-family: inherit; }
         <span class="field-num">11</span>
         <span class="field-title">페르소나 시나리오<span class="field-optional">선택</span></span>
       </div>
-      <div class="field-hint">대표 사용자 1~3명의 일상 사용 흐름을 적으면 Claude가 UI/UX를 훨씬 구체적으로 설계합니다. 이름·나이·직업이 구체적일수록 좋아요.</div>
+      <div class="field-hint">대표 사용자 1~3명의 일상 사용 흐름을 적으면 Codex가 UI/UX를 훨씬 구체적으로 설계합니다. 이름·나이·직업이 구체적일수록 좋아요.</div>
       <div class="items" id="personas">
         <div class="persona-card">
           <div class="persona-card-head">
@@ -821,7 +821,7 @@ textarea { resize: vertical; min-height: 80px; font-family: inherit; }
 
 <div class="container" style="padding-top:0; padding-bottom:32px;">
   <div class="footer">
-    Altool · PRD Builder &nbsp;·&nbsp; 다운로드한 .md 파일을 <code style="background:rgba(34,211,238,0.06);color:var(--cyan);padding:1px 6px;border-radius:4px;font-family:'Fira Code',monospace;font-size:12px;">prd/</code> 폴더에 넣고 <code style="background:rgba(34,211,238,0.06);color:var(--cyan);padding:1px 6px;border-radius:4px;font-family:'Fira Code',monospace;font-size:12px;">/al oneshot</code> 실행
+    Altool · PRD Builder &nbsp;·&nbsp; 다운로드한 .md 파일을 <code style="background:rgba(34,211,238,0.06);color:var(--cyan);padding:1px 6px;border-radius:4px;font-family:'Fira Code',monospace;font-size:12px;">prd/</code> 폴더에 넣고 <code style="background:rgba(34,211,238,0.06);color:var(--cyan);padding:1px 6px;border-radius:4px;font-family:'Fira Code',monospace;font-size:12px;">$altool oneshot</code> 실행
   </div>
 </div>
 
@@ -1127,7 +1127,7 @@ function buildPRD() {
   // ── 13. 참고 문서 (업로드된 파일이 있을 때만) ──
   if (_files.length) {
     md += `\n## 13. 참고 문서 (refs/)\n`;
-    md += `Claude는 \`prd/refs/\` 폴더의 모든 파일을 PRD와 함께 컨텍스트로 읽어서 요구사항을 보강할 것.\n\n`;
+    md += `Codex는 \`prd/refs/\` 폴더의 모든 파일을 PRD와 함께 컨텍스트로 읽어서 요구사항을 보강할 것.\n\n`;
     _files.forEach(x => {
       const path = `prd/refs/${x.file.name}`;
       md += `- \`${path}\``;
@@ -1137,7 +1137,7 @@ function buildPRD() {
   }
 
   md += `\n---\n`;
-  md += `**Claude에게**: 이 PRD의 모든 항목을 빠짐없이 반영해서 \`/al oneshot\` 6단계 파이프라인을 실행해줘.\n`;
+  md += `**Codex에게**: 이 PRD의 모든 항목을 빠짐없이 반영해서 \`$altool oneshot\` 7단계 파이프라인을 실행해줘.\n`;
   md += `특히 "5. 필요한 화면" 목록은 라우팅·컴포넌트 구조 설계에 그대로 반영하고, "7. 범위 외" 항목은 절대 구현하지 말 것.\n`;
   if (roles.length) md += `"8. 사용자 역할"은 인증·인가 로직과 메뉴 권한 매트릭스 설계의 기준으로 사용해.\n`;
   if (entities.length) md += `"9. 핵심 데이터"는 schema.prisma 모델 정의의 출발점으로 사용해.\n`;
@@ -1156,7 +1156,7 @@ function suggestFilename() {
     .replace(/\s+/g, '-')
     .replace(/[^\w가-힣\-]/g, '')
     .slice(0, 40) || 'PRD';
-  // Altool(/al oneshot)이 인식하려면 파일명에 'PRD'가 포함돼야 함
+  // Altool($altool oneshot)이 인식하려면 파일명에 'PRD'가 포함돼야 함
   return /PRD/i.test(base) ? `${base}.md` : `PRD-${base}.md`;
 }
 
@@ -1255,3 +1255,4 @@ updateProgress();
 </script>
 </body>
 </html>
+

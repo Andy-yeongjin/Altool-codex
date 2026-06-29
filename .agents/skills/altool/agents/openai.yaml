@@ -1,0 +1,4 @@
+interface:
+  display_name: "Altool"
+  short_description: "Run Altool local project workflow commands"
+  default_prompt: "$altool setup"

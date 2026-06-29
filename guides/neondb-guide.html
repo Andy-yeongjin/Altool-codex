@@ -485,7 +485,7 @@ body {
 <section class="hero">
   <div class="hero-badge">NeonDB Connect Guide</div>
   <h1>NeonDB 연결 가이드</h1>
-  <p>가입·콘솔 작업은 사람이 직접,<br>코드 연결은 프롬프트를 복사해서 Claude에게 시킵니다.</p>
+  <p>가입·콘솔 작업은 사람이 직접,<br>코드 연결은 프롬프트를 복사해서 Codex에게 시킵니다.</p>
   <div class="hero-highlight">
     <span><strong>스택 가정:</strong> Next.js (App Router) + Prisma</span>
   </div>
@@ -498,7 +498,7 @@ body {
     <p>NeonDB 가입, 프로젝트 생성, Connection String 복사 — 보안 자격증명을 받아오는 단계</p>
   </div>
   <div class="role-card ai">
-    <h4>🤖 Claude가 하는 일</h4>
+    <h4>🤖 Codex가 하는 일</h4>
     <p>프롬프트 복사 → 붙여넣기 한 번이면 Prisma 설정·스키마·마이그레이션까지 모두 처리</p>
   </div>
 </div>
@@ -624,19 +624,19 @@ body {
   </div>
 </div>
 
-<!-- ══════════ Step 4: Claude 프롬프트 ══════════ -->
+<!-- ══════════ Step 4: Codex 프롬프트 ══════════ -->
 <div class="big-step">
   <div class="big-step-header">
     <div class="big-num ai">4</div>
     <div class="big-step-text">
-      <h2>Claude에게 연결 시키기 <span class="who ai">프롬프트 복사</span></h2>
-      <p>아래 프롬프트를 Claude Code 대화창에 붙여넣고, <span style="color:var(--orange);font-weight:700;">{{POOLED_URL}}</span>·<span style="color:var(--orange);font-weight:700;">{{DIRECT_URL}}</span> 두 군데만 3단계에서 복사한 값으로 교체하세요.</p>
+      <h2>Codex에게 연결 시키기 <span class="who ai">프롬프트 복사</span></h2>
+      <p>아래 프롬프트를 Codex 대화창에 붙여넣고, <span style="color:var(--orange);font-weight:700;">{{POOLED_URL}}</span>·<span style="color:var(--orange);font-weight:700;">{{DIRECT_URL}}</span> 두 군데만 3단계에서 복사한 값으로 교체하세요.</p>
     </div>
   </div>
 
   <div class="cmd-block prompt-block">
     <div class="cmd-header">
-      <span class="cmd-label">Claude Code 대화창에 붙여넣기 → URL 두 개만 교체</span>
+      <span class="cmd-label">Codex 대화창에 붙여넣기 → URL 두 개만 교체</span>
       <button class="cmd-copy" onclick="copyCmd(this)">복사</button>
     </div>
     <div class="cmd-code">constitution.md를 읽고 모든 원칙을 준수해줘. 특히 보안: API 키/DB 자격증명은 코드에 하드코딩 금지, .env 로만 관리, .gitignore에 .env 포함 확인.
@@ -698,13 +698,13 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
     <div class="big-num ai">5</div>
     <div class="big-step-text">
       <h2>연결 확인 <span class="who ai">프롬프트 복사</span></h2>
-      <p>Claude에게 프롬프트로 검증을 시키고, 결과 보고를 받으세요.</p>
+      <p>Codex에게 프롬프트로 검증을 시키고, 결과 보고를 받으세요.</p>
     </div>
   </div>
 
   <div class="cmd-block prompt-block">
     <div class="cmd-header">
-      <span class="cmd-label">Claude Code 대화창에 붙여넣기 — 자동 검증</span>
+      <span class="cmd-label">Codex 대화창에 붙여넣기 — 자동 검증</span>
       <button class="cmd-copy" onclick="copyCmd(this)">복사</button>
     </div>
     <div class="cmd-code">방금 연결한 NeonDB가 정상 동작하는지 다음 절차로 검증하고 결과를 표로 보고해줘:
@@ -736,7 +736,7 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
 
   <div class="tip info">
     <div class="tip-icon">📊</div>
-    <div class="tip-text"><strong>Claude가 위 프롬프트로 검증 결과 표를 출력</strong>합니다. 모든 model이 row count로 잡히고 라운드트립까지 통과하면 연결·스키마·권한 모두 정상이라는 뜻이에요.</div>
+    <div class="tip-text"><strong>Codex가 위 프롬프트로 검증 결과 표를 출력</strong>합니다. 모든 model이 row count로 잡히고 라운드트립까지 통과하면 연결·스키마·권한 모두 정상이라는 뜻이에요.</div>
   </div>
 
   <div class="tip info">
@@ -897,3 +897,4 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
+

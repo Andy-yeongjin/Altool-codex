@@ -390,7 +390,7 @@ body {
 <section class="hero">
   <div class="hero-badge">▲ Vercel Deploy Guide</div>
   <h1>Vercel 배포 가이드</h1>
-  <p>가입·환경변수 등록은 사람이 직접,<br>코드 푸시·설정은 프롬프트 복사로 Claude에게 시킵니다.</p>
+  <p>가입·환경변수 등록은 사람이 직접,<br>코드 푸시·설정은 프롬프트 복사로 Codex에게 시킵니다.</p>
   <div class="hero-highlight">
     <span><strong>전제:</strong> NeonDB 연결이 끝났고 <code style="background:rgba(34,211,238,0.06);color:var(--cyan);padding:1px 6px;border-radius:4px;font-family:'Fira Code',monospace;font-size:12px;">npm run build</code> 가 로컬에서 성공한 상태</span>
   </div>
@@ -403,7 +403,7 @@ body {
     <p>GitHub·Vercel 가입, 저장소 연결, 환경변수 등록, 도메인 설정 — 외부 서비스 인증/설정 단계</p>
   </div>
   <div class="role-card ai">
-    <h4>🤖 Claude가 하는 일</h4>
+    <h4>🤖 Codex가 하는 일</h4>
     <p>git 초기화·푸시, vercel.json·빌드 스크립트 설정, prisma migrate deploy 추가 등 코드 작업</p>
   </div>
 </div>
@@ -462,19 +462,19 @@ body {
   </div>
 </div>
 
-<!-- ══════════ Step 2: Claude 프롬프트 — 푸시 ══════════ -->
+<!-- ══════════ Step 2: Codex 프롬프트 — 푸시 ══════════ -->
 <div class="big-step">
   <div class="big-step-header">
     <div class="big-num ai">2</div>
     <div class="big-step-text">
-      <h2>Claude에게 푸시 시키기 <span class="who ai">프롬프트 복사</span></h2>
+      <h2>Codex에게 푸시 시키기 <span class="who ai">프롬프트 복사</span></h2>
       <p>아래 프롬프트의 <span style="color:var(--orange);font-weight:700;">{{REPO_URL}}</span>만 1단계에서 복사한 URL로 교체.</p>
     </div>
   </div>
 
   <div class="cmd-block prompt-block">
     <div class="cmd-header">
-      <span class="cmd-label">Claude Code 대화창에 붙여넣기 → REPO_URL 교체</span>
+      <span class="cmd-label">Codex 대화창에 붙여넣기 → REPO_URL 교체</span>
       <button class="cmd-copy" onclick="copyCmd(this)">복사</button>
     </div>
     <div class="cmd-code">constitution.md를 읽고 모든 원칙 준수. 특히 보안: .env가 .gitignore에 포함되어 있는지 반드시 먼저 확인하고, 자격증명이 한 번도 커밋된 적이 없는지 git log로 검증해줘.
@@ -697,10 +697,10 @@ body {
     <div class="sub-step">
       <div class="sub-step-num"></div>
       <div class="sub-step-body">
-        <p>이후 작업 흐름은 <strong>Claude로 코드 수정 → git push</strong> 이게 전부. Vercel이 GitHub webhook을 받아 자동 빌드·배포합니다.</p>
+        <p>이후 작업 흐름은 <strong>Codex로 코드 수정 → git push</strong> 이게 전부. Vercel이 GitHub webhook을 받아 자동 빌드·배포합니다.</p>
         <div class="cmd-block prompt-block">
           <div class="cmd-header">
-            <span class="cmd-label">코드 수정 후 Claude에게 — 한 줄이면 충분</span>
+            <span class="cmd-label">코드 수정 후 Codex에게 — 한 줄이면 충분</span>
             <button class="cmd-copy" onclick="copyCmd(this)">복사</button>
           </div>
           <div class="cmd-code">방금 작업 내용을 의미 있는 단위로 커밋하고 origin main에 푸시해줘. 커밋 메시지는 변경사항을 한 줄로 요약하고, push 후 git log -1로 결과 확인해서 요약해줘.</div>
@@ -873,3 +873,4 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
+

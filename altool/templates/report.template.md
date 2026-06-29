@@ -2,6 +2,7 @@
 
 # {기능명} — 완료 보고서 (Report)
 
+> **상태**: Completed / Partial / Stopped
 > **결과**: 완료 / 부분 완료 / 중단
 >
 > **프로젝트**: {프로젝트명} | **완료일**: YYYY-MM-DD | **개발 사이클**: #{회차}
@@ -49,10 +50,11 @@
 
 | 단계 | 문서 | 상태 |
 |------|------|:----:|
-| Plan | [{기능명}.plan.md](../01-plan/features/{기능명}.plan.md) | Finalized |
-| Design | [{기능명}.design.md](../02-design/features/{기능명}.design.md) | Finalized |
+| Plan | [{기능명}.plan.md](../01-plan/features/{기능명}.plan.md) | Completed |
+| Spec | [{기능명}.spec.md](../02-spec/features/{기능명}.spec.md) | Finalized |
 | Analyze | [{기능명}.analyze.md](../03-analyze/{기능명}.analyze.md) | 완료 |
 | Fix | {[{기능명}.fix.md](../03-analyze/{기능명}.fix.md) 또는 "실행 안 함 (첫 분석 갭 0건)"} | |
+| Browser | [{기능명}.browser.md](../03-analyze/{기능명}.browser.md) | 완료 / 생략 |
 
 ## 4. 완료·미완 항목
 
@@ -73,7 +75,8 @@
 | 지표 | 목표 | 최종 |
 |------|:----:|:----:|
 | Overall Match Rate | 90% | {N}% |
-| 디자인 토큰 준수 | 위반 0건 | {결과} |
+| 디자인 기준 준수 | 사용자 디자인 입력/디자인 시스템 위반 0건 | {결과} |
+| 브라우저 기능·디자인 검증 | 주요 화면/핵심 행동 통과 | {결과} |
 | 빌드 / 테스트 | 성공 / 통과 | {결과} |
 | 보안 Critical | 0건 | {결과} |
 
@@ -82,12 +85,12 @@
 - **Keep (잘된 것)**: {다음에도 유지할 방식}
 - **Problem (아쉬운 것)**: {이번에 비효율·결함을 만든 원인}
 - **Try (다음에 시도)**: {구체적 개선 행동}
-- **Lesson 승격**: {Problem 중 범용 교훈은 `/al lesson`으로 글로벌 기록 — 기록한 L-번호 또는 "없음"}
+- **Lesson Events**: {개발 중 실제 코드 오류/갭을 기록한 E-번호 또는 "없음" — report 작성 중 새로 append하지 않음}
 
 ## 7. 다음 단계
 
 - [ ] {실사용 확인: start.bat → 브라우저}
-- [ ] {다음 기능: `/al oneshot …`}
+- [ ] {다음 기능: `$altool oneshot …`}
 - [ ] {배포 준비: DB 결정(ADR)·인증·환경 변수}
 
 ## 8. 변경 로그
@@ -105,3 +108,4 @@
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
 | 1.0 | YYYY-MM-DD | 완료 보고서 작성 | Altool |
+

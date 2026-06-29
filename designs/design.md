@@ -1,548 +1,294 @@
-# 프로젝트 디자인 시스템 (Altool Design System)
-
-> **이 문서는 Altool로 생성되는 모든 프로젝트의 UI 디자인 기준입니다.**
-> 모든 UI 요소는 이 명세를 따르며, `design-tokens.css`의 CSS 변수를 사용하여 구현합니다.
-> 색상·크기·간격 등의 값을 직접 하드코딩하지 않으며, 반드시 디자인 토큰 변수를 참조합니다.
->
-> **기반 스케일**: Tailwind CSS (https://tailwindcss.com/docs)
-> 색상, 간격, 그림자, 둥글기, 브레이크포인트 등 모든 토큰 값은 Tailwind CSS의 디자인 스케일을 기반으로 정의되었습니다. Tailwind를 직접 사용하는 것이 아니라, Tailwind의 검증된 수치 체계를 CSS 변수로 옮겨 사용합니다.
+(TBD)
 
 ---
-
-## 1. 테마 (Theme)
-
-### 1.1 색상 팔레트 (Color Palette)
-
-#### Primary (메인 — Blue 계열)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--color-primary-50` | `#EFF6FF` | 배경 하이라이트, 선택 상태 배경 |
-| `--color-primary-100` | `#DBEAFE` | 호버 배경, 뱃지 배경 |
-| `--color-primary-200` | `#BFDBFE` | 보더 하이라이트 |
-| `--color-primary-300` | `#93C5FD` | 비활성 아이콘 |
-| `--color-primary-400` | `#60A5FA` | 링크 호버 |
-| `--color-primary-500` | `#3B82F6` | 링크 텍스트, 보조 아이콘 |
-| `--color-primary-600` | `#2563EB` | **기본 버튼, CTA, 주요 강조** |
-| `--color-primary-700` | `#1D4ED8` | 버튼 호버 |
-| `--color-primary-800` | `#1E40AF` | 버튼 액티브(누름) |
-| `--color-primary-900` | `#1E3A8A` | 진한 텍스트 강조 |
-
-#### Neutral (중립 — Gray 계열)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--color-gray-50` | `#F9FAFB` | 페이지 배경, 카드 배경 (보조) |
-| `--color-gray-100` | `#F3F4F6` | 입력 필드 배경, 구분선 영역 |
-| `--color-gray-200` | `#E5E7EB` | 보더, 구분선 |
-| `--color-gray-300` | `#D1D5DB` | 비활성 보더, placeholder 아이콘 |
-| `--color-gray-400` | `#9CA3AF` | placeholder 텍스트, 비활성 텍스트 |
-| `--color-gray-500` | `#6B7280` | 보조 텍스트, 캡션 |
-| `--color-gray-600` | `#4B5563` | 본문 보조 텍스트 |
-| `--color-gray-700` | `#374151` | 본문 텍스트 |
-| `--color-gray-800` | `#1F2937` | 제목, 강조 텍스트 |
-| `--color-gray-900` | `#111827` | 최상위 제목, 네비게이션 텍스트 |
-
-#### 시맨틱 색상 (Semantic Colors)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--color-success` | `#16A34A` | 성공 메시지, 완료 상태 |
-| `--color-success-light` | `#F0FDF4` | 성공 알림 배경 |
-| `--color-warning` | `#D97706` | 경고, 주의 상태 |
-| `--color-warning-light` | `#FFFBEB` | 경고 알림 배경 |
-| `--color-danger` | `#DC2626` | 에러, 삭제, 위험 액션 |
-| `--color-danger-light` | `#FEF2F2` | 에러 알림 배경 |
-| `--color-info` | `#2563EB` | 안내 메시지 (Primary와 동일) |
-| `--color-info-light` | `#EFF6FF` | 안내 알림 배경 |
-
-#### 배경 및 표면 (Background & Surface)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--color-bg` | `#FFFFFF` | 메인 배경 |
-| `--color-bg-secondary` | `#F9FAFB` | 보조 배경 (사이드바, 섹션 구분) |
-| `--color-bg-tertiary` | `#F3F4F6` | 3차 배경 (코드 블록, 테이블 줄무늬) |
-| `--color-surface` | `#FFFFFF` | 카드, 모달, 드롭다운 표면 |
-| `--color-overlay` | `rgba(0, 0, 0, 0.5)` | 모달 오버레이 |
-
+version: alpha
+name: "{Project or Brand}-design-analysis"
+description: "{한 문단으로 정리한 브랜드 문법. 캔버스, 사진/미디어 사용, 타이포 성격, CTA 형태, 밀도, 금지 drift를 구체적으로 설명}"
+colors:
+  background: "#ffffff"
+  surface: "#f7f7f4"
+  surface-elevated: "#ffffff"
+  text-strong: "#111111"
+  text-body: "#4b5563"
+  text-muted: "#6b7280"
+  border: "#d9d6cc"
+  primary: "#1f5f86"
+  primary-hover: "#174a68"
+  on-primary: "#ffffff"
+  accent: "#b88945"
+  success: "#2f6f4e"
+  warning: "#b7791f"
+  error: "#b3261e"
+typography:
+  display-xl:
+    fontFamily: "{참조 display font 또는 safe stack}"
+    fontSize: "{예: 72px}"
+    fontWeight: "{예: 600}"
+    lineHeight: "{예: 0.98}"
+    letterSpacing: "0"
+    use: "hero headline"
+  heading-lg:
+    fontFamily: "{stack}"
+    fontSize: "{예: 32px}"
+    fontWeight: "{예: 700}"
+    lineHeight: "{예: 1.15}"
+    letterSpacing: "0"
+    use: "section heading"
+  body-md:
+    fontFamily: "{stack}"
+    fontSize: "16px"
+    fontWeight: "400"
+    lineHeight: "1.6"
+    letterSpacing: "0"
+    use: "default body"
+  label:
+    fontFamily: "{stack}"
+    fontSize: "12px"
+    fontWeight: "700"
+    lineHeight: "1.2"
+    letterSpacing: "{예: 0.04em}"
+    use: "metadata, badges, nav labels"
+spacing:
+  xs: "4px"
+  sm: "8px"
+  md: "12px"
+  lg: "16px"
+  xl: "24px"
+  xxl: "32px"
+  section: "{예: 64px}"
+rounded:
+  none: "0"
+  xs: "2px"
+  sm: "4px"
+  md: "8px"
+  lg: "12px"
+  pill: "9999px"
+elevation:
+  flat: "none"
+  hairline: "0 0 0 1px {colors.border}"
+  low: "{예: 0 4px 12px rgba(0,0,0,0.08)}"
+  overlay: "{예: 0 24px 48px rgba(0,0,0,0.18)}"
+components:
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.md 또는 rounded.pill}"
+    padding: "{예: 12px 24px}"
+    minHeight: "44px"
+  nav-bar:
+    backgroundColor: "{colors.background}"
+    textColor: "{colors.text-strong}"
+    typography: "{typography.label}"
+    border: "1px solid {colors.border}"
+    height: "{예: 72px}"
+  product-card:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.text-strong}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.lg}"
+    imageAspect: "{예: 4 / 5}"
+    shadow: "{elevation.flat}"
 ---
 
-### 1.2 다크모드 (Dark Mode)
-
-> **MVP 단계에서는 라이트 모드만 지원합니다.**
-> 다크모드 도입 시 `design-tokens.css`의 `@media (prefers-color-scheme: dark)` 섹션을 활성화합니다.
-
----
-
-## 2. 타이포그래피 (Typography)
-
-### 2.1 폰트 패밀리
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--font-sans` | `'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif` | 본문, UI 전체 |
-| `--font-mono` | `'JetBrains Mono', 'Fira Code', 'Consolas', monospace` | 코드, 숫자 강조 |
+# Altool 디자인 시스템
 
-### 2.2 폰트 크기 (Font Size)
+> `designs/design.md`는 UI 작업의 단일 디자인 원천입니다.
+> CSS 변수, CSS Modules 상수, Tailwind 설정, 컴포넌트 내부 값은 구현 코드 안에서 이 문서를 근거로 파생할 수 있지만, 별도의 디자인 원천으로 취급하지 않습니다.
 
-| 토큰 | 값 | rem | 용도 |
-|------|----|-----|------|
-| `--text-xs` | `12px` | 0.75rem | 캡션, 뱃지, 태그 |
-| `--text-sm` | `14px` | 0.875rem | 보조 텍스트, 테이블 셀, 라벨 |
-| `--text-base` | `16px` | 1rem | 본문 기본 |
-| `--text-lg` | `18px` | 1.125rem | 본문 강조, 서브 제목 |
-| `--text-xl` | `20px` | 1.25rem | 섹션 제목 |
-| `--text-2xl` | `24px` | 1.5rem | 페이지 제목 |
-| `--text-3xl` | `30px` | 1.875rem | 히어로 제목 |
-| `--text-4xl` | `36px` | 2.25rem | 랜딩 메인 제목 |
+## 1. Design Thesis
 
-### 2.3 폰트 굵기 (Font Weight)
+Altool로 만든 제품은 generic AI/SaaS 화면이 아니라 제품 도메인에 맞는 구체적인 화면이어야 합니다. 첫 화면에서 실제 제품, 데이터, 업무 흐름, 사용자가 해야 할 핵심 작업이 바로 보여야 합니다. 시각 결정은 사용자 디자인 입력이나 reference research에서 가져오고, 구현 전에 이 문서로 정규화합니다.
 
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--font-normal` | `400` | 본문 |
-| `--font-medium` | `500` | 라벨, 네비게이션 |
-| `--font-semibold` | `600` | 소제목, 버튼 텍스트 |
-| `--font-bold` | `700` | 제목, 강조 |
-
-### 2.4 줄 높이 (Line Height)
+기본 방향:
 
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--leading-tight` | `1.25` | 제목 |
-| `--leading-normal` | `1.5` | 본문 |
-| `--leading-relaxed` | `1.75` | 긴 문단, 가독성 강조 |
-
-### 2.5 자간 (Letter Spacing)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--tracking-tight` | `-0.025em` | 큰 제목 |
-| `--tracking-normal` | `0em` | 본문 |
-| `--tracking-wide` | `0.025em` | 대문자 라벨, 뱃지 |
-
----
-
-## 3. 간격 시스템 (Spacing)
-
-> 4px 기반 간격 체계. 모든 margin, padding은 이 토큰을 사용합니다.
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--space-0` | `0px` | 없음 |
-| `--space-0.5` | `2px` | 미세 간격 |
-| `--space-1` | `4px` | 아이콘-텍스트 사이 |
-| `--space-1.5` | `6px` | 인라인 요소 사이 |
-| `--space-2` | `8px` | 라벨-입력 사이, 뱃지 내부 |
-| `--space-3` | `12px` | 폼 요소 사이, 리스트 아이템 사이 |
-| `--space-4` | `16px` | 카드 내부 패딩, 섹션 내 요소 사이 |
-| `--space-5` | `20px` | 카드 패딩 (기본) |
-| `--space-6` | `24px` | 섹션 간 간격 |
-| `--space-8` | `32px` | 페이지 섹션 간격 |
-| `--space-10` | `40px` | 대형 섹션 간격 |
-| `--space-12` | `48px` | 페이지 상단 여백 |
-| `--space-16` | `64px` | 히어로 섹션 간격 |
-| `--space-20` | `80px` | 페이지 구간 대여백 |
-
----
-
-## 4. 레이아웃 (Layout)
-
-### 4.1 컨테이너 너비
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--container-sm` | `640px` | 로그인/회원가입 폼 |
-| `--container-md` | `768px` | 블로그 본문, 상세 페이지 |
-| `--container-lg` | `1024px` | 일반 콘텐츠 |
-| `--container-xl` | `1280px` | 대시보드, 와이드 레이아웃 |
-| `--container-padding` | `16px` | 컨테이너 좌우 패딩 (모바일) |
-
-### 4.2 브레이크포인트
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--breakpoint-sm` | `640px` | 모바일 → 태블릿 전환점 |
-| `--breakpoint-md` | `768px` | 태블릿 기준 |
-| `--breakpoint-lg` | `1024px` | 데스크탑 전환점 |
-| `--breakpoint-xl` | `1280px` | 와이드 데스크탑 |
-
-### 4.3 사이드바
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--sidebar-width` | `260px` | 사이드바 너비 |
-| `--sidebar-collapsed` | `64px` | 접힌 사이드바 너비 |
-
-### 4.4 네비게이션 바
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--navbar-height` | `64px` | 상단 네비게이션 높이 |
-
----
-
-## 5. 버튼 (Button)
-
-### 5.1 종류 (Variants)
-
-| 종류 | 배경 | 텍스트 | 보더 | 용도 |
-|------|------|--------|------|------|
-| **Primary** | `--color-primary-600` | `#FFFFFF` | 없음 | CTA, 저장, 확인 |
-| **Secondary** | `transparent` | `--color-primary-600` | `--color-primary-600` | 취소, 보조 액션 |
-| **Ghost** | `transparent` | `--color-gray-700` | 없음 | 텍스트 버튼, 네비게이션 |
-| **Danger** | `--color-danger` | `#FFFFFF` | 없음 | 삭제, 위험 액션 |
-| **Danger-outline** | `transparent` | `--color-danger` | `--color-danger` | 삭제 확인 (보조) |
-
-### 5.2 사이즈
-
-| 사이즈 | 높이 | 패딩 (좌우) | 폰트 크기 | 용도 |
-|--------|------|------------|----------|------|
-| **xs** | `28px` | `8px` | `--text-xs` | 테이블 내 액션 |
-| **sm** | `32px` | `12px` | `--text-sm` | 인라인 버튼 |
-| **md** | `40px` | `16px` | `--text-sm` | **기본값**. 폼 내 버튼 |
-| **lg** | `48px` | `24px` | `--text-base` | CTA, 로그인 버튼 |
-| **xl** | `56px` | `32px` | `--text-lg` | 랜딩 히어로 CTA |
-
-### 5.3 공통 속성
-
-| 속성 | 값 |
-|------|----|
-| border-radius | `--radius-md` (8px) |
-| font-weight | `--font-semibold` (600) |
-| transition | `all 150ms ease` |
-| cursor | `pointer` |
-| disabled 투명도 | `0.5` |
-| disabled cursor | `not-allowed` |
-| focus outline | `2px solid --color-primary-400`, offset `2px` |
-
-### 5.4 아이콘 버튼 (Icon Button)
-
-| 사이즈 | 크기 (정사각) | 아이콘 크기 |
-|--------|-------------|-----------|
-| sm | `32px × 32px` | `16px` |
-| md | `40px × 40px` | `20px` |
-| lg | `48px × 48px` | `24px` |
-
----
-
-## 6. 폼 요소 (Form Elements)
-
-### 6.1 텍스트 입력 (Text Input)
-
-| 속성 | 값 |
-|------|----|
-| 높이 | `40px` (md), `32px` (sm), `48px` (lg) |
-| 패딩 (좌우) | `12px` |
-| 배경 | `--color-bg` (#FFFFFF) |
-| 보더 | `1px solid --color-gray-300` |
-| border-radius | `--radius-md` (8px) |
-| 폰트 크기 | `--text-sm` (14px) |
-| placeholder 색상 | `--color-gray-400` |
-| **focus 보더** | `--color-primary-500` |
-| **focus ring** | `0 0 0 3px --color-primary-100` |
-| error 보더 | `--color-danger` |
-| error ring | `0 0 0 3px --color-danger-light` |
-| disabled 배경 | `--color-gray-100` |
-
-### 6.2 텍스트에어리어 (Textarea)
-
-| 속성 | 값 |
-|------|----|
-| 최소 높이 | `120px` |
-| 패딩 | `12px` |
-| resize | `vertical` |
-| 나머지 속성 | 텍스트 입력과 동일 |
-
-### 6.3 셀렉트 (Select)
-
-| 속성 | 값 |
-|------|----|
-| 높이 | 텍스트 입력과 동일 |
-| 화살표 | 커스텀 SVG chevron |
-| appearance | `none` |
-| 나머지 속성 | 텍스트 입력과 동일 |
-
-### 6.4 체크박스 / 라디오
-
-| 속성 | 값 |
-|------|----|
-| 크기 | `18px × 18px` |
-| 보더 | `2px solid --color-gray-300` |
-| border-radius | 체크박스 `4px`, 라디오 `50%` |
-| 체크 색상 | `--color-primary-600` |
-| 라벨 간격 | `--space-2` (8px) |
-
-### 6.5 토글 스위치 (Toggle)
-
-| 속성 | 값 |
-|------|----|
-| 트랙 크기 | `44px × 24px` |
-| 핸들 크기 | `20px × 20px` |
-| OFF 배경 | `--color-gray-300` |
-| ON 배경 | `--color-primary-600` |
-| transition | `200ms ease` |
-
-### 6.6 라벨 (Label)
-
-| 속성 | 값 |
-|------|----|
-| 폰트 크기 | `--text-sm` (14px) |
-| 폰트 굵기 | `--font-medium` (500) |
-| 색상 | `--color-gray-700` |
-| 라벨-입력 사이 간격 | `--space-1.5` (6px) |
-| 필수 표시 (*) | `--color-danger` |
-
-### 6.7 헬퍼 텍스트 / 에러 메시지
-
-| 속성 | 값 |
-|------|----|
-| 폰트 크기 | `--text-xs` (12px) |
-| 헬퍼 색상 | `--color-gray-500` |
-| 에러 색상 | `--color-danger` |
-| 입력-메시지 간격 | `--space-1.5` (6px) |
-
----
-
-## 7. 카드 (Card)
-
-| 속성 | 값 |
-|------|----|
-| 배경 | `--color-surface` (#FFFFFF) |
-| 보더 | `1px solid --color-gray-200` |
-| border-radius | `--radius-lg` (12px) |
-| 패딩 | `--space-5` (20px), 모바일 `--space-4` (16px) |
-| 그림자 | `--shadow-sm` |
-| 호버 그림자 (클릭 가능 시) | `--shadow-md` |
-| transition | `box-shadow 200ms ease` |
-
----
-
-## 8. 모달 / 다이얼로그 (Modal)
-
-| 속성 | 값 |
-|------|----|
-| 최대 너비 | sm `400px`, md `560px`, lg `720px` |
-| border-radius | `--radius-xl` (16px) |
-| 패딩 | `--space-6` (24px) |
-| 오버레이 | `--color-overlay` |
-| 그림자 | `--shadow-xl` |
-| 애니메이션 | fade-in + scale (200ms) |
-| 닫기 버튼 | 우상단, Ghost 아이콘 버튼 |
-
----
-
-## 9. 테이블 (Table)
-
-| 속성 | 값 |
-|------|----|
-| 헤더 배경 | `--color-gray-50` |
-| 헤더 텍스트 | `--text-xs`, `--font-semibold`, `--color-gray-600`, 대문자 |
-| 셀 패딩 | `12px 16px` |
-| 행 보더 | `1px solid --color-gray-200` (하단) |
-| 줄무늬 (선택) | 짝수 행 `--color-gray-50` |
-| 호버 행 | `--color-primary-50` |
-
----
-
-## 10. 네비게이션 (Navigation)
-
-### 10.1 상단 네비게이션 바 (Navbar)
-
-| 속성 | 값 |
-|------|----|
-| 높이 | `--navbar-height` (64px) |
-| 배경 | `--color-bg` + `backdrop-filter: blur(8px)` |
-| 하단 보더 | `1px solid --color-gray-200` |
-| position | `sticky`, `top: 0`, `z-index: 50` |
-| 로고 영역 | 좌측 |
-| 메뉴 영역 | 중앙 또는 우측 |
-| 모바일 | 햄버거 메뉴 |
-
-### 10.2 사이드바 (Sidebar)
-
-| 속성 | 값 |
-|------|----|
-| 너비 | `--sidebar-width` (260px) |
-| 배경 | `--color-bg-secondary` |
-| 보더 | 우측 `1px solid --color-gray-200` |
-| 메뉴 아이템 높이 | `40px` |
-| 활성 아이템 배경 | `--color-primary-50` |
-| 활성 아이템 텍스트 | `--color-primary-700`, `--font-semibold` |
-
----
-
-## 11. 뱃지 / 태그 (Badge & Tag)
-
-| 속성 | 값 |
-|------|----|
-| 패딩 | `2px 8px` |
-| border-radius | `--radius-full` (9999px) |
-| 폰트 크기 | `--text-xs` |
-| 폰트 굵기 | `--font-medium` |
-
-| 종류 | 배경 | 텍스트 |
-|------|------|--------|
-| Default | `--color-gray-100` | `--color-gray-700` |
-| Primary | `--color-primary-100` | `--color-primary-700` |
-| Success | `--color-success-light` | `--color-success` |
-| Warning | `--color-warning-light` | `--color-warning` |
-| Danger | `--color-danger-light` | `--color-danger` |
-
----
-
-## 12. 알림 / 토스트 (Alert & Toast)
-
-### 12.1 인라인 알림 (Alert)
-
-| 속성 | 값 |
-|------|----|
-| 패딩 | `12px 16px` |
-| border-radius | `--radius-md` (8px) |
-| 좌측 보더 | `4px solid` (시맨틱 색상) |
-| 아이콘 | 좌측 20px |
-
-### 12.2 토스트 (Toast)
-
-| 속성 | 값 |
-|------|----|
-| 위치 | 우상단 (`top: 16px, right: 16px`) |
-| 최대 너비 | `400px` |
-| 그림자 | `--shadow-lg` |
-| 자동 닫힘 | 5초 |
-| 애니메이션 | slide-in-right (300ms) |
-
----
-
-## 13. 그림자 (Shadow)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--shadow-xs` | `0 1px 2px rgba(0,0,0,0.05)` | 미세한 깊이감 |
-| `--shadow-sm` | `0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)` | 카드, 입력 필드 |
-| `--shadow-md` | `0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)` | 드롭다운, 호버 카드 |
-| `--shadow-lg` | `0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05)` | 토스트, 팝오버 |
-| `--shadow-xl` | `0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04)` | 모달 |
-
----
-
-## 14. 둥글기 (Border Radius)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--radius-none` | `0px` | 없음 |
-| `--radius-sm` | `4px` | 체크박스, 작은 요소 |
-| `--radius-md` | `8px` | 버튼, 입력, 카드 (기본) |
-| `--radius-lg` | `12px` | 카드, 컨테이너 |
-| `--radius-xl` | `16px` | 모달, 대형 카드 |
-| `--radius-2xl` | `24px` | 이미지 컨테이너 |
-| `--radius-full` | `9999px` | 뱃지, 아바타, 원형 버튼 |
-
----
-
-## 15. 트랜지션 & 애니메이션 (Transition & Animation)
-
-### 15.1 트랜지션
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--transition-fast` | `100ms ease` | 색상 변화, 투명도 |
-| `--transition-base` | `150ms ease` | 버튼 호버, 보더 |
-| `--transition-slow` | `300ms ease` | 모달, 사이드바 열기/닫기 |
-| `--transition-spring` | `300ms cubic-bezier(0.34, 1.56, 0.64, 1)` | 바운스 효과 |
-
-### 15.2 애니메이션
-
-| 이름 | 용도 |
-|------|------|
-| `fadeIn` | 모달, 오버레이 등장 |
-| `slideUp` | 토스트, 드롭다운 등장 |
-| `slideInRight` | 사이드 패널, 토스트 |
-| `spin` | 로딩 스피너 |
-| `pulse` | 스켈레톤 로딩 |
-
----
-
-## 16. 아바타 (Avatar)
-
-| 사이즈 | 크기 | 용도 |
-|--------|------|------|
-| xs | `24px` | 댓글, 인라인 표시 |
-| sm | `32px` | 리스트 아이템 |
-| md | `40px` | 네비게이션, 카드 헤더 |
-| lg | `64px` | 프로필 페이지 |
-| xl | `96px` | 프로필 편집, 설정 |
-
-| 속성 | 값 |
-|------|----|
-| border-radius | `--radius-full` (원형) |
-| 대체 배경 | `--color-primary-100` |
-| 대체 텍스트 색상 | `--color-primary-700` |
-| 보더 | `2px solid --color-bg` (겹침 시) |
-
----
-
-## 17. 로딩 상태 (Loading)
-
-### 17.1 스피너 (Spinner)
-
-| 사이즈 | 크기 | 보더 두께 |
-|--------|------|----------|
-| sm | `16px` | `2px` |
-| md | `24px` | `3px` |
-| lg | `40px` | `4px` |
-
-| 속성 | 값 |
-|------|----|
-| 색상 | `--color-primary-600` |
-| 트랙 색상 | `--color-gray-200` |
-| animation | `spin 600ms linear infinite` |
-
-### 17.2 스켈레톤 (Skeleton)
-
-| 속성 | 값 |
-|------|----|
-| 배경 | `--color-gray-200` |
-| 하이라이트 | `--color-gray-100` |
-| border-radius | `--radius-md` |
-| animation | `pulse 1.5s ease infinite` |
-
----
-
-## 18. z-index 체계 (Z-Index)
-
-| 토큰 | 값 | 용도 |
-|------|----|------|
-| `--z-dropdown` | `10` | 드롭다운 메뉴 |
-| `--z-sticky` | `20` | sticky 요소 |
-| `--z-fixed` | `30` | 고정 네비게이션 |
-| `--z-sidebar` | `40` | 사이드바 (모바일 오버레이) |
-| `--z-modal` | `50` | 모달 |
-| `--z-toast` | `60` | 토스트 알림 |
-| `--z-tooltip` | `70` | 툴팁 |
-
----
-
-## 19. 로그인 / 인증 페이지 (Auth Pages)
-
-| 속성 | 값 |
-|------|----|
-| 레이아웃 | 중앙 정렬, `--container-sm` (640px) |
-| 카드 패딩 | `--space-8` (32px), 모바일 `--space-5` (20px) |
-| 로고 | 상단 중앙, 하단 여백 `--space-6` |
-| 소셜 로그인 버튼 | Secondary 스타일, 전체 너비, 아이콘 좌측 |
-| 구분선 | "또는" 텍스트 + 양쪽 회색선 |
-| 로그인/회원가입 버튼 | Primary, **lg 사이즈**, 전체 너비 |
-| 폼 요소 간 간격 | `--space-4` (16px) |
-| 보조 링크 (비밀번호 찾기 등) | `--text-sm`, `--color-primary-600` |
-
----
-
-## 20. 규칙 (Rules)
-
-1. **CSS 변수 필수**: 모든 색상·크기·간격 값은 `design-tokens.css`의 변수를 사용한다. 하드코딩 금지.
-2. **토큰 외 값 사용 금지**: 디자인 토큰에 정의되지 않은 임의의 값(예: `padding: 13px`, `color: #abc123`)을 사용하지 않는다.
-3. **일관성 우선**: 같은 목적의 요소는 항상 같은 토큰을 사용한다 (예: 모든 카드는 동일 radius, 동일 shadow).
-4. **반응형 기준**: 모바일 퍼스트(Mobile First)로 작성하고, 브레이크포인트에서 확장한다.
-5. **접근성**: 색상 대비 WCAG AA 이상, focus visible 필수, 최소 터치 타겟 `44px × 44px`.
+| 도메인 | 시각 방향 |
+| --- | --- |
+| 운영 도구·CRM·ERP·대시보드 | 조용하고 촘촘하며 반복 작업에 효율적인 화면. 장식보다 스캔성과 비교성을 우선 |
+| 커머스·제품 페이지 | 제품 이미지, 상세 정보, 가격, 옵션, 신뢰 요소, 구매/상담 액션을 최우선 |
+| 브랜드·에디토리얼 페이지 | 실제 이미지와 명확한 위계. 추상 그라디언트 장식만으로 첫 화면을 채우지 않음 |
+| 게임·시각 도구 | 상호작용 자체를 강화하는 표현적 그래픽 허용 |
+
+## 2. Reference Source Map
+
+Research 또는 design_source가 이 문서를 생성·보강할 때 먼저 채웁니다.
+
+| 출처 | 캡처/자산 경로 | 추출할 것 | 복제하지 않을 것 |
+| --- | --- | --- | --- |
+| 사용자 `.pen` / Stitch | `designs/...` | 레이아웃, 컴포넌트 배치, 간격 리듬, 시각 위계, 인터랙션 의도 | 파일의 우연한 깨짐, 생성형 placeholder 문구 |
+| 스크린샷 / 디자인 문서 | `designs/...` | 화면 구조, 정보 밀도, 브랜드 톤, 컴포넌트 형태, 미디어 처리 | 사적인 내용, 정확한 문구 복사, 사용자가 소유하지 않은 로고 |
+| 참조 웹사이트 | `docs/00-research/assets/{Research ID}/C-__.png` | 페이지 구성, 반복 UX 패턴, 컴포넌트 동작, 시각 분위기, 미디어 전략 | 브랜드 아이덴티티, 저작권 이미지, 고유 문구, 식별 가능한 고유 레이아웃 |
+
+## 3. Visual Theme & Atmosphere
+
+추상 형용사가 아니라 구현 가능한 시각 언어로 적습니다.
+
+| 항목 | 기준 |
+| --- | --- |
+| 정보 밀도 | 도메인과 참조 사이트에 따라 sparse / balanced / dense 중 선택. 도구형 앱은 보통 balanced~dense |
+| 톤 | premium, utilitarian, playful, editorial, technical, warm, clinical 등 제품 톤을 명시 |
+| 표면 | 목적 있는 표면만 사용. 참조 시스템이 명확히 요구하지 않으면 중첩 카드와 떠 있는 패널 남발 금지 |
+| 장식 | 제품, 콘텐츠, 데이터, 상호작용과 연결될 때만 사용. generic gradient blob, glass panel, abstract AI ornament 금지 |
+
+## 4. Screen Recipes
+
+Research 또는 design_source가 캡처를 분석해 화면별 구조 계약을 채웁니다. 이 절은 run 단계가 가장 먼저 따라야 하는 시각 구현 기준입니다.
+
+| 화면/상태 | 참조 캡처 | 구현할 구조 | 비례·밀도 계약 | 금지 drift |
+| --- | --- | --- | --- | --- |
+| Home first view | `C-__` | {promo/nav/hero/collection teaser 등 실제 섹션 순서} | {이미지·텍스트·상품 노출 비율, first viewport 밀도} | {split SaaS hero, floating trust cards, 추상 gradient 등} |
+| Listing / collection | `C-__` | {필터 위치, 상품 그리드, 카드 정보 순서} | {이미지 비율, 카드당 메타 수, grid column} | {badge 과다, shadow card 남발 등} |
+| Detail / cart / form | `C-__` / `S-__` | {요약, 입력, CTA, 오류 위치} | {패널 폭, field 높이, 모바일 접힘} | {실제 결제 오인, 중첩 카드 등} |
+
+## 5. Component Extraction
+
+캡처에서 컴포넌트별 외형을 추출해 구현 계약으로 잠급니다.
+
+| 컴포넌트 | 참조 캡처 | 외형 계약 | 상태/상호작용 | 복제 금지 |
+| --- | --- | --- | --- | --- |
+| Navigation | `C-__` | {높이, 정렬, 배경, 구분선, 링크 형태} | {sticky/active/hover} | {참조 로고/고유 nav 문구} |
+| Primary CTA | `C-__` | {높이, fill, border, radius, font weight} | {hover/focus/disabled} | {원문 CTA 카피} |
+| Product / content card | `C-__` | {이미지 비율, 정보 순서, border/shadow, padding} | {hover/selected/add state} | {보호 이미지/제품명} |
+| Filter / tabs | `C-__` | {inline/pill/tab, active 표현, 크기 고정} | {pressed/focus} | {고유 카테고리명} |
+| Form field | `S-__` / `C-__` | {label 위치, 오류 위치, 높이, border} | {invalid/success/focus} | {민감/실결제 입력 오인} |
+| Media | `C-__` | {aspect, crop, subject 위치, 밝기, loading 크기} | {responsive/fallback} | {참조 사이트 이미지 파일} |
+
+## 6. Capture-to-Implementation Map
+
+각 캡처가 어떤 화면/컴포넌트로 구현되어야 하는지 명확히 연결합니다.
+
+| 캡처/출처 | 구현 대상 | 구현할 것 | 구현하지 않을 것 | 검증 방법 |
+| --- | --- | --- | --- | --- |
+| `C-__` | `{page/section/component}` | {구조·비례·밀도·외형} | {브랜드/카피/이미지/고유 배치} | {browser/analyze에서 확인할 증거} |
+
+## 7. Color Palette & Roles
+
+색상은 역할 기반으로 기록합니다. 실제 값은 사용자 디자인 입력이나 research에서 채웁니다.
+
+| 역할 | 값 | 용도 |
+| --- | --- | --- |
+| Background | `#ffffff` | 기본 페이지 바탕 |
+| Surface | `#f7f7f4` | 보조 패널, 상품/정보 영역 |
+| Text strong | `#111111` | 제목, 핵심 정보 |
+| Text body | `#4b5563` | 본문, 설명, 보조 라벨 |
+| Border | `#d9d6cc` | 구분선, 컨트롤 외곽 |
+| Accent | `#1f5f86` | 주요 액션, 활성 상태 |
+| Accent contrast | `#ffffff` | Accent 배경 위 텍스트 |
+| Warning / Error / Success | TBD | 제품별 상태 색상 |
+
+규칙:
+
+- 코드의 색상 값은 위 역할 또는 이 섹션에 추가한 역할로 추적 가능해야 합니다.
+- 제품별로 팔레트는 달라질 수 있지만 역할은 명시해야 합니다.
+- research나 사용자 입력 근거 없이 보라/파랑 그라디언트 SaaS 팔레트를 만들지 않습니다.
+
+## 8. Typography Rules
+
+참조 사이트의 폰트 이름과 시각 성격을 조사하되, 폰트 파일은 복제하지 않습니다. 구현에는 시스템 폰트, 오픈 라이선스 폰트, 사용자 제공 폰트, 프로젝트에 포함된 폰트만 사용합니다.
+
+| 역할 | 참조 폰트/성격 | 구현 폰트 스택 | 기준 |
+| --- | --- | --- | --- |
+| Display / H1 | {참조 font-family 또는 성격} | {예: Inter, Pretendard, system-ui} | 진짜 페이지 정체성 또는 핵심 제품명에만 사용. 도구형 UI 내부에서 과도하게 키우지 않음 |
+| Section heading | {참조 font-family 또는 성격} | {구현 스택} | 작고 단단하게, 본문과 명확히 구분 |
+| Body | {참조 font-family 또는 성격} | {구현 스택} | 읽을 수 있는 행간과 길이. 필수 정보를 작은 회색 텍스트로 숨기지 않음 |
+| Label / metadata | {참조 font-family 또는 성격} | {구현 스택} | 본문보다 작되 읽을 수 있어야 하며, 색상만이 아니라 굵기와 간격으로 구분 |
+| 숫자·가격·지표 | {참조 font-family 또는 성격} | {구현 스택} | 정렬과 대비를 일관되게 유지해 빠르게 스캔 가능하게 함 |
+
+구현 규칙:
+
+- 참조 사이트의 computed `font-family`, 크기, 굵기, 행간, 자간을 조사해 기록합니다.
+- 동일 폰트를 합법적으로 사용할 수 없으면 시각 특성이 가까운 대체 폰트를 선택하고 대체 사유를 기록합니다.
+- 폰트 파일이나 유료 폰트를 참조 사이트에서 복사하지 않습니다.
+- 제품 도메인이나 참조 시스템이 강한 서체를 요구하지 않으면 시스템 폰트를 우선합니다.
+- 글자 간격은 기본적으로 `0`입니다. 작은 대문자 메타데이터처럼 인식성이 좋아질 때만 제한적으로 사용합니다.
+- viewport width에 비례해 font-size를 스케일하지 않습니다.
+
+## 9. Layout Principles
+
+| 영역 | 규칙 |
+| --- | --- |
+| First viewport | 제품, 객체, 데이터, 업무 흐름, 핵심 작업을 보여야 합니다. 모호한 마케팅 문구만 먼저 보여주지 않습니다. |
+| Navigation | 예측 가능한 위치와 명확한 active state를 둡니다. |
+| Content width | 커머스는 상품/상세 split, 대시보드는 조밀한 grid/table, 에디토리얼은 넓은 media처럼 도메인에 맞춥니다. |
+| Spacing | 일정한 리듬을 사용합니다. 큰 여백은 이해를 돕기 위한 것이어야지 빈 화면을 만들기 위한 것이 아닙니다. |
+| Cards | 반복 항목, 모달, framed tool에만 사용합니다. 카드 안에 카드를 넣지 않습니다. |
+| Sections | 페이지 섹션은 full-width band 또는 unframed layout을 우선합니다. 떠 있는 카드 섹션을 남발하지 않습니다. |
+
+## 10. Component Contracts
+
+구현 전에 컴포넌트 형태를 계약으로 잠급니다. Research가 이 파일을 생성할 때 제품별 행을 추가합니다.
+
+| 컴포넌트 | 계약 |
+| --- | --- |
+| Primary button | 명확한 명령 라벨, 강한 대비, 안정적인 크기, hover/focus/disabled 상태 필수 |
+| Secondary button | primary보다 낮은 강조지만 상호작용 가능성이 분명해야 함 |
+| Tabs / segmented controls | 크기 고정, active state 명확, 상태 전환 시 layout shift 금지 |
+| Form controls | label 유지, 오류는 인접하고 구체적으로 표시, keyboard focus 명확 |
+| Product card | 커머스라면 실제/생성 상품 이미지, 이름, 핵심 속성, 가격/상태, 주요 액션 포함 |
+| Product detail media | 실제 상품 이미지 또는 생성 bitmap 상품 렌더 사용. 상품 이미지를 CSS 추상 도형으로 대체하지 않음 |
+| Data table/list | scan path, 정렬, 필터, empty/loading/error 상태를 우선 |
+| Modal/drawer | focus 관리, 닫기 affordance, 명확한 액션 위계 |
+
+## 11. Media Rules
+
+미디어는 장식이 아니라 제품 증거입니다.
+
+- 커머스, 제품, 포트폴리오, 장소, 객체 중심 페이지는 실제 대상이 보이는 real/generated bitmap media를 사용합니다.
+- 제품 페이지는 상품 이미지를 CSS shape, emoji식 그림, generic gradient, 추상 일러스트로 대체하지 않습니다.
+- 실제 이미지가 없으면 제품을 명확히 보여주는 plausible bitmap asset을 생성하거나 제작하고, generated asset임을 기록합니다.
+- SVG/HTML/CSS 일러스트는 다이어그램, 아이콘, 단순 UI affordance, 게임 고유 아트처럼 그 매체가 적합할 때만 사용합니다.
+- 사용자가 제품을 살펴봐야 하는 화면에서는 어둡고 흐리고 잘린 stock-like 이미지를 피합니다.
+- 이미지 영역은 aspect-ratio 등으로 안정적인 크기를 가져 loading 중 layout shift를 만들지 않습니다.
+
+## 12. Depth & Elevation
+
+| 요소 | 기준 |
+| --- | --- |
+| Border | heavy shadow보다 먼저 구조 구분에 사용합니다. |
+| Shadow | overlay, menu, 집중 표면에만 낮고 목적 있게 사용합니다. |
+| Radius | 사용자 디자인이나 참조 시스템이 부드러운 스타일을 명확히 요구하지 않으면 절제합니다. 카드는 보통 8px 이하를 기준으로 합니다. |
+| Layering | 장식 효과보다 배치, 크기, 대비, 콘텐츠 중요도로 위계를 먼저 만듭니다. |
+
+## 13. Responsive Behavior
+
+- 모바일에서도 같은 primary task를 수행할 수 있어야 하며, 필수 컨트롤을 숨기지 않습니다.
+- 텍스트는 일반 모바일 폭에서 겹치거나 잘리거나 읽기 어려워지면 안 됩니다.
+- 보드, 상품 갤러리, 툴바, 타일, 카운터처럼 고정 형식 요소는 aspect-ratio, grid track, min/max 제약으로 안정적인 크기를 가집니다.
+- 모든 컨트롤은 touch와 keyboard로 사용할 수 있어야 합니다.
+- 반응형 변화는 layout order를 단순화하는 것이지 중요 정보를 제거하는 것이 아닙니다.
+
+## 14. Do / Don't
+
+Do:
+
+- 참조에서 구체적인 페이지 구조, 컴포넌트 비율, 미디어 전략, 시각 리듬을 추출합니다.
+- 구현 전에 reference observation을 이 `design.md`로 정규화합니다.
+- 첫 화면에 제품/도메인 특화 정보를 드러냅니다.
+- 제품·도메인에 맞는 media와 copy structure를 사용합니다.
+- analyze/browser 단계에서 이 파일과 최종 화면을 대조합니다.
+
+Don't:
+
+- 디자인 입력이 없다는 이유로 generic AI-looking page를 만들지 않습니다.
+- 운영 도구에 oversized hero section을 만들지 않습니다.
+- 근거 없이 gradient blob, glass card, 추상 장식, 보라/파랑 SaaS 스타일을 사용하지 않습니다.
+- 제품 이미지가 필요한 화면에서 CSS-only shape로 대체하지 않습니다.
+- 참조 사이트의 보호된 로고, 문구, 고유 이미지, 식별 가능한 레이아웃을 복제하지 않습니다.
+
+## 15. Agent Implementation Guide
+
+UI 구현 전:
+
+1. `designs/`에 사용자 디자인 입력이 있으면 먼저 읽습니다.
+2. 이 파일을 전체로 읽습니다.
+3. 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있거나 요청한 UI에 비해 너무 generic하면, plan/spec/run으로 시각 결정을 잠그기 전에 `$altool research` 또는 `$altool design_source`로 생성·보강합니다.
+4. Spec의 `Design System Anchor`에 Screen Recipes, Capture-to-Implementation Map, 관련 시각 값, 컴포넌트 계약, 미디어 규칙, 금지할 generic pattern을 기록합니다.
+5. Run에서는 Screen Recipes와 Capture-to-Implementation Map을 먼저 구현하고, 색상·폰트·버튼 같은 스타일 값은 그 다음 적용합니다. CSS 변수는 유지보수 목적상 코드 안에서 만들 수 있지만 이 파일이 원천입니다.
+6. Analyze/Browser에서는 예쁘게 보이는지만 보지 말고, 캡처에서 추출한 screen recipe, media, layout, density, component contract가 최종 화면과 맞는지 검증합니다.
+
+참조 사이트를 사용할 때:
+
+- 브랜드가 아니라 pattern category를 가져옵니다.
+- exact layout fingerprint가 아니라 layout의 기능을 가져옵니다.
+- 보호된 media/copy는 프로젝트 고유 또는 generated asset으로 대체합니다.
+- 사용자가 이미 이해하는 제품 기대와 UX 관습은 보존합니다.

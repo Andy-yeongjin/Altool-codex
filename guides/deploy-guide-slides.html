@@ -390,7 +390,7 @@ body.show-notes .slide.active .speaker-notes { display: block; position: fixed; 
             <div class="part-step"><div class="ps-dot" style="background:var(--purple);"></div>NeonDB 가입</div>
             <div class="part-step"><div class="ps-dot" style="background:var(--purple);"></div>프로젝트 생성</div>
             <div class="part-step"><div class="ps-dot" style="background:var(--purple);"></div>Connection String 복사</div>
-            <div class="part-step"><div class="ps-dot" style="background:var(--blue);"></div>Claude로 DB 연결</div>
+            <div class="part-step"><div class="ps-dot" style="background:var(--blue);"></div>Codex로 DB 연결</div>
             <div class="part-step"><div class="ps-dot" style="background:var(--blue);"></div>연결 확인</div>
           </div>
         </div>
@@ -398,7 +398,7 @@ body.show-notes .slide.active .speaker-notes { display: block; position: fixed; 
           <div class="part-header"><span style="font-size:1.2em;">▲</span><span class="part-title" style="color:var(--blue);">PART 2 · Vercel</span></div>
           <div class="part-steps">
             <div class="part-step"><div class="ps-dot" style="background:var(--purple);"></div>GitHub 저장소 생성</div>
-            <div class="part-step"><div class="ps-dot" style="background:var(--blue);"></div>Claude로 코드 푸시</div>
+            <div class="part-step"><div class="ps-dot" style="background:var(--blue);"></div>Codex로 코드 푸시</div>
             <div class="part-step"><div class="ps-dot" style="background:var(--purple);"></div>Vercel 가입 + Import</div>
             <div class="part-step"><div class="ps-dot" style="background:var(--orange);"></div>첫 배포 (자동)</div>
             <div class="part-step"><div class="ps-dot" style="background:var(--purple);"></div>환경변수 등록</div>
@@ -408,11 +408,11 @@ body.show-notes .slide.active .speaker-notes { display: block; position: fixed; 
       </div>
       <div class="legend-row" data-step="2">
         <div class="legend-item"><div style="width:8px;height:8px;border-radius:50%;background:var(--purple);flex-shrink:0;"></div>👤 사람이 직접</div>
-        <div class="legend-item"><div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>🤖 Claude에게 프롬프트</div>
+        <div class="legend-item"><div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>🤖 Codex에게 프롬프트</div>
         <div class="legend-item"><div style="width:8px;height:8px;border-radius:50%;background:var(--orange);flex-shrink:0;"></div>⚡ 자동 처리</div>
       </div>
     </div>
-    <aside class="speaker-notes">보라색=사람이 직접, 파란색=Claude에게 프롬프트 복사, 주황색=자동 처리됩니다.</aside>
+    <aside class="speaker-notes">보라색=사람이 직접, 파란색=Codex에게 프롬프트 복사, 주황색=자동 처리됩니다.</aside>
   </section>
 
   <!-- ══════════ 3 · PART 1 Break ══════════ -->
@@ -425,7 +425,7 @@ body.show-notes .slide.active .speaker-notes { display: block; position: fixed; 
       </div>
       <div data-step="1" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:clamp(7px,1.4vh,14px);">
         <span class="role-badge human">👤 3단계 직접 작업</span>
-        <span class="role-badge ai">🤖 2단계 Claude</span>
+        <span class="role-badge ai">🤖 2단계 Codex</span>
       </div>
       <p data-step="2" style="margin-top:5px;font-size:clamp(0.65rem,1.05vw,0.88rem);">무료 플랜 · 신용카드 불필요 · PostgreSQL 호환</p>
     </div>
@@ -556,18 +556,18 @@ body.show-notes .slide.active .speaker-notes { display: block; position: fixed; 
     <aside class="speaker-notes">두 URL의 차이는 호스트에 -pooler가 붙는지뿐입니다.</aside>
   </section>
 
-  <!-- ══════════ 7 · Claude에게 DB 연결 ══════════ -->
+  <!-- ══════════ 7 · Codex에게 DB 연결 ══════════ -->
   <section class="slide" id="slide-7" aria-roledescription="slide">
     <div class="prompt-slide">
       <div class="prompt-header" data-step="0">
-        <div class="badge-row-left"><span class="step-indicator">PART 1 · 4/5</span><span class="role-badge ai">🤖 Claude에게 프롬프트</span></div>
-        <h2 class="gradient-text" style="text-align:left;font-size:clamp(1.1rem,2.15vw,1.95rem);">Claude에게 DB 연결 시키기</h2>
+        <div class="badge-row-left"><span class="step-indicator">PART 1 · 4/5</span><span class="role-badge ai">🤖 Codex에게 프롬프트</span></div>
+        <h2 class="gradient-text" style="text-align:left;font-size:clamp(1.1rem,2.15vw,1.95rem);">Codex에게 DB 연결 시키기</h2>
         <p style="text-align:left;font-size:clamp(0.62rem,0.95vw,0.82rem);color:var(--text2);"><span class="pcb-ph">{{POOLED_URL}}</span> 과 <span class="pcb-ph">{{DIRECT_URL}}</span> 두 곳만 3단계에서 복사한 값으로 교체 후 붙여넣기</p>
       </div>
       <div class="prompt-wrap" data-step="1">
         <div class="prompt-code-box">
           <div class="pcb-header">
-            <span class="pcb-label">🤖 Claude Code 대화창에 붙여넣기</span>
+            <span class="pcb-label">🤖 Codex 대화창에 붙여넣기</span>
             <button class="pcb-copy" onclick="copyPrompt(this)">📋 복사</button>
           </div>
           <div class="pcb-scroll">constitution.md를 읽고 모든 원칙을 준수해줘. 특히 보안: API 키/DB 자격증명은 코드에 하드코딩 금지, .env 로만 관리, .gitignore에 .env 포함 확인.
@@ -618,7 +618,7 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
         </div>
       </div>
     </div>
-    <aside class="speaker-notes">URL 두 개만 교체하면 됩니다. 복사 버튼으로 전체 프롬프트를 복사해 Claude Code에 붙여넣으세요.</aside>
+    <aside class="speaker-notes">URL 두 개만 교체하면 됩니다. 복사 버튼으로 전체 프롬프트를 복사해 Codex에 붙여넣으세요.</aside>
   </section>
 
   <!-- ══════════ 8 · DB 연결 확인 ══════════ -->
@@ -627,7 +627,7 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
       <div class="split-left">
         <div class="badge-row-left" data-step="0">
           <span class="step-indicator">PART 1 · 5/5</span>
-          <span class="role-badge ai">🤖 Claude에게 프롬프트</span>
+          <span class="role-badge ai">🤖 Codex에게 프롬프트</span>
         </div>
         <h2 class="gradient-text" data-step="0" style="text-align:left;font-size:clamp(1.1rem,2.15vw,1.95rem);">DB 연결 확인 프롬프트</h2>
         <div class="prompt-code-box" data-step="1" style="flex:1;min-height:0;">
@@ -684,7 +684,7 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
       </div>
       <div data-step="1" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:clamp(7px,1.4vh,14px);">
         <span class="role-badge human">👤 3단계 직접 작업</span>
-        <span class="role-badge ai">🤖 1단계 Claude</span>
+        <span class="role-badge ai">🤖 1단계 Codex</span>
         <span class="role-badge auto">⚡ 1단계 자동</span>
       </div>
       <p data-step="2" style="margin-top:5px;font-size:clamp(0.65rem,1.05vw,0.88rem);">GitHub push 한 번 → 이후 자동 재배포</p>
@@ -732,18 +732,18 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
     <aside class="speaker-notes">빈 저장소로 만들지 않으면 push 시 충돌이 발생합니다.</aside>
   </section>
 
-  <!-- ══════════ 11 · Claude에게 푸시 ══════════ -->
+  <!-- ══════════ 11 · Codex에게 푸시 ══════════ -->
   <section class="slide" id="slide-11" aria-roledescription="slide">
     <div class="prompt-slide">
       <div class="prompt-header" data-step="0">
-        <div class="badge-row-left"><span class="step-indicator">PART 2 · 2/6</span><span class="role-badge ai">🤖 Claude에게 프롬프트</span></div>
-        <h2 class="gradient-text" style="text-align:left;font-size:clamp(1.1rem,2.15vw,1.95rem);">Claude에게 푸시 시키기</h2>
+        <div class="badge-row-left"><span class="step-indicator">PART 2 · 2/6</span><span class="role-badge ai">🤖 Codex에게 프롬프트</span></div>
+        <h2 class="gradient-text" style="text-align:left;font-size:clamp(1.1rem,2.15vw,1.95rem);">Codex에게 푸시 시키기</h2>
         <p style="text-align:left;font-size:clamp(0.62rem,0.95vw,0.82rem);color:var(--text2);"><span class="pcb-ph">{{REPO_URL}}</span> 만 10단계에서 복사한 저장소 URL로 교체 후 붙여넣기</p>
       </div>
       <div class="prompt-wrap" data-step="1">
         <div class="prompt-code-box">
           <div class="pcb-header">
-            <span class="pcb-label">🤖 Claude Code 대화창에 붙여넣기</span>
+            <span class="pcb-label">🤖 Codex 대화창에 붙여넣기</span>
             <button class="pcb-copy" onclick="copyPrompt(this)">📋 복사</button>
           </div>
           <div class="pcb-scroll">constitution.md를 읽고 모든 원칙 준수. 특히 보안: .env가 .gitignore에 포함되어 있는지 반드시 먼저 확인하고, 자격증명이 한 번도 커밋된 적이 없는지 git log로 검증해줘.
@@ -990,7 +990,7 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
         </div>
         <div class="card-item" data-step="2">
           <span class="icon">🔄</span>
-          <div class="text"><strong>이후 자동 배포</strong><span>Claude로 코드 수정 → <span style="color:var(--cyan);font-family:'Fira Code',monospace;">git push</span> → Vercel 자동 빌드·배포</span></div>
+          <div class="text"><strong>이후 자동 배포</strong><span>Codex로 코드 수정 → <span style="color:var(--cyan);font-family:'Fira Code',monospace;">git push</span> → Vercel 자동 빌드·배포</span></div>
         </div>
         <div class="card-item" data-step="3">
           <span class="icon">👀</span>
@@ -1016,8 +1016,8 @@ NeonDB(PostgreSQL)를 이 프로젝트에 Prisma ORM으로 연결해줘. 현재 
       <div class="checklist" style="max-width:620px;width:100%;">
         <div class="check-row" data-step="1"><span class="check-icon">✅</span><span class="check-text">NeonDB 가입 + 프로젝트 생성 (Singapore 리전)</span><span class="check-badge h">사람</span></div>
         <div class="check-row" data-step="2"><span class="check-icon">✅</span><span class="check-text">Connection String 두 개 복사 (Pooled + Direct)</span><span class="check-badge h">사람</span></div>
-        <div class="check-row" data-step="3"><span class="check-icon">✅</span><span class="check-text">Claude로 DB 연결 + 검증 완료</span><span class="check-badge a">Claude</span></div>
-        <div class="check-row" data-step="4"><span class="check-icon">✅</span><span class="check-text">GitHub 저장소 생성 + Claude로 코드 push</span><span class="check-badge ha">사람+Claude</span></div>
+        <div class="check-row" data-step="3"><span class="check-icon">✅</span><span class="check-text">Codex로 DB 연결 + 검증 완료</span><span class="check-badge a">Codex</span></div>
+        <div class="check-row" data-step="4"><span class="check-icon">✅</span><span class="check-text">GitHub 저장소 생성 + Codex로 코드 push</span><span class="check-badge ha">사람+Codex</span></div>
         <div class="check-row" data-step="5"><span class="check-icon">✅</span><span class="check-text">Vercel Import + 환경변수 등록 + Redeploy</span><span class="check-badge h">사람</span></div>
         <div class="check-row" data-step="6" style="border-color:rgba(74,222,128,0.35);background:rgba(74,222,128,0.04);">
           <span class="check-icon">🎉</span>
@@ -1228,3 +1228,4 @@ document.addEventListener('keydown', function(e) {
 </script>
 </body>
 </html>
+

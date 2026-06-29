@@ -3,6 +3,13 @@ setlocal
 
 set "ALTOOL_DIR=%~dp0"
 if "%ALTOOL_DIR:~-1%"=="\" set "ALTOOL_DIR=%ALTOOL_DIR:~0,-1%"
+set "NONINTERACTIVE="
+
+if not "%~1"=="" (
+    set "PROJECT_DIR=%~1"
+    set "NONINTERACTIVE=1"
+    goto :proceed
+)
 
 echo.
 echo =============================================
@@ -52,17 +59,23 @@ echo   Copying files...
 xcopy /e /i /y "%ALTOOL_DIR%\altool" "%PROJECT_DIR%\altool" > nul
 echo   [OK] altool\ (engine)
 
-:: CLAUDE.md
-if exist "%ALTOOL_DIR%\templates\CLAUDE.md" (
-    copy /y "%ALTOOL_DIR%\templates\CLAUDE.md" "%PROJECT_DIR%\CLAUDE.md" > nul
-    echo   [OK] CLAUDE.md
+:: AGENTS.md (Codex project instructions)
+if exist "%ALTOOL_DIR%\AGENTS.md" (
+    copy /y "%ALTOOL_DIR%\AGENTS.md" "%PROJECT_DIR%\AGENTS.md" > nul
+    echo   [OK] AGENTS.md
 )
 
-:: .claude/commands/al.md
-if not exist "%PROJECT_DIR%\.claude\commands\" mkdir "%PROJECT_DIR%\.claude\commands"
-if exist "%ALTOOL_DIR%\templates\.claude\commands\al.md" (
-    copy /y "%ALTOOL_DIR%\templates\.claude\commands\al.md" "%PROJECT_DIR%\.claude\commands\al.md" > nul
-    echo   [OK] .claude\commands\al.md
+:: Codex repo-local skills
+if not exist "%PROJECT_DIR%\.agents\skills\" mkdir "%PROJECT_DIR%\.agents\skills"
+if exist "%ALTOOL_DIR%\templates\codex\skills\" (
+    for /d %%s in ("%ALTOOL_DIR%\templates\codex\skills\*") do (
+        if exist "%%s\SKILL.md" (
+            xcopy /e /i /y "%%s" "%PROJECT_DIR%\.agents\skills\%%~nxs" > nul
+            echo   [OK] Codex local skill: %%~nxs
+        )
+    )
+) else (
+    echo   [WARN] Codex skill templates missing: templates\codex\skills
 )
 
 :: constitution.md
@@ -73,7 +86,7 @@ if exist "%ALTOOL_DIR%\constitution.md" (
 
 :: designs/
 if not exist "%PROJECT_DIR%\designs\" mkdir "%PROJECT_DIR%\designs"
-for %%f in (design.md design-tokens.css design-constitution.md) do (
+for %%f in (design.md) do (
     if exist "%ALTOOL_DIR%\designs\%%f" (
         copy /y "%ALTOOL_DIR%\designs\%%f" "%PROJECT_DIR%\designs\%%f" > nul
         echo   [OK] designs\%%f
@@ -110,10 +123,13 @@ if not exist "%PROJECT_DIR%\.gitignore" (
         echo *.db
         echo *.db-journal
         echo.
-        echo # Playwright MCP
+        echo # Codex repo-local skills
+        echo !.agents/
+        echo.
+        echo # Local browser/test artifacts
         echo .playwright-mcp/
     ) > "%PROJECT_DIR%\.gitignore"
-    echo   [OK] .gitignore (created)
+    echo   [OK] .gitignore created
 ) else (
     echo   [SKIP] .gitignore exists - add ".altool/" manually if needed
 )
@@ -123,8 +139,9 @@ echo =============================================
 echo   Done!
 echo =============================================
 echo.
-echo   1. Open Claude Code (or Claude Desktop Code tab)
+echo   1. Open Codex
 echo   2. Open folder: %PROJECT_DIR%
-echo   3. Type:  /al setup
+echo   3. Restart Codex or open a new chat if the skill does not appear
+echo   4. Type:  $altool setup
 echo.
-pause
+if not defined NONINTERACTIVE pause

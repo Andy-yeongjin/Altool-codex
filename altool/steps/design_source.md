@@ -1,12 +1,14 @@
-# /al design_source — 디자인 소스 기반 디자인 시스템 생성
+# $altool design_source — 디자인 소스 기반 디자인 시스템 생성
 
-**사용법**: `/al design_source`
+**사용법**: `$altool design_source`
 
-**목적**: 프로젝트의 디자인 소스(`.pen` 또는 Stitch)를 분석하여 `designs/design.md`(디자인 명세)와 `designs/design-tokens.css`(CSS 변수)를 생성합니다.
-`designs/design-constitution.md`(정부 UI/UX 가이드라인)를 기준으로 생성된 토큰의 준수 여부를 자동 검증합니다.
+**목적**: 프로젝트의 디자인 소스(`.pen` 또는 Stitch)를 분석하여 단일 디자인 원천인 `designs/design.md`를 생성합니다.
+생성된 디자인 시스템은 `constitution.md`의 범용 디자인 품질 원칙을 기준으로 검토합니다.
+
+참조 사이트 조사만으로 디자인 시스템을 부트스트랩해야 하는 경우는 `$altool research`가 담당합니다. `design_source`는 사용자가 제공한 `.pen` 또는 Stitch 파일을 프로젝트 디자인 시스템으로 확정할 때 사용합니다.
 
 > ⚠️ 이 커맨드는 **프로젝트 리드가 디자인 시스템을 확정할 때** 사용합니다.
-> 생성된 두 파일은 이후 모든 팀원의 oneshot 파이프라인에서 시각적 기준으로 사용됩니다.
+> 생성된 `design.md`는 이후 모든 Altool 파이프라인에서 시각적 기준으로 사용됩니다.
 
 ---
 
@@ -44,7 +46,10 @@
 
 ### Step 1: 기존 designs/design.md 확인
 
-이미 존재하면 → 안내:
+이미 존재하면 첫 non-empty line을 확인한다.
+
+- 첫 non-empty line에 `TBD`가 있으면 템플릿 상태로 보고 확인 없이 새 디자인 시스템으로 채운다.
+- `TBD`가 없으면 사용자가 확정한 디자인 시스템일 수 있으므로 안내:
 ```
 ℹ️  기존 designs/design.md가 있습니다. 덮어쓰시겠습니까?
 A) 덮어쓰기 — 새로 생성
@@ -53,7 +58,7 @@ B) 취소
 
 ---
 
-## 실행 순서 (6단계)
+## 실행 순서 (5단계)
 
 ### [1/6] 디자인 소스 스캔
 
@@ -93,13 +98,13 @@ B) 취소
 `designs/stitch/` 폴더에서 아래 파일을 읽습니다:
 
 1. **`code.html`** — `tailwind.config` 스크립트 블록에서 아래를 추출합니다:
-   - `theme.extend.colors` → 전체 색상 토큰 (이름 + hex 값)
-   - `theme.extend.borderRadius` → 둥글기 토큰
+   - `theme.extend.colors` → 전체 색상 값 (이름 + hex 값)
+   - `theme.extend.borderRadius` → 둥글기 값
    - `theme.extend.fontFamily` → 폰트 패밀리
 
 2. **`DESIGN.md`** — 아래를 추출합니다:
    - 디자인 원칙 (Creative North Star, 컴포넌트 규칙)
-   - 타이포그래피 스케일 (역할, 토큰명, 폰트, 크기)
+   - 타이포그래피 스케일 (역할, 이름, 폰트, 크기)
    - 간격·그림자 규칙
    - Do/Don't 규칙
 
@@ -108,7 +113,7 @@ B) 취소
 추출 완료 후 보고:
 ```
 [1/6] Stitch 스캔 완료
-  색상 토큰: [N]개 (tailwind.config)
+  색상 값: [N]개 (tailwind.config)
   타이포그래피: [N]개 역할 (DESIGN.md)
   둥글기: [N]개
   폰트 패밀리: [N]개
@@ -117,42 +122,41 @@ B) 취소
 
 ---
 
-### [2/6] 토큰 정규화 (Normalization)
+### [2/5] 디자인 시스템 정규화 (Normalization)
 
 #### 🔵 Pencil 모드
 
-추출된 원시값을 Tailwind CSS 디자인 스케일 기반으로 정규화합니다.
+추출된 원시값을 `design.md` 안의 의미 있는 디자인 결정으로 정규화합니다.
 
-**색상**: 유사한 색상을 그룹핑하여 팔레트로 구성 (50~900 스케일). Primary/Neutral/Semantic으로 분류. 가장 많이 쓰인 브랜드 색상 → Primary 기준.
+**색상**: 유사한 색상을 그룹핑하여 역할 기반 팔레트로 구성합니다. Primary/Neutral/Semantic/Surface로 분류하고 각 색상의 사용 위치를 적습니다.
 
-**타이포그래피**: 추출된 폰트 크기를 가까운 4px 배수 또는 Tailwind 스케일(12/14/16/18/20/24/30/36px)에 매핑.
+**타이포그래피**: 추출된 폰트 크기를 display/heading/body/caption/button 같은 역할로 매핑합니다.
 
-**간격**: 추출된 padding/gap 값을 4px 기반 스케일(0/2/4/6/8/12/16/20/24/32/40/48/64/80px)에 매핑.
+**간격**: 추출된 padding/gap 값을 spacing scale과 사용 위치로 정리합니다.
 
 **둥글기**: 추출된 cornerRadius를 표준 스케일(0/4/8/12/16/24/9999px)에 매핑.
 
-**레이아웃**: navbar, sidebar 등 반복 레이아웃 요소의 크기를 감지하여 레이아웃 토큰으로 등록.
+**레이아웃**: navbar, sidebar, hero, card grid 등 반복 레이아웃 요소의 크기와 접힘 방식을 감지하여 Layout Principles에 등록합니다.
 
 #### 🟠 Stitch 모드
 
-Stitch의 tailwind.config 값은 이미 구조화되어 있어 직접 CSS 변수명으로 매핑합니다.
+Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 색상·타이포·간격·컴포넌트 계약으로 매핑합니다.
 
-**색상**: `theme.extend.colors`의 키-값을 `--color-{키명}` 형태로 변환합니다.
-- 예: `"primary": "#81ecff"` → `--color-primary: #81ecff`
-- 예: `"surface-container": "#171924"` → `--color-surface-container: #171924`
+**색상**: `theme.extend.colors`의 키-값을 의미 이름, 값, 역할로 기록합니다.
 
-**둥글기**: `theme.extend.borderRadius`의 rem 값을 px로 변환합니다.
-- 예: `"xl": "0.5rem"` → `--radius-xl: 8px`
+**둥글기**: `theme.extend.borderRadius`의 값을 shape scale과 사용 위치로 기록합니다.
 
 **폰트**: `theme.extend.fontFamily`에서 역할별 폰트 패밀리를 추출합니다.
 
-**타이포그래피 스케일**: `DESIGN.md`의 타이포그래피 테이블을 기준으로 역할별 크기·굵기 토큰을 정의합니다.
+**타이포그래피 스케일**: `DESIGN.md`의 타이포그래피 테이블을 기준으로 역할별 크기·굵기·행간을 정의합니다.
 
-**간격**: Stitch는 간격 토큰을 직접 제공하지 않으므로 `DESIGN.md`의 컴포넌트 명세(padding, gap 언급)에서 추론하여 4px 기반 스케일로 생성합니다.
+**폰트 사용권**: `.pen`/Stitch가 폰트 이름을 제공하더라도 프로젝트에 폰트 파일이 포함되어 있거나 사용자가 제공했거나 오픈 라이선스임을 확인할 수 있는 경우에만 그대로 구현 폰트로 사용합니다. 확인할 수 없으면 시각 특성이 가까운 안전한 대체 폰트 스택을 `design.md`에 기록하고 대체 사유를 남깁니다.
+
+**간격**: Stitch는 간격을 직접 제공하지 않는 경우가 있으므로 `DESIGN.md`의 컴포넌트 명세(padding, gap 언급)에서 추론하여 spacing scale과 사용 위치를 기록합니다.
 
 정규화 완료 후 보고:
 ```
-[2/6] 토큰 정규화 완료
+[2/5] 디자인 시스템 정규화 완료
 
   색상 매핑: [N]개
     primary: #81ecff → --color-primary
@@ -169,137 +173,81 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 직접 CSS 변수
 
 ---
 
-### [3/6] design-constitution.md 준수 검증·자동 교정 (Compliance Auto-Fix)
+### [3/5] 디자인 품질 원칙 검토 (Quality Review)
 
-`designs/design-constitution.md`를 읽고, [2/6]에서 정규화된 토큰이 정부 가이드라인을 준수하는지 검증합니다.
+`constitution.md`를 읽고, [2/5]에서 정규화된 디자인 시스템이 범용 디자인 품질 원칙을 해치지 않는지 검토합니다.
 
-#### 검증 항목:
+#### 검토 항목:
 
-**색상 대비 (명도 대비)**:
-- 텍스트 색상과 배경 색상 간 명도 대비가 **4.5:1 이상**인지 확인
-- 위반 시 → `designs/design-constitution.md`의 기준 색상으로 **즉시 자동 교정**
+- 텍스트와 배경이 충분히 구분되어 사용자가 내용을 쉽게 읽을 수 있는가
+- 클릭·터치·키보드 조작 대상이 실수 없이 사용할 수 있을 만큼 명확한 크기와 상태 표현을 갖는가
+- 포커스, 오류, 성공, 로딩, 빈 상태 등 주요 상태가 시각적으로 구분되는가
+- 화면 크기가 달라져도 텍스트와 UI가 겹치거나 잘리거나 조작 불가능한 상태가 되지 않는가
+- 사용자 디자인 입력의 의도를 유지하면서도 접근성·반응형·명확성을 해치지 않는가
 
-**Primary 팔레트**:
-- 주조색이 `designs/design-constitution.md`의 Blue 계열 범위(`#3563ff` ~ `#0a2176`)에 속하는지 확인
-- 벗어날 경우 → 가장 가까운 기준 토큰으로 **즉시 자동 교정**
+검토 결과 품질 원칙을 명확히 위반하는 값은 사용자 디자인 원천의 의도를 해치지 않는 범위에서 보정합니다. 특정 기관 스타일이나 고정 수치로 강제 교정하지 않습니다.
 
-**폰트 크기**:
-- 본문 기준 최소 **16px(Body Medium 17px)** 이상인지 확인
-- 미달 시 → 기준값으로 **즉시 자동 교정**
-
-**터치 타겟**:
-- 버튼/폼 요소 최소 높이가 **44px** 이상인지 확인
-- 미달 시 → **44px로 즉시 자동 교정**
-
-**Border Radius**:
-- 버튼·입력창 기본 둥글기가 **8px**인지 확인
-- 미달 시 → **8px로 즉시 자동 교정**
-
-검증 및 교정 완료 후 보고:
+검토 및 보정 완료 후 보고:
 ```
-[3/6] design-constitution.md 준수 검증·교정 완료
+[3/6] 디자인 품질 원칙 검토 완료
 
   ✅ 통과 항목:
-    - 명도 대비: 모든 텍스트/배경 조합 4.5:1 이상
-    - 터치 타겟: 버튼 min-height 44px 확인
-    - Border Radius: 8px 일치
+    - 읽기 쉬운 대비와 정보 위계 확인
+    - 조작 가능한 인터랙션 크기와 상태 표현 확인
+    - 반응형 흐름 확인
 
-  🔧 자동 교정된 항목:
-    - Primary 색상: #e63946 → #1a42e5 (정부 표준 Blue 계열 교정)
-    - 본문 폰트: 14px → 17px (기준 최소값 적용)
+  🔧 보정된 항목:
+    - {필요 시 보정 내용}
 ```
 
-모든 교정은 사용자 확인 없이 자동 적용됩니다. 교정 항목이 없으면 바로 다음 단계로 진행합니다.
+보정 항목이 없으면 바로 다음 단계로 진행합니다.
 
 ---
 
-### [4/6] design.md 생성
+### [4/5] design.md 생성
 
-정규화된 토큰을 바탕으로 `designs/design.md`를 작성합니다.
+정규화된 디자인 시스템을 바탕으로 `designs/design.md`를 작성합니다.
 
-**필수 포함 섹션** (기존 designs/design.md 구조를 따름):
+**필수 포함 섹션**:
 
-1. 테마 (색상 팔레트 — Primary, Neutral, Semantic, Background & Surface)
-2. 다크모드 (MVP는 라이트만)
-3. 타이포그래피 (폰트 패밀리, 크기, 굵기, 줄 높이, 자간)
-4. 간격 시스템 (4px 기반)
-5. 레이아웃 (컨테이너 너비, 브레이크포인트, 사이드바, 네비게이션)
-6. 버튼 (종류, 사이즈, 공통 속성, 아이콘 버튼)
-7. 폼 요소 (입력, 텍스트에어리어, 셀렉트, 체크박스, 토글, 라벨, 헬퍼)
-8. 카드
-9. 모달/다이얼로그
-10. 테이블
-11. 네비게이션 (Navbar, Sidebar)
-12. 뱃지/태그
-13. 알림/토스트
-14. 그림자
-15. 둥글기
-16. 트랜지션/애니메이션
-17. 아바타
-18. 로딩 상태
-19. z-index 체계
-20. 인증 페이지
-21. 규칙 (Rules)
+1. Design Thesis
+2. Reference Source Map 또는 Source Mapping
+3. Visual Theme & Atmosphere
+4. Color Palette & Roles
+5. Typography Rules
+6. Layout Principles
+7. Component Contracts
+8. Media Rules
+9. Depth & Elevation
+10. Responsive Behavior
+11. Do / Don't
+12. Agent Implementation Guide
 
 **작성 규칙**:
-- 각 토큰은 `--토큰명` | `값` | `용도` 형식의 테이블로 정리
+- 각 색상·타이포·간격·둥글기·그림자 값은 `이름 | 값 | 역할 | 사용 위치` 형식의 테이블로 정리
+- Typography Rules에는 참조/원본 font-family, 구현 font-family stack, 대체 사유, 역할별 크기·굵기·행간·자간을 기록
 - 디자인 소스에서 실제로 사용된 컴포넌트만 상세 명세를 작성하고, 사용되지 않은 컴포넌트는 기본값으로 채움
 - 문서 상단에 소스 타입 명시: "이 문서는 [Stitch | .pen 파일] 기반으로 자동 생성되었습니다"
+- 생성 완료한 `design.md`의 첫 non-empty line에는 `TBD`가 없어야 한다. 기존 템플릿의 `(TBD)` 마커는 제거한다.
 - Stitch 모드: `DESIGN.md`의 디자인 원칙(Creative North Star, Do/Don't)을 design.md의 Rules 섹션에 그대로 포함
 
 ---
 
-### [5/6] design-tokens.css 생성
-
-`designs/design.md`의 모든 토큰을 CSS 변수로 구현하여 `designs/design-tokens.css`에 저장합니다.
-
-```css
-/* designs/design-tokens.css — designs/design.md 기반 자동 생성 */
-/* 이 파일은 designs/design.md와 항상 세트로 관리합니다. */
-
-:root {
-  /* === 1. Colors === */
-  --color-primary-50: #EFF6FF;
-  --color-primary-100: ...;
-  /* ... designs/design.md의 모든 색상 토큰 ... */
-
-  /* === 2. Typography === */
-  --font-sans: 'Pretendard', 'Inter', ...;
-  --text-xs: 12px;
-  /* ... designs/design.md의 모든 타이포 토큰 ... */
-
-  /* === 3. Spacing === */
-  --space-0: 0px;
-  --space-1: 4px;
-  /* ... designs/design.md의 모든 간격 토큰 ... */
-
-  /* ... 나머지 모든 토큰 ... */
-}
-```
-
-**생성 규칙**:
-- `designs/design.md`에 정의된 **모든** 토큰이 CSS 변수로 존재해야 함 (1:1 매핑)
-- 변수명은 `designs/design.md`의 토큰명과 정확히 일치 (`--color-primary-600`, `--text-sm` 등)
-- 카테고리별 주석으로 구분
-- `designs/design.md`에 없는 임의의 변수를 추가하지 않음
-
----
-
-### [6/6] 디자인 프리뷰 HTML 생성
+### [5/5] 디자인 프리뷰 HTML 생성
 
 `guides/design-preview.html`을 생성합니다. 브라우저에서 열면 디자인 시스템 전체를 시각적으로 확인할 수 있는 단일 HTML 파일입니다.
 
 > `guides/` 디렉토리가 없으면 생성합니다.
 
 **필수 조건**:
-- `designs/design-tokens.css`를 `<link>`로 불러와서 실제 토큰 변수를 사용하여 렌더링
+- `designs/design.md`에 적힌 값과 컴포넌트 계약을 HTML/CSS로 시각화
 - 외부 라이브러리 없이 순수 HTML + CSS + 인라인 JS로 구성 (단일 파일)
-- `designs/design-tokens.css` 경로는 상대 경로 `../designs/design-tokens.css` 사용
+- 프리뷰 내부 CSS는 `design.md`에서 파생한 값임을 주석으로 기록
 
 **포함 섹션** (designs/design.md 구조 순서대로):
 
 #### 1. Color Palette
-- Primary 50~900: 각 색상을 정사각 칩으로 나열, 토큰명 + HEX값 표시
+- Primary 50~900: 각 색상을 정사각 칩으로 나열, 이름 + HEX값 표시
 - Neutral(Gray) 50~900: 동일
 - Semantic: Success, Warning, Danger, Info — 각각 기본색 + light 배경색
 - Background & Surface: bg, bg-secondary, bg-tertiary, surface, overlay
@@ -311,7 +259,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 직접 CSS 변수
 - 줄 높이: tight, normal, relaxed 비교
 
 #### 3. Spacing
-- space-0 ~ space-20: 각 간격을 시각적 바(bar)로 표현, 토큰명 + px값 표시
+- space-0 ~ space-20: 각 간격을 시각적 바(bar)로 표현, 이름 + px값 표시
 
 #### 4. Layout
 - 컨테이너 너비: sm, md, lg, xl을 비율 바로 표현
@@ -347,18 +295,32 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 직접 CSS 변수
 - 트랜지션: fast, base, slow, spring 버튼으로 체감 비교
 
 **스타일 규칙**:
-- 페이지 자체의 레이아웃도 `designs/design-tokens.css` 변수를 사용
+- 페이지 자체의 레이아웃도 `designs/design.md`의 값과 컴포넌트 계약을 사용
 - 각 섹션은 앵커 링크가 있는 목차(TOC)로 이동 가능
-- 상단에 "이 페이지는 designs/design-tokens.css를 실시간 참조합니다. 토큰을 수정하면 새로고침만으로 변경사항을 확인할 수 있습니다." 안내 표시
+- 상단에 "이 페이지는 designs/design.md를 기준으로 생성된 디자인 시스템 프리뷰입니다." 안내 표시
 - 반응형: 모바일에서도 확인 가능
 
 생성 완료 후 보고:
 ```
-[6/6] 디자인 프리뷰 생성 완료
+[5/5] 디자인 프리뷰 생성 완료
   → guides/design-preview.html
   브라우저에서 열어 디자인 시스템을 확인하세요.
-  💡 designs/design-tokens.css를 수정하면 새로고침만으로 변경사항이 반영됩니다.
 ```
+
+### Step Check
+
+완료 전 `.altool/checks/design_source.design_source.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/design_source.design_source.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
+
+| 항목 | 보고 기준 |
+| --- | --- |
+| `inputs.loaded` | 디자인 소스와 constitution.md 로딩 결과 |
+| `lesson.search` | 디자인 소스 키워드 검색 결과 또는 `skipped(not applicable)` |
+| `event.capture` | `skipped(document/design-system step)` — 코드 오류 lesson을 append하지 않는다 |
+| `verification` | 디자인 품질 원칙 검토 결과 |
+| `state.updated` | `skipped(no feature phase)` |
+| `docs.synced` | design.md 갱신 결과 |
+| `document.status` | design.md 최상단 `TBD` 제거 확인 또는 `skipped(design system assets)` |
+| `artifacts.created` | design.md, design-preview.html |
 
 ---
 
@@ -370,7 +332,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 직접 CSS 변수
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📁 디자인 소스: [Stitch (designs/stitch/) | Pencil (.pen [N]개)]
-📊 생성된 토큰 수:
+📊 생성된 디자인 값 수:
   색상: [N]개
   타이포: [N]개
   간격: [N]개
@@ -378,8 +340,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 직접 CSS 변수
   기타: [N]개
 
 📄 생성된 파일:
-  ✅ designs/design.md (디자인 명세)
-  ✅ designs/design-tokens.css (CSS 변수)
+  ✅ designs/design.md (디자인 시스템 명세)
   ✅ guides/design-preview.html (시각 프리뷰)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -388,11 +349,11 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 직접 CSS 변수
 
 1. guides/design-preview.html을 브라우저에서 열어 디자인 시스템을 확인하세요
 2. designs/design.md를 검토하고 필요한 부분을 수정하세요
-3. 수정 후 designs/design-tokens.css도 함께 업데이트하세요 (항상 세트!)
-   💡 designs/design-tokens.css 수정 후 프리뷰를 새로고침하면 바로 반영됩니다
-4. 확정 후 /al oneshot 으로 기능 개발을 시작하세요
+3. 확정 후 $altool research 또는 $altool oneshot 으로 기능 개발을 시작하세요
 
-⚠️ designs/design.md와 designs/design-tokens.css는 파이프라인 실행 전에 확정해야 합니다.
+⚠️ designs/design.md는 파이프라인 실행 전에 확정해야 합니다.
    파이프라인 실행 중에는 수정하지 마세요 (헌법 제16조).
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+
