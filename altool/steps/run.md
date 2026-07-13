@@ -16,8 +16,8 @@
 - PRD(`docs/00-pm/` 또는 `prd/`) → WHY 추출, Plan → Context Anchor·Success Criteria·Requirements 추출.
 - **코드 오류 검색**: `lesson.md` 전체를 읽지 않는다. 기능명·수정 예정 파일·프레임워크·패키지·오류코드로 `python altool/scripts/lesson.py search --query "{키워드}" --limit 5`를 실행하고, 관련 코드 오류 이벤트의 `preventionRule`만 `lesson: E-00000(...)` 1줄로 출력 후 구현에 반영한다.
 - **React/Next.js 보조 스킬**: `.agents/skills/vercel-react-best-practices/SKILL.md`가 있으면 React/Next.js 구현 규칙으로 적용한다. 없으면 `skipped(skill unavailable)`로 보고하고 계속한다.
-- **Altool 자산 감지**: `constitution.md`는 있으면 읽고 적용한다. `designs/` 사용자 디자인 입력(`*.pen`, `stitch/`, `*.png`, `*.jpg`, `*.jpeg`, `*.webp`, `*.md`, `*.pdf`)과 `designs/design.md`를 확인한다. Spec의 `User Design Source`가 있으면 그 화면 구조와 시각 기준을 1순위로 구현한다. UI 작업은 `designs/design.md`를 구현 기준으로 사용한다. 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 run을 계속하지 말고 Research 또는 design_source로 돌아가 디자인 시스템을 먼저 생성한다. 디자인 시스템이 없다는 이유로 근거 없는 generic AI/SaaS 기본 미감(과한 그라디언트, 추상 장식, glassmorphism, 카드 그림자 남발)을 발명하지 않는다.
-- UI 구현은 `designs/design.md`의 **Screen Recipes**와 **Capture-to-Implementation Map**을 먼저 따른다. 색상·폰트·버튼 값은 그 다음 적용한다. 캡처 기반 recipe가 있는데도 일반적인 split SaaS hero, floating trust card 묶음, 과한 gradient overlay, 카드 그림자 남발, reference보다 느슨한 빈 화면으로 구현하면 design drift다.
+- **Altool 자산 감지**: `constitution.md`는 있으면 읽고 적용한다. `designs/claude-design/*.html`을 최우선 디자인 헌법으로 확인하고, 그 다음 `designs/` 사용자 디자인 입력(`*.pen`, `stitch/`, `*.png`, `*.jpg`, `*.jpeg`, `*.webp`, `*.md`, `*.pdf`)과 `designs/design.md`를 확인한다. Spec의 `User Design Source`가 있으면 그 화면 구조와 시각 기준을 1순위로 구현한다. Claude 디자인 HTML이 있으면 Spec보다 더 구체적인 시각 기준으로 적용하고, `designs/design.md`와 충돌하면 HTML을 우선한다. UI 작업은 `designs/design.md`를 구현 기준으로 사용한다. 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 run을 계속하지 말고 Research 또는 design_source로 돌아가 디자인 시스템을 먼저 생성한다. 디자인 시스템이 없다는 이유로 근거 없는 generic AI/SaaS 기본 미감(과한 그라디언트, 추상 장식, glassmorphism, 카드 그림자 남발)을 발명하지 않는다.
+- UI 구현은 `designs/claude-design/*.html`의 DOM/CSS/컴포넌트 구조를 먼저 따르고, 그 다음 `designs/design.md`의 **Screen Recipes**와 **Capture-to-Implementation Map**을 따른다. 색상·폰트·버튼 값은 그 다음 적용한다. 캡처 기반 recipe가 있는데도 일반적인 split SaaS hero, floating trust card 묶음, 과한 gradient overlay, 카드 그림자 남발, reference보다 느슨한 빈 화면으로 구현하면 design drift다.
 - `Capture-to-Implementation Map`의 각 행마다 대응하는 section/component를 코드에 만든다. 구현하지 않는 행이 있으면 plan/spec 범위 밖 사유를 run check의 `verification` 또는 `docs.synced` 증거에 남긴다.
 
 ### 4~5. Decision Record Chain + Success Criteria 표시
@@ -77,7 +77,7 @@ Codex 대화 확인: **"이 범위로 구현을 시작해도 되겠습니까?"**
 **Altool 확장 준수 사항**:
 | 항목 | 규칙 |
 |------|------|
-| 디자인 입력/디자인 시스템 | Spec의 User Design Source가 있으면 화면 구조와 시각 기준 1순위. `designs/design.md`를 읽고 Screen Recipes, Component Extraction, Capture-to-Implementation Map을 먼저 구현한다. 그 다음 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트·미디어 규칙을 추적 가능하게 적용한다. CSS 변수는 코드 안에서 파생해도 되지만 값의 근거는 `design.md`에 있어야 한다. 참조 폰트 파일을 복제하지 말고 `design.md`에 잠긴 구현 font-family stack을 그대로 사용한다. 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 Research/design_source로 돌아가 생성 후 진행. 참조 브랜드의 로고·카피·고유 이미지·식별 가능한 고유 배치는 복제하지 않지만, 캡처에서 추출한 구조·비례·밀도·컴포넌트 외형 계약은 구현한다. |
+| 디자인 입력/디자인 시스템 | `designs/claude-design/*.html`이 있으면 최우선 디자인 헌법으로 읽고 화면 구조와 시각 기준 1순위로 구현한다. Spec의 User Design Source가 있으면 함께 확인한다. `designs/design.md`를 읽고 Screen Recipes, Component Extraction, Capture-to-Implementation Map을 구현하되 Claude HTML과 충돌하면 HTML을 우선한다. 그 다음 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트·미디어 규칙을 추적 가능하게 적용한다. CSS 변수는 코드 안에서 파생해도 되지만 값의 근거는 Claude HTML 또는 `design.md`에 있어야 한다. 참조 폰트 파일을 복제하지 말고 `design.md`에 잠긴 구현 font-family stack을 그대로 사용한다. 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 Research/design_source로 돌아가 생성 후 진행. 참조 브랜드의 로고·카피·고유 이미지·식별 가능한 고유 배치는 복제하지 않지만, 캡처에서 추출한 구조·비례·밀도·컴포넌트 외형 계약은 구현한다. |
 | 보안 | API 키 하드코딩 금지, `.env` 격리, 세션 검증 (제6조·제11조) |
 | 메인 화면 | 메인 화면 우선, 비인증 탐색 보장 (제15조) |
 | 반응형 | 모바일 375px 이상 정상 표시 (제7조) |

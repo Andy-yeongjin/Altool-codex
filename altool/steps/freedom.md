@@ -12,7 +12,7 @@ $altool freedom
 
 Freedom은 `oneshot`의 대체가 아니라 상위 자율주행 모드다. `oneshot`은 한 번의 정해진 파이프라인이고, Freedom은 상태를 보고 다음 action을 고른다. 다만 채팅을 영구 점유하지 않도록 **반드시 루프 횟수 한도**를 가진다.
 
-여기서 **각 루프는 action 하나가 아니라 자율 개발 사이클**이다. `loopBudget`은 같은 제품을 조사·구현·검증·재조사로 성숙시키는 반복 횟수다. 모든 루프는 반드시 research로 시작하고, 그 조사 결과와 현재 상태를 바탕으로 전체 제품의 완성형 목표를 정한다. 한 루프 안에서 여러 action(`plan`, `spec`, `run`, `analyze`, 필요한 `fix`, `browser`, `report`)을 수행할 수 있다. `currentAction`은 루프 내부에서 지금 수행 중인 세부 action일 뿐이며, `loopsCompleted`는 action 완료 때가 아니라 사이클 종료 때만 증가한다.
+여기서 **각 루프는 action 하나가 아니라 자율 개발 사이클**이다. `loopBudget`은 같은 제품을 조사·구현·검증·재조사로 성숙시키는 반복 횟수다. 각 루프는 필요한 경우 `design_source` preflight를 자동 수행한 뒤 반드시 research로 시작하고, 그 조사 결과와 현재 상태를 바탕으로 전체 제품의 완성형 목표를 정한다. 한 루프 안에서 여러 action(`plan`, `spec`, `run`, `analyze`, 필요한 `fix`, `browser`, `report`)을 수행할 수 있다. `currentAction`은 루프 내부에서 지금 수행 중인 세부 action일 뿐이며, `loopsCompleted`는 action 완료 때가 아니라 사이클 종료 때만 증가한다.
 
 ## 0. 시작 출력
 
@@ -38,7 +38,7 @@ Freedom은 `oneshot`의 대체가 아니라 상위 자율주행 모드다. `ones
 - 사용자가 `--loops N`, `N회`, `N번`을 말하면 그 값을 사용한다.
 - 루프 횟수가 없으면 기본값은 1회다.
 - 루프 횟수는 1 이상이어야 한다.
-- 각 루프는 하나의 의미 있는 개발 사이클이다. 반드시 `research`를 먼저 수행한 뒤, 조사 결과와 현재 상태에 따라 `plan -> spec -> run -> analyze -> fix -> browser -> report` 중 필요한 흐름으로 사용자가 맡긴 전체 제품의 완성형을 구현·검증한다.
+- 각 루프는 하나의 의미 있는 개발 사이클이다. `designs/claude-design/*.html`, `.pen`, Stitch가 있고 `designs/design.md`가 없거나 오래됐거나 `TBD`이면 `design_source`를 자동 수행한 뒤, 반드시 `research`를 수행한다. 이후 조사 결과와 현재 상태에 따라 `plan -> spec -> run -> analyze -> fix -> browser -> report` 중 필요한 흐름으로 사용자가 맡긴 전체 제품의 완성형을 구현·검증한다.
 - 루프 수는 같은 제품의 완성도를 반복적으로 끌어올리는 기준이다. 모든 루프는 동일한 제품 목표를 대상으로 한다.
 - action 하나만 끝났다고 `loopsCompleted`를 올리지 않는다. `currentAction`만 갱신하고 outbox/journal에 진행 상황을 남긴다.
 - `loopsCompleted`는 현재 사이클의 목표 산출물과 검증이 끝났을 때만 1 증가시킨다.
@@ -62,28 +62,34 @@ for cycle in 1..N:
   1. radio pending 확인 및 처리
      - `python altool/scripts/radio.py cycle start --loop {cycle}` 실행
   2. Observe
-  3. research 수행
+  3. 디자인 소스 preflight
+     - `designs/claude-design/*.html`, `designs/stitch/`, `designs/*.pen`을 확인한다
+     - Claude 디자인 HTML이 있으면 최우선 디자인 헌법으로 보고, `designs/design.md`가 없거나 비어 있거나 `TBD`이거나 HTML보다 오래됐거나 Reference Source Map에 HTML 경로가 없으면 `altool/steps/design_source.md`를 자동 수행한다
+     - 시작 전 `python altool/scripts/radio.py action start design_source --loop {cycle}` 실행
+     - 완료 후 `python altool/scripts/radio.py action done design_source --loop {cycle} --summary "{요약}"` 실행
+     - 최신 디자인 시스템이면 `design_source` action은 생략하고 outbox에 `skipped(design system current)`를 남긴다
+  4. research 수행
      - 시작 전 `python altool/scripts/radio.py action start research --loop {cycle}` 실행
      - `altool/steps/research.md`를 읽고 실제 조사 산출물을 만든다
      - 기존 조사와 중복/새 발견을 분리한다
      - 다음 루프 후보는 확정 계획이 아니라 nextResearchQuestions로 남긴다
      - 완료 후 `python altool/scripts/radio.py action done research --loop {cycle} --summary "{요약}"` 실행
-  4. 이번 사이클의 완성형 목표와 완료 기준 결정
+  5. 이번 사이클의 완성형 목표와 완료 기준 결정
      - 이번 research에서 확인한 유사 서비스·사용자 기대·페이지·기능·디자인 시스템 근거를 기준으로 전체 제품의 완성형 목표를 정한다
      - 기능·UX·디자인·품질 기준이 서로 연결된 end-to-end 제품 경험이 되도록 범위를 세운다
      - 후속 루프의 구체 작업은 미리 확정하지 않는다
-  5. 필요한 action들을 순서대로 수행
+  6. 필요한 action들을 순서대로 수행
      - 각 action 시작 전 radio pending 확인
      - 각 action 시작 시 `python altool/scripts/radio.py action start {action} --loop {cycle}` 실행
      - 선택된 action의 step 문서 읽기
      - 해당 step 실제 수행
      - 해당 step의 Step Check 실행
      - 각 action 완료 시 `python altool/scripts/radio.py action done {action} --loop {cycle} --summary "{요약}"` 실행
-  6. 구현 사이클은 report 수행
+  7. 구현 사이클은 report 수행
      - browser 통과 후 다음 루프로 넘어가기 전에 반드시 `altool/steps/report.md`를 읽고 report action을 수행한다
      - `docs/04-report/{feature}.report.md`와 `{feature}.report.json` Step Check가 통과해야 한다
-  7. 사이클 완료 기준을 만족하면 `python altool/scripts/radio.py cycle done --loop {cycle} --summary "{요약}"` 실행해 loopsCompleted를 갱신
-  8. 다음 사이클로 넘어가기 전 radio pending 확인
+  8. 사이클 완료 기준을 만족하면 `python altool/scripts/radio.py cycle done --loop {cycle} --summary "{요약}"` 실행해 loopsCompleted를 갱신
+  9. 다음 사이클로 넘어가기 전 radio pending 확인
 ```
 
 중요:
@@ -93,7 +99,7 @@ for cycle in 1..N:
 - action 시작 시 `.altool/freedom/state.json`의 `currentAction`을 action명으로 갱신한다.
 - action 완료 시 `currentAction`을 `null`로 되돌리고 outbox/journal에 완료 요약을 남긴다.
 - 사이클 완료 시 `loopsCompleted`를 현재 cycle 번호 이상으로 갱신한다.
-- 각 사이클은 반드시 `research` 산출물부터 만든다. `research` 없이 plan/spec/run으로 넘어가지 않는다.
+- 각 사이클은 필요한 경우 `design_source` preflight를 먼저 수행한 뒤 반드시 `research` 산출물을 만든다. `research` 없이 plan/spec/run으로 넘어가지 않는다.
 - Freedom의 모든 구현 루프는 사용자의 전체 요청을 만족하는 end-to-end 제품 경험을 기준으로 한다. 후속 루프는 직전 루프에서 만든 같은 제품을 다시 조사·관찰해 기능·UX·디자인·품질을 성숙시킨다.
 - 핵심 사용자 여정은 현재 루프의 완료 기준에 포함한다. `Out of Scope`는 안전 경계, 외부 연동, 실제 결제, 사용자 승인이 필요한 작업, 현재 제품의 보조 확장 후보에만 사용한다.
 - 시간·안전·기술 제약이 있으면 현재 완성형 기준과 남은 확장 후보를 `Out of Scope`, report, `nextResearchQuestions`에 기록한다.
@@ -149,6 +155,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 
 - `AGENTS.md`, `.agents/skills/altool/SKILL.md`
 - `constitution.md`
+- `designs/claude-design/*.html`
 - `designs/design.md`
 - `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}`
 - `prd/*.md`, `prd/refs/*`
@@ -166,6 +173,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 
 | action | 선택 기준 |
 | --- | --- |
+| `design_source` | `designs/claude-design/*.html`, `.pen`, Stitch가 있고 `designs/design.md`가 없거나 오래됐거나 `TBD`이거나 원본 경로가 Reference Source Map에 없음. `oneshot`/`freedom`에서는 별도 사용자 명령 없이 자동 수행 |
 | `research` | 모든 사이클의 필수 시작 action. 목표와 유사 사례, 기능 후보, UX 패턴, 사용자 기대, 리스크를 조사 |
 | `plan` | 이번 research 기준의 완성형 목표가 정해졌고, plan이 없거나 현재 research·사용자 지시·구현 상태와 불일치함 |
 | `spec` | plan이 있고, spec이 없거나 현재 plan·research·design.md·구현 상태와 불일치함 |
@@ -186,6 +194,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 
 | Freedom action | 사용할 절차 |
 | --- | --- |
+| `design_source` | `altool/steps/design_source.md` |
 | `research` | `altool/steps/research.md` |
 | `plan` | `altool/steps/plan.md` |
 | `spec` | `altool/steps/spec.md` |
@@ -195,7 +204,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 | `browser` | `altool/steps/browser.md` |
 | `report` | `altool/steps/report.md` |
 
-Research는 PRD와 사용자 디자인 입력을 덮어쓰지 않는다. 디자인 기준 우선순위는 `designs/` 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `designs/design.md` → Research가 생성한 디자인 시스템 → AI 자체 판단이다. `constitution.md`의 디자인 품질 원칙은 모든 원천에 항상 적용한다. 외부 사이트에서 가져올 수 있는 것은 페이지 구조, 정보 배치, 기능 흐름, 인터랙션 의도, 사용자 기대, 색상, 브랜드 분위기, 타이포, 간격, 그림자, 둥글기, 컴포넌트 외형 값, 밀도, 위계, 네비게이션 패턴이다. `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 재사용하고, 없거나 비어 있거나 `TBD` 마커가 있으면 첫 research에서 참조 사이트와 사용자 디자인 입력을 근거로 이 파일을 생성한 뒤 `TBD`를 제거한다. 후속 action은 Research의 시각 관찰값을 직접 구현하지 않고 생성·재사용된 디자인 시스템을 구현 기준으로 사용한다. 단, 문장·카피·로고·고유 이미지·식별 가능한 레이아웃은 그대로 복제하지 않는다. 디자인 시스템이 없다는 이유로 근거 없는 generic AI/SaaS 기본 미감을 새로 만들지 않는다.
+Research는 PRD와 사용자 디자인 입력을 덮어쓰지 않는다. 디자인 기준 우선순위는 `designs/claude-design/*.html` → `designs/` 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `designs/design.md` → Research가 생성한 디자인 시스템 → AI 자체 판단이다. `constitution.md`의 디자인 품질 원칙은 모든 원천에 항상 적용한다. 외부 사이트에서 가져올 수 있는 것은 페이지 구조, 정보 배치, 기능 흐름, 인터랙션 의도, 사용자 기대, 색상, 브랜드 분위기, 타이포, 간격, 그림자, 둥글기, 컴포넌트 외형 값, 밀도, 위계, 네비게이션 패턴이다. `designs/claude-design/*.html`이 있으면 이 HTML을 최우선 디자인 헌법으로 유지하고, `design_source`가 이를 `designs/design.md`로 정규화한다. `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 재사용하되 Claude 디자인 HTML과 충돌하면 HTML을 우선한다. 없거나 비어 있거나 `TBD` 마커가 있으면 design_source 또는 첫 research에서 참조 사이트와 사용자 디자인 입력을 근거로 이 파일을 생성한 뒤 `TBD`를 제거한다. 후속 action은 Research의 시각 관찰값을 직접 구현하지 않고 생성·재사용된 디자인 시스템과 Claude 디자인 HTML을 구현 기준으로 사용한다. 단, 문장·카피·로고·고유 이미지·식별 가능한 레이아웃은 그대로 복제하지 않는다. 디자인 시스템이 없다는 이유로 근거 없는 generic AI/SaaS 기본 미감을 새로 만들지 않는다.
 
 ## 6. Verify
 
@@ -214,7 +223,8 @@ Research는 PRD와 사용자 디자인 입력을 덮어쓰지 않는다. 디자�
 | `document.status` | 관련 문서 상단 Status 동기화 결과 또는 `skipped(no document status)` |
 | `artifacts.created` | 생성/갱신한 freedom, docs, check 산출물 목록 |
 | `inbox.watch` | action 전 inbox 확인 |
-| `research.required` | 실제 `$altool freedom` 사이클 시작 시 research 산출물과 research Step Check를 먼저 완료 |
+| `design_source.autorun` | Claude 디자인 HTML/.pen/Stitch가 있을 때 design_source 자동 실행 또는 최신 상태 생략 사유 |
+| `research.required` | 실제 `$altool freedom` 사이클 시작 시 필요한 design_source preflight 후 research 산출물과 research Step Check를 완료 |
 | `cycle.state` | 사이클 시작/완료 시 `loop`, `loopsCompleted`가 실제 진행과 일치 |
 | `action.state` | 각 action 시작/완료 시 `currentAction`이 설정되고 완료 후 해제 |
 | `report.required` | 구현/UI 사이클은 report 문서와 report Step Check 완료. 사용자 범위 제한 지시가 있으면 `skipped(user-limited cycle)` |

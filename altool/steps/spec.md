@@ -18,7 +18,7 @@
 - `docs/01-plan/features/{기능명}.plan.md` 존재 확인. **없으면 `$altool plan {기능 설명}` 먼저 실행을 제안**하고 사용자에게 진행 여부 확인.
 - 있으면 전체를 읽고 요구사항·범위를 파악한다.
 - 사용자가 입력한 추가 지시가 있으면 Plan 범위와 충돌하지 않는 선에서 아키텍처 3안, UI 체크리스트, 테스트 플랜에 반영한다.
-- **Altool 자산 감지**: `constitution.md`는 있으면 읽고 적용한다. `designs/` 사용자 디자인 입력(`*.pen`, `stitch/`, `*.png`, `*.jpg`, `*.jpeg`, `*.webp`, `*.md`, `*.pdf`)이 있으면 화면 구조와 시각 기준의 1순위로 읽는다. `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으면 프로젝트 디자인 시스템으로 적용한다. UI 작업인데 이 파일이 없거나 비어 있거나 `TBD` 마커가 있으면 Research 또는 design_source 단계로 돌아가 디자인 시스템을 먼저 생성하도록 명세에 기록하고, 임의 시각 값을 직접 명세화하지 않는다.
+- **Altool 자산 감지**: `constitution.md`는 있으면 읽고 적용한다. `designs/claude-design/*.html`이 있으면 화면 구조와 시각 기준의 최우선 디자인 헌법으로 읽는다. 그 다음 `designs/` 사용자 디자인 입력(`*.pen`, `stitch/`, `*.png`, `*.jpg`, `*.jpeg`, `*.webp`, `*.md`, `*.pdf`)을 읽는다. `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으면 프로젝트 디자인 시스템으로 적용하되 Claude 디자인 HTML과 충돌하면 HTML을 우선한다. UI 작업인데 이 파일이 없거나 비어 있거나 `TBD` 마커가 있으면 Research 또는 design_source 단계로 돌아가 디자인 시스템을 먼저 생성하도록 명세에 기록하고, 임의 시각 값을 직접 명세화하지 않는다.
 
 ### 3. PRD 컨텍스트 로딩
 
@@ -47,6 +47,7 @@ Codex 대화 확인: **"3가지 설계안 중 어떤 걸 선택하시겠습니�
 - **§4 API 명세**: 엔드포인트 목록 + 상세 스키마 + 에러 응답 (**analyze의 Contract 검증 기준**)
 - **§5.4 Page UI Checklist (CRITICAL)**: 페이지별 필수 UI 요소를 빠짐없이 항목화 — 폼 필드·버튼·필터·배지·데이터 표시 요소를 구체적 옵션 값까지. **이 체크리스트가 없으면 analyze가 파일 존재만 검사하게 됨 (Functional 검증의 분모)**
 - **§8 테스트 플랜**: L1(API)/L2(UI 액션)/L3(E2E) 테스트 시나리오 정의 — run에서 코드 작성, analyze에서 실행
+- **Claude 디자인 HTML 있음**: `designs/claude-design/*.html`의 DOM 구조, 정보 밀도, 시각 위계, 컴포넌트 외형, 색상, 간격, 타이포, 상태 표현을 최우선 명세 기준으로 잠근다. `designs/design.md`는 이 HTML을 정규화하거나 빈칸을 채우는 보조 기준으로만 사용한다.
 - **사용자 디자인 입력 있음**: `.pen`, Stitch, 스크린샷, 디자인 문서에서 화면 구조, 정보 밀도, 시각 위계, 컴포넌트 외형을 명세 기준으로 잠근다. Research는 누락된 UX/기능/상태 보강과 디자인 시스템 정규화 근거로만 사용한다.
 - **디자인 시스템 있음**: 모든 UI 컴포넌트의 시각적 수치(높이·색상·폰트·간격·그림자·둥글기)는 `designs/design.md`의 규칙으로 명시한다. 특히 Screen Recipes, Component Extraction, Capture-to-Implementation Map을 Design System Anchor에 잠그고 Page UI Checklist에 반영한다. 폰트는 참조 font-family와 구현 font-family stack, 대체 사유를 함께 잠근다. 코드 구현에서 CSS 변수를 쓰는 것은 허용하지만, 값과 역할은 `design.md`에서 추적 가능해야 한다. 필요한 화면 recipe나 컴포넌트 계약이 누락되면 spec에서 직접 발명하지 말고 디자인 시스템 보강 필요 항목으로 기록한다.
 - **사용자 디자인 입력 없음 + 디자인 시스템 없음**: Research가 참조 사이트를 근거로 `designs/design.md`를 생성해야 한다. Spec은 research 문서와 생성된 디자인 시스템을 연결하고, 생성 전에는 UI 시각값을 확정하지 않는다.
@@ -57,7 +58,7 @@ Codex 대화 확인: **"3가지 설계안 중 어떤 걸 선택하시겠습니�
 
 ### 11. Design System Anchor
 
-UI 기능이면 `## Design System Anchor` 절에 시각 기준을 잠근다. 먼저 `designs/` 사용자 디자인 입력이 있는지 확인하고, 있으면 그 자산의 경로와 적용 범위를 명시한다. 그 다음 `designs/design.md`의 Screen Recipes, Component Extraction, Capture-to-Implementation Map, 시각 값, 컴포넌트 계약, 미디어 규칙을 채운다. 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 관련 Research에서 디자인 시스템을 생성하도록 되돌리고, Spec 완료 전 `Design System Anchor`를 채운다. 이 절이 비어 있거나 Screen Recipe와 구현 대상 section/component 연결이 없으면 run이 generic AI/SaaS 스타일로 흐르므로 Spec 완료 전 반드시 보완한다.
+UI 기능이면 `## Design System Anchor` 절에 시각 기준을 잠근다. 먼저 `designs/claude-design/*.html`이 있는지 확인하고, 있으면 그 HTML 경로와 적용 범위를 최우선 디자인 헌법으로 명시한다. 그 다음 `designs/` 사용자 디자인 입력과 `designs/design.md`의 Screen Recipes, Component Extraction, Capture-to-Implementation Map, 시각 값, 컴포넌트 계약, 미디어 규칙을 채운다. 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 관련 Research에서 디자인 시스템을 생성하도록 되돌리고, Spec 완료 전 `Design System Anchor`를 채운다. 이 절이 비어 있거나 Screen Recipe와 구현 대상 section/component 연결이 없으면 run이 generic AI/SaaS 스타일로 흐르므로 Spec 완료 전 반드시 보완한다.
 
 ### 12~13. 상태 갱신 + 보고
 
