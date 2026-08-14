@@ -18,7 +18,7 @@
 - `docs/02-spec/features/{기능명}.spec.md` 존재 확인 (필수). 없으면 spec 먼저 실행 제안.
 - **Spec 문서를 요약이 아니라 전체를 읽는다** — 세션마다 완전한 아키텍처 컨텍스트로 시작해야 함.
 - PRD(`docs/00-pm/` 또는 `prd/`) → WHY 추출, Plan → Context Anchor·Success Criteria·Requirements 추출.
-- **코드 오류 검색**: `lesson.md` 전체를 읽지 않는다. 기능명·수정 예정 파일·프레임워크·패키지·오류코드로 `python altool/scripts/lesson.py search --query "{키워드}" --limit 5`를 실행하고, 관련 코드 오류 이벤트의 `preventionRule`만 `lesson: E-00000(...)` 1줄로 출력 후 구현에 반영한다.
+- **코드 오류 검색**: `lesson.md` 전체를 읽지 않는다. 기능명·수정 예정 파일·프레임워크·패키지·오류코드로 `python3 altool/scripts/lesson.py search --query "{키워드}" --limit 5`를 실행하고, 관련 코드 오류 이벤트의 `preventionRule`만 `lesson: E-00000(...)` 1줄로 출력 후 구현에 반영한다.
 - **React/Next.js 보조 스킬**: 현재 프로젝트가 React 또는 Next.js를 사용하고 `.agents/skills/vercel-react-best-practices/SKILL.md`가 있으면 구현 규칙으로 적용한다. 다른 스택이면 `skipped(not React/Next.js)`, 파일이 없으면 `skipped(skill unavailable)`로 보고하고 계속한다.
 - **UI 계약 로딩**: 헌법, 직접 디자인 입력, Spec의 Design System Anchor, `designs/design.md`를 읽는다. `design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 research 또는 `design_source`로 돌아간다.
 - 헌법의 디자인 권위에 따라 Anchor와 recipe/capture map을 구현한다. 각 map 행을 section/component에 연결하고, 제외한 행은 범위 밖 사유를 run check에 남긴다.
@@ -103,18 +103,7 @@ Codex 대화 확인: **"이 범위로 구현을 시작해도 되겠습니까?"**
 **문서 동기화** (Altool 공통 규칙): plan §2.1 포함(In Scope)의 구현된 항목 체크, plan §3.1 FR Status를 `Pending` → `✅ 완료`로, spec §11.2 Implementation Order의 완료 항목 체크. 빌드까지 통과한 구현이면 plan/spec 문서 상단 `상태`/`Status`를 `Implemented`로 갱신한다.
 plan/spec 문서를 수정했으면 run Step Check만으로 끝내지 않는다. `.altool/checks/{기능명}.plan.json`과 `.altool/checks/{기능명}.spec.json`도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, run check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
 
-완료 전 `.altool/checks/{기능명}.run.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.run.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | spec/plan/PRD/자산/React 보조 스킬 로딩 결과 |
-| `lesson.search` | run 시작 시 실행한 query와 결과 수 |
-| `event.capture` | `code_error`/`fix`/`verification` 이벤트 ID 또는 `skipped(no code error)` |
-| `verification` | 빌드·테스트 명령과 결과 |
-| `state.updated` | `.altool/state/status.json` phase=run, buildVerified |
-| `docs.synced` | plan/spec 체크박스와 상단 Status=Implemented 동기화 결과, 수정된 plan/spec 소유 Step Check 재검증 경로 |
-| `document.status` | plan/spec 문서 상단 Status=Implemented |
-| `artifacts.created` | 구현 파일 목록 |
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.run.json`이다. 전용 증거는 spec/plan/PRD/자산/React 보조 스킬 입력, lesson query와 결과, `code_error`/`fix`/`verification` ID 또는 `skipped(no code error)`, 빌드·테스트 결과, status의 `phase=run`·`buildVerified`, plan/spec 체크박스·`Status=Implemented`와 소유 check 재검증, 구현 파일 목록이다.
 
 ```
 🐣 [al:run] {기능명} 완료

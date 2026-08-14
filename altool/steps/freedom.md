@@ -22,7 +22,7 @@ Freedom은 `oneshot`의 대체가 아니라 상위 자율주행 모드다. `ones
 
 ## 1. 무전기 초기화
 
-`python altool/scripts/radio.py init "{목표}" --loops {N}`를 실행해 아래 파일을 보장한다.
+`python3 altool/scripts/radio.py init "{목표}" --loops {N}`를 실행해 아래 파일을 보장한다.
 
 ```text
 .altool/freedom/inbox.jsonl
@@ -48,7 +48,7 @@ Freedom은 `oneshot`의 대체가 아니라 상위 자율주행 모드다. `ones
 로컬 루프 러너로 control-plane을 검증하거나 제한된 자동 루프를 실행할 때는 아래 명령을 사용한다.
 
 ```text
-python altool/scripts/freedom_loop.py "{목표}" --loops {N} --interval 1
+python3 altool/scripts/freedom_loop.py "{목표}" --loops {N} --interval 1
 ```
 
 이 러너는 control-plane tick마다 radio inbox를 확인하고, state/outbox/journal/check 갱신 흐름만 검증한다. **주의: `$altool freedom`의 실제 실행은 이 러너만 돌리는 것이 아니다.** Codex는 아래 "Freedom 실제 루프 실행 규칙"에 따라 각 사이클 안에서 필요한 실제 Altool step들을 수행해야 한다. `freedom_loop.py`는 control-plane 테스트/디버그용이다.
@@ -60,35 +60,35 @@ python altool/scripts/freedom_loop.py "{목표}" --loops {N} --interval 1
 ```text
 for cycle in 1..N:
   1. radio pending 확인 및 처리
-     - `python altool/scripts/radio.py cycle start --loop {cycle}` 실행
+     - `python3 altool/scripts/radio.py cycle start --loop {cycle}` 실행
   2. Observe
   3. 디자인 소스 preflight
      - `designs/claude-design/*.html`, `designs/stitch/`, `designs/*.pen`을 확인한다
      - Claude 디자인 HTML이 있으면 최우선 디자인 헌법으로 보고, `designs/design.md`가 없거나 비어 있거나 `TBD`이거나 HTML보다 오래됐거나 Reference Source Map에 HTML 경로가 없으면 `altool/steps/design_source.md`를 자동 수행한다
-     - 시작 전 `python altool/scripts/radio.py action start design_source --loop {cycle}` 실행
-     - 완료 후 `python altool/scripts/radio.py action done design_source --loop {cycle} --summary "{요약}"` 실행
+     - 시작 전 `python3 altool/scripts/radio.py action start design_source --loop {cycle}` 실행
+     - 완료 후 `python3 altool/scripts/radio.py action done design_source --loop {cycle} --summary "{요약}"` 실행
      - 최신 디자인 시스템이면 `design_source` action은 생략하고 outbox에 `skipped(design system current)`를 남긴다
   4. research 수행
-     - 시작 전 `python altool/scripts/radio.py action start research --loop {cycle}` 실행
+     - 시작 전 `python3 altool/scripts/radio.py action start research --loop {cycle}` 실행
      - `altool/steps/research.md`를 읽고 실제 조사 산출물을 만든다
      - 기존 조사와 중복/새 발견을 분리한다
      - 다음 루프 후보는 확정 계획이 아니라 nextResearchQuestions로 남긴다
-     - 완료 후 `python altool/scripts/radio.py action done research --loop {cycle} --summary "{요약}"` 실행
+     - 완료 후 `python3 altool/scripts/radio.py action done research --loop {cycle} --summary "{요약}"` 실행
   5. 이번 사이클의 완성형 목표와 완료 기준 결정
      - 이번 research에서 확인한 유사 서비스·사용자 기대·페이지·기능·디자인 시스템 근거를 기준으로 전체 제품의 완성형 목표를 정한다
      - 기능·UX·디자인·품질 기준이 서로 연결된 end-to-end 제품 경험이 되도록 범위를 세운다
      - 후속 루프의 구체 작업은 미리 확정하지 않는다
   6. 필요한 action들을 순서대로 수행
      - 각 action 시작 전 radio pending 확인
-     - 각 action 시작 시 `python altool/scripts/radio.py action start {action} --loop {cycle}` 실행
+     - 각 action 시작 시 `python3 altool/scripts/radio.py action start {action} --loop {cycle}` 실행
      - 선택된 action의 step 문서 읽기
      - 해당 step 실제 수행
      - 해당 step의 Step Check 실행
-     - 각 action 완료 시 `python altool/scripts/radio.py action done {action} --loop {cycle} --summary "{요약}"` 실행
+     - 각 action 완료 시 `python3 altool/scripts/radio.py action done {action} --loop {cycle} --summary "{요약}"` 실행
   7. 구현 사이클은 report 수행
      - browser 통과 후 다음 루프로 넘어가기 전에 반드시 `altool/steps/report.md`를 읽고 report action을 수행한다
      - `docs/04-report/{feature}.report.md`와 `{feature}.report.json` Step Check가 통과해야 한다
-  8. 사이클 완료 기준을 만족하면 `python altool/scripts/radio.py cycle done --loop {cycle} --summary "{요약}"` 실행해 loopsCompleted를 갱신
+  8. 사이클 완료 기준을 만족하면 `python3 altool/scripts/radio.py cycle done --loop {cycle} --summary "{요약}"` 실행해 loopsCompleted를 갱신
   9. 다음 사이클로 넘어가기 전 radio pending 확인
 ```
 
@@ -101,7 +101,7 @@ for cycle in 1..N:
 
 ## 2. 모든 action 전 inbox 확인
 
-웹 조사, 문서 작성, 파일 수정, 의존성 설치, 빌드·테스트, 브라우저 검증, 다음 후보 선택 등 모든 의미 있는 action 직전에 `python altool/scripts/radio.py pending`을 실행한다.
+웹 조사, 문서 작성, 파일 수정, 의존성 설치, 빌드·테스트, 브라우저 검증, 다음 후보 선택 등 모든 의미 있는 action 직전에 `python3 altool/scripts/radio.py pending`을 실행한다.
 
 pending 이벤트 처리:
 
@@ -166,14 +166,6 @@ Research는 PRD나 사용자 디자인을 덮어쓰지 않는다. 헌법의 디�
 
 | 항목 | 의미 |
 | --- | --- |
-| `inputs.loaded` | AGENTS.md, Altool skill, Observe 자산, freedom state, docs/code/git 상태 로딩 결과 |
-| `lesson.search` | 하위 구현 action의 lesson search 결과 요약 또는 `skipped(no implementation action)` |
-| `event.capture` | 하위 구현 action에서 기록한 code_error/gap/fix 이벤트 요약 또는 `skipped(no code event)` |
-| `verification` | 하위 action Step Check와 Freedom 상위 검증 결과 |
-| `state.updated` | `.altool/freedom/state.json`과 필요한 `.altool/state/status.json` 갱신 |
-| `docs.synced` | plan/spec/analyze/browser/report 문서와 상태 동기화 결과, 그리고 수정된 Altool 문서의 소유 Step Check 갱신·검증 결과. 문서 수정이 없으면 `skipped(no feature docs)` |
-| `document.status` | 관련 문서 상단 Status 동기화 결과 또는 `skipped(no document status)` |
-| `artifacts.created` | 생성/갱신한 freedom, docs, check 산출물 목록 |
 | `inbox.watch` | action 전 inbox 확인 |
 | `design_source.autorun` | Claude 디자인 HTML/.pen/Stitch가 있을 때 design_source 자동 실행 또는 최신 상태 생략 사유 |
 | `research.required` | 실제 `$altool freedom` 사이클 시작 시 필요한 design_source preflight 후 research 산출물과 research Step Check를 완료 |
@@ -192,12 +184,14 @@ Research는 PRD나 사용자 디자인을 덮어쓰지 않는다. 헌법의 디�
 | `analysis.semantic_consistency` | analyze action이 있으면 `check.py analyze-sync` 결과, 없으면 `skipped(no analyze action)` |
 | `server.cleanup` | browser action이 시작한 서버 종료 증거 또는 `skipped(no browser action)` / `skipped(existing server)` 중 하나 |
 
-검증은 최대 5회 반복한다.
+공통 키는 `_common.md`를 적용하되, 전체 정책·상태·git 입력, 하위 action의 lesson/event/check, freedom·feature 상태, 관련 문서·소유 check·Status, 생성한 freedom/docs/check 산출물을 요약한다. 비적용 사유는 `skipped(no implementation action/no code event/no feature docs/no document status)` 중 해당 값을 쓴다.
+
+Freedom 추가 검증은 아래처럼 실행한다.
 
 ```text
 [al:check] freedom.freedom 검증 중... (attempt {N}/5)
-python altool/scripts/check.py validate --json .altool/checks/freedom.freedom.json
-python altool/scripts/check.py audit-docs --root .
+python3 altool/scripts/check.py validate --json .altool/checks/freedom.freedom.json
+python3 altool/scripts/check.py audit-docs --root .
 ```
 
 `audit-docs`가 실패하면 stale로 보고된 문서의 소유 Step Check를 갱신·검증한 뒤 Freedom check와 `audit-docs`를 다시 실행한다.

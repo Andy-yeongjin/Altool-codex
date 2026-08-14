@@ -26,6 +26,59 @@ class CheckGateTests(unittest.TestCase):
             code = function(Namespace(format="json", **kwargs))
         return code, json.loads(output.getvalue())
 
+    def completed_check(self):
+        return {"status": "done", "evidence": ["verified"]}
+
+    def step_check(self, step, feature="demo"):
+        data = {
+            "schemaVersion": 1,
+            "feature": feature,
+            "step": step,
+            "checks": {
+                key: self.completed_check() for key in check.STEP_REQUIRED[step]
+            },
+        }
+        if step == "research":
+            data["quality"] = {
+                "score": 90,
+                "planReadiness": "ready",
+                "sourceCount": 8,
+                "sourceMix": {
+                    "actualService": 3,
+                    "researchOrOfficial": 3,
+                    "userVoice": 1,
+                },
+                "nextQueryCount": 3,
+            }
+        return data
+
+    def oneshot_check(self, root, include_fix=True):
+        children = []
+        checks = {
+            key: self.completed_check()
+            for key in (*check.COMMON_REQUIRED, *check.ONESHOT_CHILD_STEPS)
+        }
+        for child_step in check.ONESHOT_CHILD_STEPS:
+            if child_step == "fix" and not include_fix:
+                checks["fix"] = {"status": "skipped", "reason": "no gap"}
+                continue
+            child = Path(".altool/checks") / f"demo.{child_step}.json"
+            child_path = root / child
+            child_path.parent.mkdir(parents=True, exist_ok=True)
+            child_feature = "R-0001" if child_step == "research" else "demo"
+            child_path.write_text(
+                json.dumps(self.step_check(child_step, child_feature)),
+                encoding="utf-8",
+            )
+            children.append(child.as_posix())
+        return {
+            "schemaVersion": 1,
+            "feature": "demo",
+            "step": "oneshot",
+            "checks": checks,
+            "children": children,
+        }
+
     def test_contrast_resolves_custom_property_candidates(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -99,6 +152,21 @@ class CheckGateTests(unittest.TestCase):
                 result["failures"],
                 ["index.html:3: --missing is referenced with var() but never defined"],
             )
+
+    def test_contrast_scans_top_level_templates_as_runtime_code(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "templates").mkdir()
+            (root / "templates/index.html").write_text(
+                "<style>.runtime { color: #fff; background: #fff; }</style>",
+                encoding="utf-8",
+            )
+            code, result = self.run_gate(
+                check.contrast_cmd, root=str(root), minimum=4.5
+            )
+            self.assertEqual(code, 1)
+            self.assertEqual(result["files"], 1)
+            self.assertIn("templates/index.html:1", result["failures"][0])
 
     def test_live_region_contract_requires_implementation_and_assertion(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -313,6 +381,52 @@ class CheckGateTests(unittest.TestCase):
             check.validate_check(data),
         )
 
+    def test_oneshot_requires_its_own_checks_and_stage_summaries(self):
+        data = {
+            "schemaVersion": 1,
+            "feature": "demo",
+            "step": "oneshot",
+            "checks": {},
+            "children": [".altool/checks/demo.plan.json"],
+        }
+        failures = check.validate_check(data)
+        self.assertIn("oneshot.inputs.loaded: missing required check", failures)
+        self.assertIn("oneshot.plan: missing required child summary", failures)
+
+    def test_oneshot_validates_child_files_and_feature_relationships(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = self.oneshot_check(root)
+            self.assertEqual(check.validate_check(data), [])
+            self.assertEqual(check.validate_oneshot_children(data, root), [])
+
+            plan_path = root / ".altool/checks/demo.plan.json"
+            plan = json.loads(plan_path.read_text(encoding="utf-8"))
+            plan["feature"] = "other"
+            plan_path.write_text(json.dumps(plan), encoding="utf-8")
+            failures = check.validate_oneshot_children(data, root)
+            self.assertTrue(any("does not match parent" in item for item in failures))
+
+    def test_oneshot_rejects_missing_or_escaping_children(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = self.oneshot_check(root)
+            data["children"] = [
+                child for child in data["children"] if ".browser.json" not in child
+            ]
+            data["children"].extend(["missing.json", "../outside.json"])
+            failures = check.validate_oneshot_children(data, root)
+            self.assertIn("oneshot.children: missing child step 'browser'", failures)
+            self.assertIn("oneshot.children: child file not found: missing.json", failures)
+            self.assertIn("oneshot.children: path escapes project root: ../outside.json", failures)
+
+    def test_oneshot_allows_no_gap_fix_without_a_fix_child(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = self.oneshot_check(root, include_fix=False)
+            self.assertEqual(check.validate_check(data), [])
+            self.assertEqual(check.validate_oneshot_children(data, root), [])
+
     def test_browser_cannot_bypass_gate_with_failed_or_arbitrary_skip(self):
         data = {
             "schemaVersion": 1,
@@ -496,6 +610,36 @@ class CheckGateTests(unittest.TestCase):
         ):
             self.assertIn(key, analyze_template)
             self.assertIn(key, fix_template)
+
+    def test_source_repo_skill_matches_the_installer_template(self):
+        source_skill = self.ROOT / ".agents/skills/altool/SKILL.md"
+        installer_skill = self.ROOT / "templates/codex/skills/altool/SKILL.md"
+        self.assertEqual(
+            source_skill.read_bytes(),
+            installer_skill.read_bytes(),
+            "update both Altool skill copies before publishing the installer",
+        )
+
+    def test_every_step_keeps_the_shared_contract_in_scope(self):
+        common = (self.ROOT / "altool/steps/_common.md").read_text(encoding="utf-8")
+        for key in check.COMMON_REQUIRED:
+            self.assertIn(f"`{key}`", common)
+        for step_path in (self.ROOT / "altool/steps").glob("*.md"):
+            if step_path.name == "_common.md":
+                continue
+            self.assertIn(
+                "_common.md",
+                step_path.read_text(encoding="utf-8"),
+                f"{step_path.name} must keep the common Step Check contract in scope",
+            )
+
+    def test_design_source_numbering_and_pencil_fallback_are_explicit(self):
+        design_source = (self.ROOT / "altool/steps/design_source.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertNotRegex(design_source, r"\[[0-9]/5\]")
+        self.assertIn("Pencil 문서 열기·노드 조회 도구", design_source)
+        self.assertIn("UTF-8 JSON", design_source)
 
 
 if __name__ == "__main__":

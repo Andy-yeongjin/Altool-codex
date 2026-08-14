@@ -73,8 +73,8 @@
 | Capture-to-Implementation Map | 참조 캡처 C-__/S-__가 구현 section/component로 연결되어 최종 화면에 반영 | | |
 | Component Extraction | nav/button/card/filter/form/media 외형 계약 반영 | | |
 | 디자인 시스템 | `designs/design.md`의 시각 값·컴포넌트 계약·미디어 규칙 기준 반영, 없으면 Research/design_source 보완 필요 | | |
-| CSS custom properties | `python altool/scripts/check.py css-vars --root .` 통과. CSS 파일이 없으면 `skipped(no css files)` | | |
-| 텍스트 대비 | `python altool/scripts/check.py contrast --root .` 통과. CSS 파일이 없으면 `skipped(no css files)` | | |
+| CSS custom properties | `check.py css-vars` 게이트 통과. CSS 파일이 없으면 `skipped(no css files)` | | |
+| 텍스트 대비 | `check.py contrast` 게이트 통과. CSS 파일이 없으면 `skipped(no css files)` | | |
 | 폰트 | `designs/design.md`의 구현 font-family stack, 크기, 굵기, 행간 기준 반영. 참조 폰트 파일 복제 없음 | | |
 | Generic AI/SaaS 회귀 | Research/Spec 근거 없는 split SaaS hero, floating trust card 묶음, 과한 그라디언트, glass panel, 추상 장식, 카드 그림자 남발 없음 | | |
 | 참조 복제 금지 | 로고·카피·고유 이미지·식별 가능한 레이아웃 복제 없음 | | |

@@ -62,7 +62,7 @@ B) 취소
 
 ---
 
-## 실행 순서 (5단계)
+## 실행 순서 (6단계)
 
 ### [1/6] 디자인 소스 스캔
 
@@ -88,7 +88,7 @@ B) 취소
 
 #### 🔵 Pencil 모드
 
-`designs/` 폴더의 모든 `.pen` 파일을 Pencil MCP 도구로 읽습니다.
+먼저 현재 세션에 Pencil 문서 열기·노드 조회 도구가 실제로 있는지 확인한다. 있으면 `designs/`의 모든 `.pen` 파일을 해당 도구로 읽는다. 없으면 파일이 UTF-8 JSON으로 읽히는지 확인해 노드와 속성을 직접 추출하는 fallback을 사용한다. 둘 다 불가능하면 도구 이름을 추측해 호출하지 말고, 읽지 못한 경로와 필요한 Pencil JSON/HTML/스크린샷 export를 안내한 뒤 중단한다.
 
 1. 각 `.pen` 파일을 `open_document`로 열고
 2. `batch_get`으로 전체 노드 구조를 파악하고
@@ -146,7 +146,7 @@ B) 취소
 
 ---
 
-### [2/5] 디자인 시스템 정규화 (Normalization)
+### [2/6] 디자인 시스템 정규화 (Normalization)
 
 #### 🟣 Claude HTML 모드
 
@@ -196,7 +196,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 
 정규화 완료 후 보고:
 ```
-[2/5] 디자인 시스템 정규화 완료
+[2/6] 디자인 시스템 정규화 완료
 
   색상 매핑: [N]개
     primary: #81ecff → --color-primary
@@ -213,9 +213,9 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 
 ---
 
-### [3/5] 디자인 품질 원칙 검토 (Quality Review)
+### [3/6] 디자인 품질 원칙 검토 (Quality Review)
 
-`constitution.md`를 읽고, [2/5]에서 정규화된 디자인 시스템이 범용 디자인 품질 원칙을 해치지 않는지 검토합니다.
+`constitution.md`를 읽고, [2/6]에서 정규화된 디자인 시스템이 범용 디자인 품질 원칙을 해치지 않는지 검토합니다.
 
 #### 검토 항목:
 
@@ -244,7 +244,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 
 ---
 
-### [4/5] design.md 생성
+### [4/6] design.md 생성
 
 정규화된 디자인 시스템을 바탕으로 `designs/design.md`를 작성합니다.
 
@@ -274,7 +274,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 
 ---
 
-### [5/5] 디자인 프리뷰 HTML 생성
+### [5/6] 디자인 프리뷰 HTML 생성
 
 `guides/design-preview.html`을 생성합니다. 브라우저에서 열면 디자인 시스템 전체를 시각적으로 확인할 수 있는 단일 HTML 파일입니다.
 
@@ -343,25 +343,14 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 
 생성 완료 후 보고:
 ```
-[5/5] 디자인 프리뷰 생성 완료
+[5/6] 디자인 프리뷰 생성 완료
   → guides/design-preview.html
   브라우저에서 열어 디자인 시스템을 확인하세요.
 ```
 
 ### Step Check
 
-완료 전 `.altool/checks/design_source.design_source.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/design_source.design_source.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | 디자인 소스와 constitution.md 로딩 결과 |
-| `lesson.search` | 디자인 소스 키워드 검색 결과 또는 `skipped(not applicable)` |
-| `event.capture` | `skipped(document/design-system step)` — 코드 오류 lesson을 append하지 않는다 |
-| `verification` | 디자인 품질 원칙 검토 결과 |
-| `state.updated` | `skipped(no feature phase)` |
-| `docs.synced` | design.md 갱신 결과 |
-| `document.status` | design.md 최상단 `TBD` 제거 확인 또는 `skipped(design system assets)` |
-| `artifacts.created` | design.md, design-preview.html |
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/design_source.design_source.json`이다. 전용 증거는 디자인 소스·constitution 입력, 검색 결과 또는 `skipped(not applicable)`, 디자인 품질 검토, design.md·preview 갱신과 `TBD` 제거다. event/state는 `skipped(document/design-system step)`과 `skipped(no feature phase)`로 기록한다.
 
 ---
 

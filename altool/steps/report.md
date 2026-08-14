@@ -57,20 +57,9 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
 - report 문서 상단 `상태`/`Status`는 미해소 갭 0건이면 `Completed`, 잔여 갭을 수용한 경우 `Partial`로 작성한다.
 - 체크박스가 모두 완료되어도 상단 상태를 그대로 `Draft`로 두지 않는다.
 - plan/spec/analyze/fix/browser 문서를 수정했으면 report Step Check만으로 끝내지 않는다. 수정된 문서의 소유 Step Check(`{기능명}.plan.json`, `{기능명}.spec.json`, `{기능명}.analyze.json`, `{기능명}.fix.json`, `{기능명}.browser.json`)도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, report check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
-- analyze 문서를 수정했으면 상단 `최종 Match Rate`와 `미해소 갭`을 보존하고 `python altool/scripts/check.py analyze-sync --root .`도 다시 통과시킨다.
+- analyze 문서를 수정했으면 상단 `최종 Match Rate`와 `미해소 갭`을 보존하고 `python3 altool/scripts/check.py analyze-sync --root .`도 다시 통과시킨다.
 
-완료 전 `.altool/checks/{기능명}.report.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.report.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | PRD/plan/spec/analyze/fix/browser 문서 로딩 결과 |
-| `lesson.search` | `skipped(document-only step)` |
-| `event.capture` | `skipped(document-only step)` — Report 작성 중에는 lesson 이벤트를 append하지 않는다 |
-| `verification` | 최종 빌드/status 확인 결과 |
-| `state.updated` | phase=completed |
-| `docs.synced` | plan/analyze/report 상태 동기화 결과, 수정된 소유 Step Check 재검증 경로 |
-| `document.status` | 완전 완료는 plan=Completed·spec=Finalized·analyze/browser=Verified·fix=Resolved·report=Completed, 잔여 갭 수용 시 analyze=GapsFound·fix/report=Partial인 상태 동기화 |
-| `artifacts.created` | `docs/04-report/{기능명}.report.md` |
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.report.json`이다. 전용 증거는 전체 단계 문서 입력, 최종 빌드/status, `phase=completed`, plan/analyze/report와 수정 문서 소유 check 동기화, 아래 완료/잔여 갭 상태, report 경로다. `lesson.search`와 `event.capture`는 `skipped(document-only step)`으로 기록한다.
 
 ```
 🐣 [al:report] {기능명} 완료 — 산출물: docs/04-report/{기능명}.report.md

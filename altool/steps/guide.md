@@ -76,16 +76,4 @@
 
 ## Step Check
 
-출력 전 `.altool/checks/guide.guide.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/guide.guide.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 출력 마지막에 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | status/docs/assets 탐색 결과 |
-| `lesson.search` | `skipped(not applicable)` |
-| `event.capture` | `skipped(no code error)` |
-| `verification` | `skipped(guide only)` |
-| `state.updated` | guide가 상태 파일을 생성/수정했는지 |
-| `docs.synced` | `skipped(guide only)` |
-| `document.status` | `skipped(guide only)` |
-| `artifacts.created` | `skipped(guide only)` |
-
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/guide.guide.json`이다. `inputs.loaded`에는 status/docs/assets 탐색을, `state.updated`에는 상태 파일 생성·수정 여부를 기록한다. `lesson.search=skipped(not applicable)`, `event.capture=skipped(no code error)`로 두고 나머지 비적용 키는 `skipped(guide only)`로 기록한다.

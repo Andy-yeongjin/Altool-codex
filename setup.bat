@@ -5,6 +5,23 @@ set "ALTOOL_DIR=%~dp0"
 if "%ALTOOL_DIR:~-1%"=="\" set "ALTOOL_DIR=%ALTOOL_DIR:~0,-1%"
 set "NONINTERACTIVE="
 
+if not exist "%ALTOOL_DIR%\altool\scripts\check.py" (
+    echo   [ERROR] Altool gate missing: %ALTOOL_DIR%\altool\scripts\check.py
+    exit /b 1
+)
+if not exist "%ALTOOL_DIR%\templates\codex\skills\altool\SKILL.md" (
+    echo   [ERROR] Bundled Altool skill missing: %ALTOOL_DIR%\templates\codex\skills\altool\SKILL.md
+    exit /b 1
+)
+set "PYTHON_CMD="
+call :try_python py -3
+if not defined PYTHON_CMD call :try_python python3
+if not defined PYTHON_CMD call :try_python python
+if not defined PYTHON_CMD (
+    echo   [ERROR] Python 3 is required, and altool\scripts\check.py --help must run successfully.
+    exit /b 1
+)
+
 if not "%~1"=="" (
     set "PROJECT_DIR=%~1"
     set "NONINTERACTIVE=1"
@@ -52,17 +69,24 @@ if "%PROJECT_DIR%"=="" (
 :proceed
 
 echo   Target: %PROJECT_DIR%
+echo   Python: %PYTHON_CMD%
 echo.
 echo   Copying files...
 
 :: Altool engine (steps + templates + rules)
+if exist "%PROJECT_DIR%\altool\" (
+    rmdir /s /q "%PROJECT_DIR%\altool"
+    if errorlevel 1 goto :copy_failed
+)
 xcopy /e /i /y "%ALTOOL_DIR%\altool" "%PROJECT_DIR%\altool" > nul
+if errorlevel 1 goto :copy_failed
 echo   [OK] altool\ (engine)
 
 :: AGENTS.md (Codex project instructions)
 if exist "%ALTOOL_DIR%\AGENTS.md" (
     if not exist "%PROJECT_DIR%\AGENTS.md" (
         copy /y "%ALTOOL_DIR%\AGENTS.md" "%PROJECT_DIR%\AGENTS.md" > nul
+        if errorlevel 1 goto :copy_failed
         echo   [OK] AGENTS.md
     ) else (
         echo   [KEEP] AGENTS.md already exists
@@ -74,7 +98,12 @@ if not exist "%PROJECT_DIR%\.agents\skills\" mkdir "%PROJECT_DIR%\.agents\skills
 if exist "%ALTOOL_DIR%\templates\codex\skills\" (
     for /d %%s in ("%ALTOOL_DIR%\templates\codex\skills\*") do (
         if exist "%%s\SKILL.md" (
+            if exist "%PROJECT_DIR%\.agents\skills\%%~nxs\" (
+                rmdir /s /q "%PROJECT_DIR%\.agents\skills\%%~nxs"
+                if errorlevel 1 goto :copy_failed
+            )
             xcopy /e /i /y "%%s" "%PROJECT_DIR%\.agents\skills\%%~nxs" > nul
+            if errorlevel 1 goto :copy_failed
             echo   [OK] Codex local skill: %%~nxs
         )
     )
@@ -86,6 +115,7 @@ if exist "%ALTOOL_DIR%\templates\codex\skills\" (
 if exist "%ALTOOL_DIR%\constitution.md" (
     if not exist "%PROJECT_DIR%\constitution.md" (
         copy /y "%ALTOOL_DIR%\constitution.md" "%PROJECT_DIR%\constitution.md" > nul
+        if errorlevel 1 goto :copy_failed
         echo   [OK] constitution.md
     ) else (
         echo   [KEEP] constitution.md already exists
@@ -122,6 +152,7 @@ for %%f in (design.md) do (
     if exist "%ALTOOL_DIR%\designs\%%f" (
         if not exist "%PROJECT_DIR%\designs\%%f" (
             copy /y "%ALTOOL_DIR%\designs\%%f" "%PROJECT_DIR%\designs\%%f" > nul
+            if errorlevel 1 goto :copy_failed
             echo   [OK] designs\%%f
         ) else (
             echo   [KEEP] designs\%%f already exists
@@ -137,6 +168,7 @@ echo   [OK] prd\ (folder)
 for %%f in (start.bat end.bat) do (
     if exist "%ALTOOL_DIR%\%%f" (
         copy /y "%ALTOOL_DIR%\%%f" "%PROJECT_DIR%\%%f" > nul
+        if errorlevel 1 goto :copy_failed
         echo   [OK] %%f
     )
 )
@@ -188,3 +220,16 @@ echo   3. Restart Codex or open a new chat if the skill does not appear
 echo   4. Type:  $altool setup
 echo.
 if not defined NONINTERACTIVE pause
+exit /b 0
+
+:try_python
+%* -c "import sys; raise SystemExit(sys.version_info.major != 3)" >nul 2>nul
+if errorlevel 1 exit /b 0
+%* "%ALTOOL_DIR%\altool\scripts\check.py" --help >nul 2>nul
+if errorlevel 1 exit /b 0
+set "PYTHON_CMD=%*"
+exit /b 0
+
+:copy_failed
+echo   [ERROR] Managed directory replacement failed. Installation stopped.
+exit /b 1

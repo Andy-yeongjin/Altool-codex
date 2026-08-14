@@ -12,6 +12,7 @@ import argparse
 import json
 import os
 import sys
+import tempfile
 import time
 from contextlib import contextmanager
 from datetime import datetime, timezone, timedelta
@@ -37,6 +38,15 @@ if hasattr(sys.stderr, "reconfigure"):
 
 def now_iso() -> str:
     return datetime.now(KST).replace(microsecond=0).isoformat()
+
+
+def configure_root(root: str) -> None:
+    global FREEDOM_DIR, INBOX, OUTBOX, STATE, JOURNAL
+    FREEDOM_DIR = Path(root).expanduser().resolve() / ".altool" / "freedom"
+    INBOX = FREEDOM_DIR / "inbox.jsonl"
+    OUTBOX = FREEDOM_DIR / "outbox.jsonl"
+    STATE = FREEDOM_DIR / "state.json"
+    JOURNAL = FREEDOM_DIR / "journal.md"
 
 
 def ensure_files() -> None:
@@ -130,9 +140,27 @@ def append_numbered_event(prefix: str, path: Path, event: dict[str, Any]) -> dic
     return event
 
 
+def atomic_write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=path.parent,
+            prefix=f".{path.name}.",
+            delete=False,
+        ) as handle:
+            handle.write(text)
+            temporary = Path(handle.name)
+        os.replace(temporary, path)
+    finally:
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
+
+
 def write_state(state: dict[str, Any]) -> None:
-    FREEDOM_DIR.mkdir(parents=True, exist_ok=True)
-    STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_write_text(STATE, json.dumps(state, ensure_ascii=False, indent=2) + "\n")
 
 
 def read_state() -> dict[str, Any]:
@@ -315,6 +343,11 @@ def action_cmd(args: argparse.Namespace) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Freedom radio inbox/outbox helper")
+    parser.add_argument(
+        "--root",
+        default=".",
+        help="project root containing .altool (default: current directory)",
+    )
     sub = parser.add_subparsers(dest="command", required=True)
 
     init = sub.add_parser("init", help="create freedom files and optionally set a goal")
@@ -361,6 +394,7 @@ def main() -> int:
     action.set_defaults(func=action_cmd)
 
     args = parser.parse_args()
+    configure_root(args.root)
     return args.func(args)
 
 

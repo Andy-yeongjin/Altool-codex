@@ -80,16 +80,4 @@ Iteration: {iterationCount}/5
 
 ### 4. Step Check
 
-상태 출력 전 `.altool/checks/status.status.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/status.status.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 상태 출력 마지막에 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | status.json 또는 docs 역산 결과 |
-| `lesson.search` | `skipped(not applicable)` |
-| `event.capture` | `skipped(status step)` — 코드 오류 lesson을 append하지 않는다 |
-| `verification` | `skipped(status only)` |
-| `state.updated` | status.json 생성/갱신 여부 |
-| `docs.synced` | `skipped(status only)` |
-| `document.status` | `skipped(status only)` |
-| `artifacts.created` | status.json 생성 여부 |
-
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/status.status.json`이다. `inputs.loaded`에는 status.json 또는 docs 역산을, `state.updated`·`artifacts.created`에는 status.json 생성·갱신 여부를 기록한다. `lesson.search=skipped(not applicable)`, `event.capture=skipped(status step)`로 두고 나머지 비적용 키는 `skipped(status only)`로 기록한다.

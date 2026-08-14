@@ -100,9 +100,10 @@ STEP_REQUIRED: dict[str, list[str]] = {
     "report": COMMON_REQUIRED,
     "status": COMMON_REQUIRED,
     "browser": BROWSER_REQUIRED,
+    "oneshot": COMMON_REQUIRED,
 }
 
-OPTIONAL_STEP = "oneshot"
+ONESHOT_CHILD_STEPS = ("research", "plan", "spec", "run", "analyze", "fix", "browser")
 
 BROWSER_PASS_POLICY: dict[str, tuple[str, ...] | None] = {
     "inputs.loaded": None,
@@ -242,7 +243,7 @@ def validate_check(data: dict[str, Any]) -> list[str]:
         step = ""
     else:
         step = raw_step.strip().casefold()
-        if step != OPTIONAL_STEP and step not in STEP_REQUIRED:
+        if step not in STEP_REQUIRED:
             fail(f"root.step: unknown step '{step}'", failures)
 
     checks = data.get("checks")
@@ -253,15 +254,41 @@ def validate_check(data: dict[str, Any]) -> list[str]:
     if step == "research":
         validate_research_quality(data, failures)
 
-    if step == OPTIONAL_STEP:
+    if step == "oneshot":
         children = data.get("children")
         if not isinstance(children, list) or not children:
             fail("oneshot.children must be a non-empty list", failures)
-    elif step in STEP_REQUIRED:
+    if step in STEP_REQUIRED:
         required = STEP_REQUIRED[step]
         for item in required:
             if item not in checks:
                 fail(f"{check_label(step, item)}: missing required check", failures)
+
+    if step == "oneshot":
+        for child_step in ONESHOT_CHILD_STEPS:
+            check = checks.get(child_step)
+            label = f"oneshot.{child_step}"
+            if not isinstance(check, dict):
+                fail(f"{label}: missing required child summary", failures)
+                continue
+            status = check.get("status")
+            if status == "done":
+                continue
+            if (
+                child_step == "fix"
+                and status == "skipped"
+                and normalize_skip_reason(check.get("reason")) == "no gap"
+            ):
+                continue
+            fail(f"{label}: oneshot completion requires status=done", failures)
+
+        for item in COMMON_REQUIRED:
+            check = checks.get(item)
+            if isinstance(check, dict) and check.get("status") == "failed":
+                fail(
+                    f"oneshot.{item}: oneshot completion cannot contain failed checks",
+                    failures,
+                )
 
     for item, check in checks.items():
         label = check_label(step, str(item))
@@ -314,6 +341,86 @@ def validate_check(data: dict[str, Any]) -> list[str]:
     return failures
 
 
+def validate_oneshot_children(data: dict[str, Any], root: Path) -> list[str]:
+    if str(data.get("step", "")).strip().casefold() != "oneshot":
+        return []
+
+    children = data.get("children")
+    if not isinstance(children, list):
+        return []
+
+    failures: list[str] = []
+    parent_feature = str(data.get("feature", "")).strip()
+    parent_checks = data.get("checks") if isinstance(data.get("checks"), dict) else {}
+    found_steps: dict[str, Path] = {}
+    resolved_root = root.resolve()
+
+    for raw_child in children:
+        if not isinstance(raw_child, str) or not raw_child.strip():
+            failures.append("oneshot.children: every child must be a non-empty relative path")
+            continue
+        child_path = Path(raw_child)
+        if child_path.is_absolute():
+            failures.append(f"oneshot.children: absolute path is not allowed: {raw_child}")
+            continue
+        resolved_child = (resolved_root / child_path).resolve()
+        try:
+            resolved_child.relative_to(resolved_root)
+        except ValueError:
+            failures.append(f"oneshot.children: path escapes project root: {raw_child}")
+            continue
+        if not resolved_child.is_file():
+            failures.append(f"oneshot.children: child file not found: {raw_child}")
+            continue
+        try:
+            child_data = load_json(str(resolved_child))
+        except SystemExit as exc:
+            failures.append(f"oneshot.children: invalid child {raw_child}: {exc}")
+            continue
+
+        child_step = str(child_data.get("step", "")).strip().casefold()
+        if child_step not in ONESHOT_CHILD_STEPS:
+            failures.append(
+                f"oneshot.children: unexpected child step '{child_step or '<missing>'}' in {raw_child}"
+            )
+            continue
+        if child_step in found_steps:
+            failures.append(f"oneshot.children: duplicate child step '{child_step}'")
+            continue
+        found_steps[child_step] = resolved_child
+
+        child_feature = str(child_data.get("feature", "")).strip()
+        if child_step != "research" and child_feature != parent_feature:
+            failures.append(
+                f"oneshot.children: {child_step} feature '{child_feature}' does not match parent '{parent_feature}'"
+            )
+        for child_failure in validate_check(child_data):
+            failures.append(f"oneshot child {raw_child}: {child_failure}")
+
+    for required_step in ONESHOT_CHILD_STEPS:
+        if required_step in found_steps:
+            continue
+        if required_step == "fix":
+            fix_summary = parent_checks.get("fix") if isinstance(parent_checks, dict) else None
+            if (
+                isinstance(fix_summary, dict)
+                and fix_summary.get("status") == "skipped"
+                and normalize_skip_reason(fix_summary.get("reason")) == "no gap"
+            ):
+                continue
+        failures.append(f"oneshot.children: missing child step '{required_step}'")
+
+    fix_summary = parent_checks.get("fix") if isinstance(parent_checks, dict) else None
+    if (
+        "fix" in found_steps
+        and isinstance(fix_summary, dict)
+        and fix_summary.get("status") == "skipped"
+    ):
+        failures.append("oneshot.fix: child exists but parent summary is skipped")
+
+    return failures
+
+
 def load_json(path: str) -> dict[str, Any]:
     try:
         text = sys.stdin.read() if path == "-" else Path(path).read_text(encoding="utf-8")
@@ -328,6 +435,19 @@ def load_json(path: str) -> dict[str, Any]:
 def validate_cmd(args: argparse.Namespace) -> int:
     data = load_json(args.json)
     failures = validate_check(data)
+    if str(data.get("step", "")).strip().casefold() == "oneshot":
+        explicit_root = getattr(args, "root", None)
+        if explicit_root:
+            root = Path(explicit_root).resolve()
+        elif args.json == "-":
+            raise SystemExit("FAIL: oneshot validation from stdin requires --root")
+        else:
+            check_path = Path(args.json).resolve()
+            if check_path.parent.name == "checks" and check_path.parent.parent.name == ".altool":
+                root = check_path.parent.parent.parent
+            else:
+                root = check_path.parent
+        failures.extend(validate_oneshot_children(data, root))
     if args.format == "json":
         print(
             json.dumps(
@@ -457,7 +577,6 @@ PROJECT_ARTIFACT_DIRS = {
     ".altool",
     "altool",
     "docs",
-    "templates",
     "designs",
     "prd",
     "guides",
@@ -1039,6 +1158,7 @@ def main() -> int:
     validate = sub.add_parser("validate", help="validate a step check JSON file")
     validate.add_argument("--json", required=True, help="check JSON path, or '-' for stdin")
     validate.add_argument("--format", choices=("text", "json"), default="text")
+    validate.add_argument("--root", help="project root for validating oneshot child paths")
     validate.set_defaults(func=validate_cmd)
 
     audit = sub.add_parser("audit-docs", help="verify Altool docs are not newer than their owner Step Check")
@@ -1076,7 +1196,10 @@ def main() -> int:
     analyze_sync.add_argument("--format", choices=("text", "json"), default="text")
     analyze_sync.set_defaults(func=analyze_sync_cmd)
 
-    skill_sync = sub.add_parser("skill-sync", help="verify repo-local and install-template Altool skills match")
+    skill_sync = sub.add_parser(
+        "skill-sync",
+        help="Altool source repository only: verify local and installer skill copies match",
+    )
     skill_sync.add_argument("--root", default=".", help="Altool source repository root")
     skill_sync.add_argument("--format", choices=("text", "json"), default="text")
     skill_sync.set_defaults(func=skill_sync_cmd)

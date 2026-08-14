@@ -22,11 +22,11 @@ $altool lesson {코드 오류·해결}    <- code_error/fix 이벤트 수동 기
 ## CLI
 
 ```text
-python altool/scripts/lesson.py append --json-file .altool/tmp/lesson-event.json
-python altool/scripts/lesson.py append --json '{"type":"code_error",...}'
-python altool/scripts/lesson.py search --query "{기능명} {스택} {파일} {오류코드}" --limit 5
-python altool/scripts/lesson.py rebuild-index
-python altool/scripts/lesson.py render-lessons
+python3 altool/scripts/lesson.py append --json-file .altool/tmp/lesson-event.json
+python3 altool/scripts/lesson.py append --json '{"type":"code_error",...}'
+python3 altool/scripts/lesson.py search --query "{기능명} {스택} {파일} {오류코드}" --limit 5
+python3 altool/scripts/lesson.py rebuild-index
+python3 altool/scripts/lesson.py render-lessons
 ```
 
 > 테스트나 격리 실행이 필요하면 `ALTOOL_HOME` 환경 변수로 저장 위치를 바꿀 수 있다. 기본값은 `~/.altool`이다.
@@ -102,10 +102,10 @@ CLI가 `id`, `timestamp`, `schemaVersion`을 자동 보강한다.
 
 ## 조회 모드
 
-1. 인자 없음: `python altool/scripts/lesson.py render-lessons`로 `lesson.md`를 최신화한 뒤 최근 요약을 출력한다.
+1. 인자 없음: `python3 altool/scripts/lesson.py render-lessons`로 `lesson.md`를 최신화한 뒤 최근 요약을 출력한다.
 2. 검색어 있음: 현재 작업 키워드로 `search`를 실행한다.
    ```text
-   python altool/scripts/lesson.py search --query "{검색어}" --limit 5
+   python3 altool/scripts/lesson.py search --query "{검색어}" --limit 5
    ```
 3. `$altool run/analyze/fix`는 `lesson.md` 전체를 읽지 않는다. 반드시 `search` 결과 중 관련 코드 오류 이벤트 상위 N개만 작업 맥락에 반영한다. 자연어 코드 수정은 수정 전 search를 요구하지 않고, 실제 코드 오류/갭을 고친 경우 append만 적용한다.
 
@@ -115,7 +115,7 @@ CLI가 `id`, `timestamp`, `schemaVersion`을 자동 보강한다.
 2. 재발 가능성은 기록 여부를 결정하는 조건이 아니다. `recurrenceRisk`, `recurrenceScope`, `recurrenceReason` 필드로 평가한다.
 3. JSON payload를 만든 뒤 CLI로 append한다.
    ```text
-   python altool/scripts/lesson.py append --json-file .altool/tmp/lesson-event.json
+   python3 altool/scripts/lesson.py append --json-file .altool/tmp/lesson-event.json
    ```
 4. append 후 CLI가 `lesson.index.json`과 `lesson.md`를 자동 갱신한다.
 5. 완료 보고:
@@ -123,18 +123,7 @@ CLI가 `id`, `timestamp`, `schemaVersion`을 자동 보강한다.
    [al:lesson] 기록 완료 - E-00000 (code_error)
    ```
 
-완료 전 `.altool/checks/global.lesson.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/global.lesson.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | events/index/lesson 파생물 확인 결과 |
-| `lesson.search` | 조회 모드 query와 결과 수 또는 기록 모드 `skipped(record mode)` |
-| `event.capture` | 기록 모드의 이벤트 ID 또는 조회 모드 `skipped(read only)` |
-| `verification` | JSON append/search/render 성공 여부 |
-| `state.updated` | `skipped(global lesson only)` |
-| `docs.synced` | `skipped(global lesson only)` |
-| `document.status` | `skipped(global lesson only)` |
-| `artifacts.created` | events.jsonl/index/lesson.md 생성·갱신 결과 |
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/global.lesson.json`이다. 전용 증거는 events/index/lesson 입력·산출물, 조회 query·결과 또는 `skipped(record mode)`, 기록 ID 또는 `skipped(read only)`, append/search/render 결과다. 상태·문서 항목은 `skipped(global lesson only)`로 기록한다.
 
 ---
 
@@ -157,5 +146,4 @@ CLI가 `id`, `timestamp`, `schemaVersion`을 자동 보강한다.
 - 기록할 때 평가한다: `recurrenceRisk`는 `unknown | low | medium | high`, `recurrenceScope`는 `unknown | one_off | feature | project | cross_project` 중 하나로 둔다.
 - `lesson.md` 승격 기준: `promoteToLesson: true` 또는 `recurrenceRisk`가 `medium/high`인 이벤트를 사람용 요약으로 렌더한다.
 - 기록하지 않는다: Research/Plan/Spec/Report 작성 중 나온 모든 일반 결정과 회고, 아키텍처 선택, 요구사항 변경, 단순 명령 사용법, 외부 도구/환경 문제, 실행 전에 바로 고친 오타, 사용자 요구 변경으로 인한 정상 방향 전환.
-
 

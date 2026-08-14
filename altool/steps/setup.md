@@ -15,18 +15,13 @@
 
 아래 단계를 순서대로 직접 실행한다. 설명만 하지 말고 반드시 실행할 것.
 
-**1단계 — Node.js 확인:**
+**1단계 — Python 3 게이트 확인:**
 ```bash
-node --version
+python3 altool/scripts/check.py --help
 ```
-없으면 운영체제의 패키지 관리자로 설치 후 재확인:
-```bash
-# Windows
-winget install OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements
+실행되지 않으면 Python 3를 설치한 뒤 재확인하고, 통과 전에는 setup을 완료하지 않는다. Windows에서 `python3` 명령이 없으면 `py -3 altool/scripts/check.py --help`, 그다음 Python 3인 `python altool/scripts/check.py --help` 순서로 확인한다.
 
-# macOS (Homebrew가 있을 때)
-brew install node
-```
+`package.json`이 있고 Node 기반 프로젝트일 때만 `node --version`도 확인한다. Node가 필요하지만 없으면 운영체제 패키지 관리자로 설치하도록 안내하고, 정적 HTML 등 Node가 필요 없는 프로젝트에는 설치를 강제하지 않는다.
 
 **2단계 — 로컬 전용 원칙 확인:**
 
@@ -40,6 +35,7 @@ brew install node
 |------|------|---------|
 | `altool/` 엔진 폴더 | 필수 | Windows는 Altool `setup.bat`, macOS는 `setup.command` 재실행 안내 후 중단 |
 | `.agents/skills/altool/` | 필수 | Windows는 Altool `setup.bat`, macOS는 `setup.command` 재실행 안내 후 중단 |
+| `AGENTS.md` | 권장 | 코딩 태도와 UI 검증 절차가 비활성화된다고 안내 후 계속 |
 | `.agents/skills/vercel-react-best-practices/` | 권장 | React/Next.js 성능 보조 스킬 비활성 안내 후 계속 |
 | `constitution.md` | 권장 | "헌법 검증이 비활성화됩니다" 안내 후 계속 |
 | 헌법 major version | 권장 | `2.x`가 아니거나 Version 표기가 없으면 엔진과 정책 호환성 경고 후 계속 |
@@ -50,18 +46,7 @@ brew install node
 
 **4단계 — 완료 안내:**
 
-완료 전 `.altool/checks/setup.setup.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/setup.setup.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 안내에는 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | AGENTS.md/altool 엔진 확인 결과 |
-| `lesson.search` | `skipped(not applicable)` |
-| `event.capture` | `skipped(setup step)` — 코드 오류 lesson을 append하지 않는다 |
-| `verification` | Node.js와 헌법 major version 확인 결과 |
-| `state.updated` | 초기 설치는 `skipped(no active feature)` |
-| `docs.synced` | `skipped(no feature docs)` |
-| `document.status` | `skipped(no feature docs)` |
-| `artifacts.created` | 필요한 폴더/자산 확인·생성 결과 |
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/setup.setup.json`이다. 전용 증거는 AGENTS.md/엔진 입력, Python 3 게이트와 해당 시 Node.js·헌법 버전 검증, 설치 폴더·자산이다. lesson/event/state/docs/status는 각각 `skipped(not applicable)`, `skipped(setup step)`, `skipped(no active feature)`, `skipped(no feature docs)`로 기록한다.
 
 ```
 🐣 Altool 초기 설치 완료!
@@ -80,4 +65,4 @@ brew install node
 1. `altool/steps/status.md`의 절차를 수행해 현황과 최근 이력을 출력한다.
 2. 마지막 phase 기준 다음 단계 명령을 안내한다.
 3. 개발 상태는 `.altool/state/status.json`과 status 절차에만 기록한다. 프로젝트 정책은 `constitution.md`, 프로젝트별 agent 행동은 `AGENTS.md`에서 관리한다.
-4. `.altool/checks/setup.resume.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/setup.resume.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 안내에는 Step Check 요약을 포함한다. setup/resume 중 오류·차단은 안내에 남기며 lesson 이벤트로 기록하지 않는다.
+4. `_common.md` 계약으로 `.altool/checks/setup.resume.json`을 검증한다. setup/resume 중 오류·차단은 안내에 남기며 lesson 이벤트로 기록하지 않는다.

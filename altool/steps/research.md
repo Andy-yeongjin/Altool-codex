@@ -182,7 +182,7 @@ Research 문서 작성과 Step Check가 통과하면 문서 상단 `상태`/`Sta
 
 ### 7. Step Check
 
-완료 전 `.altool/checks/R-0001.research.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/R-0001.research.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다.
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/R-0001.research.json`이다. 공통 키 증거에는 기존 research/PRD/refs/constitution/design 입력, 웹 출처·실제 서비스·URL 검증, research 상태와 문서 `Status=Done`, 산출물 경로를 포함한다. lesson/event는 `skipped(research document step)`으로 기록한다.
 
 Research check JSON은 공통 `checks` 외에 root의 `quality` 객체를 포함해야 한다.
 
@@ -219,14 +219,6 @@ Research check JSON은 공통 `checks` 외에 root의 `quality` 객체를 포함
 
 | 항목 | 보고 기준 |
 | --- | --- |
-| `inputs.loaded` | 기존 research/PRD/refs/constitution/design 자산 확인 결과 |
-| `lesson.search` | `skipped(research document step)` |
-| `event.capture` | `skipped(research document step)` |
-| `verification` | 웹 출처 수, 실제 서비스 수, URL 기록 확인 |
-| `state.updated` | `.altool/state/research.json` 갱신 |
-| `docs.synced` | 생성한 research 문서 |
-| `document.status` | research 문서 상단 Status=Done |
-| `artifacts.created` | `docs/00-research/R-0001-*.research.md` |
 | `research.source_mix` | 실제 서비스/공식·리서치/사용자 목소리/리스크 기준 출처 비율 확인 |
 | `research.source_quality` | 출처별 신뢰도 A/B/C와 한계 기록 |
 | `research.freshness` | 출처별 최신성 current/stable/old 기록 |

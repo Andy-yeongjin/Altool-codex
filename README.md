@@ -34,7 +34,7 @@ Altool은 네 가지 자산을 기준으로 개발 사이클을 돌립니다:
 
 ### 1. setup 실행
 
-Windows는 `setup.bat`, macOS는 `setup.command`를 더블클릭한 뒤 대상 프로젝트 폴더를 선택합니다. macOS에서 실행 권한 때문에 열리지 않으면 터미널에서 `bash setup.command "/path/to/project"`를 실행합니다. 필요한 파일이 자동 복사되며, 대상 프로젝트의 `AGENTS.md`, `constitution.md`, `designs/design.md`가 이미 있으면 보존하고 헌법 major version이 엔진과 다르면 검토 경고를 표시합니다.
+Windows는 `setup.bat`, macOS는 `setup.command`를 더블클릭한 뒤 대상 프로젝트 폴더를 선택합니다. macOS에서 실행 권한 때문에 열리지 않으면 터미널에서 `bash setup.command "/path/to/project"`를 실행합니다. 설치 전 Python 3와 `check.py --help` 실행 가능 여부를 확인합니다. `altool/`과 bundled skill 디렉터리는 설치본과 정확히 같게 갱신하고, 대상 프로젝트의 `AGENTS.md`, `constitution.md`, `designs/design.md`가 이미 있으면 보존하며 헌법 major version이 엔진과 다르면 검토 경고를 표시합니다.
 
 ### 2. Codex에서 프로젝트 열기
 
@@ -83,7 +83,7 @@ $altool say 결제는 제외하고 장바구니까지만 해
 $altool ask 지금 뭐하고 있어?
 ```
 
-`$altool freedom`에서 각 루프는 action 하나가 아니라 자율 개발 사이클입니다. `loopBudget`은 같은 제품의 완성도 반복 횟수입니다. 모든 사이클은 먼저 research를 수행하고, 그 조사 결과로 전체 제품의 완성형 목표를 정합니다. 모든 구현 루프는 사용자의 전체 요청을 만족하는 end-to-end 제품 경험을 기준으로 하고, 후속 루프는 같은 제품을 다시 조사·관찰해 기능·UX·디자인·품질을 성숙시킵니다. 이후 필요한 `plan/spec/run/analyze/fix/browser/report` step을 실제 수행하며, 구현/UI 사이클은 browser 검증 뒤 report까지 완료해야 루프 완료로 기록합니다. 다음 루프의 구체 작업은 시작 시점에 미리 정하지 않고 다음 research에서 다시 결정합니다. 로컬 control-plane만 검증할 때는 `python altool/scripts/freedom_loop.py "쇼핑몰 만들어줘" --loops 5 --interval 1`을 사용할 수 있습니다.
+`$altool freedom`에서 각 루프는 action 하나가 아니라 자율 개발 사이클입니다. `loopBudget`은 같은 제품의 완성도 반복 횟수입니다. 모든 사이클은 먼저 research를 수행하고, 그 조사 결과로 전체 제품의 완성형 목표를 정합니다. 모든 구현 루프는 사용자의 전체 요청을 만족하는 end-to-end 제품 경험을 기준으로 하고, 후속 루프는 같은 제품을 다시 조사·관찰해 기능·UX·디자인·품질을 성숙시킵니다. 이후 필요한 `plan/spec/run/analyze/fix/browser/report` step을 실제 수행하며, 구현/UI 사이클은 browser 검증 뒤 report까지 완료해야 루프 완료로 기록합니다. 다음 루프의 구체 작업은 시작 시점에 미리 정하지 않고 다음 research에서 다시 결정합니다. 로컬 control-plane만 검증할 때는 `python3 altool/scripts/freedom_loop.py "쇼핑몰 만들어줘" --loops 5 --interval 1`을 사용할 수 있습니다.
 
 Freedom 진행 상태는 `.altool/freedom/state.json`, `outbox.jsonl`, `journal.md`에 같이 기록됩니다. 각 action 시작/완료 때 `currentAction`이 갱신되고, 사이클 완료 때만 `loopsCompleted`가 증가합니다.
 각 단계는 산출 문서의 체크박스와 상단 `상태`/`Status`를 함께 갱신합니다.
@@ -121,6 +121,8 @@ Freedom 진행 상태는 `.altool/freedom/state.json`, `outbox.jsonl`, `journal.
 
 ## 프로젝트에 설치되는 파일
 
+기능상 최소 설치 자산은 `altool/`과 `.agents/skills/altool/`이다. 표준 설치는 여기에 `AGENTS.md`와 `constitution.md`를 더해 코딩 태도·UI 검증·개발 정책을 활성화한다. 이 두 정책 파일이나 디자인 자산이 없으면 엔진은 동작할 수 있지만 해당 규칙만 비활성화된다.
+
 | 파일/폴더 | 용도 |
 |----------|------|
 | `altool/` | **엔진** — 단계별 절차(steps/) + 스크립트(scripts/) + 산출물 템플릿(templates/) |
@@ -134,6 +136,8 @@ Freedom 진행 상태는 `.altool/freedom/state.json`, `outbox.jsonl`, `journal.
 | `start.bat` / `end.bat` | Windows `setup.bat`이 설치하는 개발 서버 실행/종료 파일 |
 | `start.command` / `end.command` | macOS `setup.command`가 설치하는 개발 서버 실행/종료 파일 |
 | `.gitignore` | `.altool/` 등 제외 (없을 때만 생성) |
+
+`start.*`는 `package.json`의 `scripts.dev`가 있을 때만 실행하고 PID를 기록한다. `end.*`는 그 PID의 프로젝트 프로세스만 종료하며, PID가 없으면 포트 점유 정보를 보여줄 뿐 임의 프로세스를 종료하지 않는다.
 
 ---
 
@@ -164,7 +168,7 @@ Altool은 특정 스택을 강제하지 않습니다. plan/spec에서 요청 범
 프로젝트의 `constitution.md`를 직접 수정하면 됩니다.
 
 **Q. altool/ 폴더만 다른 프로젝트에 복사해도 되나요?**
-됩니다. `altool/` + `AGENTS.md` + `.agents/skills/altool/`이 있으면 Codex에서 동작합니다 (자산 감지형 — constitution.md 등이 없으면 해당 규칙만 비활성). 상세 명령 규칙은 Altool skill과 `altool/steps/`에 둡니다.
+`altool/`만으로는 `$altool` 명령이 등록되지 않습니다. 최소한 `altool/` + `.agents/skills/altool/`이 필요하고, 표준 동작에는 `AGENTS.md` + `constitution.md`도 함께 설치하는 것을 권장합니다. 상세 명령 규칙은 Altool skill과 `altool/steps/`에 둡니다.
 
 ---
 

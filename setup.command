@@ -29,6 +29,28 @@ if ! command -v ditto >/dev/null 2>&1; then
     echo "Required macOS command not found: ditto"
     exit 1
 fi
+if [[ ! -f "$ALTOOL_DIR/altool/scripts/check.py" ]]; then
+    echo "Altool gate missing: $ALTOOL_DIR/altool/scripts/check.py"
+    exit 1
+fi
+if [[ ! -f "$ALTOOL_DIR/templates/codex/skills/altool/SKILL.md" ]]; then
+    echo "Bundled Altool skill missing: $ALTOOL_DIR/templates/codex/skills/altool/SKILL.md"
+    exit 1
+fi
+
+PYTHON_CMD=""
+for candidate in python3 python; do
+    if command -v "$candidate" >/dev/null 2>&1 \
+        && "$candidate" -c 'import sys; raise SystemExit(sys.version_info.major != 3)' \
+        && "$candidate" "$ALTOOL_DIR/altool/scripts/check.py" --help >/dev/null; then
+        PYTHON_CMD="$candidate"
+        break
+    fi
+done
+if [[ -z "$PYTHON_CMD" ]]; then
+    echo "Python 3 is required, and altool/scripts/check.py --help must run successfully."
+    exit 1
+fi
 
 if [[ -z "$PROJECT_DIR" ]] && command -v osascript >/dev/null 2>&1; then
     if selected_dir="$(osascript 2>/dev/null <<'APPLESCRIPT'
@@ -75,6 +97,24 @@ copy_if_missing() {
     fi
 }
 
+replace_managed_dir() {
+    local source_dir="$1"
+    local target_dir="$2"
+    local display_name="$3"
+
+    if [[ ! -d "$source_dir" ]]; then
+        echo "  [ERROR] Managed source missing: $source_dir"
+        exit 1
+    fi
+    if [[ -L "$target_dir" ]]; then
+        echo "  [ERROR] Refusing to replace symlinked managed directory: $target_dir"
+        exit 1
+    fi
+    rm -rf "$target_dir"
+    ditto "$source_dir" "$target_dir"
+    echo "  [OK] $display_name"
+}
+
 extract_constitution_version() {
     sed -n 's/^\*\*Version\*\*:[[:space:]]*\([0-9][0-9.]*\).*/\1/p' "$1" | head -n 1
 }
@@ -85,15 +125,11 @@ echo "  Altool Project Setup (macOS)"
 echo "============================================="
 echo
 echo "  Target: $PROJECT_DIR"
+echo "  Python: $PYTHON_CMD"
 echo
 echo "  Copying files..."
 
-if [[ ! -d "$ALTOOL_DIR/altool" ]]; then
-    echo "  [ERROR] Altool engine missing: $ALTOOL_DIR/altool"
-    exit 1
-fi
-ditto "$ALTOOL_DIR/altool" "$PROJECT_DIR/altool"
-echo "  [OK] altool/ (engine)"
+replace_managed_dir "$ALTOOL_DIR/altool" "$PROJECT_DIR/altool" "altool/ (engine)"
 
 copy_if_missing "$ALTOOL_DIR/AGENTS.md" "$PROJECT_DIR/AGENTS.md" "AGENTS.md"
 
@@ -103,8 +139,10 @@ if [[ -d "$ALTOOL_DIR/templates/codex/skills" ]]; then
     for skill_dir in "$ALTOOL_DIR"/templates/codex/skills/*; do
         if [[ -d "$skill_dir" && -f "$skill_dir/SKILL.md" ]]; then
             skill_name="$(basename "$skill_dir")"
-            ditto "$skill_dir" "$PROJECT_DIR/.agents/skills/$skill_name"
-            echo "  [OK] Codex local skill: $skill_name"
+            replace_managed_dir \
+                "$skill_dir" \
+                "$PROJECT_DIR/.agents/skills/$skill_name" \
+                "Codex local skill: $skill_name"
         fi
     done
     shopt -u nullglob

@@ -81,9 +81,9 @@ browser step이 직접 시작한 개발 서버는 브라우저 검증이 끝나�
 ### Step Check 집계
 
 각 단계 완료 후 아래 표를 누적하고, 최종 완료 보고에 포함한다.
-최종 보고 전 `.altool/checks/{기능명}.oneshot.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.oneshot.json`를 실행한다. 실패하면 메시지를 보고 하위 step check 또는 집계 JSON을 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다.
-이어 `python altool/scripts/check.py audit-docs --root .`를 실행한다. 실패하면 stale로 보고된 문서의 소유 Step Check를 갱신·검증한 뒤 oneshot check와 `audit-docs`를 다시 실행한다.
-마지막으로 `python altool/scripts/check.py analyze-sync --root .`를 실행해 최종 Match Rate·미해소 갭·상태가 일치하는지 확인한다.
+최종 보고 전 `.altool/checks/{기능명}.oneshot.json`을 작성하고 `python3 altool/scripts/check.py validate --json .altool/checks/{기능명}.oneshot.json`를 실행한다. 실패하면 메시지를 보고 하위 step check 또는 집계 JSON을 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다.
+이어 `python3 altool/scripts/check.py audit-docs --root .`를 실행한다. 실패하면 stale로 보고된 문서의 소유 Step Check를 갱신·검증한 뒤 oneshot check와 `audit-docs`를 다시 실행한다.
+마지막으로 `python3 altool/scripts/check.py analyze-sync --root .`를 실행해 최종 Match Rate·미해소 갭·상태가 일치하는지 확인한다.
 
 | 단계 | inputs.loaded | lesson.search | event.capture | verification | state.updated | docs.synced | document.status | artifacts.created |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -98,8 +98,8 @@ browser step이 직접 시작한 개발 서버는 브라우저 검증이 끝나�
 `event.capture`는 사건이 없을 때만 `skipped(no event)`로 둔다. 오류·실패·우회·갭이 있었는데 이벤트가 없다면 해당 단계로 돌아가 보완한다.
 research 하위 check에는 `research.source_mix`, `research.source_quality`, `research.freshness`, `research.duplicate_review`, `research.evidence_map`, `research.visual_capture`, `research.design_system`, `research.design_tokens`, `research.screen_recipe`, `research.component_extraction`, `research.capture_map`, `research.plan_readiness`, `research.next_queries`도 포함한다.
 analyze/fix/browser 하위 check에는 `visual.contrast`, `accessibility.live_region`, `functional.time_precision`, `analysis.semantic_consistency`를 포함한다. `visual.contrast`는 `check.py contrast`, `accessibility.live_region`은 `check.py a11y-contracts`, `analysis.semantic_consistency`는 `check.py analyze-sync` 결과여야 한다. `functional.time_precision`은 시간 기반 UI의 반복 pause/resume clock 증거 또는 `skipped(not time-based UI)`여야 한다.
-browser 하위 check에는 `visual.reference_comparison`, `visual.css_custom_properties`, `server.cleanup`도 포함한다. `visual.reference_comparison`은 참조 캡처와 최종 화면 스크린샷의 구조·비례·밀도·컴포넌트 외형 대조 결과여야 한다. `visual.css_custom_properties`는 `python altool/scripts/check.py css-vars --root .` 통과 결과 또는 `skipped(no css files)`여야 한다. `server.cleanup`은 직접 시작한 서버의 종료 증거 또는 `skipped(existing server)`여야 한다.
-`oneshot` check JSON에는 `checks` 객체와 `children` 배열을 포함한다. `children`에는 research/plan/spec/run/analyze/fix/browser check 파일 경로를 넣는다. 갭이 없어 fix를 건너뛰면 fix 항목은 `skipped(no gap)`로 남긴다.
+browser 하위 check에는 `visual.reference_comparison`, `visual.css_custom_properties`, `server.cleanup`도 포함한다. `visual.reference_comparison`은 참조 캡처와 최종 화면 스크린샷의 구조·비례·밀도·컴포넌트 외형 대조 결과여야 한다. `visual.css_custom_properties`는 `python3 altool/scripts/check.py css-vars --root .` 통과 결과 또는 `skipped(no css files)`여야 한다. `server.cleanup`은 직접 시작한 서버의 종료 증거 또는 `skipped(existing server)`여야 한다.
+`oneshot` check JSON의 `checks`에는 `_common.md`의 공통 8개 키와 research/plan/spec/run/analyze/fix/browser 단계 요약을 모두 넣는다. 단계 요약은 `done`, 갭이 없어 fix를 건너뛸 때만 `fix: skipped(no gap)`가 허용된다. `children`에는 프로젝트 기준 상대 경로로 각 하위 Step Check를 한 번씩 넣고, fix 생략 시에만 fix 파일을 생략한다. research는 독립 `R-...` feature를 사용하고, 나머지 자식의 feature는 oneshot 부모 feature와 같아야 한다. validator가 모든 자식 파일을 직접 읽어 계약을 재검증한다.
 
 ---
 

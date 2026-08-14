@@ -1,0 +1,18 @@
+# Altool Step 공통 계약
+
+모든 step은 완료 전에 지정된 `.altool/checks/*.json`을 작성하고 `python3 altool/scripts/check.py validate --json {check-path}`를 통과시킨다. 실패 원인을 보완해 최대 5회 재검증하고, 통과한 Step Check 요약을 최종 보고에 포함한다.
+
+공통 `checks` 키의 의미는 다음과 같다.
+
+| 키 | 증거 |
+| --- | --- |
+| `inputs.loaded` | 이 step이 요구하는 정책·상태·문서·자산을 읽은 결과 |
+| `lesson.search` | 요구된 lesson 검색 결과 또는 이 step에 맞는 skip 사유 |
+| `event.capture` | 기록한 lesson event ID 또는 기록 대상이 아닌 사유 |
+| `verification` | 이 step의 성공 기준을 확인한 명령·도구·결과 |
+| `state.updated` | 상태 파일 갱신 결과 또는 갱신 대상이 아닌 사유 |
+| `docs.synced` | 변경 문서와 소유 Step Check 동기화 결과 또는 대상 없음 |
+| `document.status` | 관련 문서의 최상단 상태 동기화 결과 또는 대상 없음 |
+| `artifacts.created` | 생성·수정한 산출물 경로 또는 산출물 없음 |
+
+`done`에는 비어 있지 않은 `evidence` 목록을, `skipped`와 `failed`에는 구체적인 `reason`을 쓴다. step 문서에 추가 키나 허용 skip 사유가 있으면 그 규칙이 우선한다.

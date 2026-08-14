@@ -71,18 +71,7 @@ Plan 문서 작성과 Step Check가 통과하면 문서 상단 `상태`/`Status`
 
 문서 완성 후, 사용자가 파일을 열지 않아도 보도록 **Executive Summary 표를 응답에 직접 출력**한다.
 
-완료 전 `.altool/checks/{기능명}.plan.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.plan.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | PRD/refs/constitution/design 자산 로딩 결과 |
-| `verification` | Research/PRD 입력과 plan 범위가 대조되었는지 |
-| `lesson.search` | `skipped(document-only step)` |
-| `event.capture` | `skipped(document-only step)` — Plan 작성 중에는 lesson 이벤트를 append하지 않는다 |
-| `state.updated` | `.altool/state/status.json` phase=plan |
-| `docs.synced` | 생성/갱신한 plan 문서와 상단 Status=Planned |
-| `document.status` | plan 문서 상단 Status=Planned |
-| `artifacts.created` | `docs/01-plan/features/{기능명}.plan.md` |
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.plan.json`이다. 이 문서 전용 증거는 PRD/refs/constitution/design 입력, Research·PRD와 범위 대조, status의 `phase=plan`, 생성한 plan과 `Status=Planned` 동기화다. `lesson.search`와 `event.capture`는 `skipped(document-only step)`으로 기록한다.
 
 ```
 🐣 [al:plan] {기능명} 완료 — 산출물: docs/01-plan/features/{기능명}.plan.md

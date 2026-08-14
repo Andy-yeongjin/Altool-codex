@@ -20,7 +20,7 @@
 - Plan → Requirements 이행 + Success Criteria
 - Spec → 구조적 구현 일치
 - Spec의 Context Anchor를 analyze 문서 헤더에 복사
-- **코드 오류 검색**: `lesson.md` 전체를 읽지 않는다. 기능명·구현 경로·테스트·계약·오류코드 키워드로 `python altool/scripts/lesson.py search --query "{키워드}" --limit 7`를 실행하고 관련 코드 오류 이벤트만 추린다. 동일한 오류 패턴이 구현에 남아 있으면 갭으로 보고한다.
+- **코드 오류 검색**: `lesson.md` 전체를 읽지 않는다. 기능명·구현 경로·테스트·계약·오류코드 키워드로 `python3 altool/scripts/lesson.py search --query "{키워드}" --limit 7`를 실행하고 관련 코드 오류 이벤트만 추린다. 동일한 오류 패턴이 구현에 남아 있으면 갭으로 보고한다.
 - **React/Next.js 보조 스킬**: 현재 프로젝트가 React 또는 Next.js를 사용하고 `.agents/skills/vercel-react-best-practices/SKILL.md`가 있으면 waterfall, bundle, server/client boundary, rerender, hydration 등 성능 안티패턴을 추가 갭 후보로 검사한다. 다른 스택이면 `skipped(not React/Next.js)`, 파일이 없으면 `skipped(skill unavailable)`로 보고하고 계속한다.
 
 ### 4~5. Strategic Alignment Check
@@ -82,8 +82,8 @@
 | 사용자 디자인 입력 있음 | `designs/`의 `.pen`, Stitch, 스크린샷, 디자인 문서가 있으면 Spec의 User Design Source와 구현 화면 구조·밀도·위계·컴포넌트 외형이 일치 |
 | 디자인 시스템 있음 | 구현 화면의 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트 외형·미디어 사용이 `designs/design.md`의 규칙과 추적 가능하게 일치. 참조 폰트 파일 복제 없이 `design.md`의 구현 font-family stack 사용 |
 | CSS custom properties | CSS 파일이 있으면 `var(--token)` 참조가 실제 정의(`--token:`)와 일치하는지 확인. 미정의 custom property는 해당 CSS 선언이 무효화될 수 있으므로 구현 갭 |
-| 텍스트 대비 | CSS 파일이 있으면 `python altool/scripts/check.py contrast --root .` 실행. 4.5:1 미만 명시적 글자색/배경색 조합은 접근성 갭 |
-| Live region 계약 | `python altool/scripts/check.py a11y-contracts --root .` 실행. Spec이 상태 전달을 요구하면 구현과 자동화된 `role=status` 텍스트/표시 assertion이 모두 필요 |
+| 텍스트 대비 | CSS 파일이 있으면 `python3 altool/scripts/check.py contrast --root .` 실행. 4.5:1 미만 명시적 글자색/배경색 조합은 접근성 갭 |
+| Live region 계약 | `python3 altool/scripts/check.py a11y-contracts --root .` 실행. Spec이 상태 전달을 요구하면 구현과 자동화된 `role=status` 텍스트/표시 assertion이 모두 필요 |
 | 디자인 시스템 없음 | UI 작업이면 Research 또는 design_source로 돌아가 `design.md`를 생성해야 하므로 구현 완료 불가 |
 | Generic AI/SaaS 회귀 | Research/Spec 근거 없는 대형 히어로, 과한 그라디언트, 추상 AI 장식, glassmorphism, 카드 그림자 남발 없음 |
 | 참조 복제 금지 | 참조 브랜드의 로고·카피·고유 이미지·식별 가능한 레이아웃 복제 없음 |
@@ -112,24 +112,16 @@ analyze 문서 상단의 `최종 Match Rate`와 `미해소 갭`을 현재 재분
 - plan/spec 문서 상단 `상태`/`Status`: 미해소 갭 0건이면 `Analyzed`, 갭이 있으면 `NeedsFix`.
 plan/spec 문서를 수정했으면 analyze Step Check만으로 끝내지 않는다. `.altool/checks/{기능명}.plan.json`과 `.altool/checks/{기능명}.spec.json`도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, analyze check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
 
-상태와 analyze 문서를 갱신한 뒤 `python altool/scripts/check.py analyze-sync --root .`를 실행한다. 불일치가 있으면 문서나 상태를 바로잡고 통과할 때까지 완료하지 않는다.
+상태와 analyze 문서를 갱신한 뒤 `python3 altool/scripts/check.py analyze-sync --root .`를 실행한다. 불일치가 있으면 문서나 상태를 바로잡고 통과할 때까지 완료하지 않는다.
 
-완료 전 `.altool/checks/{기능명}.analyze.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.analyze.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.analyze.json`이다. 공통 키 증거에는 전체 입력, lesson query, `gap`/`verification` ID 또는 `skipped(no gap)`, 정적 3축·L1~L3 결과, status의 `phase=check`·matchRate, plan/spec/analyze 상태와 소유 check 동기화, analyze 경로를 포함한다.
 
 | 항목 | 보고 기준 |
 | --- | --- |
-| `inputs.loaded` | PRD/plan/spec/구현 경로/React 보조 스킬 로딩 결과 |
-| `lesson.search` | analyze 시작 시 실행한 query와 결과 수 |
-| `event.capture` | 기록한 `gap`/`verification` 이벤트 ID 또는 `skipped(no gap)` |
-| `verification` | 정적 3축, L1/L2/L3 실행 또는 생략 사유 |
 | `visual.contrast` | `check.py contrast` 통과 결과 또는 analyze 갭으로 기록한 실패 증거 / `skipped(no css files)`. `ambiguousRules`가 있으면 후속 browser 실제 화면 대조 대상으로 기록 |
 | `accessibility.live_region` | `check.py a11y-contracts` 통과 결과 또는 analyze 갭으로 기록한 실패 증거 / `skipped(no live-region contract)` |
 | `functional.time_precision` | 반복 pause/resume clock 결과와 허용 오차 또는 `skipped(not time-based UI)` |
 | `analysis.semantic_consistency` | `check.py analyze-sync --root .` 통과 결과 |
-| `state.updated` | `.altool/state/status.json` phase=check, matchRate |
-| `docs.synced` | plan/spec 체크박스와 관련 문서 상단 Status 동기화 결과, 수정된 소유 Step Check 재검증 경로 |
-| `document.status` | analyze 및 plan/spec 문서 상단 Status=Analyzed/NeedsFix/GapsFound |
-| `artifacts.created` | `docs/03-analyze/{기능명}.analyze.md` |
 
 ```
 🐣 [al:analyze] {기능명} 완료 — 산출물: docs/03-analyze/{기능명}.analyze.md

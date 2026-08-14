@@ -51,7 +51,7 @@
 
 ### 6. Lesson 이벤트 기록
 
-해소한 코드 오류나 구현 갭마다 `python altool/scripts/lesson.py append`로 `fix` 이벤트를 기록한다. 수정 전 실제 코드 오류가 확인됐으면 별도 `code_error` 이벤트를 기록하고 `relatedEventIds`로 연결한다.
+해소한 코드 오류나 구현 갭마다 `python3 altool/scripts/lesson.py append`로 `fix` 이벤트를 기록한다. 수정 전 실제 코드 오류가 확인됐으면 별도 `code_error` 이벤트를 기록하고 `relatedEventIds`로 연결한다.
 
 각 이벤트에는 `recurrenceRisk`, `recurrenceScope`, `recurrenceReason`을 포함한다. `promoteToLesson: true`는 승격 힌트일 뿐 기록 여부의 조건이 아니다. CLI가 `events.jsonl`에 append하고 `lesson.index.json`, `lesson.md`를 갱신한다. 수동 실행 시에는 사용자에게 기록 후보를 짧게 제안하고, oneshot 자동 모드에서는 기록 후 보고한다.
 
@@ -70,24 +70,16 @@
 - fix 문서 상단 `상태`/`Status`는 갭 0건이면 `Resolved`, 갭이 남으면 `Partial`로 쓴다.
 - analyze 문서 상단 `상태`/`Status`는 갭 0건이면 `Analyzed`, 갭이 남으면 `GapsFound`로 쓴다. browser 통과 전에는 `Verified`로 올리지 않는다.
 - analyze/plan/spec 문서를 수정했으면 fix Step Check만으로 끝내지 않는다. 수정된 문서의 소유 Step Check(`{기능명}.analyze.json`, `{기능명}.plan.json`, `{기능명}.spec.json`)도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, fix check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
-- 상태와 analyze 문서 갱신 후 `python altool/scripts/check.py analyze-sync --root .`를 통과시킨다.
+- 상태와 analyze 문서 갱신 후 `python3 altool/scripts/check.py analyze-sync --root .`를 통과시킨다.
 
-완료 전 `.altool/checks/{기능명}.fix.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.fix.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.fix.json`이다. 공통 키 증거에는 analyze/상태/보조 스킬 입력, lesson 검색과 event ID, 빌드·재분석, `phase=fix`·iterationCount·matchRate, analyze 갭 및 관련 문서 상태·소유 check 동기화, fix 문서 경로를 포함한다.
 
 | 항목 | 보고 기준 |
 | --- | --- |
-| `inputs.loaded` | analyze 문서/상태 파일/React 보조 스킬 로딩 결과 |
-| `lesson.search` | fix 시작 시 갭/파일/스택 기준 검색 결과 또는 `skipped(no gap)` |
-| `event.capture` | 기록한 `code_error`/`fix` 이벤트 ID |
-| `verification` | 빌드와 재분석 결과 |
 | `visual.contrast` | `check.py contrast` 재실행 통과 결과 또는 `skipped(no css files)`. `ambiguousRules`가 있으면 후속 browser 실제 화면 대조 대상으로 유지 |
 | `accessibility.live_region` | `check.py a11y-contracts` 재실행 통과 결과 또는 `skipped(no live-region contract)` |
 | `functional.time_precision` | 반복 pause/resume clock 재검증 결과 또는 `skipped(not time-based UI)` |
 | `analysis.semantic_consistency` | `check.py analyze-sync --root .` 통과 결과 |
-| `state.updated` | phase=fix, iterationCount, matchRate |
-| `docs.synced` | analyze 갭 해소 표기와 관련 문서 상단 Status 갱신 결과, 수정된 소유 Step Check 재검증 경로 |
-| `document.status` | fix/analyze/plan/spec 문서 상단 Status=Resolved/Partial/Implemented/Fixing |
-| `artifacts.created` | `docs/03-analyze/{기능명}.fix.md` |
 
 ### 8. 완료 보고
 

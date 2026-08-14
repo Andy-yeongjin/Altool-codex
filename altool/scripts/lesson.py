@@ -18,6 +18,9 @@ import json
 import os
 import re
 import sys
+import tempfile
+import time
+from contextlib import contextmanager
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
@@ -51,6 +54,50 @@ def paths() -> dict[str, Path]:
 
 def now_iso() -> str:
     return datetime.now(KST).replace(microsecond=0).isoformat()
+
+
+@contextmanager
+def file_lock(path: Path, timeout: float = 10.0):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lock_path = path.with_suffix(path.suffix + ".lock")
+    started = time.monotonic()
+    handle: int | None = None
+    while handle is None:
+        try:
+            handle = os.open(str(lock_path), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.write(handle, str(os.getpid()).encode("ascii", errors="ignore"))
+        except FileExistsError:
+            if time.monotonic() - started > timeout:
+                raise SystemExit(f"Could not acquire lesson lock: {lock_path}")
+            time.sleep(0.05)
+    try:
+        yield
+    finally:
+        if handle is not None:
+            os.close(handle)
+        try:
+            lock_path.unlink()
+        except FileNotFoundError:
+            pass
+
+
+def atomic_write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=path.parent,
+            prefix=f".{path.name}.",
+            delete=False,
+        ) as handle:
+            handle.write(text)
+            temporary = Path(handle.name)
+        os.replace(temporary, path)
+    finally:
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
 
 
 def tokenize(value: Any) -> list[str]:
@@ -168,8 +215,7 @@ def build_index(events: list[dict[str, Any]]) -> dict[str, Any]:
 
 def save_index(index: dict[str, Any]) -> None:
     index_path = paths()["index"]
-    index_path.parent.mkdir(parents=True, exist_ok=True)
-    index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_write_text(index_path, json.dumps(index, ensure_ascii=False, indent=2) + "\n")
 
 
 def render_lessons(events: list[dict[str, Any]]) -> str:
@@ -221,20 +267,21 @@ def render_lessons(events: list[dict[str, Any]]) -> str:
 
 def write_lessons(events: list[dict[str, Any]]) -> None:
     lesson_path = paths()["lesson"]
-    lesson_path.parent.mkdir(parents=True, exist_ok=True)
-    lesson_path.write_text(render_lessons(events), encoding="utf-8")
+    atomic_write_text(lesson_path, render_lessons(events))
 
 
 def append_event(args: argparse.Namespace) -> None:
     p = paths()
     p["root"].mkdir(parents=True, exist_ok=True)
-    events = load_events()
-    event = normalize_event(read_payload(args.json_file, args.json), events)
-    with p["events"].open("a", encoding="utf-8") as f:
-        f.write(json.dumps(event, ensure_ascii=False, separators=(",", ":")) + "\n")
-    events.append(event)
-    save_index(build_index(events))
-    write_lessons(events)
+    payload = read_payload(args.json_file, args.json)
+    with file_lock(p["events"]):
+        events = load_events()
+        event = normalize_event(payload, events)
+        with p["events"].open("a", encoding="utf-8") as f:
+            f.write(json.dumps(event, ensure_ascii=False, separators=(",", ":")) + "\n")
+        events.append(event)
+        save_index(build_index(events))
+        write_lessons(events)
     print(f"[al:lesson] event recorded - {event['id']} ({event['type']})")
 
 
