@@ -503,7 +503,7 @@ body {
       2. Altool 다운로드 <span class="acc-toggle">▼</span>
     </div>
     <div class="accordion-body">
-      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;"><a href="https://github.com/Andy-yeongjin/Altool" target="_blank" style="color:var(--cyan); font-weight:600;">GitHub 페이지 →</a>에서 <strong>Code → Download ZIP</strong>을 클릭해서 다운로드합니다. 압축을 풀어서 원하는 위치에 저장해두세요.</p>
+      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;"><a href="https://github.com/Andy-yeongjin/Altool-codex" target="_blank" style="color:var(--cyan); font-weight:600;">GitHub 페이지 →</a>에서 <strong>Code → Download ZIP</strong>을 클릭해서 다운로드합니다. 압축을 풀어서 원하는 위치에 저장해두세요.</p>
       <div class="tip info">
         <div class="tip-icon">💡</div>
         <div class="tip-text">한 번만 받으면 됩니다. 이후 모든 프로젝트에서 재사용할 수 있습니다.</div>
@@ -565,10 +565,10 @@ body {
   <!-- Step 0-7 -->
   <div class="accordion" onclick="toggleAccordion(event, this)">
     <div class="accordion-header">
-      7. $altool setup 입력 — 도구 자동 설치 <span class="acc-toggle">▼</span>
+      7. $altool setup 입력 — 초기화·자산 확인 <span class="acc-toggle">▼</span>
     </div>
     <div class="accordion-body">
-      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;">대화창에 아래를 입력하면 Codex가 <strong>Node.js 설치 확인</strong>부터 필요한 로컬 자산를 자동으로 설치합니다.</p>
+      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;">대화창에 아래를 입력하면 Codex가 <strong>Python 3 품질 게이트</strong>와 로컬 자산·헌법 버전을 확인합니다. Node.js는 Node 프로젝트일 때만 확인하며, 필요한 Codex 로컬 스킬은 setup 파일이 이미 복사합니다.</p>
       <div class="cmd-block">
         <div class="cmd-header">
           <span class="cmd-label">Codex 대화창에 입력</span>
@@ -602,6 +602,7 @@ body {
       <strong>파일 위치 안내</strong><br>
       • <strong>PRD 파일</strong> (.md): <code style="color:var(--cyan)">prd/</code> 폴더에 넣으세요 — AI가 자동으로 찾습니다.<br>
       • <strong>PRD 참고 문서</strong> (PDF·이미지·기획서 등): <code style="color:var(--cyan)">prd/refs/</code> 폴더에 넣으면 보조 컨텍스트로 함께 읽습니다.<br>
+      • <strong>Claude 디자인 HTML</strong> (.html): <code style="color:var(--cyan)">designs/claude-design/</code> 폴더에 넣으세요 — 있으면 최우선 디자인 원천입니다.<br>
       • <strong>Pencil.dev 디자인 파일</strong> (.pen): <code style="color:var(--cyan)">designs/</code> 폴더에 넣으세요<br>
       • <strong>Stitch 디자인 파일</strong>: ZIP 압축 해제 후 <code style="color:var(--cyan)">designs/stitch/</code> 폴더에 넣으세요<br>
       <span style="color:var(--text2); font-size:13px;">설치 시 <code style="color:var(--cyan)">constitution.md</code>, <code style="color:var(--cyan)">designs/design.md</code>가 복사됩니다.</span>
@@ -621,7 +622,7 @@ body {
     <div class="tip-icon">🎨</div>
     <div class="tip-text">
       <strong>디자인 파일이 있다면 먼저 실행하세요 (최초 1회)</strong><br>
-      <strong>Pencil.dev</strong>: <code style="color:var(--cyan)">designs/</code> 폴더에 .pen 파일을 넣고 실행 &nbsp;|&nbsp; <strong>Stitch</strong>: ZIP 압축 해제 후 <code style="color:var(--cyan)">designs/stitch/</code> 폴더에 넣고 실행<br>
+      <strong>Claude HTML</strong>: <code style="color:var(--cyan)">designs/claude-design/</code> 폴더에 넣으면 최우선 원천이며, <code style="color:var(--cyan)">design.md</code>가 없거나 오래됐을 때 oneshot/freedom이 자동 실행 &nbsp;|&nbsp; <strong>Pencil.dev</strong>: <code style="color:var(--cyan)">designs/</code> 폴더에 .pen 파일을 넣고 실행 &nbsp;|&nbsp; <strong>Stitch</strong>: ZIP 압축 해제 후 <code style="color:var(--cyan)">designs/stitch/</code> 폴더에 넣고 실행<br>
       색상·폰트·간격·컴포넌트 외형을 자동 추출해 <code style="color:var(--cyan)">designs/design.md</code>를 만들어줍니다. <code style="color:var(--cyan)">constitution.md</code>의 범용 디자인 품질 원칙 기준으로 검토합니다.<br>
       <span style="color:var(--text2); font-size:13px;">※ 팀 프로젝트라면 리드가 1회 실행 후 git push → 팀원은 pull만 하면 됩니다.</span>
     </div>
@@ -629,7 +630,7 @@ body {
 
   <div class="cmd-block" style="margin-top:8px; margin-bottom:20px;">
     <div class="cmd-header">
-      <span class="cmd-label">디자인 파일 있을 때 먼저 실행 (.pen 또는 Stitch)</span>
+      <span class="cmd-label">디자인 파일 있을 때 먼저 실행 (Claude HTML, .pen 또는 Stitch)</span>
       <button class="cmd-copy" onclick="event.stopPropagation(); copyCmd(this)">복사</button>
     </div>
     <div class="cmd-code">$altool design_source</div>
@@ -670,6 +671,11 @@ body {
   <div class="tip warn">
     <div class="tip-icon">⏱️</div>
     <div class="tip-text"><strong>시간이 좀 걸립니다.</strong> 7단계를 순서대로 실행하기 때문에 10~30분 정도 기다리세요. 중간에 Codex가 질문하면 한국어로 답해주세요.</div>
+  </div>
+
+  <div class="tip success" style="margin-top:8px;">
+    <div class="tip-icon">🛡️</div>
+    <div class="tip-text"><strong>완료 판정도 자동 검증합니다.</strong> 각 단계는 <code style="color:var(--cyan)">.altool/checks/</code>에 Step Check를 남기고, oneshot 부모 게이트가 하위 체크·문서 상태·최종 분석 수치를 다시 확인합니다.</div>
   </div>
 
   <div class="tip warn" style="margin-top:8px;">
@@ -939,7 +945,7 @@ body {
     </div>
     <div class="after-card">
       <h4>🎨 디자인 시스템 만들기</h4>
-      <p>.pen 또는 Stitch 기반으로 디자인 시스템 생성. constitution.md의 범용 디자인 품질 원칙 기준 검토 포함.</p>
+      <p>Claude HTML, .pen 또는 Stitch 기반으로 디자인 시스템 생성. Claude HTML이 있으면 최우선 원천으로 사용하고, constitution.md의 범용 디자인 품질 원칙 기준 검토를 포함합니다.</p>
       <div class="after-entry">$altool design_source</div>
     </div>
   </div>
@@ -1044,4 +1050,3 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
-
