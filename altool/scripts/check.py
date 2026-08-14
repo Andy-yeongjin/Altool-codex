@@ -122,6 +122,38 @@ BROWSER_PASS_POLICY: dict[str, tuple[str, ...] | None] = {
     "artifacts.created": None,
 }
 
+FREEDOM_PASS_POLICY: dict[str, tuple[str, ...] | None] = {
+    "inputs.loaded": None,
+    "lesson.search": ("no implementation action",),
+    "event.capture": ("no code event",),
+    "verification": None,
+    "state.updated": None,
+    "docs.synced": ("no feature docs",),
+    "document.status": ("no document status",),
+    "artifacts.created": None,
+    "inbox.watch": None,
+    "research.required": None,
+    "cycle.state": None,
+    "action.state": None,
+    "report.required": ("user-limited cycle",),
+    "outbox.updated": None,
+    "action.selected": None,
+    "lesson.capture": ("no code event",),
+    "loop.progress": None,
+    "visual.reference_comparison": ("no browser action",),
+    "visual.css_custom_properties": ("no browser action", "no css files"),
+    "visual.contrast": ("no browser action", "no css files"),
+    "accessibility.live_region": ("no browser action", "no live-region contract"),
+    "functional.time_precision": ("no browser action", "not time-based ui"),
+    "analysis.semantic_consistency": ("no analyze action",),
+    "server.cleanup": ("no browser action", "existing server"),
+}
+
+STEP_PASS_POLICY = {
+    "browser": BROWSER_PASS_POLICY,
+    "freedom": FREEDOM_PASS_POLICY,
+}
+
 
 def fail(message: str, failures: list[str]) -> None:
     failures.append(message)
@@ -133,6 +165,14 @@ def has_nonempty_list(value: Any) -> bool:
 
 def check_label(step: str, item: str) -> str:
     return item if item.startswith(f"{step}.") else f"{step}.{item}"
+
+
+def normalize_skip_reason(value: Any) -> str:
+    if not isinstance(value, str):
+        return ""
+    normalized = " ".join(value.strip().casefold().split())
+    wrapped = re.fullmatch(r"skipped\(([^()]*)\)", normalized)
+    return " ".join(wrapped.group(1).strip().split()) if wrapped else normalized
 
 
 def get_number(value: Any) -> float | None:
@@ -196,10 +236,14 @@ def validate_check(data: dict[str, Any]) -> list[str]:
     if not isinstance(feature, str) or not feature.strip():
         fail("root.feature is required", failures)
 
-    step = data.get("step")
-    if not isinstance(step, str) or not step.strip():
+    raw_step = data.get("step")
+    if not isinstance(raw_step, str) or not raw_step.strip():
         fail("root.step is required", failures)
         step = ""
+    else:
+        step = raw_step.strip().casefold()
+        if step != OPTIONAL_STEP and step not in STEP_REQUIRED:
+            fail(f"root.step: unknown step '{step}'", failures)
 
     checks = data.get("checks")
     if not isinstance(checks, dict):
@@ -213,14 +257,14 @@ def validate_check(data: dict[str, Any]) -> list[str]:
         children = data.get("children")
         if not isinstance(children, list) or not children:
             fail("oneshot.children must be a non-empty list", failures)
-    else:
-        required = STEP_REQUIRED.get(str(step), COMMON_REQUIRED)
+    elif step in STEP_REQUIRED:
+        required = STEP_REQUIRED[step]
         for item in required:
             if item not in checks:
-                fail(f"{check_label(str(step), item)}: missing required check", failures)
+                fail(f"{check_label(step, item)}: missing required check", failures)
 
     for item, check in checks.items():
-        label = check_label(str(step), str(item))
+        label = check_label(step, str(item))
         if not isinstance(check, dict):
             fail(f"{label}: check must be an object", failures)
             continue
@@ -235,14 +279,15 @@ def validate_check(data: dict[str, Any]) -> list[str]:
             if not isinstance(reason, str) or not reason.strip():
                 fail(f"{label}: status={status} requires reason", failures)
 
-    if step == "browser":
+    pass_policy = STEP_PASS_POLICY.get(step)
+    if pass_policy is not None:
         for item, check in checks.items():
             if isinstance(check, dict) and check.get("status") == "failed":
                 fail(
-                    f"{check_label(step, str(item))}: browser completion cannot contain failed checks",
+                    f"{check_label(step, str(item))}: {step} completion cannot contain failed checks",
                     failures,
                 )
-        for item, allowed_skip_reasons in BROWSER_PASS_POLICY.items():
+        for item, allowed_skip_reasons in pass_policy.items():
             check = checks.get(item)
             if not isinstance(check, dict):
                 continue
@@ -253,10 +298,10 @@ def validate_check(data: dict[str, Any]) -> list[str]:
             if status == "failed":
                 continue
             if status == "skipped" and allowed_skip_reasons:
-                reason = str(check.get("reason", "")).casefold()
-                if any(token in reason for token in allowed_skip_reasons):
+                reason = normalize_skip_reason(check.get("reason"))
+                if reason in allowed_skip_reasons:
                     continue
-            fail(f"{label}: browser completion requires a passing gate", failures)
+            fail(f"{label}: {step} completion requires a passing gate", failures)
 
     if step in {"analyze", "fix"}:
         semantic = checks.get("analysis.semantic_consistency")
@@ -392,7 +437,7 @@ def audit_docs_cmd(args: argparse.Namespace) -> int:
 
 
 CSS_EXTENSIONS = {".css", ".scss", ".sass", ".less"}
-CSS_EXCLUDE_DIRS = {
+BUILD_EXCLUDE_DIRS = {
     ".git",
     ".next",
     ".nuxt",
@@ -407,13 +452,22 @@ CSS_EXCLUDE_DIRS = {
     "test-results",
 }
 
-SOURCE_EXCLUDE_DIRS = CSS_EXCLUDE_DIRS | {
+PROJECT_ARTIFACT_DIRS = {
     ".agents",
     ".altool",
     "altool",
     "docs",
     "templates",
+    "designs",
+    "prd",
+    "guides",
 }
+
+def is_excluded_project_path(parts: tuple[str, ...]) -> bool:
+    return bool(parts) and (
+        parts[0] in PROJECT_ARTIFACT_DIRS
+        or any(part in BUILD_EXCLUDE_DIRS for part in parts)
+    )
 
 
 def iter_css_files(root: Path) -> list[Path]:
@@ -425,15 +479,35 @@ def iter_css_files(root: Path) -> list[Path]:
             rel_parts = path.relative_to(root).parts
         except ValueError:
             rel_parts = path.parts
-        if any(part in CSS_EXCLUDE_DIRS for part in rel_parts):
+        if is_excluded_project_path(rel_parts):
             continue
         files.append(path)
     return sorted(files)
 
 
+def iter_contrast_sources(root: Path) -> list[tuple[Path, str, int]]:
+    sources: list[tuple[Path, str, int]] = []
+    for path in iter_css_files(root):
+        sources.append((path, path.read_text(encoding="utf-8", errors="ignore"), 0))
+
+    style_pattern = re.compile(r"<style\b[^>]*>(.*?)</style>", re.IGNORECASE | re.DOTALL)
+    for path in root.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in {".html", ".htm"}:
+            continue
+        rel_parts = path.relative_to(root).parts
+        if is_excluded_project_path(rel_parts):
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for match in style_pattern.finditer(text):
+            line_offset = text.count("\n", 0, match.start(1))
+            sources.append((path, match.group(1), line_offset))
+    return sorted(sources, key=lambda source: (str(source[0]), source[2]))
+
+
 def css_vars_cmd(args: argparse.Namespace) -> int:
     root = Path(args.root).resolve()
-    files = iter_css_files(root)
+    sources = iter_contrast_sources(root)
+    files = sorted({path for path, _, _ in sources})
     definitions: dict[str, list[str]] = {}
     references: list[tuple[str, str, int]] = []
     failures: list[str] = []
@@ -441,15 +515,11 @@ def css_vars_cmd(args: argparse.Namespace) -> int:
     define_pattern = re.compile(r"(^|[{\s;])(--[A-Za-z0-9_-]+)\s*:", re.MULTILINE)
     var_pattern = re.compile(r"var\(\s*(--[A-Za-z0-9_-]+)")
 
-    for path in files:
-        try:
-            text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
-            text = path.read_text(encoding="utf-8", errors="ignore")
+    for path, text, line_offset in sources:
         rel = str(path.relative_to(root))
         for match in define_pattern.finditer(text):
             definitions.setdefault(match.group(2), []).append(rel)
-        for line_no, line in enumerate(text.splitlines(), start=1):
+        for line_no, line in enumerate(text.splitlines(), start=line_offset + 1):
             for match in var_pattern.finditer(line):
                 references.append((match.group(1), rel, line_no))
 
@@ -551,6 +621,24 @@ def resolve_css_colors(
     return colors
 
 
+def has_ambiguous_css_variable(
+    value: str,
+    definitions: dict[str, list[str]],
+    stack: frozenset[str] = frozenset(),
+) -> bool:
+    for variable in re.findall(r"var\(\s*(--[A-Za-z0-9_-]+)", value):
+        if variable in stack:
+            return True
+        candidates = {candidate.strip() for candidate in definitions.get(variable, [])}
+        if len(candidates) != 1:
+            return True
+        if has_ambiguous_css_variable(
+            next(iter(candidates)), definitions, stack | {variable}
+        ):
+            return True
+    return False
+
+
 def relative_luminance(color: tuple[int, int, int]) -> float:
     channels = []
     for value in color:
@@ -578,28 +666,26 @@ def color_hex(color: tuple[int, int, int]) -> str:
 
 def contrast_cmd(args: argparse.Namespace) -> int:
     root = Path(args.root).resolve()
-    files = iter_css_files(root)
+    sources = iter_contrast_sources(root)
+    files = sorted({path for path, _, _ in sources})
     definitions: dict[str, list[str]] = {}
-    parsed_files: list[tuple[Path, str]] = []
+    parsed_sources: list[tuple[Path, str, int]] = []
     declaration_pattern = re.compile(r"(--[A-Za-z0-9_-]+|[A-Za-z-]+)\s*:\s*([^;{}]+)")
 
-    for path in files:
-        try:
-            text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
-            text = path.read_text(encoding="utf-8", errors="ignore")
+    for path, text, line_offset in sources:
         text = strip_css_comments(text)
-        parsed_files.append((path, text))
+        parsed_sources.append((path, text, line_offset))
         for name, value in declaration_pattern.findall(text):
             if name.startswith("--"):
                 definitions.setdefault(name, []).append(value.strip())
 
     failures: list[str] = []
     checked_pairs = 0
+    ambiguous_rules = 0
     seen_failures: set[tuple[str, int, str, tuple[int, int, int], tuple[int, int, int]]] = set()
     rule_pattern = re.compile(r"([^{}]+)\{([^{}]*)\}")
 
-    for path, text in parsed_files:
+    for path, text, line_offset in parsed_sources:
         rel = str(path.relative_to(root))
         for rule in rule_pattern.finditer(text):
             selector = " ".join(rule.group(1).split())
@@ -612,9 +698,22 @@ def contrast_cmd(args: argparse.Namespace) -> int:
             background_value = declarations.get("background-color") or declarations.get("background")
             if not foreground_value or not background_value:
                 continue
+            if (
+                re.search(r"(?:gradient|url)\s*\(", background_value, re.IGNORECASE)
+                or has_ambiguous_css_variable(foreground_value, definitions)
+                or has_ambiguous_css_variable(background_value, definitions)
+            ):
+                ambiguous_rules += 1
+                continue
             foregrounds = resolve_css_colors(foreground_value, definitions)
             backgrounds = resolve_css_colors(background_value, definitions)
-            line_no = text.count("\n", 0, rule.start(1)) + 1
+            if not foregrounds or not backgrounds:
+                ambiguous_rules += 1
+                continue
+            selector_offset = rule.start(1) + len(rule.group(1)) - len(
+                rule.group(1).lstrip()
+            )
+            line_no = line_offset + text.count("\n", 0, selector_offset) + 1
             for foreground in foregrounds:
                 for background in backgrounds:
                     checked_pairs += 1
@@ -635,6 +734,7 @@ def contrast_cmd(args: argparse.Namespace) -> int:
         "applicable": bool(files),
         "files": len(files),
         "checkedPairs": checked_pairs,
+        "ambiguousRules": ambiguous_rules,
         "minimum": args.minimum,
         "failures": failures,
     }
@@ -649,7 +749,8 @@ def contrast_cmd(args: argparse.Namespace) -> int:
     else:
         print(
             f"PASS CSS text contrast validation: {len(files)} files, "
-            f"{checked_pairs} explicit pairs, minimum {args.minimum:g}:1"
+            f"{checked_pairs} explicit pairs, {ambiguous_rules} ambiguous rules, "
+            f"minimum {args.minimum:g}:1"
         )
     return 1 if failures else 0
 
@@ -684,12 +785,38 @@ def iter_source_files(root: Path, *, tests_only: bool) -> list[Path]:
         if not path.is_file() or path.suffix.lower() not in extensions:
             continue
         rel = path.relative_to(root)
-        if any(part in SOURCE_EXCLUDE_DIRS for part in rel.parts):
+        if is_excluded_project_path(rel.parts):
             continue
-        is_test = "tests" in rel.parts or ".test." in path.name or ".spec." in path.name
+        lower_parts = {part.casefold() for part in rel.parts}
+        lower_name = path.name.casefold()
+        is_test = (
+            bool(lower_parts & {"test", "tests", "__tests__", "e2e"})
+            or ".test." in lower_name
+            or ".spec." in lower_name
+            or ".e2e." in lower_name
+        )
         if is_test == tests_only:
             files.append(path)
     return sorted(files)
+
+
+def live_region_contract_lines(text: str) -> list[str]:
+    target = r"(?:role\s*=?\s*[`\"']?status|aria-live|live[- ]region)"
+    contract_pattern = re.compile(target, re.IGNORECASE)
+    negative_pattern = re.compile(
+        rf"(?:{target})[`\"']*\s*(?:은|는|이|가|을|를|도)?\s*"
+        rf"(?:사용하지\s*않|사용\s*금지|미사용|불필요|제외)|"
+        rf"(?:미사용|불필요|제외)\s*(?:하는|한)?\s*(?:{target})|"
+        rf"(?:do\s+not\s+use|must\s+not\s+use|without(?:\s+a)?|no)\s+"
+        rf"(?:{target})|"
+        rf"(?:{target})\s*(?:is|are)?\s*(?:not\s+required|must\s+not|unused)",
+        re.IGNORECASE,
+    )
+    return [
+        line.strip()
+        for line in text.splitlines()
+        if contract_pattern.search(line) and not negative_pattern.search(line)
+    ]
 
 
 def a11y_contracts_cmd(args: argparse.Namespace) -> int:
@@ -706,7 +833,8 @@ def a11y_contracts_cmd(args: argparse.Namespace) -> int:
         failures.append(f"spec document not found for feature {feature}")
 
     spec_text = spec_path.read_text(encoding="utf-8") if spec_path else ""
-    applicable = bool(re.search(r"role\s*=?\s*[`\"']?status|aria-live", spec_text, re.IGNORECASE))
+    contract_lines = live_region_contract_lines(spec_text)
+    applicable = bool(contract_lines)
     if applicable:
         implementation_pattern = re.compile(
             r"role\s*=\s*(?:\{\s*)?[\"']status[\"']|aria-live\s*=",
@@ -743,6 +871,7 @@ def a11y_contracts_cmd(args: argparse.Namespace) -> int:
         "applicable": applicable,
         "feature": feature,
         "spec": str(spec_path.relative_to(root)) if spec_path else None,
+        "contractLines": contract_lines,
         "implementationFiles": implementation_hits,
         "testFiles": test_hits,
         "failures": failures,
@@ -768,15 +897,32 @@ def analyze_sync_cmd(args: argparse.Namespace) -> int:
     feature, state = read_current_feature(root, args.feature)
     failures: list[str] = []
     analyze_path = find_feature_doc(root, feature, "analyze") if feature else None
-    feature_state = state.get("features", {}).get(feature, {}) if feature else {}
-    expected_rate = get_number(feature_state.get("matchRate")) if isinstance(feature_state, dict) else None
+    expected_rate: float | None = None
+    rate_source: str | None = None
+    features = state.get("features")
+    if features is not None and not isinstance(features, dict):
+        failures.append("status.json.features must be an object")
+
+    if feature and isinstance(features, dict):
+        feature_state = features.get(feature)
+        if isinstance(feature_state, dict):
+            expected_rate = get_number(feature_state.get("matchRate"))
+            if expected_rate is not None:
+                rate_source = f"features.{feature}.matchRate"
+
+    if expected_rate is None and feature and state.get("currentFeature") == feature:
+        expected_rate = get_number(state.get("matchRate"))
+        if expected_rate is not None:
+            rate_source = "matchRate"
 
     if feature is None:
         failures.append("current feature is missing; pass --feature or set status.json.currentFeature")
     elif analyze_path is None:
         failures.append(f"analyze document not found for feature {feature}")
     if expected_rate is None:
-        failures.append(f"status.json features.{feature}.matchRate must be a number")
+        failures.append(
+            f"status.json features.{feature}.matchRate or legacy matchRate must be a number"
+        )
 
     text = analyze_path.read_text(encoding="utf-8") if analyze_path else ""
     status_match = re.search(r"^>\s*\*\*(?:상태|Status)\*\*:\s*([^\r\n<]+)", text, re.MULTILINE)
@@ -826,6 +972,7 @@ def analyze_sync_cmd(args: argparse.Namespace) -> int:
         "feature": feature,
         "analyze": str(analyze_path.relative_to(root)) if analyze_path else None,
         "stateMatchRate": expected_rate,
+        "stateMatchRateSource": rate_source,
         "documentMatchRate": document_rate,
         "unresolvedGaps": unresolved_gaps,
         "documentStatus": document_status,

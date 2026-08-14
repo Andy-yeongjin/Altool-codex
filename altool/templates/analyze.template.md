@@ -124,8 +124,10 @@
 | 사용자 디자인 입력 있음 | Spec의 User Design Source와 구현 화면 구조·밀도·위계·컴포넌트 외형 일치 | ✅/⚠️/N/A | |
 | 디자인 시스템 있음 | 구현 화면의 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트 외형·미디어 사용이 `designs/design.md`와 추적 가능하게 일치. 참조 폰트 파일 복제 없이 구현 font-family stack 사용 | ✅/⚠️/N/A | |
 | CSS custom properties | CSS 파일이 있으면 `var(--token)` 참조가 실제 정의(`--token:`)와 일치 | ✅/⚠️/N/A | |
-| 텍스트 대비 | `check.py contrast --root .`로 명시적 글자색/배경색 조합 4.5:1 이상 | ✅/⚠️/N/A | |
-| Live region 계약 | `check.py a11y-contracts --root .`로 Spec 계약·구현·자동 assertion 3-way 일치 | ✅/⚠️/N/A | |
+| `visual.contrast` — 텍스트 대비 | `check.py contrast --root .`로 명시적 글자색/배경색 조합 4.5:1 이상. `ambiguousRules`는 browser 대조 대상으로 기록 | ✅/⚠️/N/A | |
+| `accessibility.live_region` — Live region 계약 | `check.py a11y-contracts --root .`로 Spec 계약·구현·자동 assertion 3-way 일치 | ✅/⚠️/N/A | |
+| `functional.time_precision` | 시간 기반 UI의 반복 pause/resume 누적 오차가 표시 정밀도 이내. 아니면 `skipped(not time-based UI)` | ✅/⚠️/N/A | |
+| `analysis.semantic_consistency` | `check.py analyze-sync --root .`로 상태·최종 Match Rate·미해소 갭·문서 상태 일치 | ✅/⚠️ | |
 | 디자인 시스템 없음 | UI 작업이면 Research 또는 design_source로 돌아가 `design.md` 생성 필요 | ✅/⚠️/N/A | |
 | Generic AI/SaaS 회귀 | Research/Spec 근거 없는 대형 히어로, 과한 그라디언트, 추상 AI 장식, glassmorphism, 카드 그림자 남발 없음 | ✅/⚠️ | |
 | 참조 복제 금지 | 참조 브랜드의 로고·카피·고유 이미지·식별 가능한 레이아웃 복제 없음 | ✅/⚠️ | |

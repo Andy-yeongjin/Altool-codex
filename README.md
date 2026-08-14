@@ -26,7 +26,7 @@ Altool은 네 가지 자산을 기준으로 개발 사이클을 돌립니다:
 - **독립 검증 에이전트** — 갭 분석을 별도 에이전트가 수행해 자기 채점 편향 차단
 - **Match Rate 4축** — Structural/Functional/Contract/Runtime 가중 공식으로 일치율 측정
 - **문서 상태 동기화** — 단계 완료 시 상류 문서의 체크박스·Status 자동 갱신 (문서만 열어도 진행 상황이 보임)
-- **상태 + 이력** — `.altool/state/status.json`에 phase·matchRate·append-only history 기록
+- **상태 + 이력** — `.altool/state/status.json`에 feature별 phase·matchRate와 append-only history 기록
 
 ---
 

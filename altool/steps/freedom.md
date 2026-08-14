@@ -185,12 +185,12 @@ Research는 PRD나 사용자 디자인을 덮어쓰지 않는다. 헌법의 디�
 | `lesson.capture` | 코드 오류/구현 갭 lesson 처리 |
 | `loop.progress` | 사이클 진행 로그 |
 | `visual.reference_comparison` | browser action의 참조 캡처와 최종 화면 스크린샷 대조 결과 또는 `skipped(no browser action)` |
-| `visual.css_custom_properties` | browser action의 CSS custom property 검증 결과 또는 `skipped(no browser action/no css files)` |
-| `visual.contrast` | browser action의 `check.py contrast` 결과 또는 `skipped(no browser action/no css files)` |
-| `accessibility.live_region` | browser action의 `check.py a11y-contracts` 결과 또는 `skipped(no browser action/no live-region contract)` |
-| `functional.time_precision` | 시간 기반 UI의 반복 pause/resume clock 결과 또는 `skipped(no browser action/not time-based UI)` |
+| `visual.css_custom_properties` | browser action의 CSS custom property 검증 결과 또는 `skipped(no browser action)` / `skipped(no css files)` 중 하나 |
+| `visual.contrast` | browser action의 `check.py contrast` 결과와 `ambiguousRules` 실제 화면 대조 증거 또는 `skipped(no browser action)` / `skipped(no css files)` 중 하나 |
+| `accessibility.live_region` | browser action의 `check.py a11y-contracts` 결과 또는 `skipped(no browser action)` / `skipped(no live-region contract)` 중 하나 |
+| `functional.time_precision` | 시간 기반 UI의 반복 pause/resume clock 결과 또는 `skipped(no browser action)` / `skipped(not time-based UI)` 중 하나 |
 | `analysis.semantic_consistency` | analyze action이 있으면 `check.py analyze-sync` 결과, 없으면 `skipped(no analyze action)` |
-| `server.cleanup` | browser action이 시작한 서버 종료 증거 또는 `skipped(existing server)` |
+| `server.cleanup` | browser action이 시작한 서버 종료 증거 또는 `skipped(no browser action)` / `skipped(existing server)` 중 하나 |
 
 검증은 최대 5회 반복한다.
 

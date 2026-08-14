@@ -49,6 +49,15 @@
 - {갭 0건: `$altool browser` 진행}
 - {갭 잔존 + 한도 도달: 선택 A — 잔여 갭 직접 확인 후 개별 지시 / 선택 B — 이대로 browser 진행}
 
+## 6. 자동 품질 게이트
+
+| Step Check 키 | 결과 | 증거 |
+|---|---|---|
+| `visual.contrast` | done / skipped(no css files) | `check.py contrast --root .` 출력과 `ambiguousRules` 후속 browser 대조 대상 |
+| `accessibility.live_region` | done / skipped(no live-region contract) | `check.py a11y-contracts --root .` 출력 |
+| `functional.time_precision` | done / skipped(not time-based UI) | 반복 clock 결과와 허용 오차 |
+| `analysis.semantic_consistency` | done | `check.py analyze-sync --root .` 출력 |
+
 ---
 
 ## Version History

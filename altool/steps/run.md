@@ -99,7 +99,7 @@ Codex 대화 확인: **"이 범위로 구현을 시작해도 되겠습니까?"**
 
 ### 14~15. 상태 갱신 + 보고
 
-`.altool/state/status.json`: `phase: "run"`, **`buildVerified: true`** (빌드 성공 확인 후에만).
+`.altool/state/status.json`: `features.{currentFeature}`에 `phase: "run"`, **`buildVerified: true`** (빌드 성공 확인 후에만).
 **문서 동기화** (Altool 공통 규칙): plan §2.1 포함(In Scope)의 구현된 항목 체크, plan §3.1 FR Status를 `Pending` → `✅ 완료`로, spec §11.2 Implementation Order의 완료 항목 체크. 빌드까지 통과한 구현이면 plan/spec 문서 상단 `상태`/`Status`를 `Implemented`로 갱신한다.
 plan/spec 문서를 수정했으면 run Step Check만으로 끝내지 않는다. `.altool/checks/{기능명}.plan.json`과 `.altool/checks/{기능명}.spec.json`도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, run check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
 
@@ -122,4 +122,3 @@ plan/spec 문서를 수정했으면 run Step Check만으로 끝내지 않는다.
    브라우저 확인: {프로젝트 실행 명령과 URL}
    다음 단계: $altool analyze
 ```
-

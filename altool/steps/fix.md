@@ -11,7 +11,7 @@
 ### 1. 실행 조건 확인
 
 - 기능명은 `.altool/state/status.json`의 `currentFeature`에서 읽는다. `currentFeature`가 없으면 `$altool plan {기능 설명}` 먼저 실행을 안내하고 중단한다.
-- `docs/03-analyze/{기능명}.analyze.md`의 Gap 목록과 `.altool/state/status.json`의 `matchRate` 확인.
+- `docs/03-analyze/{기능명}.analyze.md`의 Gap 목록과 `.altool/state/status.json`의 `features.{currentFeature}.matchRate` 확인.
   - analyze 문서가 없으면 → `$altool analyze` 먼저 실행 안내 후 중단.
 - **analyze 문서 §3에 미해소 갭이 0건이면** → `✅ 미해소 갭 없음 (Match Rate {N}%) — 개선 불필요. $altool browser로 실제 화면 검증을 진행하세요.` 출력 후 종료.
   - Match Rate ≥ 90%여도 **갭이 남아 있으면 수정한다** — 90%는 통과선이지 수정 면제선이 아니다 (Fix 공통 규칙).
@@ -35,7 +35,7 @@
 
 ### 5. 반복 판정 
 
-`.altool/state/status.json`: `iterationCount` +1, `matchRate` 갱신, `phase: "fix"`.
+`.altool/state/status.json`: `features.{currentFeature}`의 `iterationCount` +1, `matchRate` 갱신, `phase: "fix"`.
 
 - **미해소 갭 0건** → 종료, browser 검증으로
 - **갭 잔존 그리고 iterationCount < 5** → 수정·재분석·반복 판정 절차를 반복 (최대 5회)
@@ -80,7 +80,7 @@
 | `lesson.search` | fix 시작 시 갭/파일/스택 기준 검색 결과 또는 `skipped(no gap)` |
 | `event.capture` | 기록한 `code_error`/`fix` 이벤트 ID |
 | `verification` | 빌드와 재분석 결과 |
-| `visual.contrast` | `check.py contrast` 재실행 통과 결과 또는 `skipped(no css files)` |
+| `visual.contrast` | `check.py contrast` 재실행 통과 결과 또는 `skipped(no css files)`. `ambiguousRules`가 있으면 후속 browser 실제 화면 대조 대상으로 유지 |
 | `accessibility.live_region` | `check.py a11y-contracts` 재실행 통과 결과 또는 `skipped(no live-region contract)` |
 | `functional.time_precision` | 반복 pause/resume clock 재검증 결과 또는 `skipped(not time-based UI)` |
 | `analysis.semantic_consistency` | `check.py analyze-sync --root .` 통과 결과 |

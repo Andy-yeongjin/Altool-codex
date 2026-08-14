@@ -59,7 +59,7 @@
 
 ### 8~9. 상태 갱신
 
-`.altool/state/status.json`: `currentFeature`를 새 feature로 설정하고, 해당 feature의 `phase: "plan"`, `startedAt`을 기록한다. 기존 feature 항목과 `history`는 보존한다.
+`.altool/state/status.json`: `currentFeature`를 새 feature로 설정하고 `features.{currentFeature}`에 `phase: "plan"`, `startedAt`을 기록한다. 기존 feature 항목과 `history`는 보존한다. 상태 형식은 `altool/steps/status.md`를 따른다.
 Plan 문서 작성과 Step Check가 통과하면 문서 상단 `상태`/`Status`를 `Planned`로 갱신한다. 작성 중 임시값인 `Draft`를 완료 산출물에 남기지 않는다.
 
 ### 10~11. Executive Summary + Context Anchor
@@ -88,5 +88,3 @@ Plan 문서 작성과 Step Check가 통과하면 문서 상단 `상태`/`Status`
 🐣 [al:plan] {기능명} 완료 — 산출물: docs/01-plan/features/{기능명}.plan.md
    다음 단계: $altool spec
 ```
-
-

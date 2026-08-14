@@ -59,7 +59,7 @@ UI 기능이면 `## Design System Anchor`에 권위 원천의 경로·범위와 
 
 ### 12~13. 상태 갱신 + 보고
 
-`.altool/state/status.json`: `phase: "spec"`.
+`.altool/state/status.json`: `features.{currentFeature}.phase: "spec"`.
 **문서 동기화**: plan §9 다음 단계의 "구현 명세" 항목을 `- [x]`로 갱신 (문서 상태 동기화 규칙). spec 문서 상단 `상태`/`Status`를 `Specified`로, plan 문서 상단 상태를 `Specified`로 갱신한다.
 plan 문서를 수정했으면 spec Step Check만으로 끝내지 않는다. `.altool/checks/{기능명}.plan.json`도 최신 내용으로 갱신하고 `check.py validate`를 통과시킨 뒤, spec check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
 
@@ -71,7 +71,7 @@ plan 문서를 수정했으면 spec Step Check만으로 끝내지 않는다. `.a
 | `lesson.search` | `skipped(document-only step)` |
 | `event.capture` | `skipped(document-only step)` — Spec 작성 중에는 lesson 이벤트를 append하지 않는다 |
 | `verification` | plan 요구사항, 선택 아키텍처, API/UI/test 명세 정합성 검토 결과 |
-| `state.updated` | `.altool/state/status.json` phase=spec |
+| `state.updated` | `.altool/state/status.json`의 현재 feature phase=spec |
 | `docs.synced` | plan §9 동기화와 plan/spec 상단 Status 갱신 결과, 수정된 plan 소유 Step Check 재검증 경로 |
 | `document.status` | plan/spec 문서 상단 Status=Specified |
 | `artifacts.created` | `docs/02-spec/features/{기능명}.spec.md` |
@@ -82,6 +82,5 @@ plan 문서를 수정했으면 spec Step Check만으로 끝내지 않는다. `.a
    Page UI Checklist: {N}개 항목 (analyze의 Functional 검증 분모)
    다음 단계: $altool run
 ```
-
 
 

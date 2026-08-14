@@ -104,7 +104,7 @@ PRD→Plan→Spec 체인의 핵심 결정이 구현에서 지켜졌는지 확인
 
 ### 12~13. 상태 갱신 + 보고
 
-`.altool/state/status.json`: `phase: "check"`, `matchRate: {N}`. 빌드 성공 판정(SC류)은 상태의 `buildVerified` 필드를 독립 증거로 사용한다.
+`.altool/state/status.json`: `features.{currentFeature}`의 `phase: "check"`, `matchRate: {N}`. 빌드 성공 판정(SC류)은 같은 feature의 `buildVerified` 필드를 독립 증거로 사용한다.
 analyze 문서 상단의 `최종 Match Rate`와 `미해소 갭`을 현재 재분석 결과로 갱신한다. 최초 분석 수치를 보존할 때는 해당 절 제목을 `최초 분석`으로 명시해 현재 요약과 구분한다.
 **문서 동기화** (Altool 공통 규칙): 검증을 통과한 항목만 spec §5.4 Page UI Checklist와 plan §4 Success Criteria에서 `- [x]`로 갱신. ❌/⚠️ 항목은 체크하지 않는다.
 문서 상단 상태는 갭 결과와 일치시킨다:
@@ -122,7 +122,7 @@ plan/spec 문서를 수정했으면 analyze Step Check만으로 끝내지 않는
 | `lesson.search` | analyze 시작 시 실행한 query와 결과 수 |
 | `event.capture` | 기록한 `gap`/`verification` 이벤트 ID 또는 `skipped(no gap)` |
 | `verification` | 정적 3축, L1/L2/L3 실행 또는 생략 사유 |
-| `visual.contrast` | `check.py contrast` 통과 결과 또는 analyze 갭으로 기록한 실패 증거 / `skipped(no css files)` |
+| `visual.contrast` | `check.py contrast` 통과 결과 또는 analyze 갭으로 기록한 실패 증거 / `skipped(no css files)`. `ambiguousRules`가 있으면 후속 browser 실제 화면 대조 대상으로 기록 |
 | `accessibility.live_region` | `check.py a11y-contracts` 통과 결과 또는 analyze 갭으로 기록한 실패 증거 / `skipped(no live-region contract)` |
 | `functional.time_precision` | 반복 pause/resume clock 결과와 허용 오차 또는 `skipped(not time-based UI)` |
 | `analysis.semantic_consistency` | `check.py analyze-sync --root .` 통과 결과 |
@@ -140,5 +140,3 @@ plan/spec 문서를 수정했으면 analyze Step Check만으로 끝내지 않는
 
 - 미해소 갭 0건 → `다음 단계: $altool browser`
 - 갭 존재 → `다음 단계: $altool fix` (Match Rate ≥90%여도)
-
-

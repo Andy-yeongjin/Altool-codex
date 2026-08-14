@@ -13,6 +13,27 @@
   - `.altool/state/research.json`과 `docs/00-research/*.research.md`도 함께 읽어 최근 조사 수와 마지막 research ID를 출력한다.
   - 둘 다 비어있고 research도 없으면 → `아직 시작된 기능이 없습니다. $altool research {조사 주제} 또는 $altool plan {기능 설명}으로 시작하세요.` 출력 후 종료.
 
+`status.json`의 정식 형식은 feature별 상태를 `features` 객체에 기록한다:
+
+```json
+{
+  "currentFeature": "기능명",
+  "features": {
+    "기능명": {
+      "phase": "check",
+      "matchRate": 95,
+      "iterationCount": 1,
+      "buildVerified": true
+    }
+  },
+  "history": []
+}
+```
+
+- `phase`, `matchRate`, `iterationCount`, `buildVerified`는 `features.{currentFeature}` 아래에서 읽고 쓴다.
+- 이전 설치의 최상위 상태 필드는 읽기 호환용이며 해당 feature의 중첩 값이 없을 때만 사용한다.
+- 기능별 상태 항목과 append-only `history`를 보존한다.
+
 ### 2. 현황 출력 
 
 ```
@@ -71,6 +92,4 @@ Iteration: {iterationCount}/5
 | `docs.synced` | `skipped(status only)` |
 | `document.status` | `skipped(status only)` |
 | `artifacts.created` | status.json 생성 여부 |
-
-
 

@@ -142,10 +142,10 @@ CSS custom property 검증 규칙:
 
 ### 6. 상태·문서 갱신
 
-- `.altool/state/status.json`: 현재 feature의 `phase`를 `browser`로 갱신한다.
+- `.altool/state/status.json`: `features.{currentFeature}.phase`를 `browser`로 갱신한다.
 - 브라우저 검증 통과 시 `buildVerified`는 빌드/테스트 증거가 있을 때만 `true`로 둔다.
 - 검증을 통과한 항목만 plan/spec/analyze 문서 체크박스를 갱신한다.
-- 관련 plan/spec/analyze 문서 상단 `상태`/`Status`도 함께 갱신한다. browser 통과 시 plan과 spec은 `Verified`, analyze/browser 문서는 `Verified`로 표기한다.
+- 관련 plan/spec/analyze 문서 상단 `상태`/`Status`도 함께 갱신한다. browser 통과 시 plan과 spec, browser 문서는 `Verified`로 표기한다. 미해소 갭이 0건이면 analyze도 `Verified`로 올리고, 사용자가 잔여 갭을 수용해 진행한 경우 analyze는 `GapsFound` 유지한다.
 - analyze 문서 상단 `최종 Match Rate`와 `미해소 갭`을 현재 값으로 유지하고 `python altool/scripts/check.py analyze-sync --root .`를 통과시킨다.
 - `docs/03-analyze/{기능명}.browser.md`에 결과를 기록한다.
 - plan/spec/analyze 문서를 수정했으면 browser Step Check만으로 끝내지 않는다. 수정된 문서의 소유 Step Check(`{기능명}.plan.json`, `{기능명}.spec.json`, `{기능명}.analyze.json`)도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, browser check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
@@ -162,14 +162,14 @@ CSS custom property 검증 규칙:
 | `verification` | 브라우저 도구, URL, 화면 수, 클릭/입력/이동/반응형/콘솔/네트워크 검증 결과 |
 | `visual.reference_comparison` | 참조 캡처 경로와 최종 화면 스크린샷 경로, Screen Recipe/Capture Map 기준 대조 결과 |
 | `visual.css_custom_properties` | `python altool/scripts/check.py css-vars --root .` 통과 결과 또는 `skipped(no css files)` |
-| `visual.contrast` | `python altool/scripts/check.py contrast --root .` 통과 결과 또는 `skipped(no css files)` |
+| `visual.contrast` | `python altool/scripts/check.py contrast --root .` 통과 결과 또는 `skipped(no css files)`. `ambiguousRules`는 테마/gradient를 실제 화면에서 대조한 증거와 함께 기록 |
 | `accessibility.live_region` | `python altool/scripts/check.py a11y-contracts --root .` 통과 결과 또는 `skipped(no live-region contract)` |
 | `functional.time_precision` | 반복 pause/resume clock 결과와 허용 오차 또는 `skipped(not time-based UI)` |
 | `analysis.semantic_consistency` | `python altool/scripts/check.py analyze-sync --root .` 통과 결과 |
 | `server.cleanup` | 이 step이 시작한 서버 PID/포트 종료 결과 또는 `skipped(existing server)` |
 | `state.updated` | `.altool/state/status.json` phase=browser 갱신 |
 | `docs.synced` | plan/spec/analyze 체크박스 또는 browser 문서 갱신, 수정된 소유 Step Check 재검증 경로 |
-| `document.status` | plan/spec/analyze/browser 문서 상단 Status=Verified |
+| `document.status` | plan/spec/browser Status=Verified. 미해소 갭 0건이면 analyze=Verified, 잔여 갭 수용 시 analyze=GapsFound |
 | `artifacts.created` | `docs/03-analyze/{기능명}.browser.md`, 스크린샷/테스트 로그, check JSON |
 
 ```

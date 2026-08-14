@@ -6,7 +6,7 @@
 
 ## Step 1: 상태 수집
 
-1. `.altool/state/status.json`이 있으면 **그것을 우선 사용** (phase·matchRate·최근 이력).
+1. `.altool/state/status.json`이 있으면 **그것을 우선 사용** (`features.{currentFeature}`의 phase·matchRate와 최근 이력).
 2. 없으면 파일 존재로 역산:
 
 ```
@@ -88,5 +88,4 @@
 | `docs.synced` | `skipped(guide only)` |
 | `document.status` | `skipped(guide only)` |
 | `artifacts.created` | `skipped(guide only)` |
-
 

@@ -15,7 +15,7 @@
 ### 1. Match Rate 확인
 
 - 기능명은 `.altool/state/status.json`의 `currentFeature`에서 읽는다. `currentFeature`가 없으면 `$altool plan {기능 설명}` 먼저 실행을 안내하고 중단한다.
-`.altool/state/status.json`의 matchRate < 90%면 경고 후 사용자에게 진행 여부 확인.
+`.altool/state/status.json`의 `features.{currentFeature}.matchRate` < 90%면 경고 후 사용자에게 진행 여부 확인.
 - UI가 있는 기능인데 `docs/03-analyze/{기능명}.browser.md`가 없으면 `$altool browser`를 먼저 실행하라고 안내하고 중단한다. 사용자가 명시적으로 브라우저 검증 생략을 지시한 경우에만 생략 사유를 보고서에 남기고 계속한다.
 
 ### 2. 상류 문서 전체 로딩
@@ -47,14 +47,14 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
 
 ### 9~10. 상태 갱신 + 완료 보고
 
-`.altool/state/status.json`: `phase: "completed"`.
+`.altool/state/status.json`: `features.{currentFeature}.phase: "completed"`.
 **문서 동기화** (Altool 공통 규칙): plan §9 Next Steps 잔여 항목과 analyze 문서 §8 다음 단계의 "보고서 작성" 항목을 `- [x]`로 갱신. 미래 작업(다음 사이클·배포)은 미체크 유지.
 
 문서 상단 상태 동기화:
 - plan 문서 상단 `상태`/`Status`를 `Completed`로 갱신한다.
 - spec 문서 상단 `상태`/`Status`를 `Finalized`로 갱신한다.
-- analyze와 browser 문서 상단 `상태`/`Status`는 `Verified`, fix 문서는 `Resolved`로 갱신한다.
-- report 문서 상단 `상태`/`Status`는 `Completed`로 작성한다.
+- 미해소 갭이 0건이면 analyze와 browser 문서는 `Verified`, fix 문서는 `Resolved`로 갱신한다. 사용자가 잔여 갭을 수용한 부분 완료라면 browser는 `Verified`로 두되 analyze 문서는 `GapsFound`를 유지하고 fix/report는 `Partial`로 기록한다.
+- report 문서 상단 `상태`/`Status`는 미해소 갭 0건이면 `Completed`, 잔여 갭을 수용한 경우 `Partial`로 작성한다.
 - 체크박스가 모두 완료되어도 상단 상태를 그대로 `Draft`로 두지 않는다.
 - plan/spec/analyze/fix/browser 문서를 수정했으면 report Step Check만으로 끝내지 않는다. 수정된 문서의 소유 Step Check(`{기능명}.plan.json`, `{기능명}.spec.json`, `{기능명}.analyze.json`, `{기능명}.fix.json`, `{기능명}.browser.json`)도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, report check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
 - analyze 문서를 수정했으면 상단 `최종 Match Rate`와 `미해소 갭`을 보존하고 `python altool/scripts/check.py analyze-sync --root .`도 다시 통과시킨다.
@@ -69,7 +69,7 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
 | `verification` | 최종 빌드/status 확인 결과 |
 | `state.updated` | phase=completed |
 | `docs.synced` | plan/analyze/report 상태 동기화 결과, 수정된 소유 Step Check 재검증 경로 |
-| `document.status` | plan=Completed, spec=Finalized, report=Completed 등 상단 Status 최종 동기화 |
+| `document.status` | 완전 완료는 plan=Completed·spec=Finalized·analyze/browser=Verified·fix=Resolved·report=Completed, 잔여 갭 수용 시 analyze=GapsFound·fix/report=Partial인 상태 동기화 |
 | `artifacts.created` | `docs/04-report/{기능명}.report.md` |
 
 ```
@@ -78,5 +78,3 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
    🐥 {기능명} 개발 사이클 완주
    다음: 새 기능 $altool plan {기능 설명} 또는 배포 (guides/neondb-guide.html → guides/vercel-guide.html)
 ```
-
-

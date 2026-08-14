@@ -88,12 +88,12 @@ browser step이 직접 시작한 개발 서버는 브라우저 검증이 끝나�
 | 단계 | inputs.loaded | lesson.search | event.capture | verification | state.updated | docs.synced | document.status | artifacts.created |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | research | done/skipped(reason) | skipped(reason) | skipped(reason) | done/skipped(reason) + research 품질 체크 | done/skipped(reason) | done/skipped(reason) | Status=Done | done/skipped(reason) |
-| plan | done/skipped(reason) | skipped(document-only step) | skipped(document-only step) | N/A | done/skipped(reason) | done/skipped(reason) | Status=Planned | done/skipped(reason) |
-| spec | done/skipped(reason) | skipped(document-only step) | skipped(document-only step) | N/A | done/skipped(reason) | done/skipped(reason) | Status=Specified | done/skipped(reason) |
+| plan | done/skipped(reason) | skipped(document-only step) | skipped(document-only step) | skipped(document-only step) | done/skipped(reason) | done/skipped(reason) | Status=Planned | done/skipped(reason) |
+| spec | done/skipped(reason) | skipped(document-only step) | skipped(document-only step) | skipped(document-only step) | done/skipped(reason) | done/skipped(reason) | Status=Specified | done/skipped(reason) |
 | run | done/skipped(reason) | done/skipped(reason) | E-.../skipped(no event) | done/skipped(reason) | done/skipped(reason) | done/skipped(reason) | Status=Implemented | done/skipped(reason) |
 | analyze | done/skipped(reason) | done/skipped(reason) | E-.../skipped(no event) | done/skipped(reason) | done/skipped(reason) | done/skipped(reason) | Status=Analyzed/GapsFound | done/skipped(reason) |
 | fix | done/skipped(no gap) | done/skipped(no gap) | E-.../skipped(no gap) | done/skipped(no gap) | done/skipped(no gap) | done/skipped(no gap) | Status=Resolved/Partial/skipped(no gap) | done/skipped(no gap) |
-| browser | N/A | done/skipped(reason) | E-.../skipped(no issue) | done/skipped(reason) | N/A | done/skipped(reason) | Status=Verified | screenshot/result |
+| browser | done | done | E-.../skipped(no browser issue) | done | done | done | Status=Verified | screenshot/result |
 
 `event.capture`는 사건이 없을 때만 `skipped(no event)`로 둔다. 오류·실패·우회·갭이 있었는데 이벤트가 없다면 해당 단계로 돌아가 보완한다.
 research 하위 check에는 `research.source_mix`, `research.source_quality`, `research.freshness`, `research.duplicate_review`, `research.evidence_map`, `research.visual_capture`, `research.design_system`, `research.design_tokens`, `research.screen_recipe`, `research.component_extraction`, `research.capture_map`, `research.plan_readiness`, `research.next_queries`도 포함한다.
@@ -126,4 +126,3 @@ browser 하위 check에는 `visual.reference_comparison`, `visual.css_custom_pro
   • 다음 기능: $altool oneshot [기능 설명]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
-
