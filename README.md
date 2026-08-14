@@ -3,20 +3,20 @@
 **헌법 기반 통합 AI 개발 시스템** — 조사부터 검증·보고까지의 개발 사이클을 Codex 명령어 `$altool` 하나로 완주합니다.
 외부 플러그인 설치가 필요 없습니다. 마크다운 엔진(`altool/`)과 bundled Codex local skills가 프로젝트 안에서 동작합니다.
 
-> 📖 **Codex 변환본 기준 문서**는 이 README와 `AGENTS.md`입니다. `guides/`의 HTML 문서도 `$altool` 기준의 보조 안내로 맞춥니다.
+> 📖 **Codex 변환본 기준 문서**는 이 README, 설치용 `AGENTS.md`, `constitution.md`입니다. `guides/`의 HTML 문서도 `$altool` 기준의 보조 안내로 맞춥니다.
 
 ---
 
 ## 이게 뭔가요?
 
-Altool은 세 가지를 모든 구현의 기준으로 삼아 개발 사이클을 돌립니다:
+Altool은 네 가지 자산을 기준으로 개발 사이클을 돌립니다:
 
 | 자산 | 파일 | 역할 |
 |------|------|------|
-| **프로젝트 헌법** | `constitution.md` | 개발 원칙 + 범용 디자인 품질 원칙 — 명세 우선, 보안, 반응형, 사용자 디자인 입력 우선 등 |
+| **프로젝트 헌법** | `constitution.md` | 설치 프로젝트의 방법론, 기술 기본값, 디자인 권위, 품질 게이트, 언어·시간대 정책 |
 | **Claude 디자인 헌법** | `designs/claude-design/*.html` | Claude에서 만든 HTML 화면 — 있으면 모든 디자인 기준 중 1순위 |
-| **사용자 디자인 입력** | `designs/*.pen`, `designs/stitch/`, 스크린샷, 디자인 문서 | 화면 구조, 정보 밀도, 시각 위계, 컴포넌트 외형의 최우선 원천 |
-| **디자인 시스템** | `designs/design.md` | 프로젝트 고유 색상·폰트·간격·컴포넌트·미디어 규칙의 단일 원천 |
+| **사용자 디자인 입력** | `designs/*.pen`, `designs/stitch/`, 스크린샷, 디자인 문서 | Claude 디자인 HTML이 없을 때 화면 구조와 시각 의도의 최우선 원천 |
+| **디자인 시스템** | `designs/design.md` | 디자인 입력을 정규화한 값·컴포넌트·화면 규칙의 구현 계약. Claude HTML이 있으면 HTML의 미정 영역을 보완 |
 
 핵심 특징:
 
@@ -34,7 +34,7 @@ Altool은 세 가지를 모든 구현의 기준으로 삼아 개발 사이클을
 
 ### 1. setup 실행
 
-`setup.bat` 더블클릭 → 프로젝트를 만들 폴더 선택 → 필요한 파일이 자동 복사됩니다.
+Windows는 `setup.bat`, macOS는 `setup.command`를 더블클릭한 뒤 대상 프로젝트 폴더를 선택합니다. macOS에서 실행 권한 때문에 열리지 않으면 터미널에서 `bash setup.command "/path/to/project"`를 실행합니다. 필요한 파일이 자동 복사되며, 대상 프로젝트의 `AGENTS.md`, `constitution.md`, `designs/design.md`가 이미 있으면 보존하고 헌법 major version이 엔진과 다르면 검토 경고를 표시합니다.
 
 ### 2. Codex에서 프로젝트 열기
 
@@ -89,7 +89,7 @@ Freedom 진행 상태는 `.altool/freedom/state.json`, `outbox.jsonl`, `journal.
 각 단계는 산출 문서의 체크박스와 상단 `상태`/`Status`를 함께 갱신합니다.
 
 > `prd/` 폴더에 PRD(.md)를 넣으면 자동 감지, `prd/refs/`의 참고 문서(PDF·이미지 등)도 함께 읽습니다.
-> 개발 완료 후에는 browser 단계의 스크린샷·검증 문서를 먼저 확인하고, 필요하면 `start.bat`으로 직접 실행해 볼 수 있습니다.
+> 개발 완료 후에는 browser 단계의 스크린샷·검증 문서를 먼저 확인하고, 필요하면 Windows의 `start.bat` 또는 macOS의 `start.command`로 직접 실행해 볼 수 있습니다.
 
 ---
 
@@ -124,14 +124,15 @@ Freedom 진행 상태는 `.altool/freedom/state.json`, `outbox.jsonl`, `journal.
 | 파일/폴더 | 용도 |
 |----------|------|
 | `altool/` | **엔진** — 단계별 절차(steps/) + 스크립트(scripts/) + 산출물 템플릿(templates/) |
-| `AGENTS.md` | Codex가 읽는 개발 원칙 + Altool 진입 안내 |
-| `.agents/skills/altool/` | `setup.bat`이 등록하는 Codex 로컬 스킬 `$altool` |
+| `AGENTS.md` | Codex가 읽는 코딩 태도 + UI 검증 도구 조작법 + Altool 연결 규칙 |
+| `.agents/skills/altool/` | `setup.bat` / `setup.command`가 등록하는 Codex 로컬 스킬 `$altool` |
 | `.agents/skills/vercel-react-best-practices/` | React/Next.js 구현·리뷰·리팩터링 시 적용되는 Vercel 성능 최적화 로컬 스킬 |
-| `constitution.md` | 프로젝트 헌법 (개발 원칙 + 범용 디자인 품질 원칙) |
+| `constitution.md` | 설치 프로젝트 헌법 (방법론 + 기술 기본값 + 디자인 + 품질 + 언어·시간대) |
 | `designs/claude-design/` | Claude가 만든 HTML을 넣는 폴더. 있으면 최우선 디자인 헌법 |
 | `designs/` | 사용자 디자인 입력 + 디자인 시스템 (design.md) |
 | `prd/` | PRD 보관 폴더 (자동 감지) |
-| `start.bat` / `end.bat` | 개발 서버 실행/종료 |
+| `start.bat` / `end.bat` | Windows `setup.bat`이 설치하는 개발 서버 실행/종료 파일 |
+| `start.command` / `end.command` | macOS `setup.command`가 설치하는 개발 서버 실행/종료 파일 |
 | `.gitignore` | `.altool/` 등 제외 (없을 때만 생성) |
 
 ---
@@ -175,4 +176,3 @@ licensed under the [MIT License](LICENSE).
 Bundled third-party materials, including the Vercel React Best Practices skill,
 the Digital Government Service UI/UX guideline PDF, and guide screenshots, keep
 their original ownership and terms. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-

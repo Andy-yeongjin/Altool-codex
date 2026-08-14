@@ -15,6 +15,9 @@ Thumbs.db
 # Node
 node_modules/
 
+# Python
+__pycache__/
+
 # Env / secrets
 .env
 .env*.local

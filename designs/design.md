@@ -93,7 +93,7 @@ components:
 
 # Altool 디자인 시스템
 
-> `designs/design.md`는 UI 작업의 단일 디자인 원천입니다.
+> `designs/design.md`는 직접 디자인 원천을 정규화한 단일 구현 계약입니다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천입니다.
 > CSS 변수, CSS Modules 상수, Tailwind 설정, 컴포넌트 내부 값은 구현 코드 안에서 이 문서를 근거로 파생할 수 있지만, 별도의 디자인 원천으로 취급하지 않습니다.
 
 ## 1. Design Thesis

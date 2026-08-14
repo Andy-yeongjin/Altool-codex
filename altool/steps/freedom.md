@@ -92,50 +92,16 @@ for cycle in 1..N:
   9. 다음 사이클로 넘어가기 전 radio pending 확인
 ```
 
-중요:
+추가 완료 규칙:
 
-- `freedom_loop.py`만 실행하고 끝내면 안 된다. 그것은 control-plane 테스트일 뿐이다.
-- 사이클 시작 시 `.altool/freedom/state.json`의 `loop`를 현재 cycle 번호로 갱신한다.
-- action 시작 시 `.altool/freedom/state.json`의 `currentAction`을 action명으로 갱신한다.
-- action 완료 시 `currentAction`을 `null`로 되돌리고 outbox/journal에 완료 요약을 남긴다.
-- 사이클 완료 시 `loopsCompleted`를 현재 cycle 번호 이상으로 갱신한다.
-- 각 사이클은 필요한 경우 `design_source` preflight를 먼저 수행한 뒤 반드시 `research` 산출물을 만든다. `research` 없이 plan/spec/run으로 넘어가지 않는다.
-- Freedom의 모든 구현 루프는 사용자의 전체 요청을 만족하는 end-to-end 제품 경험을 기준으로 한다. 후속 루프는 직전 루프에서 만든 같은 제품을 다시 조사·관찰해 기능·UX·디자인·품질을 성숙시킨다.
-- 핵심 사용자 여정은 현재 루프의 완료 기준에 포함한다. `Out of Scope`는 안전 경계, 외부 연동, 실제 결제, 사용자 승인이 필요한 작업, 현재 제품의 보조 확장 후보에만 사용한다.
-- 시간·안전·기술 제약이 있으면 현재 완성형 기준과 남은 확장 후보를 `Out of Scope`, report, `nextResearchQuestions`에 기록한다.
-- 새 `currentFeature`는 사용자가 명시적으로 다른 제품이나 독립 기능을 요청한 경우에만 만든다. 후속 루프는 기존 `currentFeature`의 plan/spec/code/analyze/browser/report를 갱신해 같은 제품을 고도화한다.
-- `research` 후 `plan`, `spec`, `run`, `analyze`, `fix`, `browser`, `report` 중 필요한 action을 선택하면 반드시 아래 Act 표의 step 문서를 읽고 실제 산출물을 만든다.
-- 어떤 action에서든 Altool 소유 문서를 수정하면 그 문서의 소유 Step Check를 다시 작성하고 검증한다. 예를 들어 후속 루프의 `run` 중 `plan.md`에 addendum을 붙이면 `.altool/checks/{feature}.plan.json`을 갱신·검증하고, `spec.md`를 수정하면 `.altool/checks/{feature}.spec.json`을 갱신·검증한다. 현재 action의 `docs.synced`에는 갱신한 check 경로를 증거로 남긴다.
-- 예: 루프 시작 시 `altool/steps/research.md`를 읽고 `docs/00-research/*.research.md`와 `.altool/checks/*.research.json`을 생성한다.
-- 예: action이 `plan`이면 `altool/steps/plan.md`를 읽고 `docs/01-plan/features/*.plan.md`와 `.altool/checks/*.plan.json`을 생성한다.
-- 예: action이 `spec`이면 `altool/steps/spec.md`를 읽고 `docs/02-spec/features/*.spec.md`와 `.altool/checks/*.spec.json`을 생성한다.
-- run/analyze/fix/browser/report도 같은 방식으로 각 step 절차와 검증을 수행한다.
-- 구현 또는 UI가 포함된 사이클은 `browser` 통과 후 `report`까지 완료해야 사이클 완료로 본다. browser 통과만으로 다음 루프를 시작하지 않는다.
-- browser action은 참조 캡처와 최종 화면 스크린샷을 대조하고 browser Step Check의 `visual.reference_comparison`에 증거를 남긴다.
-- browser action은 CSS 파일이 있는 UI 프로젝트에서 `python altool/scripts/check.py css-vars --root .`를 실행하고 `visual.css_custom_properties`에 통과 결과 또는 생략 사유를 남긴다.
-- browser action이 직접 시작한 개발 서버는 action 종료 전에 반드시 종료한다. 기존 서버를 사용한 경우에는 종료하지 않고 browser Step Check의 `server.cleanup`에 `skipped(existing server)`로 남긴다.
-- `docs/04-report/{기능명}.report.md`가 없거나 `.altool/checks/{기능명}.report.json`이 통과하지 않았으면 `loopsCompleted`를 올리지 않는다.
-- 사용자가 "plan까지만", "research까지만"처럼 수행 범위를 명시하면 해당 범위까지만 수행하고 outbox에 stop/ack를 남긴다. 이 경우 구현 사이클 완료가 아니므로 report는 `skipped(user-limited cycle)`로 남기고, 일반적으로 `loopsCompleted`를 증가시키지 않는다.
-- 각 사이클은 research와 정한 완료 기준까지 끝난 뒤 `loopsCompleted`를 1 증가시킨다. UI가 있는 기능은 browser와 report action 통과 전까지 사이클 완료로 보지 않는다.
-- action 하나를 선택하거나 끝낸 것만으로 `loopsCompleted`를 올리지 않는다.
-- 사용자가 "현재 루프까지만 하고 멈춰"라고 말하면 현재 action만 끝내는 것이 아니라 현재 사이클의 필수 검증과 정리까지 마친 뒤 다음 사이클에 진입하지 않는다.
+- 모든 루프는 같은 제품의 end-to-end 핵심 여정을 성숙시킨다. 사용자가 다른 제품이나 독립 기능을 요청할 때만 새 `currentFeature`를 만든다.
+- 시간·안전·기술 제약과 후속 후보는 `Out of Scope`, report, `nextResearchQuestions`에 기록한다.
+- 구현/UI 사이클은 `browser`와 `report` 산출물·Step Check까지 통과해야 완료다. 브라우저 세부 검증과 서버 정리는 해당 step에 위임한다.
+- 사용자가 범위를 제한하면 그 지점에서 outbox에 응답하고 report는 `skipped(user-limited cycle)`로 남긴다. "현재 루프까지만"은 현재 사이클 검증·정리 후 다음 루프에 진입하지 않는다는 뜻이다.
 
 ## 2. 모든 action 전 inbox 확인
 
-Freedom의 핵심 규칙이다. 아래 의미 있는 action을 시작하기 직전에 반드시 `python altool/scripts/radio.py pending`을 실행한다.
-
-- 웹 조사
-- research 문서 작성
-- plan 작성
-- spec 작성
-- 파일 수정
-- 의존성 설치
-- 빌드/테스트
-- 브라우저 검증
-- analyze 작성
-- fix 시작
-- 다음 기능 후보 선택
-- report 작성
+웹 조사, 문서 작성, 파일 수정, 의존성 설치, 빌드·테스트, 브라우저 검증, 다음 후보 선택 등 모든 의미 있는 action 직전에 `python altool/scripts/radio.py pending`을 실행한다.
 
 pending 이벤트 처리:
 
@@ -151,21 +117,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 
 ## 3. Observe
 
-다음 자산을 읽고 현재 상태를 판단한다.
-
-- `AGENTS.md`, `.agents/skills/altool/SKILL.md`
-- `constitution.md`
-- `designs/claude-design/*.html`
-- `designs/design.md`
-- `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}`
-- `prd/*.md`, `prd/refs/*`
-- `.altool/state/status.json`
-- `.altool/state/research.json`
-- `.altool/freedom/state.json`
-- `.altool/checks/*.json`
-- `docs/`
-- 코드 디렉터리: `src/`, `app/`, `pages/`, `components/`, `tests/`
-- git status
+`AGENTS.md`, Altool skill, 헌법, PRD·디자인 원천, `.altool` 상태·checks, `docs/`, 관련 코드·테스트, git status를 읽고 현재 상태를 판단한다.
 
 ## 4. Decide
 
@@ -204,7 +156,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 | `browser` | `altool/steps/browser.md` |
 | `report` | `altool/steps/report.md` |
 
-Research는 PRD와 사용자 디자인 입력을 덮어쓰지 않는다. 디자인 기준 우선순위는 `designs/claude-design/*.html` → `designs/` 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `designs/design.md` → Research가 생성한 디자인 시스템 → AI 자체 판단이다. `constitution.md`의 디자인 품질 원칙은 모든 원천에 항상 적용한다. 외부 사이트에서 가져올 수 있는 것은 페이지 구조, 정보 배치, 기능 흐름, 인터랙션 의도, 사용자 기대, 색상, 브랜드 분위기, 타이포, 간격, 그림자, 둥글기, 컴포넌트 외형 값, 밀도, 위계, 네비게이션 패턴이다. `designs/claude-design/*.html`이 있으면 이 HTML을 최우선 디자인 헌법으로 유지하고, `design_source`가 이를 `designs/design.md`로 정규화한다. `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 재사용하되 Claude 디자인 HTML과 충돌하면 HTML을 우선한다. 없거나 비어 있거나 `TBD` 마커가 있으면 design_source 또는 첫 research에서 참조 사이트와 사용자 디자인 입력을 근거로 이 파일을 생성한 뒤 `TBD`를 제거한다. 후속 action은 Research의 시각 관찰값을 직접 구현하지 않고 생성·재사용된 디자인 시스템과 Claude 디자인 HTML을 구현 기준으로 사용한다. 단, 문장·카피·로고·고유 이미지·식별 가능한 레이아웃은 그대로 복제하지 않는다. 디자인 시스템이 없다는 이유로 근거 없는 generic AI/SaaS 기본 미감을 새로 만들지 않는다.
+Research는 PRD나 사용자 디자인을 덮어쓰지 않는다. 헌법의 디자인 권위를 적용하고, 필요하면 `design_source`로 `designs/design.md`를 먼저 정규화한다. 후속 action은 정규화된 계약을 사용하며 보호된 브랜드 자산이나 근거 없는 generic 스타일을 만들지 않는다.
 
 ## 6. Verify
 
@@ -234,6 +186,10 @@ Research는 PRD와 사용자 디자인 입력을 덮어쓰지 않는다. 디자�
 | `loop.progress` | 사이클 진행 로그 |
 | `visual.reference_comparison` | browser action의 참조 캡처와 최종 화면 스크린샷 대조 결과 또는 `skipped(no browser action)` |
 | `visual.css_custom_properties` | browser action의 CSS custom property 검증 결과 또는 `skipped(no browser action/no css files)` |
+| `visual.contrast` | browser action의 `check.py contrast` 결과 또는 `skipped(no browser action/no css files)` |
+| `accessibility.live_region` | browser action의 `check.py a11y-contracts` 결과 또는 `skipped(no browser action/no live-region contract)` |
+| `functional.time_precision` | 시간 기반 UI의 반복 pause/resume clock 결과 또는 `skipped(no browser action/not time-based UI)` |
+| `analysis.semantic_consistency` | analyze action이 있으면 `check.py analyze-sync` 결과, 없으면 `skipped(no analyze action)` |
 | `server.cleanup` | browser action이 시작한 서버 종료 증거 또는 `skipped(existing server)` |
 
 검증은 최대 5회 반복한다.
@@ -254,12 +210,7 @@ research/plan/spec/report 문서 작성 판단은 lesson에 기록하지 않는�
 
 ## 8. Record
 
-각 사이클과 주요 action마다 아래를 남긴다.
-
-- `.altool/freedom/state.json`: 목표, 상태, `loopBudget`, `loopsCompleted`, 현재 사이클 번호, 현재 action, 제약
-- `.altool/freedom/journal.md`: 사람이 읽는 진행 로그
-- `.altool/freedom/outbox.jsonl`: 사용자에게 보이는 진행/답변/경고
-- `.altool/checks/freedom.freedom.json`: Freedom 상위 검증
+각 사이클과 주요 action마다 `.altool/freedom/state.json`에 상태, `journal.md`에 진행 로그, `outbox.jsonl`에 사용자 메시지, `.altool/checks/freedom.freedom.json`에 상위 검증을 남긴다.
 
 완료 출력:
 
@@ -275,14 +226,4 @@ research/plan/spec/report 문서 작성 판단은 lesson에 기록하지 않는�
 
 ## 9. 안전 경계
 
-Freedom은 아래 작업을 수행하지 않는다. 필요하면 outbox에 `warning`을 남긴다.
-
-- 실제 결제/송금/구매
-- 외부 배포
-- 계정 생성
-- 권한 변경
-- 데이터 삭제
-- 비밀키 생성/조회/전송
-- 유료 API 사용
-
-
+Freedom은 실제 결제·송금·구매, 외부 배포, 계정 생성, 권한 변경, 데이터 삭제, 비밀키 취급, 유료 API 사용을 수행하지 않는다. 필요하면 outbox에 `warning`을 남긴다.

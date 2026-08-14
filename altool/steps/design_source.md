@@ -2,7 +2,7 @@
 
 **사용법**: `$altool design_source`
 
-**목적**: 프로젝트의 디자인 소스(`designs/claude-design/*.html`, `.pen` 또는 Stitch)를 분석하여 단일 디자인 원천인 `designs/design.md`를 생성합니다.
+**목적**: 프로젝트의 디자인 소스(`designs/claude-design/*.html`, `.pen` 또는 Stitch)를 분석하여 정규화된 단일 구현 계약인 `designs/design.md`를 생성합니다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천입니다.
 생성된 디자인 시스템은 `constitution.md`의 범용 디자인 품질 원칙을 기준으로 검토합니다.
 
 참조 사이트 조사만으로 디자인 시스템을 부트스트랩해야 하는 경우는 `$altool research`가 담당합니다. `design_source`는 사용자가 제공한 Claude 디자인 HTML, `.pen` 또는 Stitch 파일을 프로젝트 디자인 시스템으로 확정할 때 사용합니다.
@@ -393,8 +393,6 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 3. 확정 후 $altool research 또는 $altool oneshot 으로 기능 개발을 시작하세요
 
 ⚠️ designs/design.md는 파이프라인 실행 전에 확정해야 합니다.
-   파이프라인 실행 중에는 수정하지 마세요 (헌법 제16조).
+   파이프라인 실행 중에는 수정하지 마세요 (헌법의 디자인 권위·동기화 원칙).
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
-
-

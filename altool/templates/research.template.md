@@ -108,7 +108,7 @@
 > 외부 사례는 기능과 시각 디자인의 조사 원천이다. 문장·카피·로고·고유 이미지는 복제하지 않는다.
 > 가져올 수 있는 것: 페이지 구조, 정보 배치, 기능 흐름, 인터랙션 의도, 사용자 기대, 색상 팔레트, 브랜드 분위기, 타이포 스케일, 간격, 그림자, 둥글기, 컴포넌트 외형 값, 정보 밀도, 위계, 비례, 네비게이션 패턴.
 > 폰트는 참조 사이트의 `font-family` 이름과 역할별 크기·굵기·행간·자간을 조사하되, 폰트 파일은 복제하지 않는다. 구현에는 시스템 폰트, 오픈 라이선스 폰트, 사용자 제공 폰트, 프로젝트 포함 폰트만 사용한다.
-> `designs/`에 사용자가 넣은 `.pen`, Stitch, 스크린샷, 디자인 문서가 있으면 그 자산이 시각 기준 1순위다. Research는 외부 사례를 그 디자인의 빈칸을 보강하는 근거로만 사용한다.
+> `designs/claude-design/*.html`이 있으면 최상위 원천이며, 없으면 `.pen`, Stitch, 스크린샷, 디자인 문서가 직접 디자인 원천이다. Research는 상위 원천의 빈칸을 보강한다.
 > `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 구현 기준으로 유지한다. 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 Research 단계에서 참조 사이트와 사용자 디자인 입력을 근거로 `design.md`를 생성한다.
 > Research가 `design.md`를 생성·보강하면 `Reference Source Map`에 캡처 ID와 파일 경로를 반드시 남긴다.
 
@@ -116,14 +116,16 @@
 
 | 우선순위 | 입력 | 감지 경로 | 처리 |
 | ---: | --- | --- | --- |
-| 1 | 사용자 디자인 입력 | `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}` | 화면 구조와 시각 기준의 원천 |
-| 2 | 프로젝트 디자인 시스템 | `designs/design.md` | 사용자 디자인 입력과 참조 사이트 분석을 구현 가능한 디자인 명세로 정규화 |
-| 3 | Research 기반 디자인 시스템 생성 | `docs/00-research/*.research.md` + 참조 사이트 | 디자인 시스템이 없거나 빈칸이 있을 때 `design.md` 생성·보강 근거 |
-| 4 | AI 자체 판단 | 없음 | 위 입력으로도 결정되지 않는 세부만 보완 |
+| 1 | Claude 디자인 HTML | `designs/claude-design/*.html` | 구조·밀도·위계·컴포넌트·상태의 최상위 원천 |
+| 2 | 기타 사용자 디자인 입력 | `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}` | 화면 구조와 시각 의도의 직접 원천 |
+| 3 | 프로젝트 디자인 시스템 | `designs/design.md` | 상위 원천을 구현 가능한 계약으로 정규화 |
+| 4 | Research | `docs/00-research/*.research.md` + 참조 사이트 | 상위 원천의 빈칸 보강과 계약 생성 근거 |
+| 5 | AI 자체 판단 | 없음 | 위 입력으로도 결정되지 않는 세부만 보완 |
 
 | 구분 | 외부 사례/관찰 | 프로젝트 기준 처리 |
 | --- | --- | --- |
-| 사용자 디자인 입력 | {없음 또는 .pen/Stitch/스크린샷/디자인 문서 경로} | {시각 기준 1순위 / 없음} |
+| Claude 디자인 HTML | {없음 또는 HTML 경로} | {최상위 원천 / 없음} |
+| 기타 사용자 디자인 입력 | {없음 또는 .pen/Stitch/스크린샷/디자인 문서 경로} | {직접 디자인 원천 / 없음} |
 | 디자인 시스템 | {기존 파일 있음/없음, 생성 또는 재사용 여부} | {`designs/design.md` 경로와 처리 요약} |
 | 접근성/반응형 | {외부 UX 패턴} | constitution.md의 디자인 품질 원칙 유지 |
 | 충돌 항목 | {있으면 기록, 없으면 없음} | 외부 사례 제외/보정/사용자 확인 |
@@ -200,7 +202,7 @@
 
 ### 11.7 `designs/design.md` 작성 구조
 
-> `design.md`는 CSS 변수 파일의 보조 문서가 아니라 구현자가 읽는 단일 디자인 원천이다.
+> `design.md`는 CSS 변수 파일의 보조 문서가 아니라 구현자가 읽는 정규화된 디자인 계약이다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천이고 `design.md`는 미정 영역을 보완한다.
 > GitHub `awesome-design-md`처럼 상단에는 정밀 토큰 블록을 두고, 본문에는 브랜드 문법과 구현 계약을 쓴다.
 
 0. **Design Token Block**: 문서 최상단 `---` 블록에 `version`, `name`, `description`, `colors`, `typography`, `spacing`, `rounded`, `elevation`, `components`를 작성

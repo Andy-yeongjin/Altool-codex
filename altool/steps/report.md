@@ -28,14 +28,14 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
 - `docs/03-analyze/{기능명}.fix.md` — 개선 이력
 - `docs/03-analyze/{기능명}.browser.md` — 실제 브라우저 기능·디자인 검증 결과
 
-**Altool 확장**: `npm run build` 1회 실행해 최종 빌드 성공 여부 기록 (헌법 제10조). git 저장소면 `git status`로 변경 파일 수집.
+**Altool 확장**: 프로젝트에 프로덕션 빌드가 있으면 해당 build 명령을 1회 실행해 최종 성공 여부를 기록한다 (헌법의 완료 품질 게이트). git 저장소면 `git status`로 변경 파일 수집.
 
 ### 3~7. 보고서 작성
 
 템플릿 절 구조대로 작성. 핵심:
 - **§1.2 전달된 가치**: 계획(Plan Executive Summary) 대비 실제 달성을 측정값과 함께 대조
 - **§1.3 Success Criteria 최종 판정**: Plan의 SC 각각 ✅ 충족(증거) / ❌ 미충족(사유) + 충족률
-- **§2 핵심 결정 기록(ADR)**: Plan→Spec 체인의 핵심 결정 — 지켜졌는가? 결과는? (**다음 개발 사이클을 위한 학습 기록** — 헌법 제12조 ADR과 동일한 목적)
+- **§2 핵심 결정 기록(ADR)**: Plan→Spec 체인의 핵심 결정 — 지켜졌는가? 결과는? (**다음 개발 사이클을 위한 학습 기록** — 헌법의 DDD·ADR 원칙과 동일한 목적)
 - **§4.1 기능 요구사항 최종**: FR별 이행 상태
 - **§4.2 이월 항목**: 다음 사이클로 이월된 항목 + 사유
 - **§5 품질 지표**: 최종 Match Rate, 디자인 시스템 준수, 브라우저 기능·디자인 검증, 빌드 결과
@@ -53,10 +53,11 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
 문서 상단 상태 동기화:
 - plan 문서 상단 `상태`/`Status`를 `Completed`로 갱신한다.
 - spec 문서 상단 `상태`/`Status`를 `Finalized`로 갱신한다.
-- analyze/fix/browser 문서 상단 `상태`/`Status`를 최종 결과에 맞춰 `Resolved` 또는 `Verified`로 갱신한다.
+- analyze와 browser 문서 상단 `상태`/`Status`는 `Verified`, fix 문서는 `Resolved`로 갱신한다.
 - report 문서 상단 `상태`/`Status`는 `Completed`로 작성한다.
 - 체크박스가 모두 완료되어도 상단 상태를 그대로 `Draft`로 두지 않는다.
 - plan/spec/analyze/fix/browser 문서를 수정했으면 report Step Check만으로 끝내지 않는다. 수정된 문서의 소유 Step Check(`{기능명}.plan.json`, `{기능명}.spec.json`, `{기능명}.analyze.json`, `{기능명}.fix.json`, `{기능명}.browser.json`)도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, report check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
+- analyze 문서를 수정했으면 상단 `최종 Match Rate`와 `미해소 갭`을 보존하고 `python altool/scripts/check.py analyze-sync --root .`도 다시 통과시킨다.
 
 완료 전 `.altool/checks/{기능명}.report.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.report.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
 
@@ -77,8 +78,5 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
    🐥 {기능명} 개발 사이클 완주
    다음: 새 기능 $altool plan {기능 설명} 또는 배포 (guides/neondb-guide.html → guides/vercel-guide.html)
 ```
-
-
-
 
 

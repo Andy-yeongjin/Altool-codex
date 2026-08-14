@@ -1,4 +1,4 @@
-> 지침: 모든 내용은 반드시 한글로 작성합니다 (헌법 제0조).
+> 지침: 모든 내용은 반드시 한글로 작성합니다 (헌법의 언어 원칙).
 
 # {기능명} — Browser Verification
 
@@ -67,16 +67,19 @@
 | --- | --- | --- | --- |
 | 375px 반응형 | 겹침/잘림 없음 | | |
 | desktop 레이아웃 | 주요 UI 겹침 없음 | | |
+| Claude 디자인 HTML | `designs/claude-design/*.html`이 있으면 구조·밀도·위계·컴포넌트 외형·색상·간격·타이포·상태 표현을 최우선 대조 | | |
 | 사용자 디자인 입력 | 있으면 Spec User Design Source 기준 구조·밀도·위계 반영 | | |
 | Screen Recipes | `designs/design.md`의 화면 구조·섹션 순서·비례·밀도 계약 반영 | | |
 | Capture-to-Implementation Map | 참조 캡처 C-__/S-__가 구현 section/component로 연결되어 최종 화면에 반영 | | |
 | Component Extraction | nav/button/card/filter/form/media 외형 계약 반영 | | |
 | 디자인 시스템 | `designs/design.md`의 시각 값·컴포넌트 계약·미디어 규칙 기준 반영, 없으면 Research/design_source 보완 필요 | | |
 | CSS custom properties | `python altool/scripts/check.py css-vars --root .` 통과. CSS 파일이 없으면 `skipped(no css files)` | | |
+| 텍스트 대비 | `python altool/scripts/check.py contrast --root .` 통과. CSS 파일이 없으면 `skipped(no css files)` | | |
 | 폰트 | `designs/design.md`의 구현 font-family stack, 크기, 굵기, 행간 기준 반영. 참조 폰트 파일 복제 없음 | | |
 | Generic AI/SaaS 회귀 | Research/Spec 근거 없는 split SaaS hero, floating trust card 묶음, 과한 그라디언트, glass panel, 추상 장식, 카드 그림자 남발 없음 | | |
 | 참조 복제 금지 | 로고·카피·고유 이미지·식별 가능한 레이아웃 복제 없음 | | |
-| 접근성 | 버튼/폼 사용 가능, 초점 이동 가능 | | |
+| 접근성 | 버튼/폼·초점·상태 전달을 실제 조작하고 `check.py a11y-contracts --root .` 통과 | | |
+| 시간 정밀도 | 시간 기반 UI면 반복 pause/resume 후 누적 오차가 표시 정밀도 이내. 아니면 N/A | | |
 
 ### 5.1 참조 캡처 대조
 
@@ -114,3 +117,12 @@
   - 없음
 - **다음 단계**:
   - `$altool report`
+
+## 10. 자동 게이트
+
+| 게이트 | 결과 | 증거 |
+| --- | --- | --- |
+| CSS text contrast | Pass / Fail / N/A | `check.py contrast` 출력 |
+| Live region contract | Pass / Fail / N/A | `check.py a11y-contracts` 출력 |
+| Time precision | Pass / Fail / N/A | 반복 clock 시나리오와 허용 오차 |
+| Analyze semantic sync | Pass / Fail | `check.py analyze-sync` 출력 |

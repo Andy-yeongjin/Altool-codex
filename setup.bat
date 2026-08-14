@@ -61,8 +61,12 @@ echo   [OK] altool\ (engine)
 
 :: AGENTS.md (Codex project instructions)
 if exist "%ALTOOL_DIR%\AGENTS.md" (
-    copy /y "%ALTOOL_DIR%\AGENTS.md" "%PROJECT_DIR%\AGENTS.md" > nul
-    echo   [OK] AGENTS.md
+    if not exist "%PROJECT_DIR%\AGENTS.md" (
+        copy /y "%ALTOOL_DIR%\AGENTS.md" "%PROJECT_DIR%\AGENTS.md" > nul
+        echo   [OK] AGENTS.md
+    ) else (
+        echo   [KEEP] AGENTS.md already exists
+    )
 )
 
 :: Codex repo-local skills
@@ -80,9 +84,35 @@ if exist "%ALTOOL_DIR%\templates\codex\skills\" (
 
 :: constitution.md
 if exist "%ALTOOL_DIR%\constitution.md" (
-    copy /y "%ALTOOL_DIR%\constitution.md" "%PROJECT_DIR%\constitution.md" > nul
-    echo   [OK] constitution.md
+    if not exist "%PROJECT_DIR%\constitution.md" (
+        copy /y "%ALTOOL_DIR%\constitution.md" "%PROJECT_DIR%\constitution.md" > nul
+        echo   [OK] constitution.md
+    ) else (
+        echo   [KEEP] constitution.md already exists
+    )
 )
+
+:: Warn when the preserved project constitution is incompatible with this engine.
+if not exist "%ALTOOL_DIR%\constitution.md" (
+    echo   [WARN] Engine constitution missing - version check skipped
+    goto :constitution_version_done
+)
+set "ENGINE_CONSTITUTION_VERSION="
+set "ENGINE_CONSTITUTION_MAJOR="
+set "PROJECT_CONSTITUTION_VERSION="
+set "PROJECT_CONSTITUTION_MAJOR="
+for /f "tokens=2 delims=:" %%v in ('findstr /b /c:"**Version**:" "%ALTOOL_DIR%\constitution.md" 2^>nul') do for /f "tokens=1" %%w in ("%%v") do set "ENGINE_CONSTITUTION_VERSION=%%w"
+for /f "tokens=1 delims=." %%m in ("%ENGINE_CONSTITUTION_VERSION%") do set "ENGINE_CONSTITUTION_MAJOR=%%m"
+for /f "tokens=2 delims=:" %%v in ('findstr /b /c:"**Version**:" "%PROJECT_DIR%\constitution.md" 2^>nul') do for /f "tokens=1" %%w in ("%%v") do set "PROJECT_CONSTITUTION_VERSION=%%w"
+for /f "tokens=1 delims=." %%m in ("%PROJECT_CONSTITUTION_VERSION%") do set "PROJECT_CONSTITUTION_MAJOR=%%m"
+if not defined PROJECT_CONSTITUTION_VERSION (
+    echo   [WARN] constitution.md has no Version marker - engine expects major %ENGINE_CONSTITUTION_MAJOR%.x
+) else if not "%PROJECT_CONSTITUTION_MAJOR%"=="%ENGINE_CONSTITUTION_MAJOR%" (
+    echo   [WARN] constitution.md is v%PROJECT_CONSTITUTION_VERSION% - engine expects major %ENGINE_CONSTITUTION_MAJOR%.x; review before running $altool
+) else (
+    echo   [OK] constitution.md version compatible: v%PROJECT_CONSTITUTION_VERSION%
+)
+:constitution_version_done
 
 :: designs/
 if not exist "%PROJECT_DIR%\designs\" mkdir "%PROJECT_DIR%\designs"
@@ -90,8 +120,12 @@ if not exist "%PROJECT_DIR%\designs\claude-design\" mkdir "%PROJECT_DIR%\designs
 echo   [OK] designs\claude-design\ (Claude design HTML folder)
 for %%f in (design.md) do (
     if exist "%ALTOOL_DIR%\designs\%%f" (
-        copy /y "%ALTOOL_DIR%\designs\%%f" "%PROJECT_DIR%\designs\%%f" > nul
-        echo   [OK] designs\%%f
+        if not exist "%PROJECT_DIR%\designs\%%f" (
+            copy /y "%ALTOOL_DIR%\designs\%%f" "%PROJECT_DIR%\designs\%%f" > nul
+            echo   [OK] designs\%%f
+        ) else (
+            echo   [KEEP] designs\%%f already exists
+        )
     )
 )
 
@@ -99,7 +133,7 @@ for %%f in (design.md) do (
 if not exist "%PROJECT_DIR%\prd\" mkdir "%PROJECT_DIR%\prd"
 echo   [OK] prd\ (folder)
 
-:: start.bat / end.bat
+:: Windows launchers
 for %%f in (start.bat end.bat) do (
     if exist "%ALTOOL_DIR%\%%f" (
         copy /y "%ALTOOL_DIR%\%%f" "%PROJECT_DIR%\%%f" > nul
@@ -116,6 +150,13 @@ if not exist "%PROJECT_DIR%\.gitignore" (
         echo # Node
         echo node_modules/
         echo .next/
+        echo.
+        echo # Python
+        echo __pycache__/
+        echo.
+        echo # OS
+        echo .DS_Store
+        echo Thumbs.db
         echo.
         echo # Env / secrets
         echo .env

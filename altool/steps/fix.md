@@ -23,15 +23,15 @@
 - analyze 문서의 "수정 방향"을 따른다
 - Functional 갭(SHALLOW 파일)은 run 단계의 Depth-First 기준으로 완성한다: TODO 제거, 실데이터 연결, Page UI Checklist 항목 충족
 - Contract 갭은 Spec §4 스키마에 맞춰 서버·클라이언트 양쪽 정렬
-- **설계 자체가 잘못된 경우** → 코드를 끼워 맞추지 말고 Spec 문서를 수정한 후 해당 갭을 갱신 (헌법 제9조: 명세-코드 동기화)
-- **Altool 확장**: 수정 중에도 `designs/claude-design/*.html`이 있으면 최우선 디자인 헌법으로 사용하고, `designs/design.md`의 시각 값·컴포넌트 계약·미디어 규칙을 추적 가능하게 사용하며, TypeScript Strict와 보안 규칙을 준수
-- **React/Next.js 보조 스킬**: `.agents/skills/vercel-react-best-practices/SKILL.md`가 있으면 React/Next 성능 갭 수정에 적용한다. 없으면 `skipped(skill unavailable)`로 보고하고 계속한다.
+- **설계 자체가 잘못된 경우** → 코드를 끼워 맞추지 말고 Spec 문서를 수정한 후 해당 갭을 갱신 (헌법의 명세 주도 개발·추적성)
+- **Altool 확장**: 헌법, Design System Anchor, 선택한 스택의 타입·스키마·보안 계약을 유지한다.
+- **React/Next.js 보조 스킬**: 현재 프로젝트가 React 또는 Next.js를 사용하고 `.agents/skills/vercel-react-best-practices/SKILL.md`가 있으면 성능 갭 수정에 적용한다. 다른 스택이면 `skipped(not React/Next.js)`, 파일이 없으면 `skipped(skill unavailable)`로 보고하고 계속한다.
 
-수정 완료 후 `npm run build` 성공 확인 (Altool 확장 — 실패 시 수정 후 재빌드).
+수정 완료 후 프로젝트에 정의된 build 명령을 실행한다. 빌드 단계가 없는 정적 결과물은 적용 가능한 구문·정적 검사를 실행하고 생략 근거를 남긴다 (실패 시 수정 후 재검증).
 
 ### 4. 자동 재분석 (Auto re-Check)
 
-`altool/steps/analyze.md`의 6~9번(정적 3축 + 런타임 + Match Rate 계산)을 다시 수행한다.
+`altool/steps/analyze.md`의 정적 3축, 런타임, Match Rate와 자동 게이트(`contrast`, `a11y-contracts`, 시간 정밀도)를 다시 수행한다.
 
 ### 5. 반복 판정 
 
@@ -65,9 +65,12 @@
 
 문서 동기화:
 - 해소된 갭은 analyze 문서에 체크/Resolved로 반영한다.
+- analyze 문서 상단 `최종 Match Rate`와 `미해소 갭`을 재분석 결과로 갱신한다. 최초 분석 표는 `최초 분석`으로 명시해 현재 결과와 구분한다.
 - plan/spec 문서 상단 상태는 여전히 구현 검증 중이므로 `Implemented` 또는 `Fixing`으로 갱신한다. 미해소 갭 0건이면 `Implemented`, 갭이 남으면 `Fixing`을 사용한다.
 - fix 문서 상단 `상태`/`Status`는 갭 0건이면 `Resolved`, 갭이 남으면 `Partial`로 쓴다.
+- analyze 문서 상단 `상태`/`Status`는 갭 0건이면 `Analyzed`, 갭이 남으면 `GapsFound`로 쓴다. browser 통과 전에는 `Verified`로 올리지 않는다.
 - analyze/plan/spec 문서를 수정했으면 fix Step Check만으로 끝내지 않는다. 수정된 문서의 소유 Step Check(`{기능명}.analyze.json`, `{기능명}.plan.json`, `{기능명}.spec.json`)도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, fix check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
+- 상태와 analyze 문서 갱신 후 `python altool/scripts/check.py analyze-sync --root .`를 통과시킨다.
 
 완료 전 `.altool/checks/{기능명}.fix.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.fix.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
 
@@ -77,6 +80,10 @@
 | `lesson.search` | fix 시작 시 갭/파일/스택 기준 검색 결과 또는 `skipped(no gap)` |
 | `event.capture` | 기록한 `code_error`/`fix` 이벤트 ID |
 | `verification` | 빌드와 재분석 결과 |
+| `visual.contrast` | `check.py contrast` 재실행 통과 결과 또는 `skipped(no css files)` |
+| `accessibility.live_region` | `check.py a11y-contracts` 재실행 통과 결과 또는 `skipped(no live-region contract)` |
+| `functional.time_precision` | 반복 pause/resume clock 재검증 결과 또는 `skipped(not time-based UI)` |
+| `analysis.semantic_consistency` | `check.py analyze-sync --root .` 통과 결과 |
 | `state.updated` | phase=fix, iterationCount, matchRate |
 | `docs.synced` | analyze 갭 해소 표기와 관련 문서 상단 Status 갱신 결과, 수정된 소유 Step Check 재검증 경로 |
 | `document.status` | fix/analyze/plan/spec 문서 상단 Status=Resolved/Partial/Implemented/Fixing |
@@ -89,8 +96,3 @@
    산출물: docs/03-analyze/{기능명}.fix.md
    다음 단계: $altool browser  (또는 남은 갭 안내)
 ```
-
-
-
-
-

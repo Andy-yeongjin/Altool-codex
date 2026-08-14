@@ -30,12 +30,10 @@
 
 - `docs/00-research/*.research.md`가 있으면 최근 조사 목록을 읽고 중복 주제·이미 수집한 출처를 확인한다.
 - `prd/*.md`, `prd/refs/*`, `constitution.md`, `designs/design.md`가 있으면 조사 관점 보정용으로 읽는다.
-- `designs/claude-design/*.html`이 있으면 최우선 디자인 헌법으로 기록하고, 외부 사이트·`designs/design.md`·기타 사용자 디자인 입력보다 먼저 읽는다. Research는 이 HTML의 구조·밀도·위계·컴포넌트 외형을 대체하지 않고, 기능·UX·누락 위험 보강재로만 사용한다.
-- `designs/` 안에 사용자가 넣은 `.pen`, `stitch/`, 스크린샷(`*.png`, `*.jpg`, `*.jpeg`, `*.webp`), 디자인 문서(`*.md`, `*.pdf`)가 있으면 외부 사이트보다 우선하는 사용자 디자인 입력으로 기록한다. Research는 이 디자인을 대체하지 않고, 기능·UX·누락 위험·페이지 구성 보강재로만 사용한다.
+- 직접 디자인 입력은 헌법의 디자인 권위에 따라 먼저 읽는다. Research는 이를 대체하지 않고 기능·UX·누락 위험만 보강한다.
 - PRD가 있으면 research는 PRD를 변경하거나 대체하지 않고, PRD를 더 잘 구현하기 위한 사용자 기대·누락 위험·UX 근거·리스크·구현 후보를 찾는 데 집중한다.
 - UI/제품/사이트/앱을 조사하는데 `designs/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면, research 단계에서 참조 사이트와 사용자 디자인 입력을 근거로 `design.md`를 생성한다. 이후 plan/spec/run은 research의 시각 관찰값을 직접 구현하지 않고 이 파일을 구현 기준으로 사용한다.
-- 디자인 기준 우선순위는 `designs/claude-design/*.html` → `designs/` 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `designs/design.md` → Research가 생성한 디자인 시스템 → AI 자체 판단 순서다.
-- `constitution.md`의 디자인 품질 원칙은 모든 시각 원천에 항상 적용되는 상위 가드레일이다.
+- 모든 시각 원천에 헌법의 디자인 권위와 품질 가드레일을 적용한다.
 - Research는 문서/조사 단계이므로 `lesson.py search`와 `lesson.py append`를 실행하지 않는다.
 
 ### 3. 웹 조사 수행
@@ -62,10 +60,10 @@
 - 캡처는 복제용이 아니라 레이아웃 구조, 정보 밀도, 컴포넌트 비율, 미디어 사용, 시각 위계를 분석해 `designs/design.md`로 정규화하기 위한 근거다. 캡처할 수 없는 출처는 실패 사유를 기록하고, HTML/문서/공개 이미지 등 대체 시각 근거를 남긴다.
 - Research가 `designs/design.md`를 생성·보강한다면 `design.md`의 `Reference Source Map`에도 캡처 ID와 파일 경로를 반드시 남긴다. Research 문서에만 캡처 경로가 있고 `design.md`에는 출처명만 있으면 추적성 미완성으로 본다.
 - 디자인 자유도는 "AI가 임의로 일반 SaaS/AI 미감을 만드는 것"이 아니다. 조사한 실제 서비스의 시각 패턴을 새 제품에 맞게 변환해 `design.md`로 정규화하는 것이다.
-- 프로젝트에 Claude 디자인 HTML이나 사용자 디자인 입력이 있으면 Research는 그 디자인의 빈칸을 보강하는 용도로만 외부 사례를 사용한다. 화면 구조, 정보 밀도, 시각 위계, 색상·간격·타이포·둥글기·그림자는 `designs/claude-design/*.html`을 최우선으로 디자인 시스템에 변환한다.
+- 직접 디자인 입력이 있으면 외부 사례는 빈칸 보강에만 사용하고, 권위 원천을 디자인 시스템으로 변환한다.
 - 프로젝트에 `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 구현 기준으로 유지하고, research 문서에는 보강 필요 지점만 기록한다. 사용자가 명시하지 않은 한 기존 디자인 시스템을 덮어쓰지 않는다.
 - 프로젝트에 `designs/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 research 완료 전 파일을 생성한다. 생성된 `design.md`에는 GitHub `awesome-design-md` 스타일의 상단 정밀 토큰 블록, 참조 출처와 캡처 ID/경로, Design Thesis, Screen Recipes, Component Extraction, Capture-to-Implementation Map, 색상·타이포·폰트 스택·간격 값, 컴포넌트 계약, 페이지 구조, 미디어 규칙, 복제 금지 항목, Agent Implementation Guide를 기록하고 최상단 `TBD` 마커를 제거한다.
-- 외부 디자인 사례가 프로젝트 디자인 시스템이나 `constitution.md`의 디자인 품질 원칙과 충돌하면 research 문서에 충돌을 기록하고, 디자인 시스템에는 프로젝트 기준으로 보정한 값을 반영한다.
+- 외부 사례가 프로젝트 계약과 충돌하면 research에 기록하고 프로젝트 기준으로 보정한다.
 - 이전 research가 있으면 중복 발견과 새 발견을 분리해 기록한다.
 
 출처 신뢰도 기준:
