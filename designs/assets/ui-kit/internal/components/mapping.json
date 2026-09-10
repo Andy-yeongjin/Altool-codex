@@ -1,0 +1,622 @@
+{
+  "version": 1,
+  "pathBase": "designs/assets",
+  "items": {
+    "krds-p0045": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0045.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0047": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0047.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0049": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0049.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0051": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0051.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0053": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0053.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0055": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0055.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0057": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0057.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0061": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0061.md"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0064": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0064.md",
+        "ui-kit/internal/foundations/values-2024.json",
+        "ui-kit/internal/foundations/tokens-2024.css",
+        "ui-kit/internal/foundations/palette-2024.json"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0078": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0078.md",
+        "ui-kit/internal/foundations/values-2024.json",
+        "ui-kit/internal/foundations/tokens-2024.css"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0084": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0084.md",
+        "ui-kit/internal/foundations/values-2024.json",
+        "ui-kit/internal/foundations/tokens-2024.css"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0088": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0088.md",
+        "ui-kit/internal/foundations/values-2024.json",
+        "ui-kit/internal/foundations/tokens-2024.css"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0101": {
+      "assets": [
+        "ui-kit/internal/foundations/krds-p0101.md",
+        "ui-kit/internal/foundations/values-2024.json",
+        "ui-kit/internal/foundations/tokens-2024.css"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다."
+      ]
+    },
+    "krds-p0114": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0114.md",
+        "ui-kit/internal/upstream/html/code/masthead.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다.",
+        "공식정부서비스 전용: 일반 제품의 기본 CI/배너로 사용하지 않는다."
+      ],
+      "scope": "official-government-only"
+    },
+    "krds-p0121": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0121.md",
+        "ui-kit/internal/upstream/html/code/identifier.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다.",
+        "공식정부서비스 전용: 일반 제품의 기본 CI/배너로 사용하지 않는다."
+      ],
+      "scope": "official-government-only"
+    },
+    "krds-p0128": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0128.md",
+        "ui-kit/internal/upstream/html/code/footer.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0135": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0135.md",
+        "ui-kit/internal/upstream/html/code/header.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0150": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0150.md",
+        "ui-kit/internal/upstream/html/code/skip_link.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0159": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0159.md",
+        "ui-kit/internal/upstream/html/code/main_menu_mobile.html",
+        "ui-kit/internal/upstream/html/code/main_menu_pc.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0176": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0176.md",
+        "ui-kit/internal/upstream/html/code/breadcrumb.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0189": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0189.md",
+        "ui-kit/internal/upstream/html/code/side_navigation.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0204": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0204.md",
+        "ui-kit/internal/upstream/html/code/in_page_navigation.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다.",
+        "in-page navigation 영문 명칭의 하이픈을 파일명 in_page_navigation으로 연결한다."
+      ]
+    },
+    "krds-p0213": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0213.md",
+        "ui-kit/internal/upstream/html/code/pagination.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0236": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0236.md",
+        "ui-kit/internal/upstream/html/code/structured_list.html",
+        "ui-kit/internal/upstream/html/code/structured_list_table.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0243": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0243.md",
+        "ui-kit/internal/upstream/html/code/critical_alerts.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0251": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0251.md",
+        "ui-kit/internal/upstream/html/code/calendar.html",
+        "ui-kit/internal/upstream/html/code/calendar_range.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0262": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0262.md",
+        "ui-kit/internal/upstream/html/code/disclosure.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0270": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0270.md",
+        "ui-kit/internal/upstream/html/code/modal.html",
+        "ui-kit/internal/upstream/html/code/modal_sample.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0282": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0282.md",
+        "ui-kit/internal/upstream/html/code/badge.html",
+        "ui-kit/internal/upstream/html/code/badge_number.html",
+        "ui-kit/internal/upstream/html/code/badge_size.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0288": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0288.md",
+        "ui-kit/internal/upstream/html/code/accordion.html",
+        "ui-kit/internal/upstream/html/code/accordion_line.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0299": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0299.md",
+        "ui-kit/internal/components/image.html",
+        "ui-kit/internal/components/image-diagram.svg",
+        "ui-kit/internal/components/image-divider.svg",
+        "ui-kit/internal/components/image-info.svg"
+      ],
+      "implementation": "derived-example",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다.",
+        "이미지 신규 예제는 Altool 작성 정보도식이다. 원문 사례 사진 복제나 실제 제품 사진 자산을 대신하지 않는다."
+      ]
+    },
+    "krds-p0307": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0307.md",
+        "ui-kit/internal/upstream/html/code/carousel.html",
+        "ui-kit/internal/upstream/html/code/carousel_banner.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0328": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0328.md",
+        "ui-kit/internal/upstream/html/code/tab.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0342": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0342.md",
+        "ui-kit/internal/upstream/html/code/table.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0354": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0354.md",
+        "ui-kit/internal/upstream/html/code/link.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0368": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0368.md",
+        "ui-kit/internal/upstream/html/code/button.html",
+        "ui-kit/internal/upstream/html/code/button_hierarchy.html",
+        "ui-kit/internal/upstream/html/code/button_icon.html",
+        "ui-kit/internal/upstream/html/code/button_size.html",
+        "ui-kit/internal/upstream/html/code/button_text.html",
+        "ui-kit/internal/upstream/html/code/button_with_icon.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0382": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0382.md",
+        "ui-kit/internal/upstream/html/code/radio_button.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0397": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0397.md",
+        "ui-kit/internal/upstream/html/code/select.html",
+        "ui-kit/internal/upstream/html/code/select_size.html",
+        "ui-kit/internal/upstream/html/code/select_sorting.html",
+        "ui-kit/internal/upstream/html/code/select_state.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0405": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0405.md",
+        "ui-kit/internal/upstream/html/code/checkbox.html",
+        "ui-kit/internal/upstream/html/code/checkbox_chip.html",
+        "ui-kit/internal/upstream/html/code/checkbox_size.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0418": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0418.md",
+        "ui-kit/internal/upstream/html/code/tag.html",
+        "ui-kit/internal/upstream/html/code/tag_link.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0430": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0430.md",
+        "ui-kit/internal/upstream/html/code/step_indicator.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0437": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0437.md",
+        "ui-kit/internal/upstream/html/code/spinner.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0446": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0446.md",
+        "ui-kit/internal/upstream/html/code/help_panel.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0459": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0459.md",
+        "ui-kit/internal/upstream/html/code/tutorial_panel.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0468": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0468.md",
+        "ui-kit/internal/upstream/html/code/contextual_help.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0485": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0485.md",
+        "ui-kit/internal/upstream/html/code/coach_mark.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0500": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0500.md",
+        "ui-kit/internal/upstream/html/code/date_input.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0513": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0513.md",
+        "ui-kit/internal/upstream/html/code/textarea.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0522": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0522.md",
+        "ui-kit/internal/upstream/html/code/text_input.html",
+        "ui-kit/internal/upstream/html/code/text_input_icon.html",
+        "ui-kit/internal/upstream/html/code/text_input_size.html",
+        "ui-kit/internal/upstream/html/code/text_input_state.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    },
+    "krds-p0533": {
+      "assets": [
+        "ui-kit/internal/components/krds-p0533.md",
+        "ui-kit/internal/upstream/html/code/file_upload.html"
+      ],
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified",
+      "notes": [
+        "체크리스트와 원문 연결은 구현 준수나 모든 상호작용 검증을 뜻하지 않는다.",
+        "공식 키트 1.1.0 조각은 PDF 2024.02와 버전이 다르며 대상 화면·데이터·서버 동작 통합이 필요하다."
+      ]
+    }
+  }
+}

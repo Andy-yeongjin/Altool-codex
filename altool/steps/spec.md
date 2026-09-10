@@ -18,7 +18,7 @@
 - `docs/01-plan/features/{기능명}.plan.md` 존재 확인. **없으면 `$altool plan {기능 설명}` 먼저 실행을 제안**하고 사용자에게 진행 여부 확인.
 - 있으면 전체를 읽고 요구사항·범위를 파악한다.
 - 사용자가 입력한 추가 지시가 있으면 Plan 범위와 충돌하지 않는 선에서 아키텍처 3안, UI 체크리스트, 테스트 플랜에 반영한다.
-- **Altool 자산 감지**: 헌법과 직접 디자인 입력, `designs/design.md`를 읽고 헌법의 권위 순서를 적용한다. UI 디자인 계약이 없거나 유효하지 않으면 research 또는 `design_source`로 되돌리고 임의 값을 명세하지 않는다.
+- **Altool 자산 감지**: 헌법과 직접 디자인 입력, `standards/design.md`를 읽고 헌법의 권위 순서를 적용한다. UI 디자인 계약이 없거나 유효하지 않으면 research 또는 `design_source`로 되돌리고 임의 값을 명세하지 않는다.
 
 ### 3. PRD 컨텍스트 로딩
 
@@ -41,13 +41,16 @@ Codex 대화 확인: **"3가지 설계안 중 어떤 걸 선택하시겠습니�
 
 ### 8~9. Spec 문서 작성
 
+`표준 적용` 표에 활성 표준의 규칙 ID/항목·원문 경로·이 기능의 적용 방식·실제 검증 방법을 연결한다. 필수 계약 누락이나 충돌은 구현 전에 해소하며 예외는 결정 기록에 남긴다. 원문 선택·Step Check 증거는 `altool/standards.md`를 따른다.
+
 선택된 아키텍처로 템플릿 전체 절을 채워 작성한다. 핵심:
 - **§2.1 아키텍처 3안 비교**: 비교표 + 선택 결과·근거 기록
 - **§3 데이터 모델**: TypeScript 스택을 선택한 경우 Strict Mode 타입으로 정의하고 `any`를 사용하지 않는다. 다른 스택이면 그 생태계의 엄격한 타입·스키마 계약을 사용한다.
 - **§4 API 명세**: 엔드포인트 목록 + 상세 스키마 + 에러 응답 (**analyze의 Contract 검증 기준**)
 - **§5.4 Page UI Checklist (CRITICAL)**: 페이지별 필수 UI 요소를 빠짐없이 항목화 — 폼 필드·버튼·필터·배지·데이터 표시 요소를 구체적 옵션 값까지. **이 체크리스트가 없으면 analyze가 파일 존재만 검사하게 됨 (Functional 검증의 분모)**
 - **§8 테스트 플랜**: L1(API)/L2(UI 액션)/L3(E2E) 테스트 시나리오 정의 — run에서 코드 작성, analyze에서 실행
-- **UI 명세**: 권위 원천의 경로·적용 범위와 `designs/design.md`의 Screen Recipes, Component Extraction, Capture-to-Implementation Map을 Page UI Checklist에 연결한다. 값의 근거가 없으면 디자인 계약 보강 항목으로 남긴다.
+- **UI 명세**: 권위 원천의 경로·적용 범위와 `standards/design.md`의 Screen Recipes, Component Extraction, Capture-to-Implementation Map을 Page UI Checklist에 연결한다. 값의 근거가 없으면 디자인 계약 보강 항목으로 남긴다.
+- **UI 실측 계약**: `altool/standards.md`의 디자인 실측 완료 계약에 따라 `.altool/ui/{기능명}.contracts.json`에 페이지·상태·viewport·selector·기대값·출처·구현 범위를 고정한다. desktop/mobile 및 변경 공통 요소를 포함하고 Spec에서 연결한다. Step Check의 `ui.contracts`와 `visual.ui_contracts`를 작성한다. 이 단계는 실측 없이 계약 유효성만 검사한다.
 
 ### 10. Session Guide 생성
 
@@ -55,7 +58,7 @@ Codex 대화 확인: **"3가지 설계안 중 어떤 걸 선택하시겠습니�
 
 ### 11. Design System Anchor
 
-UI 기능이면 `## Design System Anchor`에 권위 원천의 경로·범위와 `designs/design.md`의 recipe·component·capture map을 잠그고 구현 section/component에 연결한다. 디자인 계약이 유효하지 않거나 연결이 비어 있으면 보강한 뒤 Spec을 완료한다.
+UI 기능이면 `## Design System Anchor`에 권위 원천의 경로·범위와 `standards/design.md`의 recipe·component·capture map을 잠그고 구현 section/component에 연결한다. 디자인 계약이 유효하지 않거나 연결이 비어 있으면 보강한 뒤 Spec을 완료한다.
 
 ### 12~13. 상태 갱신 + 보고
 
@@ -71,4 +74,3 @@ plan 문서를 수정했으면 spec Step Check만으로 끝내지 않는다. `.a
    Page UI Checklist: {N}개 항목 (analyze의 Functional 검증 분모)
    다음 단계: $altool run
 ```
-

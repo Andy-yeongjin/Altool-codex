@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><title>적응형 단계 이동과 선택 단계 건너뛰기 · 공통 UI 자산</title><link rel="stylesheet" href="../../foundations/tokens-2024.css"><link rel="stylesheet" href="../runtime.css"><style>body{margin:0}main{max-width:60rem;margin:auto;padding:2rem 1rem}.notice{padding:1rem;background:var(--krds24-gray-5);border-left:4px solid var(--krds24-primary-60);margin-bottom:2rem;font-size:.9375rem}input[type=number]{width:6rem}</style><script src="../messages.js" defer></script><script src="../runtime.js" defer></script><link rel="stylesheet" href="../guided-runtime.css"><script src="../guided-runtime.js" defer></script></head><body class="altool-ui krds-2024-tokens ui-preview"><main><h1>적응형 단계 이동과 선택 단계 건너뛰기</h1><p class="notice">Altool 작성 재사용 UI · KRDS 2024.02 참고. 샘플 데이터이며 전송·로그인·실제 업무 처리는 연결하지 않았습니다.</p>
+<section data-guided="steps">
+  <h2>자료 정리 · 로컬 예제</h2><p>필수 분류를 정한 뒤 선택 메모를 건너뛰거나 완료한 단계로 돌아갈 수 있습니다. 서버에 제출하지 않습니다.</p>
+  <ol class="guided-steps" aria-label="자료 정리 단계">
+    <li><button type="button" data-step-link="0" aria-current="step">1. 분류 선택 <span data-step-state="0">현재 단계</span></button></li>
+    <li><button type="button" data-step-link="1" disabled>2. 메모 (선택) <span data-step-state="1">대기</span></button></li>
+    <li><button type="button" data-step-link="2" disabled>3. 확인 <span data-step-state="2">대기</span></button></li>
+  </ol><p data-step-status role="status">현재 1 / 3 단계</p>
+  <form data-step-form novalidate>
+    <section data-step-panel="0"><h3 tabindex="-1">1. 분류 선택</h3><label for="adaptive-category">자료 분류 (필수)</label><select id="adaptive-category" data-step-category aria-describedby="adaptive-error"><option value="">선택해 주세요</option><option value="안내">안내</option><option value="서식">서식</option></select></section>
+    <section data-step-panel="1" hidden><h3 tabindex="-1">2. 메모 (선택)</h3><label for="adaptive-memo">내 메모</label><textarea id="adaptive-memo" data-step-memo maxlength="100"></textarea><p>입력하지 않고 건너뛰어도 됩니다. 최대 100자입니다.</p></section>
+    <section data-step-panel="2" hidden><h3 tabindex="-1">3. 확인</h3><p data-step-summary></p><p>완료 버튼은 이 예제의 로컬 확인만 끝냅니다.</p></section>
+    <p id="adaptive-error" data-step-error class="ui-error" role="alert"></p>
+    <div class="ui-controls"><button type="button" data-step-previous hidden>이전</button><button type="button" data-step-skip hidden>선택 단계 건너뛰기</button><button type="submit" data-step-next>다음</button><button type="button" data-step-reset>처음부터 다시</button></div>
+  </form><p data-step-result role="status"></p>
+</section><footer><p class="ui-hint">출처: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02) p.430, 431, 433, 434, 435, 436. 공공누리 제1유형. 브라우저 검증과 앱 연결은 구분합니다.</p></footer></main></body></html>

@@ -6,6 +6,8 @@
 
 ## 절차
 
+UI 수정은 `altool/standards.md`의 디자인 실측 완료 계약을 적용한다. 변경 후 같은 기대값으로 관찰을 다시 수집한다. 실패/미검증이면 `visual.ui_contracts=failed`와 미해소 갭을 유지하며, 이전 구현 hash의 증거를 재사용하지 않는다.
+
 `$altool fix` 뒤 입력은 현재 feature의 갭 수정 범위나 우선순위에 대한 추가 지시다. 기능명으로 해석하거나 `currentFeature`를 전환하지 않는다.
 
 ### 1. 실행 조건 확인

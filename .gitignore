@@ -17,6 +17,10 @@ node_modules/
 
 # Python
 __pycache__/
+.venv/
+
+# Local PDF inspection renders
+tmp/pdfs/
 
 # Env / secrets
 .env

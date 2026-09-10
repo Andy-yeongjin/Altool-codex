@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><title>전체·부분 선택 체크박스 · 공통 UI 자산</title><link rel="stylesheet" href="../../foundations/tokens-2024.css"><link rel="stylesheet" href="../runtime.css"><style>body{margin:0}main{max-width:60rem;margin:auto;padding:2rem 1rem}.notice{padding:1rem;background:var(--krds24-gray-5);border-left:4px solid var(--krds24-primary-60);margin-bottom:2rem;font-size:.9375rem}input[type=number]{width:6rem}</style><script src="../messages.js" defer></script><script src="../runtime.js" defer></script></head><body class="altool-ui krds-2024-tokens ui-preview"><main><h1>전체·부분 선택 체크박스</h1><p class="notice">Altool 작성 재사용 UI · KRDS 2024.02 참고. 샘플 데이터이며 전송·로그인·실제 업무 처리는 연결하지 않았습니다.</p>
+<fieldset data-ui="checkbox-group"><legend>안내받을 항목</legend>
+  <label><input type="checkbox" data-select-all>전체 선택</label>
+  <label><input type="checkbox" data-select-item value="notices" checked>공지사항</label>
+  <label><input type="checkbox" data-select-item value="updates">업데이트 소식</label>
+  <label><input type="checkbox" data-select-item value="events">행사 소식</label>
+  <label><input type="checkbox" data-select-item value="unavailable" disabled>현재 선택할 수 없는 항목</label>
+  <p role="status" data-selection-status></p>
+</fieldset><footer><p class="ui-hint">출처: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02) p.406, 411, 413, 415, 417. 공공누리 제1유형. 브라우저 검증과 앱 연결은 구분합니다.</p></footer></main></body></html>

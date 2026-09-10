@@ -1,0 +1,14 @@
+/* Alternative layouts for KRDS basic pattern examples; same original Altool visual tokens. */
+.variant-tabs{display:flex;gap:var(--krds24-space-4);border-bottom:2px solid var(--krds24-gray-30);margin-top:var(--krds24-space-24);overflow-x:auto;padding:var(--krds24-space-4) var(--krds24-space-4) 0}
+.variant-tabs [role=tab]{border-radius:var(--krds24-radius-6) 6px 0 0;border-bottom:0;white-space:nowrap;background:var(--surface)}
+.variant-tabs [aria-selected=true]{background:var(--primary);color:var(--krds24-gray-0);border-color:var(--primary)}
+.variant-panel{padding:var(--krds24-space-16) 0;min-height:200px}
+.filter-bar{border:1px solid var(--krds24-gray-30);border-radius:var(--krds24-radius-6);padding:var(--krds24-space-16);background:var(--surface)}
+.filter-bar .filter-fields{display:grid;grid-template-columns:repeat(2,minmax(160px,1fr));gap:0 var(--krds24-space-16)}
+.filter-bar .field{margin:var(--krds24-space-8) 0}
+.filter-bar .actions{margin:var(--krds24-space-16) 0 0}
+.filter-modal #variant-filter-form{border:0;padding:0;background:var(--krds24-gray-0)}
+.filter-modal .filter-fields{display:block}
+.layout-picker{max-width:420px}
+.filter-summary{padding:calc(var(--krds24-space-8) + var(--krds24-space-4)) 0;border-bottom:1px solid var(--krds24-gray-30)}
+@media(max-width:600px){.filter-bar .filter-fields{grid-template-columns:minmax(0,1fr)}.variant-tabs{gap:var(--krds24-space-4)}.variant-tabs [role=tab]{padding:var(--krds24-space-8) calc(var(--krds24-space-8) + var(--krds24-space-4))}}

@@ -224,12 +224,12 @@ body { background: var(--bg); color: var(--text); font-family: 'Pretendard Varia
       <div class="big-num prep">3</div>
       <div class="big-step-text">
         <h2>운영체제에 맞는 setup 실행</h2>
-        <p>Windows는 <strong style="color:var(--text)">setup.bat</strong>, macOS는 <strong style="color:var(--text)">setup.command</strong>를 더블클릭 → 폴더 선택 창에서 <strong style="color:var(--text)">대상 프로젝트 폴더</strong>를 선택. macOS에서 실행 권한으로 열리지 않으면 터미널에서 <code>bash setup.command</code>를 실행합니다.</p>
+        <p>Python 3를 먼저 준비합니다. YAML 파서는 제품에 포함되어 별도 pip 설치나 가상환경 활성화가 필요 없습니다. Windows는 <strong style="color:var(--text)">setup.bat</strong>, macOS는 <strong style="color:var(--text)">setup.command</strong>를 실행하고 <strong style="color:var(--text)">대상 프로젝트 폴더</strong>를 선택합니다.</p>
       </div>
     </div>
     <div class="tip success">
       <div class="tip-icon">📦</div>
-      <div class="tip-text">엔진(<code>altool/</code>)과 <code>$altool</code> 명령어를 설치하고, 헌법(<code>constitution.md</code>)·디자인 계약(<code>designs/design.md</code>)은 기존 파일이 있으면 보존합니다. <strong>.gitignore도 없으면 만들어줍니다.</strong></div>
+      <div class="tip-text">엔진·명령어·제품 헌법을 갱신하고 기존 <code>standards/</code>와 AGENTS는 보존합니다. 다른 헌법은 <code>.altool/backups/</code>에 백업 후 교체합니다. 기존 디자인만 있으면 <code>standards/design.md</code>로 복사하고 원본을 남깁니다. <code>$altool setup</code>은 초기 설치·재개 모두 필수 검증을 수행하며, AGENTS의 표준 진입 안내가 없으면 AI가 기존 지침을 보존하며 보완합니다.</div>
     </div>
   </div>
 
@@ -247,7 +247,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Pretendard Varia
     </div>
     <div class="tip info">
       <div class="tip-icon">🐣</div>
-      <div class="tip-text">Python 3 품질 게이트 → 로컬 자산·헌법 버전 확인까지 자동으로 수행합니다. Node.js는 Node 프로젝트일 때만 확인하고, Vercel React 스킬은 설치본에 이미 포함됩니다. 끝나면 <strong>"🐣 Altool 초기 설치 완료!"</strong>가 뜹니다. <strong>별도 플러그인 설치는 없습니다.</strong></div>
+      <div class="tip-text">Python 3 품질 게이트 → 로컬 자산·헌법 무결성·표준 라우터 확인까지 자동으로 수행합니다. Node.js는 Node 프로젝트일 때만 확인하고, Vercel React 스킬은 설치본에 이미 포함됩니다. 끝나면 <strong>"🐣 Altool 초기 설치 완료!"</strong>가 뜹니다. <strong>별도 플러그인 설치는 없습니다.</strong></div>
     </div>
   </div>
 
@@ -262,12 +262,12 @@ body { background: var(--bg); color: var(--text); font-family: 'Pretendard Varia
       <div class="big-step-text">
         <h2>$altool design_source — 디자인 파일이 있다면</h2>
         <p>Claude 디자인 HTML, Pencil.dev(.pen), Stitch 디자인에서 색상·폰트·간격·컴포넌트 외형을 자동 추출합니다</p>
-        <span class="when">없으면 건너뛰세요 — 기본 디자인 시스템이 이미 설치되어 있습니다</span>
+        <span class="when">디자인 원본이 없으면 Research에서 설치된 TBD 템플릿을 프로젝트 계약으로 채웁니다</span>
       </div>
     </div>
     <div class="tip info">
       <div class="tip-icon">📁</div>
-      <div class="tip-text"><strong>Claude HTML</strong>: <code>.html</code> 파일을 <code>designs/claude-design/</code> 폴더에 — 있으면 최우선 디자인 원천이며, <code>design.md</code>가 없거나 오래됐으면 oneshot/freedom이 자동 정규화 &nbsp;|&nbsp; <strong>Pencil.dev</strong>: <code>.pen</code> 파일을 <code>designs/</code> 폴더에 &nbsp;|&nbsp; <strong>Stitch</strong>: ZIP 압축 해제 후 <code>designs/stitch/</code> 폴더에</div>
+      <div class="tip-text"><strong>Claude HTML</strong>: <code>designs/claude-design/</code> &nbsp;|&nbsp; <strong>Pencil.dev</strong>: <code>designs/</code>의 <code>.pen</code> &nbsp;|&nbsp; <strong>Stitch</strong>: 압축 해제 후 <code>designs/stitch/</code>. 하위 화면 폴더와 연결 CSS·이미지를 보존합니다. oneshot/freedom은 원본 변경과 기존 계약을 비교해 필요할 때 자동 정규화합니다.</div>
     </div>
     <div class="cmd-block">
       <div class="cmd-header"><span class="cmd-label">Codex 대화창에 붙여넣기</span><button class="cmd-copy" onclick="copyCmd(this)">복사</button></div>
@@ -275,7 +275,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Pretendard Varia
     </div>
     <div class="tip success">
       <div class="tip-icon">✨</div>
-      <div class="tip-text"><code>constitution.md</code>의 범용 디자인 품질 원칙을 기준으로 <strong>검토·보정</strong>되어 <code>designs/design.md</code>가 생성됩니다. 이후 모든 UI가 이 디자인 시스템을 우선 사용합니다.</div>
+      <div class="tip-text"><code>constitution.md</code>의 범용 디자인 품질 원칙을 기준으로 <strong>검토·보정</strong>되어 <code>standards/design.md</code>가 생성됩니다. 이후 모든 UI가 이 디자인 시스템을 우선 사용합니다.</div>
     </div>
   </div>
 </div>
@@ -289,12 +289,12 @@ body { background: var(--bg); color: var(--text); font-family: 'Pretendard Varia
       <div class="big-step-text">
         <h2>요구사항이 정리되어 있다면 PRD로</h2>
         <p><code style="color:var(--cyan)">prd/</code> 폴더에 .md를 넣으면 oneshot이 자동 감지해 빠짐없이 반영합니다</p>
-        <span class="when">참고 문서(PDF·이미지·기획서)는 prd/refs/ 폴더에 — 함께 읽습니다</span>
+        <span class="when">참고 문서(PDF·이미지·기획서)는 prd/refs/ 폴더에 — 관련 항목을 선택해 읽습니다</span>
       </div>
     </div>
     <div class="tip info">
       <div class="tip-icon">📝</div>
-      <div class="tip-text"><strong>PRD 작성이 막연하다면</strong> <a href="prd-builder.html" target="_blank" style="color:var(--cyan)">PRD Builder</a>를 브라우저로 열고 폼만 채우세요 — 다운로드한 파일을 <code>prd/</code>에 넣으면 끝.</div>
+      <div class="tip-text"><strong>PRD와 디자인을 한곳에서 준비하려면</strong> <a href="../project-starter.html" target="_blank" style="color:var(--cyan)">Altool 프로젝트 스타터</a>를 Chrome/Edge에서 여세요. 프로젝트 폴더 선택 → PRD 가져오기/작성 → 디자인·참고자료 선택 → 저장하면 정해진 위치에 직접 배치됩니다. ZIP 다운로드는 하지 않으며 기존 파일은 덮어쓰기 전에 확인합니다.</div>
     </div>
   </div>
 </div>
@@ -510,14 +510,14 @@ $altool outbox</div>
 <div class="accordion" onclick="toggleAccordion(event, this)">
   <div class="accordion-header"><span style="flex:1;">🏛️ 헌법이 뭔가요? 바꿀 수 있나요?</span><span class="acc-toggle">▼</span></div>
   <div class="accordion-body">
-    <p>프로젝트 루트의 <code>constitution.md</code> — 개발 방법론, 조건부 기술 기본값, 보안·품질 게이트, 반응형, Claude 디자인 HTML 우선의 디자인 권위를 정의합니다. 모든 단계가 적용하며, 파일을 직접 수정하면 프로젝트 정책을 커스터마이징할 수 있습니다.</p>
+    <p><code>constitution.md</code>는 개발 원칙과 품질 게이트를 정하는 제품 관리 파일로, Altool 업데이트로만 바뀝니다. 프로젝트에서 원하는 동작은 대화로 요청하세요. AI가 공통 규칙은 <code>standards/</code>에, 기능 한정 요구는 PRD/Spec에 반영하고 관련 기능을 검증합니다. YAML 편집이나 기술 프로필 선택은 필요 없습니다. 요청 밖의 기존 동작까지 바뀌면 영향을 설명하고 확인합니다.</p>
   </div>
 </div>
 
 <div class="accordion" onclick="toggleAccordion(event, this)">
   <div class="accordion-header"><span style="flex:1;">📦 altool/ 폴더만 다른 프로젝트에 복사해도 되나요?</span><span class="acc-toggle">▼</span></div>
   <div class="accordion-body">
-    <p>됩니다. <code>altool/</code> + <code>.agents/skills/altool</code> 두 가지만 있으면 동작합니다. 헌법·디자인 파일이 없으면 해당 규칙만 비활성화되고(1회 안내) 나머지는 정상 작동합니다.</p>
+    <p>설치기를 사용하세요. 현재 엔진은 로컬 스킬·제품 헌법·무결성 기준·표준 라우터를 함께 사용합니다. 헌법 누락이나 변경은 검증을 차단하며 설치기로 복구해야 합니다. 기존 프로젝트 표준은 재설치해도 보존됩니다.</p>
   </div>
 </div>
 
@@ -542,7 +542,7 @@ $altool outbox</div>
 
 <div class="footer">
   🥚 Altool · Full Guide &nbsp;·&nbsp; <a href="https://github.com/Andy-yeongjin/Altool-codex" target="_blank">github.com/Andy-yeongjin/Altool-codex</a><br>
-  더 보기: <a href="guide-oneshot.html">oneshot 상세 가이드</a> · <a href="prd-builder.html">PRD Builder</a> · <a href="design-preview.html">디자인 시스템 참고 프리뷰</a>
+  더 보기: <a href="guide-oneshot.html">oneshot 상세 가이드</a> · <a href="../project-starter.html">프로젝트 스타터</a> · <a href="design-preview.html">디자인 시스템 참고 프리뷰</a>
 </div>
 
 </div><!-- /container -->

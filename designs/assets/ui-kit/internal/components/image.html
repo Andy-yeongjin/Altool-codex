@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>이미지 사용 예제 · KRDS 2024 참고 자산</title>
+  <link rel="stylesheet" href="../foundations/tokens-2024.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--krds24-gray-90); background: var(--krds24-gray-0); font: 400 1.0625rem/1.5 system-ui, sans-serif; }
+    main { max-width: 54rem; padding: 3rem 1.5rem; margin: auto; }
+    h1 { font-size: 2rem; margin: .5rem 0 1rem; }
+    h2 { font-size: 1.3125rem; margin: 0 0 1rem; }
+    h3 { font-size: 1.0625rem; margin: 0 0 .5rem; }
+    p { margin: 0 0 1rem; }
+    section { margin-top: 3rem; }
+    .eyebrow { color: var(--krds24-primary-60); font-size: .9375rem; font-weight: 700; }
+    .notice { padding: 1rem; background: var(--krds24-gray-5); border-left: 4px solid var(--krds24-primary-60); }
+    figure { margin: 0; }
+    img { max-width: 100%; height: auto; }
+    .diagram { display: block; width: 100%; }
+    figcaption { margin-top: .75rem; font-size: .9375rem; color: var(--krds24-gray-70); }
+    .steps { padding-left: 1.5rem; }
+    .steps li { margin: .5rem 0; }
+    .divider { display: block; width: 100%; margin: 1.5rem 0; }
+    .info-link { display: inline-flex; align-items: center; gap: .5rem; padding: .625rem; min-height: 2.75rem; color: var(--krds24-primary-60); text-underline-offset: .2em; }
+    .info-link img { flex: none; }
+    :focus-visible { outline: 3px solid var(--krds24-primary-60); outline-offset: 3px; }
+    .fallback { border: 1px solid var(--krds24-gray-60); border-radius: .5rem; padding: 1.5rem; background: var(--krds24-gray-5); }
+    footer { margin-top: 3rem; border-top: 1px solid var(--krds24-gray-40); padding-top: 1rem; font-size: .9375rem; }
+    @media (max-width: 600px) { main { padding: 2rem 1rem; } h1 { font-size: 1.5625rem; } section { margin-top: 2.5rem; } }
+  </style>
+</head>
+<body class="krds-2024-tokens">
+<main>
+  <header>
+    <p class="eyebrow">KRDS 2024.02 · 이미지 p.299-306</p>
+    <h1>이미지는 목적에 맞게</h1>
+    <p>정보를 전하는 그림, 장식, 기능 아이콘을 구분하는 재사용 예제입니다.</p>
+    <p class="notice">Altool이 직접 작성한 참고 예제입니다. 실제 정부서비스나 신청 화면이 아닙니다. 사진·기관 로고는 복제하지 않았으며, 이 도식은 제품 사진을 대체하는 자산이 아닙니다.</p>
+  </header>
+
+  <section aria-labelledby="information-title">
+    <h2 id="information-title">1. 정보가 있는 이미지</h2>
+    <figure>
+      <img class="diagram" src="image-diagram.svg" width="720" height="220" alt="문서 작성, 내용 확인, 결과 알림이 화살표로 이어지는 세 단계">
+      <figcaption>안내 흐름의 구조를 보여주는 정보도식. 이미지 자체는 클릭하거나 초점을 받지 않습니다.</figcaption>
+    </figure>
+    <div id="image-description" tabindex="-1">
+      <h3>그림의 상세 설명</h3>
+      <ol class="steps">
+        <li><strong>신청:</strong> 필요한 내용을 작성합니다.</li>
+        <li><strong>확인:</strong> 작성한 내용이 맞는지 검토합니다.</li>
+        <li><strong>결과 안내:</strong> 처리가 끝나면 결과를 확인합니다.</li>
+      </ol>
+      <p>중요한 설명은 그림에 합성하지 않고 이처럼 HTML 텍스트로 제공합니다.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="decoration-title">
+    <h2 id="decoration-title">2. 의미를 추가하지 않는 장식</h2>
+    <img class="divider" src="image-divider.svg" width="720" height="16" alt="">
+    <p>위 구분 장식은 빈 대체 텍스트를 사용합니다. 없어도 내용은 동일하게 이해할 수 있습니다.</p>
+  </section>
+
+  <section aria-labelledby="functional-title">
+    <h2 id="functional-title">3. 기능은 링크가 담당</h2>
+    <a class="info-link" href="#image-description"><img src="image-info.svg" width="24" height="24" alt="">그림의 상세 설명으로 이동</a>
+    <p>기능 이름은 링크 텍스트로 제공하고 중복 아이콘은 읽지 않습니다. 클릭과 키보드 실행은 이미지가 아닌 링크가 담당합니다.</p>
+  </section>
+
+  <section aria-labelledby="fallback-title">
+    <h2 id="fallback-title">4. 그림을 표시할 수 없는 상태</h2>
+    <div class="fallback">
+      <h3>안내 그림을 표시할 수 없습니다</h3>
+      <p>신청 내용을 작성하고 확인한 뒤 결과를 안내받는 순서입니다. 위의 상세 설명에서 각 단계를 확인할 수 있습니다.</p>
+    </div>
+    <p>대체 안내의 정적 상태 예시입니다. 이 페이지는 네트워크 오류를 발생시키거나 복구·재시도 기능을 실행하지 않습니다.</p>
+  </section>
+
+  <footer>근거: 행정안전부 「디지털 정부서비스 UI/UX 가이드라인(2024.02)」 p.299-306. 공공누리 제1유형 출처표시. 도식·마크업: Altool 신규 작성.</footer>
+</main>
+</body>
+</html>

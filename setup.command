@@ -25,16 +25,16 @@ if [[ "$(uname -s)" != "Darwin" ]]; then
     echo "This installer is for macOS. Use setup.bat on Windows."
     exit 1
 fi
-if ! command -v ditto >/dev/null 2>&1; then
-    echo "Required macOS command not found: ditto"
-    exit 1
-fi
 if [[ ! -f "$ALTOOL_DIR/altool/scripts/check.py" ]]; then
     echo "Altool gate missing: $ALTOOL_DIR/altool/scripts/check.py"
     exit 1
 fi
 if [[ ! -f "$ALTOOL_DIR/templates/codex/skills/altool/SKILL.md" ]]; then
     echo "Bundled Altool skill missing: $ALTOOL_DIR/templates/codex/skills/altool/SKILL.md"
+    exit 1
+fi
+if [[ ! -f "$ALTOOL_DIR/project-starter.html" || ! -f "$ALTOOL_DIR/altool/scripts/project-starter.js" ]]; then
+    echo "Project Starter source missing. Restore the complete Altool package."
     exit 1
 fi
 
@@ -49,6 +49,12 @@ for candidate in python3 python; do
 done
 if [[ -z "$PYTHON_CMD" ]]; then
     echo "Python 3 is required, and altool/scripts/check.py --help must run successfully."
+    exit 1
+fi
+
+if ! "$PYTHON_CMD" "$ALTOOL_DIR/altool/scripts/standards.py" validate --root "$ALTOOL_DIR"; then
+    echo "Source validation failed; see the error above. Restore damaged product files."
+    echo "YAML support is bundled. No pip installation is needed; restore the complete Altool package."
     exit 1
 fi
 
@@ -80,6 +86,10 @@ fi
 
 mkdir -p "$PROJECT_DIR"
 PROJECT_DIR="$(cd "$PROJECT_DIR" && pwd -P)"
+if [[ "$PROJECT_DIR" == "$ALTOOL_DIR" ]]; then
+    echo "The installation target must differ from the Altool source directory."
+    exit 1
+fi
 
 copy_if_missing() {
     local source_file="$1"
@@ -111,12 +121,8 @@ replace_managed_dir() {
         exit 1
     fi
     rm -rf "$target_dir"
-    ditto "$source_dir" "$target_dir"
+    "$PYTHON_CMD" "$ALTOOL_DIR/altool/scripts/distribution.py" "$source_dir" "$target_dir"
     echo "  [OK] $display_name"
-}
-
-extract_constitution_version() {
-    sed -n 's/^\*\*Version\*\*:[[:space:]]*\([0-9][0-9.]*\).*/\1/p' "$1" | head -n 1
 }
 
 echo
@@ -150,37 +156,9 @@ else
     echo "  [WARN] Codex skill templates missing: templates/codex/skills"
 fi
 
-copy_if_missing "$ALTOOL_DIR/constitution.md" "$PROJECT_DIR/constitution.md" "constitution.md"
-
-if [[ ! -f "$ALTOOL_DIR/constitution.md" ]]; then
-    echo "  [WARN] Engine constitution missing - version check skipped"
-else
-    engine_version="$(extract_constitution_version "$ALTOOL_DIR/constitution.md")"
-    project_version=""
-    if [[ -f "$PROJECT_DIR/constitution.md" ]]; then
-        project_version="$(extract_constitution_version "$PROJECT_DIR/constitution.md")"
-    fi
-
-    if [[ -z "$engine_version" ]]; then
-        echo "  [WARN] Engine constitution has no Version marker - version check skipped"
-    else
-        engine_major="${engine_version%%.*}"
-        if [[ -z "$project_version" ]]; then
-            echo "  [WARN] constitution.md has no Version marker - engine expects major $engine_major.x"
-        else
-            project_major="${project_version%%.*}"
-            if [[ "$project_major" != "$engine_major" ]]; then
-                echo "  [WARN] constitution.md is v$project_version - engine expects major $engine_major.x; review before running \$altool"
-            else
-                echo "  [OK] constitution.md version compatible: v$project_version"
-            fi
-        fi
-    fi
-fi
-
 mkdir -p "$PROJECT_DIR/designs/claude-design"
 echo "  [OK] designs/claude-design/ (Claude design HTML folder)"
-copy_if_missing "$ALTOOL_DIR/designs/design.md" "$PROJECT_DIR/designs/design.md" "designs/design.md"
+"$PYTHON_CMD" "$ALTOOL_DIR/altool/scripts/standards.py" install --source "$ALTOOL_DIR" --root "$PROJECT_DIR"
 
 mkdir -p "$PROJECT_DIR/prd"
 echo "  [OK] prd/ (folder)"

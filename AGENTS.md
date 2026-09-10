@@ -6,6 +6,7 @@ Execution rules for Codex in projects installed with Altool. Project policy live
 
 - Use this file only for agent behavior and UI tool operation. Do not duplicate stack, design, quality, or artifact rules here.
 - Apply `constitution.md` when planning, implementing, or validating project changes.
+- Before project changes, follow `altool/standards.md` to validate product policy, select relevant originals through `standards/standard.yaml`, and maintain shared project contracts within the user's request, including outside `$altool` commands.
 - For `$altool` commands, read the local Altool skill and the matching step before acting.
 
 ## 2. Development Behavior

@@ -1,0 +1,11 @@
+<!-- Altool authored reusable variant; KRDS 2024.02 PDF p.485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497. Include declared dependencies. IDs must be unique when repeating instances. -->
+<div class="altool-ui krds-2024-tokens">
+<section data-guided="tour"><button type="button" data-tour-start>따라하기 시작</button><div class="guided-task-body">
+    <h2>자료 카드 만들기 · 로컬 예제</h2><p>제목·분류로 화면 안의 미리보기만 만듭니다. 서버 전송이나 저장은 하지 않습니다.</p>
+    <div data-tour-target="0" class="guided-target"><form data-tour-title-form novalidate><label for="coach-title">자료 제목</label><p id="coach-title-hint">1~40자 제목을 입력하고 적용해 주세요.</p><input id="coach-title" data-tour-title maxlength="40" aria-describedby="coach-title-hint coach-error"><button type="submit">제목 적용</button></form></div>
+    <div data-tour-target="1" class="guided-target"><label for="coach-category">자료 분류</label><select id="coach-category" data-tour-category><option value="">선택해 주세요</option><option value="안내">안내</option><option value="서식">서식</option></select></div>
+    <div data-tour-target="2" class="guided-target"><button type="button" data-tour-preview>미리보기 생성</button><section data-tour-output aria-label="자료 카드 미리보기" hidden><h3 data-tour-output-title></h3><p data-tour-output-category></p></section></div>
+    <p id="coach-error" data-tour-error class="ui-error" role="alert"></p><p data-tour-status role="status">따라하기를 시작하지 않았습니다.</p>
+    <section data-tour-balloon class="guided-balloon" aria-label="현재 따라하기 안내" hidden><h3 data-tour-heading tabindex="-1"></h3><p data-tour-description></p><p data-tour-count></p><div class="ui-controls"><button type="button" data-tour-stop>그만보기</button><button type="button" data-tour-previous>이전 안내</button><button type="button" data-tour-next>다음 안내</button><button type="button" data-tour-finish hidden>따라하기 마치기</button></div></section>
+  </div></section>
+</div>

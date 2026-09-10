@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>tts · KRDS 참고 예제</title>
+<link rel="stylesheet" href="../upstream/resources/css/component/output.css">
+<link rel="stylesheet" href="../upstream/resources/css/common/common.css">
+<link rel="stylesheet" href="../upstream/resources/css/plugin/swiper-bundle.min.css">
+<script src="../upstream/resources/js/plugin/swiper-bundle.min.js"></script>
+<style>body{padding:24px}.altool-demo-notice{display:block;background:#fff3cd;color:#473500;padding:12px;font:14px/1.6 system-ui;margin-bottom:24px}:focus-visible{outline:3px solid #005fcc;outline-offset:3px}</style>
+</head><body><aside class="altool-demo-notice">KRDS 공식 키트 1.1.0 참고 예제 · 실제 정부 서비스가 아닙니다. 로그인·신청·저장 등의 서버 동작은 연결하지 않았습니다. 2024 PDF와의 개별 준수 검증은 별도입니다.</aside>
+<!-- TTS 버튼 - Default 타입 -->
+<button type="button" class="krds-tts medium" onclick="krds_playTts('TTS 기능이란 화면에 표시된 주요 안내, 입력 서식 설명, 업무 진행 상태 등의 텍스트를 사용자가 요청했을 때 음성으로 읽어주는 보조적 사용자 지원 기능을 말하며, 이는 시각 정보의 대체가 아닌 보완 수단으로서 다른 접근성 기능(글자 크기 조절, 대비 향상, 쉬운모드 등)과 함께 제공되는 것을 원칙으로 한다.', this)">
+	<span class="krds-tts-icon" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+	<span class="krds-tts-text">레이블</span>
+</button>
+
+<!-- TTS 버튼 - Play 타입 -->
+<button type="button" class="krds-tts medium play" onclick="krds_playTts('TTS 기능이란 화면에 표시된 주요 안내, 입력 서식 설명, 업무 진행 상태 등의 텍스트를 사용자가 요청했을 때 음성으로 읽어주는 보조적 사용자 지원 기능을 말하며, 이는 시각 정보의 대체가 아닌 보완 수단으로서 다른 접근성 기능(글자 크기 조절, 대비 향상, 쉬운모드 등)과 함께 제공되는 것을 원칙으로 한다.', this)">
+	<span class="krds-tts-icon" aria-hidden="true">
+		<i class="svg-icon ico-play"></i>
+	</span>
+	<span class="krds-tts-text">재생</span>
+</button>
+
+<!-- TTS 버튼 - 상태 예시 -->
+<button type="button" class="krds-tts medium" disabled>
+	<span class="krds-tts-icon" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+	<span class="krds-tts-text">레이블</span>
+</button>
+<!-- //TTS 버튼 -->
+<script src="../upstream/resources/js/component/ui-script.js"></script>
+</body></html>

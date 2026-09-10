@@ -44,15 +44,15 @@
 ### 1.3 관련 문서
 - Research: {관련 research ID/경로 또는 "없음 — 기능 설명에서 도출"}
 - PRD: {경로 또는 "없음 — 기능 설명에서 도출"}
-- 기준: `constitution.md`, `designs/claude-design/*.html`, 기타 사용자 디자인 입력, `designs/design.md`, Research
+- 기준: `constitution.md`, `designs/claude-design/**/*.html`, 기타 사용자 디자인 입력, `standards/design.md`, Research
 
 ### 1.4 디자인 입력 우선순위
 
 | 우선순위 | 입력 | 감지 경로 | Plan 처리 |
 | ---: | --- | --- | --- |
-| 1 | Claude 디자인 HTML | `{designs/claude-design/*.html 또는 없음}` | {최상위 구조·시각·상태 원천 또는 없음} |
-| 2 | 기타 사용자 디자인 입력 | `{designs/*.pen, designs/stitch/, screenshots, design docs 또는 없음}` | {화면 구조·시각 의도의 직접 원천 또는 없음} |
-| 3 | 프로젝트 디자인 시스템 | `{designs/design.md 또는 없음}` | {상위 원천을 정규화한 구현 계약 또는 없음} |
+| 1 | Claude 디자인 HTML | `{designs/claude-design/**/*.html 또는 없음}` | {최상위 구조·시각·상태 원천 또는 없음} |
+| 2 | 기타 사용자 디자인 입력 | `{designs/**/*.pen, designs/stitch/, screenshots, design docs 또는 없음}` | {화면 구조·시각 의도의 직접 원천 또는 없음} |
+| 3 | 프로젝트 디자인 시스템 | `{standards/design.md 또는 없음}` | {상위 원천을 정규화한 구현 계약 또는 없음} |
 | 4 | Research | `{관련 R-ID 또는 없음}` | {상위 원천의 빈칸 보강 근거} |
 | 5 | AI 자체 판단 | — | {미정 세부 보완만 허용} |
 
@@ -119,7 +119,7 @@
 > analyze에서 충족 확인된 항목만 `- [x]`로 갱신한다.
 
 - [ ] SC-1: FR 전 항목 구현
-- [ ] SC-2: 사용자 디자인 입력이 있으면 그 화면 구조와 시각 기준을 우선 반영. UI 구현은 `designs/design.md`를 기준으로 하며 색상·타이포·간격·둥글기·그림자·컴포넌트·미디어 규칙의 근거가 추적 가능해야 한다. 디자인 시스템이 없으면 Research 또는 design_source에서 `design.md`를 생성한 뒤 진행
+- [ ] SC-2: 사용자 디자인 입력이 있으면 그 화면 구조와 시각 기준을 우선 반영. UI 구현은 `standards/design.md`를 기준으로 하며 색상·타이포·간격·둥글기·그림자·컴포넌트·미디어 규칙의 근거가 추적 가능해야 한다. 디자인 시스템이 없으면 Research 또는 design_source에서 `design.md`를 생성한 뒤 진행
 - [ ] SC-3: 프로덕션 빌드 성공
 - [ ] SC-4: {기능 고유의 핵심 기준}
 

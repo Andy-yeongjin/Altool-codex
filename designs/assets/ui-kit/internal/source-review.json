@@ -1,0 +1,4970 @@
+{
+  "version": 1,
+  "sourceSha256": "701ea58db275cb7790715f0efd9daaa7a2e8a6adc3c6786ab80b21c73a8de8a9",
+  "reviewedPages": 988,
+  "meaning": "Actual individual source-page visual reading. Not browser, all-rule, accessibility or government certification.",
+  "ledgers": [
+    {
+      "path": "designs/assets/ui-kit/internal/foundations/final-source-review.json",
+      "sha256": "5e1540fa7e659aea38cfc64878dbc6bff23172c0df0eb10d159f723edace84d4",
+      "reviewedPages": 121
+    },
+    {
+      "path": "designs/assets/ui-kit/internal/components/visual-review-ledger.json",
+      "sha256": "914fba90b9922ba07c11dfb364e790d1b64d8d50a665de99a2c74654907d712d",
+      "reviewedPages": 439
+    },
+    {
+      "path": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json",
+      "sha256": "550b7328f12e4ebd8a4e315ff5145a7454ccd6e3756437c0e5074d605b5a464b",
+      "reviewedPages": 133
+    },
+    {
+      "path": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json",
+      "sha256": "cc41bdcc7183e525235c9dc7a940855dd6e0c975d9211bca6b95556060e6af56",
+      "reviewedPages": 295
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 2,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 3,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 4,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 5,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 6,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 7,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 8,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 9,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 10,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 11,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 12,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 13,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 14,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 15,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 16,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 17,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 18,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 19,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 20,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 21,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 22,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 23,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 24,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 25,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 26,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 27,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 28,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 29,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 30,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 31,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 32,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 33,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 34,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 35,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 36,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 37,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 38,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 39,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 40,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 41,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 42,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 43,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 44,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 45,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 46,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 47,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 48,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 49,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 50,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 51,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 52,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 53,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 54,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 55,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 56,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 57,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 58,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 59,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 60,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 61,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 62,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 63,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 64,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 65,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 66,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 67,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 68,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 69,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 70,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 71,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 72,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 73,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 74,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 75,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 76,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 77,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 78,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 79,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 80,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 81,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 82,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 83,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 84,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 85,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 86,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 87,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 88,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 89,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 90,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 91,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 92,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 93,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 94,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 95,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 96,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 97,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 98,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 99,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 100,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 101,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 102,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 103,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 104,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 105,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 106,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 107,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 108,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 109,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 110,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 111,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 112,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 113,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 114,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 115,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 116,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 117,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 118,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 119,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 120,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 121,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 122,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 123,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 124,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 125,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 126,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 127,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 128,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 129,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 130,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 131,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 132,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 133,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 134,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 135,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 136,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 137,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 138,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 139,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 140,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 141,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 142,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 143,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 144,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 145,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 146,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 147,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 148,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 149,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 150,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 151,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 152,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 153,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 154,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 155,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 156,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 157,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 158,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 159,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 160,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 161,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 162,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 163,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 164,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 165,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 166,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 167,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 168,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 169,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 170,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 171,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 172,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 173,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 174,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 175,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 176,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 177,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 178,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 179,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 180,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 181,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 182,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 183,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 184,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 185,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 186,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 187,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 188,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 189,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 190,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 191,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 192,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 193,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 194,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 195,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 196,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 197,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 198,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 199,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 200,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 201,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 202,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 203,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 204,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 205,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 206,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 207,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 208,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 209,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 210,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 211,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 212,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 213,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 214,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 215,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 216,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 217,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 218,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 219,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 220,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 221,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 222,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 223,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 224,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 225,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 226,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 227,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 228,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 229,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 230,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 231,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 232,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 233,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 234,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 235,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 236,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 237,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 238,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 239,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 240,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 241,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 242,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 243,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 244,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 245,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 246,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 247,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 248,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 249,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 250,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 251,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 252,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 253,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 254,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 255,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 256,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 257,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 258,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 259,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 260,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 261,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 262,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 263,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 264,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 265,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 266,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 267,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 268,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 269,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 270,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 271,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 272,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 273,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 274,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 275,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 276,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 277,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 278,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 279,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 280,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 281,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 282,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 283,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 284,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 285,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 286,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 287,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 288,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 289,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 290,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 291,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 292,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 293,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 294,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 295,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 296,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 297,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 298,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 299,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 300,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 301,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 302,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 303,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 304,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 305,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 306,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 307,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 308,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 309,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 310,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 311,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 312,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 313,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 314,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 315,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 316,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 317,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 318,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 319,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 320,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 321,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 322,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 323,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 324,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 325,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 326,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 327,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 328,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 329,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 330,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 331,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 332,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 333,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 334,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 335,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 336,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 337,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 338,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 339,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 340,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 341,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 342,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 343,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 344,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 345,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 346,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 347,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 348,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 349,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 350,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 351,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 352,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 353,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 354,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 355,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 356,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 357,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 358,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 359,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 360,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 361,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 362,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 363,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 364,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 365,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 366,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 367,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 368,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 369,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 370,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 371,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 372,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 373,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 374,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 375,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 376,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 377,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 378,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 379,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 380,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 381,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 382,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 383,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 384,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 385,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 386,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 387,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 388,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 389,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 390,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 391,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 392,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 393,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 394,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 395,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 396,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 397,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 398,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 399,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 400,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 401,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 402,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 403,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 404,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 405,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 406,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 407,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 408,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 409,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 410,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 411,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 412,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 413,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 414,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 415,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 416,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 417,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 418,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 419,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 420,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 421,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 422,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 423,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 424,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 425,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 426,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 427,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 428,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 429,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 430,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 431,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 432,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 433,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 434,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 435,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 436,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 437,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 438,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 439,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 440,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 441,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 442,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 443,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 444,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 445,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 446,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 447,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 448,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 449,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 450,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 451,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 452,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 453,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 454,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 455,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 456,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 457,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 458,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 459,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 460,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 461,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 462,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 463,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 464,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 465,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 466,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 467,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 468,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 469,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 470,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 471,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 472,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 473,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 474,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 475,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 476,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 477,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 478,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 479,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 480,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 481,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 482,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 483,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 484,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 485,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 486,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 487,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 488,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 489,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 490,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 491,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 492,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 493,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 494,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 495,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 496,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 497,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 498,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 499,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 500,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 501,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 502,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 503,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 504,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 505,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 506,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 507,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 508,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 509,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 510,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 511,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 512,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 513,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 514,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 515,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 516,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 517,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 518,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 519,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 520,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 521,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 522,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 523,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 524,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 525,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 526,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 527,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 528,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 529,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 530,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 531,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 532,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 533,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 534,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 535,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 536,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 537,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 538,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 539,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 540,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 541,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 542,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 543,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 544,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 545,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 546,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 547,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 548,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 549,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 550,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 551,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 552,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/components/visual-review-ledger.json"
+    },
+    {
+      "page": 553,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 554,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 555,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 556,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 557,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 558,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 559,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 560,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 561,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 562,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 563,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 564,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 565,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 566,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 567,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 568,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 569,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 570,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 571,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 572,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 573,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 574,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 575,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 576,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 577,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 578,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 579,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 580,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 581,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 582,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 583,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 584,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 585,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 586,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 587,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 588,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 589,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 590,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 591,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 592,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 593,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 594,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 595,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 596,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 597,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 598,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 599,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 600,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 601,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 602,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 603,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 604,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 605,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 606,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 607,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 608,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 609,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 610,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 611,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 612,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 613,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 614,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 615,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 616,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 617,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 618,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 619,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 620,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 621,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 622,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 623,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 624,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 625,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 626,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 627,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 628,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 629,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 630,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 631,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 632,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 633,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 634,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 635,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 636,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 637,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 638,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 639,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 640,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 641,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 642,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 643,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 644,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 645,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 646,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 647,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 648,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 649,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 650,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 651,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 652,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 653,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 654,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 655,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 656,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 657,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 658,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 659,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 660,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 661,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 662,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 663,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 664,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 665,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 666,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 667,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 668,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 669,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 670,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 671,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 672,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 673,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 674,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 675,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 676,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 677,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 678,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 679,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 680,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 681,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 682,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 683,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 684,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 685,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/basic/final-source-review.json"
+    },
+    {
+      "page": 686,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 687,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 688,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 689,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 690,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 691,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 692,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 693,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 694,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 695,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 696,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 697,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 698,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 699,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 700,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 701,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 702,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 703,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 704,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 705,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 706,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 707,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 708,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 709,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 710,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 711,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 712,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 713,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 714,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 715,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 716,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 717,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 718,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 719,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 720,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 721,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 722,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 723,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 724,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 725,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 726,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 727,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 728,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 729,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 730,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 731,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 732,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 733,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 734,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 735,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 736,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 737,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 738,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 739,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 740,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 741,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 742,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 743,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 744,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 745,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 746,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 747,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 748,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 749,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 750,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 751,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 752,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 753,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 754,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 755,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 756,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 757,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 758,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 759,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 760,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 761,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 762,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 763,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 764,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 765,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 766,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 767,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 768,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 769,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 770,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 771,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 772,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 773,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 774,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 775,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 776,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 777,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 778,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 779,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 780,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 781,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 782,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 783,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 784,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 785,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 786,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 787,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 788,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 789,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 790,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 791,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 792,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 793,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 794,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 795,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 796,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 797,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 798,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 799,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 800,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 801,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 802,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 803,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 804,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 805,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 806,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 807,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 808,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 809,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 810,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 811,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 812,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 813,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 814,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 815,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 816,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 817,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 818,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 819,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 820,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 821,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 822,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 823,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 824,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 825,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 826,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 827,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 828,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 829,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 830,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 831,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 832,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 833,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 834,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 835,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 836,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 837,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 838,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 839,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 840,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 841,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 842,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 843,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 844,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 845,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 846,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 847,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 848,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 849,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 850,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 851,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 852,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 853,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 854,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 855,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 856,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 857,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 858,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 859,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 860,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 861,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 862,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 863,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 864,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 865,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 866,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 867,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 868,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 869,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 870,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 871,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 872,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 873,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 874,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 875,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 876,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 877,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 878,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 879,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 880,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 881,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 882,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 883,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 884,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 885,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 886,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 887,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 888,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 889,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 890,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 891,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 892,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 893,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 894,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 895,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 896,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 897,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 898,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 899,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 900,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 901,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 902,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 903,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 904,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 905,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 906,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 907,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 908,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 909,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 910,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 911,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 912,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 913,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 914,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 915,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 916,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 917,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 918,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 919,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 920,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 921,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 922,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 923,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 924,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 925,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 926,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 927,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 928,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 929,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 930,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 931,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 932,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 933,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 934,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 935,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 936,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 937,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 938,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 939,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 940,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 941,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 942,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 943,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 944,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 945,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 946,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 947,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 948,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 949,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 950,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 951,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 952,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 953,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 954,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 955,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 956,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 957,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 958,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 959,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 960,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 961,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 962,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 963,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 964,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 965,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 966,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 967,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 968,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 969,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 970,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 971,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 972,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 973,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 974,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 975,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 976,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 977,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 978,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 979,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 980,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/patterns/services/pdf-visual-review.json"
+    },
+    {
+      "page": 981,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 982,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 983,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 984,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 985,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 986,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 987,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    },
+    {
+      "page": 988,
+      "status": "source-visually-reviewed",
+      "ledger": "designs/assets/ui-kit/internal/foundations/final-source-review.json"
+    }
+  ]
+}

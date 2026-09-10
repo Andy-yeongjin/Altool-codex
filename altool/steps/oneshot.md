@@ -2,6 +2,8 @@
 
 **사용법**: `$altool oneshot [기능 설명]`
 
+UI 하위 spec/analyze/fix/browser는 `altool/standards.md`의 디자인 실측 완료 계약을 적용한다. Browser 실측이 누락/실패하면 최종 완료하지 않는다. 서버 주소는 `altool/steps/_server.md`의 실제 프로젝트 주소를 사용한다.
+
 **예시**:
 ```
 $altool oneshot 사용자가 음식을 검색해서 끼니별로 기록하고 하루 칼로리를 확인하는 식단 기록 기능
@@ -9,7 +11,7 @@ $altool oneshot 사용자가 음식을 검색해서 끼니별로 기록하고 �
 
 기능 설명 하나로 웹 조사 → 개발 계획 → 구현 명세 → 구현 → 갭 분석 → 자동 개선 → 브라우저 검증까지 **7단계를 자동 완주**합니다.
 각 단계는 `altool/steps/`의 해당 step을 **자동 파이프라인 모드**(Checkpoint 생략, 권장 옵션 자동 선택 — Altool 공통 규칙)로 실행합니다.
-헌법 정책은 재서술하지 않고 적용합니다. 직접 디자인 입력이 있는데 `designs/design.md`가 없거나 유효하지 않으면 research 전에 `design_source`를 실행하고, 이후 단계는 정규화된 디자인 계약을 사용합니다.
+헌법 정책은 재서술하지 않고 적용합니다. 디자인 입력 감지·갱신은 `altool/standards.md`의 공통 절차를 적용하고, 이후 단계는 동기화된 디자인 계약을 사용합니다.
 
 ---
 
@@ -23,14 +25,14 @@ $altool oneshot 사용자가 음식을 검색해서 끼니별로 기록하고 �
    |------|------|------|---------|
    | 엔진 | `altool/` | 필수 | 중단 — Windows는 `setup.bat`, macOS는 `setup.command` 안내 |
    | 선행 조사 | `docs/00-research/*.research.md` | 선택 | oneshot의 research와 함께 참고 |
-   | 헌법 | `constitution.md` | 권장 | 1회 경고 후 계속 (Altool 자산 규칙) |
-   | Claude 디자인 헌법 | `designs/claude-design/*.html` | 선택, 있으면 최우선 | research 전 `design_source` 자동 실행 |
-   | 디자인 시스템 | `designs/design.md` | UI 작업 필수 | research 단계에서 생성 |
-   | 사용자 디자인 입력 | `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}` | 선택 | research에서 디자인 시스템 생성 근거로 사용 |
+   | 제품 헌법 | `constitution.md` + `altool/constitution.sha256` | 필수 | 무결성 검사 실패·누락 시 설치기 복구 안내 후 중단 |
+   | Claude 디자인 헌법 | `designs/claude-design/**/*.html` | 선택, 있으면 최우선 | research 전 `design_source` 자동 실행 |
+   | 디자인 시스템 | `standards/design.md` | UI 작업 필수 | research 단계에서 생성 |
+   | 사용자 디자인 입력 | `designs/**/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}` | 선택 | research에서 디자인 시스템 생성 근거로 사용 |
    | PRD | `prd/*.md` | 선택 | — 표시 |
-   | PRD 참고 | `prd/refs/*` (전부 읽음, PRD 우선) | 선택 | — 표시 |
+   | PRD 참고 | `prd/refs/*` (관련 항목 선택, PRD 우선) | 선택 | — 표시 |
 
-   PRD·.pen·스크린샷·디자인 문서가 여러 개이고 적용 대상이 모호하면 → 멈추고 사용자에게 선택 요청 (단, `prd/refs/`는 전부 자동 읽기).
+   PRD·.pen·스크린샷·디자인 문서가 여러 개이고 적용 대상이 모호하면 → 사용자 요청과 파일의 범위를 대조하고 중요한 선택을 안전하게 추론할 수 없을 때 확인한다. 참고 문서는 관련 항목을 선택하고 입력 증거에 근거를 기록한다. 활성 표준은 `altool/standards.md`에 따라 의존 항목까지 반드시 읽는다.
 
    감지 결과 보고:
    ```
@@ -38,15 +40,12 @@ $altool oneshot 사용자가 음식을 검색해서 끼니별로 기록하고 �
      Research: ✅/—  헌법: ✅/—  Claude 디자인: ✅/—  디자인 시스템: ✅/—  사용자 디자인 입력: ✅/—  PRD: ✅/—  PRD 참고: ✅/—
    ```
 
-4. **디자인 소스 자동 정규화**: 아래 조건 중 하나라도 참이면 [1/7] research 전에 `altool/steps/design_source.md`를 자동 수행한다. 사용자가 별도로 `$altool design_source`를 입력할 필요가 없다.
-   - `designs/claude-design/*.html`이 있고 `designs/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있음
-   - `designs/claude-design/*.html`이 `designs/design.md`보다 최신이거나, `design.md`의 Reference Source Map에 해당 HTML 경로가 없음
-   - `designs/stitch/` 또는 `designs/*.pen`이 있고 `designs/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있음
+4. **디자인 소스 자동 정규화**: `altool/standards.md`의 「디자인 입력 탐색·갱신」으로 필요 여부와 담당 단계를 판단한다. `design_source` 대상이면 [1/7] research 전에 자동 수행한다. 일반 이미지·문서만 있으면 research에서 동기화한다. 별도 사용자 명령은 필요 없다.
 
    자동 실행 시 출력:
    ```text
    🥚 [0.5/7] 디자인 소스 자동 정규화 시작...
-   🐣 [0.5/7] 디자인 소스 자동 정규화 완료: designs/design.md
+   🐣 [0.5/7] 디자인 소스 자동 정규화 완료: standards/design.md
    ```
 
    `designs/claude-design/`에 HTML이 여러 개 있고 색상·타이포·컴포넌트 규칙이 충돌하면 자동 병합하지 말고 어떤 HTML이 권위 기준인지 사용자에게 확인한다. 충돌이 없으면 모든 HTML을 화면별 디자인 헌법으로 반영한다.
@@ -58,11 +57,11 @@ $altool oneshot 사용자가 음식을 검색해서 끼니별로 기록하고 �
 > 각 단계 시작 전 `🥚 [N/7] 단계명 시작...`, 완료 후 `🐣 [N/7] 단계명 완료` 출력 (필수).
 > 각 하위 step의 Step Check를 수집한다. `skipped`/`failed` 항목은 이유를 남긴다. run/analyze/fix/browser 중 발생한 코드 오류와 구현 갭만 `lesson.py append` 기록 여부를 확인한다. research/plan/spec/report는 document-only step으로 append하지 않는다. 각 하위 step check는 `[al:check] ... 검증 중` / `[al:check] ... 통과` 형식으로 출력한다.
 > 하위 step이 다른 Altool 문서(plan/spec/analyze/browser/report 등)를 수정했다면, 그 문서의 소유 Step Check도 갱신·검증된 상태여야 한다. oneshot 집계는 수정된 문서보다 오래된 소유 check를 완료 증거로 취급하지 않는다.
-> **멈추는 경우는 두 가지뿐**: ① 7단계에서 개발 서버 미실행, ② fix 5회 후에도 미해소 갭 잔존.
+> 제품 정책·입력 충돌·권한 경계와 각 step의 실패 중단 조건을 따른다. 개발 서버 미실행이나 fix 5회 후 미해소 갭도 완료로 처리하지 않는다.
 
 | 단계 | 실행 | 비고 |
 |------|------|------|
-| [1/7] 웹 조사 | `altool/steps/research.md` 수행 | 입력 기능 설명과 PRD 기준으로 조사하고, `docs/00-research/`에 기록. PRD가 있으면 research는 PRD 구현 보강재로만 사용. Claude 디자인 HTML이 있으면 이미 정규화된 `designs/design.md`와 원본 HTML을 함께 기준으로 사용 |
+| [1/7] 웹 조사 | `altool/steps/research.md` 수행 | 입력 기능 설명과 PRD 기준으로 조사하고, `docs/00-research/`에 기록. PRD가 있으면 research는 PRD 구현 보강재로만 사용. Claude 디자인 HTML이 있으면 이미 정규화된 `standards/design.md`와 원본 HTML을 함께 기준으로 사용 |
 | [2/7] 개발 계획 | `altool/steps/plan.md` 수행 | PRD를 기준 계약으로 두고, research와 refs·.pen은 보강 컨텍스트로 전달 |
 | [3/7] 구현 명세 | `altool/steps/spec.md` 수행 | 아키텍처 Option C 자동 선택 |
 | [4/7] 코드 구현 | `altool/steps/run.md` 수행 | Depth-First, 빌드 검증 포함 |

@@ -21,12 +21,12 @@
 - `docs/00-research/*.research.md`가 있으면 최근/관련 조사 문서를 읽고 Plan의 배경·요구사항 후보·리스크에 반영한다. Research의 출처 품질 매트릭스, 근거 매핑, Plan 준비도, 다음 조사 후보도 확인한다.
 - `.altool/state/research.json`이 있으면 research ID, 파일 경로, sourceCount를 확인해 관련 조사 목록을 추린다.
 - `docs/00-pm/{기능명}.prd.md`가 있으면 읽고 Plan의 컨텍스트로 사용.
-- **Altool 자산 감지**: PRD·refs·헌법·직접 디자인 입력·`designs/design.md`를 읽고 헌법의 권위 순서를 적용한다. UI 작업에서 디자인 계약이 없거나 유효하지 않으면 research 또는 `design_source`로 되돌린다.
+- **Altool 자산 감지**: PRD·refs·헌법·직접 디자인 입력·`standards/design.md`를 읽고 헌법의 권위 순서를 적용한다. UI 작업에서 디자인 계약이 없거나 유효하지 않으면 research 또는 `design_source`로 되돌린다.
 - PRD가 있으면 PRD를 기준 계약으로 삼고, Research는 PRD 구현을 더 잘하기 위한 보강재로만 사용한다. Research가 PRD에 없는 기능을 제안하면 자동으로 In Scope에 넣지 말고 후보/다음 사이클/Out of Scope에 기록한다.
 - PRD와 Research가 충돌하면 PRD를 우선한다. 충돌 항목, 선택한 기준, 제외/보류 사유를 Plan §1.6 또는 §2.2에 기록한다.
 - Plan은 문서 작성 단계이므로 `lesson.py search`와 `lesson.py append`를 실행하지 않는다.
 - 직접 디자인 입력의 경로와 적용 범위를 성공 기준에 연결한다. 도구가 필요한 형식은 사용 가능한 전용 도구로 읽고 원천을 변경하지 않는다.
-- `designs/design.md`는 정규화된 계약이다. 없거나 비어 있거나 첫 non-empty line이 `TBD`이면 생성 단계와 근거를 Plan에 기록한다.
+- `standards/design.md`는 정규화된 계약이다. 없거나 비어 있거나 첫 non-empty line이 `TBD`이면 생성 단계와 근거를 Plan에 기록한다.
 
 ### 2~4. 산출물 경로 확정
 
@@ -48,7 +48,7 @@
 
 확정된 요구사항으로 템플릿 전체 절을 채워 작성한다. 핵심:
 - **Research 반영**: 관련 research 문서의 출처 품질, 근거 매핑, 페이지/기능 인벤토리, 공통 패턴, 리스크, Plan 입력 후보를 선별해 §1.3 관련 문서와 §3 요구사항에 연결한다. 조사 결과와 다른 결정을 하면 사유를 남긴다.
-- **디자인 입력 반영**: §1.3과 §4에 적용 원천·범위, `designs/design.md`, 생성 근거가 된 research ID를 연결한다.
+- **디자인 입력 반영**: §1.3과 §4에 적용 원천·범위, `standards/design.md`, 생성 근거가 된 research ID를 연결한다.
 - **PRD 우선**: PRD가 있으면 §2 In Scope와 §3 FR은 PRD 요구사항을 빠짐없이 반영한다. Research는 요구사항의 구현 세부, UX 보강, 리스크, 성공 기준을 강화하는 데 사용한다.
 - **충돌 기록**: Research 제안이 PRD 범위를 넘거나 PRD와 충돌하면 §1.6 PRD/Research 대조 또는 §2.2 Out of Scope에 근거와 사유를 남긴다.
 - **§2.1 포함(In Scope)**: 공개 사용자용 웹서비스이고 PRD가 다른 흐름을 요구하지 않을 때만 홈 또는 핵심 진입 경험을 우선한다 (헌법의 조건부 제품 기본정책).

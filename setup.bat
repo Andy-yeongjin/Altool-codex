@@ -4,22 +4,33 @@ setlocal
 set "ALTOOL_DIR=%~dp0"
 if "%ALTOOL_DIR:~-1%"=="\" set "ALTOOL_DIR=%ALTOOL_DIR:~0,-1%"
 set "NONINTERACTIVE="
+if not "%~1"=="" set "NONINTERACTIVE=1"
 
 if not exist "%ALTOOL_DIR%\altool\scripts\check.py" (
     echo   [ERROR] Altool gate missing: %ALTOOL_DIR%\altool\scripts\check.py
-    exit /b 1
+    goto :failed
 )
 if not exist "%ALTOOL_DIR%\templates\codex\skills\altool\SKILL.md" (
     echo   [ERROR] Bundled Altool skill missing: %ALTOOL_DIR%\templates\codex\skills\altool\SKILL.md
-    exit /b 1
+    goto :failed
 )
 set "PYTHON_CMD="
-call :try_python py -3
+if not exist "%ALTOOL_DIR%\project-starter.html" goto :starter_missing
+if not exist "%ALTOOL_DIR%\altool\scripts\project-starter.js" goto :starter_missing
+if defined VIRTUAL_ENV call :try_python python
+if not defined PYTHON_CMD call :try_python py -3
 if not defined PYTHON_CMD call :try_python python3
 if not defined PYTHON_CMD call :try_python python
 if not defined PYTHON_CMD (
     echo   [ERROR] Python 3 is required, and altool\scripts\check.py --help must run successfully.
-    exit /b 1
+    goto :failed
+)
+
+%PYTHON_CMD% "%ALTOOL_DIR%\altool\scripts\standards.py" validate --root "%ALTOOL_DIR%"
+if errorlevel 1 (
+    echo Source validation failed; see the error above. Restore damaged product files.
+    echo YAML support is bundled. No pip installation is needed; restore the complete Altool package.
+    goto :failed
 )
 
 if not "%~1"=="" (
@@ -68,6 +79,12 @@ if "%PROJECT_DIR%"=="" (
 
 :proceed
 
+%PYTHON_CMD% -c "import pathlib,sys; raise SystemExit(pathlib.Path(sys.argv[1]).resolve() == pathlib.Path(sys.argv[2]).resolve())" "%PROJECT_DIR%" "%ALTOOL_DIR%"
+if errorlevel 1 (
+    echo   [ERROR] Installation target must differ from the Altool source directory.
+    goto :failed
+)
+
 echo   Target: %PROJECT_DIR%
 echo   Python: %PYTHON_CMD%
 echo.
@@ -78,7 +95,7 @@ if exist "%PROJECT_DIR%\altool\" (
     rmdir /s /q "%PROJECT_DIR%\altool"
     if errorlevel 1 goto :copy_failed
 )
-xcopy /e /i /y "%ALTOOL_DIR%\altool" "%PROJECT_DIR%\altool" > nul
+%PYTHON_CMD% "%ALTOOL_DIR%\altool\scripts\distribution.py" "%ALTOOL_DIR%\altool" "%PROJECT_DIR%\altool"
 if errorlevel 1 goto :copy_failed
 echo   [OK] altool\ (engine)
 
@@ -102,7 +119,7 @@ if exist "%ALTOOL_DIR%\templates\codex\skills\" (
                 rmdir /s /q "%PROJECT_DIR%\.agents\skills\%%~nxs"
                 if errorlevel 1 goto :copy_failed
             )
-            xcopy /e /i /y "%%s" "%PROJECT_DIR%\.agents\skills\%%~nxs" > nul
+            %PYTHON_CMD% "%ALTOOL_DIR%\altool\scripts\distribution.py" "%%s" "%PROJECT_DIR%\.agents\skills\%%~nxs"
             if errorlevel 1 goto :copy_failed
             echo   [OK] Codex local skill: %%~nxs
         )
@@ -111,54 +128,12 @@ if exist "%ALTOOL_DIR%\templates\codex\skills\" (
     echo   [WARN] Codex skill templates missing: templates\codex\skills
 )
 
-:: constitution.md
-if exist "%ALTOOL_DIR%\constitution.md" (
-    if not exist "%PROJECT_DIR%\constitution.md" (
-        copy /y "%ALTOOL_DIR%\constitution.md" "%PROJECT_DIR%\constitution.md" > nul
-        if errorlevel 1 goto :copy_failed
-        echo   [OK] constitution.md
-    ) else (
-        echo   [KEEP] constitution.md already exists
-    )
-)
-
-:: Warn when the preserved project constitution is incompatible with this engine.
-if not exist "%ALTOOL_DIR%\constitution.md" (
-    echo   [WARN] Engine constitution missing - version check skipped
-    goto :constitution_version_done
-)
-set "ENGINE_CONSTITUTION_VERSION="
-set "ENGINE_CONSTITUTION_MAJOR="
-set "PROJECT_CONSTITUTION_VERSION="
-set "PROJECT_CONSTITUTION_MAJOR="
-for /f "tokens=2 delims=:" %%v in ('findstr /b /c:"**Version**:" "%ALTOOL_DIR%\constitution.md" 2^>nul') do for /f "tokens=1" %%w in ("%%v") do set "ENGINE_CONSTITUTION_VERSION=%%w"
-for /f "tokens=1 delims=." %%m in ("%ENGINE_CONSTITUTION_VERSION%") do set "ENGINE_CONSTITUTION_MAJOR=%%m"
-for /f "tokens=2 delims=:" %%v in ('findstr /b /c:"**Version**:" "%PROJECT_DIR%\constitution.md" 2^>nul') do for /f "tokens=1" %%w in ("%%v") do set "PROJECT_CONSTITUTION_VERSION=%%w"
-for /f "tokens=1 delims=." %%m in ("%PROJECT_CONSTITUTION_VERSION%") do set "PROJECT_CONSTITUTION_MAJOR=%%m"
-if not defined PROJECT_CONSTITUTION_VERSION (
-    echo   [WARN] constitution.md has no Version marker - engine expects major %ENGINE_CONSTITUTION_MAJOR%.x
-) else if not "%PROJECT_CONSTITUTION_MAJOR%"=="%ENGINE_CONSTITUTION_MAJOR%" (
-    echo   [WARN] constitution.md is v%PROJECT_CONSTITUTION_VERSION% - engine expects major %ENGINE_CONSTITUTION_MAJOR%.x; review before running $altool
-) else (
-    echo   [OK] constitution.md version compatible: v%PROJECT_CONSTITUTION_VERSION%
-)
-:constitution_version_done
-
 :: designs/
 if not exist "%PROJECT_DIR%\designs\" mkdir "%PROJECT_DIR%\designs"
 if not exist "%PROJECT_DIR%\designs\claude-design\" mkdir "%PROJECT_DIR%\designs\claude-design"
 echo   [OK] designs\claude-design\ (Claude design HTML folder)
-for %%f in (design.md) do (
-    if exist "%ALTOOL_DIR%\designs\%%f" (
-        if not exist "%PROJECT_DIR%\designs\%%f" (
-            copy /y "%ALTOOL_DIR%\designs\%%f" "%PROJECT_DIR%\designs\%%f" > nul
-            if errorlevel 1 goto :copy_failed
-            echo   [OK] designs\%%f
-        ) else (
-            echo   [KEEP] designs\%%f already exists
-        )
-    )
-)
+%PYTHON_CMD% "%ALTOOL_DIR%\altool\scripts\standards.py" install --source "%ALTOOL_DIR%" --root "%PROJECT_DIR%"
+if errorlevel 1 goto :copy_failed
 
 :: prd/
 if not exist "%PROJECT_DIR%\prd\" mkdir "%PROJECT_DIR%\prd"
@@ -232,4 +207,11 @@ exit /b 0
 
 :copy_failed
 echo   [ERROR] Managed directory replacement failed. Installation stopped.
+goto :failed
+
+:starter_missing
+echo   [ERROR] Project Starter source missing. Restore the complete Altool package.
+
+:failed
+if not defined NONINTERACTIVE pause
 exit /b 1

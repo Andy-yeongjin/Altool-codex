@@ -1,0 +1,2584 @@
+{
+  "schemaVersion": 1,
+  "scope": "components-visual-review-supplement",
+  "reviewer": "krds_patterns",
+  "source": "guides/디지털 정부서비스 UIUX 가이드라인(2024.02).pdf",
+  "sourceSha256": "701ea58db275cb7790715f0efd9daaa7a2e8a6adc3c6786ab80b21c73a8de8a9",
+  "pageRange": [
+    366,
+    552
+  ],
+  "reviewedPages": 187,
+  "status": "visual-source-review-complete; implementation-findings-handed-to-component-owner; not-browser-approval",
+  "method": "각 원문 PNG를 view_image로 실제 열어 페이지 본문과 도해를 읽었다. 원본 PNG는 1654×2339이고 도구 표시 1334×1888로 읽었으며, 장부의 시각 열람 상태는 구현 적합성 PASS를 뜻하지 않는다. 기본 패턴 담당이 컴포넌트 소유자에게 전달하는 보충 검토다.",
+  "pages": [
+    {
+      "page": 366,
+      "status": "visual-reviewed",
+      "observation": "링크 마우스17×17/터치44×44 목표, 링크 역할 명시.",
+      "evidence": [
+        {
+          "page": 366,
+          "path": "tmp/pdfs/krds-components-full/page-366.png",
+          "sha256": "2fe135c629b1c67846181a236db6f50c59eff3ef2d0c3e180c717a7dde7ee41a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 367,
+      "status": "visual-reviewed",
+      "observation": "링크 Tab/ShiftTab 탐색, click/Enter 실행.",
+      "evidence": [
+        {
+          "page": 367,
+          "path": "tmp/pdfs/krds-components-full/page-367.png",
+          "sha256": "404320e316c2caa3ee7aa190e8e93a2fcb165f40058a1b3c39b26067fb335558"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 368,
+      "status": "visual-reviewed",
+      "observation": "버튼은 기능/상태 변경; 다른 화면 이동은 링크.",
+      "evidence": [
+        {
+          "page": 368,
+          "path": "tmp/pdfs/krds-components-full/page-368.png",
+          "sha256": "bc2467a01180b6abec90898b0cc459b397413cb35dd536aba659b46d7d2a8c4a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 369,
+      "status": "visual-reviewed",
+      "observation": "버튼 텍스트/컨테이너/선후아이콘 구조.",
+      "evidence": [
+        {
+          "page": 369,
+          "path": "tmp/pdfs/krds-components-full/page-369.png",
+          "sha256": "a190935f11463410fc7c91c68014c695d061fde721daad5abdd00bd9c88e75bf"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 370,
+      "status": "visual-reviewed",
+      "observation": "버튼7사용성규칙:동일그룹크기,위계,최상위1개,수직주액션먼저,동사,필요아이콘,중복클릭.",
+      "evidence": [
+        {
+          "page": 370,
+          "path": "tmp/pdfs/krds-components-full/page-370.png",
+          "sha256": "dcd9f7e7a4b38c1ced0e7c62ceadcb9e80e10304df816e0e421eb4c517e20237"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 371,
+      "status": "visual-reviewed",
+      "observation": "동일 버튼그룹 크기 같게, 위계는크기아닌스타일.",
+      "evidence": [
+        {
+          "page": 371,
+          "path": "tmp/pdfs/krds-components-full/page-371.png",
+          "sha256": "f168d05213491392bbcffeeda7f79ba291ab1720e6208531812bb18a1dfe7aa6"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 372,
+      "status": "visual-reviewed",
+      "observation": "주색채움/윤곽/텍스트 위계, 취소만강조하는부정예시.",
+      "evidence": [
+        {
+          "page": 372,
+          "path": "tmp/pdfs/krds-components-full/page-372.png",
+          "sha256": "7bb35bea0fc32c8e798937be442f0999821e5292a8d3870157306881a4538dc5"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 373,
+      "status": "visual-reviewed",
+      "observation": "최상위강조한번, 반복카드버튼윤곽 긍정/전부채움 부정.",
+      "evidence": [
+        {
+          "page": 373,
+          "path": "tmp/pdfs/krds-components-full/page-373.png",
+          "sha256": "f39e20dbce9933da50e54795a6830fa6e8b77a2cd8589963077149f4d70254f7"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 374,
+      "status": "visual-reviewed",
+      "observation": "수직그룹 주요액션상단, 일반적인완료닫기등예외빼고동사형.",
+      "evidence": [
+        {
+          "page": 374,
+          "path": "tmp/pdfs/krds-components-full/page-374.png",
+          "sha256": "6cda779b2cad44d811cce023a030c4241e3e86f9bf053935039a99bf1c16add1"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 375,
+      "status": "visual-reviewed",
+      "observation": "아이콘없는주액션아래부액션아이콘금지, 제출중두번째입력무시.",
+      "evidence": [
+        {
+          "page": 375,
+          "path": "tmp/pdfs/krds-components-full/page-375.png",
+          "sha256": "a96778fc7571b6bdc3adc948772ba3d864a17f2258e19112ce4009035e76b66d"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 376,
+      "status": "visual-reviewed",
+      "observation": "모든버튼 접근이름, 글자있으면아이콘대체중복금지, 아이콘단독은기능명.",
+      "evidence": [
+        {
+          "page": 376,
+          "path": "tmp/pdfs/krds-components-full/page-376.png",
+          "sha256": "c0e7f3ae205be0e1ebebf1e95a5d5c38ddcf80319c5defea5cf90a6a4863580a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 377,
+      "status": "visual-reviewed",
+      "observation": "키보드접근/명확한초점3:1, nativebutton 또는 rolebutton.",
+      "evidence": [
+        {
+          "page": 377,
+          "path": "tmp/pdfs/krds-components-full/page-377.png",
+          "sha256": "64e092ea82d2dc79bc7bfd425027e1f2ab9c5fa5a1c7d8a05ef6fcc4f4a014b0"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 378,
+      "status": "visual-reviewed",
+      "observation": "버튼 마우스17×17/터치44×44 권장.",
+      "evidence": [
+        {
+          "page": 378,
+          "path": "tmp/pdfs/krds-components-full/page-378.png",
+          "sha256": "00d1535722e31aea6f022b01abaa763a45f4693cbb3e4551afb6733a6cb12cdb"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 379,
+      "status": "visual-reviewed",
+      "observation": "버튼 Tab/ShiftTab, click Enter Space 실행.",
+      "evidence": [
+        {
+          "page": 379,
+          "path": "tmp/pdfs/krds-components-full/page-379.png",
+          "sha256": "2d6ed9439da9613bdbcb75cc0f93a2df76812b572d6e0aef8a2c3b77188723c5"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 380,
+      "status": "visual-reviewed",
+      "observation": "단색청색 장경계.",
+      "evidence": [
+        {
+          "page": 380,
+          "path": "tmp/pdfs/krds-components-full/page-380.png",
+          "sha256": "f0299d01f5a75f4ff13c2a66861e54c5a59ddedff646b16bc263c3f6b260d86b"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 381,
+      "status": "visual-reviewed",
+      "observation": "선택 컴포넌트4종 장목차.",
+      "evidence": [
+        {
+          "page": 381,
+          "path": "tmp/pdfs/krds-components-full/page-381.png",
+          "sha256": "367fcc96eed105174e2e27fae725ea050d66e33fa985b5a5f4ece6920fe512a6"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 382,
+      "status": "visual-reviewed",
+      "observation": "라디오 단일값/옵션비교에적절; 새선택시기존해제.",
+      "evidence": [
+        {
+          "page": 382,
+          "path": "tmp/pdfs/krds-components-full/page-382.png",
+          "sha256": "6f23690458cd6fd280a73594042a41ca26d1cf2aadccfee9565158fac0580b8b"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 383,
+      "status": "visual-reviewed",
+      "observation": "복수선택은체크박스, 7개초과/모바일은셀렉트콤보박스고려.",
+      "evidence": [
+        {
+          "page": 383,
+          "path": "tmp/pdfs/krds-components-full/page-383.png",
+          "sha256": "ae7e99d8d1a4e5e6dbd8f3fc9ef97ea6cd9ee80fb5132746557ab418f54b9a53"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 384,
+      "status": "visual-reviewed",
+      "observation": "라디오 그룹레이블/선택원형/오른쪽레이블 도식.",
+      "evidence": [
+        {
+          "page": 384,
+          "path": "tmp/pdfs/krds-components-full/page-384.png",
+          "sha256": "f8e58dbed7173863b36b20ecf23669281fe0feaafdff806bb9438e59101e5a18"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 385,
+      "status": "visual-reviewed",
+      "observation": "라디오6원칙 목차:정렬/배치/간격/레이블/기본값/해당없음.",
+      "evidence": [
+        {
+          "page": 385,
+          "path": "tmp/pdfs/krds-components-full/page-385.png",
+          "sha256": "5084d44b034b4818b3b43105e0639e55be00d038b81656666402622e9ef49c39"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 386,
+      "status": "visual-reviewed",
+      "observation": "근거없는정렬은가나다순, 자주선택우선은편향주의.",
+      "evidence": [
+        {
+          "page": 386,
+          "path": "tmp/pdfs/krds-components-full/page-386.png",
+          "sha256": "70a0bd149c6c61ddd2a6d40cf023ff9a668ef44e6b81c6143bb0ee7512ff6794"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 387,
+      "status": "visual-reviewed",
+      "observation": "라디오수직/오른쪽레이블, 수평은짧은레이블.",
+      "evidence": [
+        {
+          "page": 387,
+          "path": "tmp/pdfs/krds-components-full/page-387.png",
+          "sha256": "86de725923833955cc908666e38fa06bc1f37016bde72308d447e75dd49c3a35"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 388,
+      "status": "visual-reviewed",
+      "observation": "수평그룹간격을레이블내간격보다넓게 긍정/부정.",
+      "evidence": [
+        {
+          "page": 388,
+          "path": "tmp/pdfs/krds-components-full/page-388.png",
+          "sha256": "ab10a8ec6fd86b6d68b2f2e3f6ad35fd683e91480a617dbf90d8f59d261cebda"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 389,
+      "status": "visual-reviewed",
+      "observation": "레이블 표시함/표시하지않음 긍정,Y/N 부정.",
+      "evidence": [
+        {
+          "page": 389,
+          "path": "tmp/pdfs/krds-components-full/page-389.png",
+          "sha256": "f31990a228cc3644fe8efe94bee60e4d98035a95cbe8b040e1056dba39f3b477"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 390,
+      "status": "visual-reviewed",
+      "observation": "정확성이중요한값 기본선택 금지.",
+      "evidence": [
+        {
+          "page": 390,
+          "path": "tmp/pdfs/krds-components-full/page-390.png",
+          "sha256": "5a85043b60f3a8e16e8e8dbe0f9693c11b0527886a3af17f386d8039656d2111"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 391,
+      "status": "visual-reviewed",
+      "observation": "필수아닌선택 해당없음/모름/선택안함 대안.",
+      "evidence": [
+        {
+          "page": 391,
+          "path": "tmp/pdfs/krds-components-full/page-391.png",
+          "sha256": "25ec2761d3ce794651c1f6a7a889d4142884400fbd03c071b190a9e8e6e03365"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 392,
+      "status": "visual-reviewed",
+      "observation": "원형선택컨트롤 인접배경대비3:1.",
+      "evidence": [
+        {
+          "page": 392,
+          "path": "tmp/pdfs/krds-components-full/page-392.png",
+          "sha256": "41590f2247ebf718f7672cf366a00662e94cc34e557660dba0e7d1720d79c361"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 393,
+      "status": "visual-reviewed",
+      "observation": "선택상태 색상외모양차이:안쪽점 유무.",
+      "evidence": [
+        {
+          "page": 393,
+          "path": "tmp/pdfs/krds-components-full/page-393.png",
+          "sha256": "c490cb3d490e1014863e31cdd9926d4ed14931b413dece249a4aa907cec09ad9"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 394,
+      "status": "visual-reviewed",
+      "observation": "커스텀radio native숨김주의, 키보드초점 실제컨트롤위치동일.",
+      "evidence": [
+        {
+          "page": 394,
+          "path": "tmp/pdfs/krds-components-full/page-394.png",
+          "sha256": "c88d22811912133e37c7bbf1e4c118bc5ac19ceb2da110f918afc39db27300e2"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 395,
+      "status": "visual-reviewed",
+      "observation": "라디오별 접근 가능한 이름은 label 우선; fieldset/legend로 그룹 목적과 관계 제공.",
+      "evidence": [
+        {
+          "page": 395,
+          "path": "tmp/pdfs/krds-components-full/page-395.png",
+          "sha256": "1a48d5054d9488b99ec8c9a274291379731797376c3314f74055f06fa38a73bc"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 396,
+      "status": "visual-reviewed",
+      "observation": "라디오 탐색 Tab/Shift+Tab 및 위아래 방향키로 이동·선택, 레이블 클릭과 Space 선택 표.",
+      "evidence": [
+        {
+          "page": 396,
+          "path": "tmp/pdfs/krds-components-full/page-396.png",
+          "sha256": "38f1fbdf7bc8d928440ede207c4538a31f783299a2d9548ff04c37b4c45f8689"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 397,
+      "status": "visual-reviewed",
+      "observation": "셀렉트는 7–20개 단일선택 및 좁은 모바일 공간에 적합한 네이티브 컨트롤.",
+      "evidence": [
+        {
+          "page": 397,
+          "path": "tmp/pdfs/krds-components-full/page-397.png",
+          "sha256": "6fcc09a58b31d0bb536bc44663166d46f18a6826bff930b7022bce68fbe797ec"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 398,
+      "status": "visual-reviewed",
+      "observation": "비교 중요한 선택은 라디오, 다중값은 체크박스/다중드롭다운, 20개 초과는 검색 콤보박스/분할 고려.",
+      "evidence": [
+        {
+          "page": 398,
+          "path": "tmp/pdfs/krds-components-full/page-398.png",
+          "sha256": "582f6901480eec16e217e6ce90f0d7d7a646270fc3d2e71fee4dd168ec61dc22"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 399,
+      "status": "visual-reviewed",
+      "observation": "셀렉트 구조 그림: 상단 레이블, 테두리 컨테이너, 펼침 아이콘, 선택값 강조와 옵션 목록.",
+      "evidence": [
+        {
+          "page": 399,
+          "path": "tmp/pdfs/krds-components-full/page-399.png",
+          "sha256": "33bda43b46e81173dcaa6aa355547155c92b198071bfadf5a5dc75eb145bac16"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 400,
+      "status": "visual-reviewed",
+      "observation": "셀렉트 사용성 3규칙: 간결한 옵션, 각 레이블, 값 변경만으로 폼 제출 금지.",
+      "evidence": [
+        {
+          "page": 400,
+          "path": "tmp/pdfs/krds-components-full/page-400.png",
+          "sha256": "b71f3d067621803cee6623d30161e959c27f459e423bffd5b0b21eeb5dc57b4a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 401,
+      "status": "visual-reviewed",
+      "observation": "긴 셀렉트 옵션은 완전한 내용을 마우스·키보드로 볼 수 있어야 하며 각 레이블과 별도 제출 버튼 요구.",
+      "evidence": [
+        {
+          "page": 401,
+          "path": "tmp/pdfs/krds-components-full/page-401.png",
+          "sha256": "25118096919af1e5f69c7fb72a9d2cf541b7f6f76966a310cb4bd020d33c1166"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 402,
+      "status": "visual-reviewed",
+      "observation": "셀렉트 접근 가능한 이름 및 펼침 꺾쇠와 배경 명도 대비 3:1.",
+      "evidence": [
+        {
+          "page": 402,
+          "path": "tmp/pdfs/krds-components-full/page-402.png",
+          "sha256": "fcd526ee08c2085dbae788281a5344b3314134bbb473661dadb9eb977cfd0307"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 403,
+      "status": "visual-reviewed",
+      "observation": "셀렉트 컨테이너 클릭/Enter/Space 확장축소, 외부 클릭 닫기, Escape 닫고 컨테이너 초점, 스크롤 목록 탐색.",
+      "evidence": [
+        {
+          "page": 403,
+          "path": "tmp/pdfs/krds-components-full/page-403.png",
+          "sha256": "d3b8d1998b808fc3caf74424110afbe63878ba0847268441432fb66ec85e9ebd"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 404,
+      "status": "visual-reviewed",
+      "observation": "셀렉트 옵션 클릭 선택, Enter 선택 후 접기, 접힌 상태 방향키 선택 변경.",
+      "evidence": [
+        {
+          "page": 404,
+          "path": "tmp/pdfs/krds-components-full/page-404.png",
+          "sha256": "62630768def3c7dec13f2cf62a1341364da3c4434ab8908900a22a17cc673d79"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 405,
+      "status": "visual-reviewed",
+      "observation": "체크박스는 복수 독립 선택; 하나만 고르면 라디오, 즉시 적용은 스위치 고려.",
+      "evidence": [
+        {
+          "page": 405,
+          "path": "tmp/pdfs/krds-components-full/page-405.png",
+          "sha256": "3814237995264fa3ec765d9b440f6a55ba8b40849e5b1e85ac7b64caa8ae2f23"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 406,
+      "status": "visual-reviewed",
+      "observation": "기본 체크박스 2상태와 전체선택 상위체크박스의 중간(indeterminate) 3상태 유형.",
+      "evidence": [
+        {
+          "page": 406,
+          "path": "tmp/pdfs/krds-components-full/page-406.png",
+          "sha256": "7da159a9897411e2765eeb04ba207b19eeb4fee08ccbac40f22ea05745ae0a60"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 407,
+      "status": "visual-reviewed",
+      "observation": "체크박스 구조 그림은 선택적 그룹레이블, 체크표시 사각형, 오른쪽 항목레이블.",
+      "evidence": [
+        {
+          "page": 407,
+          "path": "tmp/pdfs/krds-components-full/page-407.png",
+          "sha256": "f9215ca75d9d48b87883594bfe003f6549f67d68e92e970899b8f3553ddc883a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 408,
+      "status": "visual-reviewed",
+      "observation": "체크박스 4 사용성 규칙 목차: 가나다·수직·명확레이블·중간상태.",
+      "evidence": [
+        {
+          "page": 408,
+          "path": "tmp/pdfs/krds-components-full/page-408.png",
+          "sha256": "dbc338d914a975a38c2d08b946003a377224947e0a910dcbcec141bcddcf1fea"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 409,
+      "status": "visual-reviewed",
+      "observation": "선택 빈도 우선은 근거 필요; 기본 가나다순으로 편향 방지.",
+      "evidence": [
+        {
+          "page": 409,
+          "path": "tmp/pdfs/krds-components-full/page-409.png",
+          "sha256": "d573d2dc25d00ce74acef0deef41d1ce8e66b9b6bd4b4d74fff0c651bb1afa1b"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 410,
+      "status": "visual-reviewed",
+      "observation": "긴 항목 수직배치 모범/2열 지그재그 피할사례, 레이블은 양식 오른쪽.",
+      "evidence": [
+        {
+          "page": 410,
+          "path": "tmp/pdfs/krds-components-full/page-410.png",
+          "sha256": "f429e2dc367a9e4e0c0749a86194473a80296cb9df5f3e6c9c97e327f8590a3f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 411,
+      "status": "visual-reviewed",
+      "observation": "체크박스 레이블은 선택 대상 정보를 정확하게 설명.",
+      "evidence": [
+        {
+          "page": 411,
+          "path": "tmp/pdfs/krds-components-full/page-411.png",
+          "sha256": "b01343894adcf200970660546e0ca2f59843d79281a9a9b14ca15ca44c8c0a9d"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 412,
+      "status": "visual-reviewed",
+      "observation": "전체선택의 일부자식선택은 상위 마이너스 중간상태; 체크모양 유지 금지 그림.",
+      "evidence": [
+        {
+          "page": 412,
+          "path": "tmp/pdfs/krds-components-full/page-412.png",
+          "sha256": "8353f9b0bd180d6101dda229ab9d660837b763a5e31c035f5fb02b15dd6e94aa"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 413,
+      "status": "visual-reviewed",
+      "observation": "체크박스 바탕/체크아이콘과 인접배경의 명도대비 3:1.",
+      "evidence": [
+        {
+          "page": 413,
+          "path": "tmp/pdfs/krds-components-full/page-413.png",
+          "sha256": "8e1961de1338a7226fdb24eccf50cfaf4b6ae917b8de6532753d78ded4afec17"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 414,
+      "status": "visual-reviewed",
+      "observation": "체크박스 상태는 색 외 체크표시 유무/형태로 구분, 회색만 다르게 칠한 두 체크 예시 금지.",
+      "evidence": [
+        {
+          "page": 414,
+          "path": "tmp/pdfs/krds-components-full/page-414.png",
+          "sha256": "206e32cfe4e385b409149a179aa03afccc2c2279cb44002ea8b5639ba25c54ca"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 415,
+      "status": "visual-reviewed",
+      "observation": "커스텀 체크박스도 키보드 조작 가능하고 보이는 양식 위치에 초점표시; 숨김처리 주의.",
+      "evidence": [
+        {
+          "page": 415,
+          "path": "tmp/pdfs/krds-components-full/page-415.png",
+          "sha256": "fba14651ab6b423f291b80b9b2877b7a05765aca486b87db1eece6c12ca4d8b3"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 416,
+      "status": "visual-reviewed",
+      "observation": "체크박스 label 클릭 선택 가능 및 fieldset/legend 그룹관계.",
+      "evidence": [
+        {
+          "page": 416,
+          "path": "tmp/pdfs/krds-components-full/page-416.png",
+          "sha256": "6ed8ffa5c95906088720ddd50e0f161463140d95b94a363f39ccfcb2467effbb"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 417,
+      "status": "visual-reviewed",
+      "observation": "체크박스 Tab/Shift+Tab 이동, 레이블 포함 클릭영역, Space 선택/해제.",
+      "evidence": [
+        {
+          "page": 417,
+          "path": "tmp/pdfs/krds-components-full/page-417.png",
+          "sha256": "280d0c637dfedc1722b7ac2cde62e1cf44dce18e068dde56cf38af35b44271de"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 418,
+      "status": "visual-reviewed",
+      "observation": "태그는 필터 조건 표현/제거 등 상호작용용; 단순 비상호작용 속성 강조는 배지.",
+      "evidence": [
+        {
+          "page": 418,
+          "path": "tmp/pdfs/krds-components-full/page-418.png",
+          "sha256": "f83539ed299e87372995de416ad4a8f5ea9294afa79f8cdacf2adcc60a0f6151"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 419,
+      "status": "visual-reviewed",
+      "observation": "태그 유형은 단순레이블·선행체크 선택토글·레이블+삭제아이콘.",
+      "evidence": [
+        {
+          "page": 419,
+          "path": "tmp/pdfs/krds-components-full/page-419.png",
+          "sha256": "436bb2400bc1a756a9a75041f87921786779fd9a77f3a2152c4cbe9601a32c45"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 420,
+      "status": "visual-reviewed",
+      "observation": "태그 구조 그림: 레이블/컨테이너/삭제, 그룹 일괄액션, 공간 제한시 더보기 버튼.",
+      "evidence": [
+        {
+          "page": 420,
+          "path": "tmp/pdfs/krds-components-full/page-420.png",
+          "sha256": "353362f3945d79bcb0bcb1c0113ae4f386de9897494fb110d66360950848a53f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 421,
+      "status": "visual-reviewed",
+      "observation": "태그 사용성 6규칙 목차: 텍스트·간결·근접·대화형분리·개수·색상절제.",
+      "evidence": [
+        {
+          "page": 421,
+          "path": "tmp/pdfs/krds-components-full/page-421.png",
+          "sha256": "95cff8e0649b6004decf17fafeea81e41391c21237c708a9ae19b951896b93fc"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 422,
+      "status": "visual-reviewed",
+      "observation": "태그 레이블 2단어 이내 줄바꿈 회피; 관련요소 근접; 대화형과 비대화형 같은그룹 혼합 금지.",
+      "evidence": [
+        {
+          "page": 422,
+          "path": "tmp/pdfs/krds-components-full/page-422.png",
+          "sha256": "42f64ed42f4abc734321bd87a969490c95b017de08c075bc89a33c121c167745"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 423,
+      "status": "visual-reviewed",
+      "observation": "카드별 과다한 태그로 인지부담 생기는 피할사례 그림.",
+      "evidence": [
+        {
+          "page": 423,
+          "path": "tmp/pdfs/krds-components-full/page-423.png",
+          "sha256": "9743dc4d63aeb056588a82e6c0e4648fcf984481e7d95fc0672f03a7e68b1a69"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 424,
+      "status": "visual-reviewed",
+      "observation": "여러 색상 태그 남용 피할사례; 동등강조와 색의 실제 의미 확인.",
+      "evidence": [
+        {
+          "page": 424,
+          "path": "tmp/pdfs/krds-components-full/page-424.png",
+          "sha256": "f2f32b135f21fe977d3f9edf7ad16619244e88988d02a948ac177ecf6e586834"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 425,
+      "status": "visual-reviewed",
+      "observation": "태그 초점외곽 3:1; 토글 aria-pressed, 삭제/추가 동작별 명시적인 접근명이 필요.",
+      "evidence": [
+        {
+          "page": 425,
+          "path": "tmp/pdfs/krds-components-full/page-425.png",
+          "sha256": "e99f6e73f2d60fe93db513aa62f8e6775ac61d6eac8a52adbb2bb70530b19368"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 426,
+      "status": "visual-reviewed",
+      "observation": "태그 의미는 색만 의존 금지; 원문 레이블·아이콘 3:1 명시(일반텍스트 회사대비기준은 별도 엄격 적용 필요).",
+      "evidence": [
+        {
+          "page": 426,
+          "path": "tmp/pdfs/krds-components-full/page-426.png",
+          "sha256": "b87f905639be266e350f42ac7eeac5022bdef2689567c7d76f7e855129f4a7ac"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 427,
+      "status": "visual-reviewed",
+      "observation": "필터 추가 태그 실행 후 적용필터 막대로 초점 이동; 선택토글은 클릭태그 초점 유지; 그룹 Tab 첫태그.",
+      "evidence": [
+        {
+          "page": 427,
+          "path": "tmp/pdfs/krds-components-full/page-427.png",
+          "sha256": "186c5c179d429d8aa240e5a2481d087130f49a215ee793de58d459bf2cf4af96"
+        }
+      ],
+      "findings": [
+        "CS-07"
+      ]
+    },
+    {
+      "page": 428,
+      "status": "visual-reviewed",
+      "observation": "태그 삭제 후 이전 태그 초점, 남은태그 없으면 태그목록 컨테이너 초점; Click/Space/Enter.",
+      "evidence": [
+        {
+          "page": 428,
+          "path": "tmp/pdfs/krds-components-full/page-428.png",
+          "sha256": "5a4a09b2b32a2baa983a14865647ad82d023e6c8b73f348bfa57a4dd625783ad"
+        }
+      ],
+      "findings": [
+        "CS-07"
+      ]
+    },
+    {
+      "page": 429,
+      "status": "visual-reviewed",
+      "observation": "청색 피드백 컴포넌트 장 구분: 단계표시기/스피너 2종 목차.",
+      "evidence": [
+        {
+          "page": 429,
+          "path": "tmp/pdfs/krds-components-full/page-429.png",
+          "sha256": "2544a1c8dd8cba4c86c5886260e97d10b58bd7181422f89b9e38935469134ecd"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 430,
+      "status": "visual-reviewed",
+      "observation": "단계표시 구조 그림 숫자·단계명·현재/완료식별·연결선, 좁은 화면 현재/전체수로 축약 가능.",
+      "evidence": [
+        {
+          "page": 430,
+          "path": "tmp/pdfs/krds-components-full/page-430.png",
+          "sha256": "87eac1484bdba5a3671860a9b0053bb2e0bd94a9cddb27ab7ea9164b6b025dd2"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 431,
+      "status": "visual-reviewed",
+      "observation": "단계표시 6규칙 목차, 3–7개·현재표시·탐색모델·선택단계건너뛰기.",
+      "evidence": [
+        {
+          "page": 431,
+          "path": "tmp/pdfs/krds-components-full/page-431.png",
+          "sha256": "fc41577cf59d4d5915f3c396fae51e9dd02c57b8490539328ea051df192bef11"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 432,
+      "status": "visual-reviewed",
+      "observation": "간결한 단계명 모범 vs 약관내용 전체를 넣은 긴 다중행 명칭 금지 그림.",
+      "evidence": [
+        {
+          "page": 432,
+          "path": "tmp/pdfs/krds-components-full/page-432.png",
+          "sha256": "6fc5388a252cefe72e7ef76f629ffc95efb176a9550f421330ff9e520d695904"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 433,
+      "status": "visual-reviewed",
+      "observation": "좌우/상하 논리적 순서와 일관된 선형표현, 3–7단계 불필요 절차 합치기.",
+      "evidence": [
+        {
+          "page": 433,
+          "path": "tmp/pdfs/krds-components-full/page-433.png",
+          "sha256": "09e75e984657d560d1826dd02e09f06a3331c7a33799a1ca7f83aee3b9fe9ff5"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 434,
+      "status": "visual-reviewed",
+      "observation": "현재 단계는 진행·완료와 형태차이 필요; 모든단계 체크표시 색만 차이 금지 그림.",
+      "evidence": [
+        {
+          "page": 434,
+          "path": "tmp/pdfs/krds-components-full/page-434.png",
+          "sha256": "fdf9ab0bad9ef307fbc311a3dad2ac0dac7b990277e51a7de62daead6c2f51f1"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 435,
+      "status": "visual-reviewed",
+      "observation": "순차탐색 필수행동 전 다음 비활성; 적응형은 순서자유; 선택단계는 명시적 건너뛰기/다음입력 제공.",
+      "evidence": [
+        {
+          "page": 435,
+          "path": "tmp/pdfs/krds-components-full/page-435.png",
+          "sha256": "a035f6805d6a939952cf791dda431fb8be98ffa19c2e5819ae33bb26c4414918"
+        }
+      ],
+      "findings": [
+        "CS-05"
+      ]
+    },
+    {
+      "page": 436,
+      "status": "visual-reviewed",
+      "observation": "ol/li 순서있는 단계목록, 색 외 현재/완료 식별, aria-current 또는 현재단계 텍스트.",
+      "evidence": [
+        {
+          "page": 436,
+          "path": "tmp/pdfs/krds-components-full/page-436.png",
+          "sha256": "4388b8bfcf993999fcfe857f7a3fe1d73ad2deff004f896179e2f2a941a72e11"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 437,
+      "status": "visual-reviewed",
+      "observation": "스피너 전체/부분 로딩 용례; 안정적으로 1초 미만 완료면 표시하지 않음.",
+      "evidence": [
+        {
+          "page": 437,
+          "path": "tmp/pdfs/krds-components-full/page-437.png",
+          "sha256": "d4ee858f977552123acdbf6585324960f86676dd4e3c747093c18d3dff8a5bf7"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 438,
+      "status": "visual-reviewed",
+      "observation": "확정 스피너 0–360도 채움 진행률, 불확정 스피너 예측불가능 대기 용례.",
+      "evidence": [
+        {
+          "page": 438,
+          "path": "tmp/pdfs/krds-components-full/page-438.png",
+          "sha256": "6ae66ee4bacb3b7810b704511c619296bf4c715d012283b699b6f3930becc184"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 439,
+      "status": "visual-reviewed",
+      "observation": "스피너 그림 원형 경로와 진행 식별자 구조.",
+      "evidence": [
+        {
+          "page": 439,
+          "path": "tmp/pdfs/krds-components-full/page-439.png",
+          "sha256": "a7d0f494f04e83bd2fc1490a3552cd5d2b669c237965f2275cc30100b4ea00ce"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 440,
+      "status": "visual-reviewed",
+      "observation": "스피너 5규칙 목차: 장식금지·맥락크기·근접·불확정루프·전체스피너중복제한.",
+      "evidence": [
+        {
+          "page": 440,
+          "path": "tmp/pdfs/krds-components-full/page-440.png",
+          "sha256": "4da469d897083edffddcf83312039b6cc7f185f89ca4130897feb0060438e00a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 441,
+      "status": "visual-reviewed",
+      "observation": "전체는 크게, 버튼/필드는 작게; 실제로 처리 중인 영역 가까이 스피너 배치.",
+      "evidence": [
+        {
+          "page": 441,
+          "path": "tmp/pdfs/krds-components-full/page-441.png",
+          "sha256": "c3f84b5d22264dac93306653a54556621342bc2c5e078e10391bc801e253eaf7"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 442,
+      "status": "visual-reviewed",
+      "observation": "불확정 스피너 처리중 계속 회전; 개별업로드 같은 소형항목 예외 외 전체스피너 1개.",
+      "evidence": [
+        {
+          "page": 442,
+          "path": "tmp/pdfs/krds-components-full/page-442.png",
+          "sha256": "fce3645eccefe4bc5e9623c610c798ba7227364cc63bfdd948013be18b1e81c9"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 443,
+      "status": "visual-reviewed",
+      "observation": "스피너 배경↔경로, 경로↔식별자 각각 3:1; 시작·완료 스크린리더 상태알림은 polite.",
+      "evidence": [
+        {
+          "page": 443,
+          "path": "tmp/pdfs/krds-components-full/page-443.png",
+          "sha256": "f5bfdac4f65c11d7f2425d63f04252c0825502d20c884c258db033d03483749b"
+        }
+      ],
+      "findings": [
+        "CS-01"
+      ]
+    },
+    {
+      "page": 444,
+      "status": "visual-reviewed",
+      "observation": "확정은 실제진행량 반영·360도 도달하면 숨김; 불확정은 완료까지 시계방향 무한회전.",
+      "evidence": [
+        {
+          "page": 444,
+          "path": "tmp/pdfs/krds-components-full/page-444.png",
+          "sha256": "a6b7aba58c8017d4c98f0d7d9a7892e572d3e763d26740dfb28f46661d0467f3"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 445,
+      "status": "visual-reviewed",
+      "observation": "청색 도움 장 목차: 도움패널·따라하기·맥락도움말·코치마크.",
+      "evidence": [
+        {
+          "page": 445,
+          "path": "tmp/pdfs/krds-components-full/page-445.png",
+          "sha256": "a52b6a88e5c88cbf438b1a4eb981018e9025e5d2bf5ed302c16b2a9d90c58b83"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 446,
+      "status": "visual-reviewed",
+      "observation": "도움패널은 사이드 개념/용어설명; 간단한 정보는 맥락도움, 단계안내는 따라하기/코치마크.",
+      "evidence": [
+        {
+          "page": 446,
+          "path": "tmp/pdfs/krds-components-full/page-446.png",
+          "sha256": "0bc0f7cbba65631a7037aa105c457c98cbcc734f73e485b446bd0ac097cf1a52"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 447,
+      "status": "visual-reviewed",
+      "observation": "도움패널 구조: 고정열기, 물음표, 도움/따라하기 탭, 접기, 초기/상세본문, 관련링크/FAQ/문의 푸터.",
+      "evidence": [
+        {
+          "page": 447,
+          "path": "tmp/pdfs/krds-components-full/page-447.png",
+          "sha256": "050556235fee67cdbc4292e9936f4211c8d669ad38073f96536e822e6b4edbd7"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 448,
+      "status": "visual-reviewed",
+      "observation": "도움패널 상세 그림은 본문 오른쪽 패널, 상단접기·탭, 도움주제와 링크, 푸터구분선 아래 관련서비스/문의.",
+      "evidence": [
+        {
+          "page": 448,
+          "path": "tmp/pdfs/krds-components-full/page-448.png",
+          "sha256": "c73f9a1986eac6a5f89391b0e3c061568402a7c1340987cb8cbbfe934445aeca"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 449,
+      "status": "visual-reviewed",
+      "observation": "도움패널 8사용성규칙 목차: 초기열기·기본화면·근접·제목일치·간결·필수정보본문·새창·명시실행변경.",
+      "evidence": [
+        {
+          "page": 449,
+          "path": "tmp/pdfs/krds-components-full/page-449.png",
+          "sha256": "5f24f71f145a9a67f71bc2bee9eb871106552faa35246992ba2098f75127afcc"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 450,
+      "status": "visual-reviewed",
+      "observation": "데스크톱 초기 도움패널은 열려 존재 인지; 닫힌 작은 도움버튼만 보이는 피할사례.",
+      "evidence": [
+        {
+          "page": 450,
+          "path": "tmp/pdfs/krds-components-full/page-450.png",
+          "sha256": "598874383dc228daccafc5aceed1aa65495c287167c3e55d07ef48fd7681179d"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 451,
+      "status": "visual-reviewed",
+      "observation": "첫화면은 도움탭 기본 선택과 이용안내, 사용자가 요청하지 않은 특정 상세내용을 강제로 표시하지 않음.",
+      "evidence": [
+        {
+          "page": 451,
+          "path": "tmp/pdfs/krds-components-full/page-451.png",
+          "sha256": "437f768a1a3df13f507f1c90d0bb3f4198b6e5dc7fac484760f9f058d270f13c"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 452,
+      "status": "visual-reviewed",
+      "observation": "물음표는 해당레이블 옆, 패널제목은 본문제목과 일치, 과도한 내부스크롤 피하도록 간결.",
+      "evidence": [
+        {
+          "page": 452,
+          "path": "tmp/pdfs/krds-components-full/page-452.png",
+          "sha256": "21a2a76ffd5383a7c61f39fc380c379b745263c354c9bbc5b1a553a3348e166e"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 453,
+      "status": "visual-reviewed",
+      "observation": "필수정보는 본문에도 요약; 패널링크 새창으로 작업보존; 닫았다 열면 마지막 도움내용 유지.",
+      "evidence": [
+        {
+          "page": 453,
+          "path": "tmp/pdfs/krds-components-full/page-453.png",
+          "sha256": "71f0a4ed2a13a0a8af0dd2d0cd885c05c6ef52b61b2253b7e26a272dddd14964"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 454,
+      "status": "visual-reviewed",
+      "observation": "모바일 폭 부족시 초기패널은 열기버튼 축약, 실행하면 모달형 패널 그림.",
+      "evidence": [
+        {
+          "page": 454,
+          "path": "tmp/pdfs/krds-components-full/page-454.png",
+          "sha256": "f9934edffd63d3379561d589c0c7f29b87e1146aaa36e849847127c88c098bd8"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 455,
+      "status": "visual-reviewed",
+      "observation": "도움아이콘 대비3:1, 각 고유 접근명에 관련맥락 포함(건축물대장유형안내 등).",
+      "evidence": [
+        {
+          "page": 455,
+          "path": "tmp/pdfs/krds-components-full/page-455.png",
+          "sha256": "5a5586865f4d43d3acd4a23de727b34501123517043b6dc8791bfb1d667d449e"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 456,
+      "status": "visual-reviewed",
+      "observation": "도움패널 열면 패널초점·함정방지; 아이콘44px 고려(인라인예외); DOM 순서는 본문 다음 열기/패널.",
+      "evidence": [
+        {
+          "page": 456,
+          "path": "tmp/pdfs/krds-components-full/page-456.png",
+          "sha256": "27baf294acdf4c58fb671c9fe291830f0f797d75d20df8c8cf08f0f934cd88f8"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 457,
+      "status": "visual-reviewed",
+      "observation": "도움패널 클릭/Enter/Space 열기 후 패널자체 초점, Tab 내부링크 순차탐색.",
+      "evidence": [
+        {
+          "page": 457,
+          "path": "tmp/pdfs/krds-components-full/page-457.png",
+          "sha256": "bd6950597768328c804aa18b344853c49402d43c8b093237b623be1c7ca9ec36"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 458,
+      "status": "visual-reviewed",
+      "observation": "도움패널 접기 클릭/Enter/Space 후 관련 열기버튼으로 초점 복귀.",
+      "evidence": [
+        {
+          "page": 458,
+          "path": "tmp/pdfs/krds-components-full/page-458.png",
+          "sha256": "4ed34e40d16fac59eecc65bb67f45f0e91aa73e40e6e1f8bb1429335f08ebfba"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 459,
+      "status": "visual-reviewed",
+      "observation": "따라하기는 복잡한 단계형 실제이용절차·코치마크 연결용 사이드패널.",
+      "evidence": [
+        {
+          "page": 459,
+          "path": "tmp/pdfs/krds-components-full/page-459.png",
+          "sha256": "85fc9eea3aee9b880f536d7b14de9ccc9e5d18a160d03bf811515b388674ac18"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 460,
+      "status": "visual-reviewed",
+      "observation": "따라하기 구조: 열기/탭/접기/제목/기본으로뒤로/과업목록·세부단계/중단.",
+      "evidence": [
+        {
+          "page": 460,
+          "path": "tmp/pdfs/krds-components-full/page-460.png",
+          "sha256": "4ea1ee2af695f1150efa815e202d1cde05156f890a3250174f7e822dd193890f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 461,
+      "status": "visual-reviewed",
+      "observation": "따라하기 구조 그림: 기본 아코디언 목록·실습시작; 진행화면 세부단계 카운트와 그만따라하기.",
+      "evidence": [
+        {
+          "page": 461,
+          "path": "tmp/pdfs/krds-components-full/page-461.png",
+          "sha256": "50c3d46c3d00f9c9cf1a12bb4cf6394ab0764d04ef7c30dde32063fe5a360867"
+        }
+      ],
+      "findings": [
+        "CS-06"
+      ]
+    },
+    {
+      "page": 462,
+      "status": "visual-reviewed",
+      "observation": "따라하기 4규칙 목차: 중단 전 내용/프로세스 유지, 간결, 링크새창.",
+      "evidence": [
+        {
+          "page": 462,
+          "path": "tmp/pdfs/krds-components-full/page-462.png",
+          "sha256": "58a608ee882d3552651ab7c71c1fb0af762533b6ce20618342c72951463a7208"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 463,
+      "status": "visual-reviewed",
+      "observation": "패널 접기/도움탭 전환 뒤 따라하기 마지막내용·진행 유지, 명시적중단만 종료; 링크새창.",
+      "evidence": [
+        {
+          "page": 463,
+          "path": "tmp/pdfs/krds-components-full/page-463.png",
+          "sha256": "f22cdf97d400f75f1aa4a15873dc5df6806d37cec5a552f28079c6a47f877dd2"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 464,
+      "status": "visual-reviewed",
+      "observation": "모바일 따라하기는 열기버튼 축약 후 모달 표시.",
+      "evidence": [
+        {
+          "page": 464,
+          "path": "tmp/pdfs/krds-components-full/page-464.png",
+          "sha256": "48bbfe4edc59164f94445b9253ceab6e9aa8ad14b46532032cdac0818d445830"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 465,
+      "status": "visual-reviewed",
+      "observation": "따라하기 실행시 패널자체 초점·키보드함정금지, 본문뒤 DOM순서.",
+      "evidence": [
+        {
+          "page": 465,
+          "path": "tmp/pdfs/krds-components-full/page-465.png",
+          "sha256": "2d775a1dfa8361a8833062704804c67fe028914e7745ee5e05391c4ec531d80a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 466,
+      "status": "visual-reviewed",
+      "observation": "패널 열기 클릭/Enter/Space 초점이동, 내부 Tab 및 아코디언 Enter/Space 후 트리거초점유지.",
+      "evidence": [
+        {
+          "page": 466,
+          "path": "tmp/pdfs/krds-components-full/page-466.png",
+          "sha256": "50944c18a334beb77e5f9a8f41d0d9d81c10866f415329f4f02a5fe85e3f4ed1"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 467,
+      "status": "visual-reviewed",
+      "observation": "따라하기 패널 접기 클릭/키보드 후 관련 열기버튼 초점복귀.",
+      "evidence": [
+        {
+          "page": 467,
+          "path": "tmp/pdfs/krds-components-full/page-467.png",
+          "sha256": "6d15aa978b97a8953d7dbe72317c97686ebf38ce8aa5a709ea21c2bb33cdc428"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 468,
+      "status": "visual-reviewed",
+      "observation": "맥락도움은 요청시 관련요소 상세정보; 컨트롤이름은툴팁, 필수정보는 숨기지말고 인라인/패널, 짧은정보인라인.",
+      "evidence": [
+        {
+          "page": 468,
+          "path": "tmp/pdfs/krds-components-full/page-468.png",
+          "sha256": "b2e36003a47f34d6c213c267226cdc24450bd2bbebb8d9db857900e87aebaff7"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 469,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 적합한 용례: 요소설명과 접근/사용불가 이유 안내.",
+      "evidence": [
+        {
+          "page": 469,
+          "path": "tmp/pdfs/krds-components-full/page-469.png",
+          "sha256": "50708fc3523ccf10faa9eccff763591c8ec2ef067fccd99081ee57b5adb459da"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 470,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 i정보유형은 부가설명/불가이유, ?도움유형은 입력방법/용어 및 이미지·동영상·링크 가능.",
+      "evidence": [
+        {
+          "page": 470,
+          "path": "tmp/pdfs/krds-components-full/page-470.png",
+          "sha256": "468bb450436087b98dbb51f286a6feed297aeafe34d989e16f02ae570bb3502a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 471,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 구조 그림은 트리거를 가리키는 꼬리, 팝오버 제목/본문/링크/우상단닫기.",
+      "evidence": [
+        {
+          "page": 471,
+          "path": "tmp/pdfs/krds-components-full/page-471.png",
+          "sha256": "dec26d0f80bbb5899175695c719d03914b498bebdf62650fc21c547e41945c11"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 472,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 7규칙 목차: 근접·뷰포트안·중요본문비가림·필수정보별도·중첩금지·링크새창·도움패널혼용금지.",
+      "evidence": [
+        {
+          "page": 472,
+          "path": "tmp/pdfs/krds-components-full/page-472.png",
+          "sha256": "06be55aa46f3cd4801c41a388f15acc183a90b18f061b7a69992281495a8c23b"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 473,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 아이콘은 관련컴포넌트 또는레이블 옆.",
+      "evidence": [
+        {
+          "page": 473,
+          "path": "tmp/pdfs/krds-components-full/page-473.png",
+          "sha256": "fecdd356058fc92f376e2677f56ef5998e201864d29f0ee3e668f0f8a7f1c27e"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 474,
+      "status": "visual-reviewed",
+      "observation": "팝오버는 화면밖으로 나가 내용이 잘리지 않게 배치한 모범 그림.",
+      "evidence": [
+        {
+          "page": 474,
+          "path": "tmp/pdfs/krds-components-full/page-474.png",
+          "sha256": "81a96e12ad03750a3efa79c80bb65c34a67959747237e5c139b2e99ad3fa3a56"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 475,
+      "status": "visual-reviewed",
+      "observation": "팝오버가 트리거와 설명대상 중요본문을 가리지 않게 표시.",
+      "evidence": [
+        {
+          "page": 475,
+          "path": "tmp/pdfs/krds-components-full/page-475.png",
+          "sha256": "f1d2b28c9ad5f993a16a49b62ccd1eb89fe0cacd89c3356a24afcb2a47e8b6df"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 476,
+      "status": "visual-reviewed",
+      "observation": "필수정보는 팝오버에만 두지 않음; 중첩팝오버 피할그림도 이페이지에 포함.",
+      "evidence": [
+        {
+          "page": 476,
+          "path": "tmp/pdfs/krds-components-full/page-476.png",
+          "sha256": "b2a5c72a726dba6d02cac3cb9a3da95590224580330ae757c5b1ab394cf3b569"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 477,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 동시여러개·중첩·내부모달 금지, 내부웹링크 새창.",
+      "evidence": [
+        {
+          "page": 477,
+          "path": "tmp/pdfs/krds-components-full/page-477.png",
+          "sha256": "c67f9667771a22d9acc3cc0a73cf38ea2334ec26e3f078ef7c9ceecef9a6d779"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 478,
+      "status": "visual-reviewed",
+      "observation": "한 과업 흐름에서 맥락도움과 도움패널 혼용금지; 동시에 표시된 피할그림.",
+      "evidence": [
+        {
+          "page": 478,
+          "path": "tmp/pdfs/krds-components-full/page-478.png",
+          "sha256": "4e2c6170c7ac44164270a6770ad1d854f22581eee8a607528cbf6425de925d8c"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 479,
+      "status": "visual-reviewed",
+      "observation": "모든 화면너비에서 팝오버 전체가 보이는지 플랫폼별 검증.",
+      "evidence": [
+        {
+          "page": 479,
+          "path": "tmp/pdfs/krds-components-full/page-479.png",
+          "sha256": "4b2d9d8ec7ca5609d8f874a39ea241a20f393fb38cdec3cd06e252f89e468579"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 480,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 아이콘 대비3:1, 접근명 존재와 고유맥락 요구.",
+      "evidence": [
+        {
+          "page": 480,
+          "path": "tmp/pdfs/krds-components-full/page-480.png",
+          "sha256": "38faf35ec06a0b28ee6fa2aee42fdb66353493341c81c5b4f5d18eb4b8cc378b"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 481,
+      "status": "visual-reviewed",
+      "observation": "맥락도움은 사용자 요청으로만 실행, 팝오버 DOM은 관련아이콘 다음.",
+      "evidence": [
+        {
+          "page": 481,
+          "path": "tmp/pdfs/krds-components-full/page-481.png",
+          "sha256": "e6930339ef9b601ac4fbb76a0d8a1a75b9f6435e4ae5d6a5a3133c2517fc348f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 482,
+      "status": "visual-reviewed",
+      "observation": "링크있는 맥락도움은 활성화 후 내부 대화형요소로 초점; 함정금지; 아이콘44px고려 인라인예외.",
+      "evidence": [
+        {
+          "page": 482,
+          "path": "tmp/pdfs/krds-components-full/page-482.png",
+          "sha256": "0c4e832a1986e814808749a48c77624d5fc5bb31694d49824e0a855342e3c955"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 483,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 Click/Enter/Space 실행과 Tab내부링크 탐색 상호작용표.",
+      "evidence": [
+        {
+          "page": 483,
+          "path": "tmp/pdfs/krds-components-full/page-483.png",
+          "sha256": "0a7df34d6f05f24e2265990bba9587e138b16979e10696ee57f68bece384d6ef"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 484,
+      "status": "visual-reviewed",
+      "observation": "맥락도움 바깥클릭/아이콘/어디서든Escape로닫기, 관련아이콘에초점복귀.",
+      "evidence": [
+        {
+          "page": 484,
+          "path": "tmp/pdfs/krds-components-full/page-484.png",
+          "sha256": "76f79a6703a082e9a9639b955fa12c62a65b535f40eba8d8c637a8a4a4f61eaf"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 485,
+      "status": "visual-reviewed",
+      "observation": "코치마크 새기능 인지·복잡한 절차안내 개요.",
+      "evidence": [
+        {
+          "page": 485,
+          "path": "tmp/pdfs/krds-components-full/page-485.png",
+          "sha256": "9764845baf6987375dd03cbc48f791d490dc02d3e9f341b830cfa9b43ea7fc1e"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 486,
+      "status": "visual-reviewed",
+      "observation": "코치마크 구조 그림: 대상 외곽 spotlight와 팝오버 제목/지시/2/4 단계/그만보기·이전·다음.",
+      "evidence": [
+        {
+          "page": 486,
+          "path": "tmp/pdfs/krds-components-full/page-486.png",
+          "sha256": "aee03391e9d5fcc67bf781f9fa24895d2de552a7e18a7e7cba716cb05e9cecba"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 487,
+      "status": "visual-reviewed",
+      "observation": "코치마크 12사용성규칙 목차, 대상행동완수 확인 이후 다음단계 허용 포함.",
+      "evidence": [
+        {
+          "page": 487,
+          "path": "tmp/pdfs/krds-components-full/page-487.png",
+          "sha256": "0b7f87085385af827070c907adbb6adbe861e596f1db84428175029ab374e0e8"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 488,
+      "status": "visual-reviewed",
+      "observation": "코치마크는 안내대상 UI/섹션 옆에 배치.",
+      "evidence": [
+        {
+          "page": 488,
+          "path": "tmp/pdfs/krds-components-full/page-488.png",
+          "sha256": "736dee4f50124147fd9e7d34036796265ae8a9f3d3aa3b89fa56db0e13c1f8ef"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 489,
+      "status": "visual-reviewed",
+      "observation": "팝오버는 spotlight대상을 가리지 않는 상단 배치 모범그림.",
+      "evidence": [
+        {
+          "page": 489,
+          "path": "tmp/pdfs/krds-components-full/page-489.png",
+          "sha256": "35f28837b618b3ee345d8ff2a94cff604497d84648ee3b8230a4218e2fb24127"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 490,
+      "status": "visual-reviewed",
+      "observation": "동일과업 팝오버폭 일치; 제목1줄/지시3줄 목표; 한화면4개이하 이상적·최대15단계.",
+      "evidence": [
+        {
+          "page": 490,
+          "path": "tmp/pdfs/krds-components-full/page-490.png",
+          "sha256": "7e8d551597fd6d563aaf63bf9469acacd9921b8b35386778cfa9cec7e90f6adf"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 491,
+      "status": "visual-reviewed",
+      "observation": "코치마크 실제과업순서·동시한개·다른알림레이어억제·지시내링크새창.",
+      "evidence": [
+        {
+          "page": 491,
+          "path": "tmp/pdfs/krds-components-full/page-491.png",
+          "sha256": "343d86177bdf493ee3805e1af3d0e4c81b976826eefc6821a1a5655967a725ee"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 492,
+      "status": "visual-reviewed",
+      "observation": "코치마크 버튼 그만보기/이전/다음 순; 첫단계이전없음·마지막마치기·단일확인 그림.",
+      "evidence": [
+        {
+          "page": 492,
+          "path": "tmp/pdfs/krds-components-full/page-492.png",
+          "sha256": "a633a95fd85920e8409b2875e2b6a58e78fe5ef4516c5e6d69a6b7f8a6531629"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 493,
+      "status": "visual-reviewed",
+      "observation": "코치마크 그만/이전은텍스트, 다음/마치기ghost이며 본문주요액션보다 낮은강조.",
+      "evidence": [
+        {
+          "page": 493,
+          "path": "tmp/pdfs/krds-components-full/page-493.png",
+          "sha256": "7e5f37cb6897939787e5a312171d1ec631fea1aaffa53e73bb7d01bd07e007f1"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 494,
+      "status": "visual-reviewed",
+      "observation": "행동기반 코치마크는 시스템이 실제정확한행동 완수확인후 자동다음; 자가확인금지·다음생략가능하지만그만보기필수.",
+      "evidence": [
+        {
+          "page": 494,
+          "path": "tmp/pdfs/krds-components-full/page-494.png",
+          "sha256": "eb8e4b89545e01755536d6d17adff0110f0bf694c3bf95f474ff9eeb1b2994be"
+        }
+      ],
+      "findings": [
+        "CS-06"
+      ]
+    },
+    {
+      "page": 495,
+      "status": "visual-reviewed",
+      "observation": "코치마크 팝오버 모든화면크기 완전표시 검증.",
+      "evidence": [
+        {
+          "page": 495,
+          "path": "tmp/pdfs/krds-components-full/page-495.png",
+          "sha256": "4747b39aa6ff6179820fbc7dc1497774fcecccbb5d091f8001e6128597a637f3"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 496,
+      "status": "visual-reviewed",
+      "observation": "spotlight대비3:1·사용자요청시에만실행·팝오버는 관련요소다음 DOM.",
+      "evidence": [
+        {
+          "page": 496,
+          "path": "tmp/pdfs/krds-components-full/page-496.png",
+          "sha256": "d46ed78ca1ea4ccd7dff555bfab40e8a77529373070b5a7ec375d8d9569094c2"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 497,
+      "status": "visual-reviewed",
+      "observation": "코치마크 Tab컨트롤 탐색, 그만보기 클릭/Enter/Space종료 후 따라하기시작버튼초점.",
+      "evidence": [
+        {
+          "page": 497,
+          "path": "tmp/pdfs/krds-components-full/page-497.png",
+          "sha256": "f2ecb30c25ffbdd75055e8eb8599c5149e7987e7b5de41f063265b97a4d3f7a7"
+        }
+      ],
+      "findings": [
+        "CS-06"
+      ]
+    },
+    {
+      "page": 498,
+      "status": "visual-reviewed",
+      "observation": "청색 무텍스트 장 구분면, 규칙/도해 없음.",
+      "evidence": [
+        {
+          "page": 498,
+          "path": "tmp/pdfs/krds-components-full/page-498.png",
+          "sha256": "f0299d01f5a75f4ff13c2a66861e54c5a59ddedff646b16bc263c3f6b260d86b"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 499,
+      "status": "visual-reviewed",
+      "observation": "입력컴포넌트 장 목차 4종: 날짜입력/텍스트영역/텍스트필드/파일업로드.",
+      "evidence": [
+        {
+          "page": 499,
+          "path": "tmp/pdfs/krds-components-full/page-499.png",
+          "sha256": "3cc91f49417448f7ada571d89953abe333a4aff99bfb9ff9e09a6029e54c3a3e"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 500,
+      "status": "visual-reviewed",
+      "observation": "날짜입력 특정일/기간용; 5일이내 등 상대일은 짧은텍스트/선택옵션 사용.",
+      "evidence": [
+        {
+          "page": 500,
+          "path": "tmp/pdfs/krds-components-full/page-500.png",
+          "sha256": "4ae901cdfb198b7eb2dd5c9c1decfe5a045363ad18027fbbb23349afd6d27e6e"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 501,
+      "status": "visual-reviewed",
+      "observation": "날짜 다중입력 년월일(필요 정밀도별 생략), 단일입력 전체값; 기억안나는 날짜는 날짜선택기 병행.",
+      "evidence": [
+        {
+          "page": 501,
+          "path": "tmp/pdfs/krds-components-full/page-501.png",
+          "sha256": "b89adf29044da5f30afd9d928f6017ff8eb19ab0c5e3cd38ee1fdff475efe824"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 502,
+      "status": "visual-reviewed",
+      "observation": "범위 날짜는 시작/종료2필드로 대략기간도 수용, 멀리떨어진날짜·요일/인접일비교시달력 선택기.",
+      "evidence": [
+        {
+          "page": 502,
+          "path": "tmp/pdfs/krds-components-full/page-502.png",
+          "sha256": "828a194417c3abf19a1021d52ae74127a1f02990eac3a8c3a1ff8ccd1cdbee05"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 503,
+      "status": "visual-reviewed",
+      "observation": "날짜필드 구조그림 상단레이블·YYYY.MM.DD힌트·우측달력·아래도움말.",
+      "evidence": [
+        {
+          "page": 503,
+          "path": "tmp/pdfs/krds-components-full/page-503.png",
+          "sha256": "86ce2b2269f1035f4ff2f65798335be8bdd141fe99b7e1edb0b95c309520da42"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 504,
+      "status": "visual-reviewed",
+      "observation": "날짜입력 5규칙 목차: 명확레이블·형식설명·원형식일치·대략날짜·자동완성.",
+      "evidence": [
+        {
+          "page": 504,
+          "path": "tmp/pdfs/krds-components-full/page-504.png",
+          "sha256": "f713fc8b04c2225c4c496b57515e55e7919c51756eae468c82c4e9c79d4ff582"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 505,
+      "status": "visual-reviewed",
+      "observation": "모든 날짜 입력에 날짜의 목적을 명확히 표시하고, 연·월·일 분리 필드에는 개별 레이블과 그룹 목적을 제공한다.",
+      "evidence": [
+        {
+          "page": 505,
+          "path": "tmp/pdfs/krds-components-full/page-505.png",
+          "sha256": "6bc6fcb3a01f5425985ed4fdf9f2c0d6ea2bf994ee08d366d51b157ac61982ce"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 506,
+      "status": "visual-reviewed",
+      "observation": "날짜 형식 도움말을 항상 표시한다. YYYY-MM-DD 플레이스홀더만으로 대신하지 않고 자릿수와 예시를 제공한다.",
+      "evidence": [
+        {
+          "page": 506,
+          "path": "tmp/pdfs/krds-components-full/page-506.png",
+          "sha256": "5e67e0b07f44274ada5fbe65c98c21fdf9d9ef344379417209f0b060417b65d1"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 507,
+      "status": "visual-reviewed",
+      "observation": "원본 문서의 날짜 형식과 입력 형식을 일치시킨다. 카드 유효기간 MM / YY 분리 예시와 복사·붙여넣기 허용을 확인했다.",
+      "evidence": [
+        {
+          "page": 507,
+          "path": "tmp/pdfs/krds-components-full/page-507.png",
+          "sha256": "ade5d44cc132ca85ec079892427751ec2deaf18705b4150c086ead350cb3d38f"
+        }
+      ],
+      "findings": [
+        "CS-08"
+      ]
+    },
+    {
+      "page": 508,
+      "status": "visual-reviewed",
+      "observation": "정확한 날짜가 불명확한 경우 연월 단일 기간 또는 연월 시작·종료 범위를 제공한다. 분실일 예시는 일 대신 월 정밀도를 사용한다.",
+      "evidence": [
+        {
+          "page": 508,
+          "path": "tmp/pdfs/krds-components-full/page-508.png",
+          "sha256": "d4648ec6057b24e5b19f61cce92f25ecec0383c2092741d8bb550b131f865ae3"
+        }
+      ],
+      "findings": [
+        "CS-08"
+      ]
+    },
+    {
+      "page": 509,
+      "status": "visual-reviewed",
+      "observation": "대략적 날짜 질의에 일 단위 날짜 선택만 강요하지 않는다. 팩스 날짜의 YYYY-MM-DD 입력만 제공하는 부적절한 예시를 확인했다.",
+      "evidence": [
+        {
+          "page": 509,
+          "path": "tmp/pdfs/krds-components-full/page-509.png",
+          "sha256": "e23837da85d7abce990a6bc7cf9716abb07801e450df94cc2af2ef1a8166632a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 510,
+      "status": "visual-reviewed",
+      "observation": "생년월일처럼 반복하는 개인정보 날짜는 브라우저 자동완성을 활용하여 재입력 부담을 줄인다.",
+      "evidence": [
+        {
+          "page": 510,
+          "path": "tmp/pdfs/krds-components-full/page-510.png",
+          "sha256": "2a3b71ac8c0194e290b1962097d99b7b809cb96b325ad6d7d70e61002985d2ee"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 511,
+      "status": "visual-reviewed",
+      "observation": "달력이 있어도 키보드 직접 입력을 허용하고 readonly/disabled로 막지 않는다. 프로그램적 레이블과 항상 보이는 형식 안내를 제공한다.",
+      "evidence": [
+        {
+          "page": 511,
+          "path": "tmp/pdfs/krds-components-full/page-511.png",
+          "sha256": "ad71c3bc111c4427f5480831e433f807ae8ebdc0a4fe392dcbf3cc7c43775c54"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 512,
+      "status": "visual-reviewed",
+      "observation": "날짜 입력은 레이블 클릭으로 입력에 초점이 가고, 비활성을 제외하고 Tab 및 Shift+Tab으로 접근한다.",
+      "evidence": [
+        {
+          "page": 512,
+          "path": "tmp/pdfs/krds-components-full/page-512.png",
+          "sha256": "44366167058256348cf2b7ab9aafd45951e5f2ca3417c9385b10cd9fada9eeec"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 513,
+      "status": "visual-reviewed",
+      "observation": "텍스트 영역은 여러 줄 답변용이며 여러 질문을 한 자유서술란으로 합치지 않는다. 선택형으로 답할 수 있는 질문은 분리한다.",
+      "evidence": [
+        {
+          "page": 513,
+          "path": "tmp/pdfs/krds-components-full/page-513.png",
+          "sha256": "568104514dc217586062b1fb41ba710fd26a4b466759c901af1df0450192cd95"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 514,
+      "status": "visual-reviewed",
+      "observation": "텍스트 영역 구조는 레이블·입력 영역·선택적 플레이스홀더·입력 글자 수와 최대 글자 수다. 22/100 카운터 도해를 확인했다.",
+      "evidence": [
+        {
+          "page": 514,
+          "path": "tmp/pdfs/krds-components-full/page-514.png",
+          "sha256": "6849ce3c37696a90e9be42dfb57dde29bbb4a95a208ecb95a73a162c349adb7f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 515,
+      "status": "visual-reviewed",
+      "observation": "텍스트 영역 크기·레이블·지속 도움말·복사 붙여넣기 허용·제한 글자 수 안내 다섯 원칙 목차다.",
+      "evidence": [
+        {
+          "page": 515,
+          "path": "tmp/pdfs/krds-components-full/page-515.png",
+          "sha256": "94018d5a6a1d4425936d8cac1beadd5f4435fc98cdc3d083dde963ea92dc3e3a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 516,
+      "status": "visual-reviewed",
+      "observation": "예상 입력 길이에 비례한 높이로 스크롤 부담을 줄이고 모든 텍스트 영역에 레이블을 제공한다.",
+      "evidence": [
+        {
+          "page": 516,
+          "path": "tmp/pdfs/krds-components-full/page-516.png",
+          "sha256": "fd2ab650b3d13e12096e781c57a80c88c7e087c66deb1c8e2cfa39dc1f73174c"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 517,
+      "status": "visual-reviewed",
+      "observation": "입력 중 사라지는 플레이스홀더는 레이블이나 도움말을 대체하지 않는다. 정책 설명을 입력 영역 바깥에 표시한 좋은 예시를 확인했다.",
+      "evidence": [
+        {
+          "page": 517,
+          "path": "tmp/pdfs/krds-components-full/page-517.png",
+          "sha256": "9ad127b46f18c762c6aa6cdcd6905549aa1addf4257df0266966aab268058d85"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 518,
+      "status": "visual-reviewed",
+      "observation": "텍스트 영역에서 다른 웹사이트나 플랫폼의 텍스트 복사 및 붙여넣기를 제한하지 않는다.",
+      "evidence": [
+        {
+          "page": 518,
+          "path": "tmp/pdfs/krds-components-full/page-518.png",
+          "sha256": "4b57f1358eaa66b334c75c7d0ec5fed2b072efd5a4d0d9e3230e4ca442eb3c66"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 519,
+      "status": "visual-reviewed",
+      "observation": "제한 글자 수와 남은 글자 수를 레이블이나 입력 영역 다음에 표시하고 입력에 따라 남은 수를 갱신한다.",
+      "evidence": [
+        {
+          "page": 519,
+          "path": "tmp/pdfs/krds-components-full/page-519.png",
+          "sha256": "edd1a1b2faa3e0d3a7f8e7e56265d28658f2960b5020229e5dd49e60b08c0216"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 520,
+      "status": "visual-reviewed",
+      "observation": "텍스트 영역 경계/채움과 인접 배경 3:1 이상 대비 및 프로그램적 접근 가능한 이름을 제공한다.",
+      "evidence": [
+        {
+          "page": 520,
+          "path": "tmp/pdfs/krds-components-full/page-520.png",
+          "sha256": "cdbc8abfd08cb5c8c956198982035ca9a72544d539edf48da71c8ad2a1ebe091"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 521,
+      "status": "visual-reviewed",
+      "observation": "텍스트 영역 클릭/레이블 클릭 입력, 넘치는 내용 세로 스크롤, Tab·Shift+Tab 접근 및 위아래 키 탐색을 확인했다.",
+      "evidence": [
+        {
+          "page": 521,
+          "path": "tmp/pdfs/krds-components-full/page-521.png",
+          "sha256": "69cd5bbeee11745af0a05cfa072f1cae978045e5e7ab06ab16d00015e15c2856"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 522,
+      "status": "visual-reviewed",
+      "observation": "한 줄 짧은 텍스트와 예측 불가능한 자유 값에 텍스트 입력 필드를 사용한다. 이름·전화·날짜·경계 숫자 예시다.",
+      "evidence": [
+        {
+          "page": 522,
+          "path": "tmp/pdfs/krds-components-full/page-522.png",
+          "sha256": "f89450703c3a3100c018749a99a8fe668b4ec72f7bf20a76dbea1ddf3cdd38d3"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 523,
+      "status": "visual-reviewed",
+      "observation": "여러 줄은 textarea, 선택지가 정해진 값은 라디오·체크박스·셀렉트를 사용한다.",
+      "evidence": [
+        {
+          "page": 523,
+          "path": "tmp/pdfs/krds-components-full/page-523.png",
+          "sha256": "472996b4331b7f9e17dcf82167b2e3c674d57f9c3bffa4adb1bc34ff8c714672"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 524,
+      "status": "visual-reviewed",
+      "observation": "텍스트 입력 구조는 레이블·입력 필드·선택적 도움말/오류·플레이스홀더다. 도움말은 필드 아래에 별도 위치한다.",
+      "evidence": [
+        {
+          "page": 524,
+          "path": "tmp/pdfs/krds-components-full/page-524.png",
+          "sha256": "aa5107e9c4f686d8e6f1aee409b35b9b445c8d5c0d69a365bf4bd3bede2f1671"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 525,
+      "status": "visual-reviewed",
+      "observation": "텍스트 입력 다섯 원칙: 길이에 맞는 크기, 레이블, 지속 도움말, 붙여넣기 허용, 반복 값 자동완성이다.",
+      "evidence": [
+        {
+          "page": 525,
+          "path": "tmp/pdfs/krds-components-full/page-525.png",
+          "sha256": "44f9fc7cb8028a60b1b427993ef135f978faf62827519671e21684e9ce0006c7"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 526,
+      "status": "visual-reviewed",
+      "observation": "입력 너비는 기본 유동형이되 이름·우편번호·전화처럼 길이가 정해진 것은 적정 고정 너비로 제공하고 작은 화면에서 값 잘림을 확인한다.",
+      "evidence": [
+        {
+          "page": 526,
+          "path": "tmp/pdfs/krds-components-full/page-526.png",
+          "sha256": "ff83347a9968ce72f822f4ea80d4e9a0e972a48f6afc041ca3c28e7b5288f1f9"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 527,
+      "status": "visual-reviewed",
+      "observation": "모든 입력 필드에 레이블을 제공하며 생략에는 사용자가 값을 이해할 명확한 근거가 있어야 한다.",
+      "evidence": [
+        {
+          "page": 527,
+          "path": "tmp/pdfs/krds-components-full/page-527.png",
+          "sha256": "3952c39b0f35b5d42faaaa082bb59440bdd59fb2d5af9da734d49c4b77192cf5"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 528,
+      "status": "visual-reviewed",
+      "observation": "입력 중 사라지는 플레이스홀더로 레이블·도움말을 대신하지 않는다. 낮은 기본 플레이스홀더 대비 문제도 설명한다.",
+      "evidence": [
+        {
+          "page": 528,
+          "path": "tmp/pdfs/krds-components-full/page-528.png",
+          "sha256": "1047de5eee732cda929eef9ddf002266dfa7817f97e6b593b789b388fb9c8127"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 529,
+      "status": "visual-reviewed",
+      "observation": "이름·전화번호의 지속 레이블 좋은 사례와 플레이스홀더만 있는 나쁜 사례를 시각적으로 비교했다.",
+      "evidence": [
+        {
+          "page": 529,
+          "path": "tmp/pdfs/krds-components-full/page-529.png",
+          "sha256": "91318a5828c112c4545295aaf761d896e07b868a92b098ffee266ba34dc12965"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 530,
+      "status": "visual-reviewed",
+      "observation": "복사 붙여넣기를 허용하고 반복 개인정보는 브라우저 자동완성으로 재입력 부담을 줄인다.",
+      "evidence": [
+        {
+          "page": 530,
+          "path": "tmp/pdfs/krds-components-full/page-530.png",
+          "sha256": "fb5154ebb50e8d0e0291825422222bfd79c387edf7c7c26b8815d28006f40602"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 531,
+      "status": "visual-reviewed",
+      "observation": "입력 초점을 가시화하고 경계/배경 대비 3:1 이상, 접근 가능한 이름 및 레이블 클릭 연결을 제공한다.",
+      "evidence": [
+        {
+          "page": 531,
+          "path": "tmp/pdfs/krds-components-full/page-531.png",
+          "sha256": "3484e034d4cb90242a4516f70f5e90274e70a6368b80d30373d3ab192842438f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 532,
+      "status": "visual-reviewed",
+      "observation": "입력 필드와 레이블 클릭 입력 및 비활성 외 Tab·Shift+Tab 순차 접근을 제공한다.",
+      "evidence": [
+        {
+          "page": 532,
+          "path": "tmp/pdfs/krds-components-full/page-532.png",
+          "sha256": "918d2e16463cd5f316bd0fed72e0f93471ed8b8d505e23df2417e0b3f501ed90"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 533,
+      "status": "visual-reviewed",
+      "observation": "파일 업로드는 로컬 파일 선택·첨부 입력이다. 세로 파일 목록이 늘어나는 다중 업로드를 모달에 넣지 않는다.",
+      "evidence": [
+        {
+          "page": 533,
+          "path": "tmp/pdfs/krds-components-full/page-533.png",
+          "sha256": "7e5f1a91819168664acf3fa1392e27ab92ca4c912d0108da390c4bbeefbbdd43"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 534,
+      "status": "visual-reviewed",
+      "observation": "관련 없는 파일은 개별 단일 업로더를 분리하고 관련 파일은 다중 업로더를 사용한다. 파일 선택기와 드래그 앤 드롭 두 수단을 확인했다.",
+      "evidence": [
+        {
+          "page": 534,
+          "path": "tmp/pdfs/krds-components-full/page-534.png",
+          "sha256": "5e3faf34da5254a4ef1e7ee035cc2404a37cc7b7c040cb51b2e337a75934aedc"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 535,
+      "status": "visual-reviewed",
+      "observation": "업로드 구조는 용도 레이블·설명·형식크기 도움말·선택 버튼·드롭 영역·개수·파일 메타정보·삭제·진행/성공 표시다. 성공 아이콘 후 삭제 버튼 전환을 명시한다.",
+      "evidence": [
+        {
+          "page": 535,
+          "path": "tmp/pdfs/krds-components-full/page-535.png",
+          "sha256": "03a69f4c3e0e2e0fd588096b6919451f8fc4f4f4affc6e178b9309a9e195a0cb"
+        }
+      ],
+      "findings": [
+        "CS-02"
+      ]
+    },
+    {
+      "page": 536,
+      "status": "visual-reviewed",
+      "observation": "드롭 영역 아래 개수와 전체 삭제, 각 파일명/형식/크기 한 줄 및 진행·성공·삭제 상태가 있는 상세 도해를 확인했다.",
+      "evidence": [
+        {
+          "page": 536,
+          "path": "tmp/pdfs/krds-components-full/page-536.png",
+          "sha256": "7c2bb2855def16f1e2fc6bb9cc991ae40c502ccc871843330680bb4e80fa9ab7"
+        }
+      ],
+      "findings": [
+        "CS-02"
+      ]
+    },
+    {
+      "page": 537,
+      "status": "visual-reviewed",
+      "observation": "업로드 11원칙 목차에 이미지 자동 압축, 업로드 후 선택 버튼 유지, 자동 제출 금지, 구체적 오류, 파일명 한 줄을 포함한다.",
+      "evidence": [
+        {
+          "page": 537,
+          "path": "tmp/pdfs/krds-components-full/page-537.png",
+          "sha256": "7d28e7da24e83a7b6c6c0e51a2d47dd5202cb8d957d5b0b7c70e01dcfe9462ca"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 538,
+      "status": "visual-reviewed",
+      "observation": "첨부가 꼭 필요한 경우에만 업로드를 요청하며 어떤 용도로 어떤 파일을 제출하는지 레이블을 명확히 한다.",
+      "evidence": [
+        {
+          "page": 538,
+          "path": "tmp/pdfs/krds-components-full/page-538.png",
+          "sha256": "09c4803bda0ad34b3f4f1d0b05e4eda592082f5a5bcf514daea1d71bb1da5dd1"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 539,
+      "status": "visual-reviewed",
+      "observation": "파일 유형·크기·개수 제한은 선택 전에 강조 도움말로 알린다. ZIP 제외·개별20MB·최대10개는 도해의 예시값이다.",
+      "evidence": [
+        {
+          "page": 539,
+          "path": "tmp/pdfs/krds-components-full/page-539.png",
+          "sha256": "2d90c6266a61e3680701d91f1c34597f4502a32fbfa325f93d5b7617e299c27e"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 540,
+      "status": "visual-reviewed",
+      "observation": "파일 형식·크기 제한을 최소화하고 JPEG의 jpg/jpeg/jpe 동등 확장자를 수용한다. 이미지 용량 제한이 필요하면 자동 압축 기능을 고려한다.",
+      "evidence": [
+        {
+          "page": 540,
+          "path": "tmp/pdfs/krds-components-full/page-540.png",
+          "sha256": "2c1e9e734ddc0fa2d12c8296e0522951c0cea842a6891cbb7b8810967e719ba0"
+        }
+      ],
+      "findings": [
+        "CS-04"
+      ]
+    },
+    {
+      "page": 541,
+      "status": "visual-reviewed",
+      "observation": "파일 선택 뒤에도 파일 선택 버튼과 드롭 영역을 활성 기본 상태로 유지해 추가·변경할 수 있게 한다.",
+      "evidence": [
+        {
+          "page": 541,
+          "path": "tmp/pdfs/krds-components-full/page-541.png",
+          "sha256": "d970904fc768430a00c7094577ff13e24fe0e98f8dc8b4fb33081e22b79ea595"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 542,
+      "status": "visual-reviewed",
+      "observation": "최종 제출이 주요 작업이면 파일 선택 버튼은 하위 강조 수준으로 제공한다. 여러 개의 테두리형 업로드 버튼 좋은 예시를 확인했다.",
+      "evidence": [
+        {
+          "page": 542,
+          "path": "tmp/pdfs/krds-components-full/page-542.png",
+          "sha256": "d11d5b9c2914bff41bcf2f995e8a6c7ed8544e79f2b40909db3ec5a267b9c95c"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 543,
+      "status": "visual-reviewed",
+      "observation": "여러 파일 선택 버튼을 전부 강한 채움형으로 표시한 위계 충돌 사례를 확인했다.",
+      "evidence": [
+        {
+          "page": 543,
+          "path": "tmp/pdfs/krds-components-full/page-543.png",
+          "sha256": "c14f8d6d6115d845e09f1f0546d8d03c2d2e90774b58c8514b23dbdb13112f57"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 544,
+      "status": "visual-reviewed",
+      "observation": "폼 제출 전 파일을 서버로 자동 업로드/저장하지 않는다. 미선택·형식·크기·빈 파일·전송 실패·개수·선택적 암호/악성 파일 오류를 구체적으로 구분한다.",
+      "evidence": [
+        {
+          "page": 544,
+          "path": "tmp/pdfs/krds-components-full/page-544.png",
+          "sha256": "5d79c31c87304be1589169d42628682c58913da1f6a0ce30daccdf82b8e586da"
+        }
+      ],
+      "findings": [
+        "CS-03"
+      ]
+    },
+    {
+      "page": 545,
+      "status": "visual-reviewed",
+      "observation": "긴 파일명은 한 줄 말줄임표로 유지하고 두 줄로 늘리지 않는다. 형식·크기를 보존한 도해를 확인했다.",
+      "evidence": [
+        {
+          "page": 545,
+          "path": "tmp/pdfs/krds-components-full/page-545.png",
+          "sha256": "4a9eae4a12e670ce156b78e123f8414ec281f034bd61f362b606c20d896e039f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 546,
+      "status": "visual-reviewed",
+      "observation": "파일 용도 레이블, 파일 항목과 삭제 버튼의 p 또는 ul/li 그룹, aria-describedby 연결, 선택 버튼 가시적 초점을 제공한다.",
+      "evidence": [
+        {
+          "page": 546,
+          "path": "tmp/pdfs/krds-components-full/page-546.png",
+          "sha256": "ae7202f1e2df431a4b866af377f0a691b2f0b285f85dfad619a8e18e1cf4914f"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 547,
+      "status": "visual-reviewed",
+      "observation": "드래그 앤 드롭에는 클릭/키보드로 여는 파일 선택기를 반드시 병행한다. 드롭만 있는 나쁜 사례와 선택 버튼 포함 좋은 사례를 확인했다.",
+      "evidence": [
+        {
+          "page": 547,
+          "path": "tmp/pdfs/krds-components-full/page-547.png",
+          "sha256": "8568d1208b8f8ab3e186b40ef893ae1d773014e25d8f53832e6e577a4fa4a62d"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 548,
+      "status": "visual-reviewed",
+      "observation": "시각적으로 숨긴 input type=file에도 보조기술에 역할이 전달되는 숨김 스타일을 적용한다.",
+      "evidence": [
+        {
+          "page": 548,
+          "path": "tmp/pdfs/krds-components-full/page-548.png",
+          "sha256": "cf6ccdf08dbe1f72af4762d1bf2e03a576b11e9b41a41186e267645ba03bfacb"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 549,
+      "status": "visual-reviewed",
+      "observation": "Tab으로 선택/드롭/삭제에 접근하고 시스템 선택기는 방향키·Space·Enter로 조작한다. 드롭 선택과 선택기 열기 경로가 동등해야 한다.",
+      "evidence": [
+        {
+          "page": 549,
+          "path": "tmp/pdfs/krds-components-full/page-549.png",
+          "sha256": "93a7416cd128aaba99c824adce21d1be79c8baa36ab5abbf5f4d37ce1815eb9a"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 550,
+      "status": "visual-reviewed",
+      "observation": "파일 삭제는 클릭·Space·Enter 모두로 실행한다.",
+      "evidence": [
+        {
+          "page": 550,
+          "path": "tmp/pdfs/krds-components-full/page-550.png",
+          "sha256": "806ff11949457c0deb7f23f0cb991011776c14164ef25879f6310857efb3aa6c"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 551,
+      "status": "visual-reviewed",
+      "observation": "기본 패턴 장 표지이며 추가 컴포넌트 규칙은 없다.",
+      "evidence": [
+        {
+          "page": 551,
+          "path": "tmp/pdfs/krds-components-full/page-551.png",
+          "sha256": "1ca40e74955f60b48b76b18bf30cd3dec4a7812c8a3755eaa8a1816fbf60a368"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "page": 552,
+      "status": "visual-reviewed",
+      "observation": "기본 패턴 11개 목차이며 컴포넌트 파일 업로드의 추가 규칙은 없다.",
+      "evidence": [
+        {
+          "page": 552,
+          "path": "tmp/pdfs/krds-components-full/page-552.png",
+          "sha256": "829da5bc05b493219e2f80535a9c3d34e7c940d2140be9e125888281eaed700c"
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "CS-01",
+      "sourcePages": [
+        443
+      ],
+      "status": "confirmed-static-gap-owner-action-required",
+      "requirement": "스피너는 배경 대 트랙과 트랙 대 진행 표시 각각 3:1 이상 대비를 갖는다.",
+      "evidence": [
+        "runtime.css:72 ui-progress-track gray-20 #E4E4E4; 기본 흰 배경 대비 계산 1.2714600996559875"
+      ],
+      "suggestedAction": "원천 토큰을 유지한 트랙/진행 색 또는 비색상 경계를 선택하고 두 대비를 수치 검증한다."
+    },
+    {
+      "id": "CS-02",
+      "sourcePages": [
+        535,
+        536
+      ],
+      "status": "confirmed-static-gap-owner-action-required",
+      "requirement": "선택 파일 항목은 이름·확장자·크기를 표시한다.",
+      "evidence": [
+        "runtime.js file-picker render는 file.name을 표시하며 file.size 메타정보를 렌더하지 않는다."
+      ],
+      "suggestedAction": "파일 크기와 형식을 파일 이름 말줄임과 별도로 표시하고 삭제 버튼 관계를 연결한다."
+    },
+    {
+      "id": "CS-03",
+      "sourcePages": [
+        544
+      ],
+      "status": "confirmed-static-gap-owner-action-required",
+      "requirement": "비어 있는 파일을 구체적인 오류로 안내한다.",
+      "evidence": [
+        "runtime.js fileErrors는 개수·최대 크기·accept만 검사하며 size===0 분기가 없다."
+      ],
+      "suggestedAction": "빈 파일 상태와 오류 문구를 추가하고 기존 선택 보존 회귀를 검사한다."
+    },
+    {
+      "id": "CS-04",
+      "sourcePages": [
+        540
+      ],
+      "status": "missing-reusable-alternative-owner-confirmation-required",
+      "requirement": "용량 제한이 필요한 이미지에는 자동 압축 대안을 고려한다.",
+      "evidence": [
+        "현재 authored manifest 파일 업로드는 single/multiple-drop/transfer-states이며 build-variants.cjs 및 runtime.js에 압축 대안이 없다."
+      ],
+      "suggestedAction": "서버 없이 로컬 이미지 크기 축소·압축/실패/결과 미리보기 UI를 재사용 대안으로 제공한다. 모든 업로드에 강제하지 않는다."
+    },
+    {
+      "id": "CS-05",
+      "sourcePages": [
+        435
+      ],
+      "status": "implementation-comparison-candidate",
+      "requirement": "단계 이동은 순차형 외 적응형 이동과 선택 단계 건너뛰기를 지원할 수 있다.",
+      "evidence": [
+        "현재 component.step-indicator manifest는 upstream 기본 마크업 한 변형만 열거한다. 기본 패턴의 wizard와 별개로 재사용 계약 대조 필요.",
+        "upstream/html/code/step_indicator.html 전체는 li/span 상태 표시이며 이동 버튼/링크 및 선택 단계 스킵 제어가 없다. upstream/resources/js 전체에서 step-wrap/step-indicator 제어 핸들러를 찾지 못했다."
+      ],
+      "suggestedAction": "비선형 이동과 선택 단계 스킵 상태가 구현됐는지 소유자가 확인하고 없으면 독립 UI 대안으로 보완한다."
+    },
+    {
+      "id": "CS-06",
+      "sourcePages": [
+        461,
+        494,
+        497
+      ],
+      "status": "implementation-comparison-candidate",
+      "requirement": "튜토리얼 닫기/탭 전환 시 과정 보존, 명시적 그만하기만 중단; 실제 대상 행동 완료로 코치 자동 진행; 중단 후 시작 버튼 초점.",
+      "evidence": [
+        "coach_mark upstream 조각은 다음/그만보기 버튼과 예시 본문이며 실제 대상 행동 이벤트는 이 조각에 없다. runtime.js에 coach/tutorial 핸들러는 없다.",
+        "upstream/resources/js 전체에서 coach/tutorial/coach-btn-stop 핸들러가 없다. coach_mark.html:17–18 버튼은 class만 있고 tutorial_panel.html:162 중단 버튼에도 바인딩이 없다. 단계 .current는 정적이다.",
+        "ui-script.js:1879–1933 helpPanel 열기/닫기는 DOM을 보존한다. 따라서 닫으면 단계를 초기화한다는 확인된 버그가 아니라, 진행 가능한 튜토리얼 상태 자체가 없는 누락으로 구분한다."
+      ],
+      "suggestedAction": "호스트 데이터가 아닌 재사용 로컬 단계 상태·대상 행동 연동 UI를 대조하고 보완한다."
+    },
+    {
+      "id": "CS-07",
+      "sourcePages": [
+        427,
+        428
+      ],
+      "status": "partial-implemented-addition-candidate",
+      "requirement": "태그 추가 시 적용된 태그 영역으로 초점; 토글은 같은 태그; 삭제 시 이전 태그 또는 빈 컨테이너.",
+      "evidence": [
+        "runtime.js:280 태그 토글 및 삭제 이전/빈컨테이너 초점 구현 확인. manifest는 filter/removable/label이며 신규 태그 추가 대안은 별도 없음."
+      ],
+      "suggestedAction": "추가→적용 목록 흐름 대안을 제공할지 소유자가 대조; 이미 구현된 삭제 초점은 유지한다."
+    },
+    {
+      "id": "CS-08",
+      "sourcePages": [
+        507,
+        508
+      ],
+      "status": "implementation-comparison-candidate",
+      "requirement": "원본 날짜 형식과 입력 형식을 맞추며 MM/YY 유효기간 및 연월 범위가 재사용 가능한 정밀도 대안이다.",
+      "evidence": [
+        "component.date-input authored variants는 year/month/day parts, native day, approximate-month이다. 기본 패턴 filter month-range는 이미 구현."
+      ],
+      "suggestedAction": "카드 유효기간 MM/YY 같은 분리형을 실제 결제정보 수집 없이 재사용 날짜 UI로 대조한다."
+    }
+  ],
+  "remaining": [
+    "컴포넌트 소유자가 각 후보의 현행 구현/테스트/조치를 연결한다.",
+    "변경 UI 실제 브라우저 검증은 루트 담당이다.",
+    "이 보충 검토는 PDF 시각 열람 증거이며 정부 인증이나 전체 UI 통과 선언이 아니다."
+  ]
+}

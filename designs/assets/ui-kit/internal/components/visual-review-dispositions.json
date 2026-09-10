@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "meaning": "Owner implementation dispositions after actual source review. Browser validation is separate; source review is not a compliance certificate.",
+  "pages": {
+    "114": {"actions":["400dpi masthead-panel crop additionally read; fixed Korean copy and native verification disclosure implemented in masthead-verification."],"remaining":["Government host must supply actual approved domain list URL; integrated browser QA is separate."]},
+    "121": {"actions":["identifier light/dark fragments and government-only manifest variants added."],"remaining":[]},
+    "122": {"actions":["identifier-dark footer strip implemented."],"remaining":[]},
+    "124": {"actions":["Government-only logo slots and joint-institution guidance retain approved agency names/alt as host data."],"remaining":["Real approved government logos are not fabricated."]},
+    "127": {"actions":["identifier fragments use footer section and explicit approved-logo slots; company footer excludes government marks."],"remaining":[]},
+    "128": {"actions":["company footer exposes address/contact, privacy, conditional terms and copyright slots."],"remaining":["Host must supply approved company/legal/contact data."]},
+    "129": {"actions":["Conditional terms and current approved legal text preserved as host contract."],"remaining":["Legal validity is not certified by sample UI."]},
+    "130": {"actions":["page-shell flex body keeps short-content footer last without consumer spacer content."],"remaining":["Integrated host layout QA remains separate."]},
+    "145": {"actions":["Default headers made static; company-scroll-reveal compact optional header hides down, shows up and stays visible on focus."],"remaining":["Browser scroll/focus regression required."]},
+    "174": {"actions":["upstream-compat.js handles sibling wrap/Home/End for official menu without modifying source."],"remaining":["Actual desktop menu keyboard regression required."]},
+    "175": {"actions":["Compatibility companion returns Escape focus to expanded main trigger before original close handler."],"remaining":["Official menu real keyboard QA remains separate."]},
+    "180": {"actions":["breadcrumb G01 restores omission only when a clear current title immediately follows."],"remaining":[]},
+    "206": {"actions":["in-page-navigation fragment and conditional guidance distinguish long structured articles from menu/filter/infinite lists."],"remaining":[]},
+    "210": {"actions":["Desktop right/mobile before-body nonsticky layout and source reading order implemented."],"remaining":["Desktop/mobile browser QA required."]},
+    "212": {"actions":["Scrollspy current location and distinct pointer-link versus keyboard-target focus implemented."],"remaining":["Actual scroll and keyboard regression required."]},
+    "219": {"actions":["Pagination uses semantic ordered controls and stable source items per page."],"remaining":[]},
+    "226": {"actions":["Numeric window keeps first/last/current with desktop maximum9 and mobile maximum7."],"remaining":[]},
+    "227": {"actions":["Current page remains focusable, aria-current and aria-disabled, without repeated change."],"remaining":[]},
+    "229": {"actions":["Load-more label includes current/total and focuses first new item."],"remaining":["Real browser continuation focus regression required."]},
+    "277": {"actions":["Modal body scroll separated from persistent footer; new scrollable variant."],"remaining":["Small viewport browser QA required."]},
+    "321": {"actions":["Swiper compatibility layer hides navigation/indicator for a single slide."],"remaining":["Host single-item data case must be tested."]},
+    "325": {"actions":["Inactive slides receive inert and aria-hidden in compatible one-slide-at-a-time official variants."],"remaining":["Host multi-visible carousel requires an explicit visible-slides contract."]},
+    "327": {"actions":["Automatic carousel stops on focus/hover and remains held until explicit play."],"remaining":["Actual autoplay delay and focus regression required."]},
+    "348": {"actions":["Authored sortable table first column initially ascending with matching rows and aria-sort."],"remaining":[]},
+    "352": {"actions":["Horizontal overflow has keyboard region and conditional clickable left/right controls."],"remaining":["Mobile scroll button regression required."]}
+  },
+  "findings": [
+    {"id":"CS-01","status":"implemented-browser-pending","actions":["Spinner track gray50 #8E8E8E, arc primary80 #0E2B5E; both adjacent contrasts tested."]},
+    {"id":"CS-02","status":"implemented-browser-pending","actions":["Selected file shows original name including extension and independent byte count."]},
+    {"id":"CS-03","status":"implemented-browser-pending","actions":["Zero-byte files rejected using canonical file.empty; cancelled native picker preserves existing selection."]},
+    {"id":"CS-04","status":"implemented-browser-pending","actions":["Optional local JPG/PNG/WebP resize/JPEG optimization; immutable original, quality disclosure, progress/error/not-smaller/output states; no network or forced application."]},
+    {"id":"CS-05","status":"implemented-browser-pending","actions":["step-adaptive offers prerequisite validation, optional skip, completed-step jump, preserved input, local completion and reset."]},
+    {"id":"CS-06","status":"implemented-browser-pending","actions":["tutorial-retained preserves session progress on collapse/tab switch; coach-action advances after actual title apply/category/preview actions, with stop and focus return. No persistent or backend completion claim."]},
+    {"id":"CS-07","status":"implemented-browser-pending","actions":["Add-filter variant focuses applied container; toggle retains focus; removal focuses previous or empty container."]},
+    {"id":"CS-08","status":"implemented-browser-pending","actions":["MM/YY split document input returns two-digit year without inventing century or collecting payment data; actual month-range variant remains basic-pattern scope."]}
+  ]
+}

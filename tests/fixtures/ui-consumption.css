@@ -1,0 +1,6 @@
+/* Approved fixture screen values; intentionally loaded both before and after pack CSS. */
+.fixture { font-size:var(--krds24-body-small-size); padding:24px; }
+.fixture h2 { font-size:var(--krds24-title-large-size); margin:0; }
+.fixture > section { margin-top:24px; }
+.fixture .num { display:inline-block; padding:8px; }
+.fixture .swiper-pagination-fraction { position:static; padding:8px; }

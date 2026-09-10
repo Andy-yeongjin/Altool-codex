@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><title>확정 진행률 스피너 · 공통 UI 자산</title><link rel="stylesheet" href="../../foundations/tokens-2024.css"><link rel="stylesheet" href="../runtime.css"><style>body{margin:0}main{max-width:60rem;margin:auto;padding:2rem 1rem}.notice{padding:1rem;background:var(--krds24-gray-5);border-left:4px solid var(--krds24-primary-60);margin-bottom:2rem;font-size:.9375rem}input[type=number]{width:6rem}</style><script src="../messages.js" defer></script><script src="../runtime.js" defer></script></head><body class="altool-ui krds-2024-tokens ui-preview"><main><h1>확정 진행률 스피너</h1><p class="notice">Altool 작성 재사용 UI · KRDS 2024.02 참고. 샘플 데이터이며 전송·로그인·실제 업무 처리는 연결하지 않았습니다.</p>
+<section data-ui="progress">
+  <div role="progressbar" aria-label="작업 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40" class="ui-progress">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 100 100"><circle class="ui-progress-track" cx="50" cy="50" r="40"/><circle class="ui-progress-fill" data-progress-ring cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="40 60"/></svg>
+    <strong data-progress-text>40%</strong>
+  </div><p data-progress-status role="status">40% 진행 중</p>
+  <label for="progress-demo">예제 진행률 조절 (실제 파일 전송이 아닙니다)</label><input id="progress-demo" data-progress-demo type="range" min="0" max="100" step="10" value="40">
+</section><footer><p class="ui-hint">출처: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02) p.438, 439, 443, 444, 445. 공공누리 제1유형. 브라우저 검증과 앱 연결은 구분합니다.</p></footer></main></body></html>

@@ -34,7 +34,7 @@
 
 ## 3.1 시각 캡처
 
-> UI/제품/사이트/앱 조사라면 실제 서비스/제품 참조 중 최소 3개는 캡처한다. 캡처는 복제용이 아니라 레이아웃 구조, 정보 밀도, 컴포넌트 비율, 미디어 사용, 시각 위계를 `designs/design.md`로 정규화하기 위한 근거다.
+> UI/제품/사이트/앱 조사라면 실제 서비스/제품 참조 중 최소 3개는 캡처한다. 캡처는 복제용이 아니라 레이아웃 구조, 정보 밀도, 컴포넌트 비율, 미디어 사용, 시각 위계를 `standards/design.md`로 정규화하기 위한 근거다.
 
 저장 경로: `docs/00-research/assets/{Research ID}/`
 
@@ -108,17 +108,17 @@
 > 외부 사례는 기능과 시각 디자인의 조사 원천이다. 문장·카피·로고·고유 이미지는 복제하지 않는다.
 > 가져올 수 있는 것: 페이지 구조, 정보 배치, 기능 흐름, 인터랙션 의도, 사용자 기대, 색상 팔레트, 브랜드 분위기, 타이포 스케일, 간격, 그림자, 둥글기, 컴포넌트 외형 값, 정보 밀도, 위계, 비례, 네비게이션 패턴.
 > 폰트는 참조 사이트의 `font-family` 이름과 역할별 크기·굵기·행간·자간을 조사하되, 폰트 파일은 복제하지 않는다. 구현에는 시스템 폰트, 오픈 라이선스 폰트, 사용자 제공 폰트, 프로젝트 포함 폰트만 사용한다.
-> `designs/claude-design/*.html`이 있으면 최상위 원천이며, 없으면 `.pen`, Stitch, 스크린샷, 디자인 문서가 직접 디자인 원천이다. Research는 상위 원천의 빈칸을 보강한다.
-> `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 구현 기준으로 유지한다. 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 Research 단계에서 참조 사이트와 사용자 디자인 입력을 근거로 `design.md`를 생성한다.
+> `designs/claude-design/**/*.html`이 있으면 최상위 원천이며, 없으면 `.pen`, Stitch, 스크린샷, 디자인 문서가 직접 디자인 원천이다. Research는 상위 원천의 빈칸을 보강한다.
+> `standards/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 구현 기준으로 유지한다. 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 Research 단계에서 참조 사이트와 사용자 디자인 입력을 근거로 `design.md`를 생성한다.
 > Research가 `design.md`를 생성·보강하면 `Reference Source Map`에 캡처 ID와 파일 경로를 반드시 남긴다.
 
 ### 10.1 디자인 입력 우선순위
 
 | 우선순위 | 입력 | 감지 경로 | 처리 |
 | ---: | --- | --- | --- |
-| 1 | Claude 디자인 HTML | `designs/claude-design/*.html` | 구조·밀도·위계·컴포넌트·상태의 최상위 원천 |
-| 2 | 기타 사용자 디자인 입력 | `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}` | 화면 구조와 시각 의도의 직접 원천 |
-| 3 | 프로젝트 디자인 시스템 | `designs/design.md` | 상위 원천을 구현 가능한 계약으로 정규화 |
+| 1 | Claude 디자인 HTML | `designs/claude-design/**/*.html` | 구조·밀도·위계·컴포넌트·상태의 최상위 원천 |
+| 2 | 기타 사용자 디자인 입력 | `designs/**/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}` | 화면 구조와 시각 의도의 직접 원천 |
+| 3 | 프로젝트 디자인 시스템 | `standards/design.md` | 상위 원천을 구현 가능한 계약으로 정규화 |
 | 4 | Research | `docs/00-research/*.research.md` + 참조 사이트 | 상위 원천의 빈칸 보강과 계약 생성 근거 |
 | 5 | AI 자체 판단 | 없음 | 위 입력으로도 결정되지 않는 세부만 보완 |
 
@@ -126,21 +126,21 @@
 | --- | --- | --- |
 | Claude 디자인 HTML | {없음 또는 HTML 경로} | {최상위 원천 / 없음} |
 | 기타 사용자 디자인 입력 | {없음 또는 .pen/Stitch/스크린샷/디자인 문서 경로} | {직접 디자인 원천 / 없음} |
-| 디자인 시스템 | {기존 파일 있음/없음, 생성 또는 재사용 여부} | {`designs/design.md` 경로와 처리 요약} |
+| 디자인 시스템 | {기존 파일 있음/없음, 생성 또는 재사용 여부} | {`standards/design.md` 경로와 처리 요약} |
 | 접근성/반응형 | {외부 UX 패턴} | constitution.md의 디자인 품질 원칙 유지 |
 | 충돌 항목 | {있으면 기록, 없으면 없음} | 외부 사례 제외/보정/사용자 확인 |
 
 ## 11. Design System Bootstrap
 
 > 참조 사이트를 그대로 복제하지 않는다. 브랜드, 로고, 고유 카피, 식별 가능한 레이아웃, 고유 이미지는 사용하지 않는다.
-> 대신 실제 서비스에서 반복되는 시각 패턴을 추출해 새 제품에 맞는 `designs/design.md`로 정규화한다.
+> 대신 실제 서비스에서 반복되는 시각 패턴을 추출해 새 제품에 맞는 `standards/design.md`로 정규화한다.
 > `design.md`가 이미 있더라도 첫 non-empty line에 `TBD`가 있으면 템플릿 상태로 보고 이번 research에서 프로젝트 고유 디자인 시스템으로 채운다. 사용자가 명시하지 않은 한 `TBD`가 없는 기존 디자인 시스템은 덮어쓰지 않는다.
 
 ### 11.1 디자인 시스템 상태
 
 | 항목 | 상태 | 근거/경로 |
 | --- | --- | --- |
-| 기존 `design.md` | 없음/비어 있음/TBD 템플릿/확정됨 | `designs/design.md` 첫 non-empty line 확인 |
+| 기존 `design.md` | 없음/비어 있음/TBD 템플릿/확정됨 | `standards/design.md` 첫 non-empty line 확인 |
 | 사용자 디자인 입력 | 있음/없음 | {`.pen`, Stitch, 스크린샷, 디자인 문서 경로} |
 | Research 처리 | 재사용/생성/보강 제안 | {없거나 비어 있거나 TBD면 생성, 확정본이면 처리 요약} |
 
@@ -200,7 +200,7 @@
 | C-__ | `{page/section/component}` | {구조·비례·밀도·컴포넌트 외형} | {브랜드/카피/이미지/고유 배치} | {browser/analyze에서 볼 증거} |
 | S-__ | `{page/section/component}` | {UX 흐름·상태·리스크} | {범위 밖 기능} | {테스트/브라우저 증거} |
 
-### 11.7 `designs/design.md` 작성 구조
+### 11.7 `standards/design.md` 작성 구조
 
 > `design.md`는 CSS 변수 파일의 보조 문서가 아니라 구현자가 읽는 정규화된 디자인 계약이다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천이고 `design.md`는 미정 영역을 보완한다.
 > GitHub `awesome-design-md`처럼 상단에는 정밀 토큰 블록을 두고, 본문에는 브랜드 문법과 구현 계약을 쓴다.
@@ -233,7 +233,7 @@
 
 | 산출물 | 처리 | 요약 |
 | --- | --- | --- |
-| `designs/design.md` | 생성/재사용/보강 제안 | {상단 Design Token Block, Design Thesis, 참조 맵, Screen Recipes, Component Extraction, Capture-to-Implementation Map, 캡처 ID/경로, 시각 값, 폰트 스택과 대체 사유, 컴포넌트 계약, 미디어 규칙, Do/Don't 요약. 생성·보강 완료 시 최상단 TBD 제거} |
+| `standards/design.md` | 생성/재사용/보강 제안 | {상단 Design Token Block, Design Thesis, 참조 맵, Screen Recipes, Component Extraction, Capture-to-Implementation Map, 캡처 ID/경로, 시각 값, 폰트 스택과 대체 사유, 컴포넌트 계약, 미디어 규칙, Do/Don't 요약. 생성·보강 완료 시 최상단 TBD 제거} |
 
 ### 11.9 Generic AI/SaaS 회피 기준
 

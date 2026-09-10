@@ -22,10 +22,20 @@
 | **SUCCESS** | {Plan에서 복사} |
 | **SCOPE** | {Plan에서 복사} |
 
+## 표준 적용
+
+> `altool/standards.md`에 따라 작업 의미 태그와 requires를 선택한다. 원문은 이 표로 대체하지 않는다. 표준이 없는 legacy 프로젝트는 해당 사실을 기록한다.
+
+| 규칙 ID/항목 | 원문 경로 | 이 기능의 적용 방식 또는 비적용/예외 근거 | 코드·테스트/검증 |
+| --- | --- | --- | --- |
+| {규칙} | {standards/*.md#anchor} | {구체적인 계약} | {테스트·관찰 증거} |
+
+UI는 과업 태그→화면/패턴 지침→의미 ID·release·허용 변형→회사 적용 지침/검증 기준을 위 표에 연결한다. `altool/standards.md`의 UI 적용 증거 절차를 따르고 구현 후 `.altool/asset-usage/{기능명}.json`과 실제 화면을 대조한다. 회사 계약과 참고 KRDS 원문/catalog를 혼동하지 않는다.
+
 ## Design System Anchor
 
-> 디자인 기준 우선순위는 `designs/claude-design/*.html` → 기타 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `designs/design.md` → Research → AI 자체 판단 순서다. `constitution.md`의 디자인 품질 원칙은 모든 원천에 적용한다.
-> `designs/design.md`는 정규화된 구현 디자인 계약이다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천이고 `design.md`는 미정 영역을 보완한다. 이 기능에서 사용할 Screen Recipes, Component Extraction, Capture-to-Implementation Map, 핵심 시각 값, 컴포넌트 계약, 미디어 규칙을 미리 잠근다.
+> 디자인 기준 우선순위는 `designs/claude-design/**/*.html` → 기타 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `standards/design.md` → Research → AI 자체 판단 순서다. `constitution.md`의 디자인 품질 원칙은 모든 원천에 적용한다.
+> `standards/design.md`는 정규화된 구현 디자인 계약이다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천이고 `design.md`는 미정 영역을 보완한다. 이 기능에서 사용할 Screen Recipes, Component Extraction, Capture-to-Implementation Map, 핵심 시각 값, 컴포넌트 계약, 미디어 규칙을 미리 잠근다.
 > 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 Research 또는 design_source 단계에서 먼저 생성한다. Spec은 Research의 시각 관찰값을 직접 CSS 값으로 확정하지 않는다.
 > `design.md`에 없는 값이 필요하면 §6 "디자인 시스템 보강"에 명시하고 design.md를 보강한 뒤 사용한다.
 
@@ -33,7 +43,7 @@
 
 | 항목 | 감지 경로 | Spec 적용 |
 |------|-----------|-----------|
-| `.pen` | {designs/*.pen 또는 없음} | {화면 구조/컴포넌트/시각 값 반영 방식} |
+| `.pen` | {designs/**/*.pen 또는 없음} | {화면 구조/컴포넌트/시각 값 반영 방식} |
 | Stitch | {designs/stitch/ 또는 없음} | {구조/디자인 의도 반영 방식} |
 | 스크린샷 | {designs/*.{png,jpg,jpeg,webp} 또는 없음} | {레이아웃/밀도/시각 위계 반영 방식} |
 | 디자인 문서 | {designs/*.{md,pdf} 또는 없음} | {규칙/브랜드/컴포넌트 기준 반영 방식} |
@@ -207,6 +217,13 @@ interface {엔티티} {
 ---
 
 ## 8. 테스트 플랜 (analyze의 Runtime 검증 기준)
+
+### UI 실측 계약 (UI 기능만)
+
+- 계약: `.altool/ui/{기능명}.contracts.json` 및 sha256.
+- 원천: `{디자인 계약/Spec 경로와 hash}`. 구현 fingerprint 범위: `{앱·CSS·공통 배포 파일/디렉터리}`.
+- 대상: `{페이지·상태·desktop/mobile·selector·기대값·출처}`. 글자 모음은 expectedCount도 고정한다.
+- 원시 관찰과 Step Check 연결은 `standards/tooling/README.md#ui`를 따른다. 비UI는 기능 범위와 비적용 근거를 기록한다.
 
 > 시나리오는 여기서 정의하고, 변경 위험을 증명하는 테스트 코드는 run에서 구현과 한 세트로 작성하며, analyze가 실행한다 (헌법의 완료 품질 게이트).
 

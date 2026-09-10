@@ -1,5 +1,7 @@
 # $altool freedom - 프롬프트로부터의 해방 모드
 
+Browser를 수행한 사이클은 `altool/standards.md`의 디자인 실측 완료 계약을 적용하고 `ui.contracts`/`ui.measurements` 및 `visual.ui_contracts`를 기록한다. UI 실측 누락/실패를 완료로 보고하지 않는다.
+
 **사용법**
 
 ```text
@@ -38,7 +40,7 @@ Freedom은 `oneshot`의 대체가 아니라 상위 자율주행 모드다. `ones
 - 사용자가 `--loops N`, `N회`, `N번`을 말하면 그 값을 사용한다.
 - 루프 횟수가 없으면 기본값은 1회다.
 - 루프 횟수는 1 이상이어야 한다.
-- 각 루프는 하나의 의미 있는 개발 사이클이다. `designs/claude-design/*.html`, `.pen`, Stitch가 있고 `designs/design.md`가 없거나 오래됐거나 `TBD`이면 `design_source`를 자동 수행한 뒤, 반드시 `research`를 수행한다. 이후 조사 결과와 현재 상태에 따라 `plan -> spec -> run -> analyze -> fix -> browser -> report` 중 필요한 흐름으로 사용자가 맡긴 전체 제품의 완성형을 구현·검증한다.
+- 각 루프는 하나의 의미 있는 개발 사이클이다. `altool/standards.md`의 디자인 입력 탐색·갱신 절차로 필요한 정규화를 자동 수행한 뒤, 반드시 `research`를 수행한다. 이후 조사 결과와 현재 상태에 따라 `plan -> spec -> run -> analyze -> fix -> browser -> report` 중 필요한 흐름으로 사용자가 맡긴 전체 제품의 완성형을 구현·검증한다.
 - 루프 수는 같은 제품의 완성도를 반복적으로 끌어올리는 기준이다. 모든 루프는 동일한 제품 목표를 대상으로 한다.
 - action 하나만 끝났다고 `loopsCompleted`를 올리지 않는다. `currentAction`만 갱신하고 outbox/journal에 진행 상황을 남긴다.
 - `loopsCompleted`는 현재 사이클의 목표 산출물과 검증이 끝났을 때만 1 증가시킨다.
@@ -63,11 +65,9 @@ for cycle in 1..N:
      - `python3 altool/scripts/radio.py cycle start --loop {cycle}` 실행
   2. Observe
   3. 디자인 소스 preflight
-     - `designs/claude-design/*.html`, `designs/stitch/`, `designs/*.pen`을 확인한다
-     - Claude 디자인 HTML이 있으면 최우선 디자인 헌법으로 보고, `designs/design.md`가 없거나 비어 있거나 `TBD`이거나 HTML보다 오래됐거나 Reference Source Map에 HTML 경로가 없으면 `altool/steps/design_source.md`를 자동 수행한다
-     - 시작 전 `python3 altool/scripts/radio.py action start design_source --loop {cycle}` 실행
-     - 완료 후 `python3 altool/scripts/radio.py action done design_source --loop {cycle} --summary "{요약}"` 실행
-     - 최신 디자인 시스템이면 `design_source` action은 생략하고 outbox에 `skipped(design system current)`를 남긴다
+     - `altool/standards.md`의 디자인 입력 탐색·갱신 절차로 정규화 필요 여부와 담당 단계를 판단한다
+     - design_source 대상이면 시작 전 `python3 altool/scripts/radio.py action start design_source --loop {cycle}`, 수행 후 `python3 altool/scripts/radio.py action done design_source --loop {cycle} --summary "{요약}"` 실행
+     - 일반 이미지·문서 대상은 다음 research에서 동기화하고, 정규화 불필요 시 design_source action을 생략해 outbox에 사유를 남긴다
   4. research 수행
      - 시작 전 `python3 altool/scripts/radio.py action start research --loop {cycle}` 실행
      - `altool/steps/research.md`를 읽고 실제 조사 산출물을 만든다
@@ -125,7 +125,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 
 | action | 선택 기준 |
 | --- | --- |
-| `design_source` | `designs/claude-design/*.html`, `.pen`, Stitch가 있고 `designs/design.md`가 없거나 오래됐거나 `TBD`이거나 원본 경로가 Reference Source Map에 없음. `oneshot`/`freedom`에서는 별도 사용자 명령 없이 자동 수행 |
+| `design_source` | `altool/standards.md`의 디자인 입력 탐색·갱신 판단에서 이 단계가 필요한 경우 자동 수행 |
 | `research` | 모든 사이클의 필수 시작 action. 목표와 유사 사례, 기능 후보, UX 패턴, 사용자 기대, 리스크를 조사 |
 | `plan` | 이번 research 기준의 완성형 목표가 정해졌고, plan이 없거나 현재 research·사용자 지시·구현 상태와 불일치함 |
 | `spec` | plan이 있고, spec이 없거나 현재 plan·research·design.md·구현 상태와 불일치함 |
@@ -156,7 +156,7 @@ AI는 사용자에게 질문하지 않는다. 필요한 확인이 있으면 현�
 | `browser` | `altool/steps/browser.md` |
 | `report` | `altool/steps/report.md` |
 
-Research는 PRD나 사용자 디자인을 덮어쓰지 않는다. 헌법의 디자인 권위를 적용하고, 필요하면 `design_source`로 `designs/design.md`를 먼저 정규화한다. 후속 action은 정규화된 계약을 사용하며 보호된 브랜드 자산이나 근거 없는 generic 스타일을 만들지 않는다.
+Research는 PRD나 사용자 디자인을 덮어쓰지 않는다. 헌법의 디자인 권위를 적용하고, 필요하면 `design_source`로 `standards/design.md`를 먼저 정규화한다. 후속 action은 정규화된 계약을 사용하며 보호된 브랜드 자산이나 근거 없는 generic 스타일을 만들지 않는다.
 
 ## 6. Verify
 

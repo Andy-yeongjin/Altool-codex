@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altool 기본 디자인 자산</title>
+  <link rel="stylesheet" href="preview.css">
+  <script src="preview.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#library">자산 목록으로 건너뛰기</a>
+  <header><img src="brand/altool-symbol.svg" width="40" height="40" alt=""><span>ALTOOL / ASSET LIBRARY</span><a href="README.md">사용 안내</a></header>
+  <main>
+    <div class="eyebrow">REUSABLE BY DESIGN</div>
+    <h1>작은 요소부터,<br>일관된 경험까지.</h1>
+    <p class="intro">Altool 기본 디자인을 회사에 맞추고, 사내에서 함께 사용합니다.<br>같은 의미에는 같은 자산, 고정 ID와 허용 변형을 사용합니다.</p>
+    <p><a href="runtime/demo.html">두 앱의 공통 자산 사용 확인</a> · <a href="COMMON-ASSETS.md">회사 팩 사용·배포 안내</a></p>
+    <aside class="source"><strong>참고 출처 · KRDS 2024.02</strong><p>Altool 기본 디자인 제작에 참고한 정부 UI/UX 가이드라인 988쪽입니다. 원본 공식 키트 1.1.0은 별도 버전이며, 회사 디자인에 맞춰 제공 자산을 조정합니다. <a href="ui-kit/internal/ATTRIBUTION.md">출처·라이선스 보기</a></p><p id="coverage">원문 매핑 상태를 불러오는 중…</p></aside>
+    <section id="library" aria-label="공통 자산 탐색">
+      <div class="filters" role="group" aria-label="자산 적용 범위">
+        <button type="button" data-source="adopted" aria-pressed="true">회사 표준</button>
+        <button type="button" data-source="reference" aria-pressed="false">참고 자료 · 자동 채택 아님</button>
+      </div>
+      <p id="pack-status" role="status">회사 팩을 확인하는 중…</p>
+      <div class="filters" role="group" aria-label="자산 분류">
+        <button type="button" data-category="all" aria-pressed="true">전체</button>
+        <button type="button" data-category="brand" aria-pressed="false">CI</button>
+        <button type="button" data-category="icons" aria-pressed="false">아이콘</button>
+        <button type="button" data-category="images" aria-pressed="false">상태 이미지</button>
+        <button type="button" data-category="components" aria-pressed="false">컴포넌트</button>
+          <button type="button" data-category="messages" aria-pressed="false">안내 문구</button>
+          <button type="button" data-category="patterns" aria-pressed="false">패턴·서비스</button>
+          <button type="button" data-category="foundations" aria-pressed="false">스타일·원칙</button>
+        <button type="button" data-category="guideline" aria-pressed="false">PDF 전체 가이드</button>
+      </div>
+      <div class="search"><label for="query">자산 검색</label><input id="query" type="search" placeholder="검색, modal, 오류, 로그인…"><button id="clear" type="button">검색 초기화</button></div>
+      <p id="status" role="status" aria-live="polite">자산을 불러오는 중…</p>
+      <p id="error" role="alert" hidden></p>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+  <footer>KRDS · 행정안전부 / 공공누리 제1유형 출처표시. Altool 추가 자산은 별도 표기합니다. <a href="https://www.krds.go.kr/">공식 사이트</a></footer>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title"></h2><button id="close-detail" type="button">닫기</button></div><div id="detail-body"></div></dialog>
+</body>
+</html>

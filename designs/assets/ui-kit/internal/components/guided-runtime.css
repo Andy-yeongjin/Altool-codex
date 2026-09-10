@@ -1,0 +1,22 @@
+/* Layout variants only. Palette, type and focus inherit the company runtime. */
+.altool-ui .guided-steps { display:flex; flex-wrap:wrap; gap:var(--krds24-space-8,.5rem); padding:0; list-style:none; }
+.altool-ui .guided-steps li { flex:1; min-width:9rem; }
+.altool-ui .guided-steps button { width:100%; text-align:left; }
+.altool-ui .guided-steps span { display:block; font-size:.9375rem; }
+.altool-ui .guided-target { padding:1rem; margin:1rem 0; border:2px solid transparent; scroll-margin-top:1rem; }
+.altool-ui .guided-target.guided-current { border-color:var(--krds24-primary-60); background:var(--krds24-gray-0); }
+.altool-ui .guided-balloon { position:relative; width:min(100%,30rem); margin:.75rem 0 1.5rem; padding:1rem; border:2px solid var(--krds24-primary-60); border-radius:var(--krds24-radius-8); background:var(--krds24-primary-5); color:var(--krds24-gray-90); }
+.altool-ui .guided-balloon::before { content:""; position:absolute; top:-.6rem; left:1.25rem; width:1rem; height:1rem; background:var(--krds24-primary-5); border-left:2px solid var(--krds24-primary-60); border-top:2px solid var(--krds24-primary-60); transform:rotate(45deg); }
+.altool-ui .guided-balloon h3 { margin-top:0; }
+.altool-ui .guided-balloon [data-tour-next], .altool-ui .guided-balloon [data-tour-finish] { color:var(--krds24-primary-60); border-color:var(--krds24-primary-60); background:var(--krds24-gray-0); }
+.altool-ui .guided-layout { display:grid; gap:1.5rem; }
+.altool-ui .guided-layout:has([data-guide-panel][open]) { grid-template-columns:minmax(0,1fr) minmax(16rem,22rem); }
+.altool-ui .guided-task-body { min-width:0; }
+.altool-ui dialog[data-guide-panel] { position:static; margin:0; align-self:start; width:100%; max-width:100%; max-height:none; overflow:visible; padding:1rem; }
+.altool-ui [data-guide-tabpanel] { margin-top:1rem; }
+.altool-ui [data-tour-output] { padding:1rem; border:1px solid var(--krds24-gray-60); margin-top:1rem; }
+@media(max-width:700px) {
+  .altool-ui .guided-layout:has([data-guide-panel][open]) { grid-template-columns:minmax(0,1fr); }
+  .altool-ui dialog[data-guide-panel] { position:fixed; inset:1rem; margin:auto; width:calc(100% - 2rem); max-width:32rem; max-height:calc(100dvh - 2rem); overflow:auto; }
+  .altool-ui .guided-target { padding:.75rem; }
+}

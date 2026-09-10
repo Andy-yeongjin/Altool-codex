@@ -153,6 +153,18 @@ class CheckGateTests(unittest.TestCase):
                 ["index.html:3: --missing is referenced with var() but never defined"],
             )
 
+    def test_css_vars_respects_fallbacks_without_hiding_missing_nested_reference(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            css = root / 'app.css'
+            css.write_text('.x {color:var(--optional, var(--also-optional, #111));} /* var(--example) */')
+            code, result = self.run_gate(check.css_vars_cmd, root=str(root))
+            self.assertEqual(code, 0, result)
+            css.write_text('.x {color:var(--optional, var(--required));}')
+            code, result = self.run_gate(check.css_vars_cmd, root=str(root))
+            self.assertEqual(code, 1)
+            self.assertIn('--required', result['failures'][0])
+
     def test_contrast_scans_top_level_templates_as_runtime_code(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

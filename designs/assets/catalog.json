@@ -1,0 +1,5276 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "krds-accordion",
+      "category": "components",
+      "name": "accordion",
+      "path": "ui-kit/internal/upstream/html/code/accordion.html",
+      "preview": "ui-kit/internal/examples/accordion.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-accordion_line",
+      "category": "components",
+      "name": "accordion line",
+      "path": "ui-kit/internal/upstream/html/code/accordion_line.html",
+      "preview": "ui-kit/internal/examples/accordion_line.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-badge",
+      "category": "components",
+      "name": "badge",
+      "path": "ui-kit/internal/upstream/html/code/badge.html",
+      "preview": "ui-kit/internal/examples/badge.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-badge_number",
+      "category": "components",
+      "name": "badge number",
+      "path": "ui-kit/internal/upstream/html/code/badge_number.html",
+      "preview": "ui-kit/internal/examples/badge_number.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-badge_size",
+      "category": "components",
+      "name": "badge size",
+      "path": "ui-kit/internal/upstream/html/code/badge_size.html",
+      "preview": "ui-kit/internal/examples/badge_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-breadcrumb",
+      "category": "components",
+      "name": "breadcrumb",
+      "path": "ui-kit/internal/upstream/html/code/breadcrumb.html",
+      "preview": "ui-kit/internal/examples/breadcrumb.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-button",
+      "category": "components",
+      "name": "button",
+      "path": "ui-kit/internal/upstream/html/code/button.html",
+      "preview": "ui-kit/internal/examples/button.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-button_hierarchy",
+      "category": "components",
+      "name": "button hierarchy",
+      "path": "ui-kit/internal/upstream/html/code/button_hierarchy.html",
+      "preview": "ui-kit/internal/examples/button_hierarchy.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-button_icon",
+      "category": "components",
+      "name": "button icon",
+      "path": "ui-kit/internal/upstream/html/code/button_icon.html",
+      "preview": "ui-kit/internal/examples/button_icon.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-button_size",
+      "category": "components",
+      "name": "button size",
+      "path": "ui-kit/internal/upstream/html/code/button_size.html",
+      "preview": "ui-kit/internal/examples/button_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-button_text",
+      "category": "components",
+      "name": "button text",
+      "path": "ui-kit/internal/upstream/html/code/button_text.html",
+      "preview": "ui-kit/internal/examples/button_text.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-button_with_icon",
+      "category": "components",
+      "name": "button with icon",
+      "path": "ui-kit/internal/upstream/html/code/button_with_icon.html",
+      "preview": "ui-kit/internal/examples/button_with_icon.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-calendar",
+      "category": "components",
+      "name": "calendar",
+      "path": "ui-kit/internal/upstream/html/code/calendar.html",
+      "preview": "ui-kit/internal/examples/calendar.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-calendar_range",
+      "category": "components",
+      "name": "calendar range",
+      "path": "ui-kit/internal/upstream/html/code/calendar_range.html",
+      "preview": "ui-kit/internal/examples/calendar_range.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-carousel",
+      "category": "components",
+      "name": "carousel",
+      "path": "ui-kit/internal/upstream/html/code/carousel.html",
+      "preview": "ui-kit/internal/examples/carousel.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-carousel_banner",
+      "category": "components",
+      "name": "carousel banner",
+      "path": "ui-kit/internal/upstream/html/code/carousel_banner.html",
+      "preview": "ui-kit/internal/examples/carousel_banner.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-checkbox",
+      "category": "components",
+      "name": "checkbox",
+      "path": "ui-kit/internal/upstream/html/code/checkbox.html",
+      "preview": "ui-kit/internal/examples/checkbox.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-checkbox_chip",
+      "category": "components",
+      "name": "checkbox chip",
+      "path": "ui-kit/internal/upstream/html/code/checkbox_chip.html",
+      "preview": "ui-kit/internal/examples/checkbox_chip.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-checkbox_size",
+      "category": "components",
+      "name": "checkbox size",
+      "path": "ui-kit/internal/upstream/html/code/checkbox_size.html",
+      "preview": "ui-kit/internal/examples/checkbox_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-coach_mark",
+      "category": "components",
+      "name": "coach mark",
+      "path": "ui-kit/internal/upstream/html/code/coach_mark.html",
+      "preview": "ui-kit/internal/examples/coach_mark.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-contextual_help",
+      "category": "components",
+      "name": "contextual help",
+      "path": "ui-kit/internal/upstream/html/code/contextual_help.html",
+      "preview": "ui-kit/internal/examples/contextual_help.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-critical_alerts",
+      "category": "components",
+      "name": "critical alerts",
+      "path": "ui-kit/internal/upstream/html/code/critical_alerts.html",
+      "preview": "ui-kit/internal/examples/critical_alerts.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-date_input",
+      "category": "components",
+      "name": "date input",
+      "path": "ui-kit/internal/upstream/html/code/date_input.html",
+      "preview": "ui-kit/internal/examples/date_input.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-disclosure",
+      "category": "components",
+      "name": "disclosure",
+      "path": "ui-kit/internal/upstream/html/code/disclosure.html",
+      "preview": "ui-kit/internal/examples/disclosure.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-favicon",
+      "category": "components",
+      "name": "favicon",
+      "path": "ui-kit/internal/upstream/html/code/favicon.html",
+      "preview": "ui-kit/internal/examples/favicon.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-file_upload",
+      "category": "components",
+      "name": "file upload",
+      "path": "ui-kit/internal/upstream/html/code/file_upload.html",
+      "preview": "ui-kit/internal/examples/file_upload.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-footer",
+      "category": "components",
+      "name": "footer",
+      "path": "ui-kit/internal/upstream/html/code/footer.html",
+      "preview": "ui-kit/internal/examples/footer.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-header",
+      "category": "components",
+      "name": "header",
+      "path": "ui-kit/internal/upstream/html/code/header.html",
+      "preview": "ui-kit/internal/examples/header.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-help_panel",
+      "category": "components",
+      "name": "help panel",
+      "path": "ui-kit/internal/upstream/html/code/help_panel.html",
+      "preview": "ui-kit/internal/examples/help_panel.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-identifier",
+      "category": "components",
+      "name": "identifier",
+      "path": "ui-kit/internal/upstream/html/code/identifier.html",
+      "preview": "ui-kit/internal/examples/identifier.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-in_page_navigation",
+      "category": "components",
+      "name": "in page navigation",
+      "path": "ui-kit/internal/upstream/html/code/in_page_navigation.html",
+      "preview": "ui-kit/internal/examples/in_page_navigation.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-language_switcher",
+      "category": "components",
+      "name": "language switcher",
+      "path": "ui-kit/internal/upstream/html/code/language_switcher.html",
+      "preview": "ui-kit/internal/examples/language_switcher.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-language_switcher_page",
+      "category": "components",
+      "name": "language switcher page",
+      "path": "ui-kit/internal/upstream/html/code/language_switcher_page.html",
+      "preview": "ui-kit/internal/examples/language_switcher_page.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-link",
+      "category": "components",
+      "name": "link",
+      "path": "ui-kit/internal/upstream/html/code/link.html",
+      "preview": "ui-kit/internal/examples/link.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-main_menu_mobile",
+      "category": "components",
+      "name": "main menu mobile",
+      "path": "ui-kit/internal/upstream/html/code/main_menu_mobile.html",
+      "preview": "ui-kit/internal/examples/main_menu_mobile.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-main_menu_pc",
+      "category": "components",
+      "name": "main menu pc",
+      "path": "ui-kit/internal/upstream/html/code/main_menu_pc.html",
+      "preview": "ui-kit/internal/examples/main_menu_pc.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-masthead",
+      "category": "components",
+      "name": "masthead",
+      "path": "ui-kit/internal/upstream/html/code/masthead.html",
+      "preview": "ui-kit/internal/examples/masthead.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-modal",
+      "category": "components",
+      "name": "modal",
+      "path": "ui-kit/internal/upstream/html/code/modal.html",
+      "preview": "ui-kit/internal/examples/modal.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-modal_sample",
+      "category": "components",
+      "name": "modal sample",
+      "path": "ui-kit/internal/upstream/html/code/modal_sample.html",
+      "preview": "ui-kit/internal/examples/modal_sample.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-pagination",
+      "category": "components",
+      "name": "pagination",
+      "path": "ui-kit/internal/upstream/html/code/pagination.html",
+      "preview": "ui-kit/internal/examples/pagination.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-radio_button",
+      "category": "components",
+      "name": "radio button",
+      "path": "ui-kit/internal/upstream/html/code/radio_button.html",
+      "preview": "ui-kit/internal/examples/radio_button.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-radio_chip",
+      "category": "components",
+      "name": "radio chip",
+      "path": "ui-kit/internal/upstream/html/code/radio_chip.html",
+      "preview": "ui-kit/internal/examples/radio_chip.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-radio_size",
+      "category": "components",
+      "name": "radio size",
+      "path": "ui-kit/internal/upstream/html/code/radio_size.html",
+      "preview": "ui-kit/internal/examples/radio_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-resize",
+      "category": "components",
+      "name": "resize",
+      "path": "ui-kit/internal/upstream/html/code/resize.html",
+      "preview": "ui-kit/internal/examples/resize.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-select",
+      "category": "components",
+      "name": "select",
+      "path": "ui-kit/internal/upstream/html/code/select.html",
+      "preview": "ui-kit/internal/examples/select.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-select_size",
+      "category": "components",
+      "name": "select size",
+      "path": "ui-kit/internal/upstream/html/code/select_size.html",
+      "preview": "ui-kit/internal/examples/select_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-select_sorting",
+      "category": "components",
+      "name": "select sorting",
+      "path": "ui-kit/internal/upstream/html/code/select_sorting.html",
+      "preview": "ui-kit/internal/examples/select_sorting.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-select_state",
+      "category": "components",
+      "name": "select state",
+      "path": "ui-kit/internal/upstream/html/code/select_state.html",
+      "preview": "ui-kit/internal/examples/select_state.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-side_navigation",
+      "category": "components",
+      "name": "side navigation",
+      "path": "ui-kit/internal/upstream/html/code/side_navigation.html",
+      "preview": "ui-kit/internal/examples/side_navigation.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-skip_link",
+      "category": "components",
+      "name": "skip link",
+      "path": "ui-kit/internal/upstream/html/code/skip_link.html",
+      "preview": "ui-kit/internal/examples/skip_link.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-spinner",
+      "category": "components",
+      "name": "spinner",
+      "path": "ui-kit/internal/upstream/html/code/spinner.html",
+      "preview": "ui-kit/internal/examples/spinner.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-step_indicator",
+      "category": "components",
+      "name": "step indicator",
+      "path": "ui-kit/internal/upstream/html/code/step_indicator.html",
+      "preview": "ui-kit/internal/examples/step_indicator.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-structured_list",
+      "category": "components",
+      "name": "structured list",
+      "path": "ui-kit/internal/upstream/html/code/structured_list.html",
+      "preview": "ui-kit/internal/examples/structured_list.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-structured_list_table",
+      "category": "components",
+      "name": "structured list table",
+      "path": "ui-kit/internal/upstream/html/code/structured_list_table.html",
+      "preview": "ui-kit/internal/examples/structured_list_table.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tab",
+      "category": "components",
+      "name": "tab",
+      "path": "ui-kit/internal/upstream/html/code/tab.html",
+      "preview": "ui-kit/internal/examples/tab.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-table",
+      "category": "components",
+      "name": "table",
+      "path": "ui-kit/internal/upstream/html/code/table.html",
+      "preview": "ui-kit/internal/examples/table.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tag",
+      "category": "components",
+      "name": "tag",
+      "path": "ui-kit/internal/upstream/html/code/tag.html",
+      "preview": "ui-kit/internal/examples/tag.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tag_link",
+      "category": "components",
+      "name": "tag link",
+      "path": "ui-kit/internal/upstream/html/code/tag_link.html",
+      "preview": "ui-kit/internal/examples/tag_link.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-text_input",
+      "category": "components",
+      "name": "text input",
+      "path": "ui-kit/internal/upstream/html/code/text_input.html",
+      "preview": "ui-kit/internal/examples/text_input.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-text_input_icon",
+      "category": "components",
+      "name": "text input icon",
+      "path": "ui-kit/internal/upstream/html/code/text_input_icon.html",
+      "preview": "ui-kit/internal/examples/text_input_icon.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-text_input_size",
+      "category": "components",
+      "name": "text input size",
+      "path": "ui-kit/internal/upstream/html/code/text_input_size.html",
+      "preview": "ui-kit/internal/examples/text_input_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-text_input_state",
+      "category": "components",
+      "name": "text input state",
+      "path": "ui-kit/internal/upstream/html/code/text_input_state.html",
+      "preview": "ui-kit/internal/examples/text_input_state.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-text_list",
+      "category": "components",
+      "name": "text list",
+      "path": "ui-kit/internal/upstream/html/code/text_list.html",
+      "preview": "ui-kit/internal/examples/text_list.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-text_list_ordered",
+      "category": "components",
+      "name": "text list ordered",
+      "path": "ui-kit/internal/upstream/html/code/text_list_ordered.html",
+      "preview": "ui-kit/internal/examples/text_list_ordered.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-textarea",
+      "category": "components",
+      "name": "textarea",
+      "path": "ui-kit/internal/upstream/html/code/textarea.html",
+      "preview": "ui-kit/internal/examples/textarea.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-toggle_switch",
+      "category": "components",
+      "name": "toggle switch",
+      "path": "ui-kit/internal/upstream/html/code/toggle_switch.html",
+      "preview": "ui-kit/internal/examples/toggle_switch.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-toggle_switch_size",
+      "category": "components",
+      "name": "toggle switch size",
+      "path": "ui-kit/internal/upstream/html/code/toggle_switch_size.html",
+      "preview": "ui-kit/internal/examples/toggle_switch_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tooltip",
+      "category": "components",
+      "name": "tooltip",
+      "path": "ui-kit/internal/upstream/html/code/tooltip.html",
+      "preview": "ui-kit/internal/examples/tooltip.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tooltip_box",
+      "category": "components",
+      "name": "tooltip box",
+      "path": "ui-kit/internal/upstream/html/code/tooltip_box.html",
+      "preview": "ui-kit/internal/examples/tooltip_box.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tooltip_vertical",
+      "category": "components",
+      "name": "tooltip vertical",
+      "path": "ui-kit/internal/upstream/html/code/tooltip_vertical.html",
+      "preview": "ui-kit/internal/examples/tooltip_vertical.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tts",
+      "category": "components",
+      "name": "tts",
+      "path": "ui-kit/internal/upstream/html/code/tts.html",
+      "preview": "ui-kit/internal/examples/tts.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tts_icon",
+      "category": "components",
+      "name": "tts icon",
+      "path": "ui-kit/internal/upstream/html/code/tts_icon.html",
+      "preview": "ui-kit/internal/examples/tts_icon.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tts_size",
+      "category": "components",
+      "name": "tts size",
+      "path": "ui-kit/internal/upstream/html/code/tts_size.html",
+      "preview": "ui-kit/internal/examples/tts_size.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "krds-tutorial_panel",
+      "category": "components",
+      "name": "tutorial panel",
+      "path": "ui-kit/internal/upstream/html/code/tutorial_panel.html",
+      "preview": "ui-kit/internal/examples/tutorial_panel.html",
+      "source": "KRDS 1.1.0",
+      "verified": false
+    },
+    {
+      "id": "brand-altool-symbol",
+      "category": "brand",
+      "name": "altool-symbol",
+      "path": "brand/altool-symbol.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "brand-altool-wordmark-inverse",
+      "category": "brand",
+      "name": "altool-wordmark-inverse",
+      "path": "brand/altool-wordmark-inverse.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "brand-altool-wordmark",
+      "category": "brand",
+      "name": "altool-wordmark",
+      "path": "brand/altool-wordmark.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-empty",
+      "category": "images",
+      "name": "empty",
+      "path": "images/empty.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-error",
+      "category": "images",
+      "name": "error",
+      "path": "images/error.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-maintenance",
+      "category": "images",
+      "name": "maintenance",
+      "path": "images/maintenance.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-no-results",
+      "category": "images",
+      "name": "no-results",
+      "path": "images/no-results.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-not-found",
+      "category": "images",
+      "name": "not-found",
+      "path": "images/not-found.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-offline",
+      "category": "images",
+      "name": "offline",
+      "path": "images/offline.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-permission",
+      "category": "images",
+      "name": "permission",
+      "path": "images/permission.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "images-success",
+      "category": "images",
+      "name": "success",
+      "path": "images/success.svg",
+      "source": "Altool original",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-down-default",
+      "category": "icons",
+      "name": "chevron-down-default",
+      "path": "icons/directions/chevron-down-default.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-down-disabled-inverse",
+      "category": "icons",
+      "name": "chevron-down-disabled-inverse",
+      "path": "icons/directions/chevron-down-disabled-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-down-disabled",
+      "category": "icons",
+      "name": "chevron-down-disabled",
+      "path": "icons/directions/chevron-down-disabled.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-down-inverse",
+      "category": "icons",
+      "name": "chevron-down-inverse",
+      "path": "icons/directions/chevron-down-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-left-default",
+      "category": "icons",
+      "name": "chevron-left-default",
+      "path": "icons/directions/chevron-left-default.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-left-disabled-inverse",
+      "category": "icons",
+      "name": "chevron-left-disabled-inverse",
+      "path": "icons/directions/chevron-left-disabled-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-left-disabled",
+      "category": "icons",
+      "name": "chevron-left-disabled",
+      "path": "icons/directions/chevron-left-disabled.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-left-inverse",
+      "category": "icons",
+      "name": "chevron-left-inverse",
+      "path": "icons/directions/chevron-left-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-right-default",
+      "category": "icons",
+      "name": "chevron-right-default",
+      "path": "icons/directions/chevron-right-default.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-right-disabled-inverse",
+      "category": "icons",
+      "name": "chevron-right-disabled-inverse",
+      "path": "icons/directions/chevron-right-disabled-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-right-disabled",
+      "category": "icons",
+      "name": "chevron-right-disabled",
+      "path": "icons/directions/chevron-right-disabled.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-right-inverse",
+      "category": "icons",
+      "name": "chevron-right-inverse",
+      "path": "icons/directions/chevron-right-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-up-default",
+      "category": "icons",
+      "name": "chevron-up-default",
+      "path": "icons/directions/chevron-up-default.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-up-disabled-inverse",
+      "category": "icons",
+      "name": "chevron-up-disabled-inverse",
+      "path": "icons/directions/chevron-up-disabled-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-up-disabled",
+      "category": "icons",
+      "name": "chevron-up-disabled",
+      "path": "icons/directions/chevron-up-disabled.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-chevron-up-inverse",
+      "category": "icons",
+      "name": "chevron-up-inverse",
+      "path": "icons/directions/chevron-up-inverse.svg",
+      "source": "Altool derived from KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-head_ico_font_sample",
+      "category": "icons",
+      "name": "head font sample",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/head_ico_font_sample.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-head_ico_font_sample_white",
+      "category": "icons",
+      "name": "head font sample white",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/head_ico_font_sample_white.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_all",
+      "category": "icons",
+      "name": "all",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_all.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_angle",
+      "category": "icons",
+      "name": "angle",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_angle.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_angle_disabled",
+      "category": "icons",
+      "name": "angle disabled",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_angle_disabled.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_angle_disabled_inverse",
+      "category": "icons",
+      "name": "angle disabled inverse",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_angle_disabled_inverse.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_angle_inverse",
+      "category": "icons",
+      "name": "angle inverse",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_angle_inverse.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_arrow_dropdown",
+      "category": "icons",
+      "name": "arrow dropdown",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_arrow_dropdown.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_blog",
+      "category": "icons",
+      "name": "blog",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_blog.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_bread_home",
+      "category": "icons",
+      "name": "bread home",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_bread_home.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_calendar",
+      "category": "icons",
+      "name": "calendar",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_calendar.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_call",
+      "category": "icons",
+      "name": "call",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_call.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_checkbox",
+      "category": "icons",
+      "name": "checkbox",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_checkbox.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_checkbox_checked",
+      "category": "icons",
+      "name": "checkbox checked",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_checkbox_checked.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_close",
+      "category": "icons",
+      "name": "close",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_close.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_complete_fill",
+      "category": "icons",
+      "name": "complete fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_complete_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_delete",
+      "category": "icons",
+      "name": "delete",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_delete.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_delete_fill",
+      "category": "icons",
+      "name": "delete fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_delete_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_download",
+      "category": "icons",
+      "name": "download",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_download.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_ellipsis",
+      "category": "icons",
+      "name": "ellipsis",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_ellipsis.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_email",
+      "category": "icons",
+      "name": "email",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_email.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_error_fill",
+      "category": "icons",
+      "name": "error fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_error_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_expand",
+      "category": "icons",
+      "name": "expand",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_expand.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_facebook",
+      "category": "icons",
+      "name": "facebook",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_facebook.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_faq",
+      "category": "icons",
+      "name": "faq",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_faq.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_file",
+      "category": "icons",
+      "name": "file",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_file.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_file_figma",
+      "category": "icons",
+      "name": "file figma",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_file_figma.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_file_html",
+      "category": "icons",
+      "name": "file html",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_file_html.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_file_hwp",
+      "category": "icons",
+      "name": "file hwp",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_file_hwp.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_file_pdf",
+      "category": "icons",
+      "name": "file pdf",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_file_pdf.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_file_sketch",
+      "category": "icons",
+      "name": "file sketch",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_file_sketch.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_file_xd",
+      "category": "icons",
+      "name": "file xd",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_file_xd.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_filter",
+      "category": "icons",
+      "name": "filter",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_filter.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_flag",
+      "category": "icons",
+      "name": "flag",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_flag.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_flow_arrow",
+      "category": "icons",
+      "name": "flow arrow",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_flow_arrow.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_foldable",
+      "category": "icons",
+      "name": "foldable",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_foldable.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_global",
+      "category": "icons",
+      "name": "global",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_global.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_go",
+      "category": "icons",
+      "name": "go",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_go.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_go_top",
+      "category": "icons",
+      "name": "go top",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_go_top.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_help",
+      "category": "icons",
+      "name": "help",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_help.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_help_fill",
+      "category": "icons",
+      "name": "help fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_help_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_information",
+      "category": "icons",
+      "name": "information",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_information.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_information_fill",
+      "category": "icons",
+      "name": "information fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_information_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_information_fill_high_contrast",
+      "category": "icons",
+      "name": "information fill high contrast",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_information_fill_high_contrast.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_instagram",
+      "category": "icons",
+      "name": "instagram",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_instagram.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_join",
+      "category": "icons",
+      "name": "join",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_join.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_like",
+      "category": "icons",
+      "name": "like",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_like.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login",
+      "category": "icons",
+      "name": "login",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login_certify_go",
+      "category": "icons",
+      "name": "login certify go",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login_certify_go.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login_certify_type_01",
+      "category": "icons",
+      "name": "login certify type 01",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login_certify_type_01.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login_certify_type_02",
+      "category": "icons",
+      "name": "login certify type 02",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login_certify_type_02.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login_certify_type_03",
+      "category": "icons",
+      "name": "login certify type 03",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login_certify_type_03.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login_certify_type_04",
+      "category": "icons",
+      "name": "login certify type 04",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login_certify_type_04.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login_certify_type_05",
+      "category": "icons",
+      "name": "login certify type 05",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login_certify_type_05.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_login_certify_type_06",
+      "category": "icons",
+      "name": "login certify type 06",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_login_certify_type_06.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_logo_krds",
+      "category": "icons",
+      "name": "logo krds",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_logo_krds.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_logo_krds_high_contrast",
+      "category": "icons",
+      "name": "logo krds high contrast",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_logo_krds_high_contrast.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_logout",
+      "category": "icons",
+      "name": "logout",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_logout.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_more",
+      "category": "icons",
+      "name": "more",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_more.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_my",
+      "category": "icons",
+      "name": "my",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_my.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_notice_fill",
+      "category": "icons",
+      "name": "notice fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_notice_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_notice_fill_blue",
+      "category": "icons",
+      "name": "notice fill blue",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_notice_fill_blue.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_notice_fill_high_contrast",
+      "category": "icons",
+      "name": "notice fill high contrast",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_notice_fill_high_contrast.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_play",
+      "category": "icons",
+      "name": "play",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_play.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_plus",
+      "category": "icons",
+      "name": "plus",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_plus.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_print",
+      "category": "icons",
+      "name": "print",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_print.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_pw_visible_off",
+      "category": "icons",
+      "name": "pw visible off",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_pw_visible_off.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_pw_visible_on",
+      "category": "icons",
+      "name": "pw visible on",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_pw_visible_on.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_reset",
+      "category": "icons",
+      "name": "reset",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_reset.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_sch",
+      "category": "icons",
+      "name": "sch",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_sch.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_sch_plus",
+      "category": "icons",
+      "name": "sch plus",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_sch_plus.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_scrap",
+      "category": "icons",
+      "name": "scrap",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_scrap.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_setting",
+      "category": "icons",
+      "name": "setting",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_setting.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_share",
+      "category": "icons",
+      "name": "share",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_share.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_sns_x",
+      "category": "icons",
+      "name": "sns x",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_sns_x.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-ico_step_done",
+      "category": "icons",
+      "name": "step done",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_step_done.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_stop",
+      "category": "icons",
+      "name": "stop",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_stop.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_success_fill",
+      "category": "icons",
+      "name": "success fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_success_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_swiper_play",
+      "category": "icons",
+      "name": "swiper play",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_swiper_play.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_swiper_stop",
+      "category": "icons",
+      "name": "swiper stop",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_swiper_stop.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_switch_off",
+      "category": "icons",
+      "name": "switch off",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_switch_off.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_switch_on",
+      "category": "icons",
+      "name": "switch on",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_switch_on.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_tooltip",
+      "category": "icons",
+      "name": "tooltip",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_tooltip.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_upload",
+      "category": "icons",
+      "name": "upload",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_upload.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_urgent_badge_danger",
+      "category": "icons",
+      "name": "urgent badge danger",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_urgent_badge_danger.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_urgent_badge_info",
+      "category": "icons",
+      "name": "urgent badge info",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_urgent_badge_info.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_urgent_badge_ok",
+      "category": "icons",
+      "name": "urgent badge ok",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_urgent_badge_ok.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_view_mode",
+      "category": "icons",
+      "name": "view mode",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_view_mode.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_volume",
+      "category": "icons",
+      "name": "volume",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_volume.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_warning_fill",
+      "category": "icons",
+      "name": "warning fill",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_warning_fill.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": false
+    },
+    {
+      "id": "icons-ico_youtube",
+      "category": "icons",
+      "name": "youtube",
+      "path": "ui-kit/internal/upstream/resources/img/component/icon/ico_youtube.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "icons-favicon",
+      "category": "icons",
+      "name": "favicon",
+      "path": "ui-kit/internal/upstream/resources/img/component/favicon/favicon.svg",
+      "source": "KRDS 1.1.0",
+      "restrictedIdentity": true
+    },
+    {
+      "id": "krds-p0001",
+      "category": "guideline",
+      "name": "표지·전체 목차·장 안내",
+      "path": "ui-kit/internal/reference/krds-p0001.md",
+      "pages": [
+        1,
+        8
+      ],
+      "group": "introduction",
+      "implementation": "reference-document",
+      "verification": "not-verified"
+    },
+    {
+      "id": "krds-p0009",
+      "category": "guideline",
+      "name": "01. 개요",
+      "path": "ui-kit/internal/reference/krds-p0009.md",
+      "pages": [
+        9,
+        20
+      ],
+      "group": "introduction",
+      "implementation": "reference-document",
+      "verification": "not-verified"
+    },
+    {
+      "id": "krds-p0021",
+      "category": "guideline",
+      "name": "02. 가이드라인의 구성",
+      "path": "ui-kit/internal/reference/krds-p0021.md",
+      "pages": [
+        21,
+        32
+      ],
+      "group": "introduction",
+      "implementation": "reference-document",
+      "verification": "not-verified"
+    },
+    {
+      "id": "krds-p0033",
+      "category": "guideline",
+      "name": "03. 가이드라인의 활용 방법",
+      "path": "ui-kit/internal/reference/krds-p0033.md",
+      "pages": [
+        33,
+        44
+      ],
+      "group": "introduction",
+      "implementation": "reference-document",
+      "verification": "not-verified"
+    },
+    {
+      "id": "krds-p0045",
+      "category": "guideline",
+      "name": "01. 사용자 중심의 서비스",
+      "path": "ui-kit/internal/reference/krds-p0045.md",
+      "pages": [
+        45,
+        46
+      ],
+      "group": "principles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0047",
+      "category": "guideline",
+      "name": "02. 모든 사용자를 포용하는 서비스",
+      "path": "ui-kit/internal/reference/krds-p0047.md",
+      "pages": [
+        47,
+        48
+      ],
+      "group": "principles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0049",
+      "category": "guideline",
+      "name": "03. 공통된 경험 안에서 개별 특성을 고려한 서비스",
+      "path": "ui-kit/internal/reference/krds-p0049.md",
+      "pages": [
+        49,
+        50
+      ],
+      "group": "principles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0051",
+      "category": "guideline",
+      "name": "04. 빠르고 간단한 서비스",
+      "path": "ui-kit/internal/reference/krds-p0051.md",
+      "pages": [
+        51,
+        52
+      ],
+      "group": "principles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0053",
+      "category": "guideline",
+      "name": "05. 쉽게 이해하고 사용할 수 있는 서비스",
+      "path": "ui-kit/internal/reference/krds-p0053.md",
+      "pages": [
+        53,
+        54
+      ],
+      "group": "principles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0055",
+      "category": "guideline",
+      "name": "06. 사용자의 다양한 상황을 고려하는 서비스",
+      "path": "ui-kit/internal/reference/krds-p0055.md",
+      "pages": [
+        55,
+        56
+      ],
+      "group": "principles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0057",
+      "category": "guideline",
+      "name": "07 . 신뢰할 수 있는 서비스",
+      "path": "ui-kit/internal/reference/krds-p0057.md",
+      "pages": [
+        57,
+        60
+      ],
+      "group": "principles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0061",
+      "category": "guideline",
+      "name": "00. 기관 적용 범위 및 항목",
+      "path": "ui-kit/internal/reference/krds-p0061.md",
+      "pages": [
+        61,
+        63
+      ],
+      "group": "styles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0064",
+      "category": "guideline",
+      "name": "01. 색상(Color)",
+      "path": "ui-kit/internal/reference/krds-p0064.md",
+      "pages": [
+        64,
+        77
+      ],
+      "group": "styles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0078",
+      "category": "guideline",
+      "name": "02. 서체(Typography)",
+      "path": "ui-kit/internal/reference/krds-p0078.md",
+      "pages": [
+        78,
+        83
+      ],
+      "group": "styles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0084",
+      "category": "guideline",
+      "name": "03. 형태(Shape)",
+      "path": "ui-kit/internal/reference/krds-p0084.md",
+      "pages": [
+        84,
+        87
+      ],
+      "group": "styles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0088",
+      "category": "guideline",
+      "name": "04. 배치(Layout)",
+      "path": "ui-kit/internal/reference/krds-p0088.md",
+      "pages": [
+        88,
+        100
+      ],
+      "group": "styles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0101",
+      "category": "guideline",
+      "name": "05. 아이콘(System icon)",
+      "path": "ui-kit/internal/reference/krds-p0101.md",
+      "pages": [
+        101,
+        113
+      ],
+      "group": "styles",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0114",
+      "category": "guideline",
+      "name": "01. 공식 배너(Masthead)",
+      "path": "ui-kit/internal/reference/krds-p0114.md",
+      "pages": [
+        114,
+        120
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0121",
+      "category": "guideline",
+      "name": "02. 운영기관 식별자(Identifier)",
+      "path": "ui-kit/internal/reference/krds-p0121.md",
+      "pages": [
+        121,
+        127
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0128",
+      "category": "guideline",
+      "name": "03. 푸터(Footer)",
+      "path": "ui-kit/internal/reference/krds-p0128.md",
+      "pages": [
+        128,
+        134
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0135",
+      "category": "guideline",
+      "name": "04. 헤더(Header)",
+      "path": "ui-kit/internal/reference/krds-p0135.md",
+      "pages": [
+        135,
+        149
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0150",
+      "category": "guideline",
+      "name": "01. 건너뛰기 링크(Skip link)",
+      "path": "ui-kit/internal/reference/krds-p0150.md",
+      "pages": [
+        150,
+        158
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0159",
+      "category": "guideline",
+      "name": "02. 메인 메뉴(Main menu)",
+      "path": "ui-kit/internal/reference/krds-p0159.md",
+      "pages": [
+        159,
+        175
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0176",
+      "category": "guideline",
+      "name": "03. 브레드크럼(Breadcrumb)",
+      "path": "ui-kit/internal/reference/krds-p0176.md",
+      "pages": [
+        176,
+        188
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0189",
+      "category": "guideline",
+      "name": "04. 사이드 메뉴(Side navigation)",
+      "path": "ui-kit/internal/reference/krds-p0189.md",
+      "pages": [
+        189,
+        203
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0204",
+      "category": "guideline",
+      "name": "05. 콘텐츠 내 탐색(In-page navigation)",
+      "path": "ui-kit/internal/reference/krds-p0204.md",
+      "pages": [
+        204,
+        212
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0213",
+      "category": "guideline",
+      "name": "06. 페이지네이션(Pagination)",
+      "path": "ui-kit/internal/reference/krds-p0213.md",
+      "pages": [
+        213,
+        235
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0236",
+      "category": "guideline",
+      "name": "01. 구조화 목록(Structured list)",
+      "path": "ui-kit/internal/reference/krds-p0236.md",
+      "pages": [
+        236,
+        242
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0243",
+      "category": "guideline",
+      "name": "02. 긴급 공지(Critical alerts)",
+      "path": "ui-kit/internal/reference/krds-p0243.md",
+      "pages": [
+        243,
+        250
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0251",
+      "category": "guideline",
+      "name": "03. 달력(Calendar)",
+      "path": "ui-kit/internal/reference/krds-p0251.md",
+      "pages": [
+        251,
+        261
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0262",
+      "category": "guideline",
+      "name": "04. 디스클로저(Disclosure)",
+      "path": "ui-kit/internal/reference/krds-p0262.md",
+      "pages": [
+        262,
+        269
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0270",
+      "category": "guideline",
+      "name": "05. 모달(Modal)",
+      "path": "ui-kit/internal/reference/krds-p0270.md",
+      "pages": [
+        270,
+        281
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0282",
+      "category": "guideline",
+      "name": "06. 배지(Badge)",
+      "path": "ui-kit/internal/reference/krds-p0282.md",
+      "pages": [
+        282,
+        287
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0288",
+      "category": "guideline",
+      "name": "07 . 아코디언(Accordion)",
+      "path": "ui-kit/internal/reference/krds-p0288.md",
+      "pages": [
+        288,
+        298
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0299",
+      "category": "guideline",
+      "name": "08. 이미지(Image)",
+      "path": "ui-kit/internal/reference/krds-p0299.md",
+      "pages": [
+        299,
+        306
+      ],
+      "group": "components",
+      "implementation": "derived-example",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0307",
+      "category": "guideline",
+      "name": "09. 캐러셀(Carousel)",
+      "path": "ui-kit/internal/reference/krds-p0307.md",
+      "pages": [
+        307,
+        327
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0328",
+      "category": "guideline",
+      "name": "10. 탭(Tab)",
+      "path": "ui-kit/internal/reference/krds-p0328.md",
+      "pages": [
+        328,
+        341
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0342",
+      "category": "guideline",
+      "name": "11. 표(Table)",
+      "path": "ui-kit/internal/reference/krds-p0342.md",
+      "pages": [
+        342,
+        353
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0354",
+      "category": "guideline",
+      "name": "01. 링크(Link)",
+      "path": "ui-kit/internal/reference/krds-p0354.md",
+      "pages": [
+        354,
+        367
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0368",
+      "category": "guideline",
+      "name": "02. 버튼(Button)",
+      "path": "ui-kit/internal/reference/krds-p0368.md",
+      "pages": [
+        368,
+        381
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0382",
+      "category": "guideline",
+      "name": "01. 라디오 버튼(Radio button)",
+      "path": "ui-kit/internal/reference/krds-p0382.md",
+      "pages": [
+        382,
+        396
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0397",
+      "category": "guideline",
+      "name": "02. 셀렉트(Select)",
+      "path": "ui-kit/internal/reference/krds-p0397.md",
+      "pages": [
+        397,
+        404
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0405",
+      "category": "guideline",
+      "name": "03. 체크박스(Checkbox)",
+      "path": "ui-kit/internal/reference/krds-p0405.md",
+      "pages": [
+        405,
+        417
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0418",
+      "category": "guideline",
+      "name": "04. 태그(Tag)",
+      "path": "ui-kit/internal/reference/krds-p0418.md",
+      "pages": [
+        418,
+        429
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0430",
+      "category": "guideline",
+      "name": "01. 단계 표시기(Step indicator)",
+      "path": "ui-kit/internal/reference/krds-p0430.md",
+      "pages": [
+        430,
+        436
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0437",
+      "category": "guideline",
+      "name": "02. 스피너(Spinner)",
+      "path": "ui-kit/internal/reference/krds-p0437.md",
+      "pages": [
+        437,
+        445
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0446",
+      "category": "guideline",
+      "name": "01. 도움 패널(Help panel)",
+      "path": "ui-kit/internal/reference/krds-p0446.md",
+      "pages": [
+        446,
+        458
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0459",
+      "category": "guideline",
+      "name": "02. 따라하기 패널(Tutorial panel)",
+      "path": "ui-kit/internal/reference/krds-p0459.md",
+      "pages": [
+        459,
+        467
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0468",
+      "category": "guideline",
+      "name": "03. 맥락적 도움말(Contextual help)",
+      "path": "ui-kit/internal/reference/krds-p0468.md",
+      "pages": [
+        468,
+        484
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0485",
+      "category": "guideline",
+      "name": "04. 코치마크(Coach mark)",
+      "path": "ui-kit/internal/reference/krds-p0485.md",
+      "pages": [
+        485,
+        499
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0500",
+      "category": "guideline",
+      "name": "01. 날짜 입력 필드(Date input)",
+      "path": "ui-kit/internal/reference/krds-p0500.md",
+      "pages": [
+        500,
+        512
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0513",
+      "category": "guideline",
+      "name": "02. 텍스트 영역(Textarea)",
+      "path": "ui-kit/internal/reference/krds-p0513.md",
+      "pages": [
+        513,
+        521
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0522",
+      "category": "guideline",
+      "name": "03. 텍스트 입력 필드(Text input)",
+      "path": "ui-kit/internal/reference/krds-p0522.md",
+      "pages": [
+        522,
+        532
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0533",
+      "category": "guideline",
+      "name": "04. 파일 업로드(File upload)",
+      "path": "ui-kit/internal/reference/krds-p0533.md",
+      "pages": [
+        533,
+        552
+      ],
+      "group": "components",
+      "implementation": "reference-plus-checklist",
+      "verification": "source-linked-not-behavior-verified"
+    },
+    {
+      "id": "krds-p0553",
+      "category": "guideline",
+      "name": "01. 개인 식별 정보 입력",
+      "path": "ui-kit/internal/reference/krds-p0553.md",
+      "pages": [
+        553,
+        572
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0573",
+      "category": "guideline",
+      "name": "02. 도움",
+      "path": "ui-kit/internal/reference/krds-p0573.md",
+      "pages": [
+        573,
+        589
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0590",
+      "category": "guideline",
+      "name": "03. 동의",
+      "path": "ui-kit/internal/reference/krds-p0590.md",
+      "pages": [
+        590,
+        596
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0597",
+      "category": "guideline",
+      "name": "04. 목록 탐색",
+      "path": "ui-kit/internal/reference/krds-p0597.md",
+      "pages": [
+        597,
+        601
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0602",
+      "category": "guideline",
+      "name": "05. 사용자 피드백",
+      "path": "ui-kit/internal/reference/krds-p0602.md",
+      "pages": [
+        602,
+        611
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0612",
+      "category": "guideline",
+      "name": "06. 상세 정보 확인",
+      "path": "ui-kit/internal/reference/krds-p0612.md",
+      "pages": [
+        612,
+        625
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0626",
+      "category": "guideline",
+      "name": "07 . 오류",
+      "path": "ui-kit/internal/reference/krds-p0626.md",
+      "pages": [
+        626,
+        630
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0631",
+      "category": "guideline",
+      "name": "08. 입력폼",
+      "path": "ui-kit/internal/reference/krds-p0631.md",
+      "pages": [
+        631,
+        650
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0651",
+      "category": "guideline",
+      "name": "09. 첨부파일",
+      "path": "ui-kit/internal/reference/krds-p0651.md",
+      "pages": [
+        651,
+        655
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0656",
+      "category": "guideline",
+      "name": "10. 필터링·정렬",
+      "path": "ui-kit/internal/reference/krds-p0656.md",
+      "pages": [
+        656,
+        676
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0677",
+      "category": "guideline",
+      "name": "11. 확인",
+      "path": "ui-kit/internal/reference/krds-p0677.md",
+      "pages": [
+        677,
+        685
+      ],
+      "group": "basic-patterns",
+      "implementation": "interactive-frontend-example",
+      "verification": "pure-rule-and-static-tests-passed; browser-pending"
+    },
+    {
+      "id": "krds-p0686",
+      "category": "guideline",
+      "name": "00. 개요",
+      "path": "ui-kit/internal/reference/krds-p0686.md",
+      "pages": [
+        686,
+        688
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0689",
+      "category": "guideline",
+      "name": "01. 방문",
+      "path": "ui-kit/internal/reference/krds-p0689.md",
+      "pages": [
+        689,
+        701
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0702",
+      "category": "guideline",
+      "name": "00. 개요",
+      "path": "ui-kit/internal/reference/krds-p0702.md",
+      "pages": [
+        702,
+        706
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0707",
+      "category": "guideline",
+      "name": "01. 검색 기능 찾기",
+      "path": "ui-kit/internal/reference/krds-p0707.md",
+      "pages": [
+        707,
+        715
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0716",
+      "category": "guideline",
+      "name": "02. 검색어 입력",
+      "path": "ui-kit/internal/reference/krds-p0716.md",
+      "pages": [
+        716,
+        731
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0732",
+      "category": "guideline",
+      "name": "03. 검색 결과 확인",
+      "path": "ui-kit/internal/reference/krds-p0732.md",
+      "pages": [
+        732,
+        746
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0747",
+      "category": "guideline",
+      "name": "04. 상세 검색",
+      "path": "ui-kit/internal/reference/krds-p0747.md",
+      "pages": [
+        747,
+        758
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0759",
+      "category": "guideline",
+      "name": "05. 검색 결과 이용",
+      "path": "ui-kit/internal/reference/krds-p0759.md",
+      "pages": [
+        759,
+        770
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0771",
+      "category": "guideline",
+      "name": "06. 재검색",
+      "path": "ui-kit/internal/reference/krds-p0771.md",
+      "pages": [
+        771,
+        776
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0777",
+      "category": "guideline",
+      "name": "07 . 검색 종료",
+      "path": "ui-kit/internal/reference/krds-p0777.md",
+      "pages": [
+        777,
+        781
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0782",
+      "category": "guideline",
+      "name": "00. 개요",
+      "path": "ui-kit/internal/reference/krds-p0782.md",
+      "pages": [
+        782,
+        784
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0785",
+      "category": "guideline",
+      "name": "01. 로그인 기능 찾기",
+      "path": "ui-kit/internal/reference/krds-p0785.md",
+      "pages": [
+        785,
+        792
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0793",
+      "category": "guideline",
+      "name": "02. 로그인 안내",
+      "path": "ui-kit/internal/reference/krds-p0793.md",
+      "pages": [
+        793,
+        802
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0803",
+      "category": "guideline",
+      "name": "03. 로그인 방식 확인·선택",
+      "path": "ui-kit/internal/reference/krds-p0803.md",
+      "pages": [
+        803,
+        818
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0819",
+      "category": "guideline",
+      "name": "04. 로그인 정보 입력",
+      "path": "ui-kit/internal/reference/krds-p0819.md",
+      "pages": [
+        819,
+        831
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0832",
+      "category": "guideline",
+      "name": "05. 로그인 완료",
+      "path": "ui-kit/internal/reference/krds-p0832.md",
+      "pages": [
+        832,
+        838
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0839",
+      "category": "guideline",
+      "name": "06. 서비스 이용",
+      "path": "ui-kit/internal/reference/krds-p0839.md",
+      "pages": [
+        839,
+        847
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0848",
+      "category": "guideline",
+      "name": "07 . 로그아웃",
+      "path": "ui-kit/internal/reference/krds-p0848.md",
+      "pages": [
+        848,
+        857
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0858",
+      "category": "guideline",
+      "name": "00. 개요",
+      "path": "ui-kit/internal/reference/krds-p0858.md",
+      "pages": [
+        858,
+        860
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0861",
+      "category": "guideline",
+      "name": "01. 신청 대상 탐색",
+      "path": "ui-kit/internal/reference/krds-p0861.md",
+      "pages": [
+        861,
+        874
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0875",
+      "category": "guideline",
+      "name": "02. 서비스 정보 확인",
+      "path": "ui-kit/internal/reference/krds-p0875.md",
+      "pages": [
+        875,
+        893
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0894",
+      "category": "guideline",
+      "name": "03. 유의 사항·자격 확인",
+      "path": "ui-kit/internal/reference/krds-p0894.md",
+      "pages": [
+        894,
+        902
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0903",
+      "category": "guideline",
+      "name": "04. 신청서 작성",
+      "path": "ui-kit/internal/reference/krds-p0903.md",
+      "pages": [
+        903,
+        917
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0918",
+      "category": "guideline",
+      "name": "05. 확인·확정",
+      "path": "ui-kit/internal/reference/krds-p0918.md",
+      "pages": [
+        918,
+        925
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0926",
+      "category": "guideline",
+      "name": "06. 완료",
+      "path": "ui-kit/internal/reference/krds-p0926.md",
+      "pages": [
+        926,
+        933
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0934",
+      "category": "guideline",
+      "name": "07 . 신청 결과 확인",
+      "path": "ui-kit/internal/reference/krds-p0934.md",
+      "pages": [
+        934,
+        947
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0948",
+      "category": "guideline",
+      "name": "00. 개요",
+      "path": "ui-kit/internal/reference/krds-p0948.md",
+      "pages": [
+        948,
+        950
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0951",
+      "category": "guideline",
+      "name": "01. 정책 탐색",
+      "path": "ui-kit/internal/reference/krds-p0951.md",
+      "pages": [
+        951,
+        959
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0960",
+      "category": "guideline",
+      "name": "02. 정보 확인",
+      "path": "ui-kit/internal/reference/krds-p0960.md",
+      "pages": [
+        960,
+        969
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0970",
+      "category": "guideline",
+      "name": "03. 정책 자료 탐색",
+      "path": "ui-kit/internal/reference/krds-p0970.md",
+      "pages": [
+        970,
+        978
+      ],
+      "group": "service-patterns",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending"
+    },
+    {
+      "id": "krds-p0979",
+      "category": "guideline",
+      "name": "용어집",
+      "path": "ui-kit/internal/reference/krds-p0979.md",
+      "pages": [
+        979,
+        988
+      ],
+      "group": "glossary",
+      "implementation": "reference-document",
+      "verification": "not-verified"
+    },
+    {
+      "id": "derived-patterns-basic-FINAL-BROWSER-SCENARIOS.md",
+      "category": "patterns",
+      "name": "FINAL-BROWSER-SCENARIOS",
+      "path": "ui-kit/internal/patterns/basic/FINAL-BROWSER-SCENARIOS.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-README.md",
+      "category": "patterns",
+      "name": "README",
+      "path": "ui-kit/internal/patterns/basic/README.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-attachments.html",
+      "category": "patterns",
+      "name": "첨부파일 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/attachments.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/attachments.html"
+    },
+    {
+      "id": "derived-patterns-basic-attachments.md",
+      "category": "patterns",
+      "name": "attachments",
+      "path": "ui-kit/internal/patterns/basic/attachments.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-basic.css",
+      "category": "patterns",
+      "name": "basic",
+      "path": "ui-kit/internal/patterns/basic/basic.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-confirm.html",
+      "category": "patterns",
+      "name": "확인 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/confirm.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/confirm.html"
+    },
+    {
+      "id": "derived-patterns-basic-confirm.md",
+      "category": "patterns",
+      "name": "confirm",
+      "path": "ui-kit/internal/patterns/basic/confirm.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-consent.html",
+      "category": "patterns",
+      "name": "동의 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/consent.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/consent.html"
+    },
+    {
+      "id": "derived-patterns-basic-consent.md",
+      "category": "patterns",
+      "name": "consent",
+      "path": "ui-kit/internal/patterns/basic/consent.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-content-variants.html",
+      "category": "patterns",
+      "name": "도움·피드백·미디어 변형 · 공통 패턴 자산",
+      "path": "ui-kit/internal/patterns/basic/content-variants.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/content-variants.html"
+    },
+    {
+      "id": "derived-patterns-basic-detail-tabs.html",
+      "category": "patterns",
+      "name": "상세 정보 탭 대안 · KRDS 기본 패턴",
+      "path": "ui-kit/internal/patterns/basic/detail-tabs.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/detail-tabs.html"
+    },
+    {
+      "id": "derived-patterns-basic-detail.html",
+      "category": "patterns",
+      "name": "상세 정보 확인 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/detail.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/detail.html"
+    },
+    {
+      "id": "derived-patterns-basic-detail.md",
+      "category": "patterns",
+      "name": "detail",
+      "path": "ui-kit/internal/patterns/basic/detail.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-error.html",
+      "category": "patterns",
+      "name": "오류 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/error.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/error.html"
+    },
+    {
+      "id": "derived-patterns-basic-error.md",
+      "category": "patterns",
+      "name": "error",
+      "path": "ui-kit/internal/patterns/basic/error.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-extended.css",
+      "category": "patterns",
+      "name": "extended",
+      "path": "ui-kit/internal/patterns/basic/extended.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-extended.md",
+      "category": "patterns",
+      "name": "extended",
+      "path": "ui-kit/internal/patterns/basic/extended.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-feedback.html",
+      "category": "patterns",
+      "name": "사용자 피드백 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/feedback.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/feedback.html"
+    },
+    {
+      "id": "derived-patterns-basic-feedback.md",
+      "category": "patterns",
+      "name": "feedback",
+      "path": "ui-kit/internal/patterns/basic/feedback.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-field-variants.html",
+      "category": "patterns",
+      "name": "입력·동의의 추가 변형 · 공통 패턴 자산",
+      "path": "ui-kit/internal/patterns/basic/field-variants.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/field-variants.html"
+    },
+    {
+      "id": "derived-patterns-basic-filter-layouts.html",
+      "category": "patterns",
+      "name": "필터 수평바·모달 대안 · KRDS 기본 패턴",
+      "path": "ui-kit/internal/patterns/basic/filter-layouts.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/filter-layouts.html"
+    },
+    {
+      "id": "derived-patterns-basic-filter.html",
+      "category": "patterns",
+      "name": "필터링·정렬 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/filter.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/filter.html"
+    },
+    {
+      "id": "derived-patterns-basic-filter.md",
+      "category": "patterns",
+      "name": "filter",
+      "path": "ui-kit/internal/patterns/basic/filter.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-final-source-review.json",
+      "category": "patterns",
+      "name": "final-source-review",
+      "path": "ui-kit/internal/patterns/basic/final-source-review.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-form.html",
+      "category": "patterns",
+      "name": "입력폼 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/form.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/form.html"
+    },
+    {
+      "id": "derived-patterns-basic-form.md",
+      "category": "patterns",
+      "name": "form",
+      "path": "ui-kit/internal/patterns/basic/form.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-help.html",
+      "category": "patterns",
+      "name": "도움 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/help.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/help.html"
+    },
+    {
+      "id": "derived-patterns-basic-help.md",
+      "category": "patterns",
+      "name": "help",
+      "path": "ui-kit/internal/patterns/basic/help.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-identity.html",
+      "category": "patterns",
+      "name": "개인 식별 정보 입력 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/identity.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/identity.html"
+    },
+    {
+      "id": "derived-patterns-basic-identity.md",
+      "category": "patterns",
+      "name": "identity",
+      "path": "ui-kit/internal/patterns/basic/identity.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-index.html",
+      "category": "patterns",
+      "name": "KRDS 기본 패턴 11종",
+      "path": "ui-kit/internal/patterns/basic/index.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/index.html"
+    },
+    {
+      "id": "derived-patterns-basic-list.html",
+      "category": "patterns",
+      "name": "목록 탐색 · KRDS 기본 패턴 예제",
+      "path": "ui-kit/internal/patterns/basic/list.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/list.html"
+    },
+    {
+      "id": "derived-patterns-basic-list.md",
+      "category": "patterns",
+      "name": "list",
+      "path": "ui-kit/internal/patterns/basic/list.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-precision-variants.html",
+      "category": "patterns",
+      "name": "긴 목차·연월·시간 범위 · 공통 패턴",
+      "path": "ui-kit/internal/patterns/basic/precision-variants.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/precision-variants.html"
+    },
+    {
+      "id": "derived-patterns-basic-state-variants.html",
+      "category": "patterns",
+      "name": "로딩·오류·복구·범위 변형 · 공통 패턴 자산",
+      "path": "ui-kit/internal/patterns/basic/state-variants.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/basic/state-variants.html"
+    },
+    {
+      "id": "derived-patterns-basic-variants-manifest.json",
+      "category": "patterns",
+      "name": "variants-manifest",
+      "path": "ui-kit/internal/patterns/basic/variants-manifest.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-basic-variants.css",
+      "category": "patterns",
+      "name": "variants",
+      "path": "ui-kit/internal/patterns/basic/variants.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-README.md",
+      "category": "patterns",
+      "name": "README",
+      "path": "ui-kit/internal/patterns/services/README.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-checklist.json",
+      "category": "patterns",
+      "name": "checklist",
+      "path": "ui-kit/internal/patterns/services/checklist.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-contracts.json",
+      "category": "patterns",
+      "name": "contracts",
+      "path": "ui-kit/internal/patterns/services/contracts.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-index.html",
+      "category": "patterns",
+      "name": "KRDS 서비스 패턴 · Altool 모의 자산",
+      "path": "ui-kit/internal/patterns/services/index.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/services/index.html"
+    },
+    {
+      "id": "derived-patterns-services-pdf-visual-review.json",
+      "category": "patterns",
+      "name": "pdf-visual-review",
+      "path": "ui-kit/internal/patterns/services/pdf-visual-review.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-process-illustration.svg",
+      "category": "images",
+      "name": "process-illustration",
+      "path": "ui-kit/internal/patterns/services/process-illustration.svg",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-services.css",
+      "category": "patterns",
+      "name": "services",
+      "path": "ui-kit/internal/patterns/services/services.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-variants-manifest.json",
+      "category": "patterns",
+      "name": "variants-manifest",
+      "path": "ui-kit/internal/patterns/services/variants-manifest.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-variants-qa.md",
+      "category": "patterns",
+      "name": "variants-qa",
+      "path": "ui-kit/internal/patterns/services/variants-qa.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-variants.css",
+      "category": "patterns",
+      "name": "variants",
+      "path": "ui-kit/internal/patterns/services/variants.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-patterns-services-variants.html",
+      "category": "patterns",
+      "name": "서비스 패턴 변형 · Altool 공통 자산",
+      "path": "ui-kit/internal/patterns/services/variants.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/patterns/services/variants.html"
+    },
+    {
+      "id": "derived-patterns-services-verification.md",
+      "category": "patterns",
+      "name": "verification",
+      "path": "ui-kit/internal/patterns/services/verification.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-README.md",
+      "category": "components",
+      "name": "README",
+      "path": "ui-kit/internal/components/README.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-browser-qa.md",
+      "category": "components",
+      "name": "browser-qa",
+      "path": "ui-kit/internal/components/browser-qa.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-examples-checkbox-select-all.html",
+      "category": "components",
+      "name": "전체·부분 선택 체크박스 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/checkbox-select-all.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/checkbox-select-all.html"
+    },
+    {
+      "id": "derived-components-examples-coach-action.html",
+      "category": "components",
+      "name": "실제 대상 행동에 연결된 코치마크 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/coach-action.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/coach-action.html"
+    },
+    {
+      "id": "derived-components-examples-company-mixed.html",
+      "category": "components",
+      "name": "회사 공통 CSS 혼합 검증",
+      "path": "ui-kit/internal/components/examples/company-mixed.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/company-mixed.html"
+    },
+    {
+      "id": "derived-components-examples-contextual-help-help.html",
+      "category": "components",
+      "name": "과업 도움말 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/contextual-help-help.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/contextual-help-help.html"
+    },
+    {
+      "id": "derived-components-examples-contextual-help-information.html",
+      "category": "components",
+      "name": "정보 제공 도움말 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/contextual-help-information.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/contextual-help-information.html"
+    },
+    {
+      "id": "derived-components-examples-date-input-month-year.html",
+      "category": "components",
+      "name": "MM/YY 분리 입력 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/date-input-month-year.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/date-input-month-year.html"
+    },
+    {
+      "id": "derived-components-examples-date-input-month.html",
+      "category": "components",
+      "name": "월 단위의 대략적 날짜 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/date-input-month.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/date-input-month.html"
+    },
+    {
+      "id": "derived-components-examples-date-input-native.html",
+      "category": "components",
+      "name": "단일 날짜 입력 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/date-input-native.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/date-input-native.html"
+    },
+    {
+      "id": "derived-components-examples-date-input-parts.html",
+      "category": "components",
+      "name": "연·월·일 다중 입력 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/date-input-parts.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/date-input-parts.html"
+    },
+    {
+      "id": "derived-components-examples-file-image-optimize.html",
+      "category": "components",
+      "name": "선택형 로컬 이미지 용량 줄이기 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/file-image-optimize.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/file-image-optimize.html"
+    },
+    {
+      "id": "derived-components-examples-file-picker-multiple.html",
+      "category": "components",
+      "name": "다중 파일 선택·드롭 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/file-picker-multiple.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/file-picker-multiple.html"
+    },
+    {
+      "id": "derived-components-examples-file-picker-single.html",
+      "category": "components",
+      "name": "단일 파일 선택 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/file-picker-single.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/file-picker-single.html"
+    },
+    {
+      "id": "derived-components-examples-file-transfer-states.html",
+      "category": "components",
+      "name": "호스트 제어 파일 전송 상태 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/file-transfer-states.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/file-transfer-states.html"
+    },
+    {
+      "id": "derived-components-examples-footer-company.html",
+      "category": "components",
+      "name": "회사 중립 푸터 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/footer-company.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/footer-company.html"
+    },
+    {
+      "id": "derived-components-examples-header-horizontal.html",
+      "category": "components",
+      "name": "회사 헤더 · 아이콘 가로 배열 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/header-horizontal.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/header-horizontal.html"
+    },
+    {
+      "id": "derived-components-examples-header-scroll-reveal.html",
+      "category": "components",
+      "name": "회사 컴팩트 헤더 · 위로 스크롤할 때 재노출 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/header-scroll-reveal.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/header-scroll-reveal.html"
+    },
+    {
+      "id": "derived-components-examples-header-vertical.html",
+      "category": "components",
+      "name": "회사 헤더 · 아이콘 세로 배열 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/header-vertical.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/header-vertical.html"
+    },
+    {
+      "id": "derived-components-examples-identifier-dark.html",
+      "category": "components",
+      "name": "정부기관 전용 · dark 운영기관 식별 띠 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/identifier-dark.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/identifier-dark.html"
+    },
+    {
+      "id": "derived-components-examples-identifier-light.html",
+      "category": "components",
+      "name": "정부기관 전용 · light 운영기관 식별 띠 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/identifier-light.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/identifier-light.html"
+    },
+    {
+      "id": "derived-components-examples-image-decorative.html",
+      "category": "components",
+      "name": "장식 이미지 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/image-decorative.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/image-decorative.html"
+    },
+    {
+      "id": "derived-components-examples-image-fallback.html",
+      "category": "components",
+      "name": "이미지 오류 대체 안내 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/image-fallback.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/image-fallback.html"
+    },
+    {
+      "id": "derived-components-examples-image-functional.html",
+      "category": "components",
+      "name": "기능 이미지 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/image-functional.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/image-functional.html"
+    },
+    {
+      "id": "derived-components-examples-image-informational.html",
+      "category": "components",
+      "name": "정보 이미지 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/image-informational.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/image-informational.html"
+    },
+    {
+      "id": "derived-components-examples-in-page-navigation.html",
+      "category": "components",
+      "name": "대상과 연결된 콘텐츠 내 탐색 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/in-page-navigation.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/in-page-navigation.html"
+    },
+    {
+      "id": "derived-components-examples-masthead-verification.html",
+      "category": "components",
+      "name": "정부기관 전용 · 공식 누리집 확인 방법 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/masthead-verification.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/masthead-verification.html"
+    },
+    {
+      "id": "derived-components-examples-menu-simple.html",
+      "category": "components",
+      "name": "단순 링크 메인 메뉴 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/menu-simple.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/menu-simple.html"
+    },
+    {
+      "id": "derived-components-examples-modal-approval.html",
+      "category": "components",
+      "name": "다음 단계 진행 여부를 선택해 주세요 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/modal-approval.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/modal-approval.html"
+    },
+    {
+      "id": "derived-components-examples-modal-confirmation.html",
+      "category": "components",
+      "name": "작성 중인 내용을 벗어날까요? · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/modal-confirmation.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/modal-confirmation.html"
+    },
+    {
+      "id": "derived-components-examples-modal-important.html",
+      "category": "components",
+      "name": "처리하지 못했어요 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/modal-important.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/modal-important.html"
+    },
+    {
+      "id": "derived-components-examples-modal-information.html",
+      "category": "components",
+      "name": "자료 이용 안내 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/modal-information.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/modal-information.html"
+    },
+    {
+      "id": "derived-components-examples-modal-scrollable.html",
+      "category": "components",
+      "name": "긴 자료 이용 안내 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/modal-scrollable.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/modal-scrollable.html"
+    },
+    {
+      "id": "derived-components-examples-pagination-load-more.html",
+      "category": "components",
+      "name": "목록 더보기 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/pagination-load-more.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/pagination-load-more.html"
+    },
+    {
+      "id": "derived-components-examples-pagination-numbered.html",
+      "category": "components",
+      "name": "숫자·직접 이동 페이지네이션 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/pagination-numbered.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/pagination-numbered.html"
+    },
+    {
+      "id": "derived-components-examples-side-navigation-dropdown.html",
+      "category": "components",
+      "name": "모바일 드롭다운 사이드 메뉴 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/side-navigation-dropdown.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/side-navigation-dropdown.html"
+    },
+    {
+      "id": "derived-components-examples-side-navigation-simple.html",
+      "category": "components",
+      "name": "단순 목록 사이드 메뉴 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/side-navigation-simple.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/side-navigation-simple.html"
+    },
+    {
+      "id": "derived-components-examples-skip-link-focus.html",
+      "category": "components",
+      "name": "초점 시 보이는 건너뛰기 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/skip-link-focus.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/skip-link-focus.html"
+    },
+    {
+      "id": "derived-components-examples-skip-link-visible.html",
+      "category": "components",
+      "name": "항상 보이는 건너뛰기 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/skip-link-visible.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/skip-link-visible.html"
+    },
+    {
+      "id": "derived-components-examples-spinner-determinate.html",
+      "category": "components",
+      "name": "확정 진행률 스피너 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/spinner-determinate.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/spinner-determinate.html"
+    },
+    {
+      "id": "derived-components-examples-step-adaptive.html",
+      "category": "components",
+      "name": "적응형 단계 이동과 선택 단계 건너뛰기 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/step-adaptive.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/step-adaptive.html"
+    },
+    {
+      "id": "derived-components-examples-tab-vertical.html",
+      "category": "components",
+      "name": "수직 탭 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/tab-vertical.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/tab-vertical.html"
+    },
+    {
+      "id": "derived-components-examples-table-sort.html",
+      "category": "components",
+      "name": "정렬 가능한 데이터 표 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/table-sort.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/table-sort.html"
+    },
+    {
+      "id": "derived-components-examples-tag-add-filter.html",
+      "category": "components",
+      "name": "조건 추가와 적용 태그 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/tag-add-filter.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/tag-add-filter.html"
+    },
+    {
+      "id": "derived-components-examples-tag-filter.html",
+      "category": "components",
+      "name": "선택형 필터 태그 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/tag-filter.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/tag-filter.html"
+    },
+    {
+      "id": "derived-components-examples-tag-label.html",
+      "category": "components",
+      "name": "비대화형 분류 태그 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/tag-label.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/tag-label.html"
+    },
+    {
+      "id": "derived-components-examples-tag-removable.html",
+      "category": "components",
+      "name": "삭제 가능한 태그 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/tag-removable.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/tag-removable.html"
+    },
+    {
+      "id": "derived-components-examples-textarea-count.html",
+      "category": "components",
+      "name": "글자 수·오류 안내 텍스트 영역 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/textarea-count.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/textarea-count.html"
+    },
+    {
+      "id": "derived-components-examples-tutorial-retained.html",
+      "category": "components",
+      "name": "접기·탭 전환 후 이어지는 따라하기 패널 · 공통 UI 자산",
+      "path": "ui-kit/internal/components/examples/tutorial-retained.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/tutorial-retained.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-accordion.html",
+      "category": "components",
+      "name": "07 . 아코디언(Accordion) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-accordion.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-accordion.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-accordion_line.html",
+      "category": "components",
+      "name": "07 . 아코디언(Accordion) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-accordion_line.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-accordion_line.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-badge.html",
+      "category": "components",
+      "name": "06. 배지(Badge) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-badge.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-badge.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-badge_number.html",
+      "category": "components",
+      "name": "06. 배지(Badge) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-badge_number.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-badge_number.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-badge_size.html",
+      "category": "components",
+      "name": "06. 배지(Badge) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-badge_size.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-badge_size.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-breadcrumb.html",
+      "category": "components",
+      "name": "03. 브레드크럼(Breadcrumb) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-breadcrumb.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-breadcrumb.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-button.html",
+      "category": "components",
+      "name": "02. 버튼(Button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-button.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-button.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-button_hierarchy.html",
+      "category": "components",
+      "name": "02. 버튼(Button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-button_hierarchy.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-button_hierarchy.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-button_icon.html",
+      "category": "components",
+      "name": "02. 버튼(Button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-button_icon.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-button_icon.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-button_size.html",
+      "category": "components",
+      "name": "02. 버튼(Button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-button_size.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-button_size.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-button_text.html",
+      "category": "components",
+      "name": "02. 버튼(Button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-button_text.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-button_text.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-button_with_icon.html",
+      "category": "components",
+      "name": "02. 버튼(Button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-button_with_icon.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-button_with_icon.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-calendar.html",
+      "category": "components",
+      "name": "03. 달력(Calendar) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-calendar.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-calendar.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-calendar_range.html",
+      "category": "components",
+      "name": "03. 달력(Calendar) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-calendar_range.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-calendar_range.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-carousel.html",
+      "category": "components",
+      "name": "09. 캐러셀(Carousel) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-carousel.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-carousel.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-carousel_banner.html",
+      "category": "components",
+      "name": "09. 캐러셀(Carousel) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-carousel_banner.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-carousel_banner.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-checkbox.html",
+      "category": "components",
+      "name": "03. 체크박스(Checkbox) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-checkbox.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-checkbox.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-checkbox_chip.html",
+      "category": "components",
+      "name": "03. 체크박스(Checkbox) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-checkbox_chip.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-checkbox_chip.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-checkbox_size.html",
+      "category": "components",
+      "name": "03. 체크박스(Checkbox) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-checkbox_size.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-checkbox_size.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-coach_mark.html",
+      "category": "components",
+      "name": "04. 코치마크(Coach mark) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-coach_mark.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-coach_mark.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-contextual_help.html",
+      "category": "components",
+      "name": "03. 맥락적 도움말(Contextual help) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-contextual_help.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-contextual_help.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-critical_alerts.html",
+      "category": "components",
+      "name": "02. 긴급 공지(Critical alerts) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-critical_alerts.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-critical_alerts.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-date_input.html",
+      "category": "components",
+      "name": "01. 날짜 입력 필드(Date input) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-date_input.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-date_input.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-disclosure.html",
+      "category": "components",
+      "name": "04. 디스클로저(Disclosure) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-disclosure.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-disclosure.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-file_upload.html",
+      "category": "components",
+      "name": "04. 파일 업로드(File upload) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-file_upload.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-file_upload.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-help_panel.html",
+      "category": "components",
+      "name": "01. 도움 패널(Help panel) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-help_panel.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-help_panel.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-identifier.html",
+      "category": "components",
+      "name": "02. 운영기관 식별자(Identifier) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-identifier.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-identifier.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-in_page_navigation.html",
+      "category": "components",
+      "name": "05. 콘텐츠 내 탐색(In-page navigation) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-in_page_navigation.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-in_page_navigation.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-link.html",
+      "category": "components",
+      "name": "01. 링크(Link) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-link.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-link.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-main_menu_mobile.html",
+      "category": "components",
+      "name": "02. 메인 메뉴(Main menu) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-main_menu_mobile.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-main_menu_mobile.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-main_menu_pc.html",
+      "category": "components",
+      "name": "02. 메인 메뉴(Main menu) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-main_menu_pc.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-main_menu_pc.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-masthead.html",
+      "category": "components",
+      "name": "01. 공식 배너(Masthead) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-masthead.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-masthead.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-modal.html",
+      "category": "components",
+      "name": "05. 모달(Modal) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-modal.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-modal.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-modal_sample.html",
+      "category": "components",
+      "name": "05. 모달(Modal) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-modal_sample.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-modal_sample.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-pagination.html",
+      "category": "components",
+      "name": "06. 페이지네이션(Pagination) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-pagination.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-pagination.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-radio_button.html",
+      "category": "components",
+      "name": "01. 라디오 버튼(Radio button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-radio_button.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-radio_button.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-radio_chip.html",
+      "category": "components",
+      "name": "01. 라디오 버튼(Radio button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-radio_chip.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-radio_chip.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-radio_size.html",
+      "category": "components",
+      "name": "01. 라디오 버튼(Radio button) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-radio_size.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-radio_size.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-select.html",
+      "category": "components",
+      "name": "02. 셀렉트(Select) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-select.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-select.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-select_size.html",
+      "category": "components",
+      "name": "02. 셀렉트(Select) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-select_size.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-select_size.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-select_sorting.html",
+      "category": "components",
+      "name": "02. 셀렉트(Select) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-select_sorting.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-select_sorting.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-select_state.html",
+      "category": "components",
+      "name": "02. 셀렉트(Select) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-select_state.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-select_state.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-side_navigation.html",
+      "category": "components",
+      "name": "04. 사이드 메뉴(Side navigation) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-side_navigation.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-side_navigation.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-skip_link.html",
+      "category": "components",
+      "name": "01. 건너뛰기 링크(Skip link) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-skip_link.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-skip_link.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-spinner.html",
+      "category": "components",
+      "name": "02. 스피너(Spinner) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-spinner.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-spinner.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-step_indicator.html",
+      "category": "components",
+      "name": "01. 단계 표시기(Step indicator) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-step_indicator.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-step_indicator.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-structured_list.html",
+      "category": "components",
+      "name": "01. 구조화 목록(Structured list) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-structured_list.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-structured_list.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-structured_list_table.html",
+      "category": "components",
+      "name": "01. 구조화 목록(Structured list) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-structured_list_table.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-structured_list_table.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-tab.html",
+      "category": "components",
+      "name": "10. 탭(Tab) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-tab.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-tab.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-table.html",
+      "category": "components",
+      "name": "11. 표(Table) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-table.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-table.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-tag.html",
+      "category": "components",
+      "name": "04. 태그(Tag) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-tag.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-tag.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-tag_link.html",
+      "category": "components",
+      "name": "04. 태그(Tag) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-tag_link.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-tag_link.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-text_input.html",
+      "category": "components",
+      "name": "03. 텍스트 입력 필드(Text input) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-text_input.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-text_input.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-text_input_icon.html",
+      "category": "components",
+      "name": "03. 텍스트 입력 필드(Text input) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-text_input_icon.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-text_input_icon.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-text_input_size.html",
+      "category": "components",
+      "name": "03. 텍스트 입력 필드(Text input) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-text_input_size.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-text_input_size.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-text_input_state.html",
+      "category": "components",
+      "name": "03. 텍스트 입력 필드(Text input) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-text_input_state.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-text_input_state.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-textarea.html",
+      "category": "components",
+      "name": "02. 텍스트 영역(Textarea) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-textarea.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-textarea.html"
+    },
+    {
+      "id": "derived-components-examples-upstream-tutorial_panel.html",
+      "category": "components",
+      "name": "02. 따라하기 패널(Tutorial panel) · 회사 2024 테마",
+      "path": "ui-kit/internal/components/examples/upstream-tutorial_panel.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/examples/upstream-tutorial_panel.html"
+    },
+    {
+      "id": "derived-components-fragments-checkbox-select-all.html",
+      "category": "components",
+      "name": "checkbox-select-all",
+      "path": "ui-kit/internal/components/fragments/checkbox-select-all.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/checkbox-select-all.html"
+    },
+    {
+      "id": "derived-components-fragments-coach-action.html",
+      "category": "components",
+      "name": "coach-action",
+      "path": "ui-kit/internal/components/fragments/coach-action.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/coach-action.html"
+    },
+    {
+      "id": "derived-components-fragments-contextual-help-help.html",
+      "category": "components",
+      "name": "contextual-help-help",
+      "path": "ui-kit/internal/components/fragments/contextual-help-help.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/contextual-help-help.html"
+    },
+    {
+      "id": "derived-components-fragments-contextual-help-information.html",
+      "category": "components",
+      "name": "contextual-help-information",
+      "path": "ui-kit/internal/components/fragments/contextual-help-information.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/contextual-help-information.html"
+    },
+    {
+      "id": "derived-components-fragments-date-input-month-year.html",
+      "category": "components",
+      "name": "date-input-month-year",
+      "path": "ui-kit/internal/components/fragments/date-input-month-year.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/date-input-month-year.html"
+    },
+    {
+      "id": "derived-components-fragments-date-input-month.html",
+      "category": "components",
+      "name": "date-input-month",
+      "path": "ui-kit/internal/components/fragments/date-input-month.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/date-input-month.html"
+    },
+    {
+      "id": "derived-components-fragments-date-input-native.html",
+      "category": "components",
+      "name": "date-input-native",
+      "path": "ui-kit/internal/components/fragments/date-input-native.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/date-input-native.html"
+    },
+    {
+      "id": "derived-components-fragments-date-input-parts.html",
+      "category": "components",
+      "name": "date-input-parts",
+      "path": "ui-kit/internal/components/fragments/date-input-parts.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/date-input-parts.html"
+    },
+    {
+      "id": "derived-components-fragments-file-image-optimize.html",
+      "category": "components",
+      "name": "file-image-optimize",
+      "path": "ui-kit/internal/components/fragments/file-image-optimize.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/file-image-optimize.html"
+    },
+    {
+      "id": "derived-components-fragments-file-picker-multiple.html",
+      "category": "components",
+      "name": "file-picker-multiple",
+      "path": "ui-kit/internal/components/fragments/file-picker-multiple.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/file-picker-multiple.html"
+    },
+    {
+      "id": "derived-components-fragments-file-picker-single.html",
+      "category": "components",
+      "name": "file-picker-single",
+      "path": "ui-kit/internal/components/fragments/file-picker-single.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/file-picker-single.html"
+    },
+    {
+      "id": "derived-components-fragments-file-transfer-states.html",
+      "category": "components",
+      "name": "file-transfer-states",
+      "path": "ui-kit/internal/components/fragments/file-transfer-states.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/file-transfer-states.html"
+    },
+    {
+      "id": "derived-components-fragments-footer-company.html",
+      "category": "components",
+      "name": "footer-company",
+      "path": "ui-kit/internal/components/fragments/footer-company.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/footer-company.html"
+    },
+    {
+      "id": "derived-components-fragments-header-horizontal.html",
+      "category": "components",
+      "name": "header-horizontal",
+      "path": "ui-kit/internal/components/fragments/header-horizontal.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/header-horizontal.html"
+    },
+    {
+      "id": "derived-components-fragments-header-scroll-reveal.html",
+      "category": "components",
+      "name": "header-scroll-reveal",
+      "path": "ui-kit/internal/components/fragments/header-scroll-reveal.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/header-scroll-reveal.html"
+    },
+    {
+      "id": "derived-components-fragments-header-vertical.html",
+      "category": "components",
+      "name": "header-vertical",
+      "path": "ui-kit/internal/components/fragments/header-vertical.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/header-vertical.html"
+    },
+    {
+      "id": "derived-components-fragments-identifier-dark.html",
+      "category": "components",
+      "name": "identifier-dark",
+      "path": "ui-kit/internal/components/fragments/identifier-dark.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/identifier-dark.html"
+    },
+    {
+      "id": "derived-components-fragments-identifier-light.html",
+      "category": "components",
+      "name": "identifier-light",
+      "path": "ui-kit/internal/components/fragments/identifier-light.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/identifier-light.html"
+    },
+    {
+      "id": "derived-components-fragments-image-decorative.html",
+      "category": "components",
+      "name": "image-decorative",
+      "path": "ui-kit/internal/components/fragments/image-decorative.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/image-decorative.html"
+    },
+    {
+      "id": "derived-components-fragments-image-fallback.html",
+      "category": "components",
+      "name": "image-fallback",
+      "path": "ui-kit/internal/components/fragments/image-fallback.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/image-fallback.html"
+    },
+    {
+      "id": "derived-components-fragments-image-functional.html",
+      "category": "components",
+      "name": "image-functional",
+      "path": "ui-kit/internal/components/fragments/image-functional.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/image-functional.html"
+    },
+    {
+      "id": "derived-components-fragments-image-informational.html",
+      "category": "components",
+      "name": "image-informational",
+      "path": "ui-kit/internal/components/fragments/image-informational.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/image-informational.html"
+    },
+    {
+      "id": "derived-components-fragments-in-page-navigation.html",
+      "category": "components",
+      "name": "in-page-navigation",
+      "path": "ui-kit/internal/components/fragments/in-page-navigation.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/in-page-navigation.html"
+    },
+    {
+      "id": "derived-components-fragments-masthead-verification.html",
+      "category": "components",
+      "name": "masthead-verification",
+      "path": "ui-kit/internal/components/fragments/masthead-verification.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/masthead-verification.html"
+    },
+    {
+      "id": "derived-components-fragments-menu-simple.html",
+      "category": "components",
+      "name": "menu-simple",
+      "path": "ui-kit/internal/components/fragments/menu-simple.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/menu-simple.html"
+    },
+    {
+      "id": "derived-components-fragments-modal-approval.html",
+      "category": "components",
+      "name": "modal-approval",
+      "path": "ui-kit/internal/components/fragments/modal-approval.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/modal-approval.html"
+    },
+    {
+      "id": "derived-components-fragments-modal-confirmation.html",
+      "category": "components",
+      "name": "modal-confirmation",
+      "path": "ui-kit/internal/components/fragments/modal-confirmation.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/modal-confirmation.html"
+    },
+    {
+      "id": "derived-components-fragments-modal-important.html",
+      "category": "components",
+      "name": "modal-important",
+      "path": "ui-kit/internal/components/fragments/modal-important.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/modal-important.html"
+    },
+    {
+      "id": "derived-components-fragments-modal-information.html",
+      "category": "components",
+      "name": "modal-information",
+      "path": "ui-kit/internal/components/fragments/modal-information.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/modal-information.html"
+    },
+    {
+      "id": "derived-components-fragments-modal-scrollable.html",
+      "category": "components",
+      "name": "modal-scrollable",
+      "path": "ui-kit/internal/components/fragments/modal-scrollable.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/modal-scrollable.html"
+    },
+    {
+      "id": "derived-components-fragments-pagination-load-more.html",
+      "category": "components",
+      "name": "pagination-load-more",
+      "path": "ui-kit/internal/components/fragments/pagination-load-more.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/pagination-load-more.html"
+    },
+    {
+      "id": "derived-components-fragments-pagination-numbered.html",
+      "category": "components",
+      "name": "pagination-numbered",
+      "path": "ui-kit/internal/components/fragments/pagination-numbered.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/pagination-numbered.html"
+    },
+    {
+      "id": "derived-components-fragments-side-navigation-dropdown.html",
+      "category": "components",
+      "name": "side-navigation-dropdown",
+      "path": "ui-kit/internal/components/fragments/side-navigation-dropdown.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/side-navigation-dropdown.html"
+    },
+    {
+      "id": "derived-components-fragments-side-navigation-simple.html",
+      "category": "components",
+      "name": "side-navigation-simple",
+      "path": "ui-kit/internal/components/fragments/side-navigation-simple.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/side-navigation-simple.html"
+    },
+    {
+      "id": "derived-components-fragments-skip-link-focus.html",
+      "category": "components",
+      "name": "skip-link-focus",
+      "path": "ui-kit/internal/components/fragments/skip-link-focus.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/skip-link-focus.html"
+    },
+    {
+      "id": "derived-components-fragments-skip-link-visible.html",
+      "category": "components",
+      "name": "skip-link-visible",
+      "path": "ui-kit/internal/components/fragments/skip-link-visible.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/skip-link-visible.html"
+    },
+    {
+      "id": "derived-components-fragments-spinner-determinate.html",
+      "category": "components",
+      "name": "spinner-determinate",
+      "path": "ui-kit/internal/components/fragments/spinner-determinate.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/spinner-determinate.html"
+    },
+    {
+      "id": "derived-components-fragments-step-adaptive.html",
+      "category": "components",
+      "name": "step-adaptive",
+      "path": "ui-kit/internal/components/fragments/step-adaptive.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/step-adaptive.html"
+    },
+    {
+      "id": "derived-components-fragments-tab-vertical.html",
+      "category": "components",
+      "name": "tab-vertical",
+      "path": "ui-kit/internal/components/fragments/tab-vertical.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/tab-vertical.html"
+    },
+    {
+      "id": "derived-components-fragments-table-sort.html",
+      "category": "components",
+      "name": "table-sort",
+      "path": "ui-kit/internal/components/fragments/table-sort.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/table-sort.html"
+    },
+    {
+      "id": "derived-components-fragments-tag-add-filter.html",
+      "category": "components",
+      "name": "tag-add-filter",
+      "path": "ui-kit/internal/components/fragments/tag-add-filter.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/tag-add-filter.html"
+    },
+    {
+      "id": "derived-components-fragments-tag-filter.html",
+      "category": "components",
+      "name": "tag-filter",
+      "path": "ui-kit/internal/components/fragments/tag-filter.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/tag-filter.html"
+    },
+    {
+      "id": "derived-components-fragments-tag-label.html",
+      "category": "components",
+      "name": "tag-label",
+      "path": "ui-kit/internal/components/fragments/tag-label.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/tag-label.html"
+    },
+    {
+      "id": "derived-components-fragments-tag-removable.html",
+      "category": "components",
+      "name": "tag-removable",
+      "path": "ui-kit/internal/components/fragments/tag-removable.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/tag-removable.html"
+    },
+    {
+      "id": "derived-components-fragments-textarea-count.html",
+      "category": "components",
+      "name": "textarea-count",
+      "path": "ui-kit/internal/components/fragments/textarea-count.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/textarea-count.html"
+    },
+    {
+      "id": "derived-components-fragments-tutorial-retained.html",
+      "category": "components",
+      "name": "tutorial-retained",
+      "path": "ui-kit/internal/components/fragments/tutorial-retained.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/fragments/tutorial-retained.html"
+    },
+    {
+      "id": "derived-components-guided-runtime.css",
+      "category": "components",
+      "name": "guided-runtime",
+      "path": "ui-kit/internal/components/guided-runtime.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-image-diagram.svg",
+      "category": "images",
+      "name": "image-diagram",
+      "path": "ui-kit/internal/components/image-diagram.svg",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-image-divider.svg",
+      "category": "images",
+      "name": "image-divider",
+      "path": "ui-kit/internal/components/image-divider.svg",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-image-info.svg",
+      "category": "images",
+      "name": "image-info",
+      "path": "ui-kit/internal/components/image-info.svg",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-image.html",
+      "category": "components",
+      "name": "이미지 사용 예제 · KRDS 2024 참고 자산",
+      "path": "ui-kit/internal/components/image.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/components/image.html"
+    },
+    {
+      "id": "derived-components-krds-p0114.md",
+      "category": "components",
+      "name": "krds-p0114",
+      "path": "ui-kit/internal/components/krds-p0114.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0121.md",
+      "category": "components",
+      "name": "krds-p0121",
+      "path": "ui-kit/internal/components/krds-p0121.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0128.md",
+      "category": "components",
+      "name": "krds-p0128",
+      "path": "ui-kit/internal/components/krds-p0128.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0135.md",
+      "category": "components",
+      "name": "krds-p0135",
+      "path": "ui-kit/internal/components/krds-p0135.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0150.md",
+      "category": "components",
+      "name": "krds-p0150",
+      "path": "ui-kit/internal/components/krds-p0150.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0159.md",
+      "category": "components",
+      "name": "krds-p0159",
+      "path": "ui-kit/internal/components/krds-p0159.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0176.md",
+      "category": "components",
+      "name": "krds-p0176",
+      "path": "ui-kit/internal/components/krds-p0176.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0189.md",
+      "category": "components",
+      "name": "krds-p0189",
+      "path": "ui-kit/internal/components/krds-p0189.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0204.md",
+      "category": "components",
+      "name": "krds-p0204",
+      "path": "ui-kit/internal/components/krds-p0204.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0213.md",
+      "category": "components",
+      "name": "krds-p0213",
+      "path": "ui-kit/internal/components/krds-p0213.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0236.md",
+      "category": "components",
+      "name": "krds-p0236",
+      "path": "ui-kit/internal/components/krds-p0236.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0243.md",
+      "category": "components",
+      "name": "krds-p0243",
+      "path": "ui-kit/internal/components/krds-p0243.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0251.md",
+      "category": "components",
+      "name": "krds-p0251",
+      "path": "ui-kit/internal/components/krds-p0251.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0262.md",
+      "category": "components",
+      "name": "krds-p0262",
+      "path": "ui-kit/internal/components/krds-p0262.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0270.md",
+      "category": "components",
+      "name": "krds-p0270",
+      "path": "ui-kit/internal/components/krds-p0270.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0282.md",
+      "category": "components",
+      "name": "krds-p0282",
+      "path": "ui-kit/internal/components/krds-p0282.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0288.md",
+      "category": "components",
+      "name": "krds-p0288",
+      "path": "ui-kit/internal/components/krds-p0288.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0299.md",
+      "category": "components",
+      "name": "krds-p0299",
+      "path": "ui-kit/internal/components/krds-p0299.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0307.md",
+      "category": "components",
+      "name": "krds-p0307",
+      "path": "ui-kit/internal/components/krds-p0307.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0328.md",
+      "category": "components",
+      "name": "krds-p0328",
+      "path": "ui-kit/internal/components/krds-p0328.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0342.md",
+      "category": "components",
+      "name": "krds-p0342",
+      "path": "ui-kit/internal/components/krds-p0342.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0354.md",
+      "category": "components",
+      "name": "krds-p0354",
+      "path": "ui-kit/internal/components/krds-p0354.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0368.md",
+      "category": "components",
+      "name": "krds-p0368",
+      "path": "ui-kit/internal/components/krds-p0368.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0382.md",
+      "category": "components",
+      "name": "krds-p0382",
+      "path": "ui-kit/internal/components/krds-p0382.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0397.md",
+      "category": "components",
+      "name": "krds-p0397",
+      "path": "ui-kit/internal/components/krds-p0397.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0405.md",
+      "category": "components",
+      "name": "krds-p0405",
+      "path": "ui-kit/internal/components/krds-p0405.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0418.md",
+      "category": "components",
+      "name": "krds-p0418",
+      "path": "ui-kit/internal/components/krds-p0418.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0430.md",
+      "category": "components",
+      "name": "krds-p0430",
+      "path": "ui-kit/internal/components/krds-p0430.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0437.md",
+      "category": "components",
+      "name": "krds-p0437",
+      "path": "ui-kit/internal/components/krds-p0437.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0446.md",
+      "category": "components",
+      "name": "krds-p0446",
+      "path": "ui-kit/internal/components/krds-p0446.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0459.md",
+      "category": "components",
+      "name": "krds-p0459",
+      "path": "ui-kit/internal/components/krds-p0459.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0468.md",
+      "category": "components",
+      "name": "krds-p0468",
+      "path": "ui-kit/internal/components/krds-p0468.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0485.md",
+      "category": "components",
+      "name": "krds-p0485",
+      "path": "ui-kit/internal/components/krds-p0485.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0500.md",
+      "category": "components",
+      "name": "krds-p0500",
+      "path": "ui-kit/internal/components/krds-p0500.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0513.md",
+      "category": "components",
+      "name": "krds-p0513",
+      "path": "ui-kit/internal/components/krds-p0513.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0522.md",
+      "category": "components",
+      "name": "krds-p0522",
+      "path": "ui-kit/internal/components/krds-p0522.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-krds-p0533.md",
+      "category": "components",
+      "name": "krds-p0533",
+      "path": "ui-kit/internal/components/krds-p0533.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-review-recipes.json",
+      "category": "components",
+      "name": "review-recipes",
+      "path": "ui-kit/internal/components/review-recipes.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-rule-inventory.json",
+      "category": "components",
+      "name": "rule-inventory",
+      "path": "ui-kit/internal/components/rule-inventory.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-runtime.css",
+      "category": "components",
+      "name": "runtime",
+      "path": "ui-kit/internal/components/runtime.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-variant-audit.md",
+      "category": "components",
+      "name": "variant-audit",
+      "path": "ui-kit/internal/components/variant-audit.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-variants-manifest.json",
+      "category": "components",
+      "name": "variants-manifest",
+      "path": "ui-kit/internal/components/variants-manifest.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-visual-review-dispositions.json",
+      "category": "components",
+      "name": "visual-review-dispositions",
+      "path": "ui-kit/internal/components/visual-review-dispositions.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-visual-review-ledger.json",
+      "category": "components",
+      "name": "visual-review-ledger",
+      "path": "ui-kit/internal/components/visual-review-ledger.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-visual-review-notes.json",
+      "category": "components",
+      "name": "visual-review-notes",
+      "path": "ui-kit/internal/components/visual-review-notes.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-components-visual-review-supplement-366-552.json",
+      "category": "components",
+      "name": "visual-review-supplement-366-552",
+      "path": "ui-kit/internal/components/visual-review-supplement-366-552.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-ADAPTER.md",
+      "category": "foundations",
+      "name": "ADAPTER",
+      "path": "ui-kit/internal/foundations/ADAPTER.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-README.md",
+      "category": "foundations",
+      "name": "README",
+      "path": "ui-kit/internal/foundations/README.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-company-adapter.css",
+      "category": "foundations",
+      "name": "company-adapter",
+      "path": "ui-kit/internal/foundations/company-adapter.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-company-custom.css",
+      "category": "foundations",
+      "name": "company-custom",
+      "path": "ui-kit/internal/foundations/company-custom.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-final-source-review.json",
+      "category": "foundations",
+      "name": "final-source-review",
+      "path": "ui-kit/internal/foundations/final-source-review.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0045.md",
+      "category": "foundations",
+      "name": "krds-p0045",
+      "path": "ui-kit/internal/foundations/krds-p0045.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0047.md",
+      "category": "foundations",
+      "name": "krds-p0047",
+      "path": "ui-kit/internal/foundations/krds-p0047.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0049.md",
+      "category": "foundations",
+      "name": "krds-p0049",
+      "path": "ui-kit/internal/foundations/krds-p0049.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0051.md",
+      "category": "foundations",
+      "name": "krds-p0051",
+      "path": "ui-kit/internal/foundations/krds-p0051.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0053.md",
+      "category": "foundations",
+      "name": "krds-p0053",
+      "path": "ui-kit/internal/foundations/krds-p0053.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0055.md",
+      "category": "foundations",
+      "name": "krds-p0055",
+      "path": "ui-kit/internal/foundations/krds-p0055.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0057.md",
+      "category": "foundations",
+      "name": "krds-p0057",
+      "path": "ui-kit/internal/foundations/krds-p0057.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0061.md",
+      "category": "foundations",
+      "name": "krds-p0061",
+      "path": "ui-kit/internal/foundations/krds-p0061.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0064.md",
+      "category": "foundations",
+      "name": "krds-p0064",
+      "path": "ui-kit/internal/foundations/krds-p0064.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0078.md",
+      "category": "foundations",
+      "name": "krds-p0078",
+      "path": "ui-kit/internal/foundations/krds-p0078.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0084.md",
+      "category": "foundations",
+      "name": "krds-p0084",
+      "path": "ui-kit/internal/foundations/krds-p0084.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0088.md",
+      "category": "foundations",
+      "name": "krds-p0088",
+      "path": "ui-kit/internal/foundations/krds-p0088.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-krds-p0101.md",
+      "category": "foundations",
+      "name": "krds-p0101",
+      "path": "ui-kit/internal/foundations/krds-p0101.md",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-layout.css",
+      "category": "foundations",
+      "name": "layout",
+      "path": "ui-kit/internal/foundations/layout.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-layout.html",
+      "category": "foundations",
+      "name": "Altool 공통 배치 자산",
+      "path": "ui-kit/internal/foundations/layout.html",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false,
+      "preview": "ui-kit/internal/foundations/layout.html"
+    },
+    {
+      "id": "derived-foundations-palette-2024.json",
+      "category": "foundations",
+      "name": "palette-2024",
+      "path": "ui-kit/internal/foundations/palette-2024.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-reference-tokens.css",
+      "category": "foundations",
+      "name": "reference-tokens",
+      "path": "ui-kit/internal/foundations/reference-tokens.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-review-recipes.json",
+      "category": "foundations",
+      "name": "review-recipes",
+      "path": "ui-kit/internal/foundations/review-recipes.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-tokens-2024.css",
+      "category": "foundations",
+      "name": "tokens-2024",
+      "path": "ui-kit/internal/foundations/tokens-2024.css",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-values-2024.json",
+      "category": "foundations",
+      "name": "values-2024",
+      "path": "ui-kit/internal/foundations/values-2024.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    },
+    {
+      "id": "derived-foundations-visual-review-notes.json",
+      "category": "foundations",
+      "name": "visual-review-notes",
+      "path": "ui-kit/internal/foundations/visual-review-notes.json",
+      "source": "Altool derived from KRDS 2024.02",
+      "verified": false
+    }
+  ]
+}

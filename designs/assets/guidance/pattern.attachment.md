@@ -1,0 +1,22 @@
+# 첨부파일 — 회사 적용 지침
+
+Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 채택한 기본 지침이며 KRDS 인증이나 원문 전체 채택이 아니다. 회사 도입 전 조정 후 자산과 함께 버전 배포한다. 기능/상태에 해당하는 조건만 적용하고 없는 기능을 추가하지 않는다. 상충하는 회사 필수 계약은 공동 변경으로 해결하며 임의 N/A로 면제하지 않는다.
+
+<a id="usage"></a>
+## 사용·배치·동작
+
+- G01: 인라인·목록·아이콘 링크를 용도에 맞게 선택한다.
+- G02: 이름·형식·크기 및 필요한 경우 페이지 수를 제공한다.
+- G03: 다운로드 액션은 실행 전 알아볼 수 있게 설명한다.
+- G04: 미리보기는 새 탭임을 알리고 다운로드와 구분한다.
+- G05: 인라인 링크 글자 크기는 주변 본문과 같게 둔다.
+- G06: 아이콘 링크에는 정확한 파일명을 포함한 접근 가능한 이름을 제공한다.
+- G07: 문서 본문은 스크린리더가 읽을 수 있는 텍스트, 이미지에는 대체텍스트를 제공한다.
+
+## 참고 출처
+
+규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
+
+- [ui-kit/internal/patterns/basic/attachments.md](../ui-kit/internal/patterns/basic/attachments.md)
+- [ui-kit/internal/patterns/basic/extended.md](../ui-kit/internal/patterns/basic/extended.md)
+- [ui-kit/internal/reference/krds-p0651.md](../ui-kit/internal/reference/krds-p0651.md)

@@ -2,7 +2,7 @@
 
 **사용법**: `$altool design_source`
 
-**목적**: 프로젝트의 디자인 소스(`designs/claude-design/*.html`, `.pen` 또는 Stitch)를 분석하여 정규화된 단일 구현 계약인 `designs/design.md`를 생성합니다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천입니다.
+**목적**: 프로젝트의 디자인 소스(`designs/claude-design/**/*.html`, `.pen` 또는 Stitch)를 분석하여 정규화된 단일 구현 계약인 `standards/design.md`를 생성합니다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천입니다.
 생성된 디자인 시스템은 `constitution.md`의 범용 디자인 품질 원칙을 기준으로 검토합니다.
 
 참조 사이트 조사만으로 디자인 시스템을 부트스트랩해야 하는 경우는 `$altool research`가 담당합니다. `design_source`는 사용자가 제공한 Claude 디자인 HTML, `.pen` 또는 Stitch 파일을 프로젝트 디자인 시스템으로 확정할 때 사용합니다.
@@ -16,13 +16,13 @@
 
 ### Step 0: 디자인 소스 감지 (자동 분기)
 
-아래 순서대로 확인하여 **소스 타입**을 결정합니다:
+`altool/standards.md`의 「디자인 입력 탐색·갱신」으로 입력 목록을 확보하고 아래 순서로 **소스 타입**을 결정합니다. 표의 HTML 경로는 `.htm`도 포함하며, 여러 화면은 상대 경로로 구분합니다.
 
 | 우선순위 | 조건 | 소스 타입 | 분기 |
 |---------|------|----------|------|
-| 1 | `designs/claude-design/*.html` 파일 존재 | **Claude Design HTML** | → Claude HTML 모드 |
-| 2 | `designs/stitch/` 폴더 존재 | **Stitch** | → Stitch 모드 |
-| 3 | `designs/*.pen` 파일 존재 | **Pencil** | → Pencil 모드 |
+| 1 | `designs/claude-design/**/*.html` 파일 존재 | **Claude Design HTML** | → Claude HTML 모드 |
+| 2 | `designs/stitch/` 아래 실제 디자인 파일 존재 | **Stitch** | → Stitch 모드 |
+| 3 | `designs/**/*.pen` 파일 존재 | **Pencil** | → Pencil 모드 |
 | 4 | 모두 없음 | — | → 즉시 중단 |
 
 모두 없으면 안내:
@@ -45,20 +45,15 @@
 ```
 [0/6] 디자인 소스 감지 완료
   소스: [Claude Design HTML | Stitch | Pencil]
-  경로: [designs/claude-design/*.html | designs/stitch/ | designs/*.pen]
+  경로: [designs/claude-design/**/*.html | designs/stitch/ | designs/**/*.pen]
 ```
 
-### Step 1: 기존 designs/design.md 확인
+### Step 1: 기존 standards/design.md 확인
 
 이미 존재하면 첫 non-empty line을 확인한다.
 
 - 첫 non-empty line에 `TBD`가 있으면 템플릿 상태로 보고 확인 없이 새 디자인 시스템으로 채운다.
-- `TBD`가 없으면 사용자가 확정한 디자인 시스템일 수 있으므로 안내:
-```
-ℹ️  기존 designs/design.md가 있습니다. 덮어쓰시겠습니까?
-A) 덮어쓰기 — 새로 생성
-B) 취소
-```
+- `TBD`가 없으면 `altool/standards.md`의 공통 계약 변경 절차를 따른다. 새 원천·사용자 요청에 해당하는 항목만 동기화하고 기존 anchor와 무관한 계약을 보존한다. 요청 밖의 기존 화면까지 바뀌거나 원천의 의도가 충돌할 때만 사용자에게 영향과 선택을 확인한다.
 
 ---
 
@@ -68,7 +63,7 @@ B) 취소
 
 #### 🟣 Claude HTML 모드
 
-`designs/claude-design/` 폴더의 모든 `.html` 파일을 읽습니다. 이 폴더의 HTML은 **가장 우선하는 디자인 헌법**입니다.
+공통 탐색으로 찾은 `designs/claude-design/` 아래 모든 HTML과 연결된 로컬 보조 자산을 읽습니다. 이 폴더의 HTML은 **가장 우선하는 디자인 헌법**입니다.
 
 1. HTML의 DOM 구조를 읽고 페이지/섹션/컴포넌트 계층을 추출합니다.
 2. `<style>`, 인라인 스타일, CSS custom properties, Tailwind class, class naming을 확인해 색상·타이포·간격·둥글기·그림자·상태 표현을 추출합니다.
@@ -94,7 +89,7 @@ B) 취소
 2. `batch_get`으로 전체 노드 구조를 파악하고
 3. `search_all_unique_properties`로 아래 속성을 전수 추출합니다:
 
-| 추출 속성 | designs/design.md 매핑 |
+| 추출 속성 | standards/design.md 매핑 |
 |-----------|----------------------|
 | `fillColor` | 색상 팔레트 (Primary, Neutral, Semantic) |
 | `textColor` | 텍스트 색상 |
@@ -119,9 +114,9 @@ B) 취소
 
 #### 🟠 Stitch 모드
 
-`designs/stitch/` 폴더에서 아래 파일을 읽습니다:
+`designs/stitch/` 아래 각 화면 폴더의 다음 자산을 읽습니다. 여러 화면의 동명 파일은 상대 경로로 구분하며 원본 링크를 유지합니다:
 
-1. **`code.html`** — `tailwind.config` 스크립트 블록에서 아래를 추출합니다:
+1. **화면 HTML (`code.html` 등)** — 연결 CSS와 `tailwind.config`에서 아래를 추출합니다:
    - `theme.extend.colors` → 전체 색상 값 (이름 + hex 값)
    - `theme.extend.borderRadius` → 둥글기 값
    - `theme.extend.fontFamily` → 폰트 패밀리
@@ -150,7 +145,7 @@ B) 취소
 
 #### 🟣 Claude HTML 모드
 
-HTML에서 추출한 실제 화면을 `design.md`의 규칙으로 정규화합니다. 이때 Claude HTML이 `designs/design.md`, Research 관찰값, 일반 AI 판단보다 우선합니다.
+HTML에서 추출한 실제 화면을 `design.md`의 규칙으로 정규화합니다. 이때 Claude HTML이 `standards/design.md`, Research 관찰값, 일반 AI 판단보다 우선합니다.
 
 **화면 구조**: DOM 순서와 주요 section 비례를 Screen Recipes에 기록합니다. 구현 시 section 순서, 정보 밀도, 시각 위계가 HTML과 달라지면 design drift로 봅니다.
 
@@ -246,7 +241,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 
 ### [4/6] design.md 생성
 
-정규화된 디자인 시스템을 바탕으로 `designs/design.md`를 작성합니다.
+정규화된 디자인 시스템을 바탕으로 `standards/design.md`를 작성합니다.
 
 **필수 포함 섹션**:
 
@@ -264,12 +259,13 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 12. Agent Implementation Guide
 
 **작성 규칙**:
+- Reference Source Map의 원본·보조 자산 경로/hash는 `altool/standards.md`의 갱신 절차에 맞춰 기록한다.
 - 각 색상·타이포·간격·둥글기·그림자 값은 `이름 | 값 | 역할 | 사용 위치` 형식의 테이블로 정리
 - Typography Rules에는 참조/원본 font-family, 구현 font-family stack, 대체 사유, 역할별 크기·굵기·행간·자간을 기록
 - 디자인 소스에서 실제로 사용된 컴포넌트만 상세 명세를 작성하고, 사용되지 않은 컴포넌트는 기본값으로 채움
 - 문서 상단에 소스 타입 명시: "이 문서는 [Claude Design HTML | Stitch | .pen 파일] 기반으로 자동 생성되었습니다"
 - 생성 완료한 `design.md`의 첫 non-empty line에는 `TBD`가 없어야 한다. 기존 템플릿의 `(TBD)` 마커는 제거한다.
-- Claude HTML 모드: `designs/claude-design/*.html`의 DOM/CSS/컴포넌트 규칙을 Reference Source Map, Screen Recipes, Component Contracts, Capture-to-Implementation Map에 최상위 디자인 헌법으로 기록
+- Claude HTML 모드: `designs/claude-design/**/*.html`의 DOM/CSS/컴포넌트 규칙을 Reference Source Map, Screen Recipes, Component Contracts, Capture-to-Implementation Map에 최상위 디자인 헌법으로 기록
 - Stitch 모드: `DESIGN.md`의 디자인 원칙(Creative North Star, Do/Don't)을 design.md의 Rules 섹션에 그대로 포함
 
 ---
@@ -281,11 +277,11 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 > `guides/` 디렉토리가 없으면 생성합니다.
 
 **필수 조건**:
-- `designs/design.md`에 적힌 값과 컴포넌트 계약을 HTML/CSS로 시각화
+- `standards/design.md`에 적힌 값과 컴포넌트 계약을 HTML/CSS로 시각화
 - 외부 라이브러리 없이 순수 HTML + CSS + 인라인 JS로 구성 (단일 파일)
 - 프리뷰 내부 CSS는 `design.md`에서 파생한 값임을 주석으로 기록
 
-**포함 섹션** (designs/design.md 구조 순서대로):
+**포함 섹션** (standards/design.md 구조 순서대로):
 
 #### 1. Color Palette
 - Primary 50~900: 각 색상을 정사각 칩으로 나열, 이름 + HEX값 표시
@@ -336,9 +332,9 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 - 트랜지션: fast, base, slow, spring 버튼으로 체감 비교
 
 **스타일 규칙**:
-- 페이지 자체의 레이아웃도 `designs/design.md`의 값과 컴포넌트 계약을 사용
+- 페이지 자체의 레이아웃도 `standards/design.md`의 값과 컴포넌트 계약을 사용
 - 각 섹션은 앵커 링크가 있는 목차(TOC)로 이동 가능
-- 상단에 "이 페이지는 designs/design.md를 기준으로 생성된 디자인 시스템 프리뷰입니다." 안내 표시
+- 상단에 "이 페이지는 standards/design.md를 기준으로 생성된 디자인 시스템 프리뷰입니다." 안내 표시
 - 반응형: 모바일에서도 확인 가능
 
 생성 완료 후 보고:
@@ -361,7 +357,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 ✅ 디자인 시스템 생성 완료
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📁 디자인 소스: [Claude Design HTML (designs/claude-design/*.html) | Stitch (designs/stitch/) | Pencil (.pen [N]개)]
+📁 디자인 소스: [Claude Design HTML (designs/claude-design/**/*.html) | Stitch (designs/stitch/) | Pencil (.pen [N]개)]
 📊 생성된 디자인 값 수:
   색상: [N]개
   타이포: [N]개
@@ -370,7 +366,7 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
   기타: [N]개
 
 📄 생성된 파일:
-  ✅ designs/design.md (디자인 시스템 명세)
+  ✅ standards/design.md (디자인 시스템 명세)
   ✅ guides/design-preview.html (시각 프리뷰)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -378,10 +374,10 @@ Stitch의 tailwind.config 값은 이미 구조화되어 있어 `design.md`의 �
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. guides/design-preview.html을 브라우저에서 열어 디자인 시스템을 확인하세요
-2. designs/design.md를 검토하고 필요한 부분을 수정하세요
+2. 바꾸고 싶은 모습을 대화로 알려주세요. AI가 공통 디자인과 해당 화면의 요구를 구분해 반영합니다
 3. 확정 후 $altool research 또는 $altool oneshot 으로 기능 개발을 시작하세요
 
-⚠️ designs/design.md는 파이프라인 실행 전에 확정해야 합니다.
-   파이프라인 실행 중에는 수정하지 마세요 (헌법의 디자인 권위·동기화 원칙).
+⚠️ 구현 전에 해당 디자인 계약을 확정합니다.
+   개발 중 요구가 바뀌면 AI가 표준·Spec·구현을 동기화하고 영향받는 화면을 재검증합니다.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

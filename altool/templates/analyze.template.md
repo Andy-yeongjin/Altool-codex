@@ -119,10 +119,12 @@
 
 ## 4. Altool 자산 검증
 
+`visual.ui_contracts`: `{done / failed + 이유}`. 계약/실측 경로·hash와 독립 검토한 페이지·상태·viewport 분모를 기록한다. 미검증/실패는 §3 갭에 포함한다. `altool/standards.md`의 디자인 실측 완료 계약을 적용한다.
+
 | 항목 | 기준 | 판정 | 위반 위치 |
 |------|------|:----:|----------|
 | 사용자 디자인 입력 있음 | Spec의 User Design Source와 구현 화면 구조·밀도·위계·컴포넌트 외형 일치 | ✅/⚠️/N/A | |
-| 디자인 시스템 있음 | 구현 화면의 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트 외형·미디어 사용이 `designs/design.md`와 추적 가능하게 일치. 참조 폰트 파일 복제 없이 구현 font-family stack 사용 | ✅/⚠️/N/A | |
+| 디자인 시스템 있음 | 구현 화면의 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트 외형·미디어 사용이 `standards/design.md`와 추적 가능하게 일치. 참조 폰트 파일 복제 없이 구현 font-family stack 사용 | ✅/⚠️/N/A | |
 | CSS custom properties | CSS 파일이 있으면 `var(--token)` 참조가 실제 정의(`--token:`)와 일치 | ✅/⚠️/N/A | |
 | `visual.contrast` — 텍스트 대비 | `check.py contrast --root .`로 명시적 글자색/배경색 조합 4.5:1 이상. `ambiguousRules`는 browser 대조 대상으로 기록 | ✅/⚠️/N/A | |
 | `accessibility.live_region` — Live region 계약 | `check.py a11y-contracts --root .`로 Spec 계약·구현·자동 assertion 3-way 일치 | ✅/⚠️/N/A | |

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" width="720" height="220" role="img" aria-labelledby="title desc">
+  <title id="title">신청 절차 도식</title>
+  <desc id="desc">신청 문서, 확인 표시, 결과 알림이 화살표로 연결된 세 단계</desc>
+  <g fill="#EFF5FF" stroke="#1D56BC" stroke-width="3">
+    <rect x="22" y="22" width="176" height="176" rx="12"/>
+    <rect x="272" y="22" width="176" height="176" rx="12"/>
+    <rect x="522" y="22" width="176" height="176" rx="12"/>
+  </g>
+  <g fill="none" stroke="#1D56BC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M218 110h34m-12-12 12 12-12 12M468 110h34m-12-12 12 12-12 12"/>
+    <path d="M84 68h37l20 20v63H84zM120 68v22h21M99 109h28M99 128h21"/>
+    <circle cx="360" cy="110" r="42"/>
+    <path d="m336 110 16 16 31-33M578 130h64l-7-13V98a25 25 0 0 0-50 0v19zM600 143a10 10 0 0 0 20 0"/>
+  </g>
+</svg>

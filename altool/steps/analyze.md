@@ -37,7 +37,7 @@
 > 갭 분석은 **독립 서브에이전트에 위임**한다.
 
 1. **Agent 도구(general-purpose)로 검증 에이전트를 생성**하고 아래를 전달한다:
-   - Spec 문서 경로 + Plan 문서 경로 + 구현 경로(src/ 등)
+   - Spec·Plan·PRD·constitution 경로 + standards/standard.yaml과 선택 원문 항목 + 구현 경로(src/ 등). 라우터와 실제 변경 범위에서 적용 표준 누락도 독립 재검사한다.
    - 아래 3축 정의와 Match Rate 공식
    - **관련 교훈 목록** (1~3단계에서 추린 것): "아래는 과거에 실제 발생한 결함 패턴이다. 각 교훈의 예방 규칙 위반 여부를 추가로 검사하라 — 설계와 일치하더라도 위반이면 갭으로 보고하라."
    - 지침: "너는 이 설계와 코드를 처음 본다. **갭을 찾는 것이 임무**다. 각 판정에 file:line 증거를 의무화하고, 애매하면 ✅가 아니라 ⚠️로 판정하라. 칭찬은 불필요하다."
@@ -55,7 +55,7 @@
 
 ### 8. 런타임 검증 (v2.3.0)
 
-서버 감지: `http://localhost:3000` 응답 확인.
+서버 감지와 소유권 확인은 `altool/steps/_server.md`를 읽고 따른다. 프로젝트 실제 URL을 사용하며 고정 포트로 서버 부재를 판단하지 않는다.
 
 - **서버 미실행 시**: L1~L3 생략, 사용자에게 경고 후 **정적 공식 사용**. (서버를 직접 실행하지 말고 운영체제에 맞는 `start.bat` / `start.command` 또는 `npm run dev` 실행을 안내)
 - **서버 실행 중**:
@@ -76,11 +76,14 @@
 각 Critical/Important 갭은 `lesson.py append`로 `gap` 이벤트를 기록한다. 기록에는 `feature`, `phase: "analyze"`, `files`, `summary`, `cause` 또는 `preventionRule`(있을 때), `verification` 근거, `recurrenceRisk`, `recurrenceScope`, `recurrenceReason`을 포함한다.
 
 **Altool 자산 감지 — 디자인 시스템 검증** (UI 기능이면 analyze 문서에 절 추가):
+
+UI-03 실측은 `altool/standards.md`의 **디자인 실측 완료 계약**을 따른다. 독립 검증 에이전트가 Spec/실제 변경에서 누락된 페이지·상태·desktop/mobile·공통 요소 및 구현 fingerprint 범위를 재검토한다. 기대값을 현재 구현에서 역추출하지 않는다. 실측 누락/불일치는 `visual.ui_contracts=failed`와 디자인 갭으로 기록한다. 기능 Match Rate가 높아도 이 갭을 지우지 않는다.
+
 | 항목 | 기준 |
 |------|------|
-| Claude 디자인 HTML 있음 | `designs/claude-design/*.html`이 있으면 최우선 디자인 헌법으로 보고, 구현 화면의 구조·밀도·위계·컴포넌트 외형·색상·간격·타이포·상태 표현이 HTML과 일치 |
+| Claude 디자인 HTML 있음 | `designs/claude-design/**/*.html`이 있으면 최우선 디자인 헌법으로 보고, 구현 화면의 구조·밀도·위계·컴포넌트 외형·색상·간격·타이포·상태 표현이 HTML과 일치 |
 | 사용자 디자인 입력 있음 | `designs/`의 `.pen`, Stitch, 스크린샷, 디자인 문서가 있으면 Spec의 User Design Source와 구현 화면 구조·밀도·위계·컴포넌트 외형이 일치 |
-| 디자인 시스템 있음 | 구현 화면의 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트 외형·미디어 사용이 `designs/design.md`의 규칙과 추적 가능하게 일치. 참조 폰트 파일 복제 없이 `design.md`의 구현 font-family stack 사용 |
+| 디자인 시스템 있음 | 구현 화면의 색상·타이포·폰트 스택·간격·둥글기·그림자·컴포넌트 외형·미디어 사용이 `standards/design.md`의 규칙과 추적 가능하게 일치. 참조 폰트 파일 복제 없이 `design.md`의 구현 font-family stack 사용 |
 | CSS custom properties | CSS 파일이 있으면 `var(--token)` 참조가 실제 정의(`--token:`)와 일치하는지 확인. 미정의 custom property는 해당 CSS 선언이 무효화될 수 있으므로 구현 갭 |
 | 텍스트 대비 | CSS 파일이 있으면 `python3 altool/scripts/check.py contrast --root .` 실행. 4.5:1 미만 명시적 글자색/배경색 조합은 접근성 갭 |
 | Live region 계약 | `python3 altool/scripts/check.py a11y-contracts --root .` 실행. Spec이 상태 전달을 요구하면 구현과 자동화된 `role=status` 텍스트/표시 assertion이 모두 필요 |

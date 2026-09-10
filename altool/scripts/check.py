@@ -13,6 +13,11 @@ import sys
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from standards import validate_evidence
+from assets import validate_evidence as validate_asset_evidence
+from ui_gate import validate_ui_evidence
+
 
 VALID_STATUSES = {"done", "skipped", "failed"}
 RESEARCH_READINESS = {"ready", "partial", "not-ready"}
@@ -394,7 +399,7 @@ def validate_oneshot_children(data: dict[str, Any], root: Path) -> list[str]:
             failures.append(
                 f"oneshot.children: {child_step} feature '{child_feature}' does not match parent '{parent_feature}'"
             )
-        for child_failure in validate_check(child_data):
+        for child_failure in validate_check(child_data) + validate_evidence(child_data, resolved_root) + validate_asset_evidence(child_data, resolved_root) + validate_ui_evidence(child_data, resolved_root):
             failures.append(f"oneshot child {raw_child}: {child_failure}")
 
     for required_step in ONESHOT_CHILD_STEPS:
@@ -435,18 +440,23 @@ def load_json(path: str) -> dict[str, Any]:
 def validate_cmd(args: argparse.Namespace) -> int:
     data = load_json(args.json)
     failures = validate_check(data)
-    if str(data.get("step", "")).strip().casefold() == "oneshot":
-        explicit_root = getattr(args, "root", None)
-        if explicit_root:
-            root = Path(explicit_root).resolve()
-        elif args.json == "-":
+    explicit_root = getattr(args, "root", None)
+    if explicit_root:
+        root = Path(explicit_root).resolve()
+    elif args.json == "-":
+        if str(data.get("step", "")).strip().casefold() == "oneshot":
             raise SystemExit("FAIL: oneshot validation from stdin requires --root")
+        root = Path.cwd()
+    else:
+        check_path = Path(args.json).resolve()
+        if check_path.parent.name == "checks" and check_path.parent.parent.name == ".altool":
+            root = check_path.parent.parent.parent
         else:
-            check_path = Path(args.json).resolve()
-            if check_path.parent.name == "checks" and check_path.parent.parent.name == ".altool":
-                root = check_path.parent.parent.parent
-            else:
-                root = check_path.parent
+            raise SystemExit("FAIL: checks outside .altool/checks/ require an explicit --root")
+    failures.extend(validate_evidence(data, root))
+    failures.extend(validate_asset_evidence(data, root))
+    failures.extend(validate_ui_evidence(data, root))
+    if str(data.get("step", "")).strip().casefold() == "oneshot":
         failures.extend(validate_oneshot_children(data, root))
     if args.format == "json":
         print(
@@ -589,7 +599,12 @@ def is_excluded_project_path(parts: tuple[str, ...]) -> bool:
     )
 
 
-def iter_css_files(root: Path) -> list[Path]:
+def excluded_scan_path(path: Path, root: Path, exclusions) -> bool:
+    relative = path.relative_to(root)
+    return any(relative == Path(value) or Path(value) in relative.parents for value in exclusions)
+
+
+def iter_css_files(root: Path, exclusions=()) -> list[Path]:
     files: list[Path] = []
     for path in root.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in CSS_EXTENSIONS:
@@ -598,15 +613,15 @@ def iter_css_files(root: Path) -> list[Path]:
             rel_parts = path.relative_to(root).parts
         except ValueError:
             rel_parts = path.parts
-        if is_excluded_project_path(rel_parts):
+        if is_excluded_project_path(rel_parts) or excluded_scan_path(path, root, exclusions):
             continue
         files.append(path)
     return sorted(files)
 
 
-def iter_contrast_sources(root: Path) -> list[tuple[Path, str, int]]:
+def iter_contrast_sources(root: Path, exclusions=()) -> list[tuple[Path, str, int]]:
     sources: list[tuple[Path, str, int]] = []
-    for path in iter_css_files(root):
+    for path in iter_css_files(root, exclusions):
         sources.append((path, path.read_text(encoding="utf-8", errors="ignore"), 0))
 
     style_pattern = re.compile(r"<style\b[^>]*>(.*?)</style>", re.IGNORECASE | re.DOTALL)
@@ -625,25 +640,29 @@ def iter_contrast_sources(root: Path) -> list[tuple[Path, str, int]]:
 
 def css_vars_cmd(args: argparse.Namespace) -> int:
     root = Path(args.root).resolve()
-    sources = iter_contrast_sources(root)
+    exclusions = getattr(args, 'exclude', [])
+    sources = [source for source in iter_contrast_sources(root, exclusions)
+               if not excluded_scan_path(source[0], root, exclusions)]
     files = sorted({path for path, _, _ in sources})
     definitions: dict[str, list[str]] = {}
-    references: list[tuple[str, str, int]] = []
+    references: list[tuple[str, str, int, bool]] = []
     failures: list[str] = []
 
     define_pattern = re.compile(r"(^|[{\s;])(--[A-Za-z0-9_-]+)\s*:", re.MULTILINE)
-    var_pattern = re.compile(r"var\(\s*(--[A-Za-z0-9_-]+)")
+    var_pattern = re.compile(r"var\(\s*(--[A-Za-z0-9_-]+)\s*([,)])")
 
     for path, text, line_offset in sources:
         rel = str(path.relative_to(root))
+        # Keep line offsets while ignoring non-executing comment examples.
+        text = re.sub(r"/\*.*?\*/", lambda match: '\n' * match[0].count('\n'), text, flags=re.DOTALL)
         for match in define_pattern.finditer(text):
             definitions.setdefault(match.group(2), []).append(rel)
         for line_no, line in enumerate(text.splitlines(), start=line_offset + 1):
             for match in var_pattern.finditer(line):
-                references.append((match.group(1), rel, line_no))
+                references.append((match.group(1), rel, line_no, match.group(2) == ','))
 
-    for name, rel, line_no in references:
-        if name not in definitions:
+    for name, rel, line_no, has_fallback in references:
+        if name not in definitions and not has_fallback:
             failures.append(f"{rel}:{line_no}: {name} is referenced with var() but never defined")
 
     if args.format == "json":
@@ -1158,7 +1177,7 @@ def main() -> int:
     validate = sub.add_parser("validate", help="validate a step check JSON file")
     validate.add_argument("--json", required=True, help="check JSON path, or '-' for stdin")
     validate.add_argument("--format", choices=("text", "json"), default="text")
-    validate.add_argument("--root", help="project root for validating oneshot child paths")
+    validate.add_argument("--root", help="project root (required for check files outside .altool/checks/)")
     validate.set_defaults(func=validate_cmd)
 
     audit = sub.add_parser("audit-docs", help="verify Altool docs are not newer than their owner Step Check")
@@ -1170,6 +1189,7 @@ def main() -> int:
     css_vars = sub.add_parser("css-vars", help="verify CSS var() references have matching custom property definitions")
     css_vars.add_argument("--root", default=".", help="project root to scan")
     css_vars.add_argument("--format", choices=("text", "json"), default="text")
+    css_vars.add_argument("--exclude", action="append", default=[], help="explicit root-relative file/directory to omit (repeatable; no implicit tests exclusion)")
     css_vars.set_defaults(func=css_vars_cmd)
 
     contrast = sub.add_parser("contrast", help="verify explicit CSS text/background contrast pairs")

@@ -1,6 +1,10 @@
 # Altool Step 공통 계약
 
+작업 입력을 선택할 때 `altool/standards.md`를 읽고 적용한다. 이 문서가 표준 라우팅·적용·검증 증거의 공통 절차를 소유한다.
+
 모든 step은 완료 전에 지정된 `.altool/checks/*.json`을 작성하고 `python3 altool/scripts/check.py validate --json {check-path}`를 통과시킨다. 실패 원인을 보완해 최대 5회 재검증하고, 통과한 Step Check 요약을 최종 보고에 포함한다.
+
+회사 팩 UI는 구현 전에 `altool/standards.md`의 과업별 표준→선택 자산→회사 적용 지침을 읽고 Spec에 연결한다. 구현/검증 step은 같은 문서의 UI 적용 증거(routing·requirements·규칙별 관찰)도 연결한다. 누락·임의 대체·비적용 근거는 실제 코드·화면과 독립 대조한다.
 
 공통 `checks` 키의 의미는 다음과 같다.
 

@@ -20,7 +20,7 @@
 - PRD(`docs/00-pm/` 또는 `prd/`) → WHY 추출, Plan → Context Anchor·Success Criteria·Requirements 추출.
 - **코드 오류 검색**: `lesson.md` 전체를 읽지 않는다. 기능명·수정 예정 파일·프레임워크·패키지·오류코드로 `python3 altool/scripts/lesson.py search --query "{키워드}" --limit 5`를 실행하고, 관련 코드 오류 이벤트의 `preventionRule`만 `lesson: E-00000(...)` 1줄로 출력 후 구현에 반영한다.
 - **React/Next.js 보조 스킬**: 현재 프로젝트가 React 또는 Next.js를 사용하고 `.agents/skills/vercel-react-best-practices/SKILL.md`가 있으면 구현 규칙으로 적용한다. 다른 스택이면 `skipped(not React/Next.js)`, 파일이 없으면 `skipped(skill unavailable)`로 보고하고 계속한다.
-- **UI 계약 로딩**: 헌법, 직접 디자인 입력, Spec의 Design System Anchor, `designs/design.md`를 읽는다. `design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 research 또는 `design_source`로 돌아간다.
+- **UI 계약 로딩**: 헌법, 직접 디자인 입력, Spec의 Design System Anchor, `standards/design.md`를 읽는다. `design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 research 또는 `design_source`로 돌아간다.
 - 헌법의 디자인 권위에 따라 Anchor와 recipe/capture map을 구현한다. 각 map 행을 section/component에 연결하고, 제외한 행은 범위 밖 사유를 run check에 남긴다.
 
 ### 4~5. Decision Record Chain + Success Criteria 표시

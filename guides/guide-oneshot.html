@@ -517,10 +517,10 @@ body {
       3. setup 실행 — 프로젝트 폴더 자동 설정 <span class="acc-toggle">▼</span>
     </div>
     <div class="accordion-body">
-      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;">Altool 폴더에서 Windows는 <strong>setup.bat</strong>, macOS는 <strong>setup.command</strong>를 더블클릭하면 폴더 선택 창이 뜹니다. macOS에서 실행 권한으로 열리지 않으면 터미널에서 <code style="color:var(--cyan)">bash setup.command</code>를 실행하세요. 대상 프로젝트 폴더를 선택하면 필요한 파일이 자동으로 복사됩니다.</p>
+      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;">Python 3가 필요합니다. YAML 파서는 제품에 포함되어 별도 pip 설치나 가상환경 활성화가 필요 없습니다. Windows는 <strong>setup.bat</strong>, macOS는 <strong>setup.command</strong>를 실행해 대상 폴더를 선택하세요. macOS 터미널에서는 <code>bash setup.command</code>로도 실행할 수 있습니다.</p>
       <div class="tip info">
         <div class="tip-icon">💡</div>
-        <div class="tip-text">새 폴더나 기존 프로젝트 폴더를 선택할 수 있습니다. 기존 AGENTS.md·헌법·디자인 계약은 보존됩니다.</div>
+        <div class="tip-text">새 폴더나 기존 프로젝트 폴더를 선택할 수 있습니다. 기존 AGENTS.md·표준·디자인 계약은 보존하고, 다른 헌법은 백업 후 제품판으로 갱신합니다.</div>
       </div>
     </div>
   </div>
@@ -568,7 +568,7 @@ body {
       7. $altool setup 입력 — 초기화·자산 확인 <span class="acc-toggle">▼</span>
     </div>
     <div class="accordion-body">
-      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;">대화창에 아래를 입력하면 Codex가 <strong>Python 3 품질 게이트</strong>와 로컬 자산·헌법 버전을 확인합니다. Node.js는 Node 프로젝트일 때만 확인하며, 필요한 Codex 로컬 스킬은 setup 파일이 이미 복사합니다.</p>
+      <p style="font-size:14px; color:var(--text2); margin-bottom:12px;">대화창에 아래를 입력하면 Codex가 <strong>Python 3 품질 게이트</strong>와 로컬 자산·헌법 무결성·표준 라우터를 확인합니다. Node.js는 Node 프로젝트일 때만 확인하며, 필요한 Codex 로컬 스킬은 setup 파일이 이미 복사합니다.</p>
       <div class="cmd-block">
         <div class="cmd-header">
           <span class="cmd-label">Codex 대화창에 입력</span>
@@ -601,36 +601,36 @@ body {
     <div class="tip-text">
       <strong>파일 위치 안내</strong><br>
       • <strong>PRD 파일</strong> (.md): <code style="color:var(--cyan)">prd/</code> 폴더에 넣으세요 — AI가 자동으로 찾습니다.<br>
-      • <strong>PRD 참고 문서</strong> (PDF·이미지·기획서 등): <code style="color:var(--cyan)">prd/refs/</code> 폴더에 넣으면 보조 컨텍스트로 함께 읽습니다.<br>
+      • <strong>PRD 참고 문서</strong> (PDF·이미지·기획서 등): <code style="color:var(--cyan)">prd/refs/</code>에서 작업에 관련된 항목을 선택해 읽습니다.<br>
       • <strong>Claude 디자인 HTML</strong> (.html): <code style="color:var(--cyan)">designs/claude-design/</code> 폴더에 넣으세요 — 있으면 최우선 디자인 원천입니다.<br>
       • <strong>Pencil.dev 디자인 파일</strong> (.pen): <code style="color:var(--cyan)">designs/</code> 폴더에 넣으세요<br>
       • <strong>Stitch 디자인 파일</strong>: ZIP 압축 해제 후 <code style="color:var(--cyan)">designs/stitch/</code> 폴더에 넣으세요<br>
-      <span style="color:var(--text2); font-size:13px;">설치 시 <code style="color:var(--cyan)">constitution.md</code>, <code style="color:var(--cyan)">designs/design.md</code>가 복사됩니다.</span>
+      <span style="color:var(--text2); font-size:13px;">설치 전 Python 3를 준비하세요. YAML 파서는 제품에 포함됩니다. 헌법은 백업 후 제품판으로 갱신하고 기존 <code>standards/</code>는 보존합니다. 초기 설치·재개 모두 <code>$altool setup</code>에서 환경과 정책을 검증합니다. 원하는 동작만 대화로 요청하세요. AI가 공통 규칙과 기능 한정 요구를 구분하고 표준·라우터를 관리합니다.</span>
     </div>
   </div>
 
   <div class="tip info" style="margin-top:8px; border-color:rgba(167,139,250,0.25); background:rgba(167,139,250,0.06);">
     <div class="tip-icon">📝</div>
     <div class="tip-text">
-      <strong style="color:var(--purple);">PRD 작성이 막연하다면 → PRD Builder</strong><br>
-      <a href="prd-builder.html" target="_blank" style="color:var(--cyan); font-weight:600;">guides/prd-builder.html →</a>을 브라우저로 열고 폼만 채우면 PRD <code style="color:var(--cyan)">.md</code>가 자동 생성됩니다.<br>
-      참고 문서(PDF·이미지·기획서)도 첨부하면 ZIP으로 묶여 다운로드되고, <code style="color:var(--cyan)">prd/</code> 폴더에 풀면 <code style="color:var(--cyan)">prd/{이름}.md</code> + <code style="color:var(--cyan)">prd/refs/*</code>가 자동 배치됩니다.
+      <strong style="color:var(--purple);">PRD와 디자인 준비 → Altool 프로젝트 스타터</strong><br>
+      루트의 <a href="../project-starter.html" target="_blank" style="color:var(--cyan); font-weight:600;">project-starter.html →</a>을 데스크톱 Chrome/Edge에서 여세요. 프로젝트 폴더 선택 → 기존 PRD 가져오기 또는 새로 작성 → 디자인·참고자료 선택 → 저장 내용 확인 → 프로젝트에 저장 순서입니다.<br>
+      쓰기 권한을 허용하면 <code>prd/</code>와 <code>designs/</code> 아래에 종류별로 직접 저장합니다. ZIP 다운로드나 서버 업로드는 하지 않습니다. 기존 파일은 덮어쓰기 전에 확인하며 디자인만 준비할 수도 있습니다. 파일 선택과 입력은 새로고침하면 초기화됩니다.
     </div>
   </div>
 
   <div class="tip info" style="margin-top:8px;">
     <div class="tip-icon">🎨</div>
     <div class="tip-text">
-      <strong>디자인 파일이 있다면 먼저 실행하세요 (최초 1회)</strong><br>
-      <strong>Claude HTML</strong>: <code style="color:var(--cyan)">designs/claude-design/</code> 폴더에 넣으면 최우선 원천이며, <code style="color:var(--cyan)">design.md</code>가 없거나 오래됐을 때 oneshot/freedom이 자동 실행 &nbsp;|&nbsp; <strong>Pencil.dev</strong>: <code style="color:var(--cyan)">designs/</code> 폴더에 .pen 파일을 넣고 실행 &nbsp;|&nbsp; <strong>Stitch</strong>: ZIP 압축 해제 후 <code style="color:var(--cyan)">designs/stitch/</code> 폴더에 넣고 실행<br>
-      색상·폰트·간격·컴포넌트 외형을 자동 추출해 <code style="color:var(--cyan)">designs/design.md</code>를 만들어줍니다. <code style="color:var(--cyan)">constitution.md</code>의 범용 디자인 품질 원칙 기준으로 검토합니다.<br>
-      <span style="color:var(--text2); font-size:13px;">※ 팀 프로젝트라면 리드가 1회 실행 후 git push → 팀원은 pull만 하면 됩니다.</span>
+      <strong>디자인 계약이 필요하거나 원본이 바뀌었다면</strong><br>
+      <strong>Claude HTML</strong>: <code style="color:var(--cyan)">designs/claude-design/</code> &nbsp;|&nbsp; <strong>Pencil.dev</strong>: <code style="color:var(--cyan)">designs/</code>의 .pen &nbsp;|&nbsp; <strong>Stitch</strong>: 압축 해제 후 <code style="color:var(--cyan)">designs/stitch/</code>. 하위 화면 폴더와 연결 CSS·이미지 경로를 유지하세요. oneshot/freedom이 원본 변경과 기존 계약을 비교해 필요할 때 자동 정규화하므로 별도 명령을 입력하지 않아도 됩니다.<br>
+      색상·폰트·간격·컴포넌트 외형을 자동 추출해 <code style="color:var(--cyan)">standards/design.md</code>를 만들어줍니다. <code style="color:var(--cyan)">constitution.md</code>의 범용 디자인 품질 원칙 기준으로 검토합니다.<br>
+      <span style="color:var(--text2); font-size:13px;">※ 팀 프로젝트는 원본과 갱신된 계약을 함께 공유하세요. 기존 계약과 일치하면 불필요하게 재생성하지 않습니다.</span>
     </div>
   </div>
 
   <div class="cmd-block" style="margin-top:8px; margin-bottom:20px;">
     <div class="cmd-header">
-      <span class="cmd-label">디자인 파일 있을 때 먼저 실행 (Claude HTML, .pen 또는 Stitch)</span>
+      <span class="cmd-label">디자인 계약만 별도로 정규화하려면 (Claude HTML, .pen 또는 Stitch)</span>
       <button class="cmd-copy" onclick="event.stopPropagation(); copyCmd(this)">복사</button>
     </div>
     <div class="cmd-code">$altool design_source</div>
@@ -802,7 +802,7 @@ body {
           <div class="tip-icon">🎨</div>
           <div class="tip-text">
             <strong>디자인 시스템 검증도 함께 자동 실행됩니다.</strong><br>
-            색상·크기·간격·컴포넌트 외형이 <code style="color:var(--cyan)">designs/design.md</code> 기준으로 추적 가능하게 구현됐는지 검사합니다.
+            색상·크기·간격·컴포넌트 외형이 <code style="color:var(--cyan)">standards/design.md</code> 기준으로 추적 가능하게 구현됐는지 검사합니다.
             CSS custom property 누락, 화면 구조·밀도 불일치, 참조 캡처 대비 drift가 있으면 Codex가 안내하고 수정합니다.
           </div>
         </div>

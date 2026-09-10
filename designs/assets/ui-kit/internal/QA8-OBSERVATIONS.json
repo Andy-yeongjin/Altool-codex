@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "kind": "scoped-product-qa-observations",
+  "date": "2026-09-08",
+  "timezone": "Asia/Seoul",
+  "reviewer": "/root",
+  "pack": "altool-company-ui",
+  "release": "1.0.0-qa.8",
+  "packLockPath": "designs/assets/pack.lock.json",
+  "packLockSha256": "a2ece45b70705d874f2a05c9c8230fda9b0351c8720f7fe8b8395cd4f9a67beb",
+  "sourceReviewPath": "designs/assets/ui-kit/internal/source-review.json",
+  "sourceReviewSha256": "6245300b5c2301cbd491ccc34a0af5bb2202b65d2fddce6137b32040db1b8776",
+  "reportPath": "designs/assets/ui-kit/internal/QA8-VERIFICATION.md",
+  "reportSha256": "28e9c73b7f1661b082bcc764ae33326c3994706c5ab33c84007035bfce550a04",
+  "consumerSha256": {
+    "designs/assets/runtime/demo.mjs": "c666d19aa82e3363bd940679e06b0c2de257c508b4b8e28951aa9ec935be9f0b",
+    "designs/assets/runtime/demo.html": "ab8610c8d67507101d42e89999a22816a594c7edd00dfc24c09c36644c0575f0",
+    "designs/assets/runtime/demo.css": "fcdf8a03fe8618bb61b27e18247a74cf7408d565ed524cfb82cb15937cf889b4",
+    "designs/assets/preview.js": "c4f916c7031c1f020a1b2a7ad0a0b4a0489bb51ca7775ad54fd95f6e195ce06e",
+    "designs/assets/preview.css": "9486ad3f851cbc2b054d6053101d9616e8b3a92a2c54b976d7f3b65effe3e671",
+    "designs/assets/index.html": "be1fd862ea16722ee45a8e09242706a2f67642215ff6842e060f84c2db45a507"
+  },
+  "browser": {
+    "surface": "Codex in-app browser",
+    "origins": ["http://127.0.0.1:48765", "http://localhost:48765"],
+    "scope": "실제 조작·기대 결과는 reportPath의 영역별 관찰 표에 한정한다. 모든 변형의 모든 상태를 실행한 기록이 아니다.",
+    "observedViewportWidths": [320, 360, 390, 600, 601, 768, 888, 1024, 1025, 1440],
+    "viewportScope": "전체 폭 목록은 배치 및 탐색기 관찰의 합집합이다. 각 UI가 모든 폭에서 통과했다는 뜻이 아니다.",
+    "viewportOverrideRestored": true
+  },
+  "tests": [
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_*.py'",
+      "passed": 128,
+      "failed": 0
+    },
+    {
+      "command": "node --test tests/*.cjs tests/test_company_runtime.mjs",
+      "passed": 123,
+      "failed": 0
+    }
+  ],
+  "sourceVisualReview": {"reviewedPages": 988, "missingPages": 0, "duplicatePages": 0, "linkedRenderHashesVerified": true},
+  "boundaries": [
+    "제품 자산 제작 및 대표 동작 QA이며 고객 디자인 완료·Altool run/Step Check PASS가 아니다.",
+    "설치용 standards/design.md의 TBD와 과거 QA6 asset-usage 기록은 변경하지 않는다.",
+    "320개 허용 변형의 모든 상태·브라우저·보조기술·실제 회사 연동에 대한 전수 인증이 아니다.",
+    "정부 인증 또는 Claude 외부 검수 결과가 아니다."
+  ]
+}

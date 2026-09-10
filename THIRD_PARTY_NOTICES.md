@@ -44,6 +44,21 @@ licenses, terms, or public-use policies.
   explain the setup/deployment workflow and are not relicensed as standalone
   brand assets.
 
+## Bundled YAML runtime
+
+- PyYAML 6.0.3 (MIT): [bundled runtime/version details](altool/vendor/README.md),
+  [original license](altool/vendor/pyyaml/LICENSE),
+  [pinned source manifest](altool/vendor/pyyaml-manifest.json).
+
+## Company UI reference kit and dependencies
+
+- KRDS kit 1.1.0, pinned commit `d6bb184c823e4757f05807ea4646a23e3133b6e6`:
+  [canonical attribution and recorded KRDS reuse conditions](designs/assets/ui-kit/internal/ATTRIBUTION.md).
+- Pretendard GOV: [OFL notice](designs/assets/ui-kit/internal/licenses/Pretendard-OFL.txt).
+- Swiper 11.0.6: [MIT notice](designs/assets/ui-kit/internal/licenses/Swiper-MIT.txt).
+- These entries index retained notices; they are not a new legal assessment or
+  a replacement for the canonical terms and attribution above.
+
 ## External product names
 
 GitHub, Vercel, Neon, Codex, OpenAI, Next.js, React, and other product or

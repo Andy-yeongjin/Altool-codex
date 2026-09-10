@@ -1,0 +1,877 @@
+{
+  "version": 1,
+  "root": "designs/assets/krds-2024",
+  "items": [
+    {
+      "id": "krds-p0686",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#visit",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "방문은 정보 탐색→확인→이동이다. 정책·기관·내비게이션·캠페인·긴급 알림·연락처를 목적에 맞게 선택한다.",
+        "실제 회사 콘텐츠·사용자 조사·정보 구조 확정"
+      ],
+      "contractId": "krds-p0686",
+      "sourcePages": [
+        686,
+        688
+      ],
+      "additionalRoute": "patterns/services/variants.html#home"
+    },
+    {
+      "id": "krds-p0689",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#visit",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "목적별 일관된 구획, 시급한 정보의 우선 인지, 이용자 데이터 기반 순위, 개인화 가능성, 정확한 명칭·최신성·외부 이동 표시를 점검한다.",
+        "실제 사용자 분석·개인화 권한·긴급 공지 운영"
+      ],
+      "contractId": "krds-p0689",
+      "sourcePages": [
+        689,
+        701
+      ],
+      "additionalRoute": "patterns/services/variants.html#home"
+    },
+    {
+      "id": "krds-p0702",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "통합 검색/부분 검색은 데이터 규모와 맥락에 따라 선택한다. 작은 단일 화면에 통합 검색을 무조건 추가하지 않는다.",
+        "대규모 검색 엔진, 외부 연계, 운영 검색 품질 평가"
+      ],
+      "contractId": "krds-p0702",
+      "sourcePages": [
+        702,
+        706
+      ],
+      "additionalRoute": "patterns/services/variants.html#search"
+    },
+    {
+      "id": "krds-p0707",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "모든 화면에서 일관된 헤더 우측 검색 수단과 명확한 레이블을 제공한다. 부분 검색은 목록 문맥에 배치한다.",
+        "네이티브 모바일 플랫폼별 탐색 통합"
+      ],
+      "contractId": "krds-p0707",
+      "sourcePages": [
+        707,
+        715
+      ]
+    },
+    {
+      "id": "krds-p0716",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "검색어 입력, 전체 범위, 삭제, 접근 가능한 실시간 도움을 제공한다. 추천은 ↓ 진입·↑↓ 순환·Enter 실행·Escape 닫기/초점 복귀를 지원한다.",
+        "실시간 서버 자동완성/사용자별 장기 검색 기록",
+        "추천 목록의 실제 스크린 리더 발표 검증"
+      ],
+      "contractId": "krds-p0716",
+      "sourcePages": [
+        716,
+        731
+      ]
+    },
+    {
+      "id": "krds-p0732",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "입력·조건을 유지한 채 로딩·전체 및 주제별 결과 수·관련도·0건 대안을 표시한다. 결과 정확성은 운영 데이터로 정기 확인한다.",
+        "운영 검색 정확성·성능·실제 사전·확률 기반 랭킹"
+      ],
+      "contractId": "krds-p0732",
+      "sourcePages": [
+        732,
+        746
+      ],
+      "additionalRoute": "patterns/services/variants.html#search"
+    },
+    {
+      "id": "krds-p0747",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "기본/복합/고급 검색은 메타데이터 복잡성과 조회 비용에 맞춰 선택한다. 기간·분류·정렬 순서, 전체 범위, 적용 상태, live-region을 제공한다.",
+        "대량 조회 최적화와 서버 필터 검증"
+      ],
+      "contractId": "krds-p0747",
+      "sourcePages": [
+        747,
+        758
+      ],
+      "additionalRoute": "patterns/services/variants.html#search"
+    },
+    {
+      "id": "krds-p0759",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/sample-policy.txt",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "주제 분류는 7개 이하, 전체가 먼저다. 전체 결과는 주제별 덩어리 대신 관련도 목록으로 구성하며 제목·설명·분류·일치어와 기본 10개 결과를 제공한다.",
+        "실제 사진·영상·검색 데이터 공급과 저작권 확인"
+      ],
+      "contractId": "krds-p0759",
+      "sourcePages": [
+        759,
+        770
+      ],
+      "additionalRoute": "patterns/services/variants.html#search"
+    },
+    {
+      "id": "krds-p0771",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "재검색 중 필터가 사라지거나 암묵적으로 초기화되지 않도록 한다. 조건 일괄 해제 수단을 제공한다.",
+        "새 브라우저 세션을 넘는 검색 복원"
+      ],
+      "contractId": "krds-p0771",
+      "sourcePages": [
+        771,
+        776
+      ]
+    },
+    {
+      "id": "krds-p0777",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json"
+      ],
+      "route": "patterns/services/index.html#search",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "검색 성공·실패 모두 검색을 벗어나 메뉴나 다른 탐색 수단에 접근할 수 있어야 한다."
+      ],
+      "contractId": "krds-p0777",
+      "sourcePages": [
+        777,
+        781
+      ]
+    },
+    {
+      "id": "krds-p0782",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#login",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "지식·소유·생체·다중 요소 인증을 보안 요구에 따라 선택한다. UI만으로 신원/권한을 확인한 것으로 취급하지 않는다.",
+        "모든 실제 인증 프로토콜·전자서명·서버 권한 검증"
+      ],
+      "contractId": "krds-p0782",
+      "sourcePages": [
+        782,
+        784
+      ],
+      "additionalRoute": "patterns/services/variants.html#auth"
+    },
+    {
+      "id": "krds-p0785",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json"
+      ],
+      "route": "patterns/services/index.html#login",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "일관된 로그인 링크는 항상 로그인 시작 화면에 연결한다. 작은 화면에서도 인지 가능하게 제공한다."
+      ],
+      "contractId": "krds-p0785",
+      "sourcePages": [
+        785,
+        792
+      ]
+    },
+    {
+      "id": "krds-p0793",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#visit",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "필요한 작업에서만 로그인 안내한다. 기본/추천/제안은 목적에 따라 구분하며 모달에서 이점·맥락·로그인 안 함 선택을 유지한다.",
+        "실제 기능별 권한·인증 방식별 절차 확정"
+      ],
+      "contractId": "krds-p0793",
+      "sourcePages": [
+        793,
+        802
+      ],
+      "additionalRoute": "patterns/services/variants.html#auth"
+    },
+    {
+      "id": "krds-p0803",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#login",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "방식 수·주체·권한·빈도에 따라 목록/탭, 단일/단계/집중형을 선택한다. 같은 수준 방식은 비교 가능한 목록으로 제공하고 이용 범위 차이·도움을 인접하게 안내한다.",
+        "실제 공급자 인증·권한·운영 이용데이터 기반 추천"
+      ],
+      "contractId": "krds-p0803",
+      "sourcePages": [
+        803,
+        818
+      ],
+      "additionalRoute": "patterns/services/variants.html#auth"
+    },
+    {
+      "id": "krds-p0819",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#login/entry",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "명확한 입력 형식·비밀번호 표시·붙여넣기·방식 기억·계정 복구·인라인 오류·자동완성과 논리 초점을 제공한다. 실제 보안 오류는 계정 유출 위험도 함께 고려한다.",
+        "실계정 복구·비밀번호 변경·서버 오류·비밀번호 관리자 E2E"
+      ],
+      "contractId": "krds-p0819",
+      "sourcePages": [
+        819,
+        831
+      ],
+      "additionalRoute": "patterns/services/variants.html#auth"
+    },
+    {
+      "id": "krds-p0832",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#login/complete",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "로그인 상태를 명확히 표시하고 진입 원인에 맞는 이전 과업/대상으로 연결한다. 완료 문서 초점은 시작에 둔다.",
+        "실제 SSO 외부 리디렉션·보호 기능 서버 인증"
+      ],
+      "contractId": "krds-p0832",
+      "sourcePages": [
+        832,
+        838
+      ],
+      "additionalRoute": "patterns/services/variants.html#auth"
+    },
+    {
+      "id": "krds-p0839",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#login/service",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "시간 제한을 사전 안내하고 만료 최소20초 전에 모달로 안내한다. 연장/로그아웃을 제공하고 최소10회 연장을 허용한다. 아무 키 연장 방안은 고려 사항이다.",
+        "서버 세션·다중 탭 동기화·백그라운드 타이머 검증"
+      ],
+      "contractId": "krds-p0839",
+      "sourcePages": [
+        839,
+        847
+      ],
+      "additionalRoute": "patterns/services/variants.html#auth"
+    },
+    {
+      "id": "krds-p0848",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json"
+      ],
+      "route": "patterns/services/index.html#login/logout",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "자발적 로그아웃은 피드백 후 홈, 시간 만료는 사유·다시 로그인·홈을 갖는 별도 화면으로 연결한다.",
+        "실제 세션/토큰 폐기와 보호 데이터 캐시 정리"
+      ],
+      "contractId": "krds-p0848",
+      "sourcePages": [
+        848,
+        857
+      ]
+    },
+    {
+      "id": "krds-p0858",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "제출/조회/발급/예약의 공통 흐름을 서비스 특성에 맞게 구성한다. 모든 서비스에 동일한 법적 동의·인증·확인 단계를 강제하지 않는다.",
+        "실제 도메인 데이터·재고·서명·API"
+      ],
+      "contractId": "krds-p0858",
+      "sourcePages": [
+        858,
+        860
+      ],
+      "additionalRoute": "patterns/services/variants.html#services/transaction"
+    },
+    {
+      "id": "krds-p0861",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "상시 서비스는 가나다순, 한시 서비스는 신청 가능 우선 등 적절히 정렬한다. 공식명은 자르지 않고 상태/기한/분류와 직접 신청 수단을 제공한다.",
+        "실제 접수 상태·기간·외부 업무 채널 연결"
+      ],
+      "contractId": "krds-p0861",
+      "sourcePages": [
+        861,
+        874
+      ],
+      "additionalRoute": "patterns/services/variants.html#services"
+    },
+    {
+      "id": "krds-p0875",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application/info",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "기본 정보는 숨기지 않고 기간·채널·제약·서류·절차·소요 시간·문의·갱신을 확인하게 한다. 탭이 필요한 복잡한 경우 기본 정보를 첫 탭에 둔다.",
+        "실제 채널·서식·정책·문의처의 정확성·최신성 운영"
+      ],
+      "contractId": "krds-p0875",
+      "sourcePages": [
+        875,
+        893
+      ],
+      "additionalRoute": "patterns/services/variants.html#services/detail/S1"
+    },
+    {
+      "id": "krds-p0894",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application/eligibility",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "자격·취소/수정·인증·서류를 작성 전에 확인한다. 간단한 서비스의 안내 섹션과 복잡한 서비스의 별도 단계는 조건에 맞게 선택한다.",
+        "실제 법적 자격·기관별 중도 제한 판정"
+      ],
+      "contractId": "krds-p0894",
+      "sourcePages": [
+        894,
+        902
+      ],
+      "additionalRoute": "patterns/services/variants.html#services/transaction"
+    },
+    {
+      "id": "krds-p0903",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application/form",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "입력은 탭/아코디언에 숨기지 않는다. 의존 항목은 선행 배치하고 변경을 알린다. 긴 과정의 임시 저장, 인접 설명·도움·명확한 초기화·현재 단계 접근성을 제공한다.",
+        "행정정보 API·적법한 동의문·파일 보안·저장·서버 임시저장"
+      ],
+      "contractId": "krds-p0903",
+      "sourcePages": [
+        903,
+        917
+      ],
+      "additionalRoute": "patterns/services/variants.html#services/transaction"
+    },
+    {
+      "id": "krds-p0918",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application/review",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "되돌릴 수 없는 신청은 확정 전에 핵심값과 취소/수정 불가를 알린다. 반복 발급 등 예외는 별도 판단한다. 확정과 돌아가기 모두 제공한다.",
+        "실제 트랜잭션·중복 접수 방지·전자서명"
+      ],
+      "contractId": "krds-p0918",
+      "sourcePages": [
+        918,
+        925
+      ],
+      "additionalRoute": "patterns/services/variants.html#services/transaction"
+    },
+    {
+      "id": "krds-p0926",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application/complete",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "신청 완료는 명확한 별도 단계로 제공한다. 직전 확인 단계가 있다면 요약 반복은 생략할 수 있다. 내역/다시 신청/관련 서비스 연결을 제공한다.",
+        "실제 서버 접수·발급 증명·메시지 통지"
+      ],
+      "contractId": "krds-p0926",
+      "sourcePages": [
+        926,
+        933
+      ],
+      "additionalRoute": "patterns/services/variants.html#services/transaction"
+    },
+    {
+      "id": "krds-p0934",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#application/history",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "익숙한 내역 명칭, 모든 입력값·상태 이력·처리 단계·정렬·일괄 선택·명확한 취소와 식별 가능한 체크박스 레이블을 제공한다.",
+        "서버 권한·실제 심사·법적 보존기간·공식 발급문서"
+      ],
+      "contractId": "krds-p0934",
+      "sourcePages": [
+        934,
+        947
+      ],
+      "additionalRoute": "patterns/services/variants.html#history"
+    },
+    {
+      "id": "krds-p0948",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/sample-policy.txt"
+      ],
+      "route": "patterns/services/index.html#policy",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "정책 탐색→상세 정보 이해→관련 자료 참고→추가 채널 이동을 연결한다. 실제 정책/법률 내용의 정확성과 최신성은 운영 책임이다.",
+        "실제 정부 정책/법률/기관 채널 연계"
+      ],
+      "contractId": "krds-p0948",
+      "sourcePages": [
+        948,
+        950
+      ]
+    },
+    {
+      "id": "krds-p0951",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/sample-policy.txt"
+      ],
+      "route": "patterns/services/index.html#policy",
+      "implementation": "interactive-local-prototype-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "전체 정책 목록, 대상·분야 분류, 필터·검색, 신규/중요 표시, 의미가 구분되는 저장 버튼을 제공한다.",
+        "실계정 관심 정책 영속 저장·운영 신규/중요 판정"
+      ],
+      "contractId": "krds-p0951",
+      "sourcePages": [
+        951,
+        959
+      ]
+    },
+    {
+      "id": "krds-p0960",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/sample-policy.txt",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#policy/detail/1",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "정책명을 제목으로, 쉽고 최신의 상세 내용과 적절한 시각 정보를 제공한다. 빈 섹션은 숨기며 부가 정보·실제 목적지 링크를 제공한다.",
+        "실제 정책 콘텐츠·담당자 연락처·사진·영상·변경이력 공급"
+      ],
+      "contractId": "krds-p0960",
+      "sourcePages": [
+        960,
+        969
+      ],
+      "additionalRoute": "patterns/services/variants.html#publications"
+    },
+    {
+      "id": "krds-p0970",
+      "assets": [
+        "patterns/services/index.html",
+        "patterns/services/services.css",
+        "patterns/services/model.js",
+        "patterns/services/services.js",
+        "patterns/services/contracts.json",
+        "patterns/services/checklist.json",
+        "patterns/services/sample-policy.txt",
+        "patterns/services/variants.html",
+        "patterns/services/variants.css",
+        "patterns/services/variants-model.js",
+        "patterns/services/variants.js",
+        "patterns/services/variants-manifest.json",
+        "patterns/services/company-assets.mjs",
+        "patterns/services/process-illustration.svg"
+      ],
+      "route": "patterns/services/index.html#policy/resources",
+      "implementation": "interactive-reusable-ui-variants-and-source-contract",
+      "verification": "automated-model-and-static-checks; browser-pending",
+      "notes": [
+        "자료는 분류·기간·유형에 맞게 찾을 수 있어야 한다. 신규/변경 여부와 정기 간행물의 발행 주기·중단을 안내한다.",
+        "실제 발행 일정·자료 갱신·운영 담당자 데이터",
+        "원문 PDF p977–978은 부록·용어집 전환 페이지로 서비스 동작 자산 아님"
+      ],
+      "contractId": "krds-p0970",
+      "sourcePages": [
+        970,
+        978
+      ],
+      "additionalRoute": "patterns/services/variants.html#publications"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>carousel · KRDS 참고 예제</title>
+<link rel="stylesheet" href="../upstream/resources/css/component/output.css">
+<link rel="stylesheet" href="../upstream/resources/css/common/common.css">
+<link rel="stylesheet" href="../upstream/resources/css/plugin/swiper-bundle.min.css">
+<script src="../upstream/resources/js/plugin/swiper-bundle.min.js"></script>
+<style>body{padding:24px}.altool-demo-notice{display:block;background:#fff3cd;color:#473500;padding:12px;font:14px/1.6 system-ui;margin-bottom:24px}:focus-visible{outline:3px solid #005fcc;outline-offset:3px}</style>
+</head><body><aside class="altool-demo-notice">KRDS 공식 키트 1.1.0 참고 예제 · 실제 정부 서비스가 아닙니다. 로그인·신청·저장 등의 서버 동작은 연결하지 않았습니다. 2024 PDF와의 개별 준수 검증은 별도입니다.</aside>
+<!-- carousel -->
+<!--
+ 	해당 컴포넌트 사용 시 페이지에
+ 	/resources/css/plugin/swiper-bundle.min.css
+ 	/resources/js/plugin/swiper-bundle.min.js
+ 	를 추가 필요
+ -->
+<!-- visual banner -->
+<div class="main-vban-wrap bg">
+	<div class="inner">
+		<div class="vb-swiper">
+			<div class="swiper">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="swiper-button-prev">
+				<span class="sr-only">이전</span>
+			</button>
+			<button type="button" class="swiper-button-next">
+				<span class="sr-only">다음</span>
+			</button>
+			<div class="swiper-indicator text-center">
+				<div class="swiper-pagination"></div>
+				<a href="#" class="swiper-button-more">
+					<span class="sr-only">더 보기</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //visual banner -->
+
+<script>
+	//비주얼 배너
+	const vbSwiper = new Swiper('.vb-swiper .swiper', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 400,
+		loop: true,
+		navigation: {
+			nextEl: '.vb-swiper .swiper-button-next',
+			prevEl: '.vb-swiper .swiper-button-prev',
+		},
+		pagination: {
+			el: ".vb-swiper .swiper-pagination",
+			clickable: true,
+		},
+	});
+</script>
+<!-- //carousel -->
+<script src="../upstream/resources/js/component/ui-script.js"></script>
+</body></html>

@@ -23,9 +23,9 @@
 - 기능명은 `.altool/state/status.json`의 `currentFeature`에서 읽는다. `currentFeature`가 없으면 `$altool plan {기능 설명}` 먼저 실행을 안내하고 중단한다.
 - 다음 파일을 가능한 범위에서 읽는다:
   - `constitution.md`
-  - `designs/claude-design/*.html`
-  - `designs/design.md`
-  - `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}`
+  - `designs/claude-design/**/*.html`
+  - `standards/design.md`
+  - `designs/**/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}`
   - `docs/01-plan/features/{기능명}.plan.md`
   - `docs/02-spec/features/{기능명}.spec.md`
   - `docs/03-analyze/{기능명}.analyze.md`
@@ -36,7 +36,7 @@
 
 ### 2. 서버 준비
 
-1. 기존 로컬 서버가 있으면 우선 사용한다. 기본 후보는 `http://localhost:3000`, `http://localhost:3001`, `http://127.0.0.1:3000`, `http://127.0.0.1:3001`이다.
+1. `altool/steps/_server.md`를 읽고 현재 프로젝트의 실제 URL과 소유권을 확인한다. 고정 포트 후보 목록은 사용하지 않는다.
 2. 서버가 없고 프로젝트에 실행 스크립트가 있으면 현재 환경 규칙에 따라 개발 서버를 시작한다.
    - 이 browser step이 새로 시작한 서버는 `managedServer=true`로 취급하고 PID, 실행 명령, 포트, 시작 시각을 기록한다. 기존에 이미 떠 있던 서버를 사용한 경우는 `managedServer=false`로 기록한다.
    - Windows에서 npm을 직접 백그라운드 실행할 때는 `npm` 대신 `npm.cmd`를 명시한다.
@@ -77,8 +77,8 @@ Playwright fallback 규칙:
 6. desktop과 mobile 375px 이상 반응형
 7. 텍스트 겹침, 잘림, 오버플로, 클릭 불가 영역, 레이아웃 깨짐
 8. 사용자 디자인 입력, 디자인 시스템, constitution.md 디자인 품질 원칙 위반
-   - `designs/claude-design/*.html`이 있으면 최종 화면과 원본 HTML의 구조·밀도·위계·컴포넌트 외형·색상·간격·타이포·상태 표현을 먼저 대조한다.
-   - `designs/design.md`의 Screen Recipes와 Capture-to-Implementation Map을 최종 화면과 대조한다.
+   - `designs/claude-design/**/*.html`이 있으면 최종 화면과 원본 HTML의 구조·밀도·위계·컴포넌트 외형·색상·간격·타이포·상태 표현을 먼저 대조한다.
+   - `standards/design.md`의 Screen Recipes와 Capture-to-Implementation Map을 최종 화면과 대조한다.
    - 참조 브랜드·문구·이미지는 복제하지 않되, research가 추출한 구조·비례·밀도·섹션 순서·컴포넌트 외형 계약이 구현됐는지 확인한다.
    - 캡처 기반 recipe가 있는데도 일반 split SaaS hero, floating trust card 묶음, 과한 gradient overlay, glass panel, 추상 장식, 카드 그림자 남발, reference보다 느슨한 빈 화면으로 회귀하면 디자인 갭으로 기록하고 수정한다.
 9. 콘솔 오류와 네트워크 실패
@@ -89,6 +89,8 @@ Playwright fallback 규칙:
 
 검증 결과에는 방문 URL, 수행한 사용자 행동, 기대 결과, 실제 결과, 증거(스크린샷 경로 또는 테스트 로그)를 남긴다.
 
+UI-03 실측은 `altool/standards.md`의 **디자인 실측 완료 계약**을 따른다. Spec의 페이지·상태·viewport에서 측정해 원시 관찰 JSON을 `ui.measurements`로 연결하고 `visual.ui_contracts`를 통과시킨다. 검사기가 기대값을 재비교하므로 done 설명·캡처만으로 대체하지 않는다. 충돌은 원인을 수정하고 같은 계약으로 재검증한다. 계약의 진짜 변경이면 원천과 Spec을 먼저 갱신하며 실패 화면에 맞춰 기대값을 낮추지 않는다.
+
 CSS custom property 검증 규칙:
 
 - CSS 파일이 있는 UI 프로젝트는 browser 완료 전 `python3 altool/scripts/check.py css-vars --root .`를 실행한다.
@@ -98,13 +100,13 @@ CSS custom property 검증 규칙:
 
 자동 접근성 게이트:
 
-- CSS 파일이 있으면 `python3 altool/scripts/check.py contrast --root .`를 통과해야 한다. 명시적 조합이 4.5:1 미만이면 색 토큰과 `designs/design.md`를 함께 수정한다.
+- CSS 파일이 있으면 `python3 altool/scripts/check.py contrast --root .`를 통과해야 한다. 명시적 조합이 4.5:1 미만이면 색 토큰과 `standards/design.md`를 함께 수정한다.
 - Spec에 `role=status` 또는 `aria-live` 계약이 있으면 `python3 altool/scripts/check.py a11y-contracts --root .`를 통과해야 한다. 보이는 완료 문구만 검사하지 말고 live-region의 실제 텍스트 또는 표시 상태를 자동 테스트에서 assertion한다.
 - 해당 계약이 없을 때만 `accessibility.live_region=skipped(no live-region contract)`로 남긴다.
 
 참조 캡처 대조 규칙:
 
-- `designs/claude-design/*.html`이 있으면 원본 HTML 경로를 최우선 참조로 수집한다. 이어서 `designs/design.md`의 Reference Source Map, Screen Recipes, Capture-to-Implementation Map에서 참조 캡처 경로(`docs/00-research/assets/{Research ID}/C-__.png`)를 수집한다.
+- `designs/claude-design/**/*.html`이 있으면 원본 HTML 경로를 최우선 참조로 수집한다. 이어서 `standards/design.md`의 Reference Source Map, Screen Recipes, Capture-to-Implementation Map에서 참조 캡처 경로(`docs/00-research/assets/{Research ID}/C-__.png`)를 수집한다.
 - 최종 구현 화면도 desktop과 mobile 주요 상태별로 스크린샷을 저장한다. 권장 경로는 `docs/03-analyze/assets/{기능명}/browser-final-*.png`다.
 - browser 검증은 참조 캡처와 최종 화면 스크린샷을 나란히 대조한다. 픽셀 복제나 브랜드 동일성을 목표로 하지 않고, 구조·비례·밀도·섹션 순서·컴포넌트 외형·미디어 사용·타이포 위계가 Screen Recipe와 Capture Map을 따르는지 평가한다.
 - 참조 캡처가 있는데 최종 스크린샷이 없거나, 최종 스크린샷이 있는데 참조 캡처와의 대조표가 없으면 browser step을 완료하지 않는다.
@@ -156,7 +158,7 @@ CSS custom property 검증 규칙:
 
 | 항목 | 보고 기준 |
 | --- | --- |
-| `visual.reference_comparison` | 참조 캡처 경로와 최종 화면 스크린샷 경로, Screen Recipe/Capture Map 기준 대조 결과 |
+| `visual.reference_comparison` | 참조/최종 캡처, Screen Recipe/Capture Map 대조와 UI-03 실제 측정 결과(`standards/tooling/README.md#ui`). 기능 클릭 통과와 표시 준수를 구분 |
 | `visual.css_custom_properties` | `python3 altool/scripts/check.py css-vars --root .` 통과 결과 또는 `skipped(no css files)` |
 | `visual.contrast` | `python3 altool/scripts/check.py contrast --root .` 통과 결과 또는 `skipped(no css files)`. `ambiguousRules`는 테마/gradient를 실제 화면에서 대조한 증거와 함께 기록 |
 | `accessibility.live_region` | `python3 altool/scripts/check.py a11y-contracts --root .` 통과 결과 또는 `skipped(no live-region contract)` |

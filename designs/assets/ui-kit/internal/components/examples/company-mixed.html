@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><title>회사 공통 CSS 혼합 검증</title><link rel="stylesheet" href="../../foundations/company-adapter.css"><link rel="stylesheet" href="../runtime.css"><script src="../messages.js" defer></script><script src="../runtime.js" defer></script><style>main{max-width:64rem;margin:auto;padding:1.5rem}.mixed-panel{padding:1rem;border:1px solid var(--krds24-gray-40);margin:1rem 0}</style></head><body><main><h1>공식 조각 + authored UI 혼합 검증</h1><p>샘플 데이터 · adapter와 authored runtime을 함께 사용합니다. 원본 common/output CSS는 로드하지 않습니다.</p><section class="mixed-panel"><h2>공식 버튼</h2><button id="mixed-upstream-button" type="button" class="krds-btn">공식 버튼</button><p id="mixed-official-body">기본 본문 글자 크기 검증</p></section><section class="mixed-panel altool-ui krds-2024-tokens"><h2>작성된 체크박스</h2>
+<fieldset data-ui="checkbox-group"><legend>안내받을 항목</legend>
+  <label><input type="checkbox" data-select-all>전체 선택</label>
+  <label><input type="checkbox" data-select-item value="notices" checked>공지사항</label>
+  <label><input type="checkbox" data-select-item value="updates">업데이트 소식</label>
+  <label><input type="checkbox" data-select-item value="events">행사 소식</label>
+  <label><input type="checkbox" data-select-item value="unavailable" disabled>현재 선택할 수 없는 항목</label>
+  <p role="status" data-selection-status></p>
+</fieldset><p id="mixed-authored-body">작성된 UI 글자 크기 검증</p></section></main></body></html>
