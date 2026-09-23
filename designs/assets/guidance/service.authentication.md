@@ -14,15 +14,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G07: 세션 제한과 만료를 사전에 알리고 가능한 연장·로그아웃을 제공한다. 경고 시간·연장 횟수는 회사 보안 계약과 함께 확정하며 KRDS 참고 수치를 서버 보안 정책 대신 사용하지 않는다.
 - G08: 자발적 로그아웃은 피드백 후 홈, 시간 만료는 사유·다시 로그인·홈을 갖는 별도 화면으로 연결한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/reference/krds-p0782.md](../ui-kit/internal/reference/krds-p0782.md)
-- [ui-kit/internal/reference/krds-p0785.md](../ui-kit/internal/reference/krds-p0785.md)
-- [ui-kit/internal/reference/krds-p0793.md](../ui-kit/internal/reference/krds-p0793.md)
-- [ui-kit/internal/reference/krds-p0803.md](../ui-kit/internal/reference/krds-p0803.md)
-- [ui-kit/internal/reference/krds-p0819.md](../ui-kit/internal/reference/krds-p0819.md)
-- [ui-kit/internal/reference/krds-p0832.md](../ui-kit/internal/reference/krds-p0832.md)
-- [ui-kit/internal/reference/krds-p0839.md](../ui-kit/internal/reference/krds-p0839.md)
-- [ui-kit/internal/reference/krds-p0848.md](../ui-kit/internal/reference/krds-p0848.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

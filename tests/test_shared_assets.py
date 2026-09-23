@@ -1,6 +1,5 @@
 """Integrity and installation checks, not a KRDS accessibility certificate."""
 import contextlib
-import hashlib
 import io
 import importlib.util
 import json
@@ -19,20 +18,23 @@ import standards
 
 
 class SharedAssetsTests(unittest.TestCase):
-    def test_catalog_builder_rejects_upstream_drift_without_reblessing(self):
+    def test_catalog_builder_rejects_retired_assets_without_reblessing(self):
         spec = importlib.util.spec_from_file_location('asset_builder', ROOT / 'scripts/build_asset_catalog.py')
         builder = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(builder)
         with tempfile.TemporaryDirectory() as directory:
-            clone = Path(directory) / 'ui-kit/internal'
-            shutil.copytree(KRDS / 'upstream', clone / 'upstream')
-            shutil.copy2(KRDS / 'upstream-manifest.json', clone / 'upstream-manifest.json')
-            before = (clone / 'upstream-manifest.json').read_bytes()
-            (clone / 'upstream/README.md').write_text('changed source')
-            builder.KRDS, builder.UPSTREAM = clone, clone / 'upstream'
-            with self.assertRaisesRegex(ValueError, 'Pinned upstream changed'):
+            builder.ROOT = Path(directory)
+            builder.BASE = builder.ROOT / 'designs/assets'
+            builder.KIT = builder.BASE / 'ui-kit/internal'
+            shutil.copytree(BASE, builder.BASE)
+            before = {name: (builder.BASE / name).read_bytes() for name in ('catalog.json', 'pack.lock.json')}
+            retired = builder.KIT / 'upstream/obsolete.css'
+            retired.parent.mkdir(parents=True)
+            retired.write_text('.old {color:red}')
+            with self.assertRaisesRegex(ValueError, 'Retired'):
                 builder.main()
-            self.assertEqual((clone / 'upstream-manifest.json').read_bytes(), before)
+            for name, content in before.items():
+                self.assertEqual((builder.BASE / name).read_bytes(), content)
 
     def test_catalog_unique_and_internal_files_exist(self):
         records = json.loads((BASE / 'catalog.json').read_text())['assets']
@@ -40,38 +42,19 @@ class SharedAssetsTests(unittest.TestCase):
         for record in records:
             for key in ('path', 'preview'):
                 if key in record:
-                    path = (BASE / record[key]).resolve()
+                    path = (BASE / record[key].split('#', 1)[0]).resolve()
                     self.assertTrue(path.is_relative_to(BASE), record)
                     self.assertTrue(path.is_file(), record)
         indexed = {record['path'] for record in records}
         for svg in BASE.rglob('*.svg'):
             self.assertIn(str(svg.relative_to(BASE)), indexed, svg)
 
-    def test_pdf_pages_and_toc_have_no_gap_or_overlap(self):
-        coverage = json.loads((KRDS / 'coverage.json').read_text())
-        self.assertEqual(coverage['source']['pageCount'], 988)
-        self.assertEqual(coverage['source']['tocCount'], 95)
-        self.assertEqual(len(coverage['items']), 96)
-        self.assertEqual([p['page'] for p in coverage['pages']], list(range(1, 989)))
-        claimed = []
-        for item in coverage['items']:
-            self.assertTrue(item['assets'], item['id'])
-            text = (KRDS / item['reference']).read_text()
-            for page in range(item['startPage'], item['endPage'] + 1):
-                claimed.append(page)
-                self.assertIn(f'## PDF p.{page}\n', text)
-            for asset in item['assets']:
-                self.assertTrue((BASE / asset).is_file(), asset)
-        self.assertEqual(claimed, list(range(1, 989)))
-        self.assertEqual(sum(i['category'] == 'components' for i in coverage['items']), 37)
-
-    def test_upstream_remains_exact_pinned_source(self):
-        manifest = json.loads((KRDS / 'upstream-manifest.json').read_text())
-        self.assertEqual(manifest['commit'], 'd6bb184c823e4757f05807ea4646a23e3133b6e6')
-        self.assertEqual(len(manifest['sha256']), 245)
-        actual = {str(p.relative_to(KRDS / 'upstream')): hashlib.sha256(p.read_bytes()).hexdigest()
-                  for p in (KRDS / 'upstream').rglob('*') if p.is_file()}
-        self.assertEqual(actual, manifest['sha256'])
+    def test_retired_execution_and_source_archives_are_not_distributed(self):
+        for relative in ['upstream', 'components', 'foundations', 'patterns', 'reference',
+                         'coverage.json', 'source-review.json', 'QA8-OBSERVATIONS.json',
+                         'QA8-VERIFICATION.md', 'VERIFICATION.md']:
+            self.assertFalse((KRDS / relative).exists(), relative)
+        self.assertTrue((KRDS / 'company/dist/company.css').is_file())
 
     def test_svg_assets_are_static_well_formed(self):
         for path in BASE.rglob('*.svg'):
@@ -84,13 +67,13 @@ class SharedAssetsTests(unittest.TestCase):
                     self.assertFalse(name.lower().startswith('on'), path)
                     if name.rsplit('}', 1)[-1] == 'href':
                         self.assertTrue(value.startswith('#'), (path, value))
-        self.assertEqual(len(list((BASE / 'brand').glob('*.svg'))), 3)
+        self.assertEqual({p.name for p in (BASE / 'brand').glob('*.svg')}, {'altool-wordmark-inverse.svg'})
         self.assertEqual(len(list((BASE / 'images').glob('*.svg'))), 8)
 
     def test_messages_have_stable_ids_and_plain_text(self):
         data = json.loads((BASE / 'messages/ko.json').read_text())
         self.assertEqual(data['locale'], 'ko-KR')
-        self.assertEqual(len(data['messages']), 39)
+        self.assertEqual(len(data['messages']), 46)
         self.assertEqual(data['messages']['file.empty']['severity'], 'error')
         for key, message in data['messages'].items():
             self.assertIn('.', key)
@@ -103,8 +86,8 @@ class SharedAssetsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
             target = Path(directory)
             standards.install(ROOT, target)
-            original = BASE / 'brand/altool-symbol.svg'
-            installed = target / 'designs/assets/brand/altool-symbol.svg'
+            original = BASE / 'brand/altool-wordmark-inverse.svg'
+            installed = target / 'designs/assets/brand/altool-wordmark-inverse.svg'
             self.assertEqual(installed.read_bytes(), original.read_bytes())
             installed.write_text('user-owned replacement')
             catalog = target / 'designs/assets/catalog.json'

@@ -58,6 +58,48 @@ standards:
     source: engineering.md
     sections: [naming, boundaries]
     requires: [glossary]
+  company-ui:
+    profile: base
+    when: [ui-create, ui-change, ui-review, design-source]
+    source: company-ui.md
+    sections: [common]
+    requires: [ui-common]
+    asset_ids: [foundation.company-ui]
+  company-form:
+    profile: base
+    when: [form-ui, upload-ui]
+    source: company-ui.md
+    sections: [form]
+    requires: [company-ui, ui-form]
+    asset_ids: [component.select, component.date-input, component.date-range, component.lookup, component.multiselect, component.file-upload, pattern.form]
+  company-search:
+    profile: base
+    when: [search-ui, list-ui, filter-ui]
+    source: company-ui.md
+    sections: [search]
+    requires: [company-ui, ui-search]
+    asset_ids: [pattern.filter, component.table, component.table-tools, component.pagination, component.filter-presets, component.drawer, pattern.system-state]
+  company-navigation:
+    profile: base
+    when: [navigation-ui, content-ui, help-ui]
+    source: company-ui.md
+    sections: [navigation]
+    requires: [company-ui, ui-content]
+    asset_ids: [component.header, component.side-navigation, component.modal, component.organization-tree, component.tooltip]
+  company-transaction:
+    profile: base
+    when: [application-ui, history-ui]
+    source: company-ui.md
+    sections: [transaction]
+    requires: [company-ui, ui-transaction]
+    asset_ids: [pattern.save-feedback, pattern.history, component.step-indicator]
+  company-dashboard:
+    profile: base
+    when: [dashboard-ui, chart-ui, summary-ui]
+    source: company-ui.md
+    sections: [dashboard]
+    requires: [company-ui]
+    asset_ids: [component.metric, component.bar-chart, component.table, pattern.filter]
   glossary:
     profile: base
     when: [terminology-change]

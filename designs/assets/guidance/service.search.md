@@ -13,14 +13,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G06: 재검색 중 필터가 사라지거나 암묵적으로 초기화되지 않도록 한다. 조건 일괄 해제 수단을 제공한다.
 - G07: 검색 성공·실패 모두 검색을 벗어나 메뉴나 다른 탐색 수단에 접근할 수 있어야 한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/reference/krds-p0707.md](../ui-kit/internal/reference/krds-p0707.md)
-- [ui-kit/internal/reference/krds-p0716.md](../ui-kit/internal/reference/krds-p0716.md)
-- [ui-kit/internal/reference/krds-p0732.md](../ui-kit/internal/reference/krds-p0732.md)
-- [ui-kit/internal/reference/krds-p0747.md](../ui-kit/internal/reference/krds-p0747.md)
-- [ui-kit/internal/reference/krds-p0759.md](../ui-kit/internal/reference/krds-p0759.md)
-- [ui-kit/internal/reference/krds-p0771.md](../ui-kit/internal/reference/krds-p0771.md)
-- [ui-kit/internal/reference/krds-p0777.md](../ui-kit/internal/reference/krds-p0777.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

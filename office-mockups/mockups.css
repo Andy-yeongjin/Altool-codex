@@ -1,0 +1,5 @@
+/* Page composition only. All component appearance belongs to company.css. */
+body { margin:0; }
+.mock-columns { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.ui-table-scroll table { min-width:720px; }
+@media(max-width:760px) { .mock-columns { grid-template-columns:minmax(0,1fr); } }

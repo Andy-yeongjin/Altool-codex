@@ -14,10 +14,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G07: 일괄 선택하면 모두 동의, 해제하면 모두 미동의로 동기화한다. 하나라도 미동의이면 전체 선택을 해제한다.
 - G08: Tab/Shift+Tab 이동, 체크박스 Space, 라디오 기본 키보드 조작을 보존하고 일괄 선택의 초점을 유지한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/patterns/basic/consent.md](../ui-kit/internal/patterns/basic/consent.md)
-- [ui-kit/internal/patterns/basic/extended.md](../ui-kit/internal/patterns/basic/extended.md)
-- [ui-kit/internal/reference/krds-p0590.md](../ui-kit/internal/reference/krds-p0590.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

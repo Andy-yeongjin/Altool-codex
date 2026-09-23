@@ -6,11 +6,9 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 ## 사용·배치·동작
 
 - G01: 같은 분류·순서의 실제 목록 데이터로 도구막대·주요 행동·정렬·필터를 확인한다.
+- 표 변형의 목록 제목은 ui-section-header/ui-section-title로 표 위에 따로 둔다. 표/스크롤 영역의 aria-labelledby를 해당 제목ID와 연결하고 같은 화면에 여러 인스턴스를 넣으면 ID를 각각 고유하게 지정한다. caption은 sr-only로 보존하여 표시 제목을 중복하지 않는다.
 - G02: 행 클릭과 별도 버튼의 키보드 초점, 빈 목록·로딩·오류·모바일 정보를 확인한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0236.md](../ui-kit/internal/components/krds-p0236.md)
-- [ui-kit/internal/reference/krds-p0236.md](../ui-kit/internal/reference/krds-p0236.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

@@ -10,11 +10,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G03: 정책명을 제목으로, 쉽고 최신의 상세 내용과 적절한 시각 정보를 제공한다. 빈 섹션은 숨기며 부가 정보·실제 목적지 링크를 제공한다.
 - G04: 자료는 분류·기간·유형에 맞게 찾을 수 있어야 한다. 신규/변경 여부와 정기 간행물의 발행 주기·중단을 안내한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/reference/krds-p0948.md](../ui-kit/internal/reference/krds-p0948.md)
-- [ui-kit/internal/reference/krds-p0951.md](../ui-kit/internal/reference/krds-p0951.md)
-- [ui-kit/internal/reference/krds-p0960.md](../ui-kit/internal/reference/krds-p0960.md)
-- [ui-kit/internal/reference/krds-p0970.md](../ui-kit/internal/reference/krds-p0970.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

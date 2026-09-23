@@ -13,10 +13,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G06: 정보 아이콘은 의미를 텍스트로 제공한다. 파일 아이콘 링크의 이름은 실제 파일명을 제공한다.
 - G07: 표·목록·아코디언의 구조를 의미 있는 HTML로 제공한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/patterns/basic/extended.md](../ui-kit/internal/patterns/basic/extended.md)
-- [ui-kit/internal/patterns/basic/list.md](../ui-kit/internal/patterns/basic/list.md)
-- [ui-kit/internal/reference/krds-p0597.md](../ui-kit/internal/reference/krds-p0597.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

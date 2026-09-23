@@ -1,0 +1,19 @@
+{
+  "provider": "Altool original",
+  "license": "LICENSE-ALTOOL.txt",
+  "icons": [
+    {"id":"play","label_ko":"재생","keywords":["동영상","자동 재생"],"nodes":[["polygon",{"points":"8 5 19 12 8 19"}]]},
+    {"id":"pause","label_ko":"일시 정지","keywords":["멈춤","자동 재생 중지"],"nodes":[["rect",{"x":6,"y":5,"width":4,"height":14,"rx":1}],["rect",{"x":14,"y":5,"width":4,"height":14,"rx":1}]]},
+    {"id":"stop","label_ko":"재생 종료","keywords":["중지"],"nodes":[["rect",{"x":5,"y":5,"width":14,"height":14,"rx":1}]]},
+    {"id":"volume","label_ko":"음량","keywords":["소리","오디오"],"nodes":[["path",{"d":"M4 9h4l5-4v14l-5-4H4z"}],["path",{"d":"M16 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"}]]},
+    {"id":"globe","label_ko":"언어","keywords":["세계","국가"],"nodes":[["circle",{"cx":12,"cy":12,"r":9}],["ellipse",{"cx":12,"cy":12,"rx":4,"ry":9}],["path",{"d":"M3 12h18M5 6h14M5 18h14"}]]},
+    {"id":"thumbs-up","label_ko":"좋아요","keywords":["만족","도움됨"],"nodes":[["path",{"d":"M8 10l4-7 2 1v6h5a2 2 0 0 1 2 2l-2 7a2 2 0 0 1-2 2H8zM3 10h5v11H3z"}]]},
+    {"id":"zoom-in","label_ko":"확대 보기","keywords":["돋보기","상세 확대"],"nodes":[["circle",{"cx":10,"cy":10,"r":6}],["path",{"d":"M14.5 14.5 21 21M7 10h6M10 7v6"}]]},
+    {"id":"type","label_ko":"글자 크기","keywords":["서체","확대"],"nodes":[["path",{"d":"M3 18 8 5l5 13M5 13h6M15 18l3-8 3 8M16 15h4"}]]},
+    {"id":"toggle-left","label_ko":"사용 안 함","keywords":["스위치","꺼짐"],"nodes":[["rect",{"x":2,"y":6,"width":20,"height":12,"rx":6}],["circle",{"cx":8,"cy":12,"r":3}]]},
+    {"id":"toggle-right","label_ko":"사용함","keywords":["스위치","켜짐"],"nodes":[["rect",{"x":2,"y":6,"width":20,"height":12,"rx":6}],["circle",{"cx":16,"cy":12,"r":3}]]},
+    {"id":"square","label_ko":"선택 안 됨","keywords":["체크박스"],"nodes":[["rect",{"x":4,"y":4,"width":16,"height":16,"rx":2}]]},
+    {"id":"square-check","label_ko":"선택됨","keywords":["체크박스","선택"],"nodes":[["rect",{"x":4,"y":4,"width":16,"height":16,"rx":2}],["path",{"d":"m8 12 3 3 5-6"}]]},
+    {"id":"share","label_ko":"공유","keywords":["전달"],"nodes":[["circle",{"cx":6,"cy":12,"r":3}],["circle",{"cx":18,"cy":5,"r":3}],["circle",{"cx":18,"cy":19,"r":3}],["path",{"d":"m8.5 10.5 7-4M8.5 13.5l7 4"}]]}
+  ]
+}

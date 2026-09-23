@@ -92,7 +92,7 @@
 - [ ] 프로덕션 빌드가 있는 프로젝트면 해당 build 명령 성공
 - [ ] 변경 위험에 해당하는 테스트와 기존 회귀 테스트 통과
 - [ ] 문서 동기화: plan §2.1·§3.1 Status, spec §10.2 체크 갱신
-- [ ] 서버는 직접 실행하지 않고 실행 방법 안내 (start.bat / start.command 또는 npm run dev)
+- [ ] 서버가 필요한 검증은 `altool/steps/_server.md`에 따라 실행하고 실제 UI 지침 증거를 수집했다. `verification`에 URL·소유권, `server.cleanup`에 종료 결과를 기록했다 (서버 불필요 시 근거 기록).
 - [ ] 코드·타입·빌드·테스트·런타임 오류가 있으면 lesson 이벤트 기록 완료 (E-NNNNN 또는 "없음")
 - [ ] `.altool/checks/{기능명}.run.json` 작성 후 `check.py validate` 통과
 

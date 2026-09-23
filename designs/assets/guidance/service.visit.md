@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 방문은 정보 탐색→확인→이동이다. 정책·기관·내비게이션·캠페인·긴급 알림·연락처를 목적에 맞게 선택한다.
 - G02: 목적별 일관된 구획, 시급한 정보의 우선 인지, 이용자 데이터 기반 순위, 개인화 가능성, 정확한 명칭·최신성·외부 이동 표시를 점검한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/reference/krds-p0686.md](../ui-kit/internal/reference/krds-p0686.md)
-- [ui-kit/internal/reference/krds-p0689.md](../ui-kit/internal/reference/krds-p0689.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

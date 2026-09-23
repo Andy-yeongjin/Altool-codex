@@ -1,0 +1,109 @@
+
+/* Shared business compositions v25. Explicit opt-in; preserve approved foundations. */
+.altool-ui .ui-inline-actions { display:flex;align-items:center;flex-wrap:wrap;gap:8px; }
+.altool-ui .ui-muted { color:#59616B;font-size:14px;line-height:1.5; }
+.altool-ui .ui-number { text-align:right;font-variant-numeric:tabular-nums; }
+.altool-ui .ui-code { font-variant-numeric:tabular-nums;overflow-wrap:anywhere; }
+.altool-ui :is(.ui-field-grid,.ui-detail-grid) { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px; }
+.altool-ui .ui-field { display:flex;flex-direction:column;gap:6px;min-width:0; }
+.altool-ui .ui-field > label { font-size:14px;font-weight:500; }
+.altool-ui .ui-field > :is(input,textarea,select) { width:100%;box-sizing:border-box; }
+.altool-ui .ui-required { color:#A2242C;font-weight:400;font-size:14px; }
+.altool-ui .ui-field-error { margin:4px 0 0;color:#A2242C;font-size:14px; }
+.altool-ui .ui-detail-grid { margin:0;gap:0;border-top:1px solid #CBD1D8; }
+.altool-ui .ui-detail-grid > div { display:grid;grid-template-columns:minmax(90px,30%) minmax(0,1fr);border-bottom:1px solid #DCE1E6; }
+.altool-ui .ui-detail-grid :is(dt,dd) { margin:0;padding:10px 12px;font-size:14px;overflow-wrap:anywhere; }
+.altool-ui .ui-detail-grid dt { background:#F1F3F5;color:#454C55; }
+.altool-ui .ui-detail-grid dd { background:#FFFFFF; }
+.altool-ui .ui-form-actions { display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;padding-top:16px;margin-top:16px;border-top:1px solid #DCE1E6; }
+.altool-ui :is(.ui-date-field,.ui-lookup-field) { display:flex;align-items:stretch;gap:4px;min-width:0; }
+.altool-ui .ui-date-field > input { width:100%;min-width:0;box-sizing:border-box; }
+.altool-ui .ui-date-field > button { flex:none; }
+.altool-ui .ui-date-range { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px; }
+.altool-ui .ui-date-range > .ui-field-error { grid-column:1/-1; }
+.altool-ui .ui-date-range label { display:block;margin-bottom:6px;font-size:14px; }
+.altool-ui .ui-business-popup { box-sizing:border-box;position:fixed;inset:auto;z-index:1000;margin:0;padding:12px;border:1px solid #B7BEC7;border-radius:4px;background:#FFFFFF;color:#30363D;overflow:auto;overscroll-behavior:contain;font-family:var(--company-button-font);font-size:14px;line-height:1.5;box-shadow:none; }
+.altool-ui .ui-business-popup[hidden] { display:none!important; }
+.altool-ui .ui-calendar-header { display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px; }
+.altool-ui .ui-calendar-header strong { font-size:14px;font-weight:500; }
+.altool-ui .ui-calendar-header button { padding:4px 6px; }
+.altool-ui :is(.ui-calendar-grid,.ui-month-grid) { display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:10px; }
+.altool-ui .ui-month-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.altool-ui .ui-calendar-grid > button { min-width:0;min-height:32px;padding:4px 0;font-size:14px;border-color:transparent; }
+.altool-ui :is(.ui-calendar-grid,.ui-month-grid) > button[aria-pressed="true"] { --d-bg:#1554A0;--d-text:#FFFFFF;--d-hover:#104583;--d-active:#1554A0;background:#1554A0;color:#FFFFFF; }
+.altool-ui :is(.ui-calendar-grid,.ui-month-grid) > button[aria-current="date"]:not([aria-pressed="true"]) { background:#FFFFFF;color:#1554A0;border-color:#1554A0; }
+.altool-ui .ui-calendar-weekday { text-align:center;font-size:14px;color:#59616B;padding-bottom:4px; }
+.altool-ui .ui-calendar > .ui-inline-actions { justify-content:space-between;border-top:1px solid #DCE1E6;padding-top:8px; }
+.altool-ui .ui-lookup-field { flex-wrap:wrap; }
+.altool-ui .ui-lookup-field > input { width:100px;flex:1;min-width:70px; }
+.altool-ui .ui-lookup-name { flex:2;display:flex;align-items:center;min-width:100px;padding:6px 10px;border:1px solid #D0D5DB;border-radius:4px;background:#F1F3F5;overflow-wrap:anywhere; }
+.altool-ui .ui-lookup-results { max-height:320px;overflow:auto; }
+.altool-ui button.ui-lookup-item { display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:12px;width:100%;text-align:left;white-space:normal;border:0;border-bottom:1px solid #DCE1E6;border-radius:0; }
+.altool-ui button.ui-lookup-item:is(:hover,:focus-visible) { background:#1554A0;color:#FFFFFF; }
+.altool-ui .ui-multiselect { display:inline-block;width:100%;min-width:0; }
+.altool-ui .ui-multiselect > button.ui-select-trigger { display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;width:100%;min-width:0;text-align:left;font-weight:400;white-space:normal; }
+.altool-ui .ui-multi-popup { padding:8px; }
+.altool-ui .ui-multi-popup > input { box-sizing:border-box;width:100%;min-width:0; }
+.altool-ui .ui-multi-popup .ui-inline-actions > button { padding:4px 6px;font-size:14px;white-space:normal; }
+.altool-ui .ui-multi-option { display:flex;align-items:center;gap:8px;padding:8px;border-radius:2px;cursor:pointer;overflow-wrap:anywhere; }
+.altool-ui .ui-multi-option:has(input:checked) { background:#1554A0;color:#FFFFFF; }
+.altool-ui .ui-multi-option:has(input:disabled) { color:#727981;cursor:not-allowed; }
+.altool-ui .ui-multi-option:focus-within { outline:2px solid #1554A0;outline-offset:-2px; }
+.altool-ui .ui-error-summary { margin-bottom:16px;border-left:3px solid #A2242C;padding:8px 12px;background:#F3F4F5; }
+.altool-ui .ui-error-summary[hidden] { display:none; }
+.altool-ui .ui-error-summary p { margin:4px 0; }
+.altool-ui .ui-error-summary a { color:#A2242C; }
+.altool-ui .ui-toasts { position:fixed;inset:auto 20px 20px auto;z-index:1100;display:grid;gap:8px;width:360px;max-width:calc(100vw - 40px); }
+.altool-ui .ui-toast { display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;background:#FFFFFF;border:1px solid #B7BEC7;border-left:3px solid #1554A0;border-radius:4px;font-size:14px; }
+.altool-ui .ui-table-toolbar { display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:10px 12px;background:#F1F3F5;border:1px solid #CBD1D8;border-bottom:0; }
+.altool-ui .ui-table-toolbar [data-selected-count] { margin-right:auto;font-size:14px; }
+.altool-ui .ui-table-scroll { overflow:auto;border:1px solid #CBD1D8; }
+.altool-ui .ui-table-scroll > table { margin:0;width:100%; }
+.altool-ui .ui-table-scroll th button { min-height:28px;padding:0 4px;background:transparent;border:0;font-size:14px; }
+.altool-ui th[aria-sort="ascending"] > button::after { content:' ↑'; }
+.altool-ui th[aria-sort="descending"] > button::after { content:' ↓'; }
+.altool-ui .ui-table-scroll :is(td,th)[hidden] { display:none; }
+.altool-ui dialog.ui-dialog.ui-drawer { margin:0 0 0 auto;inset:0 0 0 auto;width:480px;max-width:calc(100% - 24px);height:100dvh;max-height:100dvh;border-radius:0;border-right:0; }
+.altool-ui .ui-drawer > .ui-modal-body { flex:1; }
+.altool-ui .ui-org-tree ul { list-style:none;margin:0;padding:0 0 0 16px;border-left:1px solid #DCE1E6; }
+.altool-ui .ui-org-tree > ul { border:0;padding:0; }
+.altool-ui .ui-org-tree li { margin:4px 0; }
+.altool-ui .ui-org-tree summary { cursor:pointer;font-size:14px;color:#59616B;padding:6px 8px; }
+.altool-ui button.ui-tree-item { width:100%;justify-content:flex-start;text-align:left;border-color:transparent;background:transparent;font-weight:400; }
+.altool-ui button.ui-tree-item[aria-current="true"] { --d-active:#1554A0;--d-text:#FFFFFF;background:#1554A0;color:#FFFFFF; }
+.altool-ui .ui-history ol { list-style:none;margin:0;padding:0; }
+.altool-ui .ui-history li { display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;padding:12px 0;border-bottom:1px solid #DCE1E6; }
+.altool-ui .ui-history li strong { font-size:14px;font-weight:500; }
+.altool-ui .ui-history li time { margin-left:auto; }
+.altool-ui .ui-history li p { flex-basis:100%;margin:0;font-size:14px; }
+.altool-ui .ui-presets { display:flex;align-items:center;flex-wrap:wrap;gap:8px; }
+.altool-ui .ui-presets > p { flex-basis:100%;margin:0; }
+.altool-ui .ui-business-chart { --company-chart-primary:#1554A0;--company-chart-negative:#A2242C;--company-chart-grid:#DCE1E6;padding:16px;min-width:0; }
+.altool-ui .ui-business-chart > h3 { margin:0 0 4px;font-size:16px;font-weight:500; }
+.altool-ui .ui-business-chart > p { margin:0 0 16px; }
+.altool-ui .ui-bar-plot { display:grid;gap:14px;padding:8px 0 16px; }
+.altool-ui .ui-bar-row { display:grid;grid-template-columns:minmax(70px,20%) minmax(40px,1fr) minmax(64px,auto);align-items:center;gap:12px;font-size:14px; }
+.altool-ui .ui-bar-label { overflow-wrap:anywhere; }
+.altool-ui .ui-bar-track { height:20px;position:relative;background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),var(--company-chart-grid) calc(25% - 1px),var(--company-chart-grid) 25%); }
+.altool-ui .ui-bar-zero { position:absolute;top:-3px;bottom:-3px;width:1px;background:#8A949F; }
+.altool-ui .ui-bar-fill { position:absolute;height:20px;background:var(--company-chart-primary); }
+.altool-ui .ui-bar-fill.is-negative { background:var(--company-chart-negative); }
+.altool-ui .ui-business-chart > details { font-size:14px; }
+.altool-ui .ui-business-chart summary { cursor:pointer;color:#1554A0; }
+.altool-ui .ui-system-state { display:flex;align-items:center;flex-direction:column;justify-content:center;gap:10px;min-height:180px;padding:24px;text-align:center;background:#F3F4F5;border:1px solid #DCE1E6; }
+.altool-ui .ui-system-state > strong { font-size:16px;font-weight:500; }
+.altool-ui .ui-system-state > p { margin:0;font-size:14px;color:#59616B; }
+@media(max-width:640px) { .altool-ui :is(.ui-field-grid,.ui-detail-grid) { grid-template-columns:minmax(0,1fr); } .altool-ui .ui-date-range { grid-template-columns:minmax(0,1fr); } .altool-ui .ui-bar-row { gap:8px; } .altool-ui .ui-presets > :is(input,select) { width:100%; } }
+@media(pointer:coarse) { .altool-ui :is(.ui-calendar-grid,.ui-month-grid)>button { min-height:40px; } }
+
+.altool-ui :is(.ui-alert,.ui-error-summary,.ui-field-error)[hidden] { display:none!important; }
+
+/* Attachment A refinement: common controls, aligned count, explicit empty state. */
+.altool-ui .ui-attachments > .ui-attachment-toolbar { justify-content:space-between;gap:8px; }
+.altool-ui .ui-attachment-count { font-size:13px; }
+.altool-ui .ui-attachment-size { font-size:13px; }
+.altool-ui .ui-attachment-list > .ui-attachment-item { min-height:46px;gap:10px;padding:6px 0; }
+.altool-ui .ui-attachment-item > .ui-icon { width:16px;height:16px;flex:none;color:#59616B; }
+.altool-ui .ui-attachment-item > button.ui-attachment-remove { display:inline-flex;align-items:center;justify-content:center;gap:0; }
+.altool-ui .ui-attachments :is(input[type="file"],.ui-attachment-empty)[hidden] { display:none!important; }
+

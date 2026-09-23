@@ -19,15 +19,25 @@ test('registry and message verification use the same response bytes that were pa
   assert.ok(source.includes('results[index].bytes'));
   assert.ok(!source.includes("fetch('registry.json')"));
 });
-test('catalog separates actual source visual review from rendering and UI conformance', () => {
-  const block = source.slice(source.indexOf('  const mapped='), source.indexOf('  render();', source.indexOf('  const mapped=')));
+test('company-only catalog loads without source archives and does not claim visual verification', () => {
+  const start = source.indexOf('  const packStatus=');
+  assert.ok(start >= 0);
+  const block = source.slice(start, source.indexOf('  render();', start));
   const output = {};
-  const coverage = {source: {pageCount: 3, tocCount: 1}, items: [{assets: ['x'], verification: 'verified'}],
-    pages: [{visualReview: 'source-visually-reviewed'}, {visualReview: 'pending'}, {rendered: true}]};
-  vm.runInNewContext(block, {coverage, document: {querySelector: () => output}});
-  assert.ok(output.textContent.includes('원문 시각 대조 1/3'));
-  assert.ok(output.textContent.includes('회사 적용·전체 규칙 준수 검증은 별도'));
+  vm.runInNewContext(block, {registry: {pack: 'fixture-company', release: 'test'},
+    adopted: [{id: 'component.button'}, {id: 'icon.settings'}],
+    document: {querySelector: () => output}});
+  assert.ok(output.textContent.includes('fixture-company@test'));
+  assert.ok(output.textContent.includes('회사 사용 가능 의미 ID 2개'));
+  assert.ok(output.textContent.includes('assets.py validate'));
   assert.ok(!output.textContent.includes('검증 완료'));
+  assert.ok(source.includes("Promise.all(['catalog.json','messages/ko.json','registry.json','pack.lock.json']"));
+  assert.doesNotMatch(source, /coverage\.json|source-review\.json|internal\/reference\//);
+  const page = fs.readFileSync('designs/assets/index.html', 'utf8');
+  assert.ok(page.includes('전체 회사 자산'));
+  assert.ok(page.includes('KRDS 원문·추출 자료는 포함하지 않습니다'));
+  assert.ok(page.includes('코드·정적 검사와 실제 브라우저 시각 검증은 별개'));
+  assert.ok(page.includes('ui-kit/internal/ATTRIBUTION.md'));
 });
 test('adopted HTML assets without a separate wrapper still offer an executable preview', () => {
   const record = JSON.parse(fs.readFileSync('designs/assets/registry.json', 'utf8')).items.find(item => item.id === 'foundation.layout');

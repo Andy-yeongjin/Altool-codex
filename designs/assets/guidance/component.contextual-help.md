@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 요청 시만 열기·닫기, 관련 컨트롤과 접근 가능한 이름·설명의 연결·초점 순서를 확인한다.
 - G02: 모바일 팝오버 경계와 중요 콘텐츠 비가림, 필수 정보 본문 제공, 중첩 도움말/모달 및 도움패널 동시 사용 금지를 확인한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0468.md](../ui-kit/internal/components/krds-p0468.md)
-- [ui-kit/internal/reference/krds-p0468.md](../ui-kit/internal/reference/krds-p0468.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

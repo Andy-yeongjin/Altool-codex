@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 선택적으로 필요한 부가 내용을 관련 내용 바로 아래에 기본 닫힘으로 둔다. 반드시 읽어야 할 핵심·오류·표 셀·유일한 본문을 숨기는 데 사용하지 않는다. (p.259–265)
 - G02: 버튼 또는 native details/summary로 펼침 상태와 연결 대상을 제공한다. 한 구역에서 필요 이상으로 여러 디스클로저를 겹치지 않는다. 키보드 실행과 열린 내용의 읽기 순서를 검증한다. (p.264–268)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0262.md](../ui-kit/internal/components/krds-p0262.md)
-- [ui-kit/internal/reference/krds-p0262.md](../ui-kit/internal/reference/krds-p0262.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

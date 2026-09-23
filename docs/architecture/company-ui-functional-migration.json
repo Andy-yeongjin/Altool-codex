@@ -1,0 +1,1414 @@
+{
+  "sourceRelease": "1.1.0-qa.4",
+  "targetRelease": "2.0.0-qa.2",
+  "scope": "이전 UI 의미 ID별 기능 이식 대조; 별칭 보존율이나 브라우저 통과 인증이 아님",
+  "browser": "미검증: file URL 보안 정책 차단. DOM harness/정적 테스트는 시각·실파일·반응형 통합 검증을 대신하지 않는다.",
+  "reviewMethod": "기존 variants-manifest 상태, v27 preview/API, extension 및 recipe 구현과 회귀 테스트를 대조했다. 정부 전용 식별자·19px 버튼·구형 원형 진행률·10px root adapter 등 구형 외형은 의도적으로 폐기했다.",
+  "unresolvedCodeGaps": [],
+  "validation": {
+    "meaning": "구조와 순수/DOM 계약 검사만 기록. 시각·실서버·실브라우저 통과 아님",
+    "implementationPathCheck": "72개 의미 ID의 모든 구현 경로가 존재함. 최종 registry 300개 항목을 대상으로 회사 구현 및 구형 경로 차단 검사를 통과함.",
+    "themeDiff": "제공 원본 theme.css 대비 비활성 글자색 #727981→#5F6873 및 field-disabled-text 별칭 1개만 변경. 활성 색·크기·폰트·밀도 토큰은 원본 유지.",
+    "commands": [
+      {"command": "node --test designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs", "result": "23 passed"},
+      {"command": "node --test tests/test_krds_components_variants.cjs tests/test_krds_components_guided.cjs", "result": "28 passed"},
+      {"command": ".venv/bin/python -B -m unittest tests.test_krds_components_variants tests.test_company_design tests.test_company_foundations tests.test_krds_components_adapter tests.test_krds_components tests.test_company_css_release -q", "result": "28 passed; 구형 파일 복원·legacyOnly·../ 우회 참조 거부 포함"}
+    ],
+    "pending": ["제품 전체 회귀 결과는 상위 분석 보고서에서 집계", "실제 브라우저 클릭·포커스·반응형·파일·폰트 검증"]
+  },
+  "items": [
+    {
+      "id": "component.accordion",
+      "previousVariants": [
+        "default",
+        "line",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "accordions-preview.html"
+      ],
+      "review": "native details/summary와 v27 접기 스타일. line은 이전 외형 이름이며 별도 행동이 아니다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.badge",
+      "previousVariants": [
+        "default",
+        "number",
+        "size",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "feedback-preview.html"
+      ],
+      "review": "상태/숫자 표시는 v27 ui-status·ui-tab-count로 통합. 이전 badge 크기/테두리 외형은 폐기한다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.bar-chart",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.breadcrumb",
+      "previousVariants": [
+        "default",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "page-frame-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.button",
+      "previousVariants": [
+        "default",
+        "hierarchy",
+        "icon",
+        "size",
+        "text",
+        "with-icon",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "buttons-preview.html"
+      ],
+      "review": "v27 hierarchy/icon/text/size 예제와 native button. 기존 버튼 외형 대신 승인된 D 규격을 사용한다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.calendar",
+      "previousVariants": [
+        "default",
+        "range",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "CompanyBusiness.datePicker/dateRange의 날짜·월·min/max·키보드 입력.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.carousel",
+      "previousVariants": [
+        "default",
+        "banner"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/carousel-default.html",
+        "extensions/fragments/carousel-banner.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.checkbox",
+      "previousVariants": [
+        "default",
+        "chip",
+        "size",
+        "select-all",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "forms-preview.html",
+        "extensions/fragments/checkbox-select-all.html"
+      ],
+      "review": "native checkbox + v27 forms, 전체선택은 CompanyExtensions.selectAll. chip 외형은 같은 native 선택 기능으로 통합.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.coach-mark",
+      "previousVariants": [
+        "default",
+        "action-driven"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/coach-mark-action-driven.html"
+      ],
+      "review": "CompanyExtensions.tutorial 실제 대상 행동+valid 조건, 다음/이전/접기재개/종료. 가짜 완료 금지.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.contextual-help",
+      "previousVariants": [
+        "default",
+        "information",
+        "help",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "tooltips-preview.html"
+      ],
+      "review": "v27 tooltip/help 예제 + recipe 도움말. 정적 설명과 펼침 도움말 구분.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.critical-alerts",
+      "previousVariants": [
+        "default",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "feedback-preview.html"
+      ],
+      "review": "v27 ui-alert 상태별 표시 및 공통 문구. 실제 장애 상태는 앱 입력.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.date-input",
+      "previousVariants": [
+        "default",
+        "parts",
+        "single",
+        "approximate-month",
+        "month-year",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html",
+        "extensions/fragments/date-input-month-year.html"
+      ],
+      "review": "datePicker 월·일 입력과 recipe 분리 연월일·월/연월, UTC 순수 날짜 회귀.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.date-range",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.disclosure",
+      "previousVariants": [
+        "default",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "accordions-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.drawer",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.file-upload",
+      "previousVariants": [
+        "default",
+        "single",
+        "multiple-drop",
+        "transfer-states",
+        "image-optimize",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "attachments-preview.html",
+        "extensions/fragments/file-upload-transfer-states.html",
+        "extensions/fragments/file-upload-single.html",
+        "extensions/fragments/file-upload-multiple-drop.html",
+        "extensions/fragments/file-upload-image-optimize.html"
+      ],
+      "review": "attachments + extension single/multiple drop, host-controlled transfer, local image optimization. FileList 실브라우저는 별도 미검증.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.filter-presets",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.footer",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "page-frame-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.header",
+      "previousVariants": [
+        "company-vertical",
+        "company-horizontal",
+        "company-scroll-reveal",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "site-navigation-preview.html",
+        "extensions/fragments/header-company-scroll-reveal.html"
+      ],
+      "review": "v27 site-header/sidebar 조합. scroll-reveal은 extension scrollHeader. 이전 세로/가로 헤더 스킨은 한 회사 구조로 통합.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.help-panel",
+      "previousVariants": [
+        "default"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/help-panel-default.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.identifier",
+      "previousVariants": [
+        "default",
+        "light",
+        "dark"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/identifier-light.html",
+        "extensions/fragments/identifier-dark.html"
+      ],
+      "review": "정부 표장이 아니라 교체 가능한 회사 CI. light/dark 두 표면 유지.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.image",
+      "previousVariants": [
+        "informational",
+        "decorative",
+        "functional",
+        "fallback",
+        "default"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/image-informational.html",
+        "extensions/fragments/image-decorative.html",
+        "extensions/fragments/image-functional.html",
+        "extensions/fragments/image-fallback.html"
+      ],
+      "review": "정보/장식/링크/실패 이미지 4종, alt 및 고정크기/자원 경로 검사.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.in-page-navigation",
+      "previousVariants": [
+        "default",
+        "linked"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/in-page-navigation-linked.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.link",
+      "previousVariants": [
+        "default"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/link-default.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.lookup",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.main-menu",
+      "previousVariants": [
+        "mobile",
+        "pc",
+        "simple",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "site-navigation-preview.html",
+        "extensions/fragments/main-menu-pc.html",
+        "extensions/fragments/main-menu-mobile.html"
+      ],
+      "review": "v27 평면 탐색 + 회사 PC/mobile native details/summary 하위메뉴. CompanyExtensions.navigation Escape는 가장 가까운 열린 그룹만 닫고 summary로 초점을 복귀시킨다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.masthead",
+      "previousVariants": [
+        "default",
+        "verification-disclosure"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/masthead-verification-disclosure.html"
+      ],
+      "review": "정부 진위표시 제거; 회사 내부 서비스 고지/펼침 안내로 대체.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.menu",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "menus-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.metric",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "summaries-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.modal",
+      "previousVariants": [
+        "default",
+        "sample",
+        "information",
+        "scrollable",
+        "important",
+        "confirmation",
+        "approval",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "dialogs-preview.html",
+        "extensions/fragments/modal-approval.html"
+      ],
+      "review": "v27 dialog/confirm/drawer의 스크롤 본문·고정 액션 유지. 별도 CompanyExtensions.approval은 닫기 X 제거·cancel 차단, 명시 승인/반려만 결과 반환. 실제 승인권한은 앱 책임.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.multiselect",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.organization-tree",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.pagination",
+      "previousVariants": [
+        "default",
+        "numbered",
+        "load-more",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "navigation-preview.html",
+        "extensions/fragments/pagination-numbered.html",
+        "extensions/fragments/pagination-load-more.html"
+      ],
+      "review": "v27 기본 페이지 + extension bounded numbered/jump/loadMore. current 누락 회귀를 검출·수정했다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.radio-button",
+      "previousVariants": [
+        "default",
+        "radio-chip",
+        "radio-size",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "forms-preview.html"
+      ],
+      "review": "native radio와 v27 forms. chip/size는 이전 시각 변형이며 선택·비활성·키보드 의미는 native로 유지.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.section",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "sections-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.select",
+      "previousVariants": [
+        "default",
+        "size",
+        "sorting",
+        "state",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "select-preview.html"
+      ],
+      "review": "native/select.js 선택·검색·그룹·비활성. 정렬용 select는 same API의 업무옵션이며 전용 시각 원천이 아니다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.side-navigation",
+      "previousVariants": [
+        "default",
+        "simple",
+        "dropdown",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "site-navigation-preview.html",
+        "extensions/fragments/side-navigation-dropdown.html"
+      ],
+      "review": "v27 기본 사이드바 + nested dropdown, 회사 현재 링크/펼침·접힘. native summary 키보드 및 Escape 복귀 API.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.skip-link",
+      "previousVariants": [
+        "default",
+        "visible",
+        "focus-only"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/skip-link-visible.html",
+        "extensions/fragments/skip-link-focus-only.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.spinner",
+      "previousVariants": [
+        "indeterminate",
+        "determinate",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "progress-preview.html",
+        "extensions/fragments/spinner-determinate.html"
+      ],
+      "review": "불명확 진행은 v27 spinner, 확정 진행은 회사 bar + 숫자 aria-valuenow. 구형 원형 진행률은 폐기, 3:1/4.5:1 검사 유지.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.step-indicator",
+      "previousVariants": [
+        "default",
+        "adaptive-optional",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "progress-preview.html",
+        "extensions/fragments/step-indicator-adaptive-optional.html"
+      ],
+      "review": "CompanyExtensions.stepFlow/stepIndicator. 필수단계 검증, 선택건너뜀과 완료 구분, 이전/분기/초기화 유지.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.structured-list",
+      "previousVariants": [
+        "default",
+        "table"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/structured-list-default.html",
+        "extensions/fragments/structured-list-grid.html",
+        "extensions/fragments/structured-list-table.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.tab",
+      "previousVariants": [
+        "default",
+        "vertical",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "navigation-preview.html",
+        "extensions/fragments/tab-vertical.html"
+      ],
+      "review": "v27 조회 탭 + CompanyExtensions.tabs의 수직방향 Arrow/Home/End 및 aria-selected/tabpanel 관계. 정적 별칭만으로 대체하지 않았다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.table",
+      "previousVariants": [
+        "default",
+        "sortable",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "tables-preview.html"
+      ],
+      "review": "v27 tableTools 숫자/문자 정렬·행선택·열숨김. 스크롤과 실제 열/행 의미는 소비 앱 검증.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.table-tools",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.tag",
+      "previousVariants": [
+        "default",
+        "link",
+        "filter",
+        "removable",
+        "label",
+        "add-filter",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "search-assist-preview.html",
+        "extensions/fragments/tag-add-filter.html"
+      ],
+      "review": "상태 label·링크·선택필터·해제·중복방지 추가를 v27 + CompanyExtensions.tagGroup으로 보완. 삭제 후 인접버튼 또는추가버튼 초점 복귀.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.text-input",
+      "previousVariants": [
+        "default",
+        "icon",
+        "size",
+        "state",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "forms-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.textarea",
+      "previousVariants": [
+        "default",
+        "counted",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "forms-preview.html",
+        "extensions/fragments/textarea-counted.html"
+      ],
+      "review": "native textarea + extension countedInput; Unicode 글자수·오류·비활성 의미 유지.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "component.tooltip",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "tooltips-preview.html"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "component.tutorial-panel",
+      "previousVariants": [
+        "default",
+        "retained-session"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "extensions/fragments/tutorial-panel-retained-session.html"
+      ],
+      "review": "CompanyExtensions.tutorial 동일 행동 계약. 패널 접기와 프로세스 초기화를 분리.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py",
+        "designs/assets/ui-kit/internal/company/extensions/runtime.test.cjs"
+      ]
+    },
+    {
+      "id": "foundation.company-ui",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "dist/company.css"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "foundation.layout",
+      "previousVariants": [
+        "contained",
+        "fluid",
+        "contained-sidebar",
+        "fluid-sidebar"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "layout-preview.html",
+        "dist/foundations/layout.css"
+      ],
+      "review": "회사 layout-preview에 contained/fluid/contained-sidebar/fluid-sidebar 4개 실제 예제. 같은 v27 토큰·컨트롤과700px일렬 전환, min-width0·minmax0 수축을 검사.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "foundation.tokens",
+      "previousVariants": [
+        "default"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "dist/foundations/tokens-2024.css"
+      ],
+      "review": "제공 v27 원본의 회사 마크업/API와 승인 토큰을 유지. 이전 외형 별칭을 동작 완료 증거로 세지 않는다.",
+      "evidence": [
+        "tests/test_krds_components_variants.cjs",
+        "tests/test_krds_components_guided.cjs",
+        "tests/test_krds_components_variants.py"
+      ]
+    },
+    {
+      "id": "pattern.attachment",
+      "previousVariants": [
+        "inline",
+        "list",
+        "icon"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/attachments.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.confirmation",
+      "previousVariants": [
+        "destructive",
+        "context-change"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/confirm.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.consent",
+      "previousVariants": [
+        "radio",
+        "checkbox",
+        "bulk"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/consent.html",
+        "recipes/basic/field-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.detail",
+      "previousVariants": [
+        "single",
+        "tabs",
+        "contents",
+        "image",
+        "video",
+        "audio",
+        "transcript",
+        "collapsible-contents"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/detail.html",
+        "recipes/basic/detail-tabs.html",
+        "recipes/basic/content-variants.html",
+        "recipes/basic/precision-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.error",
+      "previousVariants": [
+        "inline",
+        "modal",
+        "retry"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/error.html",
+        "recipes/basic/state-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.feedback",
+      "previousVariants": [
+        "sentiment",
+        "stars",
+        "immediate",
+        "after-completion",
+        "aside",
+        "bottom"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/feedback.html",
+        "recipes/basic/content-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.filter",
+      "previousVariants": [
+        "text",
+        "scope",
+        "single-selection",
+        "multiple-selection",
+        "date-range",
+        "numeric-range",
+        "query",
+        "relationship",
+        "instant",
+        "batch",
+        "bar",
+        "inline-sort",
+        "aside",
+        "modal",
+        "applied-chips",
+        "detail-return",
+        "month-range",
+        "time-range",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "filter-bar-preview.html",
+        "recipes/basic/filter.html",
+        "recipes/basic/state-variants.html",
+        "recipes/basic/filter-layouts.html",
+        "recipes/basic/precision-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.form",
+      "previousVariants": [
+        "single",
+        "modal",
+        "steps",
+        "progressive",
+        "required-text",
+        "required-asterisk",
+        "all-required",
+        "left-actions",
+        "right-actions",
+        "disabled-submit",
+        "live-validation",
+        "focusout-validation",
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html",
+        "recipes/basic/form.html",
+        "recipes/basic/field-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.help",
+      "previousVariants": [
+        "fixed",
+        "label-inline-placeholder",
+        "tooltip",
+        "contextual",
+        "panel",
+        "coachmark",
+        "walkthrough",
+        "faq"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/help.html",
+        "recipes/basic/content-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.history",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.identity-input",
+      "previousVariants": [
+        "name",
+        "birth-single",
+        "birth-multiple",
+        "gender",
+        "telephone",
+        "country-code",
+        "multiple-telephone"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/identity.html",
+        "recipes/basic/field-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.list",
+      "previousVariants": [
+        "structured",
+        "table",
+        "accordion",
+        "detail-return",
+        "request-states"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/basic/list.html",
+        "recipes/basic/state-variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.save-feedback",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "pattern.system-state",
+      "previousVariants": [
+        "company"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "business-preview.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "service.application",
+      "previousVariants": [
+        "default",
+        "multi-service-catalog",
+        "transaction-types"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/services/index.html",
+        "recipes/services/variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "service.application-history",
+      "previousVariants": [
+        "default",
+        "large-status-history"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/services/index.html",
+        "recipes/services/variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "service.authentication",
+      "previousVariants": [
+        "default",
+        "guidance-subject-procedure"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/services/index.html",
+        "recipes/services/variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "service.policy-information",
+      "previousVariants": [
+        "default",
+        "periodical-library"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/services/index.html",
+        "recipes/services/variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "service.search",
+      "previousVariants": [
+        "default",
+        "advanced-media"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/services/index.html",
+        "recipes/services/variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    },
+    {
+      "id": "service.visit",
+      "previousVariants": [
+        "default",
+        "content-composition"
+      ],
+      "status": "code-contract-mapped-browser-pending",
+      "implementation": [
+        "recipes/services/index.html",
+        "recipes/services/variants.html"
+      ],
+      "review": "동일 의미의 기본/서비스 recipe 모델·DOM 로직 및 상태별 HTML을 회사 CSS 하나로 이식. 이전 variant별 기능은 recipe registry와 테스트를 대조한다.",
+      "evidence": [
+        "tests/test_krds_basic.cjs",
+        "tests/test_krds_services.cjs",
+        "tests/test_company_recipes.py"
+      ]
+    }
+  ]
+}

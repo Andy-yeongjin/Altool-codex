@@ -1,0 +1,1075 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "component.carousel",
+      "kind": "component",
+      "meaning": "순환 안내",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "meaning": "순환 안내",
+          "path": "extensions/fragments/carousel-default.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "first",
+            "last",
+            "previous",
+            "next",
+            "keyboard",
+            "user-started-autoplay",
+            "focus-paused",
+            "reduced-motion"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.carousel",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "banner": {
+          "meaning": "순환 안내",
+          "path": "extensions/fragments/carousel-banner.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "first",
+            "last",
+            "previous",
+            "next",
+            "keyboard",
+            "user-started-autoplay",
+            "focus-paused",
+            "reduced-motion"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.carousel",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.help-panel",
+      "kind": "component",
+      "meaning": "도움말 패널",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "meaning": "도움말 패널",
+          "path": "extensions/fragments/help-panel-default.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "closed",
+            "open",
+            "escape-dismiss",
+            "focus-restored",
+            "mobile-wrap"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.helpPanel",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.coach-mark",
+      "kind": "component",
+      "meaning": "실제 동작 안내",
+      "defaultVariant": "action-driven",
+      "variants": {
+        "action-driven": {
+          "meaning": "실제 동작 안내",
+          "path": "extensions/fragments/coach-mark-action-driven.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "user-started",
+            "action-gated",
+            "required-invalid",
+            "previous",
+            "collapse-retained",
+            "reopen-retained",
+            "stopped",
+            "restart",
+            "focus-returned",
+            "local-preview"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.tutorial",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.tutorial-panel",
+      "kind": "component",
+      "meaning": "진행 보존 튜토리얼",
+      "defaultVariant": "retained-session",
+      "variants": {
+        "retained-session": {
+          "meaning": "진행 보존 튜토리얼",
+          "path": "extensions/fragments/tutorial-panel-retained-session.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "user-started",
+            "action-gated",
+            "required-invalid",
+            "previous",
+            "collapse-retained",
+            "reopen-retained",
+            "stopped",
+            "restart",
+            "focus-returned",
+            "local-preview"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.tutorial",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.masthead",
+      "kind": "component",
+      "meaning": "사내 서비스 식별 안내",
+      "defaultVariant": "verification-disclosure",
+      "variants": {
+        "verification-disclosure": {
+          "meaning": "사내 서비스 식별 안내",
+          "path": "extensions/fragments/masthead-verification-disclosure.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "collapsed",
+            "expanded",
+            "keyboard",
+            "company-identity-slot"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.identifier",
+      "kind": "component",
+      "meaning": "운영 회사 식별자",
+      "defaultVariant": "light",
+      "variants": {
+        "light": {
+          "meaning": "운영 회사 식별자",
+          "path": "extensions/fragments/identifier-light.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "light",
+            "approved-logo-slot",
+            "approved-copy-slot",
+            "mobile-wrap"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "dark": {
+          "meaning": "운영 회사 식별자",
+          "path": "extensions/fragments/identifier-dark.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "dark",
+            "approved-logo-slot",
+            "approved-copy-slot",
+            "mobile-wrap"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.skip-link",
+      "kind": "component",
+      "meaning": "본문 건너뛰기",
+      "defaultVariant": "focus-only",
+      "variants": {
+        "visible": {
+          "meaning": "본문 건너뛰기",
+          "path": "extensions/fragments/skip-link-visible.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "unfocused",
+            "focused",
+            "target-focus"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.anchorLinks",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "focus-only": {
+          "meaning": "본문 건너뛰기",
+          "path": "extensions/fragments/skip-link-focus-only.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "unfocused",
+            "focused",
+            "target-focus"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.anchorLinks",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.in-page-navigation",
+      "kind": "component",
+      "meaning": "본문 목차",
+      "defaultVariant": "linked",
+      "variants": {
+        "linked": {
+          "meaning": "본문 목차",
+          "path": "extensions/fragments/in-page-navigation-linked.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "linked",
+            "current",
+            "target-focus",
+            "mobile-before-body"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.anchorLinks",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.link",
+      "kind": "component",
+      "meaning": "텍스트 링크",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "meaning": "텍스트 링크",
+          "path": "extensions/fragments/link-default.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "internal",
+            "external-new-window",
+            "download",
+            "focus",
+            "disabled-no-href"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.anchorLinks",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.image",
+      "kind": "component",
+      "meaning": "의미 있는 이미지",
+      "defaultVariant": "informational",
+      "variants": {
+        "informational": {
+          "meaning": "의미 있는 이미지",
+          "path": "extensions/fragments/image-informational.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "responsive",
+            "text-alternative"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "decorative": {
+          "meaning": "장식 이미지",
+          "path": "extensions/fragments/image-decorative.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "decorative",
+            "empty-alt"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "functional": {
+          "meaning": "기능 이미지",
+          "path": "extensions/fragments/image-functional.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "link",
+            "accessible-name",
+            "target-focus"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.anchorLinks",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "fallback": {
+          "meaning": "이미지 오류 대체",
+          "path": "extensions/fragments/image-fallback.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "loaded",
+            "native-image-error",
+            "text-fallback"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.imageFallback",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.structured-list",
+      "kind": "component",
+      "meaning": "구조화 목록",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "meaning": "구조화 목록",
+          "path": "extensions/fragments/structured-list-default.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "list",
+            "linked-title",
+            "metadata",
+            "mobile-wrap"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "grid": {
+          "meaning": "구조화 목록",
+          "path": "extensions/fragments/structured-list-grid.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "list",
+            "linked-title",
+            "metadata",
+            "mobile-wrap"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "table": {
+          "meaning": "표 형식 목록",
+          "path": "extensions/fragments/structured-list-table.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "table",
+            "caption",
+            "column-headers",
+            "horizontal-scroll"
+          ],
+          "kind": "company-v27",
+          "api": "native HTML; see extensions/README.md",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.pagination",
+      "kind": "component",
+      "meaning": "페이지 직접 이동",
+      "defaultVariant": "numbered",
+      "variants": {
+        "numbered": {
+          "meaning": "페이지 직접 이동",
+          "path": "extensions/fragments/pagination-numbered.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "first",
+            "middle",
+            "last",
+            "current",
+            "direct-jump",
+            "invalid-jump"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.pagination",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "load-more": {
+          "meaning": "더 보기",
+          "path": "extensions/fragments/pagination-load-more.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "initial",
+            "loading",
+            "expanded",
+            "exhausted",
+            "error",
+            "retry",
+            "focus-new-item"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.loadMore",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.spinner",
+      "kind": "component",
+      "meaning": "숫자 포함 진행률",
+      "defaultVariant": "determinate",
+      "variants": {
+        "determinate": {
+          "meaning": "숫자 포함 진행률",
+          "path": "extensions/fragments/spinner-determinate.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "zero",
+            "progressing",
+            "complete",
+            "controlled-update"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.progress",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.file-upload",
+      "kind": "component",
+      "meaning": "호스트 제어 전송 상태",
+      "defaultVariant": "transfer-states",
+      "variants": {
+        "transfer-states": {
+          "meaning": "호스트 제어 전송 상태",
+          "path": "extensions/fragments/file-upload-transfer-states.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "ready",
+            "uploading",
+            "complete",
+            "error",
+            "cancelled",
+            "retry-request",
+            "cancel-request"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.transfer",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "single": {
+          "meaning": "검증 가능한 첨부 선택",
+          "path": "extensions/fragments/file-upload-single.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "empty",
+            "selected",
+            "invalid-count",
+            "invalid-size",
+            "invalid-type",
+            "removed",
+            "dragging",
+            "disabled",
+            "form-reset"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.filePicker (CompanyBusiness.attachments)",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "multiple-drop": {
+          "meaning": "검증 가능한 첨부 선택",
+          "path": "extensions/fragments/file-upload-multiple-drop.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "empty",
+            "selected",
+            "invalid-count",
+            "invalid-size",
+            "invalid-type",
+            "removed",
+            "dragging",
+            "disabled",
+            "form-reset"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.filePicker (CompanyBusiness.attachments)",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "image-optimize": {
+          "meaning": "로컬 이미지 용량 최적화",
+          "path": "extensions/fragments/file-upload-image-optimize.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "empty",
+            "selected",
+            "processing",
+            "optimized",
+            "not-smaller",
+            "unsupported",
+            "error",
+            "removed",
+            "form-reset",
+            "disabled",
+            "local-only",
+            "original-preserved",
+            "object-url-cleanup"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.imageOptimize (CompanyBusiness.attachments)",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.textarea",
+      "kind": "component",
+      "meaning": "글자수 안내 입력",
+      "defaultVariant": "counted",
+      "variants": {
+        "counted": {
+          "meaning": "글자수 안내 입력",
+          "path": "extensions/fragments/textarea-counted.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "empty",
+            "entered",
+            "over-limit",
+            "invalid",
+            "focused"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.countedInput",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.checkbox",
+      "kind": "component",
+      "meaning": "전체 선택",
+      "defaultVariant": "select-all",
+      "variants": {
+        "select-all": {
+          "meaning": "전체 선택",
+          "path": "extensions/fragments/checkbox-select-all.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "unchecked",
+            "checked",
+            "indeterminate",
+            "disabled-child",
+            "keyboard"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.selectAll",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.header",
+      "kind": "component",
+      "meaning": "모바일 스크롤 헤더",
+      "defaultVariant": "company-scroll-reveal",
+      "variants": {
+        "company-scroll-reveal": {
+          "meaning": "모바일 스크롤 헤더",
+          "path": "extensions/fragments/header-company-scroll-reveal.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "at-top",
+            "scroll-down-hidden",
+            "scroll-up-visible",
+            "focus-visible",
+            "compact-only"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.scrollHeader",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.step-indicator",
+      "kind": "component",
+      "meaning": "조건 분기 입력 단계",
+      "defaultVariant": "adaptive-optional",
+      "variants": {
+        "adaptive-optional": {
+          "meaning": "조건 분기 입력 단계",
+          "path": "extensions/fragments/step-indicator-adaptive-optional.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "initial",
+            "required-invalid",
+            "forward",
+            "back",
+            "adaptive-jump",
+            "optional-skipped",
+            "input-preserved",
+            "local-complete",
+            "reset"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.stepIndicator",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.tab",
+      "kind": "component",
+      "meaning": "세로 탭",
+      "defaultVariant": "vertical",
+      "variants": {
+        "vertical": {
+          "meaning": "세로 탭",
+          "path": "extensions/fragments/tab-vertical.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "selected",
+            "unselected",
+            "focused",
+            "empty-panel",
+            "arrow-keys",
+            "home-end"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.tabs",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.tag",
+      "kind": "component",
+      "meaning": "필터 태그 추가·삭제",
+      "defaultVariant": "add-filter",
+      "variants": {
+        "add-filter": {
+          "meaning": "필터 태그 추가·삭제",
+          "path": "extensions/fragments/tag-add-filter.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "empty",
+            "added",
+            "duplicate-prevented",
+            "removed",
+            "applied-container-focus"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.tagGroup",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.side-navigation",
+      "kind": "component",
+      "meaning": "접히는 계층 탐색",
+      "defaultVariant": "dropdown",
+      "variants": {
+        "dropdown": {
+          "meaning": "접히는 계층 탐색",
+          "path": "extensions/fragments/side-navigation-dropdown.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "collapsed",
+            "expanded",
+            "current",
+            "nested-level-two",
+            "keyboard",
+            "escape-focus-restored"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.navigation; native details/summary",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.main-menu",
+      "kind": "component",
+      "meaning": "하위 메뉴 탐색",
+      "defaultVariant": "pc",
+      "variants": {
+        "pc": {
+          "meaning": "하위 메뉴 탐색",
+          "path": "extensions/fragments/main-menu-pc.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "collapsed",
+            "expanded",
+            "current",
+            "nested-level-two",
+            "keyboard",
+            "escape-focus-restored",
+            "mobile-wrap"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.navigation; native details/summary",
+          "verification": "automated-contract-tests; real-browser-pending"
+        },
+        "mobile": {
+          "meaning": "하위 메뉴 탐색",
+          "path": "extensions/fragments/main-menu-mobile.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "collapsed",
+            "expanded",
+            "current",
+            "nested-level-two",
+            "keyboard",
+            "escape-focus-restored",
+            "mobile-wrap"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.navigation; native details/summary",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.modal",
+      "kind": "component",
+      "meaning": "명시적 선택 확인",
+      "defaultVariant": "approval",
+      "variants": {
+        "approval": {
+          "meaning": "명시적 선택 확인",
+          "path": "extensions/fragments/modal-approval.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "closed",
+            "open",
+            "focus-contained",
+            "focus-restored",
+            "confirmed-or-declined",
+            "explicit-choice-required"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.approval",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    },
+    {
+      "id": "component.date-input",
+      "kind": "component",
+      "meaning": "두 자리 월·연도 입력",
+      "defaultVariant": "month-year",
+      "variants": {
+        "month-year": {
+          "meaning": "두 자리 월·연도 입력",
+          "path": "extensions/fragments/date-input-month-year.html",
+          "preview": "extensions/preview.html",
+          "dependencies": [
+            "dist/company.css",
+            "extensions/runtime.js",
+            "dist/business.js",
+            "dist/select.js",
+            "recipes/controls.js",
+            "extensions/README.md"
+          ],
+          "states": [
+            "empty",
+            "partial",
+            "valid",
+            "invalid-month",
+            "invalid-format",
+            "two-digit-year-preserved"
+          ],
+          "kind": "company-v27",
+          "api": "CompanyExtensions.monthYear; parseMonthYear",
+          "verification": "automated-contract-tests; real-browser-pending"
+        }
+      }
+    }
+  ]
+}

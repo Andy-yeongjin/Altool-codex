@@ -9,9 +9,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G02: 기관 계층에 따른 로고 순서·대체 텍스트·고정 안내를 확인하고 식별자가 푸터 안에 있는지 검사한다.
 - G03: 상위기관·소속기관과 공동 운영기관의 승인된 조합을 사용한다. light/dark 띠와 로고 슬롯은 제공하지만 실제 정부 로고·기관명·대체 텍스트를 임의 생성하지 않는다. (p.123–127)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0121.md](../ui-kit/internal/components/krds-p0121.md)
-- [ui-kit/internal/reference/krds-p0121.md](../ui-kit/internal/reference/krds-p0121.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

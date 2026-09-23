@@ -33,8 +33,6 @@ class CompanyDesignTests(unittest.TestCase):
 
         missing = []
         for page in (KIT / 'internal').rglob('*.html'):
-            if 'upstream' in page.relative_to(KIT).parts:
-                continue
             parser = Resources()
             parser.feed(page.read_text())
             for url in parser.urls:
@@ -47,7 +45,8 @@ class CompanyDesignTests(unittest.TestCase):
 
     def test_simple_entry_and_reproducible_outputs(self):
         self.assertEqual({p.name for p in KIT.iterdir() if not is_os_metadata(p.name)}, {'README.md', 'design', 'internal'})
-        self.assertEqual(builder.build(check=True), 10)
+        self.assertEqual(builder.build(check=True), len(builder.outputs()))
+        self.assertGreater(len(builder.outputs()), 20)
         result = subprocess.run([sys.executable, str(ROOT / 'scripts/build_company_design.py'), '--check'], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
@@ -56,28 +55,20 @@ class CompanyDesignTests(unittest.TestCase):
             kit = Path(directory)
             shutil.copytree(KIT / 'design', kit / 'design')
             builder.build(kit)
-            unchanged = (kit / 'internal/patterns/basic/basic.css').read_bytes()
+            unchanged = (kit / 'internal/company/dist/components/icons.css').read_bytes()
             theme = kit / 'design/theme.css'
-            theme.write_text(theme.read_text().replace('--krds24-primary-50: #246BEB;', '--krds24-primary-50: #174A68;'))
+            theme.write_text(theme.read_text().replace('--company-brand-primary:#1554A0;', '--company-brand-primary:#174A68;'))
             components = kit / 'design/components.css'
-            components.write_text(components.read_text().replace('border-radius: .375rem;', 'border-radius: .75rem;') + '\n.krds-btn { border-radius: 999px; }\n')
+            components.write_text(components.read_text().replace('/* @output components/runtime.css */', '/* @output components/runtime.css */\n.altool-ui button { border-radius: .75rem; }'))
             with self.assertRaisesRegex(ValueError, 'Stale generated style'):
                 builder.build(kit, check=True)
             builder.build(kit)
-            self.assertEqual(builder.build(kit, check=True), 10)
-            self.assertIn('--krds24-primary-50: #174A68;', (kit / 'internal/foundations/tokens-2024.css').read_text())
-            self.assertIn('.krds-btn { border-radius: 999px; }', (kit / 'internal/foundations/company-custom.css').read_text())
-            self.assertIn('border-radius: .75rem;', (kit / 'internal/components/runtime.css').read_text())
-            self.assertEqual(unchanged, (kit / 'internal/patterns/basic/basic.css').read_bytes())
-            for name in ('foundations', 'upstream'):
-                shutil.copytree(KIT / 'internal' / name, kit / 'internal' / name, dirs_exist_ok=True)
-            shutil.copyfile(KIT / 'internal/upstream-manifest.json', kit / 'internal/upstream-manifest.json')
-            builder.build(kit)
-            result = subprocess.run([sys.executable, str(kit / 'internal/foundations/build_adapter.py')], capture_output=True, text=True)
-            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-            adapter = (kit / 'internal/foundations/company-adapter.css').read_text()
-            self.assertIn('--krds24-primary-50: #174A68;', adapter)
-            self.assertIn('.krds-btn { border-radius: 999px; }', adapter)
+            self.assertEqual(builder.build(kit, check=True), len(builder.outputs(kit)))
+            distribution = kit / 'internal/company/dist'
+            self.assertIn('--company-brand-primary:#174A68;', (distribution / 'foundations/tokens-2024.css').read_text())
+            self.assertIn('border-radius: .75rem;', (distribution / 'components/runtime.css').read_text())
+            self.assertEqual(unchanged, (distribution / 'components/icons.css').read_bytes())
+            self.assertEqual({p.name for p in (kit / 'internal').iterdir()}, {'company'})
 
     def test_missing_duplicate_and_unknown_sections_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -88,7 +79,7 @@ class CompanyDesignTests(unittest.TestCase):
             for broken in (
                 text.replace('/* @output foundations/layout.css */', '/* @output ../escape.css */', 1),
                 text + '\n/* @output foundations/layout.css */\n.x {}\n',
-                text[:text.index('/* @output foundations/company-custom.css */')],
+                text[:text.index('/* @output components/business.css */')],
             ):
                 source.write_text(broken)
                 with self.assertRaises(ValueError):

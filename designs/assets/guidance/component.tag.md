@@ -10,9 +10,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 
 - G03: 추가 상태에서는 적용된 조건 컨테이너로 초점을 옮긴다. 선택 토글은 같은 태그에 초점을 유지한다. 삭제는 이전 태그, 첫 태그 삭제 시 다음 태그, 모두 없으면 빈 컨테이너로 초점을 복원한다. 조건 변경 이벤트는 실제 검색 데이터 갱신과 별도로 연결한다. (p.427–428)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0418.md](../ui-kit/internal/components/krds-p0418.md)
-- [ui-kit/internal/reference/krds-p0418.md](../ui-kit/internal/reference/krds-p0418.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

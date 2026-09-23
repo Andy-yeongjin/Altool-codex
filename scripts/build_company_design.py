@@ -3,13 +3,15 @@ import argparse
 from pathlib import Path
 import re
 import subprocess
-import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 KIT = ROOT / 'designs/assets/ui-kit'
-OUTPUTS = {'foundations/layout.css', 'components/runtime.css', 'components/guided-runtime.css',
-           'patterns/basic/basic.css', 'patterns/basic/extended.css', 'patterns/basic/variants.css',
-           'patterns/services/services.css', 'patterns/services/variants.css', 'foundations/company-custom.css'}
+OUTPUTS = {'foundations/layout.css', 'components/runtime.css'}
+OUTPUTS |= {'components/extensions.css', 'components/recipes.css'}
+OUTPUTS |= {'components/' + name + '.css' for name in (
+    'enterprise', 'icons', 'forms', 'navigation', 'feedback', 'dialogs', 'sections',
+    'menus', 'data-states', 'tooltips', 'attachments', 'accordions', 'site-navigation',
+    'progress', 'summaries', 'search-assist', 'page-frame', 'select', 'business', 'filter-bar')}
 
 
 def outputs(kit=KIT):
@@ -31,7 +33,7 @@ def outputs(kit=KIT):
 def build(kit=KIT, check=False):
     result = outputs(kit)
     for name, css in result.items():
-        path = kit/'internal'/name
+        path = kit/'internal/company/dist'/name
         if check:
             if not path.is_file() or path.read_text(encoding='utf-8') != css:
                 raise ValueError(f'Stale generated style: {name}; edit design/, then build')
@@ -47,8 +49,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     try:
         count = build(check=args.check)
-        subprocess.run([sys.executable, str(KIT/'internal/foundations/build_adapter.py'),
-                        *(['--check'] if args.check else [])], check=True)
-        print(f'{"Verified" if args.check else "Built"} {count} company design outputs + adapter')
+        from build_company_bundle import build_bundle
+        build_bundle(KIT, check=args.check)
+        print(f'{"Verified" if args.check else "Built"} {count} company-only design outputs and bundle')
     except (ValueError, OSError, subprocess.CalledProcessError) as error:
         parser.exit(1, f'FAIL company design: {error}\n')

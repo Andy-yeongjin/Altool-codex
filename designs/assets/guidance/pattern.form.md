@@ -19,10 +19,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G12: 클라이언트 확인만 신뢰하지 않고 실제 제출 시 서버 검증을 반드시 병행한다.
 - G13: 전체값이 필요한 검증은 focusout 이후 수행하고 실시간 규칙 검사는 필요한 필드만 수행한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/patterns/basic/extended.md](../ui-kit/internal/patterns/basic/extended.md)
-- [ui-kit/internal/patterns/basic/form.md](../ui-kit/internal/patterns/basic/form.md)
-- [ui-kit/internal/reference/krds-p0631.md](../ui-kit/internal/reference/krds-p0631.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

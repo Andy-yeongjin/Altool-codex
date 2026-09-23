@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 완료량을 알면 확정 진행률, 모르면 불확정 회전을 사용한다. 실제 작업 상태에만 연결하고 임의 타이머로 완료를 만들지 않는다. (p.438–442)
 - G02: 시작·종료를 polite 상태로 알린다. 흰 배경↔트랙, 트랙↔진행 식별자 양쪽 3:1 대비를 각각 확인한다. 확정형은 gray-50 트랙과 primary-80 진행색을 사용한다. (p.443–445)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0437.md](../ui-kit/internal/components/krds-p0437.md)
-- [ui-kit/internal/reference/krds-p0437.md](../ui-kit/internal/reference/krds-p0437.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

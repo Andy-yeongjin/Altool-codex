@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 짧은 비대화형 상태 레이블로 사용하며 버튼·링크처럼 행동하게 하지 않는다. 한 대상에 과도한 여러 배지를 붙이지 않고 줄바꿈하지 않는다. (p.282–286)
 - G02: 주요 행동을 뜻하는 primary 배경을 상태 배지에 사용하지 않는다. 상태는 색과 텍스트를 함께 제공하고 텍스트 대비를 확인한다. 도식의 색만 따르지 말고 상세 명문 규칙을 적용한다. (p.284,286)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0282.md](../ui-kit/internal/components/krds-p0282.md)
-- [ui-kit/internal/reference/krds-p0282.md](../ui-kit/internal/reference/krds-p0282.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

@@ -45,14 +45,7 @@
    - 서버 시작 후 HTTP 응답을 루프로 확인한다.
 3. 서버를 실행할 수 없으면 browser 검증을 `failed(server unavailable)`로 남기고 중지한다. 실제 화면 검증 없이 완료 처리하지 않는다.
 
-서버 생명주기 규칙:
-
-- browser step이 새로 시작한 개발 서버는 검증 성공, 실패, 중단 여부와 관계없이 step 종료 전에 종료한다.
-- 기존에 이미 떠 있던 서버를 사용했다면 종료하지 않는다. 종료 대상은 이 step에서 PID를 기록한 `managedServer=true` 프로세스와 그 하위 프로세스뿐이다.
-- 종료 후 같은 URL/포트에 대한 응답 확인을 수행해 정리 결과를 남긴다. 기존 서버를 사용한 경우에는 `skipped(existing server)`로 남긴다.
-- 서버 정리에 실패하면 browser 결과를 완료로 숨기지 말고 `server.cleanup=failed`와 남은 PID/포트를 기록한다.
-- Windows에서는 `Start-Process -PassThru`로 받은 PID를 기록하고, 종료 시 해당 PID를 `Stop-Process -Id {pid}`로 정리한다. 필요하면 자식 프로세스까지 확인한다.
-- POSIX에서는 백그라운드 실행 PID를 기록하고, 종료 시 해당 PID에 `TERM`을 보낸 뒤 필요하면 제한적으로 `KILL`을 사용한다.
+서버 생명주기와 `server.cleanup` 증거는 `_server.md`의 공통 규칙을 따른다.
 
 ### 3. 브라우저 검증
 

@@ -1,0 +1,23 @@
+/* Approved B attachment list. */
+.altool-ui .ui-attachments { min-width:0;border:1px solid var(--company-field-border);border-radius:var(--company-button-radius);background:#FFFFFF;color:#30363D;font-family:var(--company-button-font); }
+.altool-ui .ui-attachments > .ui-attachment-toolbar { display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 12px;background:#F1F3F5;border-bottom:1px solid var(--company-table-line);border-start-start-radius:var(--company-button-radius);border-start-end-radius:var(--company-button-radius); }
+.altool-ui .ui-attachment-count { color:#59616B;font-size:13px;font-weight:400; }
+.altool-ui .ui-attachments > .ui-attachment-list { list-style:none;margin:0;padding:0 12px; }
+.altool-ui .ui-attachment-list > .ui-attachment-item { display:flex;align-items:center;gap:10px;min-height:44px;padding:5px 0;border-bottom:1px solid var(--company-table-line); }
+.altool-ui .ui-attachment-list > .ui-attachment-item:last-child { border-bottom:0; }
+.altool-ui .ui-attachment-name { min-width:0;flex:1;font-size:14px;font-weight:400;overflow-wrap:anywhere; }
+.altool-ui .ui-attachment-size { flex:none;font-size:12px;font-weight:400;color:#59616B;white-space:nowrap; }
+.altool-ui .ui-attachment-item > button.ui-attachment-remove { flex:none;min-width:34px;min-height:34px;padding:0;border:1px solid transparent;background:transparent;color:#59616B;box-shadow:none; }
+.altool-ui .ui-attachment-item > button.ui-attachment-remove:hover { background:#F3F4F5; }
+.altool-ui .ui-attachment-item > button.ui-attachment-remove:disabled { color:var(--company-button-disabled-text);background:transparent;cursor:not-allowed; }
+.altool-ui .ui-attachments > .ui-attachment-empty { margin:0;padding:12px;color:#59616B;font-size:13px; }
+.altool-ui .ui-attachments > .ui-field { padding:12px 12px 0; }
+.altool-ui .ui-attachments > p:not(.ui-attachment-empty) { margin:0;padding:8px 12px; }
+.altool-ui .ui-attachments > [data-file-error]:empty { display:none; }
+.altool-ui .ui-attachments.is-dragging { outline:2px dashed var(--company-section-accent);outline-offset:2px; }
+@media(max-width:420px) {
+ .altool-ui .ui-attachment-list > .ui-attachment-item { flex-wrap:wrap; }
+ .altool-ui .ui-attachment-name { flex-basis:calc(100% - 48px); }
+ .altool-ui .ui-attachment-size { order:3;flex-basis:100%; }
+}
+@media(pointer:coarse) { .altool-ui .ui-attachment-item > button.ui-attachment-remove { min-width:44px;min-height:44px; } }

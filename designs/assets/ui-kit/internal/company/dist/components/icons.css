@@ -1,0 +1,14 @@
+/* Stroke-only icons. Inline SVG/use inherits foreground color. */
+@layer altool-components {
+.altool-ui .ui-icon, .krds-2024-tokens .ui-icon {
+ display:inline-block; width:1rem; height:1rem; flex:none; vertical-align:-.125em;
+ fill:none; stroke:currentColor; stroke-width:var(--company-button-icon-stroke,1.5);
+ stroke-linecap:round; stroke-linejoin:round;
+}
+.altool-ui .ui-icon[data-size="sm"], .krds-2024-tokens .ui-icon[data-size="sm"] { width:.875rem;height:.875rem; }
+.altool-ui .ui-icon[data-size="lg"], .krds-2024-tokens .ui-icon[data-size="lg"] { width:1.25rem;height:1.25rem; }
+.altool-ui .ui-icon[data-size="xl"], .krds-2024-tokens .ui-icon[data-size="xl"] { width:1.5rem;height:1.5rem; }
+.altool-ui .ui-icon--spin, .krds-2024-tokens .ui-icon--spin { animation:company-icon-spin 1s linear infinite; }
+@keyframes company-icon-spin { to { transform:rotate(360deg); } }
+@media(prefers-reduced-motion:reduce) { .altool-ui .ui-icon--spin,.krds-2024-tokens .ui-icon--spin { animation:none; } }
+}

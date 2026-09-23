@@ -3,84 +3,14 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const crypto = require('node:crypto');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const base = path.join(root, 'designs/assets/ui-kit/internal');
-const folder = path.join(base, 'patterns/services');
+const folder = path.join(base, 'company/recipes/services');
 const model = require(path.join(folder, 'model.js'));
 const variants = require(path.join(folder, 'variants-model.js'));
 const read = name => fs.readFileSync(path.join(folder, name), 'utf8');
 const validDraft = () => ({ eligible: 'yes', topic: '디지털 기초', delivery: '방문', time: '오전' });
-
-test('all five groups and 30 PDF outline entries have independent contracts and source paths', () => {
-  const source = JSON.parse(fs.readFileSync(path.join(base, 'coverage.json'), 'utf8')).items.filter(i => i.category === 'service-patterns');
-  const contracts = JSON.parse(read('contracts.json'));
-  const mapping = JSON.parse(read('mapping.json'));
-  assert.equal(source.length, 30);
-  assert.equal(contracts.items.length, 30);
-  assert.equal(new Set(contracts.items.map(i => i.flow)).size, 5);
-  assert.deepEqual(mapping.items.map(i => i.id).sort(), source.map(i => i.id).sort());
-  for (const item of mapping.items) {
-    const contract = contracts.items.find(c => c.id === item.id);
-    assert.ok(contract.contract.length > 20);
-    assert.ok(contract.implemented.length && Array.isArray(contract.gaps) && contract.verify.length);
-    assert.ok(typeof item.verification === 'string' && item.verification.length > 0);
-    for (const asset of item.assets) assert.ok(fs.statSync(path.join(base, asset)).isFile(), asset);
-    assert.ok(fs.existsSync(path.join(base, item.route.split('#')[0])));
-  }
-});
-
-test('source checklist keeps source hashes, all 293 pages, levels unresolved and all 30 entries', () => {
-  const checklist = JSON.parse(read('checklist.json'));
-  assert.equal(checklist.sourcePageCount, 293);
-  const pages = new Set();
-  let headings = 0;
-  for (const item of checklist.items) {
-    const text = fs.readFileSync(path.resolve(folder, item.reference), 'utf8');
-    assert.equal(crypto.createHash('sha256').update(text).digest('hex'), item.sourceSha256, item.id);
-    for (let page = item.startPage; page <= item.endPage; page++) {
-      assert.ok(text.includes(`## PDF p.${page}`), `${item.id} page ${page}`);
-      assert.ok(!pages.has(page), `duplicate ${page}`);
-      pages.add(page);
-    }
-    for (const rule of item.rules) {
-      assert.ok(rule.pages.length);
-      assert.equal(rule.level, 'requires-original-visual-review');
-      assert.equal(rule.verification, 'not-individually-verified');
-      assert.ok(text.replace(/\s/g, '').includes(rule.text.replace(/\s/g, '')), rule.id);
-    }
-    headings += item.rules.length;
-  }
-  assert.equal(pages.size, 293);
-  assert.equal(Math.min(...pages), 686);
-  assert.equal(Math.max(...pages), 978);
-  assert.equal(checklist.numberedHeadingCount, headings);
-  assert.equal(headings, 172);
-  assert.ok(checklist.items.find(i => i.id === 'krds-p0716').supplement.length);
-  assert.ok(checklist.items.find(i => i.id === 'krds-p0819').supplement.length);
-});
-
-test('source checklist does not silently omit any numbered sentence heading', () => {
-  const checklist = JSON.parse(read('checklist.json'));
-  for (const item of checklist.items) {
-    const text = fs.readFileSync(path.resolve(folder, item.reference), 'utf8');
-    // Independent paragraph scan: every heading with a Korean declarative first sentence must be represented.
-    for (const paragraph of text.split(/\n\s*\n/)) {
-      const lines = paragraph.split('\n');
-      for (let index = 0; index < lines.length; index++) {
-        const heading = lines[index].match(/^\d{2}[ \t]+(\S.*)$/);
-        if (!heading) continue;
-        let candidate = heading[1];
-        for (let n = index + 1; !candidate.includes('다.') && n < lines.length && !/^\d{2}[ \t]/.test(lines[n]); n++) candidate += ' ' + lines[n];
-        const match = candidate.match(/^(.+?다\.)/);
-        if (!match || match[1].length > 402 || match[1].includes('가이드라인')) continue;
-        const key = match[1].replace(/\s/g, '');
-        assert.ok(item.rules.some(r => r.text.replace(/\s/g, '') === key), `${item.id}: ${key}`);
-      }
-    }
-  }
-});
 
 test('service scripts compile without bundler and local assets resolve', () => {
   for (const file of ['model.js', 'services.js']) new vm.Script(read(file), { filename: file });
@@ -246,13 +176,12 @@ test('all service select templates have matched option start and end tags', () =
   }
 });
 
-test('source contract states real-server and full-variant limitations instead of marking compliance', () => {
-  const contracts = JSON.parse(read('contracts.json'));
-  assert.ok(contracts.commonGaps.length >= 4);
-  assert.ok(contracts.levelPolicy.includes('임의로 필수화하지 않는다'));
-  assert.ok(contracts.items.find(i => i.id === 'krds-p0832').uiVariants.implementation.includes('자동복귀'));
-  assert.ok(contracts.items.find(i => i.id === 'krds-p0934').gaps.some(g => g.includes('서버 권한')));
-  assert.ok(read('README.md').includes('모든 적용 조건'));
+test('company service documentation does not claim full application verification', () => {
+  const documentation = read('README.md');
+  assert.ok(documentation.includes('모든 적용 조건'));
+  assert.match(documentation, /실브라우저 검증[^\n]*(?:미완료|미검증)/);
+  assert.ok(documentation.includes('인증·권한·세션 검증을 서버 경계에서 구현'));
+  assert.ok(documentation.includes('실제 SSO·권한·외부 리디렉션은 별도 서버 연결 영역'));
 });
 
 test('variant registry groups alternatives under six semantic IDs with complete local dependency paths', () => {
@@ -266,8 +195,8 @@ test('variant registry groups alternatives under six semantic IDs with complete 
     assert.ok(item.variants[item.defaultVariant]);
     assert.ok(item.constraints.length);
     for (const variant of Object.values(item.variants)) {
-      assert.ok(variant.states.length && variant.sourcePages.length);
-      assert.ok(variant.dependencies.includes('ui-kit/internal/foundations/tokens-2024.css'));
+      assert.ok(variant.states.length);
+      assert.ok(variant.dependencies.includes('ui-kit/internal/company/dist/company.css'));
       for (const file of [variant.path, ...variant.dependencies]) assert.ok(fs.existsSync(path.join(root, 'designs/assets', file)), file);
     }
   }
@@ -283,17 +212,24 @@ test('extended modules compile and every select template has balanced option ele
 });
 
 test('service palette, typography and spacing derive from the shared foundation rather than a second palette', () => {
-  const css=read('services.css')+read('variants.css');
-  const foundation=fs.readFileSync(path.join(base,'foundations/tokens-2024.css'),'utf8');
-  assert.ok(read('services.css').startsWith("@import url('../../foundations/tokens-2024.css')"));
-  for(const file of ['index.html','variants.html']) assert.ok(read(file).includes('class="krds-2024-tokens"'));
-  assert.ok(!/#(?:[a-f0-9]{3}|[a-f0-9]{6})\b/i.test(css),'no independent color literals');
+  const css=fs.readFileSync(path.join(folder,'../recipes.css'),'utf8');
+  const foundation=fs.readFileSync(path.join(base,'../design/theme.css'),'utf8');
+  assert.ok(!fs.existsSync(path.join(folder,'services.css')));
+  for(const file of ['index.html','variants.html']) {
+    assert.ok(read(file).includes('class="krds-2024-tokens altool-ui company-recipe"'));
+    assert.ok(read(file).includes('href="../../dist/company.css"'));
+    assert.ok(read(file).includes('href="../recipes.css"'));
+  }
+  const authoring=fs.readFileSync(path.join(base,'../design/components.css'),'utf8');
+  const colors=text=>new Set((text.match(/#(?:[a-f0-9]{6}|[a-f0-9]{3})\b/gi)||[]).map(v=>v.toLowerCase()));
+  const approved=colors(authoring);
+  for(const color of colors(css)) assert.ok(approved.has(color),'color must derive from approved design: '+color);
   for(const match of css.matchAll(/var\((--krds24-[\w-]+)/g)) {
     if(match[1]==='--krds24-font-family')continue; // Supplied by shared foundation update; safe fallback while developing.
     assert.ok(foundation.includes(match[1]+':'),match[1]);
   }
   assert.ok(!read('index.html').includes('♙'));
-  assert.ok(read('index.html').includes('ico_login.svg'));
+  assert.ok(read('index.html').includes('../../dist/assets/icons/user.svg'));
   assert.ok(read('company-assets.mjs').includes('createAssetClient'));
   assert.ok(read('variants.js').includes("'message.error.load'"));
 });
@@ -377,13 +313,6 @@ test('valid transaction resubmission clears the prior alert before opening confi
   assert.equal(opened,true);
   assert.equal(nodes['transaction-error'].hidden,true);
   assert.equal(nodes['transaction-error'].textContent,'');
-});
-
-test('visual source ledger contains 295 actually observed unique pages and raster evidence hashes', () => {
-  const ledger=JSON.parse(read('pdf-visual-review.json'));
-  assert.equal(ledger.observedPages.length,295);
-  assert.deepEqual(ledger.observedPages.map(p=>p.page),Array.from({length:295},(_,i)=>686+i));
-  for(const page of ledger.observedPages){assert.equal(page.observed,true);assert.ok(page.observation.trim().length>0);assert.match(page.sha256,/^[a-f0-9]{64}$/);}
 });
 
 test('extended relevance ranking and popularity are deterministic and do not mutate records', () => {

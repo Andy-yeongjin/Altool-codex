@@ -1,0 +1,61 @@
+/* Supplemental interaction layouts retain v27 control geometry and focus treatment. */
+.altool-ui .ui-checklist { min-width:0;margin:0;padding:12px;border:1px solid var(--company-field-border); }
+.altool-ui .ui-checklist .ui-choice-group[data-layout="stack"] { display:grid;grid-template-columns:minmax(0,1fr);gap:8px; }
+.altool-ui .ui-checklist label { display:flex;align-items:center;gap:8px;min-height:var(--krds24-control-height-md); }
+.altool-ui .ui-checklist label > span { min-width:0;overflow-wrap:anywhere; }
+.altool-ui .ui-checklist .ui-choice-all { margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--company-table-line); }
+.altool-ui .ui-checklist label:has(input:disabled) { color:var(--company-button-disabled-text); }
+@media(pointer:coarse) { .altool-ui .ui-checklist label { min-height:44px; } }
+.altool-ui .ui-vertical-tabs { display:grid; grid-template-columns:minmax(8rem,12rem) minmax(0,1fr); gap:1rem; }
+.altool-ui .ui-vertical-tabs > .ui-tabs { flex-direction:column; align-self:start; border-bottom:0; border-inline-end:1px solid var(--company-field-border); padding-inline-end:.75rem; }
+.altool-ui .ui-company-navigation summary { padding:.375rem .625rem; min-height:var(--krds24-control-height-md); font-weight:500; cursor:pointer; color:var(--company-nav-text); }
+.altool-ui .ui-company-navigation details details { margin-inline-start:.75rem; }
+.altool-ui .ui-company-navigation summary:focus-visible { outline:2px solid var(--company-brand-focus); outline-offset:2px; }
+@media (max-width:599px) { .altool-ui .ui-vertical-tabs { grid-template-columns:1fr; } }
+/* Company v27 complementary surfaces. Controls inherit the approved company bundle. */
+.altool-ui .ui-carousel { border-block:1px solid var(--company-table-line); }
+.altool-ui .ui-carousel-slide { padding:1.25rem; background:var(--company-section-body-bg); overflow-wrap:anywhere; }
+.altool-ui .ui-carousel-controls,.altool-ui .ui-extension-actions,.altool-ui .ui-page-jump { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; padding-block:.625rem; }
+.altool-ui .ui-page-jump > .ui-field { flex-direction:row;align-items:center;gap:8px; }
+.altool-ui .ui-page-jump > .ui-field > label { margin:0;white-space:nowrap; }
+.altool-ui .ui-page-jump > .ui-field > input { width:5rem;min-width:0; }
+.altool-ui .ui-page-jump > [data-status] { white-space:nowrap; }
+.altool-ui .ui-carousel-controls [data-status] { margin-inline:auto; font-variant-numeric:tabular-nums; }
+.altool-ui .ui-help-content,.altool-ui .ui-tutorial-panel { background:var(--company-section-body-bg); border-block-start:2px solid var(--company-section-accent); padding:1rem; }
+.altool-ui .ui-help-content h2,.altool-ui .ui-tutorial-panel h2 { color:var(--company-section-accent); font-size:1rem; font-weight:500; margin-block:0 .75rem; }
+.altool-ui .ui-coach-target { outline:2px solid var(--company-section-accent); outline-offset:4px; }
+.altool-ui .ui-identifier { display:flex; align-items:center; gap:1rem; padding:1rem; background:var(--company-section-body-bg); color:var(--company-status-text); flex-wrap:wrap; }
+.altool-ui .ui-identifier[data-surface="dark"] { background:var(--company-dialog-header-bg); color:var(--company-dialog-header-text); }
+.altool-ui .ui-identifier img { max-width:10rem; max-height:3rem; }
+.altool-ui .ui-masthead { border-block-end:1px solid var(--company-table-line); padding:.625rem 1rem; background:var(--company-section-body-bg); }
+.altool-ui .ui-in-page-nav { border-inline-start:2px solid var(--company-section-accent); padding-inline-start:1rem; }
+.altool-ui .ui-in-page-nav ul { list-style:none; padding:0; margin:0; }
+.altool-ui .ui-in-page-nav a { display:inline-flex; padding:.375rem 0; }
+.altool-ui .ui-company-link { color:var(--company-nav-selected); text-decoration:underline; text-underline-offset:.2em; overflow-wrap:anywhere; }
+.altool-ui .ui-company-link:hover { color:var(--company-nav-selected-hover); }
+.altool-ui .ui-company-link[aria-disabled="true"] { color:var(--company-button-disabled-text); cursor:not-allowed; }
+.altool-ui .ui-skip-link { display:inline-block; padding:.625rem; color:var(--company-dialog-header-text); background:var(--company-dialog-header-bg); }
+.altool-ui .ui-skip-link:not([data-visibility="visible"]) { position:fixed; inset-block-start:.5rem; inset-inline-start:.5rem; z-index:10; }
+.altool-ui .ui-skip-link:not([data-visibility="visible"]):not(:focus) { width:1px; height:1px; overflow:hidden; clip-path:inset(50%); padding:0; }
+.altool-ui .ui-skip-link[data-visibility="visible"]:focus { position:relative; z-index:10; }
+.altool-ui .ui-company-image { margin:0; }
+.altool-ui .ui-company-image img { display:block; max-width:100%; height:auto; }
+.altool-ui .ui-company-image figcaption { margin-block-start:.5rem; color:var(--company-nav-text); }
+.altool-ui .ui-image-fallback { padding:1rem; border:1px solid var(--company-table-line); background:var(--company-section-body-bg); }
+.altool-ui .ui-structured-list { list-style:none; padding:0; margin:0; }
+.altool-ui .ui-structured-list > li { padding:1rem 0; border-block-end:1px solid var(--company-table-line); }
+.altool-ui .ui-structured-list h3 { margin:0 0 .5rem; font-size:1rem; font-weight:500; }
+.altool-ui .ui-structured-list p { margin:.375rem 0; }
+.altool-ui .ui-structured-list[data-layout="grid"] { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr)); gap:1rem; }
+.altool-ui .ui-structured-list[data-layout="grid"] > li { padding:1rem; background:var(--company-section-body-bg); border-block-start:2px solid var(--company-section-accent); }
+.altool-ui .ui-page-jump input { width:4rem; }
+.altool-ui .ui-company-progress { display:grid; gap:.375rem; }
+.altool-ui .ui-company-progress [role="progressbar"] { height:.5rem; background:var(--company-field-readonly-bg); overflow:hidden; }
+.altool-ui .ui-company-progress [data-progress-fill] { display:block; height:100%; background:var(--company-section-accent); }
+.altool-ui .ui-company-progress [data-progress-text] { font-variant-numeric:tabular-nums; color:var(--company-status-text); }
+.altool-ui .ui-site-header.is-scroll-hidden { transform:translateY(-100%); }
+@media (max-width:599px) {
+ .altool-ui .ui-in-page-nav { border-inline-start:0; border-block-start:2px solid var(--company-section-accent); padding:1rem 0; }
+ .altool-ui .ui-tutorial-panel,.altool-ui .ui-help-content { padding:.875rem; }
+}
+.altool-ui .ui-carousel [hidden],.altool-ui .ui-help [hidden],.altool-ui .ui-tutorial [hidden],.altool-ui .ui-company-image [hidden],.altool-ui .ui-transfer [hidden] { display:none; }

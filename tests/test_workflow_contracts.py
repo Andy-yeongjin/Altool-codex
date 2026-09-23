@@ -18,7 +18,9 @@ class WorkflowContractsTests(unittest.TestCase):
         server = (ROOT / 'altool/steps/_server.md').read_text()
         self.assertIn('baseURL', server)
         self.assertIn('소유권', server)
-        self.assertIn('기존 서버는 종료하지 않는다', server)
+        self.assertIn('기존 프로젝트 서버를 재사용하면 `managedServer=false`이며 종료하지 않는다', server)
+        self.assertIn('자신이 시작한 PID와 그 하위 프로세스만 종료한다', server)
+        self.assertIn('포트에 있는 임의 프로세스를 종료하지 않는다', server)
 
     def test_command_design_procedures_link_to_shared_owner(self):
         for step in ("oneshot", "freedom", "guide", "design_source", "research"):

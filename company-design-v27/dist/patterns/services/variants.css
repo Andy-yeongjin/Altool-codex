@@ -1,0 +1,42 @@
+
+.variant-nav { border-bottom:1px solid var(--line); padding:var(--krds24-space-16) 0; margin-bottom:var(--krds24-space-16); }
+.variant-nav a[aria-current=page] { font-weight:var(--krds24-font-bold); text-decoration-thickness:3px; }
+.variant-toolbar { display:flex; gap:calc(var(--krds24-space-16) * 0.7); flex-wrap:wrap; align-items:center; }
+.variant-toolbar>* { min-height:44px; }
+.service-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--krds24-space-16); }
+.service-grid article { border:1px solid var(--line); padding:var(--krds24-space-16); border-radius:var(--krds24-radius-4); }
+.service-grid h3 { overflow-wrap:anywhere; }
+.variant-tabs { display:flex; gap:var(--krds24-space-8); margin:var(--krds24-space-16) 0; border-bottom:1px solid var(--line); }
+.variant-tabs [aria-selected=true] { border-bottom:3px solid var(--primary); font-weight:var(--krds24-font-bold); }
+.provider-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--krds24-space-8); }
+.media-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--krds24-space-16); list-style:none; padding:0; }
+.media-grid img { width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; background:var(--surface); }
+.media-grid article { border:1px solid var(--line); border-radius:var(--krds24-radius-4); padding:var(--krds24-space-16); }
+.media-viewer { overflow:auto; background:var(--surface); text-align:center; }
+.media-viewer img { width:100%; max-width:none; }
+.animation-stage { position:relative; padding:var(--krds24-space-32) var(--krds24-space-16); border:1px solid var(--line); display:flex; gap:calc(var(--krds24-space-16) * 0.75); }
+.animation-stage span { flex:1; padding:var(--krds24-space-16) var(--krds24-space-8); background:var(--surface); border-bottom:5px solid var(--line); }
+.animation-stage span.current { border-color:var(--primary); font-weight:var(--krds24-font-bold); }
+.home-banner { padding:var(--krds24-space-24); background:var(--krds24-primary-5); border:1px solid var(--line); }
+.home-banner h3 { margin-top:0; }
+.table-scroll { overflow:auto; }
+table { border-collapse:collapse; width:100%; text-align:left; }
+th,td { border-bottom:1px solid var(--line); padding:calc(var(--krds24-space-16) * 0.7); vertical-align:top; }
+caption { text-align:left; font-weight:var(--krds24-font-bold); padding:var(--krds24-space-8) 0; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:var(--krds24-space-16); }
+.form-grid label { display:flex; flex-direction:column; gap:var(--krds24-space-8); }
+.source-note { color:var(--muted); font-size:var(--krds24-body-small-size); margin:var(--krds24-space-16) 0; }
+.urgent { padding:var(--krds24-space-16); background:var(--krds24-warning-5); border-left:4px solid var(--krds24-warning-70); }
+.record-selection { display:flex; gap:var(--krds24-space-8); align-items:center; }
+#header-search-form { display:flex; gap:var(--krds24-space-8); align-items:center; flex-wrap:wrap; }
+#header-search-form input { min-width:0; flex:1; }
+.media-grid h3,.media-grid article>p { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; }
+.media-grid mark { color:var(--ink); background:var(--krds24-warning-5); font-weight:var(--krds24-font-bold); }
+.search-layout.side { display:grid; grid-template-columns:minmax(180px,1fr) 3fr; gap:var(--krds24-space-16); }
+.search-layout.side>form { align-self:start; }
+.search-layout.side>form .form-grid { grid-template-columns:1fr; }
+@media(max-width:760px) { .search-layout.side { display:block; } }
+@media(max-width:760px) { .service-grid,.form-grid { grid-template-columns:1fr; } .media-grid,.provider-list { grid-template-columns:repeat(2,minmax(0,1fr)); } .table-scroll table { min-width:680px; } }
+@media(max-width:440px) { .media-grid,.provider-list { grid-template-columns:1fr; } .animation-stage { flex-direction:column; } }
+@media print { header,.sample-banner,.variant-nav,.filters,.actions,footer,#screen-reload,#screen-state,button { display:none!important; } main { max-width:none; padding:0; } .table-scroll { overflow:visible; } table { min-width:0!important; } }
+

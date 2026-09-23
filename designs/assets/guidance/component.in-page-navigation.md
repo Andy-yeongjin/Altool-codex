@@ -9,9 +9,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G02: 데스크톱은 본문 오른쪽, 읽기 순서는 제목→콘텐츠 내 탐색→본문이다. 모바일은 본문 앞의 비고정 탐색으로 둔다. 최대 3단계와 현재 섹션 식별자를 유지한다. (p.210–212)
 - G03: 스크롤에 따라 현재 섹션을 갱신한다. 포인터 클릭은 링크에 초점을 유지하고 키보드 실행은 대상 제목/섹션으로 초점을 이동한다. (p.212)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0204.md](../ui-kit/internal/components/krds-p0204.md)
-- [ui-kit/internal/reference/krds-p0204.md](../ui-kit/internal/reference/krds-p0204.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

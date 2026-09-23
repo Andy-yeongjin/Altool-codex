@@ -212,10 +212,10 @@ research/plan/spec/report 문서 작성 판단은 lesson에 기록하지 않는�
 🐣 [al:freedom] 루프 {N} 완료 - 다음 사이클: {continue 또는 stop}
 ```
 
-루프 예산을 모두 사용한 경우:
+루프 예산을 모두 사용하고 최종 완료 게이트도 통과한 경우 (미완료·차단이면 `_common.md`에 따라 ⚠️와 사유 출력):
 
 ```text
-🐣 [al:freedom] {loopsCompleted}/{loopBudget} 루프 완료 - 지정된 루프 횟수에 도달했습니다.
+🐥 [al:freedom] {loopsCompleted}/{loopBudget} 루프 완료 - 지정된 실행과 검증을 완료했습니다.
 ```
 
 ## 9. 안전 경계

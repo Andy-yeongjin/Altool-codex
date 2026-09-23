@@ -1,0 +1,35 @@
+/* Isolated yellow palette preview; shared default remains blue. */
+.krds-2024-tokens {
+  --company-brand-primary:#F2C94C;
+  --company-brand-foreground:#806012;
+  --company-brand-focus:#806012;
+  --company-brand-hover:#E3B635;
+  --company-brand-active:#D3A526;
+  --company-brand-on-primary:#302710;
+  --company-brand-soft:#FFF7DC;
+  --company-brand-row-hover:#FFFAE9;
+  --company-brand-row-selected:#FFF0B8;
+  --company-brand-header:#3D321C;
+  --company-brand-header-hover:#59492A;
+  --company-brand-on-header:#FFFFFF;
+  --company-brand-header-muted:#EBE3CF;
+  --company-brand-header-disabled:#C7BA9C;
+  --company-brand-menu-shadow:rgba(61,50,28,.56);
+  --company-brand-primary-5:#FFFCF1;
+  --company-brand-primary-10:#FFF7DC;
+  --company-brand-primary-20:#FFF0B8;
+  --company-brand-primary-30:#F9DE86;
+  --company-brand-primary-40:#F5D360;
+  --company-brand-primary-80:#65501B;
+  --company-brand-primary-90:#3D321C;
+  --company-brand-secondary-5:#F8F6F0;
+  --company-brand-secondary-10:#EEE8D8;
+  --company-brand-secondary-20:#DBCFAD;
+  --company-brand-secondary-30:#BBAB7C;
+  --company-brand-secondary-40:#8B7847;
+  --company-brand-secondary-50:#65532C;
+  --company-brand-secondary-60:#514325;
+  --company-brand-secondary-70:#3D321C;
+  --company-brand-secondary-80:#2D2515;
+  --company-brand-secondary-90:#1E190F;
+}

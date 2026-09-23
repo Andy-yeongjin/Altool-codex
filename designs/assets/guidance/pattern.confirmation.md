@@ -10,10 +10,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G03: 확정과 취소 행동을 모두 제공한다.
 - G04: 버튼은 '확인/예' 대신 실제 행동을 설명하는 레이블을 쓴다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/patterns/basic/confirm.md](../ui-kit/internal/patterns/basic/confirm.md)
-- [ui-kit/internal/patterns/basic/extended.md](../ui-kit/internal/patterns/basic/extended.md)
-- [ui-kit/internal/reference/krds-p0677.md](../ui-kit/internal/reference/krds-p0677.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

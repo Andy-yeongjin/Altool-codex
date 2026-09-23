@@ -97,7 +97,37 @@ def load(root):
             for path in paths:
                 if not isinstance(path, str) or path not in files:
                     raise ValueError(f'Unpinned variant dependency: {identifier}/{name}/{path}')
+    if registry.get('designSystem') == 'company-v27-only':
+        validate_company_design(root, registry)
     return registry, lock
+
+
+def validate_company_design(root, registry):
+    """The v2 product has no selectable or installed legacy executable UI."""
+    retired = [
+        'ui-kit/internal/reference',
+        'ui-kit/internal/upstream', 'ui-kit/internal/examples', 'ui-kit/internal/components',
+        'ui-kit/internal/foundations', 'ui-kit/internal/patterns', 'icons/directions',
+        'ui-kit/internal/company/dist/patterns',
+        'ui-kit/internal/company/dist/foundations/company-custom.css',
+        'ui-kit/internal/company/dist/components/guided-runtime.css',
+    ]
+    for relative in retired:
+        path = inside(root, BASE + '/' + relative)
+        if path.is_file() or (path.is_dir() and any(file.is_file() for file in path.rglob('*'))):
+            raise ValueError(f'Retired government UI remains: {relative}')
+    company = BASE + '/ui-kit/internal/company/'
+    for item in registry['items']:
+        for name, variant in item['variants'].items():
+            if variant.get('legacyOnly'):
+                raise ValueError(f'Retired UI variant: {item["id"]}/{name}')
+            if item['kind'] in {'component', 'pattern', 'service', 'foundation', 'icon'} and not variant['path'].startswith(company):
+                raise ValueError(f'Non-company UI implementation: {item["id"]}/{name}')
+            for path in [variant['path'], *variant.get('dependencies', [])]:
+                # Normalize before testing so ../ cannot hide a retired dependency.
+                normalized = str(inside(root, path).relative_to(root.resolve()))
+                if any(normalized == BASE + '/' + old or normalized.startswith(BASE + '/' + old + '/') for old in retired):
+                    raise ValueError(f'Retired UI dependency: {path}')
 
 
 def resolve(root, identifier, variant=None, *, audience='company'):

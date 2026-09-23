@@ -46,7 +46,7 @@ const contracts = [
   {id:'section-title',kind:'style',selector:'#overview h2',viewport:{width:1440,height:1000},expected:{fontSize:21,marginTop:0}},
   {id:'first-list',kind:'entry',selector:'#company-list',viewport:{width:1440,height:1000}},
   {id:'chart-labels',kind:'text',selector:'#trend text',viewport:{width:375,height:1000},minimum:13},
-  {id:'previous',kind:'icon',selector:'#previous img',viewport:{width:375,height:1000},src:'/company-assets/icons/directions/chevron-left-default.svg'},
+  {id:'previous',kind:'icon',selector:'#previous img',viewport:{width:375,height:1000},src:'/company-assets/ui-kit/internal/company/dist/assets/icons/chevron-left.svg'},
 ];
 // 같은 viewport의 계약만 선택해 실제 해당 폭으로 측정한다.
 const measured = await page.evaluate(collectUiMeasurements, selectedContracts);
@@ -57,28 +57,46 @@ expect(result.failures).toEqual([]);
 - style은 CSS 소스 문자열이 아니라 computed px를 대조한다. entry는 문서 시작 기준 첫 viewport 안의 노출 여부다. text는 SVG 변환을 반영한 실제 글자 크기이며 라벨 간격·잘림까지 보장하지 않는다. 필요한 간격은 화면 Spec과 별도 DOM rect 검사·캡처로 대조한다. icon은 승인된 방향 파일과 추가 회전 없음을 확인한다. blob 아이콘은 별도 원본 hash·방향 관찰을 기록한다.
 - 대상 부재/중복, 다른 viewport, NaN, 누락 관찰은 실패한다. 가로 넘침 없음과 글자 가독성은 다른 검사다. 공통 CSS 앞/뒤로 앱 CSS를 배치하는 회귀도 제품 테스트에서 실행한다.
 - 앱별 selector·기대값은 기능 Spec/테스트가 소유한다. 결과와 캡처를 `.altool/evidence/` 등에 남겨 UI-03 및 자산 요구별 checks에 연결한다. 1개 관찰 파일을 여러 요구에 재사용해도 개별 passed/failed/pending/N/A 근거는 유지한다. 실패 기대값을 현재 화면에 맞춰 바꾸지 않는다.
-- adapter/runtime의 일반 선언은 `altool-base → altool-components → 앱의 비계층 CSS` 우선순위를 사용한다. 이는 모든 회사 CSS의 순서 독립 보장이 아니다. 다른 파일은 비계층이고, 동일 계층 내부의 구체성·소스 순서와 important 선언 등 일반 캐스케이드 규칙도 남는다. 앱 CSS의 우선권은 회사 의미·토큰의 필수 계약을 임의로 바꿀 권한이 아니다. 아래 파일 범위를 확인하고 소비 화면에서 실제 충돌을 검증한다.
+- company.css 중 계층을 선언한 부분은 `altool-base → altool-components → 앱의 비계층 CSS` 우선순위를 사용한다. 번들 안에는 비계층 선언도 있어 모든 회사 CSS의 순서 독립을 보장하지 않는다. 동일 계층 내부의 구체성·소스 순서와 important 선언 등 일반 캐스케이드 규칙도 남는다. 앱 CSS의 우선권은 회사 의미·토큰의 필수 계약을 임의로 바꿀 권한이 아니다. 아래 파일 범위를 확인하고 소비 화면에서 실제 충돌을 검증한다.
 
 ### 완료 검사기에 연결
 
-회사 팩 qa.11의 CSS 범위: 전체 핀14개 중 작성 원본2개를 제외한 사전검사 대상은12개이며, 계층 선언은 사전검사 대상2개/작성 원본 포함3개다. 원본도 설치 시 복사되지만 화면이 로드하는 스타일과는 구분한다. 사전검사 대상 전부를 모든 화면에 로드하라는 뜻은 아니며 선택 자산의 의존 파일만 사용한다.
+회사 v27-only 팩 2.0.0-qa.6 기준 CSS 핀은 32개이며 작성 원본 2개를 제외한 30개가 사전검사 대상이다(2.0.0-qa.1/2/3과 동일한 경로 목록). 배포 dist CSS도 일반 디렉터리 제외에 묻히지 않도록 명시적으로 검사한다. 구형 adapter·guided-runtime·patterns·Swiper CSS는 선택·배포 대상에서 제거했다. 화면은 company.css 한 벌을 사용하며 표의 개별 CSS를 함께 중복 로드하지 않는다. 작성 원본·생성 청크·번들·검사용 예제의 개수를 서로 다른 화면 수로 해석하지 않는다. 실제 브라우저 검증은 미완료이며 캐스케이드·비활성·키보드·반응형은 소비 화면에서 별도로 검증해야 한다.
 
 | 핀 파일(프로젝트 상대 경로) | 역할 | @layer 선언 |
 | --- | --- | --- |
 | `designs/assets/runtime/demo.css` | 사전검사 대상 | 없음 |
 | `designs/assets/ui-kit/design/components.css` | 작성 원본·사전검사 제외 | 있음 |
 | `designs/assets/ui-kit/design/theme.css` | 작성 원본·사전검사 제외 | 없음 |
-| `designs/assets/ui-kit/internal/components/guided-runtime.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/components/runtime.css` | 사전검사 대상 | 있음 |
-| `designs/assets/ui-kit/internal/foundations/company-adapter.css` | 사전검사 대상 | 있음 |
-| `designs/assets/ui-kit/internal/foundations/layout.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/foundations/tokens-2024.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/patterns/basic/basic.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/patterns/basic/extended.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/patterns/basic/variants.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/patterns/services/services.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/patterns/services/variants.css` | 사전검사 대상 | 없음 |
-| `designs/assets/ui-kit/internal/upstream/resources/css/plugin/swiper-bundle.min.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/company.css` | 사전검사 대상 | 있음 |
+| `designs/assets/ui-kit/internal/company/dist/components/accordions.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/attachments.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/business.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/data-states.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/dialogs.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/enterprise.css` | 사전검사 대상 | 있음 |
+| `designs/assets/ui-kit/internal/company/dist/components/extensions.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/feedback.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/filter-bar.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/forms.css` | 사전검사 대상 | 있음 |
+| `designs/assets/ui-kit/internal/company/dist/components/icons.css` | 사전검사 대상 | 있음 |
+| `designs/assets/ui-kit/internal/company/dist/components/menus.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/navigation.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/page-frame.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/progress.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/recipes.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/runtime.css` | 사전검사 대상 | 있음 |
+| `designs/assets/ui-kit/internal/company/dist/components/search-assist.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/sections.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/select.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/site-navigation.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/summaries.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/components/tooltips.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/foundations/layout.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/dist/foundations/tokens-2024.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/examples/business-demo.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/extensions/styles.css` | 사전검사 대상 | 없음 |
+| `designs/assets/ui-kit/internal/company/recipes/recipes.css` | 사전검사 대상 | 없음 |
 
 릴리스 제작기는 명시 색상 조합 수(checkedPairs)와 정적 미판정 규칙 수(ambiguousRules)를 서로 다른 단위로 출력·release-reports에 기록한다. 두 수치를 합쳐 전체 UI 대비 커버리지 비율로 해석하지 않는다. 정적 미판정은 실제 소비 화면에서 확인하며 사전검사는 실브라우저 검증을 대신하지 않는다.
 

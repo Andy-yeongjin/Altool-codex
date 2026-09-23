@@ -1,0 +1,1290 @@
+{
+  "version": 1,
+  "source": "company-design-v27",
+  "iconAliases": {
+    "user": "account",
+    "x": "close",
+    "trash": "delete",
+    "refresh": "reset",
+    "eye": "password-visible",
+    "eye-off": "password-hidden"
+  },
+  "items": [
+    {
+      "id": "component.accordion",
+      "path": "accordions-preview.html",
+      "meaning": "접기 펼치기",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "accordions-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "collapsed",
+        "expanded",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.badge",
+      "path": "feedback-preview.html",
+      "meaning": "상태 배지",
+      "section": "common",
+      "kind": "component",
+      "preview": "feedback-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.breadcrumb",
+      "path": "page-frame-preview.html",
+      "meaning": "현재 위치",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "page-frame-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.button",
+      "path": "buttons-preview.html",
+      "meaning": "역할별 버튼",
+      "section": "common",
+      "kind": "component",
+      "preview": "buttons-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.checkbox",
+      "path": "forms-preview.html",
+      "meaning": "체크박스",
+      "section": "form",
+      "kind": "component",
+      "preview": "forms-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.radio-button",
+      "path": "forms-preview.html",
+      "meaning": "라디오 선택",
+      "section": "form",
+      "kind": "component",
+      "preview": "forms-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.select",
+      "path": "select-preview.html",
+      "meaning": "단일 선택",
+      "section": "form",
+      "api": "CompanySelect.enhanceAll/refresh",
+      "kind": "component",
+      "preview": "select-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.text-input",
+      "path": "forms-preview.html",
+      "meaning": "입력창",
+      "section": "form",
+      "kind": "component",
+      "preview": "forms-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.textarea",
+      "path": "forms-preview.html",
+      "meaning": "여러 줄 입력",
+      "section": "form",
+      "kind": "component",
+      "preview": "forms-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.modal",
+      "path": "dialogs-preview.html",
+      "meaning": "대화상자",
+      "section": "common",
+      "kind": "component",
+      "preview": "dialogs-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "closed",
+        "open",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.pagination",
+      "path": "navigation-preview.html",
+      "meaning": "페이지 이동",
+      "section": "search",
+      "kind": "component",
+      "preview": "navigation-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.tab",
+      "path": "navigation-preview.html",
+      "meaning": "탭",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "navigation-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.table",
+      "path": "tables-preview.html",
+      "meaning": "데이터 표",
+      "section": "search",
+      "kind": "component",
+      "preview": "tables-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.header",
+      "path": "site-navigation-preview.html",
+      "meaning": "상단 메뉴",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "site-navigation-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.main-menu",
+      "path": "site-navigation-preview.html",
+      "meaning": "주 메뉴",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "site-navigation-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.side-navigation",
+      "path": "site-navigation-preview.html",
+      "meaning": "좌측 메뉴",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "site-navigation-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.footer",
+      "path": "page-frame-preview.html",
+      "meaning": "페이지 하단",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "page-frame-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.critical-alerts",
+      "path": "feedback-preview.html",
+      "meaning": "지속 안내",
+      "section": "common",
+      "kind": "component",
+      "preview": "feedback-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.step-indicator",
+      "path": "progress-preview.html",
+      "meaning": "단계 진행",
+      "section": "transaction",
+      "kind": "component",
+      "preview": "progress-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.spinner",
+      "path": "progress-preview.html",
+      "meaning": "진행 표시",
+      "section": "common",
+      "kind": "component",
+      "preview": "progress-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "loading"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.tag",
+      "path": "search-assist-preview.html",
+      "meaning": "조회 태그",
+      "section": "search",
+      "kind": "component",
+      "preview": "search-assist-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.disclosure",
+      "path": "accordions-preview.html",
+      "meaning": "정보 펼치기",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "accordions-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "collapsed",
+        "expanded",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.contextual-help",
+      "path": "tooltips-preview.html",
+      "meaning": "문맥 도움말",
+      "section": "common",
+      "kind": "component",
+      "preview": "tooltips-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.tooltip",
+      "path": "tooltips-preview.html",
+      "meaning": "짧은 도움말",
+      "section": "common",
+      "kind": "component",
+      "preview": "tooltips-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "hidden",
+        "visible",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.section",
+      "path": "sections-preview.html",
+      "meaning": "업무 영역 구분",
+      "section": "common",
+      "kind": "component",
+      "preview": "sections-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.metric",
+      "path": "summaries-preview.html",
+      "meaning": "지표 요약",
+      "section": "dashboard",
+      "kind": "component",
+      "preview": "summaries-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.menu",
+      "path": "menus-preview.html",
+      "meaning": "작업 메뉴",
+      "section": "navigation",
+      "kind": "component",
+      "preview": "menus-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "closed",
+        "open",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.calendar",
+      "path": "business-preview.html",
+      "meaning": "달력",
+      "section": "form",
+      "api": "CompanyBusiness.datePicker",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.date-input",
+      "path": "business-preview.html",
+      "meaning": "날짜 입력",
+      "section": "form",
+      "api": "CompanyBusiness.datePicker",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "pattern.filter",
+      "path": "filter-bar-preview.html",
+      "meaning": "가로 조회조건",
+      "section": "search",
+      "api": "CompanyBusiness.dateRange",
+      "kind": "pattern",
+      "preview": "filter-bar-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "foundation.company-ui",
+      "path": "dist/company.css",
+      "meaning": "회사 공통 UI 번들",
+      "section": "common",
+      "kind": "foundation",
+      "preview": "catalog.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.date-range",
+      "path": "business-preview.html",
+      "meaning": "날짜·월·기간",
+      "section": "form",
+      "api": "CompanyBusiness.datePicker/dateRange",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.lookup",
+      "path": "business-preview.html",
+      "meaning": "코드·명칭 검색",
+      "section": "form",
+      "api": "CompanyBusiness.lookup",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.multiselect",
+      "path": "business-preview.html",
+      "meaning": "검색 가능한 다중 선택",
+      "section": "form",
+      "api": "CompanyBusiness.multiselect",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "pattern.form",
+      "path": "business-preview.html",
+      "meaning": "상세 폼",
+      "section": "form",
+      "api": "CompanyBusiness.validateForm",
+      "kind": "pattern",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.table-tools",
+      "path": "business-preview.html",
+      "meaning": "표·일괄 작업",
+      "section": "search",
+      "api": "CompanyBusiness.tableTools",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "sorted",
+        "selected"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "pattern.save-feedback",
+      "path": "business-preview.html",
+      "meaning": "저장·오류 안내",
+      "section": "search",
+      "api": "CompanyBusiness.busy/validateForm/confirm/toast/dirtyGuard",
+      "kind": "pattern",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "idle",
+        "saving",
+        "success",
+        "error"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.drawer",
+      "path": "business-preview.html",
+      "meaning": "우측 상세 패널",
+      "section": "search",
+      "api": "CompanyBusiness.dialog",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "closed",
+        "open",
+        "focus"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.organization-tree",
+      "path": "business-preview.html",
+      "meaning": "조직 탐색",
+      "section": "search",
+      "api": "CompanyBusiness.tree",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "collapsed",
+        "expanded",
+        "selected"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "pattern.history",
+      "path": "business-preview.html",
+      "meaning": "처리·결재 이력",
+      "section": "transaction",
+      "api": "CompanyBusiness.timeline",
+      "kind": "pattern",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.filter-presets",
+      "path": "business-preview.html",
+      "meaning": "조회조건 저장",
+      "section": "search",
+      "api": "CompanyBusiness.presets",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "error"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.bar-chart",
+      "path": "business-preview.html",
+      "meaning": "공통 가로 막대 차트",
+      "section": "dashboard",
+      "api": "CompanyBusiness.barChart",
+      "kind": "component",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "empty"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "pattern.system-state",
+      "path": "business-preview.html",
+      "meaning": "시스템 상태",
+      "section": "search",
+      "api": "CompanyBusiness.systemState",
+      "kind": "pattern",
+      "preview": "business-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "permission",
+        "expired"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    },
+    {
+      "id": "component.file-upload",
+      "path": "attachments-preview.html",
+      "meaning": "파일 첨부 A",
+      "section": "form",
+      "api": "CompanyBusiness.attachments",
+      "kind": "component",
+      "preview": "attachments-preview.html",
+      "dependencies": [
+        "dist/company.css",
+        "dist/business.js",
+        "dist/select.js",
+        "dist/assets/icons.svg",
+        "dist/assets/icons.json",
+        "docs/BUSINESS-USAGE.md",
+        "docs/CONSISTENCY.md",
+        "docs/PAGE-PATTERNS.md",
+        "GUIDE.md"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "constraints": [
+        "회사 v27의 정해진 클래스·API와 문서를 읽고 조합한다. 예제 데이터·샘플 동작을 실제 업무로 복제하지 않는다.",
+        "company.css는 한 번만 로드하고 legacy basic/services/upstream CSS와 섞지 않는다.",
+        "DB·권한·저장·업로드는 앱 adapter가 담당한다. 브라우저 상태·키보드·좁은 화면·글자 크기를 실제 검증한다."
+      ]
+    }
+  ]
+}

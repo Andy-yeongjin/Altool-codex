@@ -1,13 +1,69 @@
 {
   "version": 1,
   "items": {
-    "icon.chevron-left": {"source": "designs/assets/guidance/common.md", "section": "icon", "references": []},
-    "icon.chevron-right": {"source": "designs/assets/guidance/common.md", "section": "icon", "references": []},
-    "icon.chevron-up": {"source": "designs/assets/guidance/common.md", "section": "icon", "references": []},
-    "icon.chevron-down": {"source": "designs/assets/guidance/common.md", "section": "icon", "references": []},
-    "brand.symbol": {
+    "icon.globe": {
       "source": "designs/assets/guidance/common.md",
-      "section": "brand",
+      "section": "icon",
+      "references": []
+    },
+    "icon.pause": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.square": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.square-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.thumbs-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.toggle-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.toggle-right": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.type": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.zoom-in": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-right": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-down": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
       "references": []
     },
     "brand.wordmark": {
@@ -16,310 +72,199 @@
       "references": []
     },
     "component.accordion": {
-      "source": "designs/assets/guidance/component.accordion.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0288.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0288.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.badge": {
-      "source": "designs/assets/guidance/component.badge.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0282.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0282.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
     },
     "component.breadcrumb": {
-      "source": "designs/assets/guidance/component.breadcrumb.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0176.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0176.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.button": {
-      "source": "designs/assets/guidance/component.button.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0368.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0368.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
     },
     "component.calendar": {
-      "source": "designs/assets/guidance/component.calendar.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0251.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0251.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.carousel": {
       "source": "designs/assets/guidance/component.carousel.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0307.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0307.md"
-      ]
+      "references": []
     },
     "component.checkbox": {
-      "source": "designs/assets/guidance/component.checkbox.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0405.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0405.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.coach-mark": {
       "source": "designs/assets/guidance/component.coach-mark.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0485.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0485.md"
-      ]
+      "references": []
     },
     "component.contextual-help": {
-      "source": "designs/assets/guidance/component.contextual-help.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0468.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0468.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
     },
     "component.critical-alerts": {
-      "source": "designs/assets/guidance/component.critical-alerts.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0243.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0243.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
     },
     "component.date-input": {
-      "source": "designs/assets/guidance/component.date-input.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0500.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0500.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.disclosure": {
-      "source": "designs/assets/guidance/component.disclosure.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0262.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0262.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.file-upload": {
-      "source": "designs/assets/guidance/component.file-upload.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0533.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0533.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.footer": {
-      "source": "designs/assets/guidance/component.footer.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0128.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0128.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.header": {
-      "source": "designs/assets/guidance/component.header.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0135.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0135.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.help-panel": {
       "source": "designs/assets/guidance/component.help-panel.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0446.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0446.md"
-      ]
+      "references": []
     },
     "component.identifier": {
       "source": "designs/assets/guidance/component.identifier.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0121.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0121.md"
-      ]
+      "references": []
     },
     "component.image": {
       "source": "designs/assets/guidance/component.image.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0299.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0299.md"
-      ]
+      "references": []
     },
     "component.in-page-navigation": {
       "source": "designs/assets/guidance/component.in-page-navigation.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0204.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0204.md"
-      ]
+      "references": []
     },
     "component.link": {
       "source": "designs/assets/guidance/component.link.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0354.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0354.md"
-      ]
+      "references": []
     },
     "component.main-menu": {
-      "source": "designs/assets/guidance/component.main-menu.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0159.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0159.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.masthead": {
       "source": "designs/assets/guidance/component.masthead.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0114.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0114.md"
-      ]
+      "references": []
     },
     "component.modal": {
-      "source": "designs/assets/guidance/component.modal.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0270.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0270.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
     },
     "component.pagination": {
-      "source": "designs/assets/guidance/component.pagination.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0213.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0213.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
     },
     "component.radio-button": {
-      "source": "designs/assets/guidance/component.radio-button.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0382.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0382.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.select": {
-      "source": "designs/assets/guidance/component.select.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0397.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0397.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.side-navigation": {
-      "source": "designs/assets/guidance/component.side-navigation.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0189.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0189.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.skip-link": {
       "source": "designs/assets/guidance/component.skip-link.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0150.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0150.md"
-      ]
+      "references": []
     },
     "component.spinner": {
-      "source": "designs/assets/guidance/component.spinner.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0437.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0437.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
     },
     "component.step-indicator": {
-      "source": "designs/assets/guidance/component.step-indicator.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0430.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0430.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "transaction",
+      "references": []
     },
     "component.structured-list": {
       "source": "designs/assets/guidance/component.structured-list.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0236.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0236.md"
-      ]
+      "references": []
     },
     "component.tab": {
-      "source": "designs/assets/guidance/component.tab.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0328.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0328.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
     },
     "component.table": {
-      "source": "designs/assets/guidance/component.table.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0342.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0342.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
     },
     "component.tag": {
-      "source": "designs/assets/guidance/component.tag.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0418.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0418.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
     },
     "component.text-input": {
-      "source": "designs/assets/guidance/component.text-input.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0522.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0522.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.textarea": {
-      "source": "designs/assets/guidance/component.textarea.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0513.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0513.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "component.tutorial-panel": {
       "source": "designs/assets/guidance/component.tutorial-panel.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/components/krds-p0459.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0459.md"
-      ]
+      "references": []
     },
     "foundation.layout": {
       "source": "designs/assets/guidance/foundation.layout.md",
       "section": "usage",
-      "references": ["designs/assets/ui-kit/internal/foundations/krds-p0088.md", "designs/assets/ui-kit/internal/reference/krds-p0088.md"]
+      "references": []
     },
     "foundation.tokens": {
       "source": "designs/assets/guidance/common.md",
       "section": "foundation",
-      "references": ["designs/assets/ui-kit/internal/foundations/README.md", "designs/assets/ui-kit/internal/foundations/review-recipes.json", "designs/assets/ui-kit/internal/reference/krds-p0064.md", "designs/assets/ui-kit/internal/reference/krds-p0078.md", "designs/assets/ui-kit/internal/reference/krds-p0084.md"]
+      "references": []
     },
     "icon.account": {
       "source": "designs/assets/guidance/common.md",
@@ -814,7 +759,7 @@
     "message.file.empty": {
       "source": "designs/assets/guidance/common.md",
       "section": "message",
-      "references": ["designs/assets/ui-kit/internal/reference/krds-p0533.md"]
+      "references": []
     },
     "message.file.size": {
       "source": "designs/assets/guidance/common.md",
@@ -869,166 +814,687 @@
     "pattern.attachment": {
       "source": "designs/assets/guidance/pattern.attachment.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/attachments.md",
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0651.md"
-      ]
+      "references": []
     },
     "pattern.confirmation": {
       "source": "designs/assets/guidance/pattern.confirmation.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/confirm.md",
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0677.md"
-      ]
+      "references": []
     },
     "pattern.consent": {
       "source": "designs/assets/guidance/pattern.consent.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/consent.md",
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0590.md"
-      ]
+      "references": []
     },
     "pattern.detail": {
       "source": "designs/assets/guidance/pattern.detail.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/detail.md",
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0612.md"
-      ]
+      "references": []
     },
     "pattern.error": {
       "source": "designs/assets/guidance/pattern.error.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/error.md",
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0626.md"
-      ]
+      "references": []
     },
     "pattern.feedback": {
       "source": "designs/assets/guidance/pattern.feedback.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/patterns/basic/feedback.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0602.md"
-      ]
+      "references": []
     },
     "pattern.filter": {
-      "source": "designs/assets/guidance/pattern.filter.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/patterns/basic/filter.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0656.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
     },
     "pattern.form": {
-      "source": "designs/assets/guidance/pattern.form.md",
-      "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/patterns/basic/form.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0631.md"
-      ]
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
     },
     "pattern.help": {
       "source": "designs/assets/guidance/pattern.help.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/patterns/basic/help.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0573.md"
-      ]
+      "references": []
     },
     "pattern.identity-input": {
       "source": "designs/assets/guidance/pattern.identity-input.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/patterns/basic/identity.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0553.md"
-      ]
+      "references": []
     },
     "pattern.list": {
       "source": "designs/assets/guidance/pattern.list.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/patterns/basic/extended.md",
-        "designs/assets/ui-kit/internal/patterns/basic/list.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0597.md"
-      ]
+      "references": []
     },
     "service.application": {
       "source": "designs/assets/guidance/service.application.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/reference/krds-p0858.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0861.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0875.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0894.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0903.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0918.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0926.md"
-      ]
+      "references": []
     },
     "service.application-history": {
       "source": "designs/assets/guidance/service.application-history.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/reference/krds-p0934.md"
-      ]
+      "references": []
     },
     "service.authentication": {
       "source": "designs/assets/guidance/service.authentication.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/reference/krds-p0782.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0785.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0793.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0803.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0819.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0832.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0839.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0848.md"
-      ]
+      "references": []
     },
     "service.policy-information": {
       "source": "designs/assets/guidance/service.policy-information.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/reference/krds-p0948.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0951.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0960.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0970.md"
-      ]
+      "references": []
     },
     "service.search": {
       "source": "designs/assets/guidance/service.search.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/reference/krds-p0707.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0716.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0732.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0747.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0759.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0771.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0777.md"
-      ]
+      "references": []
     },
     "service.visit": {
       "source": "designs/assets/guidance/service.visit.md",
       "section": "usage",
-      "references": [
-        "designs/assets/ui-kit/internal/reference/krds-p0686.md",
-        "designs/assets/ui-kit/internal/reference/krds-p0689.md"
-      ]
+      "references": []
+    },
+    "component.tooltip": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.section": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.metric": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "dashboard",
+      "references": []
+    },
+    "component.menu": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "foundation.company-ui": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.date-range": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.lookup": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.multiselect": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.table-tools": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "pattern.save-feedback": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.drawer": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.organization-tree": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "pattern.history": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "transaction",
+      "references": []
+    },
+    "component.filter-presets": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.bar-chart": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "dashboard",
+      "references": []
+    },
+    "pattern.system-state": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "icon.pencil": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.save": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.copy": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.undo": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.redo": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sliders": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-text": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-plus": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-search": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.files": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.folder": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.folder-open": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.paperclip": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.printer": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.spreadsheet": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.archive": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.clipboard": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.clipboard-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.image": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-right": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-down": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.first-page": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.last-page": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.external-link": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.link": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.menu": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.more-horizontal": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.more-vertical": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.maximize": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.minimize": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.panel-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.grid": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.list": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.grip": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.info": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.pending": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.loader": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bell": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bell-off": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.ban": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.flag": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bookmark": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.star": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.users": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.user-plus": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.user-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.building": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.network": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.contact": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.mail": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.phone": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.message": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.send": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.calendar-range": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.calendar-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.history": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.stamp": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.workflow": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.list-checks": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.wallet": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.credit-card": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.receipt": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bank": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.calculator": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.percent": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.coins": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.package": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.truck": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.warehouse": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.shopping-cart": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.database": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.table": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chart-bar": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chart-line": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chart-pie": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.trend-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.trend-down": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sort": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sort-asc": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sort-desc": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.target": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.layers": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.lock": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.unlock": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.shield-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.key": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.log-in": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.log-out": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.monitor": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.smartphone": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.server": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.code": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.terminal": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "message.field.month": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.date-min": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.date-max": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.min": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.max": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.presets": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.empty.attachments": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
     }
   }
 }

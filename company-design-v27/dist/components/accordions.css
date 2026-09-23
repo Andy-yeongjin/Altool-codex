@@ -1,0 +1,16 @@
+
+/* Approved C; native details owns expanded state and keyboard activation. */
+.altool-ui details.ui-accordion { margin:8px 0 0;padding:0;border:1px solid var(--company-field-border);border-radius:var(--company-button-radius);background:#FFFFFF;color:#30363D;font-family:var(--company-button-font);font-size:15px;font-weight:400;line-height:1.5; }
+.altool-ui details.ui-accordion > summary { display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px;padding:8px 12px;list-style:none;border-radius:var(--company-button-radius);background:#FFFFFF;color:#30363D;font-size:15px;font-weight:500;line-height:1.5;cursor:pointer;overflow-wrap:anywhere; }
+.altool-ui details.ui-accordion > summary::-webkit-details-marker { display:none; }
+.altool-ui details.ui-accordion > summary > .ui-accordion-chevron { flex:none;width:16px;height:16px; }
+.altool-ui details.ui-accordion:not([open]) > summary:hover { background:#EDF3FA; }
+.altool-ui details.ui-accordion[open] > summary { border-bottom:1px solid #1554A0;border-radius:var(--company-button-radius) var(--company-button-radius) 0 0;background:#1554A0;color:#FFFFFF; }
+.altool-ui details.ui-accordion[open] > summary:hover { background:#104583; }
+.altool-ui details.ui-accordion > summary:focus-visible { outline:2px solid #1554A0;outline-offset:2px; }
+.altool-ui details.ui-accordion[open] > summary > .ui-accordion-chevron { transform:rotate(180deg); }
+.altool-ui details.ui-accordion > .ui-accordion-body { min-width:0;padding:12px;border-radius:0 0 var(--company-button-radius) var(--company-button-radius);background:#F7F8F9;overflow-wrap:anywhere; }
+.altool-ui .ui-accordion-body > p { margin:0;color:#454C55;font-size:14px; }
+.altool-ui .ui-accordion-body > p + p { margin-top:8px; }
+@media(pointer:coarse) { .altool-ui details.ui-accordion > summary { min-height:44px; } }
+

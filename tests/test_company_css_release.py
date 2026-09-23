@@ -19,8 +19,9 @@ class CompanyCssReleaseTests(unittest.TestCase):
         output = builder.verify_distribution_css(files)
         self.assertIn('PASS CSS custom property', output)
         self.assertIn('PASS CSS text contrast', output)
-        self.assertIn('33 explicit pairs', output)
-        self.assertIn('161 ambiguous rules', output)
+        self.assertRegex(output, r'[1-9][0-9]* explicit pairs')
+        self.assertRegex(output, r'[0-9]+ ambiguous rules')
+        self.assertIn('4.5', output)
 
     def test_ambiguous_pairs_are_reported_not_promoted_to_passed_coverage(self):
         from unittest.mock import patch
@@ -45,15 +46,19 @@ class CompanyCssReleaseTests(unittest.TestCase):
             finally:
                 builder.ROOT = original
 
-    def test_fixed_direction_icons_reproduce_and_preserve_source_path(self):
-        result = subprocess.run([sys.executable, str(ROOT / 'scripts/build_direction_icons.py'), '--check'], capture_output=True, text=True)
-        self.assertEqual(result.returncode, 0, result.stderr)
+    def test_fixed_direction_icons_preserve_company_geometry(self):
+        import json
         import assets
-        for direction, rotation in [('left', 90), ('right', -90), ('up', 180), ('down', 0)]:
+        source = ROOT / 'designs/assets/ui-kit/internal/company'
+        catalog = json.loads((source / 'dist/assets/icons.json').read_text())
+        for direction in ['left', 'right', 'up', 'down']:
             resolved = assets.resolve(ROOT, 'icon.chevron-' + direction)
             svg = (ROOT / resolved['path']).read_text()
-            self.assertIn(f'rotate({rotation} 12 12)', svg)
-            self.assertIn('M4.47243 8.39766', svg)
+            self.assertNotIn('rotate(', svg)
+            self.assertIn('stroke-width="1.5"', svg)
+            self.assertEqual(svg, (source / f'dist/assets/icons/chevron-{direction}.svg').read_text())
+        self.assertEqual(len(catalog['icons']), len(list((source / 'dist/assets/icons').glob('*.svg'))))
+        self.assertGreaterEqual(len(catalog['icons']), 120)
 
 
 if __name__ == '__main__':

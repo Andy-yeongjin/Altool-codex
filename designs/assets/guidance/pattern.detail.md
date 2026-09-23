@@ -15,10 +15,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G08: 일반 본문 텍스트는 배경과 최소 4.5:1 명도 대비를 확보하고 비텍스트 대체수단·구조화된 제목/목록/표를 제공한다.
 - G09: 멀티미디어가 있으면 키보드 조작과 자막/대본/대체 설명을 제공하고 자동 재생하지 않는다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/patterns/basic/detail.md](../ui-kit/internal/patterns/basic/detail.md)
-- [ui-kit/internal/patterns/basic/extended.md](../ui-kit/internal/patterns/basic/extended.md)
-- [ui-kit/internal/reference/krds-p0612.md](../ui-kit/internal/reference/krds-p0612.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

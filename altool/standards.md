@@ -47,7 +47,7 @@ UI 태그/선택 UI 표준 또는 기존 기능 계약이 있는 spec/analyze/fi
 
 ## 검증 증거
 
-공통 UI 자산은 `standards/design.md#assets`의 필수 재사용 계약에 따라 `assets.py find/resolve/read`로 선택한다. registry는 채택된 의미 ID·허용 변형, catalog는 비채택 참고까지 포함한 색인이다. `guidance`의 company-contract는 선택 자산의 회사 적용 지침이고 `references`는 별도 참고 MD다. 사용한 자산·의존 파일·회사 지침만 필수로 읽고, KRDS 원문은 근거/예외가 필요할 때 읽는다. 사용자 디자인 입력 탐색에서는 번들 자산을 사용자 업로드로 오인하지 않는다.
+공통 UI 자산은 `standards/design.md#assets`의 필수 재사용 계약에 따라 `assets.py find/resolve/read`로 선택한다. registry는 채택된 의미 ID·허용 변형, catalog는 회사 자산의 파일 색인이다. `guidance`의 company-contract는 선택 자산의 회사 적용 지침이고 `references`는 별도 참고 MD다. 사용한 자산·의존 파일·회사 지침만 필수로 읽는다. KRDS 원문·추출 자료는 번들에 포함하지 않는다. 사용자 디자인 입력 탐색에서는 번들 자산을 사용자 업로드로 오인하지 않는다.
 
 ### UI 적용 증거 (일반 개발·Altool 공통)
 

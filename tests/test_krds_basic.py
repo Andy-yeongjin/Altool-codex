@@ -1,13 +1,11 @@
 """Static structural checks, not browser/accessibility certification."""
-import json
-import re
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-BASIC = ROOT / "designs/assets/ui-kit/internal/patterns/basic"
+BASIC = ROOT / "designs/assets/ui-kit/internal/company/recipes/basic"
 
 
 class Page(HTMLParser):
@@ -21,20 +19,6 @@ class Page(HTMLParser):
 
 
 class BasicPatternsTest(unittest.TestCase):
-    def test_eleven_items_match_source_inventory(self):
-        actual = json.loads((BASIC / "mapping.json").read_text())
-        coverage = json.loads((BASIC.parents[1] / "coverage.json").read_text())
-        source = {item["id"] for item in coverage["items"] if 553 <= item["startPage"] <= 677}
-        self.assertEqual({item["id"] for item in actual["items"]}, source)
-        self.assertEqual(len(source), 11)
-        for item in actual["items"]:
-            for asset in item["assets"]:
-                self.assertTrue((BASIC.parents[1] / asset).is_file(), asset)
-            markdown = next(asset for asset in item["assets"] if asset.endswith(".md"))
-            content = (BASIC.parents[1] / markdown).read_text()
-            self.assertEqual(len(re.findall(r"^- \[ \] BP-", content, re.M)), item["ruleCount"])
-            self.assertIn("미적용·잔여 검증", content)
-
     def test_local_targets_and_aria_ids_resolve(self):
         for path in BASIC.glob("*.html"):
             with self.subTest(page=path.name):
@@ -81,7 +65,7 @@ class BasicPatternsTest(unittest.TestCase):
         self.assertIn("dialogReturn", js)
         helper = (BASIC / "shared-messages.js").read_text()
         self.assertEqual(helper.count("fetch("), 1)
-        self.assertIn("fetch('../../../../messages/ko.json'", helper)
+        self.assertIn("fetch('../../../../../messages/ko.json'", helper)
         self.assertNotIn("JSON.stringify", helper)
         self.assertNotIn("innerHTML", helper)
 
@@ -97,24 +81,15 @@ class BasicPatternsTest(unittest.TestCase):
     def test_shared_design_values_are_opted_in_on_every_page(self):
         for page in BASIC.glob("*.html"):
             source = page.read_text()
-            self.assertIn('class="krds-2024-tokens"', source, page.name)
-            self.assertIn('href="../../foundations/tokens-2024.css"', source, page.name)
-        for style in BASIC.glob("*.css"):
-            css = style.read_text()
-            self.assertNotRegex(css, r"#[0-9a-fA-F]{3,8}\b")
-            self.assertNotIn("var(--krds24-gray-0)-space", css)
-        self.assertIn("var(--krds24-font-family", (BASIC / "basic.css").read_text())
-
-    def test_visual_ledger_records_each_assigned_page_without_claiming_browser_pass(self):
-        ledger = json.loads((BASIC / "final-source-review.json").read_text())
-        self.assertEqual([page["page"] for page in ledger["pages"]], list(range(553, 686)))
-        self.assertEqual(ledger["reviewedPages"], 133)
-        self.assertIn("browser-pending", ledger["status"])
-        for page in ledger["pages"]:
-            self.assertEqual(page["status"], "visual-reviewed")
-            self.assertTrue(page["observation"])
-            for evidence in page["evidence"]:
-                self.assertRegex(evidence["sha256"], r"^[0-9a-f]{64}$")
+            self.assertIn('class="krds-2024-tokens altool-ui company-recipe"', source, page.name)
+            self.assertIn('href="../../dist/company.css"', source, page.name)
+            self.assertIn('href="../recipes.css"', source, page.name)
+            self.assertNotIn('tokens-2024.css', source, page.name)
+        self.assertEqual(list(BASIC.glob('*.css')), [])
+        css = (BASIC.parent / 'recipes.css').read_text()
+        self.assertNotRegex(css, r"#[0-9a-fA-F]{3,8}\b")
+        self.assertIn('var(--company-button-font)', css)
+        self.assertNotIn('button {', css)
 
 
 if __name__ == "__main__":

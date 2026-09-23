@@ -15,10 +15,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G08: 평가 버튼에서 Enter/Space/클릭하면 추가영역을 열거나 완료 메시지를 표시하고 선택 직후 초점은 버튼에 둔다.
 - G09: 추가영역은 순서대로 Tab 이동하며 건너뛰기·완료 모두 평가 완료를 안내한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/patterns/basic/extended.md](../ui-kit/internal/patterns/basic/extended.md)
-- [ui-kit/internal/patterns/basic/feedback.md](../ui-kit/internal/patterns/basic/feedback.md)
-- [ui-kit/internal/reference/krds-p0602.md](../ui-kit/internal/reference/krds-p0602.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

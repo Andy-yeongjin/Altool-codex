@@ -4,11 +4,11 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
-const core=require('../designs/assets/ui-kit/internal/patterns/basic/basic-core.js');
-const navigation=require('../designs/assets/ui-kit/internal/patterns/basic/basic-navigation.js');
-const extended=require('../designs/assets/ui-kit/internal/patterns/basic/extended-core.js');
-const precision=require('../designs/assets/ui-kit/internal/patterns/basic/precision.js');
-const root=path.join(__dirname,'../designs/assets/ui-kit/internal/patterns/basic');
+const core=require('../designs/assets/ui-kit/internal/company/recipes/basic/basic-core.js');
+const navigation=require('../designs/assets/ui-kit/internal/company/recipes/basic/basic-navigation.js');
+const extended=require('../designs/assets/ui-kit/internal/company/recipes/basic/extended-core.js');
+const precision=require('../designs/assets/ui-kit/internal/company/recipes/basic/precision.js');
+const root=path.join(__dirname,'../designs/assets/ui-kit/internal/company/recipes/basic');
 
 test('local video captions toggle without a native menu and reset on valid replacement or removal',async()=>{
   const source=fs.readFileSync(path.join(root,'extended.js'),'utf8');const start=source.indexOf("    let mediaURL='';let captionURL='';");const end=source.indexOf("window.addEventListener('pagehide',clearMedia);",start)+"window.addEventListener('pagehide',clearMedia);".length;
@@ -96,13 +96,6 @@ test('download example metadata matches exact shipped UTF-8 bytes',()=>{
   assert.ok(html.includes(`${(bytes/1024).toFixed(2)} KB`));
   assert.equal(bytes,264);
 });
-test('all eleven source items have executable demos and limitations',()=>{
-  const mapping=JSON.parse(fs.readFileSync(path.join(root,'mapping.json'),'utf8'));
-  assert.equal(mapping.items.length,11);
-  assert.equal(new Set(mapping.items.map(item=>item.id)).size,11);
-  for(const item of mapping.items){assert.ok(item.gaps.length>0);assert.ok(item.browserScenarios.length>0);assert.ok(item.ruleCount>0);assert.equal(item.implementation,'interactive-frontend-example');}
-});
-
 // Minimal event/DOM adapter: checks the shipped handlers, not browser rendering or native dialog behavior.
 function variantEnvironment(variant){
   const nodes=new Map();
@@ -195,17 +188,17 @@ test('numeric range and multiple selection combine with predictable empty state'
   assert.equal(extended.filterNumeric(core.records,1,1,['교육']).length,0);
   assert.equal(extended.codeError('abc-01'),'');assert.ok(extended.codeError('A!'));
 });
-test('all semantic variants have concrete paths dependencies states and source page links',()=>{
+test('all semantic variants have concrete paths dependencies and states',()=>{
   const manifest=JSON.parse(fs.readFileSync(path.join(root,'variants-manifest.json'),'utf8'));
   assert.equal(manifest.version,1);assert.equal(manifest.items.length,11);
   assert.equal(new Set(manifest.items.map(item=>item.id)).size,11);
   let total=0;
-  for(const item of manifest.items){assert.equal(item.kind,'pattern');assert.ok(item.variants[item.defaultVariant]);for(const variant of Object.values(item.variants)){total++;assert.ok(fs.existsSync(path.join(root,'../../../../',variant.path)),variant.path);assert.ok(variant.states.length);assert.equal(variant.sourcePages.length,2);for(const file of variant.dependencies)assert.ok(fs.existsSync(path.join(root,'../../../../',file)),file);}}
+  for(const item of manifest.items){assert.equal(item.kind,'pattern');assert.ok(item.variants[item.defaultVariant]);for(const variant of Object.values(item.variants)){total++;assert.ok(fs.existsSync(path.join(root,'../../../../../',variant.path)),variant.path);assert.ok(variant.states.length);for(const file of variant.dependencies)assert.ok(fs.existsSync(path.join(root,'../../../../../',file)),file);}}
   assert.equal(total,75);
 });
 
 test('common error UI reads the exact company message without sending user values',async()=>{
-  const values=JSON.parse(fs.readFileSync(path.join(root,'../../../../messages/ko.json'),'utf8'));
+  const values=JSON.parse(fs.readFileSync(path.join(root,'../../../../../messages/ko.json'),'utf8'));
   const node={dataset:{companyMessage:'error.network',messagePart:'body'},textContent:''};
   const calls=[];const window={};const document={querySelectorAll:()=>[node]};
   const fetch=async(url,options)=>{calls.push({url,options});return {ok:true,json:async()=>values};};
@@ -213,7 +206,7 @@ test('common error UI reads the exact company message without sending user value
   assert.equal(await window.KrdsBasicMessages.ready,true);
   assert.equal(node.textContent,values.messages['error.network'].body);
   assert.equal(window.KrdsBasicMessages.get('error.network').title,values.messages['error.network'].title);
-  assert.equal(calls.length,1);assert.equal(calls[0].url,'../../../../messages/ko.json');assert.equal(calls[0].options.body,undefined);
+  assert.equal(calls.length,1);assert.equal(calls[0].url,'../../../../../messages/ko.json');assert.equal(calls[0].options.body,undefined);
 });
 
 test('month precision includes every day of the selected month and validates ordering',()=>{

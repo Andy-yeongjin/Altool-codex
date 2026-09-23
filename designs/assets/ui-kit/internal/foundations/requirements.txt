@@ -1,3 +1,0 @@
-# Authoring only; generated company-adapter.css has no Python dependency.
-tinycss2==1.5.1
-webencodings==0.6.1

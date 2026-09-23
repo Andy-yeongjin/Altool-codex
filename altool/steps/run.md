@@ -88,7 +88,9 @@ Codex 대화 확인: **"이 범위로 구현을 시작해도 되겠습니까?"**
 
 ### 빌드 검증 (Altool 확장 — 완료 보고 전 필수)
 
-프로젝트에 정의된 프로덕션 build 명령을 실행해 성공까지 확인한다. `package.json`에 `build` script가 있으면 `npm run build`를 사용하고, 다른 생태계면 해당 프로젝트의 build 명령을 사용한다. 빌드 단계가 없는 정적 결과물은 적용 가능한 구문·정적 검사를 실행하고 `skipped(no build step)` 근거를 남긴다. 실패 시 수정 후 재검증한다. 서버는 직접 실행하지 않고 프로젝트의 실행 방법을 안내한다.
+프로젝트에 정의된 프로덕션 build 명령을 실행해 성공까지 확인한다. `package.json`에 `build` script가 있으면 `npm run build`를 사용하고, 다른 생태계면 해당 프로젝트의 build 명령을 사용한다. 빌드 단계가 없는 정적 결과물은 적용 가능한 구문·정적 검사를 실행하고 `skipped(no build step)` 근거를 남긴다. 실패 시 수정 후 재검증한다.
+
+L1/L2 테스트 및 UI 지침 증거 수집에 서버가 필요하면 `altool/steps/_server.md`에 따라 검증용 서버를 시작할 수 있다. UI 브라우저 QA 전에 적용 가능한 빌드·타입 검사를 통과시키고 `AGENTS.md`의 조작·반응형 검증 절차를 따른다. 실제 관찰로 `altool/standards.md`의 UI 적용 증거를 채운 뒤 Run Step Check를 검증한다. 서버/브라우저 사용 불가나 미검증 지침은 완료로 처리하지 않는다. 이 검증은 후속 독립 Analyze와 최종 Browser를 대체하지 않는다. 검증 URL·소유권은 `verification`, 종료 결과는 `server.cleanup`에 기록한다.
 
 코드·타입·빌드·테스트·런타임·브라우저 검증에서 코드 오류가 발생하면 `lesson.py append`로 이벤트를 남기고 재발 가능성을 평가한다:
 - 코드 오류가 발생하면 `code_error`

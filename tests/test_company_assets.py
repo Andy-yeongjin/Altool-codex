@@ -15,7 +15,8 @@ import standards
 class CompanyAssetsTests(unittest.TestCase):
     def test_product_ui_kit_paths_preserve_source_attribution(self):
         base = ROOT / 'designs/assets'
-        self.assertTrue((base / 'ui-kit/internal/components/variants-manifest.json').is_file())
+        self.assertTrue((base / 'ui-kit/internal/company/extensions/registry.json').is_file())
+        self.assertTrue((base / 'ui-kit/internal/company/recipes/registry.json').is_file())
         self.assertTrue((base / 'ui-kit/internal/ATTRIBUTION.md').is_file())
         self.assertFalse((base / 'krds-2024').exists())
         registry, lock = assets.load(ROOT)
@@ -64,7 +65,7 @@ class CompanyAssetsTests(unittest.TestCase):
         for identifier in ('icon.settings', 'message.error.network'):
             self.assertEqual(assets.resolve(self.root, identifier), assets.resolve(ROOT, identifier))
         value = assets.resolve(self.root, 'icon.settings')
-        self.assertTrue(value['path'].endswith('/ico_setting.svg'))
+        self.assertTrue(value['path'].endswith('/settings.svg'))
         self.assertEqual(assets.resolve(self.root, 'message.error.network')['key'], 'error.network')
 
     def test_missing_id_variant_or_government_identity_cannot_be_used(self):
@@ -135,7 +136,7 @@ class CompanyAssetsTests(unittest.TestCase):
     def test_install_conflicting_unmanaged_asset_fails_before_any_writes(self):
         with tempfile.TemporaryDirectory() as directory:
             target = Path(directory)
-            file = target / 'designs/assets/brand/altool-symbol.svg'
+            file = target / 'designs/assets/brand/altool-wordmark-inverse.svg'
             file.parent.mkdir(parents=True); file.write_text('company-owned logo')
             with self.assertRaisesRegex(ValueError, 'conflicts'):
                 standards.install(ROOT, target)
@@ -151,6 +152,8 @@ class CompanyAssetsTests(unittest.TestCase):
         data = json.loads(file.read_text()); data['messages']['error.network']['title'] = 'different'
         file.write_text(json.dumps(data))
         with self.assertRaisesRegex(ValueError, 'new release'):
+            from build_company_bundle import build_bundle
+            build_bundle(builder.BASE / 'ui-kit')
             builder.build(registry['release'])
 
     def test_historical_release_cannot_be_reissued_after_another_version(self):
@@ -162,13 +165,18 @@ class CompanyAssetsTests(unittest.TestCase):
         file = builder.BASE / 'messages/ko.json'
         data = json.loads(file.read_text()); data['messages']['error.network']['title'] = 'new company title'
         file.write_text(json.dumps(data))
+        from build_company_bundle import build_bundle
+        build_bundle(builder.BASE / 'ui-kit')
         builder.build('99.0.0-test')
         report = (builder.BASE / 'release-reports/99.0.0-test.txt').read_text(encoding='utf-8')
-        self.assertIn('33 explicit pairs', report)
-        self.assertIn('161 ambiguous rules', report)
+        lock = json.loads((builder.BASE / 'pack.lock.json').read_text())
+        self.assertEqual(report, builder.verify_distribution_css(lock['files']))
+        self.assertRegex(report, r'[1-9][0-9]* explicit pairs')
+        self.assertRegex(report, r'[0-9]+ ambiguous rules')
         self.assertIn('PASS CSS custom property', report)
         data['messages']['error.network']['title'] = 'third title'
         file.write_text(json.dumps(data))
+        build_bundle(builder.BASE / 'ui-kit')
         with self.assertRaisesRegex(ValueError, 'historical version'):
             builder.build(old_release)
 

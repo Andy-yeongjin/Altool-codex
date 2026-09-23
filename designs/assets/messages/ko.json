@@ -19,6 +19,13 @@
     "collapse": "접기"
   },
   "messages": {
+    "field.month": {"title":"YYYY-MM 형식의 올바른 월을 입력하세요.","body":"월 입력값을 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.dateMin": {"title":"허용된 시작일 이후로 입력하세요.","body":"날짜의 최소 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.dateMax": {"title":"허용된 종료일 이전으로 입력하세요.","body":"날짜의 최대 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.min": {"title":"허용된 최솟값 이상으로 입력하세요.","body":"입력값의 최소 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.max": {"title":"허용된 최댓값 이하로 입력하세요.","body":"입력값의 최대 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "error.presets": {"title":"조회조건을 처리하지 못했습니다.","body":"저장 공간 또는 연결을 확인하세요.","action":"다시 시도","severity":"error"},
+    "empty.attachments": {"title":"첨부된 파일이 없습니다.","body":"필요한 파일을 추가하세요.","action":"파일 추가","severity":"info"},
     "error.generic": {
       "title": "처리하지 못했어요",
       "body": "잠시 후 다시 시도해 주세요. 문제가 계속되면 문의해 주세요.",
@@ -231,8 +238,8 @@
     },
     "confirm.leave": {
       "title": "저장하지 않은 변경 내용이 있어요",
-      "body": "이동하기 전에 저장 여부를 선택해 주세요.",
-      "action": "계속 편집",
+      "body": "저장하지 않은 변경 내용을 버리고 이동할까요? 취소하면 계속 편집할 수 있습니다.",
+      "action": "변경 내용 버리고 이동",
       "severity": "warning"
     },
     "confirm.overwrite": {

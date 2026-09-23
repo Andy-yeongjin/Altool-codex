@@ -70,7 +70,7 @@ class GuidanceRoutingTests(unittest.TestCase):
         selected = assets.resolve(self.root, 'component.in-page-navigation')
         self.assertTrue(any('모바일' in rule['text'] for rule in selected['guidance']['rules']))
         self.assertTrue(any('포인터 클릭' in rule['text'] for rule in selected['guidance']['rules']))
-        self.assertTrue(any('krds-p0204.md' in p for p in selected['guidance']['references']))
+        self.assertEqual(selected['guidance']['references'], [])
 
     def test_read_prints_company_guidance_not_full_reference(self):
         result = subprocess.run([sys.executable, str(ROOT / 'altool/scripts/assets.py'), '--root', str(self.root),
@@ -224,7 +224,7 @@ class GuidanceRoutingTests(unittest.TestCase):
     def test_upgrade_keeps_existing_router_and_warns_about_missing_ui_routes(self):
         path = self.root / standards.ROUTER
         data = standards.yaml_module().safe_load(path.read_text())
-        data['standards'] = {k: v for k, v in data['standards'].items() if not k.startswith('ui-')}
+        data['standards'] = {k: v for k, v in data['standards'].items() if not k.startswith(('ui-', 'company-'))}
         path.write_text(standards.yaml_module().safe_dump(data))
         before = path.read_bytes()
         output = io.StringIO()

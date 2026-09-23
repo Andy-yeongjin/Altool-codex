@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 비정부 사이트에서는 배너를 사용하지 않는다. 출처 예제 보존은 실제 운영 사용 승인이 아니다.
 - G02: 모든 화면 최상단 위치와 고정 문구·스타일을 비교하고 건너뛰기 링크가 먼저 탐색되는지 확인한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0114.md](../ui-kit/internal/components/krds-p0114.md)
-- [ui-kit/internal/reference/krds-p0114.md](../ui-kit/internal/reference/krds-p0114.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

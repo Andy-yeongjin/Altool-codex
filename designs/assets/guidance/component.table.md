@@ -6,11 +6,9 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 ## 사용·배치·동작
 
 - G01: 열 간 비교가 필요한 정형 자료에 사용하고 caption·행/열 머리글·숫자 정렬·결측값을 명확히 한다. 정렬 가능한 표는 초기 첫 열 정렬과 현재 방향을 표시한다. (p.344–349)
+- G03: 표시 제목은 table 밖 ui-section-header/ui-section-title로 배치한다. 같은 의미의 기존 섹션·모달 제목 또는 summary는 재사용하며 중복하지 않는다. 연도·단위·조건은 보조 설명으로 표시한다. caption은 sr-only로 보존하고 표/스크롤 영역은 제목과 설명 ID를 aria-labelledby/aria-describedby로 연결한다. caption에만 있던 고유한 정보를 숨김으로 유실하지 않는다.
 - G02: 단순 표는 작은 화면에 쌓기 배치를 검토하고 복잡한 표의 가로 스크롤은 행 식별과 관계를 유지한다. 가로 스크롤을 쓸 때 키보드뿐 아니라 클릭 가능한 좌우 이동 대안도 제공한다. 데이터 순서·수치·초점을 실제 조작으로 검증한다. (p.350–352)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0342.md](../ui-kit/internal/components/krds-p0342.md)
-- [ui-kit/internal/reference/krds-p0342.md](../ui-kit/internal/reference/krds-p0342.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

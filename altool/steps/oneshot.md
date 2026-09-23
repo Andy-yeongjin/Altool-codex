@@ -54,7 +54,7 @@ $altool oneshot 사용자가 음식을 검색해서 끼니별로 기록하고 �
 
 ## 파이프라인 (7단계)
 
-> 각 단계 시작 전 `🥚 [N/7] 단계명 시작...`, 완료 후 `🐣 [N/7] 단계명 완료` 출력 (필수).
+> `_common.md`의 진행 아이콘 규칙에 따라 각 단계 시작 전 `🥚 [N/7] 단계명 시작...`, 검증 완료 후 `🐣 [N/7] 단계명 완료`를 출력한다. 생략은 ⏭️와 사유, 차단·미완료는 ⚠️와 사유를 출력한다 (필수).
 > 각 하위 step의 Step Check를 수집한다. `skipped`/`failed` 항목은 이유를 남긴다. run/analyze/fix/browser 중 발생한 코드 오류와 구현 갭만 `lesson.py append` 기록 여부를 확인한다. research/plan/spec/report는 document-only step으로 append하지 않는다. 각 하위 step check는 `[al:check] ... 검증 중` / `[al:check] ... 통과` 형식으로 출력한다.
 > 하위 step이 다른 Altool 문서(plan/spec/analyze/browser/report 등)를 수정했다면, 그 문서의 소유 Step Check도 갱신·검증된 상태여야 한다. oneshot 집계는 수정된 문서보다 오래된 소유 check를 완료 증거로 취급하지 않는다.
 > 제품 정책·입력 충돌·권한 경계와 각 step의 실패 중단 조건을 따른다. 개발 서버 미실행이나 fix 5회 후 미해소 갭도 완료로 처리하지 않는다.
@@ -66,7 +66,7 @@ $altool oneshot 사용자가 음식을 검색해서 끼니별로 기록하고 �
 | [3/7] 구현 명세 | `altool/steps/spec.md` 수행 | 아키텍처 Option C 자동 선택 |
 | [4/7] 코드 구현 | `altool/steps/run.md` 수행 | Depth-First, 빌드 검증 포함 |
 | [5/7] 갭 분석 | `altool/steps/analyze.md` 수행 | 독립 검증 에이전트 + 가능 시 런타임 검증 |
-| [6/7] 자동 개선 | 미해소 갭 0건 → `🐣 [6/7] 패스` / 갭 존재 → `altool/steps/fix.md` 수행 (Match Rate ≥90%여도 갭이 있으면 수정) | **최대 5회**, 이후에도 미달 시 멈추고 선택지 제시 (A: 직접 확인 후 계속 / B: 이대로 7단계 진행) |
+| [6/7] 자동 개선 | 미해소 갭 0건 → `⏭️ [6/7] 생략 — 미해소 갭 없음` / 갭 존재 → `altool/steps/fix.md` 수행 (Match Rate ≥90%여도 갭이 있으면 수정) | **최대 5회**, 이후에도 미달 시 멈추고 선택지 제시 (A: 직접 확인 후 계속 / B: 이대로 7단계 진행) |
 | [7/7] 브라우저 검증 | `altool/steps/browser.md` 수행 | Codex Browser 또는 Playwright |
 
 ### [7/7] 브라우저 기능·디자인 검증 + 자체 수정
@@ -106,7 +106,7 @@ browser 하위 check에는 `visual.reference_comparison`, `visual.css_custom_pro
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🐣 $altool oneshot 완료! (조사 → 계획 → 명세 → 구현 → 갭 분석 → 개선 → 브라우저 검증)
+🐥 $altool oneshot 완료! (조사 → 계획 → 명세 → 구현 → 갭 분석 → 개선 → 브라우저 검증)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📁 산출물:

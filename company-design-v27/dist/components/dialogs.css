@@ -1,0 +1,17 @@
+
+/* Explicit structure keeps legacy and guided panels compatible. */
+.altool-ui dialog.ui-dialog { width:var(--company-dialog-width);max-width:calc(100% - 2rem);max-height:calc(100dvh - 2rem);margin:auto;padding:0;overflow:hidden;border:1px solid var(--company-dialog-border);border-radius:var(--company-button-radius);background:#FFFFFF;color:#30363D;box-shadow:none;font-family:var(--company-button-font);font-size:var(--company-font-size);line-height:1.5; }
+.altool-ui dialog.ui-dialog[open] { display:flex;flex-direction:column; }
+.altool-ui dialog.ui-dialog:not([open]) { display:none; }
+.altool-ui dialog.ui-dialog::backdrop { background:rgb(9 15 26 / 35%);backdrop-filter:none; }
+.altool-ui .ui-dialog > .ui-dialog-header { display:flex;flex:none;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:8px 16px;border-bottom:1px solid var(--company-dialog-header-bg);background:var(--company-dialog-header-bg);color:var(--company-dialog-header-text); }
+.altool-ui .ui-dialog .ui-dialog-title { margin:0;font-size:16px;font-weight:500;line-height:1.5;overflow-wrap:anywhere; }
+.altool-ui .ui-dialog > .ui-modal-body { padding:18px 16px;min-height:0;overflow:auto;overscroll-behavior:contain;overflow-wrap:anywhere; }
+.altool-ui .ui-dialog .ui-modal-body > p:first-child { margin-top:0; }
+.altool-ui .ui-dialog .ui-modal-body > p:last-child { margin-bottom:0; }
+.altool-ui .ui-dialog > .ui-dialog-actions { display:flex;flex:none;flex-wrap:wrap;justify-content:flex-end;gap:8px;padding:12px 16px;border-top:1px solid var(--company-dialog-line); }
+.altool-ui .ui-dialog .ui-dialog-header button.ui-dialog-close { display:inline-flex;align-items:center;justify-content:center;flex:none;width:34px;min-width:34px;min-height:34px;padding:0;border:1px solid transparent;border-radius:var(--company-button-radius);background:transparent;color:var(--company-dialog-header-text);box-shadow:none; }
+.altool-ui .ui-dialog .ui-dialog-header button.ui-dialog-close:hover { background:#104583;color:#FFFFFF; }
+.altool-ui .ui-dialog .ui-dialog-header button.ui-dialog-close:focus-visible { outline:2px solid #FFFFFF;outline-offset:1px; }
+@media(pointer:coarse) { .altool-ui .ui-dialog .ui-dialog-header button.ui-dialog-close { width:44px;min-width:44px;min-height:44px; } }
+

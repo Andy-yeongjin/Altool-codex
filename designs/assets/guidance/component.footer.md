@@ -9,9 +9,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G02: 공통 푸터 정보 순서와 기본 내비게이션 명칭 일치, 모바일 정보 유지, contentinfo 탐색을 확인한다.
 - G03: 짧은 본문에도 푸터가 마지막 하단 영역이 되도록 본문을 유연하게 채우되 고정 푸터로 본문을 가리지 않는다. 개인정보 방침을 강조하고 이용약관은 해당 서비스에 필요한 경우에만 연결한다. 예제 주소·연락처·법률 내용은 승인된 데이터로 교체한다. (p.128–134)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0128.md](../ui-kit/internal/components/krds-p0128.md)
-- [ui-kit/internal/reference/krds-p0128.md](../ui-kit/internal/reference/krds-p0128.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

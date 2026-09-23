@@ -1,0 +1,11 @@
+/* Action list appearance only; positioning and behavior belong to the app. */
+.altool-ui .ui-menu { box-sizing:border-box;min-width:0;padding:4px;border:1px solid var(--company-menu-border);border-radius:var(--company-button-radius);background:#FFFFFF;color:#30363D;box-shadow:none; }
+.altool-ui .ui-menu :is(button,a).ui-menu-item { box-sizing:border-box;display:flex;align-items:center;justify-content:flex-start;gap:8px;width:100%;min-height:34px;padding:6px 10px;border:0;border-radius:2px;background:#FFFFFF;color:#30363D;font-family:var(--company-button-font);font-size:14px;font-weight:400;line-height:1.4;text-align:start;text-decoration:none;white-space:normal;overflow-wrap:anywhere;box-shadow:none;transform:none;cursor:pointer; }
+.altool-ui .ui-menu .ui-menu-item > .ui-icon { flex:none;width:16px;height:16px; }
+.altool-ui .ui-menu :is(button,a).ui-menu-item:is(:hover,:focus-visible) { background:var(--company-menu-highlight);color:#FFFFFF;box-shadow:none;transform:none; }
+.altool-ui .ui-menu :is(button,a).ui-menu-item:focus-visible { outline:2px solid var(--company-menu-highlight);outline-offset:1px; }
+.altool-ui .ui-menu :is(button,a).ui-menu-item:is(.danger,[data-variant="danger"]) { background:#FFFFFF;color:var(--company-button-danger); }
+.altool-ui .ui-menu :is(button,a).ui-menu-item:is(.danger,[data-variant="danger"]):is(:hover,:focus-visible) { background:var(--company-menu-danger-hover);color:var(--company-button-danger); }
+.altool-ui .ui-menu :is(button,a).ui-menu-item:is(:disabled,[aria-disabled="true"]) { background:#FFFFFF;color:var(--company-button-disabled-text);opacity:1;cursor:not-allowed;box-shadow:none; }
+.altool-ui .ui-menu-separator { height:1px;margin:4px 0;border:0;background:#D9DDE2; }
+@media(pointer:coarse) { .altool-ui .ui-menu :is(button,a).ui-menu-item { min-height:44px; } }

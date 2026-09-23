@@ -1,1 +1,10 @@
-.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}.app-grid article{border:1px solid var(--line);border-radius:12px;padding:24px;min-width:0}.app-grid button[data-settings]{display:inline-flex;align-items:center;gap:8px}.app-grid [data-message]:not(:empty){margin-top:20px;background:#fff3f1;padding:20px;border-radius:8px}.app-grid p{overflow-wrap:anywhere}.app-grid section p{margin:8px 0}button:disabled{cursor:not-allowed;opacity:.6}#failure{color:#8f1d16;background:#fff0ef;padding:16px}#settings h2{font-size:24px}@media(max-width:650px){.app-grid{grid-template-columns:1fr}.app-grid article{padding:18px}.app-grid button{margin-bottom:8px}}
+/* Demo composition only. Controls and status colors use the same company bundle. */
+.app-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:20px 0; }
+.app-grid article { border-block-start:2px solid var(--company-section-accent); padding:16px 0; min-width:0; }
+.app-grid button[data-settings] { display:inline-flex; align-items:center; gap:8px; }
+.app-grid [data-message]:not(:empty) { margin-top:16px; padding:16px; background:var(--company-section-body-bg); }
+.app-grid p { overflow-wrap:anywhere; }
+.app-grid section p { margin:8px 0; }
+#failure { color:var(--company-field-error); background:var(--krds24-gray-0); padding:16px; }
+#settings h2 { font-size:16px; font-weight:500; }
+@media(max-width:650px) { .app-grid { grid-template-columns:1fr; } .app-grid button { margin-bottom:8px; } }

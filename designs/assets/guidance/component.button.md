@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 기능을 예측하는 동사형 레이블, 한 화면의 주 행동 위계, 버튼그룹 크기와 수직 우선순위를 확인한다.
 - G02: 키보드·이름·초점·disabled·처리중·중복 클릭을 확인한다. 데모 버튼에 운영 저장 성공을 가장하는 동작을 붙이지 않는다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0368.md](../ui-kit/internal/components/krds-p0368.md)
-- [ui-kit/internal/reference/krds-p0368.md](../ui-kit/internal/reference/krds-p0368.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

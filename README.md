@@ -20,6 +20,7 @@ Altool은 네 가지 자산을 기준으로 개발 사이클을 돌립니다:
 
 핵심 특징:
 
+- **회사 공통 UI** — 기본 제공 v27 디자인·133개 아이콘(Lucide120 + Altool13)·공통 메시지와 업무 UI를 표준 라우터로 선택합니다. 회사 외형 변경 진입점은 [ui-kit/design](designs/assets/ui-kit/design/README.md), 공통 API와 예제는 [ui-kit](designs/assets/ui-kit/README.md)에서 확인합니다. 정부 실행 자산은 제거했고 지침은 참고 문서로만 남겼습니다. 현재 v27 통합은 실브라우저 검증이 남은 QA 팩입니다.
 - **외부 플러그인 불필요** — 개발 사이클 엔진과 보조 Codex local skills를 repo에 내장 (사용자별 `npx skills add` 불필요)
 - **Research-first** — plan 전에 웹 조사 결과를 `docs/00-research/`에 누적하고, 만들 기능은 plan에서 확정
 - **헌법·디자인 시스템 정책 내장** — `designs/claude-design/**/*.html`이 있으면 1순위 디자인 헌법으로 사용, `design.md`를 구현 기준으로 정규화

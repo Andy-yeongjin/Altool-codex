@@ -1,0 +1,13 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>회사 팔레트 연결 검사</title>
+<link rel="stylesheet" href="../../designs/assets/ui-kit/internal/company/dist/company.css?v=palette">
+<style>
+body{margin:0}.palette-test{padding:20px}
+.palette-pink{--company-brand-primary:#A52B61;--company-brand-hover:#88214F;--company-brand-active:#701A40;--company-brand-header:#442638;--company-brand-header-hover:#65384F;--company-brand-soft:#FCEAF2;--company-brand-row-selected:#F8DDE9;--company-brand-menu-shadow:rgba(68,38,56,.56)}
+</style>
+<div id="test" class="krds-2024-tokens altool-ui">
+<header class="ui-site-header"><span class="ui-site-brand">팔레트 연결 검사</span></header>
+<main class="palette-test"><button id="switch" type="button">분홍 테스트 전환</button>
+<section class="ui-section"><header class="ui-section-header"><h2 class="ui-section-title">브랜드 및 상태</h2></header>
+<div class="ui-section-body"><button class="primary">조회</button><button class="danger">삭제</button><input type="checkbox" aria-label="선택"><div class="ui-sidebar"><a class="ui-nav-item" aria-current="page" href="#test">현재 페이지</a></div><span class="ui-status" data-status="success">성공</span><span class="ui-status" data-status="error">오류</span><span class="ui-status" data-status="progress">진행</span><div class="ui-business-chart"><div class="ui-bar-fill" style="width:60%;height:12px"></div></div><p class="ui-metric-value">100</p></div></section></main></div>
+<script>document.querySelector('#switch').onclick=()=>document.querySelector('#test').classList.toggle('palette-pink');</script>
+</html>

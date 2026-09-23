@@ -113,6 +113,8 @@ Altool로 만든 제품은 generic AI/SaaS 화면이 아니라 제품 도메인�
 <a id="sources"></a>
 ## 2. Reference Source Map
 
+회사 공통 요소의 승인 원천은 제공된 company-design-v27이며 제품 반영본은 `designs/assets/ui-kit/design/`와 `internal/company/`다. 공통 적용 원문은 `standards/company-ui.md`와 선택 자산의 company guidance를 따른다. 주색 #1554A0·상단 #18334F·컨트롤4px·standard34px 및 터치 예외, Lucide120개와 같은 스타일의 Altool 추가13개(총133개 아이콘)를 채택한다. 이 파일의 아래 템플릿 값은 앱별 정규화 전 예시이며 회사 공통 값을 대체하지 않는다. 화면별 요구·배치·검증의 TBD는 유지한다.
+
 Research 또는 design_source가 이 문서를 생성·보강할 때 먼저 채웁니다.
 
 | 출처 | 캡처/자산 경로 | 추출할 것 | 복제하지 않을 것 |
@@ -285,9 +287,9 @@ Don't:
 ## 15. Shared Asset Map
 
 <!-- altool-assets: required -->
-Altool은 한 회사의 사내 개발 환경으로 도입합니다. 도입 전에 Altool 기본 디자인 자산을 회사 디자인에 맞춰 조정·검증하고 사내 공통 팩으로 배포합니다. 외형 코드 편집 진입점은 `designs/assets/ui-kit/design/README.md`이며 `theme.css`와 `components.css`를 수정하고 배포 CSS는 생성합니다. `internal/`은 구현·생성물·참고 자료이며 외형 편집 원본이 아닙니다. 배포 후 프로젝트별로 다른 디자인 팩을 선택하지 않습니다. KRDS 등 참고 출처는 라이선스·근거 기록이며 회사 스타일을 고정하는 권위가 아닙니다.
+Altool은 한 회사의 사내 개발 환경으로 도입합니다. 도입 전에 Altool 기본 디자인 자산을 회사 디자인에 맞춰 조정·검증하고 사내 공통 팩으로 배포합니다. 외형 코드 편집 진입점은 `designs/assets/ui-kit/design/README.md`이며 `theme.css`와 `components.css`를 수정하고 배포 CSS는 생성합니다. `internal/`은 회사 구현·생성물이며 외형 편집 원본이 아닙니다. 배포 후 프로젝트별로 다른 디자인 팩을 선택하지 않습니다. KRDS 등 참고 출처는 라이선스·근거 기록이며 회사 스타일을 고정하는 권위가 아닙니다.
 
-회사 공통 자산의 단일 기준은 `designs/assets/registry.json`과 `pack.lock.json`입니다. `catalog.json`은 비채택 원문·참고 예제까지 포함한 검색기이지 선택 권한이 아닙니다. 설치된 팩의 의미 ID·기본값·허용 변형을 사용하며 같은 의미의 아이콘·문구·컴포넌트를 기능마다 다시 만들지 않습니다. 정부 전용 식별자는 일반 회사 서비스에 적용하지 않습니다. 샘플 CI의 존재와 화면별 디자인 계약의 TBD 완료는 별개입니다.
+회사 공통 자산의 단일 기준은 `designs/assets/registry.json`과 `pack.lock.json`입니다. `catalog.json`은 회사 자산과 비실행 참고 문서를 포함한 검색기이지 선택 권한이 아닙니다. 설치된 팩의 의미 ID·기본값·허용 변형을 사용하며 같은 의미의 아이콘·문구·컴포넌트를 기능마다 다시 만들지 않습니다. 모든 UI 실행 경로는 회사 v27 구현으로 통일하며, 제거한 정부 UI를 참고 문서에서 복원하거나 fallback으로 사용하지 않습니다. 샘플 CI의 존재와 화면별 디자인 계약의 TBD 완료는 별개입니다.
 
 1. UI 제작 전에 standard.yaml의 과업별 지침과 자산 후보를 확인하고 `python3 altool/scripts/assets.py find 검색어`, `read 의미ID [--variant 허용변형]`으로 선택 자산·의존 파일·회사 적용 지침을 읽습니다. `resolve`도 지침 경로/규칙과 참고 MD를 구분해 반환합니다. 설정은 `icon.settings`, 네트워크 오류는 `message.error.network`처럼 의미를 고정합니다. 문구는 런타임/JSON key로 읽고 앱 코드에 복제하지 않습니다.
 2. 색·크기·배치는 허용 토큰/변형 범위에서 조정합니다. 사용자 디자인과 공통 의미 자산이 충돌하면 몰래 다른 자산을 만들지 않고 공통 변경의 영향과 승인 범위를 확인합니다. 페이지 구조/업무 데이터와 공통 자산의 역할은 구분합니다.

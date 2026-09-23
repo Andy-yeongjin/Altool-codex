@@ -1,0 +1,13 @@
+
+/* One label per condition; validation is a separate full-width row. */
+.altool-ui .ui-filter-bar { --company-filter-label-height:21px;display:flex;flex-wrap:wrap;align-items:flex-start;gap:16px;margin:16px 0;padding:16px;border:1px solid #CBD1D8;background:#F1F3F5; }
+.altool-ui .ui-filter-bar > .ui-filter-range { display:contents; }
+.altool-ui .ui-filter-bar :is(.ui-field,.ui-filter-actions) { min-width:0;margin:0; }
+.altool-ui .ui-filter-bar .ui-field { flex:1 1 180px;min-width:min(180px,100%);gap:6px; }
+.altool-ui .ui-filter-bar .ui-field > label { display:block;min-height:var(--company-filter-label-height);margin:0;font-size:14px;font-weight:500;line-height:21px; }
+.altool-ui .ui-filter-bar .ui-field > :is(.ui-date-field,.ui-select,select) { width:100%!important;min-width:0; }
+.altool-ui .ui-filter-bar .ui-filter-actions { display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-top:calc(var(--company-filter-label-height) + 6px); }
+.altool-ui .ui-filter-bar .ui-field-error { flex:0 0 100%;margin:0;order:1; }
+.altool-ui .ui-filter-bar .ui-field-error:empty { display:none; }
+.altool-ui .ui-filter-bar select[hidden] { display:none!important; }
+@media(max-width:600px) { .altool-ui .ui-filter-bar { padding:12px; } .altool-ui .ui-filter-bar .ui-filter-actions { flex-basis:100%;padding-top:0; } }

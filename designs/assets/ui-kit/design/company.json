@@ -1,0 +1,17 @@
+{
+  "name": "Altool",
+  "ci": {
+    "default": "brand/altool-wordmark-inverse.svg",
+    "inverse": "brand/altool-wordmark-inverse.svg"
+  },
+  "support": {
+    "department": "업무지원팀",
+    "extension": "1234",
+    "hours": "평일 09:00–18:00",
+    "isExample": true
+  },
+  "links": {
+    "guide": null,
+    "contact": null
+  }
+}

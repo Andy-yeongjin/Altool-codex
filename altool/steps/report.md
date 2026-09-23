@@ -62,8 +62,7 @@ PRD→코드까지 전체 여정이 보고서에 반영되도록 모두 읽는�
 `_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.report.json`이다. 전용 증거는 전체 단계 문서 입력, 최종 빌드/status, `phase=completed`, plan/analyze/report와 수정 문서 소유 check 동기화, 아래 완료/잔여 갭 상태, report 경로다. `lesson.search`와 `event.capture`는 `skipped(document-only step)`으로 기록한다.
 
 ```
-🐣 [al:report] {기능명} 완료 — 산출물: docs/04-report/{기능명}.report.md
+🐥 [al:report] {기능명} 개발 사이클 완주 — 산출물: docs/04-report/{기능명}.report.md
    최종 Match Rate: {N}% | 빌드: {성공/실패} | 반복: {iterationCount}회
-   🐥 {기능명} 개발 사이클 완주
    다음: 새 기능 $altool plan {기능 설명} 또는 배포 (guides/neondb-guide.html → guides/vercel-guide.html)
 ```

@@ -103,7 +103,7 @@ class StandardsTests(unittest.TestCase):
         self.assertEqual(result["sources"], [])
         self.assertEqual(result["inactive_candidates"], ["import"])
         result = standards.resolve(self.root, ["ui-change"])
-        self.assertEqual({s["id"] for s in result["sources"]}, {"design", "ui-common", "engineering", "glossary"})
+        self.assertEqual({s["id"] for s in result["sources"]}, {"design", "ui-common", "company-ui", "engineering", "glossary"})
         self.assertEqual(result["inactive_candidates"], [])
 
     def test_new_project_contract_can_be_registered_and_selected(self):
@@ -279,7 +279,7 @@ class StandardsTests(unittest.TestCase):
         for tags in ([], ["bulk-improt"]):
             with self.assertRaises(ValueError):
                 standards.resolve(self.root, tags)
-        self.assertEqual(len(standards.resolve(self.root, [], True)["sources"]), 11)
+        self.assertEqual(len(standards.resolve(self.root, [], True)["sources"]), 17)
 
     def test_read_sections_returns_original_text_without_unrelated_section(self):
         self.internal()
@@ -428,7 +428,8 @@ class StandardsTests(unittest.TestCase):
             import assets
             selected = assets.resolve(Path(target), 'component.in-page-navigation')
             self.assertEqual(selected['guidance']['authority'], 'company-contract')
-            self.assertIn('krds-p0204.md', ' '.join(selected['guidance']['references']))
+            self.assertEqual(selected['guidance']['references'], [])
+            self.assertTrue(selected['guidance']['rules'])
             routed = standards.resolve(Path(target), ['login-ui'])
             self.assertIn('ui-auth', [source['id'] for source in routed['sources']])
 

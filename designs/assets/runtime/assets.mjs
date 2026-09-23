@@ -38,6 +38,13 @@ export async function createAssetClient(base, expected = {}) {
     if (!item || (item.restrictedTo && !item.restrictedTo.includes(expected.audience || 'company'))) throw new Error(`Unavailable semantic asset: ${id}`);
     const name = variant || item.defaultVariant;
     if (!Object.hasOwn(item.variants, name)) throw new Error(`Unapproved variant: ${id}/${name}`);
+    if (registry.designSystem === 'company-v27-only') {
+      const chosen = item.variants[name];
+      const paths = [chosen.path, ...(chosen.dependencies || [])];
+      const retired = /\/(?:ui-kit\/internal\/(?:upstream|examples|components|foundations|patterns)(?:\/|$)|icons\/directions(?:\/|$)|ui-kit\/internal\/company\/dist\/(?:patterns(?:\/|$)|foundations\/company-custom\.css$|components\/guided-runtime\.css$))/;
+      if (chosen.legacyOnly || paths.some(path => retired.test(safeURL(path).pathname))) throw new Error(`Retired UI dependency: ${id}`);
+      if (['component','pattern','service','foundation','icon'].includes(item.kind) && !chosen.path.startsWith('designs/assets/ui-kit/internal/company/')) throw new Error(`Non-company UI implementation: ${id}`);
+    }
     return {id, variant: name, kind: item.kind, ...item.variants[name]};
   };
   const message = async id => {
@@ -50,9 +57,10 @@ export async function createAssetClient(base, expected = {}) {
   };
   return Object.freeze({
     pack: registry.pack, release: registry.release, resolve, message,
-    async icon(id, {variant, size = 24, label = ''} = {}) {
+    async icon(id, {variant, size, label = ''} = {}) {
       const asset = resolve(id, variant);
-      if (asset.kind !== 'icon' || ![16, 20, 24, 32, 48].includes(size)) throw new Error('Invalid icon or size');
+      size ??= asset.defaultSize || 24;
+      if (asset.kind !== 'icon' || !(asset.sizes || [16, 20, 24, 32, 48]).includes(size)) throw new Error('Invalid icon or size');
       const bytes = await verifiedBytes(asset.path);
       const image = document.createElement('img');
       const url = URL.createObjectURL(new Blob([bytes], {type:'image/svg+xml'}));

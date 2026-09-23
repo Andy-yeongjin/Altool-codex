@@ -8,9 +8,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 - G01: 최대 2수준 메뉴, 현재 항목, 펼침·접힘 상태와 접힌 링크의 초점 제외를 확인한다.
 - G02: 모바일에서 사이드 메뉴를 생략하면 메인 메뉴 등으로 같은 탐색이 가능한지 확인한다.
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0189.md](../ui-kit/internal/components/krds-p0189.md)
-- [ui-kit/internal/reference/krds-p0189.md](../ui-kit/internal/reference/krds-p0189.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

@@ -10,9 +10,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 
 - G03: action-driven 기본형은 사용자가 시작한 뒤 실제 대상 행동 완료로 다음 단계로 이동한다. 단순 다음 클릭을 실제 업무 완료로 만들지 않는다. 중단/완료 후 시작 버튼으로 초점을 복원하고 재시작은 명시적으로 실행한다. (p.494,497)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0485.md](../ui-kit/internal/components/krds-p0485.md)
-- [ui-kit/internal/reference/krds-p0485.md](../ui-kit/internal/reference/krds-p0485.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.

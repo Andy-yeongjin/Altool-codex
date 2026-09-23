@@ -10,9 +10,6 @@ Altool 기본 회사 계약. 기존 Altool 작성 적용 체크리스트에서 �
 
 - G03: retained-session 기본형은 패널을 접거나 도움말 탭을 전환해도 같은 세션의 진행을 유지한다. 명시적인 그만하기만 안내를 중단하며 새로고침 후 영속 복원은 호스트 계약이다. 모바일 모달을 닫은 뒤 본문 행동 대상에 접근할 수 있어야 한다. (p.461,467)
 
-## 참고 출처
+## 출처
 
-규칙의 권위는 위 회사 계약이다. 아래 문서는 근거·예외 검토가 필요할 때 읽으며 회사 계약을 자동 대체하지 않는다.
-
-- [ui-kit/internal/components/krds-p0459.md](../ui-kit/internal/components/krds-p0459.md)
-- [ui-kit/internal/reference/krds-p0459.md](../ui-kit/internal/reference/krds-p0459.md)
+제작 참고: 행정안전부 디지털 정부서비스 UI/UX 가이드라인(2024.02). 원문·추출 자료는 제공하지 않습니다. [출처·라이선스 고지](../ui-kit/internal/ATTRIBUTION.md)를 유지합니다.
