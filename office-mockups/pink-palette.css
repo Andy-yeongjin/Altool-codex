@@ -1,0 +1,40 @@
+/* Isolated company palette preview. The shared pack stays blue. */
+#company-app :is(button,a.button):is(.primary,[data-variant="primary"]) {
+  --d-bg:#1554A0;
+  --d-border:#1554A0;
+  --d-text:#FFFFFF;
+  --d-hover:#104583;
+  --d-active:#103866;
+}
+.krds-2024-tokens {
+  --company-brand-primary:#A52B61;
+  --company-brand-hover:#88214F;
+  --company-brand-active:#701A40;
+  --company-brand-on-primary:#FFFFFF;
+  --company-brand-soft:#FCEAF2;
+  --company-brand-row-hover:#FDF1F6;
+  --company-brand-row-selected:#F8DDE9;
+  --company-brand-header:#442638;
+  --company-brand-header-hover:#65384F;
+  --company-brand-on-header:#FFFFFF;
+  --company-brand-header-muted:#EBDCE4;
+  --company-brand-header-disabled:#CCB3C0;
+  --company-brand-menu-shadow:rgba(68,38,56,.56);
+  --company-brand-primary-5:#FFF5F9;
+  --company-brand-primary-10:#FCEAF2;
+  --company-brand-primary-20:#F8DDE9;
+  --company-brand-primary-30:#EFAAC8;
+  --company-brand-primary-40:#D96799;
+  --company-brand-primary-80:#50162F;
+  --company-brand-primary-90:#2E101E;
+  --company-brand-secondary-5:#F9F3F6;
+  --company-brand-secondary-10:#EFDFE7;
+  --company-brand-secondary-20:#DEC3D1;
+  --company-brand-secondary-30:#B88DA3;
+  --company-brand-secondary-40:#875C72;
+  --company-brand-secondary-50:#65384F;
+  --company-brand-secondary-60:#542E42;
+  --company-brand-secondary-70:#442638;
+  --company-brand-secondary-80:#331C2A;
+  --company-brand-secondary-90:#23121C;
+}

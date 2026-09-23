@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');const {Node,document}=require('./dom-harness.cjs');require('../js/business.js');
+global.DataTransfer=class{constructor(){this.files=[];this.items={add:f=>this.files.push(f)};}};
+const root=new Node(),input=new Node('input'),form=new Node('form');input.type='file';input.setAttribute('type','file');input.files=[];input.form=form;root.append(input);form.append(root);document.append(form);let changes=0;
+const ui=CompanyBusiness.attachments(root,{onChange(){changes++;}}),f={name:'견적서.pdf',size:1024,lastModified:1},g={name:'산출내역.xlsx',size:2000,lastModified:2};
+input.files=[f];input.dispatchEvent(new Event('change'));assert.equal(ui.files.length,1);assert.equal(input.files.length,1);
+input.files=[f,g];input.dispatchEvent(new Event('change'));assert.equal(ui.files.length,2);assert.equal(input.files.length,2);assert.equal(changes,2);
+root.querySelector('.ui-attachment-list').querySelector('button').click();assert.deepEqual(ui.files,[g]);assert.deepEqual(input.files,[g]);
+ui.clear();assert.equal(input.files.length,0);assert.equal(root.querySelector('.ui-attachment-empty').hidden,false);
+input.files=[f];input.dispatchEvent(new Event('change'));form.dispatchEvent(new Event('reset'));assert.equal(ui.files.length,0);assert.equal(input.files.length,0);
+ui.destroy();assert.equal(input.hidden,false);assert.equal(root.querySelector('.ui-attachment-toolbar'),null);
+console.log('PASS: append, duplicate prevention, native file sync, per-file removal, clear, form reset, teardown');

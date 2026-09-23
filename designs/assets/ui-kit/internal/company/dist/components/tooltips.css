@@ -1,0 +1,8 @@
+/* Surface only: application owns visibility and popup positioning. */
+.altool-ui .ui-tooltip { box-sizing:border-box;width:fit-content;max-width:min(20rem,100%);padding:8px 12px;border:1px solid var(--company-tooltip-bg);border-radius:var(--company-button-radius);background:var(--company-tooltip-bg);color:var(--company-tooltip-text);font-family:var(--company-button-font);font-size:13px;font-weight:400;line-height:1.5;overflow-wrap:anywhere;box-shadow:none; }
+.altool-ui .ui-tooltip[hidden] { display:none; }
+.altool-ui button.ui-help-trigger { display:inline-flex;align-items:center;justify-content:center;width:28px;min-width:28px;min-height:28px;padding:0;border:1px solid transparent;border-radius:var(--company-button-radius);background:transparent;color:#59616B;box-shadow:none; }
+.altool-ui button.ui-help-trigger:hover { background:#F1F3F5; }
+.altool-ui button.ui-help-trigger > .ui-icon { width:16px;height:16px; }
+.altool-ui button.ui-help-trigger:disabled { background:transparent;color:var(--company-button-disabled-text);cursor:not-allowed; }
+@media(pointer:coarse) { .altool-ui button.ui-help-trigger { width:44px;min-width:44px;min-height:44px; } }

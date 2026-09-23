@@ -1,0 +1,1629 @@
+{
+  "schema_version": 1,
+  "provider": "Lucide",
+  "provider_version": "1.8.0",
+  "source_url": "https://lucide.dev",
+  "license_file": "LICENSE-LUCIDE.txt",
+  "viewBox": "0 0 24 24",
+  "default_size_px": 16,
+  "default_stroke_width": 1.5,
+  "count": 120,
+  "icons": [
+    {
+      "id": "search",
+      "category": "기본 작업",
+      "source_name": "Search",
+      "label_ko": "조회",
+      "keywords": [
+        "검색",
+        "찾기",
+        "lookup"
+      ],
+      "svg_path": "assets/icons/search.svg",
+      "sprite_href": "assets/icons.svg#search",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#search\"></use></svg>"
+    },
+    {
+      "id": "plus",
+      "category": "기본 작업",
+      "source_name": "Plus",
+      "label_ko": "신규",
+      "keywords": [
+        "추가",
+        "생성",
+        "등록",
+        "add",
+        "create"
+      ],
+      "svg_path": "assets/icons/plus.svg",
+      "sprite_href": "assets/icons.svg#plus",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#plus\"></use></svg>"
+    },
+    {
+      "id": "pencil",
+      "category": "기본 작업",
+      "source_name": "Pencil",
+      "label_ko": "수정",
+      "keywords": [
+        "편집",
+        "변경",
+        "edit"
+      ],
+      "svg_path": "assets/icons/pencil.svg",
+      "sprite_href": "assets/icons.svg#pencil",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#pencil\"></use></svg>"
+    },
+    {
+      "id": "save",
+      "category": "기본 작업",
+      "source_name": "Save",
+      "label_ko": "저장",
+      "keywords": [
+        "반영",
+        "save"
+      ],
+      "svg_path": "assets/icons/save.svg",
+      "sprite_href": "assets/icons.svg#save",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#save\"></use></svg>"
+    },
+    {
+      "id": "trash",
+      "category": "기본 작업",
+      "source_name": "Trash2",
+      "label_ko": "삭제",
+      "keywords": [
+        "제거",
+        "폐기",
+        "delete"
+      ],
+      "svg_path": "assets/icons/trash.svg",
+      "sprite_href": "assets/icons.svg#trash",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#trash\"></use></svg>"
+    },
+    {
+      "id": "copy",
+      "category": "기본 작업",
+      "source_name": "Copy",
+      "label_ko": "복사",
+      "keywords": [
+        "복제",
+        "duplicate"
+      ],
+      "svg_path": "assets/icons/copy.svg",
+      "sprite_href": "assets/icons.svg#copy",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#copy\"></use></svg>"
+    },
+    {
+      "id": "check",
+      "category": "기본 작업",
+      "source_name": "Check",
+      "label_ko": "확인",
+      "keywords": [
+        "완료",
+        "승인",
+        "confirm"
+      ],
+      "svg_path": "assets/icons/check.svg",
+      "sprite_href": "assets/icons.svg#check",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#check\"></use></svg>"
+    },
+    {
+      "id": "x",
+      "category": "기본 작업",
+      "source_name": "X",
+      "label_ko": "닫기",
+      "keywords": [
+        "취소",
+        "해제",
+        "close",
+        "cancel"
+      ],
+      "svg_path": "assets/icons/x.svg",
+      "sprite_href": "assets/icons.svg#x",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#x\"></use></svg>"
+    },
+    {
+      "id": "refresh",
+      "category": "기본 작업",
+      "source_name": "RefreshCw",
+      "label_ko": "새로고침",
+      "keywords": [
+        "갱신",
+        "reload"
+      ],
+      "svg_path": "assets/icons/refresh.svg",
+      "sprite_href": "assets/icons.svg#refresh",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#refresh\"></use></svg>"
+    },
+    {
+      "id": "undo",
+      "category": "기본 작업",
+      "source_name": "Undo2",
+      "label_ko": "되돌리기",
+      "keywords": [
+        "실행취소",
+        "undo"
+      ],
+      "svg_path": "assets/icons/undo.svg",
+      "sprite_href": "assets/icons.svg#undo",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#undo\"></use></svg>"
+    },
+    {
+      "id": "redo",
+      "category": "기본 작업",
+      "source_name": "Redo2",
+      "label_ko": "다시 실행",
+      "keywords": [
+        "redo"
+      ],
+      "svg_path": "assets/icons/redo.svg",
+      "sprite_href": "assets/icons.svg#redo",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#redo\"></use></svg>"
+    },
+    {
+      "id": "eye",
+      "category": "기본 작업",
+      "source_name": "Eye",
+      "label_ko": "보기",
+      "keywords": [
+        "미리보기",
+        "조회",
+        "preview"
+      ],
+      "svg_path": "assets/icons/eye.svg",
+      "sprite_href": "assets/icons.svg#eye",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#eye\"></use></svg>"
+    },
+    {
+      "id": "eye-off",
+      "category": "기본 작업",
+      "source_name": "EyeOff",
+      "label_ko": "숨기기",
+      "keywords": [
+        "비공개",
+        "감추기",
+        "hide"
+      ],
+      "svg_path": "assets/icons/eye-off.svg",
+      "sprite_href": "assets/icons.svg#eye-off",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#eye-off\"></use></svg>"
+    },
+    {
+      "id": "filter",
+      "category": "기본 작업",
+      "source_name": "Filter",
+      "label_ko": "필터",
+      "keywords": [
+        "조회조건",
+        "조건",
+        "filter"
+      ],
+      "svg_path": "assets/icons/filter.svg",
+      "sprite_href": "assets/icons.svg#filter",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#filter\"></use></svg>"
+    },
+    {
+      "id": "sliders",
+      "category": "기본 작업",
+      "source_name": "SlidersHorizontal",
+      "label_ko": "상세 조건",
+      "keywords": [
+        "조건설정",
+        "조정",
+        "settings"
+      ],
+      "svg_path": "assets/icons/sliders.svg",
+      "sprite_href": "assets/icons.svg#sliders",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#sliders\"></use></svg>"
+    },
+    {
+      "id": "file",
+      "category": "파일·문서",
+      "source_name": "File",
+      "label_ko": "파일",
+      "keywords": [
+        "문서",
+        "file"
+      ],
+      "svg_path": "assets/icons/file.svg",
+      "sprite_href": "assets/icons.svg#file",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#file\"></use></svg>"
+    },
+    {
+      "id": "file-text",
+      "category": "파일·문서",
+      "source_name": "FileText",
+      "label_ko": "텍스트 문서",
+      "keywords": [
+        "내용",
+        "명세",
+        "document"
+      ],
+      "svg_path": "assets/icons/file-text.svg",
+      "sprite_href": "assets/icons.svg#file-text",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#file-text\"></use></svg>"
+    },
+    {
+      "id": "file-plus",
+      "category": "파일·문서",
+      "source_name": "FilePlus",
+      "label_ko": "문서 추가",
+      "keywords": [
+        "파일",
+        "생성",
+        "신규"
+      ],
+      "svg_path": "assets/icons/file-plus.svg",
+      "sprite_href": "assets/icons.svg#file-plus",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#file-plus\"></use></svg>"
+    },
+    {
+      "id": "file-check",
+      "category": "파일·문서",
+      "source_name": "FileCheck",
+      "label_ko": "문서 확인",
+      "keywords": [
+        "증빙확인",
+        "검증"
+      ],
+      "svg_path": "assets/icons/file-check.svg",
+      "sprite_href": "assets/icons.svg#file-check",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#file-check\"></use></svg>"
+    },
+    {
+      "id": "file-search",
+      "category": "파일·문서",
+      "source_name": "FileSearch",
+      "label_ko": "문서 검색",
+      "keywords": [
+        "증빙조회"
+      ],
+      "svg_path": "assets/icons/file-search.svg",
+      "sprite_href": "assets/icons.svg#file-search",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#file-search\"></use></svg>"
+    },
+    {
+      "id": "files",
+      "category": "파일·문서",
+      "source_name": "Files",
+      "label_ko": "여러 문서",
+      "keywords": [
+        "문서목록",
+        "파일모음"
+      ],
+      "svg_path": "assets/icons/files.svg",
+      "sprite_href": "assets/icons.svg#files",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#files\"></use></svg>"
+    },
+    {
+      "id": "folder",
+      "category": "파일·문서",
+      "source_name": "Folder",
+      "label_ko": "폴더",
+      "keywords": [
+        "디렉터리",
+        "분류"
+      ],
+      "svg_path": "assets/icons/folder.svg",
+      "sprite_href": "assets/icons.svg#folder",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#folder\"></use></svg>"
+    },
+    {
+      "id": "folder-open",
+      "category": "파일·문서",
+      "source_name": "FolderOpen",
+      "label_ko": "열린 폴더",
+      "keywords": [
+        "폴더열기"
+      ],
+      "svg_path": "assets/icons/folder-open.svg",
+      "sprite_href": "assets/icons.svg#folder-open",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#folder-open\"></use></svg>"
+    },
+    {
+      "id": "paperclip",
+      "category": "파일·문서",
+      "source_name": "Paperclip",
+      "label_ko": "첨부",
+      "keywords": [
+        "파일첨부",
+        "attachment"
+      ],
+      "svg_path": "assets/icons/paperclip.svg",
+      "sprite_href": "assets/icons.svg#paperclip",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#paperclip\"></use></svg>"
+    },
+    {
+      "id": "upload",
+      "category": "파일·문서",
+      "source_name": "Upload",
+      "label_ko": "업로드",
+      "keywords": [
+        "올리기",
+        "가져오기",
+        "upload"
+      ],
+      "svg_path": "assets/icons/upload.svg",
+      "sprite_href": "assets/icons.svg#upload",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#upload\"></use></svg>"
+    },
+    {
+      "id": "download",
+      "category": "파일·문서",
+      "source_name": "Download",
+      "label_ko": "다운로드",
+      "keywords": [
+        "내려받기",
+        "export"
+      ],
+      "svg_path": "assets/icons/download.svg",
+      "sprite_href": "assets/icons.svg#download",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#download\"></use></svg>"
+    },
+    {
+      "id": "printer",
+      "category": "파일·문서",
+      "source_name": "Printer",
+      "label_ko": "인쇄",
+      "keywords": [
+        "출력",
+        "print"
+      ],
+      "svg_path": "assets/icons/printer.svg",
+      "sprite_href": "assets/icons.svg#printer",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#printer\"></use></svg>"
+    },
+    {
+      "id": "spreadsheet",
+      "category": "파일·문서",
+      "source_name": "FileSpreadsheet",
+      "label_ko": "스프레드시트",
+      "keywords": [
+        "엑셀",
+        "Excel",
+        "xlsx",
+        "csv"
+      ],
+      "svg_path": "assets/icons/spreadsheet.svg",
+      "sprite_href": "assets/icons.svg#spreadsheet",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#spreadsheet\"></use></svg>"
+    },
+    {
+      "id": "archive",
+      "category": "파일·문서",
+      "source_name": "Archive",
+      "label_ko": "보관",
+      "keywords": [
+        "아카이브",
+        "archive"
+      ],
+      "svg_path": "assets/icons/archive.svg",
+      "sprite_href": "assets/icons.svg#archive",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#archive\"></use></svg>"
+    },
+    {
+      "id": "clipboard",
+      "category": "파일·문서",
+      "source_name": "Clipboard",
+      "label_ko": "클립보드",
+      "keywords": [
+        "붙여넣기",
+        "clipboard"
+      ],
+      "svg_path": "assets/icons/clipboard.svg",
+      "sprite_href": "assets/icons.svg#clipboard",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#clipboard\"></use></svg>"
+    },
+    {
+      "id": "clipboard-check",
+      "category": "파일·문서",
+      "source_name": "ClipboardCheck",
+      "label_ko": "점검 완료",
+      "keywords": [
+        "체크리스트",
+        "검수"
+      ],
+      "svg_path": "assets/icons/clipboard-check.svg",
+      "sprite_href": "assets/icons.svg#clipboard-check",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#clipboard-check\"></use></svg>"
+    },
+    {
+      "id": "image",
+      "category": "파일·문서",
+      "source_name": "Image",
+      "label_ko": "이미지",
+      "keywords": [
+        "사진",
+        "그림",
+        "image"
+      ],
+      "svg_path": "assets/icons/image.svg",
+      "sprite_href": "assets/icons.svg#image",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#image\"></use></svg>"
+    },
+    {
+      "id": "arrow-left",
+      "category": "이동·배치",
+      "source_name": "ArrowLeft",
+      "label_ko": "뒤로",
+      "keywords": [
+        "이전",
+        "back"
+      ],
+      "svg_path": "assets/icons/arrow-left.svg",
+      "sprite_href": "assets/icons.svg#arrow-left",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#arrow-left\"></use></svg>"
+    },
+    {
+      "id": "arrow-right",
+      "category": "이동·배치",
+      "source_name": "ArrowRight",
+      "label_ko": "앞으로",
+      "keywords": [
+        "다음",
+        "next"
+      ],
+      "svg_path": "assets/icons/arrow-right.svg",
+      "sprite_href": "assets/icons.svg#arrow-right",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#arrow-right\"></use></svg>"
+    },
+    {
+      "id": "arrow-up",
+      "category": "이동·배치",
+      "source_name": "ArrowUp",
+      "label_ko": "위로",
+      "keywords": [
+        "올리기",
+        "up"
+      ],
+      "svg_path": "assets/icons/arrow-up.svg",
+      "sprite_href": "assets/icons.svg#arrow-up",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#arrow-up\"></use></svg>"
+    },
+    {
+      "id": "arrow-down",
+      "category": "이동·배치",
+      "source_name": "ArrowDown",
+      "label_ko": "아래로",
+      "keywords": [
+        "내리기",
+        "down"
+      ],
+      "svg_path": "assets/icons/arrow-down.svg",
+      "sprite_href": "assets/icons.svg#arrow-down",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#arrow-down\"></use></svg>"
+    },
+    {
+      "id": "chevron-left",
+      "category": "이동·배치",
+      "source_name": "ChevronLeft",
+      "label_ko": "이전 항목",
+      "keywords": [
+        "이전페이지",
+        "previous"
+      ],
+      "svg_path": "assets/icons/chevron-left.svg",
+      "sprite_href": "assets/icons.svg#chevron-left",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#chevron-left\"></use></svg>"
+    },
+    {
+      "id": "chevron-right",
+      "category": "이동·배치",
+      "source_name": "ChevronRight",
+      "label_ko": "다음 항목",
+      "keywords": [
+        "다음페이지",
+        "next"
+      ],
+      "svg_path": "assets/icons/chevron-right.svg",
+      "sprite_href": "assets/icons.svg#chevron-right",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#chevron-right\"></use></svg>"
+    },
+    {
+      "id": "chevron-up",
+      "category": "이동·배치",
+      "source_name": "ChevronUp",
+      "label_ko": "접기",
+      "keywords": [
+        "위쪽",
+        "collapse"
+      ],
+      "svg_path": "assets/icons/chevron-up.svg",
+      "sprite_href": "assets/icons.svg#chevron-up",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#chevron-up\"></use></svg>"
+    },
+    {
+      "id": "chevron-down",
+      "category": "이동·배치",
+      "source_name": "ChevronDown",
+      "label_ko": "펼치기",
+      "keywords": [
+        "드롭다운",
+        "expand"
+      ],
+      "svg_path": "assets/icons/chevron-down.svg",
+      "sprite_href": "assets/icons.svg#chevron-down",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#chevron-down\"></use></svg>"
+    },
+    {
+      "id": "first-page",
+      "category": "이동·배치",
+      "source_name": "ChevronsLeft",
+      "label_ko": "처음 페이지",
+      "keywords": [
+        "맨앞",
+        "first"
+      ],
+      "svg_path": "assets/icons/first-page.svg",
+      "sprite_href": "assets/icons.svg#first-page",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#first-page\"></use></svg>"
+    },
+    {
+      "id": "last-page",
+      "category": "이동·배치",
+      "source_name": "ChevronsRight",
+      "label_ko": "마지막 페이지",
+      "keywords": [
+        "맨뒤",
+        "last"
+      ],
+      "svg_path": "assets/icons/last-page.svg",
+      "sprite_href": "assets/icons.svg#last-page",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#last-page\"></use></svg>"
+    },
+    {
+      "id": "external-link",
+      "category": "이동·배치",
+      "source_name": "ExternalLink",
+      "label_ko": "새 창",
+      "keywords": [
+        "외부링크",
+        "external"
+      ],
+      "svg_path": "assets/icons/external-link.svg",
+      "sprite_href": "assets/icons.svg#external-link",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#external-link\"></use></svg>"
+    },
+    {
+      "id": "link",
+      "category": "이동·배치",
+      "source_name": "Link",
+      "label_ko": "링크",
+      "keywords": [
+        "연결",
+        "주소",
+        "link"
+      ],
+      "svg_path": "assets/icons/link.svg",
+      "sprite_href": "assets/icons.svg#link",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#link\"></use></svg>"
+    },
+    {
+      "id": "home",
+      "category": "이동·배치",
+      "source_name": "House",
+      "label_ko": "홈",
+      "keywords": [
+        "처음",
+        "메인",
+        "home"
+      ],
+      "svg_path": "assets/icons/home.svg",
+      "sprite_href": "assets/icons.svg#home",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#home\"></use></svg>"
+    },
+    {
+      "id": "menu",
+      "category": "이동·배치",
+      "source_name": "Menu",
+      "label_ko": "메뉴",
+      "keywords": [
+        "전체메뉴",
+        "hamburger"
+      ],
+      "svg_path": "assets/icons/menu.svg",
+      "sprite_href": "assets/icons.svg#menu",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#menu\"></use></svg>"
+    },
+    {
+      "id": "more-horizontal",
+      "category": "이동·배치",
+      "source_name": "Ellipsis",
+      "label_ko": "더보기",
+      "keywords": [
+        "추가메뉴",
+        "more"
+      ],
+      "svg_path": "assets/icons/more-horizontal.svg",
+      "sprite_href": "assets/icons.svg#more-horizontal",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#more-horizontal\"></use></svg>"
+    },
+    {
+      "id": "more-vertical",
+      "category": "이동·배치",
+      "source_name": "EllipsisVertical",
+      "label_ko": "세로 더보기",
+      "keywords": [
+        "행메뉴",
+        "more"
+      ],
+      "svg_path": "assets/icons/more-vertical.svg",
+      "sprite_href": "assets/icons.svg#more-vertical",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#more-vertical\"></use></svg>"
+    },
+    {
+      "id": "maximize",
+      "category": "이동·배치",
+      "source_name": "Maximize2",
+      "label_ko": "확대",
+      "keywords": [
+        "전체화면",
+        "maximize"
+      ],
+      "svg_path": "assets/icons/maximize.svg",
+      "sprite_href": "assets/icons.svg#maximize",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#maximize\"></use></svg>"
+    },
+    {
+      "id": "minimize",
+      "category": "이동·배치",
+      "source_name": "Minimize2",
+      "label_ko": "축소",
+      "keywords": [
+        "화면복원",
+        "minimize"
+      ],
+      "svg_path": "assets/icons/minimize.svg",
+      "sprite_href": "assets/icons.svg#minimize",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#minimize\"></use></svg>"
+    },
+    {
+      "id": "panel-left",
+      "category": "이동·배치",
+      "source_name": "PanelLeft",
+      "label_ko": "사이드바",
+      "keywords": [
+        "왼쪽패널",
+        "sidebar"
+      ],
+      "svg_path": "assets/icons/panel-left.svg",
+      "sprite_href": "assets/icons.svg#panel-left",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#panel-left\"></use></svg>"
+    },
+    {
+      "id": "grid",
+      "category": "이동·배치",
+      "source_name": "LayoutGrid",
+      "label_ko": "격자 보기",
+      "keywords": [
+        "카드보기",
+        "grid"
+      ],
+      "svg_path": "assets/icons/grid.svg",
+      "sprite_href": "assets/icons.svg#grid",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#grid\"></use></svg>"
+    },
+    {
+      "id": "list",
+      "category": "이동·배치",
+      "source_name": "List",
+      "label_ko": "목록 보기",
+      "keywords": [
+        "리스트",
+        "list"
+      ],
+      "svg_path": "assets/icons/list.svg",
+      "sprite_href": "assets/icons.svg#list",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#list\"></use></svg>"
+    },
+    {
+      "id": "grip",
+      "category": "이동·배치",
+      "source_name": "GripVertical",
+      "label_ko": "이동 손잡이",
+      "keywords": [
+        "드래그",
+        "순서",
+        "drag"
+      ],
+      "svg_path": "assets/icons/grip.svg",
+      "sprite_href": "assets/icons.svg#grip",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#grip\"></use></svg>"
+    },
+    {
+      "id": "info",
+      "category": "상태·알림",
+      "source_name": "Info",
+      "label_ko": "안내",
+      "keywords": [
+        "정보",
+        "information"
+      ],
+      "svg_path": "assets/icons/info.svg",
+      "sprite_href": "assets/icons.svg#info",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#info\"></use></svg>"
+    },
+    {
+      "id": "help",
+      "category": "상태·알림",
+      "source_name": "CircleHelp",
+      "label_ko": "도움말",
+      "keywords": [
+        "질문",
+        "help"
+      ],
+      "svg_path": "assets/icons/help.svg",
+      "sprite_href": "assets/icons.svg#help",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#help\"></use></svg>"
+    },
+    {
+      "id": "warning",
+      "category": "상태·알림",
+      "source_name": "TriangleAlert",
+      "label_ko": "경고",
+      "keywords": [
+        "주의",
+        "warning"
+      ],
+      "svg_path": "assets/icons/warning.svg",
+      "sprite_href": "assets/icons.svg#warning",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#warning\"></use></svg>"
+    },
+    {
+      "id": "error",
+      "category": "상태·알림",
+      "source_name": "CircleX",
+      "label_ko": "오류",
+      "keywords": [
+        "실패",
+        "error"
+      ],
+      "svg_path": "assets/icons/error.svg",
+      "sprite_href": "assets/icons.svg#error",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#error\"></use></svg>"
+    },
+    {
+      "id": "success",
+      "category": "상태·알림",
+      "source_name": "CircleCheck",
+      "label_ko": "성공",
+      "keywords": [
+        "완료",
+        "정상",
+        "success"
+      ],
+      "svg_path": "assets/icons/success.svg",
+      "sprite_href": "assets/icons.svg#success",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#success\"></use></svg>"
+    },
+    {
+      "id": "pending",
+      "category": "상태·알림",
+      "source_name": "Clock",
+      "label_ko": "대기",
+      "keywords": [
+        "처리중",
+        "시간",
+        "pending"
+      ],
+      "svg_path": "assets/icons/pending.svg",
+      "sprite_href": "assets/icons.svg#pending",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#pending\"></use></svg>"
+    },
+    {
+      "id": "loader",
+      "category": "상태·알림",
+      "source_name": "LoaderCircle",
+      "label_ko": "로딩",
+      "keywords": [
+        "불러오는중",
+        "loading"
+      ],
+      "svg_path": "assets/icons/loader.svg",
+      "sprite_href": "assets/icons.svg#loader",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#loader\"></use></svg>"
+    },
+    {
+      "id": "bell",
+      "category": "상태·알림",
+      "source_name": "Bell",
+      "label_ko": "알림",
+      "keywords": [
+        "통지",
+        "notification"
+      ],
+      "svg_path": "assets/icons/bell.svg",
+      "sprite_href": "assets/icons.svg#bell",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#bell\"></use></svg>"
+    },
+    {
+      "id": "bell-off",
+      "category": "상태·알림",
+      "source_name": "BellOff",
+      "label_ko": "알림 끄기",
+      "keywords": [
+        "음소거",
+        "mute"
+      ],
+      "svg_path": "assets/icons/bell-off.svg",
+      "sprite_href": "assets/icons.svg#bell-off",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#bell-off\"></use></svg>"
+    },
+    {
+      "id": "ban",
+      "category": "상태·알림",
+      "source_name": "Ban",
+      "label_ko": "금지",
+      "keywords": [
+        "차단",
+        "불가",
+        "blocked"
+      ],
+      "svg_path": "assets/icons/ban.svg",
+      "sprite_href": "assets/icons.svg#ban",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#ban\"></use></svg>"
+    },
+    {
+      "id": "flag",
+      "category": "상태·알림",
+      "source_name": "Flag",
+      "label_ko": "표시",
+      "keywords": [
+        "관심",
+        "플래그",
+        "flag"
+      ],
+      "svg_path": "assets/icons/flag.svg",
+      "sprite_href": "assets/icons.svg#flag",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#flag\"></use></svg>"
+    },
+    {
+      "id": "bookmark",
+      "category": "상태·알림",
+      "source_name": "Bookmark",
+      "label_ko": "책갈피",
+      "keywords": [
+        "즐겨찾기",
+        "bookmark"
+      ],
+      "svg_path": "assets/icons/bookmark.svg",
+      "sprite_href": "assets/icons.svg#bookmark",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#bookmark\"></use></svg>"
+    },
+    {
+      "id": "star",
+      "category": "상태·알림",
+      "source_name": "Star",
+      "label_ko": "즐겨찾기",
+      "keywords": [
+        "중요",
+        "favorite"
+      ],
+      "svg_path": "assets/icons/star.svg",
+      "sprite_href": "assets/icons.svg#star",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#star\"></use></svg>"
+    },
+    {
+      "id": "user",
+      "category": "사람·조직",
+      "source_name": "User",
+      "label_ko": "사용자",
+      "keywords": [
+        "담당자",
+        "개인",
+        "user"
+      ],
+      "svg_path": "assets/icons/user.svg",
+      "sprite_href": "assets/icons.svg#user",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#user\"></use></svg>"
+    },
+    {
+      "id": "users",
+      "category": "사람·조직",
+      "source_name": "Users",
+      "label_ko": "사용자 그룹",
+      "keywords": [
+        "팀",
+        "구성원",
+        "users"
+      ],
+      "svg_path": "assets/icons/users.svg",
+      "sprite_href": "assets/icons.svg#users",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#users\"></use></svg>"
+    },
+    {
+      "id": "user-plus",
+      "category": "사람·조직",
+      "source_name": "UserPlus",
+      "label_ko": "사용자 추가",
+      "keywords": [
+        "초대",
+        "인원추가"
+      ],
+      "svg_path": "assets/icons/user-plus.svg",
+      "sprite_href": "assets/icons.svg#user-plus",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#user-plus\"></use></svg>"
+    },
+    {
+      "id": "user-check",
+      "category": "사람·조직",
+      "source_name": "UserCheck",
+      "label_ko": "사용자 확인",
+      "keywords": [
+        "담당자승인"
+      ],
+      "svg_path": "assets/icons/user-check.svg",
+      "sprite_href": "assets/icons.svg#user-check",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#user-check\"></use></svg>"
+    },
+    {
+      "id": "building",
+      "category": "사람·조직",
+      "source_name": "Building2",
+      "label_ko": "법인",
+      "keywords": [
+        "회사",
+        "본사",
+        "company"
+      ],
+      "svg_path": "assets/icons/building.svg",
+      "sprite_href": "assets/icons.svg#building",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#building\"></use></svg>"
+    },
+    {
+      "id": "network",
+      "category": "사람·조직",
+      "source_name": "Network",
+      "label_ko": "조직도",
+      "keywords": [
+        "부서",
+        "조직",
+        "hierarchy"
+      ],
+      "svg_path": "assets/icons/network.svg",
+      "sprite_href": "assets/icons.svg#network",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#network\"></use></svg>"
+    },
+    {
+      "id": "contact",
+      "category": "사람·조직",
+      "source_name": "Contact",
+      "label_ko": "연락처",
+      "keywords": [
+        "명함",
+        "contact"
+      ],
+      "svg_path": "assets/icons/contact.svg",
+      "sprite_href": "assets/icons.svg#contact",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#contact\"></use></svg>"
+    },
+    {
+      "id": "mail",
+      "category": "사람·조직",
+      "source_name": "Mail",
+      "label_ko": "메일",
+      "keywords": [
+        "이메일",
+        "email"
+      ],
+      "svg_path": "assets/icons/mail.svg",
+      "sprite_href": "assets/icons.svg#mail",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#mail\"></use></svg>"
+    },
+    {
+      "id": "phone",
+      "category": "사람·조직",
+      "source_name": "Phone",
+      "label_ko": "전화",
+      "keywords": [
+        "통화",
+        "phone"
+      ],
+      "svg_path": "assets/icons/phone.svg",
+      "sprite_href": "assets/icons.svg#phone",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#phone\"></use></svg>"
+    },
+    {
+      "id": "message",
+      "category": "사람·조직",
+      "source_name": "MessageSquare",
+      "label_ko": "의견",
+      "keywords": [
+        "댓글",
+        "메시지",
+        "comment"
+      ],
+      "svg_path": "assets/icons/message.svg",
+      "sprite_href": "assets/icons.svg#message",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#message\"></use></svg>"
+    },
+    {
+      "id": "send",
+      "category": "사람·조직",
+      "source_name": "Send",
+      "label_ko": "전송",
+      "keywords": [
+        "발송",
+        "제출",
+        "send"
+      ],
+      "svg_path": "assets/icons/send.svg",
+      "sprite_href": "assets/icons.svg#send",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#send\"></use></svg>"
+    },
+    {
+      "id": "calendar",
+      "category": "일정·결재",
+      "source_name": "Calendar",
+      "label_ko": "달력",
+      "keywords": [
+        "일자",
+        "날짜",
+        "date"
+      ],
+      "svg_path": "assets/icons/calendar.svg",
+      "sprite_href": "assets/icons.svg#calendar",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#calendar\"></use></svg>"
+    },
+    {
+      "id": "calendar-range",
+      "category": "일정·결재",
+      "source_name": "CalendarRange",
+      "label_ko": "기간",
+      "keywords": [
+        "시작일",
+        "종료일",
+        "range"
+      ],
+      "svg_path": "assets/icons/calendar-range.svg",
+      "sprite_href": "assets/icons.svg#calendar-range",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#calendar-range\"></use></svg>"
+    },
+    {
+      "id": "calendar-check",
+      "category": "일정·결재",
+      "source_name": "CalendarCheck",
+      "label_ko": "일정 확인",
+      "keywords": [
+        "확정",
+        "예약"
+      ],
+      "svg_path": "assets/icons/calendar-check.svg",
+      "sprite_href": "assets/icons.svg#calendar-check",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#calendar-check\"></use></svg>"
+    },
+    {
+      "id": "history",
+      "category": "일정·결재",
+      "source_name": "History",
+      "label_ko": "이력",
+      "keywords": [
+        "변경이력",
+        "기록",
+        "history"
+      ],
+      "svg_path": "assets/icons/history.svg",
+      "sprite_href": "assets/icons.svg#history",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#history\"></use></svg>"
+    },
+    {
+      "id": "stamp",
+      "category": "일정·결재",
+      "source_name": "Stamp",
+      "label_ko": "결재",
+      "keywords": [
+        "승인",
+        "날인",
+        "approval"
+      ],
+      "svg_path": "assets/icons/stamp.svg",
+      "sprite_href": "assets/icons.svg#stamp",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#stamp\"></use></svg>"
+    },
+    {
+      "id": "workflow",
+      "category": "일정·결재",
+      "source_name": "Workflow",
+      "label_ko": "처리 흐름",
+      "keywords": [
+        "워크플로",
+        "단계",
+        "workflow"
+      ],
+      "svg_path": "assets/icons/workflow.svg",
+      "sprite_href": "assets/icons.svg#workflow",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#workflow\"></use></svg>"
+    },
+    {
+      "id": "list-checks",
+      "category": "일정·결재",
+      "source_name": "ListChecks",
+      "label_ko": "할 일",
+      "keywords": [
+        "체크리스트",
+        "tasks"
+      ],
+      "svg_path": "assets/icons/list-checks.svg",
+      "sprite_href": "assets/icons.svg#list-checks",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#list-checks\"></use></svg>"
+    },
+    {
+      "id": "wallet",
+      "category": "재무·물류",
+      "source_name": "Wallet",
+      "label_ko": "예산",
+      "keywords": [
+        "지갑",
+        "자금",
+        "budget"
+      ],
+      "svg_path": "assets/icons/wallet.svg",
+      "sprite_href": "assets/icons.svg#wallet",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#wallet\"></use></svg>"
+    },
+    {
+      "id": "credit-card",
+      "category": "재무·물류",
+      "source_name": "CreditCard",
+      "label_ko": "법인카드",
+      "keywords": [
+        "카드",
+        "결제",
+        "card"
+      ],
+      "svg_path": "assets/icons/credit-card.svg",
+      "sprite_href": "assets/icons.svg#credit-card",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#credit-card\"></use></svg>"
+    },
+    {
+      "id": "receipt",
+      "category": "재무·물류",
+      "source_name": "Receipt",
+      "label_ko": "영수증",
+      "keywords": [
+        "증빙",
+        "정산",
+        "receipt"
+      ],
+      "svg_path": "assets/icons/receipt.svg",
+      "sprite_href": "assets/icons.svg#receipt",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#receipt\"></use></svg>"
+    },
+    {
+      "id": "bank",
+      "category": "재무·물류",
+      "source_name": "Landmark",
+      "label_ko": "은행",
+      "keywords": [
+        "금융기관",
+        "bank"
+      ],
+      "svg_path": "assets/icons/bank.svg",
+      "sprite_href": "assets/icons.svg#bank",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#bank\"></use></svg>"
+    },
+    {
+      "id": "calculator",
+      "category": "재무·물류",
+      "source_name": "Calculator",
+      "label_ko": "계산",
+      "keywords": [
+        "계산기",
+        "calculate"
+      ],
+      "svg_path": "assets/icons/calculator.svg",
+      "sprite_href": "assets/icons.svg#calculator",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#calculator\"></use></svg>"
+    },
+    {
+      "id": "percent",
+      "category": "재무·물류",
+      "source_name": "Percent",
+      "label_ko": "비율",
+      "keywords": [
+        "백분율",
+        "집행률",
+        "percent"
+      ],
+      "svg_path": "assets/icons/percent.svg",
+      "sprite_href": "assets/icons.svg#percent",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#percent\"></use></svg>"
+    },
+    {
+      "id": "coins",
+      "category": "재무·물류",
+      "source_name": "Coins",
+      "label_ko": "금액",
+      "keywords": [
+        "비용",
+        "통화",
+        "money"
+      ],
+      "svg_path": "assets/icons/coins.svg",
+      "sprite_href": "assets/icons.svg#coins",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#coins\"></use></svg>"
+    },
+    {
+      "id": "package",
+      "category": "재무·물류",
+      "source_name": "Package",
+      "label_ko": "자재",
+      "keywords": [
+        "품목",
+        "물품",
+        "package"
+      ],
+      "svg_path": "assets/icons/package.svg",
+      "sprite_href": "assets/icons.svg#package",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#package\"></use></svg>"
+    },
+    {
+      "id": "truck",
+      "category": "재무·물류",
+      "source_name": "Truck",
+      "label_ko": "배송",
+      "keywords": [
+        "운송",
+        "물류",
+        "delivery"
+      ],
+      "svg_path": "assets/icons/truck.svg",
+      "sprite_href": "assets/icons.svg#truck",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#truck\"></use></svg>"
+    },
+    {
+      "id": "warehouse",
+      "category": "재무·물류",
+      "source_name": "Warehouse",
+      "label_ko": "창고",
+      "keywords": [
+        "재고",
+        "storage"
+      ],
+      "svg_path": "assets/icons/warehouse.svg",
+      "sprite_href": "assets/icons.svg#warehouse",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#warehouse\"></use></svg>"
+    },
+    {
+      "id": "shopping-cart",
+      "category": "재무·물류",
+      "source_name": "ShoppingCart",
+      "label_ko": "구매",
+      "keywords": [
+        "발주",
+        "구매요청",
+        "purchase"
+      ],
+      "svg_path": "assets/icons/shopping-cart.svg",
+      "sprite_href": "assets/icons.svg#shopping-cart",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#shopping-cart\"></use></svg>"
+    },
+    {
+      "id": "database",
+      "category": "데이터·분석",
+      "source_name": "Database",
+      "label_ko": "데이터베이스",
+      "keywords": [
+        "DB",
+        "데이터",
+        "database"
+      ],
+      "svg_path": "assets/icons/database.svg",
+      "sprite_href": "assets/icons.svg#database",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#database\"></use></svg>"
+    },
+    {
+      "id": "table",
+      "category": "데이터·분석",
+      "source_name": "Table2",
+      "label_ko": "표",
+      "keywords": [
+        "테이블",
+        "데이터",
+        "table"
+      ],
+      "svg_path": "assets/icons/table.svg",
+      "sprite_href": "assets/icons.svg#table",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#table\"></use></svg>"
+    },
+    {
+      "id": "chart-bar",
+      "category": "데이터·분석",
+      "source_name": "ChartColumn",
+      "label_ko": "막대 차트",
+      "keywords": [
+        "비교",
+        "실적",
+        "bar"
+      ],
+      "svg_path": "assets/icons/chart-bar.svg",
+      "sprite_href": "assets/icons.svg#chart-bar",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#chart-bar\"></use></svg>"
+    },
+    {
+      "id": "chart-line",
+      "category": "데이터·분석",
+      "source_name": "ChartLine",
+      "label_ko": "선 차트",
+      "keywords": [
+        "추이",
+        "월별",
+        "trend"
+      ],
+      "svg_path": "assets/icons/chart-line.svg",
+      "sprite_href": "assets/icons.svg#chart-line",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#chart-line\"></use></svg>"
+    },
+    {
+      "id": "chart-pie",
+      "category": "데이터·분석",
+      "source_name": "ChartPie",
+      "label_ko": "원형 차트",
+      "keywords": [
+        "비중",
+        "구성",
+        "pie"
+      ],
+      "svg_path": "assets/icons/chart-pie.svg",
+      "sprite_href": "assets/icons.svg#chart-pie",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#chart-pie\"></use></svg>"
+    },
+    {
+      "id": "trend-up",
+      "category": "데이터·분석",
+      "source_name": "TrendingUp",
+      "label_ko": "증가",
+      "keywords": [
+        "상승",
+        "성장",
+        "increase"
+      ],
+      "svg_path": "assets/icons/trend-up.svg",
+      "sprite_href": "assets/icons.svg#trend-up",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#trend-up\"></use></svg>"
+    },
+    {
+      "id": "trend-down",
+      "category": "데이터·분석",
+      "source_name": "TrendingDown",
+      "label_ko": "감소",
+      "keywords": [
+        "하락",
+        "decrease"
+      ],
+      "svg_path": "assets/icons/trend-down.svg",
+      "sprite_href": "assets/icons.svg#trend-down",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#trend-down\"></use></svg>"
+    },
+    {
+      "id": "sort",
+      "category": "데이터·분석",
+      "source_name": "ArrowUpDown",
+      "label_ko": "정렬",
+      "keywords": [
+        "오름차순",
+        "내림차순",
+        "sort"
+      ],
+      "svg_path": "assets/icons/sort.svg",
+      "sprite_href": "assets/icons.svg#sort",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#sort\"></use></svg>"
+    },
+    {
+      "id": "sort-asc",
+      "category": "데이터·분석",
+      "source_name": "ArrowUpNarrowWide",
+      "label_ko": "오름차순",
+      "keywords": [
+        "작은순",
+        "ascending"
+      ],
+      "svg_path": "assets/icons/sort-asc.svg",
+      "sprite_href": "assets/icons.svg#sort-asc",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#sort-asc\"></use></svg>"
+    },
+    {
+      "id": "sort-desc",
+      "category": "데이터·분석",
+      "source_name": "ArrowDownWideNarrow",
+      "label_ko": "내림차순",
+      "keywords": [
+        "큰순",
+        "descending"
+      ],
+      "svg_path": "assets/icons/sort-desc.svg",
+      "sprite_href": "assets/icons.svg#sort-desc",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#sort-desc\"></use></svg>"
+    },
+    {
+      "id": "target",
+      "category": "데이터·분석",
+      "source_name": "Target",
+      "label_ko": "목표",
+      "keywords": [
+        "KPI",
+        "목표액",
+        "target"
+      ],
+      "svg_path": "assets/icons/target.svg",
+      "sprite_href": "assets/icons.svg#target",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#target\"></use></svg>"
+    },
+    {
+      "id": "layers",
+      "category": "데이터·분석",
+      "source_name": "Layers",
+      "label_ko": "계층",
+      "keywords": [
+        "레이어",
+        "구분",
+        "layers"
+      ],
+      "svg_path": "assets/icons/layers.svg",
+      "sprite_href": "assets/icons.svg#layers",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#layers\"></use></svg>"
+    },
+    {
+      "id": "settings",
+      "category": "설정·보안",
+      "source_name": "Settings",
+      "label_ko": "설정",
+      "keywords": [
+        "환경설정",
+        "configuration"
+      ],
+      "svg_path": "assets/icons/settings.svg",
+      "sprite_href": "assets/icons.svg#settings",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#settings\"></use></svg>"
+    },
+    {
+      "id": "lock",
+      "category": "설정·보안",
+      "source_name": "Lock",
+      "label_ko": "잠금",
+      "keywords": [
+        "권한제한",
+        "보안",
+        "lock"
+      ],
+      "svg_path": "assets/icons/lock.svg",
+      "sprite_href": "assets/icons.svg#lock",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#lock\"></use></svg>"
+    },
+    {
+      "id": "unlock",
+      "category": "설정·보안",
+      "source_name": "LockOpen",
+      "label_ko": "잠금 해제",
+      "keywords": [
+        "허용",
+        "unlock"
+      ],
+      "svg_path": "assets/icons/unlock.svg",
+      "sprite_href": "assets/icons.svg#unlock",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#unlock\"></use></svg>"
+    },
+    {
+      "id": "shield-check",
+      "category": "설정·보안",
+      "source_name": "ShieldCheck",
+      "label_ko": "보안 확인",
+      "keywords": [
+        "인증",
+        "검증",
+        "security"
+      ],
+      "svg_path": "assets/icons/shield-check.svg",
+      "sprite_href": "assets/icons.svg#shield-check",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#shield-check\"></use></svg>"
+    },
+    {
+      "id": "key",
+      "category": "설정·보안",
+      "source_name": "KeyRound",
+      "label_ko": "접근 키",
+      "keywords": [
+        "비밀번호",
+        "인증",
+        "key"
+      ],
+      "svg_path": "assets/icons/key.svg",
+      "sprite_href": "assets/icons.svg#key",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#key\"></use></svg>"
+    },
+    {
+      "id": "log-in",
+      "category": "설정·보안",
+      "source_name": "LogIn",
+      "label_ko": "로그인",
+      "keywords": [
+        "접속",
+        "login"
+      ],
+      "svg_path": "assets/icons/log-in.svg",
+      "sprite_href": "assets/icons.svg#log-in",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#log-in\"></use></svg>"
+    },
+    {
+      "id": "log-out",
+      "category": "설정·보안",
+      "source_name": "LogOut",
+      "label_ko": "로그아웃",
+      "keywords": [
+        "접속종료",
+        "logout"
+      ],
+      "svg_path": "assets/icons/log-out.svg",
+      "sprite_href": "assets/icons.svg#log-out",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#log-out\"></use></svg>"
+    },
+    {
+      "id": "monitor",
+      "category": "설정·보안",
+      "source_name": "Monitor",
+      "label_ko": "화면",
+      "keywords": [
+        "PC",
+        "모니터",
+        "desktop"
+      ],
+      "svg_path": "assets/icons/monitor.svg",
+      "sprite_href": "assets/icons.svg#monitor",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#monitor\"></use></svg>"
+    },
+    {
+      "id": "smartphone",
+      "category": "설정·보안",
+      "source_name": "Smartphone",
+      "label_ko": "모바일",
+      "keywords": [
+        "휴대폰",
+        "mobile"
+      ],
+      "svg_path": "assets/icons/smartphone.svg",
+      "sprite_href": "assets/icons.svg#smartphone",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#smartphone\"></use></svg>"
+    },
+    {
+      "id": "server",
+      "category": "설정·보안",
+      "source_name": "Server",
+      "label_ko": "서버",
+      "keywords": [
+        "시스템",
+        "server"
+      ],
+      "svg_path": "assets/icons/server.svg",
+      "sprite_href": "assets/icons.svg#server",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#server\"></use></svg>"
+    },
+    {
+      "id": "code",
+      "category": "설정·보안",
+      "source_name": "Code",
+      "label_ko": "코드",
+      "keywords": [
+        "소스",
+        "개발",
+        "code"
+      ],
+      "svg_path": "assets/icons/code.svg",
+      "sprite_href": "assets/icons.svg#code",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#code\"></use></svg>"
+    },
+    {
+      "id": "terminal",
+      "category": "설정·보안",
+      "source_name": "Terminal",
+      "label_ko": "터미널",
+      "keywords": [
+        "명령",
+        "실행",
+        "terminal"
+      ],
+      "svg_path": "assets/icons/terminal.svg",
+      "sprite_href": "assets/icons.svg#terminal",
+      "usage_html": "<svg class=\"ui-icon\" aria-hidden=\"true\"><use href=\"/assets/icons.svg#terminal\"></use></svg>"
+    }
+  ]
+}

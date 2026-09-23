@@ -1,0 +1,1500 @@
+{
+  "version": 1,
+  "items": {
+    "icon.globe": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.pause": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.square": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.square-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.thumbs-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.toggle-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.toggle-right": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.type": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.zoom-in": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-right": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chevron-down": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "brand.wordmark": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "brand",
+      "references": []
+    },
+    "component.accordion": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.badge": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.breadcrumb": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.button": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.calendar": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.carousel": {
+      "source": "designs/assets/guidance/component.carousel.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.checkbox": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.coach-mark": {
+      "source": "designs/assets/guidance/component.coach-mark.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.contextual-help": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.critical-alerts": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.date-input": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.disclosure": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.file-upload": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.footer": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.header": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.help-panel": {
+      "source": "designs/assets/guidance/component.help-panel.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.identifier": {
+      "source": "designs/assets/guidance/component.identifier.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.image": {
+      "source": "designs/assets/guidance/component.image.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.in-page-navigation": {
+      "source": "designs/assets/guidance/component.in-page-navigation.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.link": {
+      "source": "designs/assets/guidance/component.link.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.main-menu": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.masthead": {
+      "source": "designs/assets/guidance/component.masthead.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.modal": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.pagination": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.radio-button": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.select": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.side-navigation": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.skip-link": {
+      "source": "designs/assets/guidance/component.skip-link.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.spinner": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.step-indicator": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "transaction",
+      "references": []
+    },
+    "component.structured-list": {
+      "source": "designs/assets/guidance/component.structured-list.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.tab": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "component.table": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.tag": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.text-input": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.textarea": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.tutorial-panel": {
+      "source": "designs/assets/guidance/component.tutorial-panel.md",
+      "section": "usage",
+      "references": []
+    },
+    "foundation.layout": {
+      "source": "designs/assets/guidance/foundation.layout.md",
+      "section": "usage",
+      "references": []
+    },
+    "foundation.tokens": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "foundation",
+      "references": []
+    },
+    "icon.account": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.all": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.angle": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-dropdown": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.calendar": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.call": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.checkbox": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.close": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.complete": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.delete": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.download": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.ellipsis": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.email": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.error": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.expand": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.faq": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-html": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-hwp": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-pdf": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.filter": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.flow-arrow": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.foldable": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.global": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.go": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.go-top": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.head-ico-font-sample": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.head-ico-font-sample-white": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.help": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.home": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.information": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.join": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.like": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.login": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.more": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.notice": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.password-hidden": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.password-visible": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.play": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.plus": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.print": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.reset": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sch-plus": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.scrap": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.search": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.settings": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.share": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.step-done": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.stop": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.success": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.swiper-play": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.swiper-stop": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.switch-off": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.switch-on": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.tooltip": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.upload": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.urgent-badge-danger": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.urgent-badge-info": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.urgent-badge-ok": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.view-mode": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.volume": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.warning": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "image.state.empty": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "image.state.error": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "image.state.maintenance": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "image.state.no-results": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "image.state.not-found": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "image.state.offline": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "image.state.permission": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "image.state.success": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "image",
+      "references": []
+    },
+    "message.auth.expired": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.auth.invalid": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.auth.required": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.confirm.delete": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.confirm.leave": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.confirm.overwrite": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.confirm.submit": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.empty.list": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.empty.notifications": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.empty.search": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.conflict": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.download": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.generic": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.load": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.network": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.not-found": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.permission": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.rate-limit": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.save": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.timeout": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.upload": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.date": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.date-range": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.email": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.format": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.required": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.file.count": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.file.duplicate": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.file.empty": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.file.size": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.file.type": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.help.privacy": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.state.loading": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.state.maintenance": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.state.processing": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.success.copied": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.success.deleted": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.success.saved": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.success.submitted": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "pattern.attachment": {
+      "source": "designs/assets/guidance/pattern.attachment.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.confirmation": {
+      "source": "designs/assets/guidance/pattern.confirmation.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.consent": {
+      "source": "designs/assets/guidance/pattern.consent.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.detail": {
+      "source": "designs/assets/guidance/pattern.detail.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.error": {
+      "source": "designs/assets/guidance/pattern.error.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.feedback": {
+      "source": "designs/assets/guidance/pattern.feedback.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.filter": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "pattern.form": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "pattern.help": {
+      "source": "designs/assets/guidance/pattern.help.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.identity-input": {
+      "source": "designs/assets/guidance/pattern.identity-input.md",
+      "section": "usage",
+      "references": []
+    },
+    "pattern.list": {
+      "source": "designs/assets/guidance/pattern.list.md",
+      "section": "usage",
+      "references": []
+    },
+    "service.application": {
+      "source": "designs/assets/guidance/service.application.md",
+      "section": "usage",
+      "references": []
+    },
+    "service.application-history": {
+      "source": "designs/assets/guidance/service.application-history.md",
+      "section": "usage",
+      "references": []
+    },
+    "service.authentication": {
+      "source": "designs/assets/guidance/service.authentication.md",
+      "section": "usage",
+      "references": []
+    },
+    "service.policy-information": {
+      "source": "designs/assets/guidance/service.policy-information.md",
+      "section": "usage",
+      "references": []
+    },
+    "service.search": {
+      "source": "designs/assets/guidance/service.search.md",
+      "section": "usage",
+      "references": []
+    },
+    "service.visit": {
+      "source": "designs/assets/guidance/service.visit.md",
+      "section": "usage",
+      "references": []
+    },
+    "component.tooltip": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.section": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.metric": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "dashboard",
+      "references": []
+    },
+    "component.menu": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "navigation",
+      "references": []
+    },
+    "foundation.company-ui": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "common",
+      "references": []
+    },
+    "component.date-range": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.lookup": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.multiselect": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "form",
+      "references": []
+    },
+    "component.table-tools": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "pattern.save-feedback": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.drawer": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.organization-tree": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "pattern.history": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "transaction",
+      "references": []
+    },
+    "component.filter-presets": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "component.bar-chart": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "dashboard",
+      "references": []
+    },
+    "pattern.system-state": {
+      "source": "designs/assets/guidance/company-ui.md",
+      "section": "search",
+      "references": []
+    },
+    "icon.pencil": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.save": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.copy": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.undo": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.redo": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sliders": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-text": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-plus": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.file-search": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.files": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.folder": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.folder-open": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.paperclip": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.printer": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.spreadsheet": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.archive": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.clipboard": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.clipboard-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.image": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-right": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.arrow-down": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.first-page": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.last-page": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.external-link": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.link": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.menu": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.more-horizontal": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.more-vertical": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.maximize": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.minimize": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.panel-left": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.grid": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.list": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.grip": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.info": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.pending": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.loader": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bell": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bell-off": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.ban": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.flag": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bookmark": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.star": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.users": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.user-plus": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.user-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.building": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.network": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.contact": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.mail": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.phone": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.message": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.send": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.calendar-range": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.calendar-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.history": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.stamp": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.workflow": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.list-checks": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.wallet": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.credit-card": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.receipt": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.bank": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.calculator": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.percent": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.coins": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.package": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.truck": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.warehouse": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.shopping-cart": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.database": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.table": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chart-bar": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chart-line": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.chart-pie": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.trend-up": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.trend-down": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sort": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sort-asc": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.sort-desc": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.target": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.layers": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.lock": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.unlock": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.shield-check": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.key": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.log-in": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.log-out": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.monitor": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.smartphone": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.server": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.code": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "icon.terminal": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "icon",
+      "references": []
+    },
+    "message.field.month": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.date-min": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.date-max": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.min": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.field.max": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.error.presets": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    },
+    "message.empty.attachments": {
+      "source": "designs/assets/guidance/common.md",
+      "section": "message",
+      "references": []
+    }
+  }
+}

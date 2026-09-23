@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "component.date-input",
+      "kind": "component",
+      "meaning": "날짜 입력 필드",
+      "defaultVariant": "parts",
+      "constraints": [
+        "분리형은 연도 4자리와 월·일을 조합해 실제 날짜를 검증한다. 입력값은 전송하거나 저장하지 않는다.",
+        "대략적 날짜는 YYYY-MM 월 정밀도를 유지한다. 선택한 달을 임의의 단일 날짜로 변환하지 않는다.",
+        "레시피의 예제 폼·조회 데이터는 실제 업무 데이터가 아니다. 필요한 구획과 검증 계약만 적용한다."
+      ],
+      "variants": {
+        "parts": {
+          "path": "recipes/basic/field-variants.html",
+          "preview": "recipes/basic/field-variants.html#identity-dates",
+          "selector": "#identity-dates",
+          "dependencies": [
+            "dist/company.css",
+            "recipes/recipes.css",
+            "recipes/basic/basic-core.js",
+            "recipes/basic/extended-core.js",
+            "recipes/basic/extended.js"
+          ],
+          "states": ["empty", "partial", "valid", "invalid", "leap-day", "keyboard"],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": ["tests/test_krds_basic.cjs", "tests/test_krds_basic.py"]
+        },
+        "approximate-month": {
+          "path": "recipes/basic/precision-variants.html",
+          "preview": "recipes/basic/precision-variants.html#month-range",
+          "selector": "#month-range",
+          "dependencies": [
+            "dist/company.css",
+            "recipes/recipes.css",
+            "recipes/basic/basic-core.js",
+            "recipes/basic/precision.js"
+          ],
+          "states": ["empty", "month-only", "valid", "invalid-range", "whole-month-inclusive", "input-preserved", "keyboard"],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": ["tests/test_krds_basic.cjs", "tests/test_krds_basic.py"]
+        }
+      }
+    }
+  ]
+}

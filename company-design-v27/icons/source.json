@@ -1,0 +1,3872 @@
+{
+  "provider": "Lucide",
+  "version": "1.8.0",
+  "source_url": "https://lucide.dev",
+  "stroke_width": 1.5,
+  "viewBox": "0 0 24 24",
+  "icons": [
+    {
+      "id": "search",
+      "category": "기본 작업",
+      "source_name": "Search",
+      "label_ko": "조회",
+      "keywords": [
+        "검색",
+        "찾기",
+        "lookup"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m21 21-4.34-4.34"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "11",
+            "cy": "11",
+            "r": "8"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "plus",
+      "category": "기본 작업",
+      "source_name": "Plus",
+      "label_ko": "신규",
+      "keywords": [
+        "추가",
+        "생성",
+        "등록",
+        "add",
+        "create"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M5 12h14"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 5v14"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "pencil",
+      "category": "기본 작업",
+      "source_name": "Pencil",
+      "label_ko": "수정",
+      "keywords": [
+        "편집",
+        "변경",
+        "edit"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m15 5 4 4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "save",
+      "category": "기본 작업",
+      "source_name": "Save",
+      "label_ko": "저장",
+      "keywords": [
+        "반영",
+        "save"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 3v4a1 1 0 0 0 1 1h7"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "trash",
+      "category": "기본 작업",
+      "source_name": "Trash2",
+      "label_ko": "삭제",
+      "keywords": [
+        "제거",
+        "폐기",
+        "delete"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10 11v6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 11v6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 6h18"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "copy",
+      "category": "기본 작업",
+      "source_name": "Copy",
+      "label_ko": "복사",
+      "keywords": [
+        "복제",
+        "duplicate"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "14",
+            "height": "14",
+            "x": "8",
+            "y": "8",
+            "rx": "2",
+            "ry": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "check",
+      "category": "기본 작업",
+      "source_name": "Check",
+      "label_ko": "확인",
+      "keywords": [
+        "완료",
+        "승인",
+        "confirm"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20 6 9 17l-5-5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "x",
+      "category": "기본 작업",
+      "source_name": "X",
+      "label_ko": "닫기",
+      "keywords": [
+        "취소",
+        "해제",
+        "close",
+        "cancel"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M18 6 6 18"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m6 6 12 12"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "refresh",
+      "category": "기본 작업",
+      "source_name": "RefreshCw",
+      "label_ko": "새로고침",
+      "keywords": [
+        "갱신",
+        "reload"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 3v5h-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 16H3v5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "undo",
+      "category": "기본 작업",
+      "source_name": "Undo2",
+      "label_ko": "되돌리기",
+      "keywords": [
+        "실행취소",
+        "undo"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M9 14 4 9l5-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "redo",
+      "category": "기본 작업",
+      "source_name": "Redo2",
+      "label_ko": "다시 실행",
+      "keywords": [
+        "redo"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m15 14 5-5-5-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "eye",
+      "category": "기본 작업",
+      "source_name": "Eye",
+      "label_ko": "보기",
+      "keywords": [
+        "미리보기",
+        "조회",
+        "preview"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "eye-off",
+      "category": "기본 작업",
+      "source_name": "EyeOff",
+      "label_ko": "숨기기",
+      "keywords": [
+        "비공개",
+        "감추기",
+        "hide"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14.084 14.158a3 3 0 0 1-4.242-4.242"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m2 2 20 20"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "filter",
+      "category": "기본 작업",
+      "source_name": "Filter",
+      "label_ko": "필터",
+      "keywords": [
+        "조회조건",
+        "조건",
+        "filter"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sliders",
+      "category": "기본 작업",
+      "source_name": "SlidersHorizontal",
+      "label_ko": "상세 조건",
+      "keywords": [
+        "조건설정",
+        "조정",
+        "settings"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10 5H3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 19H3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 3v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 17v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 12h-9"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 19h-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 5h-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 10v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 12H3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "file",
+      "category": "파일·문서",
+      "source_name": "File",
+      "label_ko": "파일",
+      "keywords": [
+        "문서",
+        "file"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 2v5a1 1 0 0 0 1 1h5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "file-text",
+      "category": "파일·문서",
+      "source_name": "FileText",
+      "label_ko": "텍스트 문서",
+      "keywords": [
+        "내용",
+        "명세",
+        "document"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 2v5a1 1 0 0 0 1 1h5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M10 9H8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 13H8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 17H8"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "file-plus",
+      "category": "파일·문서",
+      "source_name": "FilePlus",
+      "label_ko": "문서 추가",
+      "keywords": [
+        "파일",
+        "생성",
+        "신규"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 2v5a1 1 0 0 0 1 1h5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M9 15h6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 18v-6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "file-check",
+      "category": "파일·문서",
+      "source_name": "FileCheck",
+      "label_ko": "문서 확인",
+      "keywords": [
+        "증빙확인",
+        "검증"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 2v5a1 1 0 0 0 1 1h5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m9 15 2 2 4-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "file-search",
+      "category": "파일·문서",
+      "source_name": "FileSearch",
+      "label_ko": "문서 검색",
+      "keywords": [
+        "증빙조회"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 2v5a1 1 0 0 0 1 1h5"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "11.5",
+            "cy": "14.5",
+            "r": "2.5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M13.3 16.3 15 18"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "files",
+      "category": "파일·문서",
+      "source_name": "Files",
+      "label_ko": "여러 문서",
+      "keywords": [
+        "문서목록",
+        "파일모음"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "folder",
+      "category": "파일·문서",
+      "source_name": "Folder",
+      "label_ko": "폴더",
+      "keywords": [
+        "디렉터리",
+        "분류"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "folder-open",
+      "category": "파일·문서",
+      "source_name": "FolderOpen",
+      "label_ko": "열린 폴더",
+      "keywords": [
+        "폴더열기"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "paperclip",
+      "category": "파일·문서",
+      "source_name": "Paperclip",
+      "label_ko": "첨부",
+      "keywords": [
+        "파일첨부",
+        "attachment"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "upload",
+      "category": "파일·문서",
+      "source_name": "Upload",
+      "label_ko": "업로드",
+      "keywords": [
+        "올리기",
+        "가져오기",
+        "upload"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M12 3v12"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m17 8-5-5-5 5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "download",
+      "category": "파일·문서",
+      "source_name": "Download",
+      "label_ko": "다운로드",
+      "keywords": [
+        "내려받기",
+        "export"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M12 15V3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m7 10 5 5 5-5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "printer",
+      "category": "파일·문서",
+      "source_name": "Printer",
+      "label_ko": "인쇄",
+      "keywords": [
+        "출력",
+        "print"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"
+          }
+        ],
+        [
+          "rect",
+          {
+            "x": "6",
+            "y": "14",
+            "width": "12",
+            "height": "8",
+            "rx": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "spreadsheet",
+      "category": "파일·문서",
+      "source_name": "FileSpreadsheet",
+      "label_ko": "스프레드시트",
+      "keywords": [
+        "엑셀",
+        "Excel",
+        "xlsx",
+        "csv"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 2v5a1 1 0 0 0 1 1h5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 13h2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 13h2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 17h2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 17h2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "archive",
+      "category": "파일·문서",
+      "source_name": "Archive",
+      "label_ko": "보관",
+      "keywords": [
+        "아카이브",
+        "archive"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "20",
+            "height": "5",
+            "x": "2",
+            "y": "3",
+            "rx": "1"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M10 12h4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "clipboard",
+      "category": "파일·문서",
+      "source_name": "Clipboard",
+      "label_ko": "클립보드",
+      "keywords": [
+        "붙여넣기",
+        "clipboard"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "8",
+            "height": "4",
+            "x": "8",
+            "y": "2",
+            "rx": "1",
+            "ry": "1"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "clipboard-check",
+      "category": "파일·문서",
+      "source_name": "ClipboardCheck",
+      "label_ko": "점검 완료",
+      "keywords": [
+        "체크리스트",
+        "검수"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "8",
+            "height": "4",
+            "x": "8",
+            "y": "2",
+            "rx": "1",
+            "ry": "1"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m9 14 2 2 4-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "image",
+      "category": "파일·문서",
+      "source_name": "Image",
+      "label_ko": "이미지",
+      "keywords": [
+        "사진",
+        "그림",
+        "image"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "18",
+            "height": "18",
+            "x": "3",
+            "y": "3",
+            "rx": "2",
+            "ry": "2"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "9",
+            "cy": "9",
+            "r": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "arrow-left",
+      "category": "이동·배치",
+      "source_name": "ArrowLeft",
+      "label_ko": "뒤로",
+      "keywords": [
+        "이전",
+        "back"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m12 19-7-7 7-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M19 12H5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "arrow-right",
+      "category": "이동·배치",
+      "source_name": "ArrowRight",
+      "label_ko": "앞으로",
+      "keywords": [
+        "다음",
+        "next"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M5 12h14"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m12 5 7 7-7 7"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "arrow-up",
+      "category": "이동·배치",
+      "source_name": "ArrowUp",
+      "label_ko": "위로",
+      "keywords": [
+        "올리기",
+        "up"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m5 12 7-7 7 7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 19V5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "arrow-down",
+      "category": "이동·배치",
+      "source_name": "ArrowDown",
+      "label_ko": "아래로",
+      "keywords": [
+        "내리기",
+        "down"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M12 5v14"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m19 12-7 7-7-7"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "chevron-left",
+      "category": "이동·배치",
+      "source_name": "ChevronLeft",
+      "label_ko": "이전 항목",
+      "keywords": [
+        "이전페이지",
+        "previous"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m15 18-6-6 6-6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "chevron-right",
+      "category": "이동·배치",
+      "source_name": "ChevronRight",
+      "label_ko": "다음 항목",
+      "keywords": [
+        "다음페이지",
+        "next"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m9 18 6-6-6-6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "chevron-up",
+      "category": "이동·배치",
+      "source_name": "ChevronUp",
+      "label_ko": "접기",
+      "keywords": [
+        "위쪽",
+        "collapse"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m18 15-6-6-6 6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "chevron-down",
+      "category": "이동·배치",
+      "source_name": "ChevronDown",
+      "label_ko": "펼치기",
+      "keywords": [
+        "드롭다운",
+        "expand"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m6 9 6 6 6-6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "first-page",
+      "category": "이동·배치",
+      "source_name": "ChevronsLeft",
+      "label_ko": "처음 페이지",
+      "keywords": [
+        "맨앞",
+        "first"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m11 17-5-5 5-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m18 17-5-5 5-5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "last-page",
+      "category": "이동·배치",
+      "source_name": "ChevronsRight",
+      "label_ko": "마지막 페이지",
+      "keywords": [
+        "맨뒤",
+        "last"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m6 17 5-5-5-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m13 17 5-5-5-5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "external-link",
+      "category": "이동·배치",
+      "source_name": "ExternalLink",
+      "label_ko": "새 창",
+      "keywords": [
+        "외부링크",
+        "external"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M15 3h6v6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M10 14 21 3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "link",
+      "category": "이동·배치",
+      "source_name": "Link",
+      "label_ko": "링크",
+      "keywords": [
+        "연결",
+        "주소",
+        "link"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "home",
+      "category": "이동·배치",
+      "source_name": "House",
+      "label_ko": "홈",
+      "keywords": [
+        "처음",
+        "메인",
+        "home"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "menu",
+      "category": "이동·배치",
+      "source_name": "Menu",
+      "label_ko": "메뉴",
+      "keywords": [
+        "전체메뉴",
+        "hamburger"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M4 5h16"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4 12h16"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4 19h16"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "more-horizontal",
+      "category": "이동·배치",
+      "source_name": "Ellipsis",
+      "label_ko": "더보기",
+      "keywords": [
+        "추가메뉴",
+        "more"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "19",
+            "cy": "12",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "5",
+            "cy": "12",
+            "r": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "more-vertical",
+      "category": "이동·배치",
+      "source_name": "EllipsisVertical",
+      "label_ko": "세로 더보기",
+      "keywords": [
+        "행메뉴",
+        "more"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "5",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "19",
+            "r": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "maximize",
+      "category": "이동·배치",
+      "source_name": "Maximize2",
+      "label_ko": "확대",
+      "keywords": [
+        "전체화면",
+        "maximize"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M15 3h6v6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m21 3-7 7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m3 21 7-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M9 21H3v-6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "minimize",
+      "category": "이동·배치",
+      "source_name": "Minimize2",
+      "label_ko": "축소",
+      "keywords": [
+        "화면복원",
+        "minimize"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m14 10 7-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M20 10h-6V4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m3 21 7-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4 14h6v6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "panel-left",
+      "category": "이동·배치",
+      "source_name": "PanelLeft",
+      "label_ko": "사이드바",
+      "keywords": [
+        "왼쪽패널",
+        "sidebar"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "18",
+            "height": "18",
+            "x": "3",
+            "y": "3",
+            "rx": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M9 3v18"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "grid",
+      "category": "이동·배치",
+      "source_name": "LayoutGrid",
+      "label_ko": "격자 보기",
+      "keywords": [
+        "카드보기",
+        "grid"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "7",
+            "height": "7",
+            "x": "3",
+            "y": "3",
+            "rx": "1"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "7",
+            "height": "7",
+            "x": "14",
+            "y": "3",
+            "rx": "1"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "7",
+            "height": "7",
+            "x": "14",
+            "y": "14",
+            "rx": "1"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "7",
+            "height": "7",
+            "x": "3",
+            "y": "14",
+            "rx": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "list",
+      "category": "이동·배치",
+      "source_name": "List",
+      "label_ko": "목록 보기",
+      "keywords": [
+        "리스트",
+        "list"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M3 5h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 12h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 19h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 5h13"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 12h13"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 19h13"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "grip",
+      "category": "이동·배치",
+      "source_name": "GripVertical",
+      "label_ko": "이동 손잡이",
+      "keywords": [
+        "드래그",
+        "순서",
+        "drag"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "9",
+            "cy": "12",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "9",
+            "cy": "5",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "9",
+            "cy": "19",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "15",
+            "cy": "12",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "15",
+            "cy": "5",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "15",
+            "cy": "19",
+            "r": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "info",
+      "category": "상태·알림",
+      "source_name": "Info",
+      "label_ko": "안내",
+      "keywords": [
+        "정보",
+        "information"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "10"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 16v-4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 8h.01"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "help",
+      "category": "상태·알림",
+      "source_name": "CircleHelp",
+      "label_ko": "도움말",
+      "keywords": [
+        "질문",
+        "help"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "10"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 17h.01"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "warning",
+      "category": "상태·알림",
+      "source_name": "TriangleAlert",
+      "label_ko": "경고",
+      "keywords": [
+        "주의",
+        "warning"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 9v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 17h.01"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "error",
+      "category": "상태·알림",
+      "source_name": "CircleX",
+      "label_ko": "오류",
+      "keywords": [
+        "실패",
+        "error"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "10"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m15 9-6 6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m9 9 6 6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "success",
+      "category": "상태·알림",
+      "source_name": "CircleCheck",
+      "label_ko": "성공",
+      "keywords": [
+        "완료",
+        "정상",
+        "success"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "10"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m9 12 2 2 4-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "pending",
+      "category": "상태·알림",
+      "source_name": "Clock",
+      "label_ko": "대기",
+      "keywords": [
+        "처리중",
+        "시간",
+        "pending"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "10"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 6v6l4 2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "loader",
+      "category": "상태·알림",
+      "source_name": "LoaderCircle",
+      "label_ko": "로딩",
+      "keywords": [
+        "불러오는중",
+        "loading"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M21 12a9 9 0 1 1-6.219-8.56"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "bell",
+      "category": "상태·알림",
+      "source_name": "Bell",
+      "label_ko": "알림",
+      "keywords": [
+        "통지",
+        "notification"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10.268 21a2 2 0 0 0 3.464 0"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "bell-off",
+      "category": "상태·알림",
+      "source_name": "BellOff",
+      "label_ko": "알림 끄기",
+      "keywords": [
+        "음소거",
+        "mute"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10.268 21a2 2 0 0 0 3.464 0"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M17 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 .258-1.742"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m2 2 20 20"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8.668 3.01A6 6 0 0 1 18 8c0 2.687.77 4.653 1.707 6.05"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "ban",
+      "category": "상태·알림",
+      "source_name": "Ban",
+      "label_ko": "금지",
+      "keywords": [
+        "차단",
+        "불가",
+        "blocked"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "10"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4.929 4.929 19.07 19.071"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "flag",
+      "category": "상태·알림",
+      "source_name": "Flag",
+      "label_ko": "표시",
+      "keywords": [
+        "관심",
+        "플래그",
+        "flag"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "bookmark",
+      "category": "상태·알림",
+      "source_name": "Bookmark",
+      "label_ko": "책갈피",
+      "keywords": [
+        "즐겨찾기",
+        "bookmark"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "star",
+      "category": "상태·알림",
+      "source_name": "Star",
+      "label_ko": "즐겨찾기",
+      "keywords": [
+        "중요",
+        "favorite"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "user",
+      "category": "사람·조직",
+      "source_name": "User",
+      "label_ko": "사용자",
+      "keywords": [
+        "담당자",
+        "개인",
+        "user"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "7",
+            "r": "4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "users",
+      "category": "사람·조직",
+      "source_name": "Users",
+      "label_ko": "사용자 그룹",
+      "keywords": [
+        "팀",
+        "구성원",
+        "users"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 3.128a4 4 0 0 1 0 7.744"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M22 21v-2a4 4 0 0 0-3-3.87"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "9",
+            "cy": "7",
+            "r": "4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "user-plus",
+      "category": "사람·조직",
+      "source_name": "UserPlus",
+      "label_ko": "사용자 추가",
+      "keywords": [
+        "초대",
+        "인원추가"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "9",
+            "cy": "7",
+            "r": "4"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "19",
+            "x2": "19",
+            "y1": "8",
+            "y2": "14"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "22",
+            "x2": "16",
+            "y1": "11",
+            "y2": "11"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "user-check",
+      "category": "사람·조직",
+      "source_name": "UserCheck",
+      "label_ko": "사용자 확인",
+      "keywords": [
+        "담당자승인"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m16 11 2 2 4-4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "9",
+            "cy": "7",
+            "r": "4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "building",
+      "category": "사람·조직",
+      "source_name": "Building2",
+      "label_ko": "법인",
+      "keywords": [
+        "회사",
+        "본사",
+        "company"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10 12h4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M10 8h4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 21v-3a2 2 0 0 0-4 0v3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "network",
+      "category": "사람·조직",
+      "source_name": "Network",
+      "label_ko": "조직도",
+      "keywords": [
+        "부서",
+        "조직",
+        "hierarchy"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "x": "16",
+            "y": "16",
+            "width": "6",
+            "height": "6",
+            "rx": "1"
+          }
+        ],
+        [
+          "rect",
+          {
+            "x": "2",
+            "y": "16",
+            "width": "6",
+            "height": "6",
+            "rx": "1"
+          }
+        ],
+        [
+          "rect",
+          {
+            "x": "9",
+            "y": "2",
+            "width": "6",
+            "height": "6",
+            "rx": "1"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 12V8"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "contact",
+      "category": "사람·조직",
+      "source_name": "Contact",
+      "label_ko": "연락처",
+      "keywords": [
+        "명함",
+        "contact"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M16 2v2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 2v2"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "11",
+            "r": "3"
+          }
+        ],
+        [
+          "rect",
+          {
+            "x": "3",
+            "y": "4",
+            "width": "18",
+            "height": "18",
+            "rx": "2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "mail",
+      "category": "사람·조직",
+      "source_name": "Mail",
+      "label_ko": "메일",
+      "keywords": [
+        "이메일",
+        "email"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
+          }
+        ],
+        [
+          "rect",
+          {
+            "x": "2",
+            "y": "4",
+            "width": "20",
+            "height": "16",
+            "rx": "2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "phone",
+      "category": "사람·조직",
+      "source_name": "Phone",
+      "label_ko": "전화",
+      "keywords": [
+        "통화",
+        "phone"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "message",
+      "category": "사람·조직",
+      "source_name": "MessageSquare",
+      "label_ko": "의견",
+      "keywords": [
+        "댓글",
+        "메시지",
+        "comment"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "send",
+      "category": "사람·조직",
+      "source_name": "Send",
+      "label_ko": "전송",
+      "keywords": [
+        "발송",
+        "제출",
+        "send"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m21.854 2.147-10.94 10.939"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "calendar",
+      "category": "일정·결재",
+      "source_name": "Calendar",
+      "label_ko": "달력",
+      "keywords": [
+        "일자",
+        "날짜",
+        "date"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M8 2v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 2v4"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "18",
+            "height": "18",
+            "x": "3",
+            "y": "4",
+            "rx": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 10h18"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "calendar-range",
+      "category": "일정·결재",
+      "source_name": "CalendarRange",
+      "label_ko": "기간",
+      "keywords": [
+        "시작일",
+        "종료일",
+        "range"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "18",
+            "height": "18",
+            "x": "3",
+            "y": "4",
+            "rx": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 2v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 10h18"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 2v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M17 14h-6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M13 18H7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 14h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M17 18h.01"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "calendar-check",
+      "category": "일정·결재",
+      "source_name": "CalendarCheck",
+      "label_ko": "일정 확인",
+      "keywords": [
+        "확정",
+        "예약"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M8 2v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 2v4"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "18",
+            "height": "18",
+            "x": "3",
+            "y": "4",
+            "rx": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 10h18"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m9 16 2 2 4-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "history",
+      "category": "일정·결재",
+      "source_name": "History",
+      "label_ko": "이력",
+      "keywords": [
+        "변경이력",
+        "기록",
+        "history"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 3v5h5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 7v5l4 2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "stamp",
+      "category": "일정·결재",
+      "source_name": "Stamp",
+      "label_ko": "결재",
+      "keywords": [
+        "승인",
+        "날인",
+        "approval"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M20 15.5a2.5 2.5 0 0 0-2.5-2.5h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M5 22h14"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "workflow",
+      "category": "일정·결재",
+      "source_name": "Workflow",
+      "label_ko": "처리 흐름",
+      "keywords": [
+        "워크플로",
+        "단계",
+        "workflow"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "8",
+            "height": "8",
+            "x": "3",
+            "y": "3",
+            "rx": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 11v4a2 2 0 0 0 2 2h4"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "8",
+            "height": "8",
+            "x": "13",
+            "y": "13",
+            "rx": "2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "list-checks",
+      "category": "일정·결재",
+      "source_name": "ListChecks",
+      "label_ko": "할 일",
+      "keywords": [
+        "체크리스트",
+        "tasks"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M13 5h8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M13 12h8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M13 19h8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m3 17 2 2 4-4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m3 7 2 2 4-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "wallet",
+      "category": "재무·물류",
+      "source_name": "Wallet",
+      "label_ko": "예산",
+      "keywords": [
+        "지갑",
+        "자금",
+        "budget"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "credit-card",
+      "category": "재무·물류",
+      "source_name": "CreditCard",
+      "label_ko": "법인카드",
+      "keywords": [
+        "카드",
+        "결제",
+        "card"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "20",
+            "height": "14",
+            "x": "2",
+            "y": "5",
+            "rx": "2"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "2",
+            "x2": "22",
+            "y1": "10",
+            "y2": "10"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "receipt",
+      "category": "재무·물류",
+      "source_name": "Receipt",
+      "label_ko": "영수증",
+      "keywords": [
+        "증빙",
+        "정산",
+        "receipt"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M12 17V7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "bank",
+      "category": "재무·물류",
+      "source_name": "Landmark",
+      "label_ko": "은행",
+      "keywords": [
+        "금융기관",
+        "bank"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M10 18v-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M14 18v-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M18 18v-7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 22h18"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M6 18v-7"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "calculator",
+      "category": "재무·물류",
+      "source_name": "Calculator",
+      "label_ko": "계산",
+      "keywords": [
+        "계산기",
+        "calculate"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "16",
+            "height": "20",
+            "x": "4",
+            "y": "2",
+            "rx": "2"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "8",
+            "x2": "16",
+            "y1": "6",
+            "y2": "6"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "16",
+            "x2": "16",
+            "y1": "14",
+            "y2": "18"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 10h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 10h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 10h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 14h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 14h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 18h.01"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 18h.01"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "percent",
+      "category": "재무·물류",
+      "source_name": "Percent",
+      "label_ko": "비율",
+      "keywords": [
+        "백분율",
+        "집행률",
+        "percent"
+      ],
+      "nodes": [
+        [
+          "line",
+          {
+            "x1": "19",
+            "x2": "5",
+            "y1": "5",
+            "y2": "19"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "6.5",
+            "cy": "6.5",
+            "r": "2.5"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "17.5",
+            "cy": "17.5",
+            "r": "2.5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "coins",
+      "category": "재무·물류",
+      "source_name": "Coins",
+      "label_ko": "금액",
+      "keywords": [
+        "비용",
+        "통화",
+        "money"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M13.744 17.736a6 6 0 1 1-7.48-7.48"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M15 6h1v4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m6.134 14.768.866-.5 2 3.464"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "16",
+            "cy": "8",
+            "r": "6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "package",
+      "category": "재무·물류",
+      "source_name": "Package",
+      "label_ko": "자재",
+      "keywords": [
+        "품목",
+        "물품",
+        "package"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 22V12"
+          }
+        ],
+        [
+          "polyline",
+          {
+            "points": "3.29 7 12 12 20.71 7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m7.5 4.27 9 5.15"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "truck",
+      "category": "재무·물류",
+      "source_name": "Truck",
+      "label_ko": "배송",
+      "keywords": [
+        "운송",
+        "물류",
+        "delivery"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M15 18H9"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "17",
+            "cy": "18",
+            "r": "2"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "7",
+            "cy": "18",
+            "r": "2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "warehouse",
+      "category": "재무·물류",
+      "source_name": "Warehouse",
+      "label_ko": "창고",
+      "keywords": [
+        "재고",
+        "storage"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M6 13h12"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M6 17h12"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "shopping-cart",
+      "category": "재무·물류",
+      "source_name": "ShoppingCart",
+      "label_ko": "구매",
+      "keywords": [
+        "발주",
+        "구매요청",
+        "purchase"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "8",
+            "cy": "21",
+            "r": "1"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "19",
+            "cy": "21",
+            "r": "1"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "database",
+      "category": "데이터·분석",
+      "source_name": "Database",
+      "label_ko": "데이터베이스",
+      "keywords": [
+        "DB",
+        "데이터",
+        "database"
+      ],
+      "nodes": [
+        [
+          "ellipse",
+          {
+            "cx": "12",
+            "cy": "5",
+            "rx": "9",
+            "ry": "3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 5V19A9 3 0 0 0 21 19V5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M3 12A9 3 0 0 0 21 12"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "table",
+      "category": "데이터·분석",
+      "source_name": "Table2",
+      "label_ko": "표",
+      "keywords": [
+        "테이블",
+        "데이터",
+        "table"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "chart-bar",
+      "category": "데이터·분석",
+      "source_name": "ChartColumn",
+      "label_ko": "막대 차트",
+      "keywords": [
+        "비교",
+        "실적",
+        "bar"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M3 3v16a2 2 0 0 0 2 2h16"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M18 17V9"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M13 17V5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M8 17v-3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "chart-line",
+      "category": "데이터·분석",
+      "source_name": "ChartLine",
+      "label_ko": "선 차트",
+      "keywords": [
+        "추이",
+        "월별",
+        "trend"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M3 3v16a2 2 0 0 0 2 2h16"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m19 9-5 5-4-4-3 3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "chart-pie",
+      "category": "데이터·분석",
+      "source_name": "ChartPie",
+      "label_ko": "원형 차트",
+      "keywords": [
+        "비중",
+        "구성",
+        "pie"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21.21 15.89A10 10 0 1 1 8 2.83"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "trend-up",
+      "category": "데이터·분석",
+      "source_name": "TrendingUp",
+      "label_ko": "증가",
+      "keywords": [
+        "상승",
+        "성장",
+        "increase"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M16 7h6v6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m22 7-8.5 8.5-5-5L2 17"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "trend-down",
+      "category": "데이터·분석",
+      "source_name": "TrendingDown",
+      "label_ko": "감소",
+      "keywords": [
+        "하락",
+        "decrease"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M16 17h6v-6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m22 17-8.5-8.5-5 5L2 7"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sort",
+      "category": "데이터·분석",
+      "source_name": "ArrowUpDown",
+      "label_ko": "정렬",
+      "keywords": [
+        "오름차순",
+        "내림차순",
+        "sort"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m21 16-4 4-4-4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M17 20V4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m3 8 4-4 4 4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 4v16"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sort-asc",
+      "category": "데이터·분석",
+      "source_name": "ArrowUpNarrowWide",
+      "label_ko": "오름차순",
+      "keywords": [
+        "작은순",
+        "ascending"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m3 8 4-4 4 4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 4v16"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M11 12h4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M11 16h7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M11 20h10"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sort-desc",
+      "category": "데이터·분석",
+      "source_name": "ArrowDownWideNarrow",
+      "label_ko": "내림차순",
+      "keywords": [
+        "큰순",
+        "descending"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m3 16 4 4 4-4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 20V4"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M11 4h10"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M11 8h7"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M11 12h4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "target",
+      "category": "데이터·분석",
+      "source_name": "Target",
+      "label_ko": "목표",
+      "keywords": [
+        "KPI",
+        "목표액",
+        "target"
+      ],
+      "nodes": [
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "10"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "6"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "layers",
+      "category": "데이터·분석",
+      "source_name": "Layers",
+      "label_ko": "계층",
+      "keywords": [
+        "레이어",
+        "구분",
+        "layers"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "settings",
+      "category": "설정·보안",
+      "source_name": "Settings",
+      "label_ko": "설정",
+      "keywords": [
+        "환경설정",
+        "configuration"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "12",
+            "cy": "12",
+            "r": "3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "lock",
+      "category": "설정·보안",
+      "source_name": "Lock",
+      "label_ko": "잠금",
+      "keywords": [
+        "권한제한",
+        "보안",
+        "lock"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "18",
+            "height": "11",
+            "x": "3",
+            "y": "11",
+            "rx": "2",
+            "ry": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 11V7a5 5 0 0 1 10 0v4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "unlock",
+      "category": "설정·보안",
+      "source_name": "LockOpen",
+      "label_ko": "잠금 해제",
+      "keywords": [
+        "허용",
+        "unlock"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "18",
+            "height": "11",
+            "x": "3",
+            "y": "11",
+            "rx": "2",
+            "ry": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M7 11V7a5 5 0 0 1 9.9-1"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "shield-check",
+      "category": "설정·보안",
+      "source_name": "ShieldCheck",
+      "label_ko": "보안 확인",
+      "keywords": [
+        "인증",
+        "검증",
+        "security"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m9 12 2 2 4-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "key",
+      "category": "설정·보안",
+      "source_name": "KeyRound",
+      "label_ko": "접근 키",
+      "keywords": [
+        "비밀번호",
+        "인증",
+        "key"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+          }
+        ],
+        [
+          "circle",
+          {
+            "cx": "16.5",
+            "cy": "7.5",
+            "r": ".5",
+            "fill": "currentColor"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "log-in",
+      "category": "설정·보안",
+      "source_name": "LogIn",
+      "label_ko": "로그인",
+      "keywords": [
+        "접속",
+        "login"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m10 17 5-5-5-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M15 12H3"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "log-out",
+      "category": "설정·보안",
+      "source_name": "LogOut",
+      "label_ko": "로그아웃",
+      "keywords": [
+        "접속종료",
+        "logout"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m16 17 5-5-5-5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M21 12H9"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "monitor",
+      "category": "설정·보안",
+      "source_name": "Monitor",
+      "label_ko": "화면",
+      "keywords": [
+        "PC",
+        "모니터",
+        "desktop"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "20",
+            "height": "14",
+            "x": "2",
+            "y": "3",
+            "rx": "2"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "8",
+            "x2": "16",
+            "y1": "21",
+            "y2": "21"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "12",
+            "x2": "12",
+            "y1": "17",
+            "y2": "21"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "smartphone",
+      "category": "설정·보안",
+      "source_name": "Smartphone",
+      "label_ko": "모바일",
+      "keywords": [
+        "휴대폰",
+        "mobile"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "14",
+            "height": "20",
+            "x": "5",
+            "y": "2",
+            "rx": "2",
+            "ry": "2"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M12 18h.01"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "server",
+      "category": "설정·보안",
+      "source_name": "Server",
+      "label_ko": "서버",
+      "keywords": [
+        "시스템",
+        "server"
+      ],
+      "nodes": [
+        [
+          "rect",
+          {
+            "width": "20",
+            "height": "8",
+            "x": "2",
+            "y": "2",
+            "rx": "2",
+            "ry": "2"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "20",
+            "height": "8",
+            "x": "2",
+            "y": "14",
+            "rx": "2",
+            "ry": "2"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "6",
+            "x2": "6.01",
+            "y1": "6",
+            "y2": "6"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "6",
+            "x2": "6.01",
+            "y1": "18",
+            "y2": "18"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "code",
+      "category": "설정·보안",
+      "source_name": "Code",
+      "label_ko": "코드",
+      "keywords": [
+        "소스",
+        "개발",
+        "code"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "m16 18 6-6-6-6"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m8 6-6 6 6 6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "terminal",
+      "category": "설정·보안",
+      "source_name": "Terminal",
+      "label_ko": "터미널",
+      "keywords": [
+        "명령",
+        "실행",
+        "terminal"
+      ],
+      "nodes": [
+        [
+          "path",
+          {
+            "d": "M12 19h8"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "m4 17 6-6-6-6"
+          }
+        ]
+      ]
+    }
+  ]
+}

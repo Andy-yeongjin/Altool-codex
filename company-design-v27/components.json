@@ -1,0 +1,165 @@
+{
+  "version": "27",
+  "scope": "krds-2024-tokens altool-ui",
+  "css": "dist/company.css",
+  "js": "dist/business.js",
+  "namespace": "CompanyBusiness",
+  "guide": "docs/BUSINESS-USAGE.md",
+  "rules": "docs/CONSISTENCY.md",
+  "page_patterns": "docs/PAGE-PATTERNS.md",
+  "preview": "business-preview.html",
+  "existing_components_guide": "GUIDE.md",
+  "icons": "dist/assets/icons.json",
+  "components": [
+    {
+      "id": "date-range",
+      "name_ko": "날짜·월·기간",
+      "api": "datePicker/dateRange",
+      "classes": [
+        "ui-date-field",
+        "ui-date-range"
+      ],
+      "use_when": "날짜 또는 회계월 입력",
+      "integration": "validate 후 앱이 조회"
+    },
+    {
+      "id": "lookup",
+      "name_ko": "코드·명칭 검색",
+      "api": "lookup",
+      "classes": [
+        "ui-lookup-field"
+      ],
+      "use_when": "마스터 데이터 한 건 선택",
+      "integration": "search(query,{signal}) → [{code,name}]"
+    },
+    {
+      "id": "multiselect",
+      "name_ko": "검색 가능한 다중 선택",
+      "api": "multiselect",
+      "classes": [
+        "ui-multiselect"
+      ],
+      "use_when": "여러 값 선택",
+      "integration": "원본 select multiple 값 사용"
+    },
+    {
+      "id": "detail-form",
+      "name_ko": "상세 폼",
+      "api": "validateForm",
+      "classes": [
+        "ui-field-grid",
+        "ui-field",
+        "ui-detail-grid"
+      ],
+      "use_when": "입력 또는 읽기 전용 정보",
+      "integration": "업무 검증은 앱에서 실행"
+    },
+    {
+      "id": "table-tools",
+      "name_ko": "표·일괄 작업",
+      "api": "tableTools",
+      "classes": [
+        "ui-table-toolbar",
+        "ui-table-scroll"
+      ],
+      "use_when": "현재 행 선택·정렬·열 표시",
+      "integration": "onAction(action,ids)"
+    },
+    {
+      "id": "save-feedback",
+      "name_ko": "저장·오류 안내",
+      "api": "busy/validateForm/confirm/toast/dirtyGuard",
+      "classes": [
+        "ui-error-summary",
+        "ui-alert",
+        "ui-toast"
+      ],
+      "use_when": "저장 성공·실패·미저장 변경",
+      "integration": "서버 성공 후 markClean"
+    },
+    {
+      "id": "drawer",
+      "name_ko": "우측 상세 패널",
+      "api": "dialog",
+      "classes": [
+        "ui-dialog",
+        "ui-drawer"
+      ],
+      "use_when": "목록 위치 유지한 상세 확인",
+      "integration": "{drawer:true}, 데이터 조회는 앱"
+    },
+    {
+      "id": "tree",
+      "name_ko": "조직 탐색",
+      "api": "tree",
+      "classes": [
+        "ui-org-tree"
+      ],
+      "use_when": "계층별 부서 선택",
+      "integration": "items[{id,label,children}], onSelect"
+    },
+    {
+      "id": "history",
+      "name_ko": "처리·결재 이력",
+      "api": "timeline",
+      "classes": [
+        "ui-history"
+      ],
+      "use_when": "담당자·시간·상태·의견",
+      "integration": "items[{status,statusLabel,actor,time,timeLabel,comment}]"
+    },
+    {
+      "id": "presets",
+      "name_ko": "조회조건 저장",
+      "api": "presets",
+      "classes": [
+        "ui-presets"
+      ],
+      "use_when": "개인 조회조건 저장·복원",
+      "integration": "store.get/set, capture/apply"
+    },
+    {
+      "id": "chart",
+      "name_ko": "공통 가로 막대 차트",
+      "api": "barChart",
+      "classes": [
+        "ui-business-chart"
+      ],
+      "use_when": "양수·음수·0 비교",
+      "integration": "{title,unit,items:[{label,value}]}"
+    },
+    {
+      "id": "system-state",
+      "name_ko": "시스템 상태",
+      "api": "systemState",
+      "classes": [
+        "ui-system-state"
+      ],
+      "use_when": "오류·권한·세션·빈값·로딩",
+      "integration": "{type,message,onAction}"
+    },
+    {
+      "id": "attachments",
+      "name_ko": "파일 첨부 A",
+      "api": "attachments",
+      "classes": [
+        "ui-attachments"
+      ],
+      "use_when": "새 증빙파일 선택·개별 해제",
+      "integration": "원본 input.files 동기화; 서버 업로드는 앱"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "filter-bar",
+      "classes": [
+        "ui-filter-bar",
+        "ui-filter-range",
+        "ui-field",
+        "ui-filter-actions"
+      ],
+      "example": "filter-bar-preview.html",
+      "rule": "조건별 단일 라벨과 입력창; 기간 상위 라벨 중첩 금지; 오류 별도 행"
+    }
+  ]
+}

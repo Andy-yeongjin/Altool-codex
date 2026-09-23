@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "locale": "ko-KR",
+  "origin": "Altool authored; KRDS 2024.02 p.626–630 error guidance",
+  "labels": {
+    "confirm": "확인",
+    "cancel": "취소",
+    "close": "닫기",
+    "save": "저장",
+    "edit": "수정",
+    "delete": "삭제",
+    "search": "검색",
+    "reset": "초기화",
+    "back": "이전",
+    "next": "다음",
+    "retry": "다시 시도",
+    "help": "도움말",
+    "expand": "펼치기",
+    "collapse": "접기"
+  },
+  "messages": {
+    "field.month": {"title":"YYYY-MM 형식의 올바른 월을 입력하세요.","body":"월 입력값을 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.dateMin": {"title":"허용된 시작일 이후로 입력하세요.","body":"날짜의 최소 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.dateMax": {"title":"허용된 종료일 이전으로 입력하세요.","body":"날짜의 최대 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.min": {"title":"허용된 최솟값 이상으로 입력하세요.","body":"입력값의 최소 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "field.max": {"title":"허용된 최댓값 이하로 입력하세요.","body":"입력값의 최대 범위를 확인하세요.","action":"입력 확인","severity":"error"},
+    "error.presets": {"title":"조회조건을 처리하지 못했습니다.","body":"저장 공간 또는 연결을 확인하세요.","action":"다시 시도","severity":"error"},
+    "empty.attachments": {"title":"첨부된 파일이 없습니다.","body":"필요한 파일을 추가하세요.","action":"파일 추가","severity":"info"},
+    "error.generic": {
+      "title": "처리하지 못했어요",
+      "body": "잠시 후 다시 시도해 주세요. 문제가 계속되면 문의해 주세요.",
+      "action": "다시 시도",
+      "severity": "error"
+    },
+    "error.network": {
+      "title": "연결을 확인해 주세요",
+      "body": "인터넷 연결 상태를 확인한 뒤 다시 시도해 주세요.",
+      "action": "다시 시도",
+      "severity": "error"
+    },
+    "error.timeout": {
+      "title": "응답이 지연되고 있어요",
+      "body": "처리 결과를 먼저 확인해 주세요. 요청이 완료되지 않았다면 다시 시도해 주세요.",
+      "action": "결과 확인",
+      "severity": "warning"
+    },
+    "error.load": {
+      "title": "내용을 불러오지 못했어요",
+      "body": "잠시 후 다시 불러와 주세요.",
+      "action": "다시 불러오기",
+      "severity": "error"
+    },
+    "error.save": {
+      "title": "저장 여부를 확인해 주세요",
+      "body": "처리 결과를 확인하지 못했어요. 입력 내용을 유지한 채 저장 결과를 확인해 주세요.",
+      "action": "결과 확인",
+      "severity": "error"
+    },
+    "error.upload": {
+      "title": "파일을 올리지 못했어요",
+      "body": "연결과 파일을 확인한 뒤 다시 시도해 주세요.",
+      "action": "다시 시도",
+      "severity": "error"
+    },
+    "error.download": {
+      "title": "파일을 받지 못했어요",
+      "body": "연결을 확인한 뒤 다시 다운로드해 주세요.",
+      "action": "다운로드",
+      "severity": "error"
+    },
+    "error.permission": {
+      "title": "접근 권한이 없어요",
+      "body": "이 내용을 이용하려면 담당자에게 권한을 요청해 주세요.",
+      "action": "이전 화면",
+      "severity": "error"
+    },
+    "error.notFound": {
+      "title": "페이지를 찾을 수 없어요",
+      "body": "주소가 변경되었거나 페이지가 삭제되었을 수 있어요.",
+      "action": "홈으로",
+      "severity": "error"
+    },
+    "error.conflict": {
+      "title": "다른 변경 사항이 있어요",
+      "body": "최신 내용을 확인한 뒤 변경 내용을 다시 적용해 주세요.",
+      "action": "최신 내용 확인",
+      "severity": "warning"
+    },
+    "error.rateLimit": {
+      "title": "요청이 너무 많아요",
+      "body": "잠시 기다린 뒤 다시 시도해 주세요.",
+      "action": "닫기",
+      "severity": "warning"
+    },
+    "auth.required": {
+      "title": "로그인이 필요해요",
+      "body": "로그인한 뒤 이 기능을 이용할 수 있어요.",
+      "action": "로그인",
+      "severity": "info"
+    },
+    "auth.expired": {
+      "title": "로그인이 만료되었어요",
+      "body": "계속 이용하려면 다시 로그인해 주세요.",
+      "action": "다시 로그인",
+      "severity": "warning"
+    },
+    "auth.invalid": {
+      "title": "로그인 정보를 확인해 주세요",
+      "body": "입력한 정보로 로그인할 수 없어요. 다시 확인해 주세요.",
+      "action": "입력 확인",
+      "severity": "error"
+    },
+    "field.required": {
+      "title": "필수 항목을 입력해 주세요",
+      "body": "표시된 항목을 입력한 뒤 계속해 주세요.",
+      "action": "입력하기",
+      "severity": "error"
+    },
+    "field.format": {
+      "title": "입력 형식을 확인해 주세요",
+      "body": "항목 아래의 형식 안내에 맞게 수정해 주세요.",
+      "action": "수정하기",
+      "severity": "error"
+    },
+    "field.email": {
+      "title": "이메일 주소를 확인해 주세요",
+      "body": "예: name@example.com 형식으로 입력해 주세요.",
+      "action": "수정하기",
+      "severity": "error"
+    },
+    "field.date": {
+      "title": "날짜를 확인해 주세요",
+      "body": "유효한 날짜를 입력해 주세요.",
+      "action": "수정하기",
+      "severity": "error"
+    },
+    "field.dateRange": {
+      "title": "기간을 확인해 주세요",
+      "body": "종료일을 시작일과 같거나 이후 날짜로 선택해 주세요.",
+      "action": "수정하기",
+      "severity": "error"
+    },
+    "file.type": {
+      "title": "지원하지 않는 파일 형식이에요",
+      "body": "안내된 형식의 파일을 선택해 주세요.",
+      "action": "파일 선택",
+      "severity": "error"
+    },
+    "file.empty": {
+      "title": "파일이 비어 있어요",
+      "body": "파일 내용을 확인한 후 비어 있지 않은 파일을 선택해 주세요.",
+      "action": "파일 선택",
+      "severity": "error"
+    },
+    "file.size": {
+      "title": "파일이 너무 커요",
+      "body": "표시된 최대 용량 이하의 파일을 선택해 주세요.",
+      "action": "파일 선택",
+      "severity": "error"
+    },
+    "file.duplicate": {
+      "title": "같은 이름의 파일이 있어요",
+      "body": "기존 파일을 확인하고 새 이름으로 저장하거나 교체 여부를 선택해 주세요.",
+      "action": "파일 확인",
+      "severity": "warning"
+    },
+    "file.count": {
+      "title": "선택할 수 있는 파일 수를 넘었어요",
+      "body": "표시된 개수에 맞게 파일을 줄여 주세요.",
+      "action": "파일 확인",
+      "severity": "error"
+    },
+    "empty.list": {
+      "title": "아직 등록된 항목이 없어요",
+      "body": "첫 항목을 추가해 보세요.",
+      "action": "추가하기",
+      "severity": "info"
+    },
+    "empty.search": {
+      "title": "검색 결과가 없어요",
+      "body": "검색어를 바꾸거나 필터를 줄여 보세요.",
+      "action": "조건 초기화",
+      "severity": "info"
+    },
+    "empty.notifications": {
+      "title": "새 알림이 없어요",
+      "body": "새로운 소식이 도착하면 이곳에서 확인할 수 있어요.",
+      "action": "닫기",
+      "severity": "info"
+    },
+    "state.loading": {
+      "title": "불러오는 중이에요",
+      "body": "잠시만 기다려 주세요.",
+      "action": null,
+      "severity": "info"
+    },
+    "state.processing": {
+      "title": "처리 중이에요",
+      "body": "결과가 표시될 때까지 기다려 주세요.",
+      "action": null,
+      "severity": "info"
+    },
+    "state.maintenance": {
+      "title": "서비스 점검 중이에요",
+      "body": "안내된 종료 시간 이후에 다시 이용해 주세요.",
+      "action": "이전 화면",
+      "severity": "info"
+    },
+    "success.saved": {
+      "title": "저장했어요",
+      "body": "변경 내용이 저장되었어요.",
+      "action": "확인",
+      "severity": "success"
+    },
+    "success.deleted": {
+      "title": "삭제했어요",
+      "body": "선택한 항목을 삭제했어요.",
+      "action": "확인",
+      "severity": "success"
+    },
+    "success.submitted": {
+      "title": "신청을 접수했어요",
+      "body": "접수 내역에서 진행 상태를 확인할 수 있어요.",
+      "action": "접수 내역",
+      "severity": "success"
+    },
+    "success.copied": {
+      "title": "복사했어요",
+      "body": "필요한 곳에 붙여넣을 수 있어요.",
+      "action": "닫기",
+      "severity": "success"
+    },
+    "confirm.delete": {
+      "title": "선택한 항목을 삭제할까요?",
+      "body": "삭제 범위와 복구 가능 여부를 확인한 뒤 진행해 주세요.",
+      "action": "삭제하기",
+      "severity": "warning"
+    },
+    "confirm.leave": {
+      "title": "저장하지 않은 변경 내용이 있어요",
+      "body": "저장하지 않은 변경 내용을 버리고 이동할까요? 취소하면 계속 편집할 수 있습니다.",
+      "action": "변경 내용 버리고 이동",
+      "severity": "warning"
+    },
+    "confirm.overwrite": {
+      "title": "기존 파일을 바꿀까요?",
+      "body": "기존 파일의 내용을 확인한 뒤 교체해 주세요.",
+      "action": "교체하기",
+      "severity": "warning"
+    },
+    "confirm.submit": {
+      "title": "입력한 내용으로 신청할까요?",
+      "body": "신청 정보와 첨부파일을 다시 확인해 주세요.",
+      "action": "신청하기",
+      "severity": "info"
+    },
+    "help.privacy": {
+      "title": "필요한 정보만 입력해 주세요",
+      "body": "이 화면에서 요청하지 않은 민감정보는 입력하지 마세요.",
+      "action": "확인",
+      "severity": "info"
+    }
+  }
+}

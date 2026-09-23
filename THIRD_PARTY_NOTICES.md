@@ -1,5 +1,9 @@
 # Third-Party Notices
 
+## 회사 디자인 v27
+
+사용자 제공 회사 UI의 Lucide 아이콘 120개는 [원본 정보](designs/assets/ui-kit/internal/company/icons/source.json)와 [Lucide 라이선스](designs/assets/ui-kit/internal/company/icons/LICENSE-LUCIDE.txt)를 보존한다. 추가 13개는 [Altool 자체 제작 아이콘](designs/assets/ui-kit/internal/company/icons/additions.json)이며 [별도 MIT 고지](designs/assets/ui-kit/internal/company/icons/LICENSE-ALTOOL.txt)를 따른다. 합계 133개를 전부 Lucide라고 표시하지 않는다. UI의 출처 주장·브라우저 검증 범위는 [회사 적용 안내](designs/assets/ui-kit/internal/company/README.md)를 따른다. 기존 정부 실행 자산은 제거했으며 KRDS·Pretendard GOV·Swiper 고지는 참고 자료와 과거 사용의 귀속 기록으로만 유지한다.
+
 This repository is licensed under the MIT License for original Altool-codex
 materials. The following bundled or referenced third-party materials are not
 relicensed by Altool-codex. They remain subject to their original owners'
@@ -43,6 +47,25 @@ licenses, terms, or public-use policies.
   remain the property of their respective owners. These images are included to
   explain the setup/deployment workflow and are not relicensed as standalone
   brand assets.
+
+## Bundled YAML runtime
+
+- PyYAML 6.0.3 (MIT): [bundled runtime/version details](altool/vendor/README.md),
+  [original license](altool/vendor/pyyaml/LICENSE),
+  [pinned source manifest](altool/vendor/pyyaml-manifest.json).
+
+## Historical company UI reference kit and retained notices
+
+- Previously used KRDS kit 1.1.0, pinned commit `d6bb184c823e4757f05807ea4646a23e3133b6e6`:
+  [canonical attribution and recorded KRDS reuse conditions](designs/assets/ui-kit/internal/ATTRIBUTION.md).
+- Previously bundled Pretendard GOV: [retained OFL notice](designs/assets/ui-kit/internal/licenses/Pretendard-OFL.txt).
+- Previously bundled Swiper 11.0.6: [retained MIT notice](designs/assets/ui-kit/internal/licenses/Swiper-MIT.txt).
+- The government kit's HTML/CSS/JS/SVG, GOV font binaries and Swiper runtime
+  have been removed. Retained Markdown/JSON in
+  `designs/assets/ui-kit/internal/reference/legacy/` is reference evidence,
+  not an executable fallback. Current company UI does not load those assets.
+- These entries index retained notices; they are not a new legal assessment or
+  a replacement for the canonical terms and attribution above.
 
 ## External product names
 

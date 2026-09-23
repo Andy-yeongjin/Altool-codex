@@ -1,0 +1,16 @@
+/* B: explicit navigation containers; does not change ordinary buttons. */
+.altool-ui :is(.ui-tabs,[role="tablist"]) { display:flex;flex-wrap:wrap;gap:var(--company-nav-gap);padding-bottom:.375rem;border-bottom:1px solid var(--company-field-border); }
+.altool-ui [role="tablist"][aria-orientation="vertical"] { flex-direction:column;align-items:stretch; }
+.altool-ui :is(.ui-tabs,[role="tablist"]) :is(button,a,[role="tab"]) { display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:var(--krds24-control-height-md);padding:0 1rem;border:1px solid transparent;border-radius:var(--company-button-radius);background:transparent;color:var(--company-nav-text);font-family:var(--company-button-font);font-size:var(--company-font-size);font-weight:500;line-height:1.3;box-shadow:none;text-decoration:none;cursor:pointer; }
+.altool-ui .ui-tab-count { font-size:.75rem;color:inherit; }
+.altool-ui :is(.ui-pagination,.pagination) { display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--company-nav-gap); }
+.altool-ui :is(.ui-pagination,.pagination) [data-page-links] { gap:var(--company-nav-gap);margin:0; }
+.altool-ui :is(.ui-pagination,.pagination) :is(button,a) { display:inline-flex;align-items:center;justify-content:center;min-height:var(--krds24-control-height-md);min-width:var(--krds24-control-height-md);padding:0 .5rem;border:1px solid #C6C9CD;border-radius:var(--company-button-radius);background:#FFFFFF;color:#454C55;font-family:var(--company-button-font);font-size:.875rem;font-weight:500;line-height:1.2;box-shadow:none;text-decoration:none;cursor:pointer; }
+.altool-ui :is(.ui-tabs,[role="tablist"],.ui-pagination,.pagination) :is(button,a,[role="tab"]):hover { background:var(--company-nav-hover);color:#30363D;transform:none;box-shadow:none; }
+.altool-ui :is(.ui-tabs,[role="tablist"],.ui-pagination,.pagination) :is(button,a,[role="tab"]):is([aria-selected="true"],[aria-pressed="true"],[aria-current="page"]) { background:var(--company-nav-selected);border-color:var(--company-nav-selected);color:#FFFFFF;font-weight:500; }
+.altool-ui :is(.ui-tabs,[role="tablist"],.ui-pagination,.pagination) :is(button,a,[role="tab"]):is([aria-selected="true"],[aria-pressed="true"],[aria-current="page"]):hover { background:var(--company-nav-selected-hover);border-color:var(--company-nav-selected-hover);color:#FFFFFF; }
+.altool-ui :is(.ui-tabs,[role="tablist"],.ui-pagination,.pagination) :is(button,a,[role="tab"]):focus-visible { outline:2px solid var(--company-brand-focus);outline-offset:2px;box-shadow:none; }
+.altool-ui :is(.ui-tabs,[role="tablist"],.ui-pagination,.pagination) :is(button,a,[role="tab"]):is(:disabled,[aria-disabled="true"]) { background:var(--company-button-disabled-bg);border-color:#C6C9CD;color:var(--company-button-disabled-text);cursor:not-allowed;opacity:1;box-shadow:none; }
+@media(pointer:coarse) {
+ .altool-ui :is(.ui-tabs,[role="tablist"],.ui-pagination,.pagination) :is(button,a,[role="tab"]) { min-height:2.75rem;min-width:2.75rem; }
+}

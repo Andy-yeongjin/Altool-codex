@@ -1,0 +1,27 @@
+
+/* Approved B site navigation; page shell dimensions are not prescribed. */
+.altool-ui .ui-site-header { display:flex;align-items:center;flex-wrap:wrap;gap:22px;min-height:48px;padding:8px 14px;border-bottom:1px solid var(--company-field-border);background:#F1F3F5;color:#30363D;font-family:var(--company-button-font); }
+.altool-ui .ui-site-brand { font-size:16px;font-weight:500;overflow-wrap:anywhere; }
+.altool-ui .ui-site-nav { display:flex;align-items:center;flex-wrap:wrap;gap:6px;min-width:0; }
+.altool-ui .ui-site-user { margin-inline-start:auto;color:#454C55;font-size:12px;font-weight:400; }
+.altool-ui .ui-sidebar { min-width:0;padding:10px 8px;border-inline-end:1px solid var(--company-table-line);background:#F1F3F5;color:#30363D;font-family:var(--company-button-font); }
+.altool-ui .ui-sidebar-heading { margin:0;padding:4px 10px 8px;color:#59616B;font-size:12px;font-weight:400; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item { display:flex;align-items:center;justify-content:flex-start;gap:8px;min-width:0;min-height:34px;padding:6px 10px;border:1px solid transparent;border-radius:var(--company-button-radius);background:transparent;color:#454C55;font-family:var(--company-button-font);font-size:14px;font-weight:400;line-height:1.4;text-align:start;text-decoration:none;white-space:normal;overflow-wrap:anywhere;box-shadow:none;transform:none;cursor:pointer; }
+.altool-ui .ui-site-nav :is(button,a).ui-nav-item { min-height:32px;padding:4px 10px;font-weight:500; }
+.altool-ui .ui-sidebar :is(button,a).ui-nav-item { width:100%;margin-bottom:3px; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) .ui-nav-item > .ui-icon { flex:none;width:16px;height:16px; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:hover { background:#EDF3FA;color:#30363D; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:is([aria-current="page"],[aria-pressed="true"]) { background:#1554A0;color:#FFFFFF;font-weight:500;border-color:transparent; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:focus-visible { outline:2px solid #1554A0;outline-offset:2px; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:is(:disabled,[aria-disabled="true"]) { background:transparent;color:var(--company-button-disabled-text);cursor:not-allowed;opacity:1; }
+@media(pointer:coarse) { .altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item { min-height:44px; } }
+
+/* Header color aligned with budget-dashboard .app-header. */
+.altool-ui .ui-site-header { background:#18334F;color:#FFFFFF;border-bottom-color:#18334F; }
+.altool-ui .ui-site-header .ui-site-user { color:#D4DEE9; }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item { color:#FFFFFF; }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:hover { background:#244763;color:#FFFFFF; }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:is([aria-current="page"],[aria-pressed="true"]) { background:#1554A0;color:#FFFFFF; }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:focus-visible { outline-color:#FFFFFF; }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:is(:disabled,[aria-disabled="true"]) { background:transparent;color:#AAB8C7; }
+

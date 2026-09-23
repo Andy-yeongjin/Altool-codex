@@ -1,0 +1,100 @@
+@layer altool-base, altool-components;
+@layer altool-components {
+.altool-ui { color:var(--krds24-gray-90); background:var(--krds24-gray-0); font:400 var(--company-font-size)/1.5 var(--company-button-font); }
+.altool-ui *, .altool-ui *::before, .altool-ui *::after { box-sizing:border-box; }
+.altool-ui [hidden] { display:none!important; }
+.altool-ui :focus-visible { outline:2px solid var(--company-brand-focus); outline-offset:3px; }
+.altool-ui .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+}
+
+
+@layer altool-components {
+
+/* Approved D: shared geometry; explicit role determines color. */
+.altool-ui :is(button,a.button) {
+ --d-bg:#FFFFFF; --d-border:#C6C9CD; --d-text:#30363D; --d-hover:#F7F7F7; --d-active:#EFEFEF;
+ display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+ min-height:var(--krds24-control-height-md); padding:0 .75rem;
+ font-family:var(--company-button-font); font-size:var(--company-font-size); font-weight:var(--company-button-weight); line-height:1.2; letter-spacing:0;
+ border:1px solid var(--d-border); border-radius:var(--company-button-radius);
+ background:var(--d-bg); color:var(--d-text); box-shadow:none; transform:none; text-decoration:none; cursor:pointer;
+ transition:background-color 120ms,border-color 120ms;
+}
+.altool-ui :is(button,a.button):is(.primary,[data-variant="primary"]) {--d-bg:var(--company-brand-primary);--d-border:var(--company-brand-primary);--d-text:var(--company-brand-on-primary);--d-hover:var(--company-brand-hover);--d-active:var(--company-brand-active);background:var(--d-bg);color:var(--d-text);border-color:var(--d-border);font-weight:var(--company-button-weight);}
+.altool-ui :is(button,a.button):is(.tonal,[data-variant="tonal"]) {--d-bg:#EFEFEF;--d-border:#C6C9CD;--d-text:#30363D;--d-hover:#E5E5E5;--d-active:#D9D9D9;background:var(--d-bg);color:var(--d-text);border-color:var(--d-border);font-weight:var(--company-button-weight);}
+.altool-ui :is(button,a.button):is(.quiet,[data-variant="quiet"]) {--d-bg:transparent;--d-border:transparent;--d-text:#454C55;--d-hover:#F3F4F5;--d-active:#E7E9EB;background:var(--d-bg);color:var(--d-text);border-color:var(--d-border);font-weight:var(--company-button-weight);}
+.altool-ui :is(button,a.button):is(.danger,[data-variant="danger"]) {--d-bg:var(--company-button-danger);--d-border:var(--company-button-danger);--d-text:#FFFFFF;--d-hover:var(--company-button-danger-hover);--d-active:var(--company-button-danger-active);background:var(--d-bg);color:var(--d-text);border-color:var(--d-border);font-weight:var(--company-button-weight);}
+
+.altool-ui :is(button,a.button):is(.tertiary) { --d-bg:transparent;--d-border:transparent;--d-text:#454C55;--d-hover:#F3F4F5;--d-active:#E7E9EB;background:var(--d-bg);color:var(--d-text);border-color:var(--d-border); }
+.altool-ui :is(button,a.button):hover:not(:disabled):not([aria-disabled="true"]) { background:var(--d-hover); color:var(--d-text); border-color:var(--d-border); box-shadow:none; }
+.altool-ui :is(button,a.button):active:not(:disabled):not([aria-disabled="true"]) { background:var(--d-active); color:var(--d-text); border-color:var(--d-border); transform:none; box-shadow:none; }
+.altool-ui :is(button,a.button):is([aria-pressed="true"],[aria-selected="true"],[aria-current]:not([aria-current="false"])) { background:var(--d-active); color:var(--d-text); border-color:var(--company-brand-primary); font-weight:var(--company-button-weight); }
+.altool-ui :is(button,a.button):focus-visible { outline:2px solid var(--company-brand-focus);outline-offset:2px;border-radius:var(--company-button-radius);box-shadow:none; }
+.altool-ui :is(button,a.button)[data-size="sm"] { min-height:var(--krds24-control-height-sm);font-size:.8125rem;padding-inline:.625rem; }
+.altool-ui :is(button,a.button)[data-size="lg"] { min-height:var(--krds24-control-height-lg);font-size:1.0625rem;padding-inline:1rem; }
+.altool-ui :is(button,a.button) > svg { width:1rem;height:1rem;flex:none;fill:none;stroke:currentColor;stroke-width:var(--company-button-icon-stroke);stroke-linecap:round;stroke-linejoin:round; }
+.altool-ui :is(button,a.button)[data-size="sm"] > svg { width:.875rem;height:.875rem; }
+.altool-ui :is(button,a.button)[data-size="lg"] > svg { width:1.25rem;height:1.25rem; }
+.altool-ui :is(button,a.button):is([data-icon-only],.icon-only) { padding:0;width:var(--krds24-control-height-md);min-width:var(--krds24-control-height-md); }
+.altool-ui :is(button,a.button):is([data-icon-only],.icon-only)[data-size="sm"] { width:var(--krds24-control-height-sm);min-width:var(--krds24-control-height-sm); }
+.altool-ui :is(button,a.button):is([data-icon-only],.icon-only)[data-size="lg"] { width:var(--krds24-control-height-lg);min-width:var(--krds24-control-height-lg); }
+.altool-ui :is(button,a.button):is([data-icon-only],.icon-only)[data-shape="pill"] { border-radius:999rem; }
+.altool-ui :is(button,a.button):is(:disabled,[aria-disabled="true"]) { background:var(--company-button-disabled-bg);color:var(--company-button-disabled-text);border-color:#C6C9CD;opacity:1;box-shadow:none;transform:none;cursor:not-allowed; }
+@media(prefers-reduced-motion:reduce) { .altool-ui :is(button,a.button) { transition:none; } }
+
+.altool-ui .ui-icon-group > :is(button,a.button) { border-radius:0;margin-inline-start:-1px; }
+.altool-ui .ui-icon-group > :is(button,a.button):first-child { border-start-start-radius:var(--company-button-radius);border-end-start-radius:var(--company-button-radius);margin-inline-start:0; }
+.altool-ui .ui-icon-group > :is(button,a.button):last-child { border-start-end-radius:var(--company-button-radius);border-end-end-radius:var(--company-button-radius); }
+}
+
+@layer altool-components {
+
+/* B input appearance; native choice shapes retained. */
+.altool-ui input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="hidden"]),
+.altool-ui select,
+.altool-ui textarea { border:1px solid var(--company-field-border);border-radius:var(--company-field-radius);font-family:var(--company-button-font);font-size:var(--company-font-size);font-weight:400;line-height:1.4;color:#30363D;background:#FFFFFF;box-shadow:none;min-height:var(--krds24-control-height-md);padding:var(--company-control-py) var(--company-control-px); }
+.altool-ui input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="hidden"]):hover:not(:disabled):not([readonly]),
+.altool-ui select:hover:not(:disabled):not([readonly]),
+.altool-ui textarea:hover:not(:disabled):not([readonly]) { border-color:var(--company-field-border-hover); }
+.altool-ui input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="hidden"])::placeholder,
+.altool-ui select::placeholder,
+.altool-ui textarea::placeholder { color:#66717E;opacity:1; }
+.altool-ui input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="hidden"])[readonly],
+.altool-ui select[readonly],
+.altool-ui textarea[readonly] { background:var(--company-field-readonly-bg);color:#454C55; }
+.altool-ui input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="hidden"]):disabled,
+.altool-ui select:disabled,
+.altool-ui textarea:disabled { background:var(--company-field-disabled-bg);color:var(--company-field-disabled-text);opacity:1;cursor:not-allowed; }
+.altool-ui input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="hidden"])[aria-invalid="true"],
+.altool-ui select[aria-invalid="true"],
+.altool-ui textarea[aria-invalid="true"] { border:1px solid var(--company-field-error)!important; }
+.altool-ui input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="hidden"]):focus-visible,
+.altool-ui select:focus-visible,
+.altool-ui textarea:focus-visible { outline:2px solid var(--company-brand-focus);outline-offset:2px;box-shadow:none; }
+.altool-ui input:is([type="checkbox"],[type="radio"]) { width:var(--company-choice-size);height:var(--company-choice-size);min-height:0;min-width:0;margin:0;flex:none;accent-color:var(--company-brand-foreground); }
+
+}
+
+@layer altool-components {
+
+/* A table: no forced outer card or column widths. */
+.altool-ui table { width:100%;border-collapse:collapse;border-top:1px solid var(--company-table-edge);font-family:var(--company-button-font);font-size:var(--company-font-size);font-weight:400;line-height:1.4;font-variant-numeric:tabular-nums; }
+.altool-ui table th, .altool-ui table td { padding:var(--company-cell-py) var(--company-cell-px);text-align:center;border:0;border-bottom:1px solid var(--company-table-line);vertical-align:middle; }
+.altool-ui table th { background:transparent;color:#454C55;font-size:inherit;font-weight:500;letter-spacing:0;border-bottom-color:var(--company-table-strong-line); }
+.altool-ui table thead th { background:var(--company-table-header-bg); }
+.altool-ui table td { font-size:inherit; }
+.altool-ui table :is(th,td).ui-number { text-align:center; }
+.altool-ui table tfoot td, .altool-ui table tfoot th { font-weight:500;background:var(--company-table-total-bg);border-top:1px solid var(--company-table-strong-line);border-bottom-color:var(--company-table-edge); }
+.altool-ui table.ui-table--grid th, .altool-ui table.ui-table--grid td { border-inline:1px solid #C6C9CD;border-bottom-color:#C6C9CD; }
+.altool-ui table.ui-table--striped tbody tr:nth-child(even)>:is(th,td) { background:var(--company-table-stripe); }
+.altool-ui table:is(table,.ui-table--striped,.ui-table--grid) tbody tr:hover>td, .altool-ui table:is(table,.ui-table--striped,.ui-table--grid) tbody tr:hover>th { background:var(--company-table-hover); }
+.altool-ui table:is(table,.ui-table--striped,.ui-table--grid) tbody tr:is([aria-selected="true"],.is-selected)>td,
+.altool-ui table:is(table,.ui-table--striped,.ui-table--grid) tbody tr:is([aria-selected="true"],.is-selected)>th { background:var(--company-table-selected); }
+.altool-ui table .ui-cell-negative { color:#A2242C; }
+.altool-ui table .ui-cell-check { width:2.625rem;padding:0 .5rem;text-align:center; }
+.altool-ui table .ui-cell-check label { display:flex;align-items:center;justify-content:center;min-height:var(--krds24-control-height-md);min-width:1.75rem;margin:0; }
+/* Opt-in checkbox-driven highlighting; ordinary data checkboxes do not select rows. */
+.altool-ui table[data-row-selection] tbody tr:has(input[data-row-select]:checked)>td,
+.altool-ui table[data-row-selection] tbody tr:has(input[data-row-select]:checked)>th { background:var(--company-table-selected); }
+
+}

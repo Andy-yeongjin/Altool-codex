@@ -1,0 +1,10 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>섹션 프레이밍 검증</title>
+<link rel="stylesheet" href="../../designs/assets/ui-kit/internal/company/dist/company.css">
+<style>.preview-grid{grid-template-columns:2fr 1fr} @media(max-width:600px){.preview-grid{grid-template-columns:1fr}}</style>
+<main class="krds-2024-tokens altool-ui" style="padding:20px">
+<div class="ui-section-group preview-grid">
+<section class="ui-section"><header class="ui-section-header"><h2 class="ui-section-title">변경 신청서</h2></header><form><div class="ui-field-grid"><div class="ui-field"><label for="dept">보내는 부서</label><input id="dept" name="dept"></div><div class="ui-field"><label for="target">받는 부서</label><select id="target"><option>선택</option><option>영업팀</option></select></div><div class="ui-field"><label for="date">신청일</label><input id="date" placeholder="YYYY-MM-DD"></div><div class="ui-field"><label for="reason">사유</label><textarea id="reason"></textarea></div></div><div class="ui-form-actions"><button type="reset">초기화</button></div></form></section>
+<section class="ui-section"><header class="ui-section-header"><h2 class="ui-section-title">부서별 예산</h2><p class="ui-section-meta">시연 · 원</p></header><dl class="ui-detail-grid"><div><dt>재무팀</dt><dd>5,000,000 원</dd></div></dl></section>
+</div>
+<section class="ui-section"><header class="ui-section-header"><h2 class="ui-section-title">결과 상태</h2></header><div class="ui-data-state"><p class="ui-data-state-title">내역 없음</p></div></section>
+</main><script src="../../designs/assets/ui-kit/internal/company/dist/business.js"></script><script>CompanyBusiness.datePicker(document.querySelector('#date'));</script></html>

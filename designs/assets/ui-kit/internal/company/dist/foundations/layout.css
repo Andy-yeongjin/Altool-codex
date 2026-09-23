@@ -1,0 +1,14 @@
+/* Company v27 page composition; the four task layouts share the same company controls. */
+.altool-layout { --altool-margin:20px; --altool-gutter:16px; --altool-columns:12; color:var(--krds24-gray-90); background:var(--krds24-gray-0); font:400 var(--company-font-size)/1.5 var(--company-button-font); overflow-wrap:anywhere; }
+.altool-layout__container { box-sizing:border-box; width:calc(100% - 2 * var(--altool-margin)); max-width:1120px; margin-inline:auto; }
+.altool-layout--fluid .altool-layout__container { max-width:none; }
+.altool-layout__body { padding-block:20px; }
+.altool-layout__main,.altool-layout__sidebar { min-width:0; }
+.altool-layout__sidebar { padding:16px; background:var(--company-section-body-bg); }
+.altool-layout__title { font-size:22px; font-weight:500; margin:0 0 20px; }
+.altool-layout__section + .altool-layout__section { margin-block-start:24px; }
+.altool-layout__section > h3 { font-size:16px; font-weight:500; border-inline-start:3px solid var(--company-section-accent); padding-inline-start:8px; }
+.altool-layout__grid { display:grid; grid-template-columns:repeat(var(--altool-columns),minmax(0,1fr)); gap:var(--altool-gutter); }
+.altool-layout__grid > * { grid-column:span 4; min-width:0; }
+.altool-layout--sidebar .altool-layout__body { display:grid; grid-template-columns:minmax(10rem,14rem) minmax(0,1fr); gap:24px; }
+@media (max-width:700px) { .altool-layout { --altool-margin:16px; } .altool-layout--sidebar .altool-layout__body { grid-template-columns:1fr; } .altool-layout__grid > * { grid-column:1 / -1; } }

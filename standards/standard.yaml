@@ -1,0 +1,144 @@
+# 규칙 본문은 source의 Markdown에만 둡니다.
+version: 1
+active_profiles: [base]
+# AI가 프로젝트 목적에 맞춰 관리합니다. 사내 공통 기반 예: [base, internal-common]
+standards:
+  design:
+    profile: base
+    when: [ui-create, ui-change, ui-review, design-source]
+    source: design.md
+    sections: ['*']
+    requires: []
+  ui-common:
+    profile: base
+    when: [ui-create, ui-change, ui-review, design-source]
+    source: ui-guidelines.md
+    sections: [common]
+    requires: [design]
+    asset_kinds: [foundation, brand, icon, image, message, component, pattern, service]
+    asset_ids: [foundation.tokens, foundation.layout]
+  ui-form:
+    profile: base
+    when: [form-ui, upload-ui]
+    source: ui-guidelines.md
+    sections: [form]
+    requires: [ui-common]
+    asset_ids: [pattern.form, pattern.error, pattern.consent, pattern.identity-input, component.file-upload]
+  ui-auth:
+    profile: base
+    when: [login-ui, session-ui]
+    source: ui-guidelines.md
+    sections: [auth]
+    requires: [ui-form]
+    asset_ids: [service.authentication]
+  ui-search:
+    profile: base
+    when: [search-ui, list-ui, filter-ui]
+    source: ui-guidelines.md
+    sections: [search]
+    requires: [ui-common]
+    asset_ids: [service.search, pattern.list, pattern.filter, component.pagination, component.table]
+  ui-content:
+    profile: base
+    when: [content-ui, navigation-ui, help-ui]
+    source: ui-guidelines.md
+    sections: [content]
+    requires: [ui-common]
+    asset_ids: [service.visit, service.policy-information, pattern.detail, pattern.attachment, pattern.help, pattern.feedback]
+  ui-transaction:
+    profile: base
+    when: [application-ui, history-ui]
+    source: ui-guidelines.md
+    sections: [transaction]
+    requires: [ui-form]
+    asset_ids: [service.application, service.application-history, pattern.confirmation]
+  engineering:
+    profile: base
+    when: [code-change, schema-change, api-change, ui-create, ui-change]
+    source: engineering.md
+    sections: [naming, boundaries]
+    requires: [glossary]
+  company-ui:
+    profile: base
+    when: [ui-create, ui-change, ui-review, design-source]
+    source: company-ui.md
+    sections: [common]
+    requires: [ui-common]
+    asset_ids: [foundation.company-ui]
+  company-form:
+    profile: base
+    when: [form-ui, upload-ui]
+    source: company-ui.md
+    sections: [form]
+    requires: [company-ui, ui-form]
+    asset_ids: [component.select, component.date-input, component.date-range, component.lookup, component.multiselect, component.file-upload, pattern.form]
+  company-search:
+    profile: base
+    when: [search-ui, list-ui, filter-ui]
+    source: company-ui.md
+    sections: [search]
+    requires: [company-ui, ui-search]
+    asset_ids: [pattern.filter, component.table, component.table-tools, component.pagination, component.filter-presets, component.drawer, pattern.system-state]
+  company-navigation:
+    profile: base
+    when: [navigation-ui, content-ui, help-ui]
+    source: company-ui.md
+    sections: [navigation]
+    requires: [company-ui, ui-content]
+    asset_ids: [component.header, component.side-navigation, component.modal, component.organization-tree, component.tooltip]
+  company-transaction:
+    profile: base
+    when: [application-ui, history-ui]
+    source: company-ui.md
+    sections: [transaction]
+    requires: [company-ui, ui-transaction]
+    asset_ids: [pattern.save-feedback, pattern.history, component.step-indicator]
+  company-dashboard:
+    profile: base
+    when: [dashboard-ui, chart-ui, summary-ui]
+    source: company-ui.md
+    sections: [dashboard]
+    requires: [company-ui]
+    asset_ids: [component.metric, component.bar-chart, component.table, pattern.filter]
+  glossary:
+    profile: base
+    when: [terminology-change]
+    source: glossary.md
+    sections: [terms]
+    requires: []
+  schema:
+    profile: base
+    when: [schema-change, schema-review]
+    source: schema.md
+    sections: [naming, domains, validation]
+    requires: [engineering]
+  api:
+    profile: base
+    when: [api-change, api-review, error-contract]
+    source: api.md
+    sections: [interface, errors]
+    requires: [engineering]
+  internal-stack:
+    profile: internal-common
+    when: [code-change, schema-change, api-change]
+    source: engineering.md
+    sections: [stack]
+    requires: [engineering]
+  access:
+    profile: internal-common
+    when: [protected-read, data-write, auth-change]
+    source: access.md
+    sections: [authorization, data-scope, authentication]
+    requires: [engineering]
+  audit:
+    profile: internal-common
+    when: [data-write, master-data-write, schema-change]
+    source: data.md
+    sections: [lifecycle, audit, ownership]
+    requires: [access, schema]
+  import:
+    profile: internal-common
+    when: [bulk-import]
+    source: import.md
+    sections: [validation, commit, parsing]
+    requires: [audit]

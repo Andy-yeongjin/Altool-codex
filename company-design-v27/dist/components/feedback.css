@@ -1,0 +1,13 @@
+
+/* Status is display-only; text always accompanies the color. */
+.altool-ui :is(.ui-status,.ui-alert) { --company-status-color:var(--company-status-neutral); }
+.altool-ui :is(.ui-status,.ui-alert):is([data-status="progress"],[data-status="info"]) { --company-status-color:var(--company-status-progress); }
+.altool-ui :is(.ui-status,.ui-alert)[data-status="success"] { --company-status-color:var(--company-status-success); }
+.altool-ui :is(.ui-status,.ui-alert)[data-status="warning"] { --company-status-color:var(--company-status-warning); }
+.altool-ui :is(.ui-status,.ui-alert)[data-status="error"] { --company-status-color:var(--company-status-error); }
+.altool-ui .ui-status:is(.ui-status,[data-status]) { display:inline-flex;align-items:center;gap:6px;min-height:26px;padding:2px 0;border:0;border-radius:0;background:transparent;color:var(--company-status-text);font-family:var(--company-button-font);font-size:13px;font-weight:500;line-height:1.5;vertical-align:middle;box-shadow:none; }
+.altool-ui .ui-status::before { content:"";display:block;width:6px;height:6px;border-radius:50%;flex:none;background:var(--company-status-color); }
+.altool-ui .ui-alert:is(.ui-alert,[data-status]) { display:flex;align-items:flex-start;gap:8px;margin:6px 0;padding:9px 12px;border:1px solid transparent;border-inline-start:3px solid var(--company-status-color);border-radius:0;background:var(--company-alert-bg);color:var(--company-status-text);font-family:var(--company-button-font);font-size:14px;font-weight:400;line-height:1.5;box-shadow:none;overflow-wrap:anywhere; }
+.altool-ui .ui-alert > .ui-icon { flex:none;width:16px;height:16px;margin-top:3px;color:var(--company-status-color); }
+.altool-ui .ui-alert > :not(.ui-icon) { min-width:0; }
+

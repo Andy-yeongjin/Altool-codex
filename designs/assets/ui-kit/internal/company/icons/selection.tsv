@@ -1,0 +1,120 @@
+기본 작업	search	Search	조회	검색 찾기 lookup
+기본 작업	plus	Plus	신규	추가 생성 등록 add create
+기본 작업	pencil	Pencil	수정	편집 변경 edit
+기본 작업	save	Save	저장	반영 save
+기본 작업	trash	Trash2	삭제	제거 폐기 delete
+기본 작업	copy	Copy	복사	복제 duplicate
+기본 작업	check	Check	확인	완료 승인 confirm
+기본 작업	x	X	닫기	취소 해제 close cancel
+기본 작업	refresh	RefreshCw	새로고침	갱신 reload
+기본 작업	undo	Undo2	되돌리기	실행취소 undo
+기본 작업	redo	Redo2	다시 실행	redo
+기본 작업	eye	Eye	보기	미리보기 조회 preview
+기본 작업	eye-off	EyeOff	숨기기	비공개 감추기 hide
+기본 작업	filter	Filter	필터	조회조건 조건 filter
+기본 작업	sliders	SlidersHorizontal	상세 조건	조건설정 조정 settings
+파일·문서	file	File	파일	문서 file
+파일·문서	file-text	FileText	텍스트 문서	내용 명세 document
+파일·문서	file-plus	FilePlus	문서 추가	파일 생성 신규
+파일·문서	file-check	FileCheck	문서 확인	증빙확인 검증
+파일·문서	file-search	FileSearch	문서 검색	증빙조회
+파일·문서	files	Files	여러 문서	문서목록 파일모음
+파일·문서	folder	Folder	폴더	디렉터리 분류
+파일·문서	folder-open	FolderOpen	열린 폴더	폴더열기
+파일·문서	paperclip	Paperclip	첨부	파일첨부 attachment
+파일·문서	upload	Upload	업로드	올리기 가져오기 upload
+파일·문서	download	Download	다운로드	내려받기 export
+파일·문서	printer	Printer	인쇄	출력 print
+파일·문서	spreadsheet	FileSpreadsheet	스프레드시트	엑셀 Excel xlsx csv
+파일·문서	archive	Archive	보관	아카이브 archive
+파일·문서	clipboard	Clipboard	클립보드	붙여넣기 clipboard
+파일·문서	clipboard-check	ClipboardCheck	점검 완료	체크리스트 검수
+파일·문서	image	Image	이미지	사진 그림 image
+이동·배치	arrow-left	ArrowLeft	뒤로	이전 back
+이동·배치	arrow-right	ArrowRight	앞으로	다음 next
+이동·배치	arrow-up	ArrowUp	위로	올리기 up
+이동·배치	arrow-down	ArrowDown	아래로	내리기 down
+이동·배치	chevron-left	ChevronLeft	이전 항목	이전페이지 previous
+이동·배치	chevron-right	ChevronRight	다음 항목	다음페이지 next
+이동·배치	chevron-up	ChevronUp	접기	위쪽 collapse
+이동·배치	chevron-down	ChevronDown	펼치기	드롭다운 expand
+이동·배치	first-page	ChevronsLeft	처음 페이지	맨앞 first
+이동·배치	last-page	ChevronsRight	마지막 페이지	맨뒤 last
+이동·배치	external-link	ExternalLink	새 창	외부링크 external
+이동·배치	link	Link	링크	연결 주소 link
+이동·배치	home	House	홈	처음 메인 home
+이동·배치	menu	Menu	메뉴	전체메뉴 hamburger
+이동·배치	more-horizontal	Ellipsis	더보기	추가메뉴 more
+이동·배치	more-vertical	EllipsisVertical	세로 더보기	행메뉴 more
+이동·배치	maximize	Maximize2	확대	전체화면 maximize
+이동·배치	minimize	Minimize2	축소	화면복원 minimize
+이동·배치	panel-left	PanelLeft	사이드바	왼쪽패널 sidebar
+이동·배치	grid	LayoutGrid	격자 보기	카드보기 grid
+이동·배치	list	List	목록 보기	리스트 list
+이동·배치	grip	GripVertical	이동 손잡이	드래그 순서 drag
+상태·알림	info	Info	안내	정보 information
+상태·알림	help	CircleHelp	도움말	질문 help
+상태·알림	warning	TriangleAlert	경고	주의 warning
+상태·알림	error	CircleX	오류	실패 error
+상태·알림	success	CircleCheck	성공	완료 정상 success
+상태·알림	pending	Clock	대기	처리중 시간 pending
+상태·알림	loader	LoaderCircle	로딩	불러오는중 loading
+상태·알림	bell	Bell	알림	통지 notification
+상태·알림	bell-off	BellOff	알림 끄기	음소거 mute
+상태·알림	ban	Ban	금지	차단 불가 blocked
+상태·알림	flag	Flag	표시	관심 플래그 flag
+상태·알림	bookmark	Bookmark	책갈피	즐겨찾기 bookmark
+상태·알림	star	Star	즐겨찾기	중요 favorite
+사람·조직	user	User	사용자	담당자 개인 user
+사람·조직	users	Users	사용자 그룹	팀 구성원 users
+사람·조직	user-plus	UserPlus	사용자 추가	초대 인원추가
+사람·조직	user-check	UserCheck	사용자 확인	담당자승인
+사람·조직	building	Building2	법인	회사 본사 company
+사람·조직	network	Network	조직도	부서 조직 hierarchy
+사람·조직	contact	Contact	연락처	명함 contact
+사람·조직	mail	Mail	메일	이메일 email
+사람·조직	phone	Phone	전화	통화 phone
+사람·조직	message	MessageSquare	의견	댓글 메시지 comment
+사람·조직	send	Send	전송	발송 제출 send
+일정·결재	calendar	Calendar	달력	일자 날짜 date
+일정·결재	calendar-range	CalendarRange	기간	시작일 종료일 range
+일정·결재	calendar-check	CalendarCheck	일정 확인	확정 예약
+일정·결재	history	History	이력	변경이력 기록 history
+일정·결재	stamp	Stamp	결재	승인 날인 approval
+일정·결재	workflow	Workflow	처리 흐름	워크플로 단계 workflow
+일정·결재	list-checks	ListChecks	할 일	체크리스트 tasks
+재무·물류	wallet	Wallet	예산	지갑 자금 budget
+재무·물류	credit-card	CreditCard	법인카드	카드 결제 card
+재무·물류	receipt	Receipt	영수증	증빙 정산 receipt
+재무·물류	bank	Landmark	은행	금융기관 bank
+재무·물류	calculator	Calculator	계산	계산기 calculate
+재무·물류	percent	Percent	비율	백분율 집행률 percent
+재무·물류	coins	Coins	금액	비용 통화 money
+재무·물류	package	Package	자재	품목 물품 package
+재무·물류	truck	Truck	배송	운송 물류 delivery
+재무·물류	warehouse	Warehouse	창고	재고 storage
+재무·물류	shopping-cart	ShoppingCart	구매	발주 구매요청 purchase
+데이터·분석	database	Database	데이터베이스	DB 데이터 database
+데이터·분석	table	Table2	표	테이블 데이터 table
+데이터·분석	chart-bar	ChartColumn	막대 차트	비교 실적 bar
+데이터·분석	chart-line	ChartLine	선 차트	추이 월별 trend
+데이터·분석	chart-pie	ChartPie	원형 차트	비중 구성 pie
+데이터·분석	trend-up	TrendingUp	증가	상승 성장 increase
+데이터·분석	trend-down	TrendingDown	감소	하락 decrease
+데이터·분석	sort	ArrowUpDown	정렬	오름차순 내림차순 sort
+데이터·분석	sort-asc	ArrowUpNarrowWide	오름차순	작은순 ascending
+데이터·분석	sort-desc	ArrowDownWideNarrow	내림차순	큰순 descending
+데이터·분석	target	Target	목표	KPI 목표액 target
+데이터·분석	layers	Layers	계층	레이어 구분 layers
+설정·보안	settings	Settings	설정	환경설정 configuration
+설정·보안	lock	Lock	잠금	권한제한 보안 lock
+설정·보안	unlock	LockOpen	잠금 해제	허용 unlock
+설정·보안	shield-check	ShieldCheck	보안 확인	인증 검증 security
+설정·보안	key	KeyRound	접근 키	비밀번호 인증 key
+설정·보안	log-in	LogIn	로그인	접속 login
+설정·보안	log-out	LogOut	로그아웃	접속종료 logout
+설정·보안	monitor	Monitor	화면	PC 모니터 desktop
+설정·보안	smartphone	Smartphone	모바일	휴대폰 mobile
+설정·보안	server	Server	서버	시스템 server
+설정·보안	code	Code	코드	소스 개발 code
+설정·보안	terminal	Terminal	터미널	명령 실행 terminal

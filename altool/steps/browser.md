@@ -23,20 +23,20 @@
 - 기능명은 `.altool/state/status.json`의 `currentFeature`에서 읽는다. `currentFeature`가 없으면 `$altool plan {기능 설명}` 먼저 실행을 안내하고 중단한다.
 - 다음 파일을 가능한 범위에서 읽는다:
   - `constitution.md`
-  - `designs/claude-design/*.html`
-  - `designs/design.md`
-  - `designs/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}`
+  - `designs/claude-design/**/*.html`
+  - `standards/design.md`
+  - `designs/**/*.pen`, `designs/stitch/`, `designs/*.{png,jpg,jpeg,webp}`, `designs/*.{md,pdf}`
   - `docs/01-plan/features/{기능명}.plan.md`
   - `docs/02-spec/features/{기능명}.spec.md`
   - `docs/03-analyze/{기능명}.analyze.md`
   - `docs/03-analyze/{기능명}.fix.md` 또는 최근 fix 결과
   - `.altool/state/status.json`
   - 구현 파일과 테스트 파일
-- 관련 과거 오류는 `lesson.md` 전체를 읽지 말고 `python altool/scripts/lesson.py search --query "{기능명} browser runtime ui click layout" --limit 7`로 조회한다.
+- 관련 과거 오류는 `lesson.md` 전체를 읽지 말고 `python3 altool/scripts/lesson.py search --query "{기능명} browser runtime ui click layout" --limit 7`로 조회한다.
 
 ### 2. 서버 준비
 
-1. 기존 로컬 서버가 있으면 우선 사용한다. 기본 후보는 `http://localhost:3000`, `http://localhost:3001`, `http://127.0.0.1:3000`, `http://127.0.0.1:3001`이다.
+1. `altool/steps/_server.md`를 읽고 현재 프로젝트의 실제 URL과 소유권을 확인한다. 고정 포트 후보 목록은 사용하지 않는다.
 2. 서버가 없고 프로젝트에 실행 스크립트가 있으면 현재 환경 규칙에 따라 개발 서버를 시작한다.
    - 이 browser step이 새로 시작한 서버는 `managedServer=true`로 취급하고 PID, 실행 명령, 포트, 시작 시각을 기록한다. 기존에 이미 떠 있던 서버를 사용한 경우는 `managedServer=false`로 기록한다.
    - Windows에서 npm을 직접 백그라운드 실행할 때는 `npm` 대신 `npm.cmd`를 명시한다.
@@ -45,18 +45,13 @@
    - 서버 시작 후 HTTP 응답을 루프로 확인한다.
 3. 서버를 실행할 수 없으면 browser 검증을 `failed(server unavailable)`로 남기고 중지한다. 실제 화면 검증 없이 완료 처리하지 않는다.
 
-서버 생명주기 규칙:
-
-- browser step이 새로 시작한 개발 서버는 검증 성공, 실패, 중단 여부와 관계없이 step 종료 전에 종료한다.
-- 기존에 이미 떠 있던 서버를 사용했다면 종료하지 않는다. 종료 대상은 이 step에서 PID를 기록한 `managedServer=true` 프로세스와 그 하위 프로세스뿐이다.
-- 종료 후 같은 URL/포트에 대한 응답 확인을 수행해 정리 결과를 남긴다. 기존 서버를 사용한 경우에는 `skipped(existing server)`로 남긴다.
-- 서버 정리에 실패하면 browser 결과를 완료로 숨기지 말고 `server.cleanup=failed`와 남은 PID/포트를 기록한다.
-- Windows에서는 `Start-Process -PassThru`로 받은 PID를 기록하고, 종료 시 해당 PID를 `Stop-Process -Id {pid}`로 정리한다. 필요하면 자식 프로세스까지 확인한다.
-- POSIX에서는 백그라운드 실행 PID를 기록하고, 종료 시 해당 PID에 `TERM`을 보낸 뒤 필요하면 제한적으로 `KILL`을 사용한다.
+서버 생명주기와 `server.cleanup` 증거는 `_server.md`의 공통 규칙을 따른다.
 
 ### 3. 브라우저 검증
 
-Codex Browser, Playwright, 또는 사용 가능한 브라우저 자동화 도구를 사용한다. 단순 curl만으로 browser step을 완료하지 않는다.
+`AGENTS.md`의 UI 검증 조작법에 따라 Codex in-app Browser를 먼저 사용한다. 연결할 수 없거나 해당 환경에서 지원되지 않을 때만 사용자가 볼 수 있는 standalone Playwright(`headless: false`) 또는 사용 가능한 브라우저 자동화 도구를 fallback으로 사용한다. 단순 curl만으로 browser step을 완료하지 않는다.
+
+in-app Browser에서 `Browser Use virtual clipboard is not installed` 등 clipboard 기반 입력 실패가 발생하면 같은 `fill`/`type`을 반복하지 말고, 현재 Browser 문서가 허용하는 focused keyboard 입력 또는 비-clipboard DOM/event 경로로 전환한 뒤 렌더링된 값을 확인한다.
 
 Playwright fallback 규칙:
 
@@ -75,24 +70,36 @@ Playwright fallback 규칙:
 6. desktop과 mobile 375px 이상 반응형
 7. 텍스트 겹침, 잘림, 오버플로, 클릭 불가 영역, 레이아웃 깨짐
 8. 사용자 디자인 입력, 디자인 시스템, constitution.md 디자인 품질 원칙 위반
-   - `designs/claude-design/*.html`이 있으면 최종 화면과 원본 HTML의 구조·밀도·위계·컴포넌트 외형·색상·간격·타이포·상태 표현을 먼저 대조한다.
-   - `designs/design.md`의 Screen Recipes와 Capture-to-Implementation Map을 최종 화면과 대조한다.
+   - `designs/claude-design/**/*.html`이 있으면 최종 화면과 원본 HTML의 구조·밀도·위계·컴포넌트 외형·색상·간격·타이포·상태 표현을 먼저 대조한다.
+   - `standards/design.md`의 Screen Recipes와 Capture-to-Implementation Map을 최종 화면과 대조한다.
    - 참조 브랜드·문구·이미지는 복제하지 않되, research가 추출한 구조·비례·밀도·섹션 순서·컴포넌트 외형 계약이 구현됐는지 확인한다.
    - 캡처 기반 recipe가 있는데도 일반 split SaaS hero, floating trust card 묶음, 과한 gradient overlay, glass panel, 추상 장식, 카드 그림자 남발, reference보다 느슨한 빈 화면으로 회귀하면 디자인 갭으로 기록하고 수정한다.
 9. 콘솔 오류와 네트워크 실패
+10. 접근성 상태 전달 계약과 텍스트 대비
+    - `python3 altool/scripts/check.py contrast --root .`
+    - `python3 altool/scripts/check.py a11y-contracts --root .`
+11. 시간 기반 UI면 fake clock으로 pause/resume을 빠르게 여러 번 반복하고 실제 경과 대비 누적 오차가 표시 정밀도 이내인지 확인한다.
 
 검증 결과에는 방문 URL, 수행한 사용자 행동, 기대 결과, 실제 결과, 증거(스크린샷 경로 또는 테스트 로그)를 남긴다.
 
+UI-03 실측은 `altool/standards.md`의 **디자인 실측 완료 계약**을 따른다. Spec의 페이지·상태·viewport에서 측정해 원시 관찰 JSON을 `ui.measurements`로 연결하고 `visual.ui_contracts`를 통과시킨다. 검사기가 기대값을 재비교하므로 done 설명·캡처만으로 대체하지 않는다. 충돌은 원인을 수정하고 같은 계약으로 재검증한다. 계약의 진짜 변경이면 원천과 Spec을 먼저 갱신하며 실패 화면에 맞춰 기대값을 낮추지 않는다.
+
 CSS custom property 검증 규칙:
 
-- CSS 파일이 있는 UI 프로젝트는 browser 완료 전 `python altool/scripts/check.py css-vars --root .`를 실행한다.
+- CSS 파일이 있는 UI 프로젝트는 browser 완료 전 `python3 altool/scripts/check.py css-vars --root .`를 실행한다.
 - `var(--token)`으로 참조한 custom property가 어떤 CSS 파일에도 정의되어 있지 않으면 브라우저 렌더링에서 해당 선언이 무효화될 수 있으므로 `Drift` 또는 구현 갭으로 기록하고 수정한다.
 - CSS-in-JS만 사용해 검사 대상 CSS 파일이 없으면 `visual.css_custom_properties=skipped(no css files)`로 남긴다.
 - 통과 결과 또는 생략 사유를 browser Step Check의 `visual.css_custom_properties`에 기록한다.
 
+자동 접근성 게이트:
+
+- CSS 파일이 있으면 `python3 altool/scripts/check.py contrast --root .`를 통과해야 한다. 명시적 조합이 4.5:1 미만이면 색 토큰과 `standards/design.md`를 함께 수정한다.
+- Spec에 `role=status` 또는 `aria-live` 계약이 있으면 `python3 altool/scripts/check.py a11y-contracts --root .`를 통과해야 한다. 보이는 완료 문구만 검사하지 말고 live-region의 실제 텍스트 또는 표시 상태를 자동 테스트에서 assertion한다.
+- 해당 계약이 없을 때만 `accessibility.live_region=skipped(no live-region contract)`로 남긴다.
+
 참조 캡처 대조 규칙:
 
-- `designs/claude-design/*.html`이 있으면 원본 HTML 경로를 최우선 참조로 수집한다. 이어서 `designs/design.md`의 Reference Source Map, Screen Recipes, Capture-to-Implementation Map에서 참조 캡처 경로(`docs/00-research/assets/{Research ID}/C-__.png`)를 수집한다.
+- `designs/claude-design/**/*.html`이 있으면 원본 HTML 경로를 최우선 참조로 수집한다. 이어서 `standards/design.md`의 Reference Source Map, Screen Recipes, Capture-to-Implementation Map에서 참조 캡처 경로(`docs/00-research/assets/{Research ID}/C-__.png`)를 수집한다.
 - 최종 구현 화면도 desktop과 mobile 주요 상태별로 스크린샷을 저장한다. 권장 경로는 `docs/03-analyze/assets/{기능명}/browser-final-*.png`다.
 - browser 검증은 참조 캡처와 최종 화면 스크린샷을 나란히 대조한다. 픽셀 복제나 브랜드 동일성을 목표로 하지 않고, 구조·비례·밀도·섹션 순서·컴포넌트 외형·미디어 사용·타이포 위계가 Screen Recipe와 Capture Map을 따르는지 평가한다.
 - 참조 캡처가 있는데 최종 스크린샷이 없거나, 최종 스크린샷이 있는데 참조 캡처와의 대조표가 없으면 browser step을 완료하지 않는다.
@@ -104,7 +111,7 @@ CSS custom property 검증 규칙:
 
 - 코드/타입/상태/라우팅/이벤트 핸들러 문제는 코드 수정
 - Claude 디자인 HTML 미반영, 사용자 디자인 입력 미반영, 디자인 시스템 미사용, Screen Recipe/Capture Map 미반영, generic AI/SaaS 회귀, 반응형 깨짐, 텍스트 겹침은 스타일 수정
-- spec 또는 plan 자체가 틀렸으면 헌법 제9조에 따라 문서를 먼저 보정하고 수정
+- spec 또는 plan 자체가 틀렸으면 헌법의 명세 주도 개발·추적성 원칙에 따라 문서를 먼저 보정하고 수정
 
 수정 후 같은 브라우저 시나리오를 다시 실행한다. 같은 browser step 안에서 보완·검증 루프는 최대 5회까지 수행한다. 5회 후에도 실패하면 중지하고 남은 실패를 보고한다.
 
@@ -130,30 +137,27 @@ CSS custom property 검증 규칙:
 
 ### 6. 상태·문서 갱신
 
-- `.altool/state/status.json`: 현재 feature의 `phase`를 `browser`로 갱신한다.
+- `.altool/state/status.json`: `features.{currentFeature}.phase`를 `browser`로 갱신한다.
 - 브라우저 검증 통과 시 `buildVerified`는 빌드/테스트 증거가 있을 때만 `true`로 둔다.
 - 검증을 통과한 항목만 plan/spec/analyze 문서 체크박스를 갱신한다.
-- 관련 plan/spec/analyze 문서 상단 `상태`/`Status`도 함께 갱신한다. browser 통과 시 plan과 spec은 `Verified`, analyze/browser 문서는 `Verified`로 표기한다.
+- 관련 plan/spec/analyze 문서 상단 `상태`/`Status`도 함께 갱신한다. browser 통과 시 plan과 spec, browser 문서는 `Verified`로 표기한다. 미해소 갭이 0건이면 analyze도 `Verified`로 올리고, 사용자가 잔여 갭을 수용해 진행한 경우 analyze는 `GapsFound` 유지한다.
+- analyze 문서 상단 `최종 Match Rate`와 `미해소 갭`을 현재 값으로 유지하고 `python3 altool/scripts/check.py analyze-sync --root .`를 통과시킨다.
 - `docs/03-analyze/{기능명}.browser.md`에 결과를 기록한다.
 - plan/spec/analyze 문서를 수정했으면 browser Step Check만으로 끝내지 않는다. 수정된 문서의 소유 Step Check(`{기능명}.plan.json`, `{기능명}.spec.json`, `{기능명}.analyze.json`)도 최신 내용으로 갱신하고 각각 `check.py validate`를 통과시킨 뒤, browser check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
 
 ### 7. Step Check
 
-완료 전 `.altool/checks/{기능명}.browser.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.browser.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.browser.json`이다. 공통 키 증거에는 전체 입력, lesson query, event ID 또는 `skipped(no browser issue)`, 실제 URL·화면·조작·반응형·콘솔·네트워크 결과, status의 `phase=browser`, plan/spec/analyze/browser 상태와 소유 check 동기화, browser 문서·스크린샷·로그를 포함한다.
 
 | 항목 | 보고 기준 |
 | --- | --- |
-| `inputs.loaded` | plan/spec/analyze/fix/design/status/구현 파일 로딩 결과 |
-| `lesson.search` | browser 시작 시 실행한 query와 결과 수 |
-| `event.capture` | 기록한 `code_error`/`gap`/`fix`/`verification` 이벤트 ID 또는 `skipped(no browser issue)` |
-| `verification` | 브라우저 도구, URL, 화면 수, 클릭/입력/이동/반응형/콘솔/네트워크 검증 결과 |
-| `visual.reference_comparison` | 참조 캡처 경로와 최종 화면 스크린샷 경로, Screen Recipe/Capture Map 기준 대조 결과 |
-| `visual.css_custom_properties` | `python altool/scripts/check.py css-vars --root .` 통과 결과 또는 `skipped(no css files)` |
+| `visual.reference_comparison` | 참조/최종 캡처, Screen Recipe/Capture Map 대조와 UI-03 실제 측정 결과(`standards/tooling/README.md#ui`). 기능 클릭 통과와 표시 준수를 구분 |
+| `visual.css_custom_properties` | `python3 altool/scripts/check.py css-vars --root .` 통과 결과 또는 `skipped(no css files)` |
+| `visual.contrast` | `python3 altool/scripts/check.py contrast --root .` 통과 결과 또는 `skipped(no css files)`. `ambiguousRules`는 테마/gradient를 실제 화면에서 대조한 증거와 함께 기록 |
+| `accessibility.live_region` | `python3 altool/scripts/check.py a11y-contracts --root .` 통과 결과 또는 `skipped(no live-region contract)` |
+| `functional.time_precision` | 반복 pause/resume clock 결과와 허용 오차 또는 `skipped(not time-based UI)` |
+| `analysis.semantic_consistency` | `python3 altool/scripts/check.py analyze-sync --root .` 통과 결과 |
 | `server.cleanup` | 이 step이 시작한 서버 PID/포트 종료 결과 또는 `skipped(existing server)` |
-| `state.updated` | `.altool/state/status.json` phase=browser 갱신 |
-| `docs.synced` | plan/spec/analyze 체크박스 또는 browser 문서 갱신, 수정된 소유 Step Check 재검증 경로 |
-| `document.status` | plan/spec/analyze/browser 문서 상단 Status=Verified |
-| `artifacts.created` | `docs/03-analyze/{기능명}.browser.md`, 스크린샷/테스트 로그, check JSON |
 
 ```
 🐣 [al:browser] {기능명} 완료 — 산출물: docs/03-analyze/{기능명}.browser.md

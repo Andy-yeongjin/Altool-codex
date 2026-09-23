@@ -1,0 +1,9 @@
+/* Framing only; child layout remains the application's responsibility. */
+.altool-ui .ui-section-header + .ui-table-scroll { margin-block-start:12px; }
+.altool-ui .ui-section > .ui-section-header:has(+ .ui-detail-grid, + .ui-table-scroll, + table, + :not(.ui-section) .ui-table-scroll, + .ui-summary, + .ui-data-state, + .ui-metric-group) { border-bottom-color:transparent; }
+.altool-ui .ui-section > .ui-section-header { box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;min-height:var(--company-section-header-height);padding:6px 0;border-bottom:var(--company-data-top-width) solid var(--company-data-top-color);background:transparent; }
+.altool-ui .ui-section > .ui-section-header + :not(.ui-section-body,.ui-detail-grid,.ui-table-scroll,table,.ui-summary,.ui-data-state,.ui-metric-group):not(:has(.ui-table-scroll)) { margin-block-start:var(--company-section-form-gap); }
+.altool-ui .ui-section-header > .ui-section-title { display:flex;align-items:center;gap:8px;min-width:0;margin:0;color:#30363D;font-family:var(--company-button-font);font-size:15px;font-weight:500;line-height:1.5;overflow-wrap:anywhere; }
+.altool-ui .ui-section-header > .ui-section-title::before { content:"";display:block;flex:none;width:3px;height:16px;background:var(--company-section-accent); }
+.altool-ui .ui-section-header > .ui-section-meta { min-width:0;margin:0;color:#59616B;font-family:var(--company-button-font);font-size:12px;font-weight:400;line-height:1.5;overflow-wrap:anywhere; }
+.altool-ui .ui-section > .ui-section-body { min-width:0;padding:16px 12px;border-bottom:1px solid var(--company-section-bottom-line);background:var(--company-section-body-bg); }

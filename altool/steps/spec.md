@@ -18,7 +18,7 @@
 - `docs/01-plan/features/{기능명}.plan.md` 존재 확인. **없으면 `$altool plan {기능 설명}` 먼저 실행을 제안**하고 사용자에게 진행 여부 확인.
 - 있으면 전체를 읽고 요구사항·범위를 파악한다.
 - 사용자가 입력한 추가 지시가 있으면 Plan 범위와 충돌하지 않는 선에서 아키텍처 3안, UI 체크리스트, 테스트 플랜에 반영한다.
-- **Altool 자산 감지**: `constitution.md`는 있으면 읽고 적용한다. `designs/claude-design/*.html`이 있으면 화면 구조와 시각 기준의 최우선 디자인 헌법으로 읽는다. 그 다음 `designs/` 사용자 디자인 입력(`*.pen`, `stitch/`, `*.png`, `*.jpg`, `*.jpeg`, `*.webp`, `*.md`, `*.pdf`)을 읽는다. `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으면 프로젝트 디자인 시스템으로 적용하되 Claude 디자인 HTML과 충돌하면 HTML을 우선한다. UI 작업인데 이 파일이 없거나 비어 있거나 `TBD` 마커가 있으면 Research 또는 design_source 단계로 돌아가 디자인 시스템을 먼저 생성하도록 명세에 기록하고, 임의 시각 값을 직접 명세화하지 않는다.
+- **Altool 자산 감지**: 헌법과 직접 디자인 입력, `standards/design.md`를 읽고 헌법의 권위 순서를 적용한다. UI 디자인 계약이 없거나 유효하지 않으면 research 또는 `design_source`로 되돌리고 임의 값을 명세하지 않는다.
 
 ### 3. PRD 컨텍스트 로딩
 
@@ -41,16 +41,16 @@ Codex 대화 확인: **"3가지 설계안 중 어떤 걸 선택하시겠습니�
 
 ### 8~9. Spec 문서 작성
 
+`표준 적용` 표에 활성 표준의 규칙 ID/항목·원문 경로·이 기능의 적용 방식·실제 검증 방법을 연결한다. 필수 계약 누락이나 충돌은 구현 전에 해소하며 예외는 결정 기록에 남긴다. 원문 선택·Step Check 증거는 `altool/standards.md`를 따른다.
+
 선택된 아키텍처로 템플릿 전체 절을 채워 작성한다. 핵심:
 - **§2.1 아키텍처 3안 비교**: 비교표 + 선택 결과·근거 기록
-- **§3 데이터 모델**: TypeScript 인터페이스 (Strict Mode, `any` 금지 — 헌법 제6조)
+- **§3 데이터 모델**: TypeScript 스택을 선택한 경우 Strict Mode 타입으로 정의하고 `any`를 사용하지 않는다. 다른 스택이면 그 생태계의 엄격한 타입·스키마 계약을 사용한다.
 - **§4 API 명세**: 엔드포인트 목록 + 상세 스키마 + 에러 응답 (**analyze의 Contract 검증 기준**)
 - **§5.4 Page UI Checklist (CRITICAL)**: 페이지별 필수 UI 요소를 빠짐없이 항목화 — 폼 필드·버튼·필터·배지·데이터 표시 요소를 구체적 옵션 값까지. **이 체크리스트가 없으면 analyze가 파일 존재만 검사하게 됨 (Functional 검증의 분모)**
 - **§8 테스트 플랜**: L1(API)/L2(UI 액션)/L3(E2E) 테스트 시나리오 정의 — run에서 코드 작성, analyze에서 실행
-- **Claude 디자인 HTML 있음**: `designs/claude-design/*.html`의 DOM 구조, 정보 밀도, 시각 위계, 컴포넌트 외형, 색상, 간격, 타이포, 상태 표현을 최우선 명세 기준으로 잠근다. `designs/design.md`는 이 HTML을 정규화하거나 빈칸을 채우는 보조 기준으로만 사용한다.
-- **사용자 디자인 입력 있음**: `.pen`, Stitch, 스크린샷, 디자인 문서에서 화면 구조, 정보 밀도, 시각 위계, 컴포넌트 외형을 명세 기준으로 잠근다. Research는 누락된 UX/기능/상태 보강과 디자인 시스템 정규화 근거로만 사용한다.
-- **디자인 시스템 있음**: 모든 UI 컴포넌트의 시각적 수치(높이·색상·폰트·간격·그림자·둥글기)는 `designs/design.md`의 규칙으로 명시한다. 특히 Screen Recipes, Component Extraction, Capture-to-Implementation Map을 Design System Anchor에 잠그고 Page UI Checklist에 반영한다. 폰트는 참조 font-family와 구현 font-family stack, 대체 사유를 함께 잠근다. 코드 구현에서 CSS 변수를 쓰는 것은 허용하지만, 값과 역할은 `design.md`에서 추적 가능해야 한다. 필요한 화면 recipe나 컴포넌트 계약이 누락되면 spec에서 직접 발명하지 말고 디자인 시스템 보강 필요 항목으로 기록한다.
-- **사용자 디자인 입력 없음 + 디자인 시스템 없음**: Research가 참조 사이트를 근거로 `designs/design.md`를 생성해야 한다. Spec은 research 문서와 생성된 디자인 시스템을 연결하고, 생성 전에는 UI 시각값을 확정하지 않는다.
+- **UI 명세**: 권위 원천의 경로·적용 범위와 `standards/design.md`의 Screen Recipes, Component Extraction, Capture-to-Implementation Map을 Page UI Checklist에 연결한다. 값의 근거가 없으면 디자인 계약 보강 항목으로 남긴다.
+- **UI 실측 계약**: `altool/standards.md`의 디자인 실측 완료 계약에 따라 `.altool/ui/{기능명}.contracts.json`에 페이지·상태·viewport·selector·기대값·출처·구현 범위를 고정한다. desktop/mobile 및 변경 공통 요소를 포함하고 Spec에서 연결한다. Step Check의 `ui.contracts`와 `visual.ui_contracts`를 작성한다. 이 단계는 실측 없이 계약 유효성만 검사한다.
 
 ### 10. Session Guide 생성
 
@@ -58,26 +58,15 @@ Codex 대화 확인: **"3가지 설계안 중 어떤 걸 선택하시겠습니�
 
 ### 11. Design System Anchor
 
-UI 기능이면 `## Design System Anchor` 절에 시각 기준을 잠근다. 먼저 `designs/claude-design/*.html`이 있는지 확인하고, 있으면 그 HTML 경로와 적용 범위를 최우선 디자인 헌법으로 명시한다. 그 다음 `designs/` 사용자 디자인 입력과 `designs/design.md`의 Screen Recipes, Component Extraction, Capture-to-Implementation Map, 시각 값, 컴포넌트 계약, 미디어 규칙을 채운다. 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 관련 Research에서 디자인 시스템을 생성하도록 되돌리고, Spec 완료 전 `Design System Anchor`를 채운다. 이 절이 비어 있거나 Screen Recipe와 구현 대상 section/component 연결이 없으면 run이 generic AI/SaaS 스타일로 흐르므로 Spec 완료 전 반드시 보완한다.
+UI 기능이면 `## Design System Anchor`에 권위 원천의 경로·범위와 `standards/design.md`의 recipe·component·capture map을 잠그고 구현 section/component에 연결한다. 디자인 계약이 유효하지 않거나 연결이 비어 있으면 보강한 뒤 Spec을 완료한다.
 
 ### 12~13. 상태 갱신 + 보고
 
-`.altool/state/status.json`: `phase: "spec"`.
+`.altool/state/status.json`: `features.{currentFeature}.phase: "spec"`.
 **문서 동기화**: plan §9 다음 단계의 "구현 명세" 항목을 `- [x]`로 갱신 (문서 상태 동기화 규칙). spec 문서 상단 `상태`/`Status`를 `Specified`로, plan 문서 상단 상태를 `Specified`로 갱신한다.
 plan 문서를 수정했으면 spec Step Check만으로 끝내지 않는다. `.altool/checks/{기능명}.plan.json`도 최신 내용으로 갱신하고 `check.py validate`를 통과시킨 뒤, spec check의 `docs.synced` 증거에 갱신한 check 경로를 남긴다.
 
-완료 전 `.altool/checks/{기능명}.spec.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/{기능명}.spec.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다. 완료 보고에는 Step Check 요약을 포함한다:
-
-| 항목 | 보고 기준 |
-| --- | --- |
-| `inputs.loaded` | plan/PRD/constitution/designs 자산 로딩 결과 |
-| `lesson.search` | `skipped(document-only step)` |
-| `event.capture` | `skipped(document-only step)` — Spec 작성 중에는 lesson 이벤트를 append하지 않는다 |
-| `verification` | plan 요구사항, 선택 아키텍처, API/UI/test 명세 정합성 검토 결과 |
-| `state.updated` | `.altool/state/status.json` phase=spec |
-| `docs.synced` | plan §9 동기화와 plan/spec 상단 Status 갱신 결과, 수정된 plan 소유 Step Check 재검증 경로 |
-| `document.status` | plan/spec 문서 상단 Status=Specified |
-| `artifacts.created` | `docs/02-spec/features/{기능명}.spec.md` |
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/{기능명}.spec.json`이다. 전용 증거는 plan/PRD/constitution/design 입력, 아키텍처·API·UI·test 정합성, status의 `phase=spec`, plan §9와 plan/spec `Status=Specified`, 수정된 plan 소유 check 재검증이다. `lesson.search`와 `event.capture`는 `skipped(document-only step)`으로 기록한다.
 
 ```
 🐣 [al:spec] {기능명} 완료 — 산출물: docs/02-spec/features/{기능명}.spec.md
@@ -85,8 +74,3 @@ plan 문서를 수정했으면 spec Step Check만으로 끝내지 않는다. `.a
    Page UI Checklist: {N}개 항목 (analyze의 Functional 검증 분모)
    다음 단계: $altool run
 ```
-
-
-
-
-

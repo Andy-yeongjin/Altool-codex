@@ -1,0 +1,15 @@
+html { scroll-behavior:smooth; } body { margin:0;background:#FFFFFF; }
+.workbench { max-width:1440px;margin:0 auto; }
+.demo-index { display:flex;gap:6px 16px;flex-wrap:wrap;padding:12px 0 20px;font-size:14px; }
+.demo-index a { color:#1554A0;text-decoration:underline;text-underline-offset:3px; }
+.demo-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px; }
+.demo-section { min-width:0;border-top:1px solid #B7BEC7;padding:16px 0 24px;scroll-margin-top:16px; }
+.demo-section > h2 { margin:0 0 18px;padding-left:10px;border-left:3px solid #1554A0;font-size:16px;font-weight:500; }
+.demo-section > p { font-size:14px;line-height:1.6; }
+.demo-spaced { margin-top:12px; }
+.demo-check { display:inline-flex;align-items:center;gap:6px;font-size:14px; }
+.demo-wide { grid-column:1/-1; }
+.demo-caption { text-align:left;padding:8px 12px;font-size:14px;color:#59616B; }
+.altool-ui [hidden] { display:none!important; }
+@media(max-width:800px) { .demo-grid { grid-template-columns:minmax(0,1fr); } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

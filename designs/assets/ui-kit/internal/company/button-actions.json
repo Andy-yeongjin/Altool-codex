@@ -1,0 +1,22 @@
+{
+  "search": {"icon":"search","labels":["조회","검색"]},
+  "reset": {"icon":"refresh","labels":["초기화"]},
+  "clear-selection": {"icon":"square","labels":["선택 해제"]},
+  "save": {"icon":"save","labels":["저장"]},
+  "create": {"icon":"plus","labels":["추가","등록"]},
+  "edit": {"icon":"pencil","labels":["수정","편집"]},
+  "delete": {"icon":"trash","labels":["삭제"]},
+  "cancel": {"icon":"x","labels":["취소"]},
+  "confirm": {"icon":"check","labels":["확인"]},
+  "approve": {"icon":"check","labels":["승인","선택 승인"]},
+  "reject": {"icon":"x","labels":["반려","선택 반려"]},
+  "submit": {"icon":"send","labels":["신청","제출","전송"]},
+  "retry": {"icon":"refresh","labels":["재시도","재처리","선택 재처리","새로고침","다시 불러오기"]},
+  "download": {"icon":"download","labels":["다운로드","내려받기","CSV 내려받기"]},
+  "upload": {"icon":"upload","labels":["업로드"]},
+  "print": {"icon":"printer","labels":["인쇄"]},
+  "detail": {"icon":"eye","labels":["보기","상세 보기"]},
+  "back": {"icon":"arrow-left","labels":["뒤로","돌아가기"]},
+  "help": {"icon":"help","labels":["도움말"]},
+  "logs": {"icon":"file-search","labels":["로그 조회","실패 로그"]}
+}

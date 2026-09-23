@@ -1,0 +1,599 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "service.visit",
+      "kind": "service",
+      "meaning": "방문·홈 탐색",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "path": "ui-kit/internal/company/recipes/services/index.html",
+          "route": "#visit",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/model.js",
+            "ui-kit/internal/company/recipes/services/services.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "공개 탐색",
+            "로그인 유도",
+            "취소·복귀"
+          ],
+          "sourcePages": [
+            686,
+            689,
+            694,
+            695
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        },
+        "content-composition": {
+          "path": "ui-kit/internal/company/recipes/services/variants.html",
+          "route": "#home",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/variants-model.js",
+            "ui-kit/internal/company/recipes/services/variants.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/recipes/services/process-illustration.svg",
+            "ui-kit/internal/company/recipes/services/company-assets.mjs",
+            "runtime/assets.mjs",
+            "messages/ko.json",
+            "ui-kit/internal/company/recipes/services/process-demo.webm",
+            "ui-kit/internal/company/recipes/services/process-demo.ko.vtt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "중요 안내 표시·숨김",
+            "캐러셀 이전·다음",
+            "자동전환 시작·정지",
+            "목적별 탭",
+            "개인화 전환",
+            "로딩",
+            "빈 상태",
+            "오류",
+            "재시도"
+          ],
+          "sourcePages": [
+            689,
+            690,
+            691,
+            693,
+            694,
+            695,
+            696
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        }
+      },
+      "constraints": [
+        "홈 순위와 개인화 기준은 실제 회사 사용자 조사·권한에 맞게 연결한다.",
+        "기관 로고·긴급 공지는 회사 정보로 확정한다. 샘플은 실제 장애 공지가 아니다."
+      ]
+    },
+    {
+      "id": "service.search",
+      "kind": "service",
+      "meaning": "검색·재검색",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "path": "ui-kit/internal/company/recipes/services/index.html",
+          "route": "#search",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/model.js",
+            "ui-kit/internal/company/recipes/services/services.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "자동완성 도움",
+            "키보드 순환",
+            "기간·분류·정렬",
+            "10건 페이지",
+            "0건",
+            "오류·재시도",
+            "조건 유지·초기화"
+          ],
+          "sourcePages": [
+            707,
+            716,
+            729,
+            730,
+            732,
+            747,
+            759,
+            771,
+            777
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        },
+        "advanced-media": {
+          "path": "ui-kit/internal/company/recipes/services/variants.html",
+          "route": "#search",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/variants-model.js",
+            "ui-kit/internal/company/recipes/services/variants.js",
+            "ui-kit/internal/company/recipes/services/process-illustration.svg",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/recipes/services/company-assets.mjs",
+            "runtime/assets.mjs",
+            "messages/ko.json",
+            "ui-kit/internal/company/recipes/services/process-demo.webm",
+            "ui-kit/internal/company/recipes/services/process-demo.ko.vtt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "AND·OR·NOT 고급검색 모달",
+            "적용·취소",
+            "기간 오류",
+            "문서·이미지·영상 분류",
+            "이미지 확대·축소·저장",
+            "영상설명 재생·일시정지·탐색·자막",
+            "진행률·중단",
+            "교정 제안",
+            "새창 연계 표시",
+            "로딩",
+            "0건",
+            "오류·재시도",
+            "로컬 MP4/WebM 재생·오류",
+            "헤더 입력·검색 레이어",
+            "관련도·최신·인기·분류별 건수",
+            "가로·측면 필터 배치",
+            "10·20개 결과",
+            "번들 WebM·한국어 VTT·재생 오류 복구"
+          ],
+          "sourcePages": [
+            711,
+            719,
+            739,
+            741,
+            742,
+            747,
+            748,
+            749,
+            755,
+            759,
+            762,
+            763,
+            765,
+            768,
+            769
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        }
+      },
+      "constraints": [
+        "검색 엔진의 정확도·운영 사전·확률 랭킹과 권한별 결과 제한은 서버와 연결한다.",
+        "영상 미리보기의 번들 콘텐츠는 12초 HTML 절차 애니메이션이며 회사의 실제 영상 콘텐츠를 뜻하지 않는다.",
+        "외부 검색 링크는 네트워크 없는 로컬 새 창 예제이며 운영 시 허용된 실제 목적지를 지정한다."
+      ]
+    },
+    {
+      "id": "service.authentication",
+      "kind": "service",
+      "meaning": "로그인·인증·세션",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "path": "ui-kit/internal/company/recipes/services/index.html",
+          "route": "#login",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/model.js",
+            "ui-kit/internal/company/recipes/services/services.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "예제 ID·비밀번호",
+            "무입력 대체",
+            "표시·숨김",
+            "입력 오류",
+            "방식 기억",
+            "완료·맥락 복귀",
+            "만료30초 안내",
+            "10회 이상 연장",
+            "자발적·만료 로그아웃"
+          ],
+          "sourcePages": [
+            782,
+            785,
+            803,
+            819,
+            832,
+            839,
+            848
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        },
+        "guidance-subject-procedure": {
+          "path": "ui-kit/internal/company/recipes/services/variants.html",
+          "route": "#auth",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/variants-model.js",
+            "ui-kit/internal/company/recipes/services/variants.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/recipes/services/process-illustration.svg",
+            "ui-kit/internal/company/recipes/services/company-assets.mjs",
+            "runtime/assets.mjs",
+            "messages/ko.json",
+            "ui-kit/internal/company/recipes/services/process-demo.webm",
+            "ui-kit/internal/company/recipes/services/process-demo.ko.vtt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "기본·추천·제안 로그인 안내",
+            "로그인 안 함",
+            "개인·기관 탭",
+            "16개 방식 비교 목록",
+            "단일형·단계형·집중형",
+            "예제 확인번호",
+            "인증 오류·재입력",
+            "방식 기억",
+            "계정복구 안내",
+            "아무 키 연장",
+            "로딩",
+            "빈 상태",
+            "오류·재시도",
+            "이전 과업 자동복귀 선택"
+          ],
+          "sourcePages": [
+            793,
+            798,
+            799,
+            800,
+            803,
+            804,
+            805,
+            809,
+            811,
+            817,
+            825,
+            826,
+            846
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        }
+      },
+      "constraints": [
+        "실제 인증·SSO·본인확인·전자서명·권한은 서버 경계에서 구현한다. 샘플 완료 상태를 실제 인증으로 사용하면 안 된다.",
+        "공급자 이름·권한 효력·기관/개인 분류는 실제 계약과 데이터로 교체한다.",
+        "화면의 공개 예제값 외 실제 개인정보·비밀번호·인증번호를 입력하지 않는다."
+      ]
+    },
+    {
+      "id": "service.application",
+      "kind": "service",
+      "meaning": "신청·조회·발급·예약",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "path": "ui-kit/internal/company/recipes/services/index.html",
+          "route": "#application",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/model.js",
+            "ui-kit/internal/company/recipes/services/services.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "대상·상세",
+            "별도 자격 확인",
+            "미해당 오류",
+            "조건부 필드",
+            "임시저장·복원",
+            "초기화 확인",
+            "확인·수정·완료"
+          ],
+          "sourcePages": [
+            858,
+            861,
+            875,
+            894,
+            903,
+            918,
+            926
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        },
+        "multi-service-catalog": {
+          "path": "ui-kit/internal/company/recipes/services/variants.html",
+          "route": "#services",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/variants-model.js",
+            "ui-kit/internal/company/recipes/services/variants.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/recipes/services/process-illustration.svg",
+            "ui-kit/internal/company/recipes/services/company-assets.mjs",
+            "runtime/assets.mjs",
+            "messages/ko.json",
+            "ui-kit/internal/company/recipes/services/process-demo.webm",
+            "ui-kit/internal/company/recipes/services/process-demo.ko.vtt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "24건 목록",
+            "유형·상태 필터",
+            "신청가능 우선·가나다 정렬",
+            "페이지",
+            "접수중·예정·마감·외부 신청",
+            "다건 선택·모아보기·해제",
+            "상세 기본·부가 탭",
+            "직접 신청",
+            "목록 복귀 맥락",
+            "로딩",
+            "0건",
+            "오류·재시도"
+          ],
+          "sourcePages": [
+            861,
+            864,
+            866,
+            867,
+            869,
+            871,
+            872,
+            875,
+            888,
+            891
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        },
+        "transaction-types": {
+          "path": "ui-kit/internal/company/recipes/services/variants.html",
+          "route": "#services/transaction",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/variants-model.js",
+            "ui-kit/internal/company/recipes/services/variants.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/recipes/services/process-illustration.svg",
+            "ui-kit/internal/company/recipes/services/company-assets.mjs",
+            "runtime/assets.mjs",
+            "messages/ko.json",
+            "ui-kit/internal/company/recipes/services/process-demo.webm",
+            "ui-kit/internal/company/recipes/services/process-demo.ko.vtt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "제출·조회·발급·예약",
+            "안내 섹션형",
+            "조회번호 오류·결과",
+            "문서 유형·모의 확인서 저장",
+            "날짜·시간 선택",
+            "공동이용 확인·직접 첨부 전환",
+            "첨부 유형·크기 오류·제거",
+            "확인 화면·모달",
+            "반복발급 확인 생략 예외",
+            "수정·확정·완료·다시 진행",
+            "로딩",
+            "빈 상태",
+            "오류·재시도"
+          ],
+          "sourcePages": [
+            858,
+            894,
+            895,
+            896,
+            903,
+            909,
+            918,
+            921,
+            924,
+            926,
+            932
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        }
+      },
+      "constraints": [
+        "실제 자격·재고·서명·수수료·신청 트랜잭션·행정정보 공동이용은 UI 상태가 아닌 서버 기능으로 연결한다.",
+        "파일은 이름·크기만 이 탭에서 확인하며 내용 읽기·전송·저장하지 않는다. 개인정보 없는 QA 파일만 사용한다.",
+        "동의 선택은 법적 동의문이 아니다. 회사 업무에 필요한 적법한 문구·수집/이용 근거를 확정한다."
+      ]
+    },
+    {
+      "id": "service.application-history",
+      "kind": "service",
+      "meaning": "신청 내역·처리 현황",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "path": "ui-kit/internal/company/recipes/services/index.html",
+          "route": "#application/history",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/model.js",
+            "ui-kit/internal/company/recipes/services/services.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "고정 선택값 브라우저 저장",
+            "내역·입력상세·취소이력",
+            "선택·모의취소·JSON저장",
+            "이 예제 기록만 삭제 확인"
+          ],
+          "sourcePages": [
+            934,
+            938,
+            939,
+            940,
+            942,
+            943,
+            944,
+            945
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        },
+        "large-status-history": {
+          "path": "ui-kit/internal/company/recipes/services/variants.html",
+          "route": "#history",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/variants-model.js",
+            "ui-kit/internal/company/recipes/services/variants.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/recipes/services/process-illustration.svg",
+            "ui-kit/internal/company/recipes/services/company-assets.mjs",
+            "runtime/assets.mjs",
+            "messages/ko.json",
+            "ui-kit/internal/company/recipes/services/process-demo.webm",
+            "ui-kit/internal/company/recipes/services/process-demo.ko.vtt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "37건 목록·10건 페이지",
+            "날짜 오류·기간·상태·정렬",
+            "접수·검토·보완·완료·취소",
+            "현재페이지 전체선택·다른페이지 선택 유지",
+            "상태별 취소 제한",
+            "보완제출·상태전이",
+            "상세 단계 안내",
+            "선택내역 저장·인쇄스타일",
+            "로딩",
+            "0건",
+            "오류·재시도"
+          ],
+          "sourcePages": [
+            934,
+            936,
+            938,
+            939,
+            940,
+            941,
+            942,
+            943,
+            944,
+            945
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        }
+      },
+      "constraints": [
+        "실제 내역·개인별 접근 권한·보존기간·취소 규칙·처리 예상시간은 서버 및 업무 정책으로 확정한다.",
+        "확장 모의 내역은 현재 탭 메모리이며 새로고침하면 샘플로 초기화한다. 영속 저장 샘플은 default 변형을 참고한다.",
+        "인쇄는 사용자가 직접 실행하는 브라우저 인쇄이며 자동 전송/인쇄 주문이 아니다."
+      ]
+    },
+    {
+      "id": "service.policy-information",
+      "kind": "service",
+      "meaning": "정책 정보·관련 자료",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "path": "ui-kit/internal/company/recipes/services/index.html",
+          "route": "#policy",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/model.js",
+            "ui-kit/internal/company/recipes/services/services.js",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "전체 정책·대상·검색",
+            "신규·분류",
+            "관심 상태",
+            "정책 상세·목차",
+            "자료 검색·0건·TXT저장"
+          ],
+          "sourcePages": [
+            948,
+            951,
+            953,
+            957,
+            960,
+            964,
+            965,
+            966,
+            970
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        },
+        "periodical-library": {
+          "path": "ui-kit/internal/company/recipes/services/variants.html",
+          "route": "#publications",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/services/variants-model.js",
+            "ui-kit/internal/company/recipes/services/variants.js",
+            "ui-kit/internal/company/recipes/services/process-illustration.svg",
+            "ui-kit/internal/company/recipes/services/sample-policy.txt",
+            "ui-kit/internal/company/recipes/services/company-assets.mjs",
+            "runtime/assets.mjs",
+            "messages/ko.json",
+            "ui-kit/internal/company/recipes/services/process-demo.webm",
+            "ui-kit/internal/company/recipes/services/process-demo.ko.vtt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/user.svg",
+            "ui-kit/internal/company/dist/assets/icons/search.svg"
+          ],
+          "states": [
+            "18건 자료·페이지",
+            "보고서·매뉴얼·간행물",
+            "신규·변경·정상발행",
+            "일시중단·종료·주기변경 안내",
+            "기간 오류·필터·초기화",
+            "상세 갱신이력·시각자료·다운로드·직접신청 링크",
+            "로딩",
+            "0건",
+            "오류·재시도"
+          ],
+          "sourcePages": [
+            960,
+            963,
+            964,
+            965,
+            966,
+            968,
+            970,
+            972,
+            973,
+            974,
+            975
+          ],
+          "verification": "company-v27-migration; real-browser-pending"
+        }
+      },
+      "constraints": [
+        "실제 정책·간행물·일정·변경 이력·연락처의 정확성과 최신성은 해당 운영 책임자의 자료로 연결한다.",
+        "정부 승인/정책 안내로 오인하지 않도록 회사 브랜드와 콘텐츠로 적용한다."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+@layer altool-components {
+.altool-ui textarea { min-height:6rem; }
+}

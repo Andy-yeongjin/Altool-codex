@@ -1,0 +1,8 @@
+/* Approved B: centered small icon and explicit text. */
+.altool-ui .ui-data-state { box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:126px;padding:18px 12px;border-top:var(--company-data-top-width) solid var(--company-data-top-color);border-bottom:1px solid var(--company-table-line);background:#FFFFFF;color:#30363D;text-align:center;font-family:var(--company-button-font);font-size:15px;font-weight:400;line-height:1.5;overflow-wrap:anywhere; }
+.altool-ui .ui-data-state > .ui-icon { width:20px;height:20px;margin:0 0 8px;color:#66717E; }
+.altool-ui .ui-data-state[data-state="loading"] > .ui-icon { color:var(--company-status-progress); }
+.altool-ui .ui-data-state > .ui-data-state-title { max-width:100%;margin:0;font:inherit; }
+.altool-ui .ui-data-state > .ui-data-state-hint { max-width:100%;margin:6px 0 0;color:#59616B;font-size:13px;font-weight:400;line-height:1.5; }
+/* Table borders are supplied by the parent table when embedded in one cell. */
+.altool-ui .ui-data-state.ui-data-state--in-table { border:0; }

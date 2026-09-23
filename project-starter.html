@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로젝트 스타터 — Altool</title>
+<script src="altool/scripts/project-starter.js"></script>
+<style>
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface2: #f5f7fa;
+  --border: #cbd3dd;
+  --text: #17212f;
+  --text2: #526174;
+  --blue: #1859b7;
+  --blue-bg: rgba(91,141,239,0.08);
+  --green: #187044;
+  --green-bg: rgba(74,222,128,0.08);
+  --orange: #925500;
+  --orange-bg: rgba(245,158,11,0.08);
+  --purple: #5d419a;
+  --purple-bg: rgba(167,139,250,0.08);
+  --pink: #a32e69;
+  --pink-bg: rgba(244,114,182,0.08);
+  --red: #b42318;
+  --cyan: #146477;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pretendard Variable', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 40px 24px 160px;
+}
+
+/* ── Hero ── */
+.hero { text-align: left; padding: 16px 0 28px; }
+.hero-badge {
+  display: inline-block;
+  background: var(--purple-bg);
+  border: 1px solid rgba(167,139,250,0.2);
+  color: var(--purple);
+  font-size: 13px; font-weight: 600;
+  padding: 6px 16px; border-radius: 100px;
+  margin-bottom: 20px; letter-spacing: 0.5px;
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.hero p { font-size: 16px; color: var(--text2); max-width: 660px; }
+
+/* ── How-to ── */
+.howto {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.howto-step { text-align: center; }
+.howto-step .num {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--purple-bg);
+  color: var(--purple);
+  font-size: 13px; font-weight: 700;
+  margin-bottom: 8px;
+  border: 1px solid rgba(167,139,250,0.25);
+}
+.howto-step .label { font-size: 13px; color: var(--text); font-weight: 600; }
+.howto-step .desc { font-size: 12px; color: var(--text2); margin-top: 2px; }
+@media (max-width: 600px) { .howto { grid-template-columns: 1fr; } }
+
+/* ── Field Block ── */
+.field {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.field-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+.field-num {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  min-width: 26px; height: 26px;
+  border-radius: 8px;
+  background: var(--surface2);
+  color: var(--text2);
+  font-size: 12px; font-weight: 700;
+  flex-shrink: 0;
+  padding: 0 8px;
+}
+.field-title { font-size: 16px; font-weight: 700; color: var(--text); }
+.field-required { color: var(--orange); font-size: 12px; font-weight: 700; margin-left: 4px; }
+.field-optional { color: var(--text2); font-size: 12px; font-weight: 600; margin-left: 4px; }
+.field-hint { font-size: 13px; color: var(--text2); margin-bottom: 12px; padding-left: 36px; }
+.field-hint code { background: rgba(34,211,238,0.06); color: var(--cyan); padding: 1px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 12px; }
+
+input[type="text"], textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 14px;
+  line-height: 1.6;
+  transition: border-color 0.15s, background 0.15s;
+}
+input[type="text"]:focus, textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: var(--surface2);
+}
+input[type="text"]::placeholder, textarea::placeholder { color: #5a5e6e; }
+textarea { resize: vertical; min-height: 80px; font-family: inherit; }
+
+/* ── Multi Items (기능, nice-to-have, out-of-scope) ── */
+.items { display: flex; flex-direction: column; gap: 8px; }
+.item-row { display: flex; gap: 8px; align-items: center; }
+.item-row input { flex: 1; }
+.item-remove {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.item-remove:hover { border-color: var(--red); color: var(--red); }
+.item-add {
+  margin-top: 4px;
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--text2);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.item-add:hover { border-color: var(--blue); color: var(--blue); border-style: solid; }
+
+/* ── Screen Chips ── */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.chip {
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.chip:hover { border-color: var(--blue); }
+.chip.selected {
+  background: var(--blue-bg);
+  border-color: var(--blue);
+  color: var(--blue);
+  font-weight: 600;
+}
+.chip.selected::before { content: '✓'; font-size: 11px; font-weight: 700; }
+.chip-add-row { display: flex; gap: 8px; margin-top: 12px; }
+.chip-add-row input { flex: 1; }
+.chip-add-row button {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.chip-add-row button:hover { border-color: var(--blue); color: var(--blue); }
+.custom-chip { background: var(--purple-bg); color: var(--purple); border-color: rgba(167,139,250,0.3); }
+.custom-chip.selected { background: var(--purple-bg); border-color: var(--purple); color: var(--purple); }
+
+/* ── Generate Bar ── */
+.generate-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 14px 24px;
+  z-index: 50;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.generate-bar .progress-text {
+  font-size: 13px;
+  color: var(--text2);
+}
+.generate-bar .progress-text strong { color: var(--text); }
+.btn-generate {
+  background: var(--blue);
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-generate:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(91,141,239,0.3); }
+.btn-generate:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+
+/* ── Preview Modal ── */
+.preview-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(23,33,47,0.35);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.2s ease;
+}
+.preview-overlay.open { display: flex; }
+.preview-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.preview-head {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.preview-head h3 { font-size: 16px; font-weight: 700; }
+.preview-close {
+  background: none;
+  border: none;
+  color: var(--text2);
+  font-size: 22px;
+  cursor: pointer;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.preview-close:hover { background: var(--surface2); color: var(--text); }
+.preview-body {
+  flex: 1;
+  overflow: auto;
+  padding: 20px 24px;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text);
+  background: var(--surface);
+}
+.preview-foot {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.preview-foot input {
+  flex: 1;
+  min-width: 200px;
+}
+.btn-action {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.btn-action:hover { border-color: var(--blue); color: var(--blue); }
+.btn-action.primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+.btn-action.primary:hover { background: #12458f; color: white; }
+.btn-action:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-action.copied { border-color: var(--green); color: var(--green); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── Toast ── */
+.toast {
+  position: fixed;
+  bottom: 100px; left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--surface);
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 300;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 30px 0 0;
+  color: var(--text2);
+  font-size: 12px;
+}
+.footer a { color: var(--cyan); text-decoration: none; }
+
+/* ── File Upload (참고 문서) ── */
+.dropzone {
+  border: 2px dashed var(--border);
+  background: var(--surface2);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: 12px;
+}
+.dropzone:hover, .dropzone.dragover {
+  border-color: var(--cyan);
+  background: rgba(34,211,238,0.04);
+}
+.dropzone-icon { font-size: 28px; margin-bottom: 8px; opacity: 0.7; }
+.dropzone-title { font-size: 14px; color: var(--text); font-weight: 600; margin-bottom: 4px; }
+.dropzone-sub { font-size: 12px; color: var(--text2); }
+.file-list { display: flex; flex-direction: column; gap: 8px; }
+.file-item {
+  display: grid;
+  grid-template-columns: 32px 1fr auto 36px;
+  gap: 12px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.file-icon {
+  font-size: 18px;
+  width: 32px; height: 32px;
+  background: var(--surface2);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.file-meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.file-name { font-size: 13px; color: var(--text); font-weight: 600; word-break: break-all; }
+.file-size { font-size: 11px; color: var(--text2); }
+.file-comment {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 12px;
+  padding: 6px 10px;
+  width: 220px;
+}
+.file-comment:focus { outline: none; border-color: var(--blue); }
+@media (max-width: 600px) {
+  .file-item { grid-template-columns: 32px 1fr 36px; }
+  .file-comment { grid-column: 1 / -1; width: 100%; margin-top: 4px; }
+}
+
+/* ── Advanced Section (접힘) ── */
+.advanced-toggle {
+  width: 100%;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 18px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  transition: all 0.15s;
+}
+.advanced-toggle:hover { border-color: var(--purple); color: var(--purple); border-style: solid; }
+.advanced-toggle .at-text { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.advanced-toggle .at-sub { font-size: 12px; color: var(--text2); font-weight: 400; }
+.advanced-toggle .at-arrow { font-size: 14px; color: var(--text2); transition: transform 0.3s; }
+.advanced-section { display: none; }
+.advanced-section.open { display: block; animation: slideDown 0.3s ease; }
+.advanced-toggle.open .at-arrow { transform: rotate(180deg); color: var(--purple); }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Pair Row (역할명 + 권한 요약 / 데이터명 + 설명) ── */
+.pair-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.4fr) 1fr 36px;
+  gap: 8px;
+  align-items: center;
+}
+.pair-row input { width: 100%; }
+@media (max-width: 540px) {
+  .pair-row { grid-template-columns: 1fr 36px; }
+  .pair-row > input:first-child { grid-column: 1 / -1; }
+}
+
+/* ── Persona Card ── */
+.persona-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.persona-card-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 36px;
+  gap: 8px;
+  align-items: center;
+}
+@media (max-width: 540px) {
+  .persona-card-head { grid-template-columns: 1fr 36px; }
+  .persona-card-head > input:nth-child(2) { grid-column: 1 / -1; }
+}
+.persona-card textarea { min-height: 70px; }
+
+@media (max-width: 600px) {
+  .container { padding: 24px 16px 160px; }
+  .field { padding: 18px; }
+  .field-hint { padding-left: 0; }
+}
+[hidden] { display: none !important; }
+button, select, input[type="file"] { min-height: 44px; }
+input, textarea, select { min-width: 0; }
+input[type="text"], textarea, .preview-body, .file-item { background: var(--surface); }
+input[type="text"]:focus, textarea:focus { background: var(--surface2); }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.mode-picker { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.mode-picker label { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; }
+.starter-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 12px 0; }
+.starter-tools select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px; max-width: 100%; }
+.starter-note { font-size: 13px; color: var(--text2); margin-top: 8px; overflow-wrap: anywhere; }
+.starter-status { padding: 12px; border: 1px solid var(--border); border-radius: 8px; margin: 12px 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.starter-status.error { color: var(--red); border-color: var(--red); }
+.starter-status.success { color: var(--green); border-color: var(--green); }
+.starter-file { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); overflow-wrap: anywhere; }
+.starter-file > span { min-width: 0; }
+.starter-file small { display: block; color: var(--text2); }
+input[type="file"] { width: 100%; font: inherit; color: var(--text2); padding: 6px 0; }
+input[type="file"]::file-selector-button { min-height: 44px; margin-right: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface2); color: var(--text); padding: 8px 14px; cursor: pointer; }
+dialog.preview-overlay { margin: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; color: var(--text); }
+dialog.preview-overlay[open] { display: flex; }
+dialog::backdrop { background: rgba(23,33,47,.2); }
+.preview-head { flex-shrink: 0; }
+#save-paths { max-height: 145px; overflow: auto; white-space: pre-wrap; padding: 12px 24px; background: var(--surface2); font: 12px/1.7 ui-monospace, monospace; overflow-wrap: anywhere; }
+.toast { max-width: calc(100vw - 32px); width: max-content; }
+@media(max-width:600px) {
+  .generate-bar { padding: 12px; justify-content: space-between; }
+  .btn-generate { padding: 12px; }
+  .preview-overlay { padding: 12px; }
+  .preview-foot { padding: 12px; }
+  .preview-foot input { min-width: 0; flex-basis: 100%; }
+  .field-head { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <section class="hero">
+    <div class="hero-badge">ALTOOL · PROJECT STARTER</div>
+    <h1>만들 준비, 여기서 한 번에.</h1>
+    <p>PRD와 디자인 파일을 가져오세요.<br>선택한 프로젝트에 알맞은 폴더로 직접 저장합니다.</p>
+  </section>
+
+  <div class="howto">
+    <div class="howto-step">
+      <div class="num">1</div>
+      <div class="label">프로젝트 선택</div>
+      <div class="desc">파일을 저장할 폴더</div>
+    </div>
+    <div class="howto-step">
+      <div class="num">2</div>
+      <div class="label">PRD · 디자인 준비</div>
+      <div class="desc">파일 선택 또는 직접 작성</div>
+    </div>
+    <div class="howto-step">
+      <div class="num">3</div>
+      <div class="label">확인하고 저장</div>
+      <div class="desc">정해진 위치에 자동 배치</div>
+    </div>
+  </div>
+
+  <section class="field" aria-labelledby="project-heading">
+    <h2 class="field-title" id="project-heading">저장할 프로젝트</h2>
+    <div class="starter-tools"><button class="btn-action" id="choose-project" onclick="chooseProject()">프로젝트 폴더 선택</button><strong id="project-name">선택되지 않음</strong></div>
+    <p class="starter-note">setup으로 준비한 프로젝트 폴더를 선택하세요. 저장 전에는 파일을 변경하지 않습니다. 파일은 서버로 전송하지 않으며, 새로고침하면 선택과 입력이 초기화됩니다.</p>
+    <p class="starter-note" id="browser-support"></p>
+    <div id="save-status" role="status" aria-live="polite" class="starter-status">프로젝트와 준비할 자료를 선택해 주세요.</div>
+  </section>
+
+  <section class="field" aria-labelledby="prd-heading">
+    <h2 class="field-title" id="prd-heading">PRD · 무엇을 만들까요?</h2>
+    <div class="mode-picker" role="group" aria-label="PRD 준비 방법">
+      <label><input type="radio" name="prd-mode" value="upload" checked onchange="setPrdMode(this.value)">기존 PRD 가져오기</label>
+      <label><input type="radio" name="prd-mode" value="create" onchange="setPrdMode(this.value)">새 PRD 작성하기</label>
+      <label><input type="radio" name="prd-mode" value="none" onchange="setPrdMode(this.value)">PRD 없이 준비</label>
+    </div>
+    <div id="prd-upload">
+      <label for="prd-picker">PRD 파일 선택 (여러 개 가능)</label>
+      <input type="file" id="prd-picker" multiple accept=".md,.txt" onchange="addPrdFiles(this.files); this.value=''">
+      <p class="starter-note">Markdown(.md)·텍스트(.txt)를 지원합니다. TXT는 내용 변경 없이 .md로 저장합니다. PDF·Word 등은 아래 참고자료에 넣고 요청을 대화로 설명해 주세요.</p>
+      <div id="prd-list"></div>
+    </div>
+    <p class="starter-note" id="prd-create-note" hidden>아래 기본 항목 5개를 작성하면 PRD를 만듭니다. 기존 PRD 파일은 함께 저장하지 않습니다.</p>
+    <p class="starter-note" id="prd-none-note" hidden>디자인이나 참고자료만 저장한 뒤 만들고 싶은 것을 대화로 설명할 수 있습니다.</p>
+  </section>
+
+  <section class="field" aria-labelledby="design-heading">
+    <h2 class="field-title" id="design-heading">디자인 · 어떻게 보일까요? <span class="field-optional">선택</span></h2>
+    <div class="starter-tools"><label for="design-kind">가져올 디자인 종류</label><select id="design-kind" onchange="updateDesignKind()"><option value="claude">Claude 디자인 HTML · 보조 파일</option><option value="general">Pencil · 이미지 · 디자인 문서</option><option value="stitch">Stitch 내보내기 파일</option></select></div>
+    <label for="design-picker">디자인 파일 선택</label>
+    <input type="file" id="design-picker" multiple onchange="addDesignFiles(this.files); this.value=''">
+    <div id="design-folder-control"><label for="design-folder">보조 파일이 있는 경우 폴더째 선택</label><input type="file" id="design-folder" webkitdirectory multiple onchange="addDesignFiles(this.files, true); this.value=''"></div>
+    <p class="starter-note" id="design-help">HTML과 이미지·CSS를 함께 선택하세요. 폴더를 선택하면 내부 상대 경로를 유지합니다. ZIP은 먼저 압축을 풀어주세요.</p>
+    <div id="design-list"></div>
+  </section>
+
+  <div id="prd-form" hidden>
+  <!-- 1. 제품 한 줄 설명 -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">1</span>
+      <span class="field-title">제품 한 줄 설명<span class="field-required">*</span></span>
+    </div>
+    <div class="field-hint">한 문장으로 "이게 뭐냐"를 설명. 예: <code>매일 운동 기록을 사진과 함께 남기는 헬스 일기장</code></div>
+    <input type="text" id="f-summary" placeholder="예: 매일 운동 기록을 사진과 함께 남기는 헬스 일기장">
+  </div>
+
+  <!-- 2. 타겟 사용자 -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">2</span>
+      <span class="field-title">누가 쓰나<span class="field-required">*</span></span>
+    </div>
+    <div class="field-hint">"누구나" 말고 구체적으로. 예: <code>주 3회 이상 헬스장 가는 20–30대 직장인</code></div>
+    <input type="text" id="f-user" placeholder="예: 주 3회 이상 헬스장 가는 20–30대 직장인">
+  </div>
+
+  <!-- 3. 어떤 문제 -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">3</span>
+      <span class="field-title">어떤 문제를 푸나<span class="field-required">*</span></span>
+    </div>
+    <div class="field-hint">사용자가 지금 겪는 불편. 예: <code>매번 메모장에 적자니 사진 첨부가 안 되고, 인스타에 올리자니 너무 공개적이다</code></div>
+    <textarea id="f-problem" placeholder="예: 매번 메모장에 적자니 사진 첨부가 안 되고, 인스타에 올리자니 너무 공개적이다"></textarea>
+  </div>
+
+  <!-- 4. 핵심 기능 -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">4</span>
+      <span class="field-title">핵심 기능 (3~5개)<span class="field-required">*</span></span>
+    </div>
+    <div class="field-hint">한 줄씩, 동사로 시작. 예: <code>운동 기록을 사진·텍스트로 작성한다</code> · <code>달력에서 운동한 날을 한눈에 본다</code></div>
+    <div class="items" id="features">
+      <div class="item-row">
+        <input type="text" placeholder="예: 운동 기록을 사진·텍스트로 작성한다">
+        <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+      </div>
+      <div class="item-row">
+        <input type="text" placeholder="예: 달력에서 운동한 날을 한눈에 본다">
+        <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+      </div>
+      <div class="item-row">
+        <input type="text" placeholder="예: 주별·월별 통계를 그래프로 본다">
+        <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+      </div>
+    </div>
+    <button type="button" class="item-add" onclick="addRow('features', '핵심 기능 추가')">+ 기능 추가</button>
+  </div>
+
+  <!-- 5. 화면 목록 -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">5</span>
+      <span class="field-title">필요한 화면 (클릭으로 선택)<span class="field-required">*</span></span>
+    </div>
+    <div class="field-hint">자주 쓰는 화면입니다. 필요한 걸 클릭하고, 없는 건 아래에서 직접 추가하세요.</div>
+    <div class="chips" id="screens">
+      <button type="button" class="chip" onclick="toggleChip(this)">메인/홈</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">로그인</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">회원가입</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">대시보드</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">목록 페이지</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">상세 페이지</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">작성/편집</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">검색</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">마이페이지/프로필</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">설정</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">알림</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">통계/분석</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">결제/주문</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">채팅/메시지</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">관리자</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">랜딩 페이지</button>
+      <button type="button" class="chip" onclick="toggleChip(this)">404 / 에러</button>
+    </div>
+    <div class="chip-add-row">
+      <input type="text" id="chip-input" placeholder="없는 화면이면 직접 입력 (예: 운동 캘린더)" onkeydown="if(event.key==='Enter'){event.preventDefault();addCustomChip();}">
+      <button type="button" onclick="addCustomChip()">+ 추가</button>
+    </div>
+  </div>
+
+  <!-- 6. 있으면 좋은 것 -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">6</span>
+      <span class="field-title">있으면 좋은 것<span class="field-optional">선택</span></span>
+    </div>
+    <div class="field-hint">필수는 아니지만 있으면 더 좋은 기능. 시간 남으면 추가 — 핵심 기능과 분리해서 적어주세요.</div>
+    <div class="items" id="nice">
+      <div class="item-row">
+        <input type="text" placeholder="예: 다크모드">
+        <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+      </div>
+    </div>
+    <button type="button" class="item-add" onclick="addRow('nice', '있으면 좋은 것 추가')">+ 추가</button>
+  </div>
+
+  <!-- 7. 하지 말 것 -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">7</span>
+      <span class="field-title">하지 말 것 (Out of Scope)<span class="field-optional">선택</span></span>
+    </div>
+    <div class="field-hint">"이건 이번에 안 만든다"를 명시하면 Codex가 과하게 만드는 걸 막을 수 있어요. 예: <code>SNS 공유 기능 안 함</code></div>
+    <div class="items" id="out">
+      <div class="item-row">
+        <input type="text" placeholder="예: SNS 공유 기능 안 함">
+        <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+      </div>
+    </div>
+    <button type="button" class="item-add" onclick="addRow('out', '범위 외 항목 추가')">+ 추가</button>
+  </div>
+
+  </div><!-- /prd-form -->
+  <!-- ── 참고 문서 업로드 ── -->
+  <div class="field">
+    <div class="field-head">
+      <span class="field-num">📎</span>
+      <span class="field-title">참고 문서 업로드<span class="field-optional">선택</span></span>
+    </div>
+    <div class="field-hint">PRD를 보강할 PDF·Word·이미지 등을 넣으세요. <code>prd/refs/</code>에 저장됩니다. 디자인 원본은 위 디자인 영역에 넣어주세요. AI는 작업에 관련된 참고 항목을 선택해 읽습니다.</div>
+    <div class="dropzone" id="dropzone" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('file-picker').click()}" onclick="document.getElementById('file-picker').click()">
+      <div class="dropzone-icon">📁</div>
+      <div class="dropzone-title">파일을 여기로 드래그하거나 클릭해서 선택</div>
+      <div class="dropzone-sub">PDF · 이미지 · DOCX · XLSX · MD · TXT 등 — 각 파일 옆에 한 줄 코멘트도 남길 수 있어요</div>
+    </div>
+    <input type="file" id="file-picker" multiple style="display:none" onchange="handleFiles(this.files)">
+    <div class="file-list" id="file-list"></div>
+  </div>
+
+  <div id="prd-advanced" hidden>
+  <!-- ── Advanced Section Toggle ── -->
+  <button type="button" class="advanced-toggle" id="adv-toggle" onclick="toggleAdvanced()">
+    <span class="at-text">
+      <span>🎯 더 정확한 PRD를 위해 (선택 5항목)</span>
+      <span class="at-sub">사용자 역할 · 핵심 데이터 · 비즈니스 규칙 · 페르소나 · 외부 연동</span>
+    </span>
+    <span class="at-arrow">▼</span>
+  </button>
+
+  <div class="advanced-section" id="adv-section">
+
+    <!-- 8. 사용자 역할 -->
+    <div class="field">
+      <div class="field-head">
+        <span class="field-num">8</span>
+        <span class="field-title">사용자 역할 / 권한<span class="field-optional">선택</span></span>
+      </div>
+      <div class="field-hint">시스템에 여러 역할이 있다면 각 역할이 무엇을 할 수 있는지 한 줄씩. 예: <code>관리자 — 모든 회원·콘텐츠 관리</code> · <code>일반 사용자 — 본인 데이터만 작성·수정</code></div>
+      <div class="items" id="roles">
+        <div class="pair-row">
+          <input type="text" placeholder="역할명 (예: 관리자)">
+          <input type="text" placeholder="권한 요약 (예: 모든 회원·콘텐츠 관리)">
+          <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+        </div>
+        <div class="pair-row">
+          <input type="text" placeholder="역할명 (예: 일반 사용자)">
+          <input type="text" placeholder="권한 요약 (예: 본인 데이터만 작성·수정)">
+          <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+        </div>
+      </div>
+      <button type="button" class="item-add" onclick="addPair('roles', '역할명', '권한 요약')">+ 역할 추가</button>
+    </div>
+
+    <!-- 9. 핵심 데이터 -->
+    <div class="field">
+      <div class="field-head">
+        <span class="field-num">9</span>
+        <span class="field-title">핵심 데이터 / 객체<span class="field-optional">선택</span></span>
+      </div>
+      <div class="field-hint">시스템이 다루는 주요 데이터(엔티티). 예: <code>회원 — 가입한 사용자, 이메일·비밀번호로 식별</code> · <code>주문 — 회원이 만든 구매 기록, 상태/금액/품목 포함</code></div>
+      <div class="items" id="entities">
+        <div class="pair-row">
+          <input type="text" placeholder="객체명 (예: 회원)">
+          <input type="text" placeholder="설명 (예: 가입한 사용자, 이메일로 식별)">
+          <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+        </div>
+        <div class="pair-row">
+          <input type="text" placeholder="객체명 (예: 주문)">
+          <input type="text" placeholder="설명 (예: 회원의 구매 기록, 상태·금액 포함)">
+          <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+        </div>
+      </div>
+      <button type="button" class="item-add" onclick="addPair('entities', '객체명', '설명')">+ 객체 추가</button>
+    </div>
+
+    <!-- 10. 비즈니스 규칙 -->
+    <div class="field">
+      <div class="field-head">
+        <span class="field-num">10</span>
+        <span class="field-title">비즈니스 규칙 / 예외처리<span class="field-optional">선택</span></span>
+      </div>
+      <div class="field-hint">"이런 경우엔 이렇게 동작" 같은 예외 규칙. 막연한 정상 흐름이 아니라 <strong>엣지 케이스</strong>를 적어주세요. 예: <code>같은 이메일로 두 번 가입 안 됨</code> · <code>주문 후 24시간 안에만 취소 가능</code></div>
+      <div class="items" id="rules">
+        <div class="item-row">
+          <input type="text" placeholder="예: 같은 이메일로 두 번 가입 안 됨">
+          <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+        </div>
+      </div>
+      <button type="button" class="item-add" onclick="addRow('rules', '비즈니스 규칙 추가')">+ 규칙 추가</button>
+    </div>
+
+    <!-- 11. 페르소나 시나리오 -->
+    <div class="field">
+      <div class="field-head">
+        <span class="field-num">11</span>
+        <span class="field-title">페르소나 시나리오<span class="field-optional">선택</span></span>
+      </div>
+      <div class="field-hint">대표 사용자 1~3명의 일상 사용 흐름을 적으면 Codex가 UI/UX를 훨씬 구체적으로 설계합니다. 이름·나이·직업이 구체적일수록 좋아요.</div>
+      <div class="items" id="personas">
+        <div class="persona-card">
+          <div class="persona-card-head">
+            <input type="text" placeholder="이름·나이 (예: 김민지, 28세)">
+            <input type="text" placeholder="역할·상황 (예: 직장인, 주 3회 헬스장)">
+            <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+          </div>
+          <textarea placeholder="시나리오 (예: 운동 후 락커룸에서 폰을 꺼내 1분 내로 그날 한 운동·세트·중량을 기록한다. 주말엔 주간 통계를 본다.)"></textarea>
+        </div>
+      </div>
+      <button type="button" class="item-add" onclick="addPersona()">+ 페르소나 추가</button>
+    </div>
+
+    <!-- 12. 외부 연동 -->
+    <div class="field">
+      <div class="field-head">
+        <span class="field-num">12</span>
+        <span class="field-title">외부 연동 / 통합<span class="field-optional">선택</span></span>
+      </div>
+      <div class="field-hint">서비스가 외부 시스템과 주고받는 것이 있다면 클릭으로 선택하세요.</div>
+      <div class="chips" id="integrations">
+        <button type="button" class="chip" onclick="toggleChip(this)">엑셀 import</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">엑셀 export</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">REST API 호출</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">OAuth 로그인 (Google·Kakao 등)</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">결제 PG (토스·아임포트 등)</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">SMS 발송</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">이메일 발송</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">파일 업로드 (이미지·PDF)</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">푸시 알림</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">지도 / 위치</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">AI / LLM API</button>
+        <button type="button" class="chip" onclick="toggleChip(this)">웹훅 수신</button>
+      </div>
+      <div class="chip-add-row">
+        <input type="text" id="int-input" placeholder="없는 연동이면 직접 입력 (예: 회사 ERP)" onkeydown="if(event.key==='Enter'){event.preventDefault();addCustomIntegration();}">
+        <button type="button" onclick="addCustomIntegration()">+ 추가</button>
+      </div>
+    </div>
+
+  </div><!-- /advanced-section -->
+  </div><!-- /prd-advanced -->
+
+</div>
+
+<!-- Generate Bar -->
+<div class="generate-bar">
+  <div class="progress-text" id="form-progress" hidden>
+    필수 <strong id="filled">0</strong>/5
+    <span style="opacity:0.4; margin:0 8px;">·</span>
+    선택 <strong id="filled-opt" style="color:var(--purple);">0</strong>/5
+  </div>
+  <div class="progress-text" id="asset-progress">선택한 파일 0개</div>
+  <button class="btn-generate" id="btn-generate" onclick="generate()" disabled>
+    저장 내용 확인
+  </button>
+</div>
+
+<!-- Preview Modal -->
+<dialog class="preview-overlay" id="preview" aria-labelledby="preview-title">
+  <div class="preview-modal">
+    <div class="preview-head">
+      <h3 id="preview-title">저장 내용 확인</h3>
+      <button class="preview-close" onclick="closePreview()" aria-label="닫기">✕</button>
+    </div>
+    <pre id="save-paths" aria-label="저장할 파일 경로"></pre>
+    <div class="preview-body" id="preview-body"></div>
+    <div class="preview-foot">
+      <input type="text" id="filename" aria-label="새 PRD 파일명" placeholder="새 PRD 파일명" oninput="refreshSavePaths()">
+      <button class="btn-action" onclick="copyPRD()" id="btn-copy">📋 복사</button>
+      <button class="btn-action primary" id="save-project" onclick="saveProject()">프로젝트에 저장</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="container" style="padding-top:0; padding-bottom:32px;">
+  <div class="footer">
+    Altool 프로젝트 스타터 · 로컬 파일 준비 도구<br>아직 설치하지 않았다면 Altool 배포 폴더의 <code>setup.command</code>(macOS) 또는 <code>setup.bat</code>(Windows)로 선택한 프로젝트에 설치하고, Codex에서 <code>$altool setup</code>을 실행하세요.<br>설치·초기 확인이 끝난 프로젝트는 저장 후 <code>$altool oneshot 이 PRD와 디자인을 기준으로 개발해줘</code>로 개발을 요청하세요.
+  </div>
+</div>
+
+<script>
+const Starter = window.AltoolStarter;
+let _projectRoot = null;
+let _prdMode = 'upload';
+let _saving = false;
+const _prdFiles = [];
+const _designFiles = [];
+const supportsSaving = !!Starter && window.isSecureContext && typeof window.showDirectoryPicker === 'function';
+function setStatus(message, kind = '') {
+  const node = document.getElementById('save-status');
+  node.textContent = message;
+  node.className = 'starter-status' + (kind ? ' ' + kind : '');
+}
+async function chooseProject() {
+  try {
+    if (!supportsSaving) throw new Error('직접 저장을 지원하는 데스크톱 Chrome 또는 Edge에서 열어주세요.');
+    const directory = await window.showDirectoryPicker({ id: 'altool-project', mode: 'readwrite' });
+    _projectRoot = directory;
+    document.getElementById('project-name').textContent = directory.name;
+    setStatus(`저장 대상: ${directory.name}\n이 폴더 아래 prd/와 designs/에만 저장합니다.`);
+    updateProgress();
+  } catch (error) {
+    setStatus(error.name === 'AbortError' ? '폴더 선택을 취소했습니다. 기존 선택은 유지됩니다.' : `폴더를 선택하지 못했습니다: ${error.message}`, 'error');
+  }
+}
+function setPrdMode(mode) {
+  _prdMode = mode;
+  document.getElementById('prd-upload').hidden = mode !== 'upload';
+  for (const id of ['prd-form', 'prd-advanced', 'prd-create-note', 'form-progress']) document.getElementById(id).hidden = mode !== 'create';
+  document.getElementById('prd-none-note').hidden = mode !== 'none';
+  document.getElementById('asset-progress').hidden = mode === 'create';
+  updateProgress();
+}
+function updateDesignKind() {
+  const kind = document.getElementById('design-kind').value;
+  document.getElementById('design-folder-control').hidden = kind === 'general';
+  document.getElementById('design-help').textContent = kind === 'general'
+    ? 'Pencil(.pen), 이미지, PDF·Markdown 디자인 문서를 선택하세요. HTML은 Claude 디자인 종류를 사용하세요.'
+    : 'HTML과 이미지·CSS를 함께 선택하세요. 폴더를 선택하면 내부 상대 경로를 유지합니다. ZIP은 먼저 압축을 풀어주세요.';
+}
+function addAssets(list, files, kind, folder = false) {
+  for (const file of files) {
+    if (folder && /(^|\/)(\.DS_Store|Thumbs\.db)$/.test(file.webkitRelativePath)) continue;
+    try {
+      const path = Starter.destination(kind, file, folder);
+      Starter.validateEntries([...list, {path, data: file}]);
+      list.push({path, data: file});
+    } catch (error) { setStatus(error.message, 'error'); showToast(error.message); }
+  }
+  renderAssetLists();
+  updateProgress();
+}
+function addPrdFiles(files) { addAssets(_prdFiles, files, 'prd'); }
+function addDesignFiles(files, folder = false) { addAssets(_designFiles, files, document.getElementById('design-kind').value, folder); }
+function renderAssetLists() {
+  for (const [id, list] of [['prd-list', _prdFiles], ['design-list', _designFiles]]) {
+    const node = document.getElementById(id);
+    node.replaceChildren();
+    list.forEach((entry, index) => {
+      const row = document.createElement('div'); row.className = 'starter-file';
+      const label = document.createElement('span'); label.textContent = entry.data.name;
+      const path = document.createElement('small'); path.textContent = entry.path;
+      label.append(path);
+      const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'item-remove'; remove.textContent = '×';
+      remove.setAttribute('aria-label', `${entry.data.name} 제거`);
+      remove.onclick = () => { list.splice(index, 1); renderAssetLists(); updateProgress(); };
+      row.append(label, remove); node.append(row);
+    });
+  }
+}
+
+// ── 동적 행 추가/삭제 ──
+function addRow(containerId, placeholder) {
+  const c = document.getElementById(containerId);
+  const row = document.createElement('div');
+  row.className = 'item-row';
+  row.innerHTML = `
+    <input type="text" placeholder="${placeholder}">
+    <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+  `;
+  c.appendChild(row);
+  row.querySelector('input').focus();
+  updateProgress();
+}
+function removeRow(btn) {
+  // .item-row, .pair-row, .persona-card-head 모두 처리
+  const row = btn.closest('.item-row, .pair-row, .persona-card');
+  const container = row.parentElement;
+  if (container.children.length > 1) {
+    row.remove();
+  } else {
+    row.querySelectorAll('input, textarea').forEach(i => i.value = '');
+  }
+  updateProgress();
+}
+
+// ── Pair Row 추가 (역할/권한, 객체/설명) ──
+function addPair(containerId, ph1, ph2) {
+  const c = document.getElementById(containerId);
+  const row = document.createElement('div');
+  row.className = 'pair-row';
+  row.innerHTML = `
+    <input type="text" placeholder="${ph1}">
+    <input type="text" placeholder="${ph2}">
+    <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+  `;
+  c.appendChild(row);
+  row.querySelector('input').focus();
+  updateProgress();
+}
+
+// ── Persona Card 추가 ──
+function addPersona() {
+  const c = document.getElementById('personas');
+  const card = document.createElement('div');
+  card.className = 'persona-card';
+  card.innerHTML = `
+    <div class="persona-card-head">
+      <input type="text" placeholder="이름·나이 (예: 김민지, 28세)">
+      <input type="text" placeholder="역할·상황 (예: 직장인, 주 3회 헬스장)">
+      <button type="button" class="item-remove" onclick="removeRow(this)" aria-label="삭제">×</button>
+    </div>
+    <textarea placeholder="시나리오 (예: 운동 후 락커룸에서 1분 내로 그날 한 운동을 기록한다.)"></textarea>
+  `;
+  c.appendChild(card);
+  card.querySelector('input').focus();
+  updateProgress();
+}
+
+// ── Advanced Section 토글 ──
+function toggleAdvanced() {
+  const sec = document.getElementById('adv-section');
+  const btn = document.getElementById('adv-toggle');
+  const open = sec.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+  if (open) setTimeout(() => sec.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+}
+
+// ── 참고 문서 업로드 ──
+const _files = []; // { file: File, comment: string, id: string }
+function handleFiles(fileList) {
+  for (const f of fileList) {
+    try { Starter.destination('refs', f); } catch (error) { setStatus(error.message, 'error'); continue; }
+    const dup = _files.some(x => x.file.name.normalize('NFC').toLowerCase() === f.name.normalize('NFC').toLowerCase());
+    if (dup) { showToast(`이미 추가됨: ${f.name}`); continue; }
+    _files.push({ file: f, comment: '', id: 'f' + Date.now() + Math.random().toString(36).slice(2, 6) });
+  }
+  renderFiles();
+  document.getElementById('file-picker').value = '';
+  updateProgress();
+}
+function removeFile(id) {
+  const i = _files.findIndex(x => x.id === id);
+  if (i >= 0) _files.splice(i, 1);
+  renderFiles();
+  updateProgress();
+}
+function setFileComment(id, val) {
+  const f = _files.find(x => x.id === id);
+  if (f) f.comment = val;
+}
+function fileIcon(name) {
+  const ext = name.split('.').pop().toLowerCase();
+  if (['pdf'].includes(ext)) return '📕';
+  if (['png','jpg','jpeg','gif','webp','svg'].includes(ext)) return '🖼';
+  if (['doc','docx'].includes(ext)) return '📄';
+  if (['xls','xlsx','csv'].includes(ext)) return '📊';
+  if (['ppt','pptx'].includes(ext)) return '📽';
+  if (['md','txt'].includes(ext)) return '📝';
+  if (['zip','7z','rar','tar','gz'].includes(ext)) return '🗜';
+  if (['mp4','mov','avi','webm'].includes(ext)) return '🎬';
+  return '📎';
+}
+function fmtSize(n) {
+  if (n < 1024) return n + ' B';
+  if (n < 1024*1024) return (n/1024).toFixed(1) + ' KB';
+  return (n/(1024*1024)).toFixed(1) + ' MB';
+}
+function renderFiles() {
+  const list = document.getElementById('file-list');
+  list.innerHTML = _files.map(x => `
+    <div class="file-item">
+      <div class="file-icon">${fileIcon(x.file.name)}</div>
+      <div class="file-meta">
+        <div class="file-name">${escapeHtml(x.file.name)}</div>
+        <div class="file-size">${fmtSize(x.file.size)}</div>
+      </div>
+      <input type="text" class="file-comment" placeholder="(선택) 한 줄 코멘트" value="${escapeHtml(x.comment)}" oninput="setFileComment('${x.id}', this.value)">
+      <button type="button" class="item-remove" onclick="removeFile('${x.id}')" aria-label="삭제">×</button>
+    </div>
+  `).join('');
+}
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+}
+// 드래그 & 드롭
+(function initDropzone() {
+  const dz = document.getElementById('dropzone');
+  if (!dz) return;
+  ['dragenter','dragover'].forEach(ev => dz.addEventListener(ev, e => {
+    e.preventDefault(); e.stopPropagation(); dz.classList.add('dragover');
+  }));
+  ['dragleave','drop'].forEach(ev => dz.addEventListener(ev, e => {
+    e.preventDefault(); e.stopPropagation(); dz.classList.remove('dragover');
+  }));
+  dz.addEventListener('drop', e => {
+    if (e.dataTransfer && e.dataTransfer.files) handleFiles(e.dataTransfer.files);
+  });
+  // 페이지 전체에서 드롭 이벤트 무시 (실수로 다른 곳에 떨궜을 때 브라우저가 파일 열어버리는 것 방지)
+  ['dragover','drop'].forEach(ev => window.addEventListener(ev, e => {
+    if (e.target.closest('.dropzone')) return;
+    e.preventDefault();
+  }));
+})();
+
+// ── 외부 연동 커스텀 chip 추가 ──
+function addCustomIntegration() {
+  const input = document.getElementById('int-input');
+  const v = input.value.trim();
+  if (!v) return;
+  const chips = document.getElementById('integrations');
+  const existing = [...chips.querySelectorAll('.chip')].some(c => c.textContent.trim() === v);
+  if (existing) { showToast('이미 있는 항목입니다'); input.value = ''; return; }
+  const chip = document.createElement('button');
+  chip.type = 'button';
+  chip.className = 'chip custom-chip selected';
+  chip.setAttribute('aria-pressed', 'true');
+  chip.textContent = v;
+  chip.onclick = () => toggleChip(chip);
+  chips.appendChild(chip);
+  input.value = '';
+  updateProgress();
+}
+
+// ── 화면 칩 토글 / 추가 ──
+function toggleChip(el) {
+  el.classList.toggle('selected');
+  el.setAttribute('aria-pressed', el.classList.contains('selected'));
+  updateProgress();
+}
+function addCustomChip() {
+  const input = document.getElementById('chip-input');
+  const v = input.value.trim();
+  if (!v) return;
+  const chips = document.getElementById('screens');
+  // 중복 검사
+  const existing = [...chips.querySelectorAll('.chip')].some(c => c.textContent.trim() === v);
+  if (existing) {
+    showToast('이미 있는 화면입니다', 'warn');
+    input.value = '';
+    return;
+  }
+  const chip = document.createElement('button');
+  chip.type = 'button';
+  chip.className = 'chip custom-chip selected';
+  chip.setAttribute('aria-pressed', 'true');
+  chip.textContent = v;
+  chip.onclick = () => toggleChip(chip);
+  chips.appendChild(chip);
+  input.value = '';
+  updateProgress();
+}
+
+// ── 진행도 ──
+function updateProgress() {
+  // 필수 5개
+  const summary = document.getElementById('f-summary').value.trim();
+  const user = document.getElementById('f-user').value.trim();
+  const problem = document.getElementById('f-problem').value.trim();
+  const features = [...document.querySelectorAll('#features input')].some(i => i.value.trim());
+  const screens = document.querySelectorAll('#screens .chip.selected').length > 0;
+
+  const filled = [summary, user, problem, features, screens].filter(Boolean).length;
+  document.getElementById('filled').textContent = filled;
+  const assetCount = (_prdMode === 'upload' ? _prdFiles.length : 0) + _designFiles.length + _files.length;
+  document.getElementById('asset-progress').textContent = `선택한 파일 ${assetCount}개`;
+  const ready = _prdMode === 'create' ? filled === 5 : _prdMode === 'upload' ? _prdFiles.length > 0 : assetCount > 0;
+  document.getElementById('btn-generate').disabled = !ready || _saving;
+
+  // 선택 5개 (advanced)
+  const roles = [...document.querySelectorAll('#roles .pair-row')].some(r =>
+    [...r.querySelectorAll('input')].every(i => i.value.trim()));
+  const entities = [...document.querySelectorAll('#entities .pair-row')].some(r =>
+    [...r.querySelectorAll('input')].every(i => i.value.trim()));
+  const rules = [...document.querySelectorAll('#rules input')].some(i => i.value.trim());
+  const personas = [...document.querySelectorAll('#personas .persona-card')].some(c => {
+    const head = [...c.querySelectorAll('.persona-card-head input')].some(i => i.value.trim());
+    const body = c.querySelector('textarea').value.trim();
+    return head || body;
+  });
+  const integrations = document.querySelectorAll('#integrations .chip.selected').length > 0;
+  const filledOpt = [roles, entities, rules, personas, integrations].filter(Boolean).length;
+  document.getElementById('filled-opt').textContent = filledOpt;
+}
+document.addEventListener('input', updateProgress);
+
+// ── PRD 마크다운 조립 ──
+function buildPRD() {
+  const summary = document.getElementById('f-summary').value.trim();
+  const user = document.getElementById('f-user').value.trim();
+  const problem = document.getElementById('f-problem').value.trim();
+  const features = [...document.querySelectorAll('#features input')]
+    .map(i => i.value.trim()).filter(Boolean);
+  const screens = [...document.querySelectorAll('#screens .chip.selected')]
+    .map(c => c.textContent.trim());
+  const nice = [...document.querySelectorAll('#nice input')]
+    .map(i => i.value.trim()).filter(Boolean);
+  const out = [...document.querySelectorAll('#out input')]
+    .map(i => i.value.trim()).filter(Boolean);
+
+  // Advanced
+  const roles = [...document.querySelectorAll('#roles .pair-row')].map(r => {
+    const ins = [...r.querySelectorAll('input')].map(i => i.value.trim());
+    return ins[0] && ins[1] ? { name: ins[0], desc: ins[1] } : null;
+  }).filter(Boolean);
+  const entities = [...document.querySelectorAll('#entities .pair-row')].map(r => {
+    const ins = [...r.querySelectorAll('input')].map(i => i.value.trim());
+    return ins[0] && ins[1] ? { name: ins[0], desc: ins[1] } : null;
+  }).filter(Boolean);
+  const rules = [...document.querySelectorAll('#rules input')]
+    .map(i => i.value.trim()).filter(Boolean);
+  const personas = [...document.querySelectorAll('#personas .persona-card')].map(c => {
+    const heads = [...c.querySelectorAll('.persona-card-head input')].map(i => i.value.trim());
+    const body = c.querySelector('textarea').value.trim();
+    if (!heads[0] && !heads[1] && !body) return null;
+    return { name: heads[0] || '(이름 없음)', role: heads[1] || '', scenario: body };
+  }).filter(Boolean);
+  const integrations = [...document.querySelectorAll('#integrations .chip.selected')]
+    .map(c => c.textContent.trim());
+
+  const today = new Date().toISOString().slice(0, 10);
+
+  let md = `# PRD — ${summary}\n\n`;
+  md += `> 작성일: ${today} · Altool 프로젝트 스타터로 생성\n\n`;
+  md += `## 1. 제품 한 줄 설명\n${summary}\n\n`;
+  md += `## 2. 타겟 사용자\n${user}\n\n`;
+  md += `## 3. 해결하려는 문제\n${problem}\n\n`;
+  md += `## 4. 핵심 기능\n`;
+  features.forEach(f => md += `- ${f}\n`);
+  md += `\n## 5. 필요한 화면\n`;
+  screens.forEach(s => md += `- ${s}\n`);
+
+  if (nice.length) {
+    md += `\n## 6. 있으면 좋은 것 (Nice to Have)\n`;
+    nice.forEach(n => md += `- ${n}\n`);
+  }
+  if (out.length) {
+    md += `\n## 7. 범위 외 (Out of Scope)\n`;
+    out.forEach(o => md += `- ${o}\n`);
+  }
+
+  // ── Advanced sections (있을 때만 출력) ──
+  if (roles.length) {
+    md += `\n## 8. 사용자 역할 / 권한\n`;
+    md += `| 역할 | 권한 요약 |\n|---|---|\n`;
+    roles.forEach(r => md += `| ${r.name} | ${r.desc} |\n`);
+  }
+  if (entities.length) {
+    md += `\n## 9. 핵심 데이터 / 객체\n`;
+    md += `| 객체 | 설명 |\n|---|---|\n`;
+    entities.forEach(e => md += `| ${e.name} | ${e.desc} |\n`);
+  }
+  if (rules.length) {
+    md += `\n## 10. 비즈니스 규칙 / 예외처리\n`;
+    rules.forEach(r => md += `- ${r}\n`);
+  }
+  if (personas.length) {
+    md += `\n## 11. 페르소나 시나리오\n`;
+    personas.forEach((p, i) => {
+      md += `\n### 11.${i + 1} ${p.name}${p.role ? ` — ${p.role}` : ''}\n`;
+      if (p.scenario) md += `${p.scenario}\n`;
+    });
+  }
+  if (integrations.length) {
+    md += `\n## 12. 외부 연동 / 통합\n`;
+    integrations.forEach(it => md += `- ${it}\n`);
+  }
+
+  // ── 13. 참고 문서 (업로드된 파일이 있을 때만) ──
+  if (_files.length) {
+    md += `\n## 13. 참고 문서 (refs/)\n`;
+    md += `Codex는 \`prd/refs/\`에서 작업에 관련된 항목을 선택해 요구사항을 보강하고 선택 근거를 기록할 것.\n\n`;
+    _files.forEach(x => {
+      const path = `prd/refs/${x.file.name}`;
+      md += `- \`${path}\``;
+      if (x.comment) md += ` — ${x.comment}`;
+      md += `\n`;
+    });
+  }
+
+  md += `\n---\n`;
+  md += `**Codex에게**: 이 PRD의 모든 항목을 빠짐없이 반영해서 \`$altool oneshot\` 7단계 파이프라인을 실행해줘.\n`;
+  md += `특히 "5. 필요한 화면" 목록은 라우팅·컴포넌트 구조 설계에 그대로 반영하고, "7. 범위 외" 항목은 절대 구현하지 말 것.\n`;
+  if (roles.length) md += `"8. 사용자 역할"은 인증·인가 로직과 메뉴 권한 매트릭스 설계의 기준으로 사용해.\n`;
+  if (entities.length) md += `"9. 핵심 데이터"는 Plan/Spec에서 선택한 저장 방식의 데이터 모델 출발점으로 사용하고, ORM은 실제 이점이 있을 때만 기존 스택에 맞춰 선택해.\n`;
+  if (rules.length) md += `"10. 비즈니스 규칙"은 검증과 테스트에 반영하고, UI·프레임워크·DB에서 분리할 가치가 있는 핵심 규칙만 도메인 로직으로 격리해.\n`;
+  if (personas.length) md += `"11. 페르소나 시나리오"의 사용 흐름이 실제로 끊김 없이 가능한지 browser 단계에서 실제 조작으로 확인하고, 프로젝트 E2E가 있으면 자동 회귀로 보강해.\n`;
+  if (integrations.length) md += `"12. 외부 연동"은 실제 변경 가능성이나 테스트 경계가 있을 때만 어댑터/서비스로 격리하고, 단일 호출에 불필요한 계층을 만들지 마.\n`;
+  if (_files.length) md += `참고자료는 관련 항목을 선택해 직접 읽고, PRD와 충돌하면 PRD 우선·refs는 보조 컨텍스트로 사용해.\n`;
+  md += `디자인 원본은 designs/에서 확인하고, 공통 계약은 altool/standards.md에 따라 기존 표준 재사용·필요한 갱신과 라우터 동기화를 수행해. 기능 한정 요구는 Spec에 남기고 제품 헌법은 수정하지 마.\n`;
+  return md;
+}
+
+function suggestFilename() {
+  const summary = document.getElementById('f-summary').value.trim();
+  if (!summary) return 'PRD.md';
+  // 한글/영문/숫자/하이픈만, 공백은 하이픈으로 (대소문자 보존 — PRD 표기 유지)
+  const base = summary
+    .replace(/\s+/g, '-')
+    .replace(/[^\w가-힣\-]/g, '')
+    .slice(0, 40) || 'PRD';
+  // 사람이 구분하기 쉬운 이름. Altool은 prd/*.md를 탐색한다.
+  return /PRD/i.test(base) ? `${base}.md` : `PRD-${base}.md`;
+}
+
+// ── 검토 및 프로젝트 직접 저장 ──
+let _md = '';
+function collectEntries() {
+  let entries = _prdMode === 'upload' ? [..._prdFiles] : [];
+  if (_prdMode === 'create') {
+    let name = document.getElementById('filename').value.trim() || suggestFilename();
+    if (!/\.md$/i.test(name)) name += '.md';
+    entries.push({path: Starter.destination('prd', {name}), data: _md});
+  }
+  entries.push(..._designFiles, ..._files.map(x => ({path: Starter.destination('refs', x.file), data: x.file})));
+  if (_files.some(x => x.comment.trim())) {
+    const notes = '# 참고자료 메모\n\n' + _files.map(x => '- ' + Starter.destination('refs', x.file) + ': ' + x.comment).join('\n');
+    entries.push({path: 'prd/refs/asset-notes.md', data: notes});
+  }
+  return Starter.validateEntries(entries);
+}
+function refreshSavePaths() {
+  try {
+    const entries = collectEntries();
+    document.getElementById('save-paths').textContent = '프로젝트: ' + (_projectRoot?.name || '아직 선택하지 않음') + '\n' + entries.map(x => x.path).join('\n');
+    document.getElementById('save-project').disabled = !supportsSaving || !_projectRoot || _saving;
+  } catch (error) {
+    document.getElementById('save-paths').textContent = error.message;
+    document.getElementById('save-project').disabled = true;
+  }
+}
+async function generate() {
+  try {
+    _md = _prdMode === 'create' ? buildPRD() : _prdMode === 'upload'
+      ? (await Promise.all(_prdFiles.map(async x => '# ' + x.path + '\n\n' + await x.data.text()))).join('\n\n---\n\n')
+      : '';
+    document.getElementById('preview-body').textContent = _md || 'PRD 없이 선택한 자료만 저장합니다. 만들고 싶은 것을 Codex에 대화로 설명해 주세요.';
+    const filename = document.getElementById('filename');
+    filename.hidden = _prdMode !== 'create';
+    filename.value = suggestFilename();
+    document.getElementById('btn-copy').hidden = !_md;
+    collectEntries();
+    refreshSavePaths();
+    document.getElementById('preview').showModal();
+  } catch (error) { setStatus(error.message, 'error'); }
+}
+function closePreview() {
+  if (!_saving) document.getElementById('preview').close();
+}
+document.getElementById('preview').addEventListener('cancel', event => { if (_saving) event.preventDefault(); });
+async function saveProject() {
+  if (_saving) return;
+  if (!supportsSaving || !_projectRoot) { showToast('먼저 지원되는 브라우저에서 프로젝트 폴더를 선택해 주세요.'); return; }
+  const root = _projectRoot;
+  _saving = true;
+  document.getElementById('save-project').disabled = true;
+  document.getElementById('save-project').textContent = '저장 중…';
+  try {
+    // Must start from this click, before any unrelated asynchronous work.
+    if (await root.requestPermission({mode: 'readwrite'}) !== 'granted') throw new Error('폴더 쓰기 권한이 허용되지 않았습니다. 파일을 저장하지 않았습니다.');
+    const result = await Starter.save(root, collectEntries(), paths => window.confirm(
+      '다음 파일이 이미 있습니다. 덮어쓰시겠습니까?\n\n' + paths.join('\n') + '\n\n취소하면 어떤 파일도 저장하지 않습니다.'));
+    if (result.cancelled) {
+      setStatus('덮어쓰기를 취소했습니다. 파일을 저장하지 않았습니다.');
+    } else {
+      setStatus(root.name + '에 ' + result.saved.length + '개 파일 저장 완료\n' + result.saved.join('\n') +
+        '\n\n아직 설치하지 않았다면 Altool 배포 폴더의 setup.command(macOS) 또는 setup.bat(Windows)로 이 프로젝트에 설치한 뒤 Codex에서 $altool setup을 실행하세요.\n설치·초기 확인이 끝났다면:\n$altool oneshot 이 PRD와 디자인을 기준으로 개발해줘', 'success');
+    }
+  } catch (error) {
+    const saved = error.saved || [];
+    setStatus('저장을 완료하지 못했습니다: ' + error.message +
+      (saved.length ? '\n이미 저장된 파일:\n' + saved.join('\n') : '\n완료된 파일은 없습니다.') +
+      (error.failedPath ? '\n실패한 경로에 빈 파일이 생성됐을 수 있습니다. 확인 후 재시도하세요.' : ''), 'error');
+  } finally {
+    _saving = false;
+    document.getElementById('save-project').textContent = '프로젝트에 저장';
+    document.getElementById('preview').close();
+    document.getElementById('save-status').scrollIntoView({block:'center'});
+    updateProgress();
+  }
+}
+async function copyPRD() {
+  try {
+    await navigator.clipboard.writeText(_md);
+    showToast('미리보기 내용을 복사했습니다.');
+  } catch (_) { showToast('복사 권한이 없습니다. 미리보기에서 텍스트를 선택해 복사하세요.'); }
+}
+// ── Toast ──
+let _toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+// 초기 진행도 계산
+document.getElementById('choose-project').disabled = !supportsSaving;
+document.getElementById('adv-toggle').setAttribute('aria-expanded', 'false');
+document.getElementById('browser-support').textContent = supportsSaving
+  ? '이 브라우저에서 프로젝트 폴더 직접 저장을 지원합니다.'
+  : '직접 저장을 지원하지 않는 환경입니다. 파일과 altool/ 폴더를 함께 두고 데스크톱 Chrome 또는 Edge에서 열어주세요. ZIP 다운로드로 대체하지 않습니다.';
+// Existing form labels remain visible; attach them as accessible names.
+document.querySelectorAll('.field').forEach(field => {
+  const title = field.querySelector('.field-title')?.textContent;
+  field.querySelectorAll('input[type="text"], textarea').forEach(input => {
+    if (!input.hasAttribute('aria-label')) input.setAttribute('aria-label', (title || '입력') + ' — ' + (input.placeholder || '내용'));
+  });
+});
+document.querySelectorAll('.chip').forEach(chip => chip.setAttribute('aria-pressed', chip.classList.contains('selected')));
+updateProgress();
+</script>
+</body>
+</html>

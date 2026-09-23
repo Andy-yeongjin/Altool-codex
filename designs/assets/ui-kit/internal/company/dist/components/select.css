@@ -1,0 +1,18 @@
+/* C single select: white control, blue active/selected option. */
+.altool-ui .ui-select { display:inline-flex;position:relative;vertical-align:middle;min-width:0;max-width:100%; }
+.altool-ui .ui-select > select[hidden] { display:none!important; }
+.altool-ui .ui-select > button.ui-select-trigger { box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-width:0;min-height:var(--krds24-control-height-md);padding:var(--company-control-py) var(--company-control-px);border:1px solid var(--company-field-border);border-radius:var(--company-button-radius);background:#FFFFFF;color:#30363D;font-family:var(--company-button-font);font-size:var(--company-font-size);font-weight:400;line-height:1.4;text-align:start;box-shadow:none; }
+.altool-ui .ui-select > button.ui-select-trigger:hover { border-color:var(--company-field-border-hover);background:#FFFFFF; }
+.altool-ui .ui-select > button.ui-select-trigger[aria-expanded="true"] { border-color:var(--company-brand-primary); }
+.altool-ui .ui-select > button.ui-select-trigger[aria-invalid="true"] { border-color:var(--company-field-error); }
+.altool-ui .ui-select > button.ui-select-trigger:disabled { background:var(--company-field-disabled-bg);color:var(--company-button-disabled-text);border-color:var(--company-field-border);cursor:not-allowed; }
+.altool-ui .ui-select-value { min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+.altool-ui .ui-select-arrow { width:7px;height:7px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin:0 3px 4px 0; }
+.altool-ui [aria-expanded="true"] > .ui-select-arrow { transform:rotate(225deg);margin-top:4px;margin-bottom:0; }
+.altool-ui .ui-select-list { box-sizing:border-box;position:fixed;inset:auto;z-index:1000;margin:0;padding:4px;max-width:none;min-width:0;overflow:auto;overscroll-behavior:contain;border:1px solid var(--company-field-border);border-radius:4px;background:#FFFFFF;color:#30363D;box-shadow:none;font-family:var(--company-button-font);font-size:14px;font-weight:400;line-height:1.4; }
+.altool-ui .ui-select-list[hidden] { display:none!important; }
+.altool-ui .ui-select-option { box-sizing:border-box;min-height:34px;padding:6px 10px;border-radius:2px;cursor:pointer;overflow-wrap:anywhere; }
+.altool-ui .ui-select-option:is([aria-selected="true"],.is-active) { background:var(--company-brand-primary);color:var(--company-brand-on-primary); }
+.altool-ui .ui-select-list:has(.is-active) .ui-select-option[aria-selected="true"]:not(.is-active) { background:#FFFFFF;color:#30363D; }
+.altool-ui .ui-select-option[aria-disabled="true"] { background:#FFFFFF;color:var(--company-field-disabled-text);cursor:not-allowed; }
+@media(pointer:coarse) { .altool-ui .ui-select-option,.altool-ui .ui-select > button.ui-select-trigger { min-height:44px; } }

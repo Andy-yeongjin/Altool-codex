@@ -1,0 +1,6 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>공통 작업 버튼 검증</title><link rel="stylesheet" href="../../designs/assets/ui-kit/internal/company/dist/company.css">
+<main class="krds-2024-tokens altool-ui" style="padding:20px"><div class="ui-inline-actions"><button id="search" class="primary">조회</button><button>초기화</button><button>선택 해제</button><button>선택 승인</button><button>선택 재처리</button><button data-ui-action="confirm">신청 내용 확인</button><button role="tab">조회</button><button data-ui-icon="none">검색</button><button>임의 업무</button><button id="add">추가</button></div><p role="status" id="result"></p></main>
+<script src="../../designs/assets/ui-kit/internal/company/dist/business.js"></script><script>
+document.querySelector('#search').onclick=e=>{e.currentTarget.textContent='저장';document.querySelector('#result').textContent='조회 실행 후 저장으로 변경';};
+document.querySelector('#add').onclick=()=>{const b=document.createElement('button');b.textContent='삭제';document.querySelector('main').append(b);};
+</script></html>

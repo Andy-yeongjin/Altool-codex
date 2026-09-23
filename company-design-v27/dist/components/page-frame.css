@@ -1,0 +1,9 @@
+
+/* Approved C page frame; application decides overall columns and routing. */
+.altool-ui .ui-page-content { --company-page-padding:20px;min-width:0;padding:var(--company-page-padding); }
+.altool-ui .ui-page-heading { margin:0 0 20px;padding:0 0 12px;border-bottom:1px solid #B7BEC7; }
+.altool-ui .ui-breadcrumb { display:flex;flex-wrap:wrap;gap:4px 8px;margin:0 0 4px;color:#59616B;font-family:var(--company-button-font);font-size:12px;font-weight:400;line-height:1.5; }
+.altool-ui .ui-page-heading > .ui-page-title { margin:0;color:#30363D;font-family:var(--company-button-font);font-size:22px;font-weight:500;line-height:1.4;overflow-wrap:anywhere; }
+.altool-ui .ui-page-content > .ui-page-footer { display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 12px;margin:20px calc(-1 * var(--company-page-padding)) calc(-1 * var(--company-page-padding));padding:10px var(--company-page-padding);border-top:1px solid #D9DDE2;background:#F1F3F5;color:#59616B;font-family:var(--company-button-font);font-size:12px;font-weight:400;line-height:1.5; }
+@media(max-width:450px) { .altool-ui .ui-page-content { --company-page-padding:12px; } }
+

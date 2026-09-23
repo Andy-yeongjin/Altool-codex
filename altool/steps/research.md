@@ -3,7 +3,7 @@
 **사용법**: `$altool research [조사 주제]`
 
 **산출물**: `docs/00-research/R-0001-{조사주제}.research.md`
-**UI 작업 추가 산출물**: 디자인 시스템이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 `designs/design.md`
+**UI 작업 추가 산출물**: 디자인 시스템이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 `standards/design.md`
 
 ---
 
@@ -29,13 +29,11 @@
 ### 2. 기존 조사와 입력 자산 확인
 
 - `docs/00-research/*.research.md`가 있으면 최근 조사 목록을 읽고 중복 주제·이미 수집한 출처를 확인한다.
-- `prd/*.md`, `prd/refs/*`, `constitution.md`, `designs/design.md`가 있으면 조사 관점 보정용으로 읽는다.
-- `designs/claude-design/*.html`이 있으면 최우선 디자인 헌법으로 기록하고, 외부 사이트·`designs/design.md`·기타 사용자 디자인 입력보다 먼저 읽는다. Research는 이 HTML의 구조·밀도·위계·컴포넌트 외형을 대체하지 않고, 기능·UX·누락 위험 보강재로만 사용한다.
-- `designs/` 안에 사용자가 넣은 `.pen`, `stitch/`, 스크린샷(`*.png`, `*.jpg`, `*.jpeg`, `*.webp`), 디자인 문서(`*.md`, `*.pdf`)가 있으면 외부 사이트보다 우선하는 사용자 디자인 입력으로 기록한다. Research는 이 디자인을 대체하지 않고, 기능·UX·누락 위험·페이지 구성 보강재로만 사용한다.
+- `prd/*.md`와 관련 `prd/refs/*` 항목, `constitution.md`를 읽고 조사 관점을 보정한다. 활성 표준은 `altool/standards.md`에 따라 선택하며 UI 조사에서는 `standards/design.md`를 포함한다.
+- 직접 디자인 입력은 헌법의 디자인 권위에 따라 먼저 읽는다. Research는 이를 대체하지 않고 기능·UX·누락 위험만 보강한다.
 - PRD가 있으면 research는 PRD를 변경하거나 대체하지 않고, PRD를 더 잘 구현하기 위한 사용자 기대·누락 위험·UX 근거·리스크·구현 후보를 찾는 데 집중한다.
-- UI/제품/사이트/앱을 조사하는데 `designs/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면, research 단계에서 참조 사이트와 사용자 디자인 입력을 근거로 `design.md`를 생성한다. 이후 plan/spec/run은 research의 시각 관찰값을 직접 구현하지 않고 이 파일을 구현 기준으로 사용한다.
-- 디자인 기준 우선순위는 `designs/claude-design/*.html` → `designs/` 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `designs/design.md` → Research가 생성한 디자인 시스템 → AI 자체 판단 순서다.
-- `constitution.md`의 디자인 품질 원칙은 모든 시각 원천에 항상 적용되는 상위 가드레일이다.
+- UI/제품/사이트/앱을 조사하는데 `standards/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면, research 단계에서 참조 사이트와 사용자 디자인 입력을 근거로 `design.md`를 생성한다. 이후 plan/spec/run은 research의 시각 관찰값을 직접 구현하지 않고 이 파일을 구현 기준으로 사용한다.
+- 모든 시각 원천에 헌법의 디자인 권위와 품질 가드레일을 적용한다.
 - Research는 문서/조사 단계이므로 `lesson.py search`와 `lesson.py append`를 실행하지 않는다.
 
 ### 3. 웹 조사 수행
@@ -59,13 +57,13 @@
 - `design.md`는 GitHub `awesome-design-md` 스타일을 따른다. 즉 문서 상단에 `---`로 감싼 정밀 토큰 블록을 먼저 작성하고, 그 안에 `version`, `name`, `description`, `colors`, `typography`, `spacing`, `rounded`, `elevation`, `components`를 채운다. 아래 본문은 브랜드 문법과 구현 가이드다.
 - `design.md`에는 참조 폰트 이름, 시각적 성격(geometric sans, grotesk, humanist, serif 등), 역할별 스케일, 구현에 사용할 안전한 폰트 스택을 기록한다. 구현 폰트는 시스템 폰트, 오픈 라이선스 폰트, 사용자가 제공한 폰트, 프로젝트에 이미 포함된 폰트만 사용한다.
 - 동일 폰트를 사용할 수 없으면 시각 특성이 가까운 대체 폰트를 선택하고, `design.md`에 대체 사유를 남긴다.
-- 캡처는 복제용이 아니라 레이아웃 구조, 정보 밀도, 컴포넌트 비율, 미디어 사용, 시각 위계를 분석해 `designs/design.md`로 정규화하기 위한 근거다. 캡처할 수 없는 출처는 실패 사유를 기록하고, HTML/문서/공개 이미지 등 대체 시각 근거를 남긴다.
-- Research가 `designs/design.md`를 생성·보강한다면 `design.md`의 `Reference Source Map`에도 캡처 ID와 파일 경로를 반드시 남긴다. Research 문서에만 캡처 경로가 있고 `design.md`에는 출처명만 있으면 추적성 미완성으로 본다.
+- 캡처는 복제용이 아니라 레이아웃 구조, 정보 밀도, 컴포넌트 비율, 미디어 사용, 시각 위계를 분석해 `standards/design.md`로 정규화하기 위한 근거다. 캡처할 수 없는 출처는 실패 사유를 기록하고, HTML/문서/공개 이미지 등 대체 시각 근거를 남긴다.
+- Research가 `standards/design.md`를 생성·보강한다면 `design.md`의 `Reference Source Map`에도 캡처 ID와 파일 경로를 반드시 남긴다. Research 문서에만 캡처 경로가 있고 `design.md`에는 출처명만 있으면 추적성 미완성으로 본다.
 - 디자인 자유도는 "AI가 임의로 일반 SaaS/AI 미감을 만드는 것"이 아니다. 조사한 실제 서비스의 시각 패턴을 새 제품에 맞게 변환해 `design.md`로 정규화하는 것이다.
-- 프로젝트에 Claude 디자인 HTML이나 사용자 디자인 입력이 있으면 Research는 그 디자인의 빈칸을 보강하는 용도로만 외부 사례를 사용한다. 화면 구조, 정보 밀도, 시각 위계, 색상·간격·타이포·둥글기·그림자는 `designs/claude-design/*.html`을 최우선으로 디자인 시스템에 변환한다.
-- 프로젝트에 `designs/design.md`가 있고 첫 non-empty line에 `TBD`가 없으며 프로젝트 고유 내용이 있으면 기존 디자인 시스템을 구현 기준으로 유지하고, research 문서에는 보강 필요 지점만 기록한다. 사용자가 명시하지 않은 한 기존 디자인 시스템을 덮어쓰지 않는다.
-- 프로젝트에 `designs/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 research 완료 전 파일을 생성한다. 생성된 `design.md`에는 GitHub `awesome-design-md` 스타일의 상단 정밀 토큰 블록, 참조 출처와 캡처 ID/경로, Design Thesis, Screen Recipes, Component Extraction, Capture-to-Implementation Map, 색상·타이포·폰트 스택·간격 값, 컴포넌트 계약, 페이지 구조, 미디어 규칙, 복제 금지 항목, Agent Implementation Guide를 기록하고 최상단 `TBD` 마커를 제거한다.
-- 외부 디자인 사례가 프로젝트 디자인 시스템이나 `constitution.md`의 디자인 품질 원칙과 충돌하면 research 문서에 충돌을 기록하고, 디자인 시스템에는 프로젝트 기준으로 보정한 값을 반영한다.
+- 직접 디자인 입력이 있으면 외부 사례는 빈칸 보강에만 사용하고, 권위 원천을 디자인 시스템으로 변환한다.
+- 기존 디자인 계약의 재사용·동기화는 `altool/standards.md`의 디자인 입력 탐색·갱신 절차로 판단한다. 요청과 원본 변경에 필요한 항목만 갱신하고, 무관한 계약을 재작성하지 않는다.
+- 프로젝트에 `standards/design.md`가 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 research 완료 전 파일을 생성한다. 생성된 `design.md`에는 GitHub `awesome-design-md` 스타일의 상단 정밀 토큰 블록, 참조 출처와 캡처 ID/경로, Design Thesis, Screen Recipes, Component Extraction, Capture-to-Implementation Map, 색상·타이포·폰트 스택·간격 값, 컴포넌트 계약, 페이지 구조, 미디어 규칙, 복제 금지 항목, Agent Implementation Guide를 기록하고 최상단 `TBD` 마커를 제거한다.
+- 외부 사례가 프로젝트 계약과 충돌하면 research에 기록하고 프로젝트 기준으로 보정한다.
 - 이전 research가 있으면 중복 발견과 새 발견을 분리해 기록한다.
 
 출처 신뢰도 기준:
@@ -135,7 +133,7 @@ PRD가 있는 경우 추가 조사 관점:
 - Component Extraction: 캡처 기반 nav/button/card/form/filter/media/cart 등 컴포넌트 외형 계약
 - Capture-to-Implementation Map: 각 캡처/패턴이 plan/spec/run에서 어떤 화면·컴포넌트로 구현되어야 하는지
 - Typography Source Mapping: 참조 폰트 이름, 역할별 타입 스케일, 구현 폰트 스택, 라이선스/대체 사유
-- 사용자 디자인 입력: `designs/claude-design/*.html`, `designs/` 안의 `.pen`, Stitch, 스크린샷, 디자인 문서 감지 결과와 Research보다 우선한다는 처리 방침
+- 사용자 디자인 입력: `designs/claude-design/**/*.html`, `designs/` 안의 `.pen`, Stitch, 스크린샷, 디자인 문서 감지 결과와 Research보다 우선한다는 처리 방침
 - 근거 매핑
 - 차별화 기회
 - 리스크와 제약
@@ -184,7 +182,7 @@ Research 문서 작성과 Step Check가 통과하면 문서 상단 `상태`/`Sta
 
 ### 7. Step Check
 
-완료 전 `.altool/checks/R-0001.research.json`을 작성하고 `python altool/scripts/check.py validate --json .altool/checks/R-0001.research.json`를 실행한다. 실패하면 메시지를 보고 보완한 뒤 재검증하며, 최대 5회 실패 시 중지한다.
+`_common.md`의 Step Check 계약을 적용한다. 경로는 `.altool/checks/R-0001.research.json`이다. 공통 키 증거에는 기존 research/PRD/refs/constitution/design 입력, 웹 출처·실제 서비스·URL 검증, research 상태와 문서 `Status=Done`, 산출물 경로를 포함한다. lesson/event는 `skipped(research document step)`으로 기록한다.
 
 Research check JSON은 공통 `checks` 외에 root의 `quality` 객체를 포함해야 한다.
 
@@ -221,21 +219,13 @@ Research check JSON은 공통 `checks` 외에 root의 `quality` 객체를 포함
 
 | 항목 | 보고 기준 |
 | --- | --- |
-| `inputs.loaded` | 기존 research/PRD/refs/constitution/design 자산 확인 결과 |
-| `lesson.search` | `skipped(research document step)` |
-| `event.capture` | `skipped(research document step)` |
-| `verification` | 웹 출처 수, 실제 서비스 수, URL 기록 확인 |
-| `state.updated` | `.altool/state/research.json` 갱신 |
-| `docs.synced` | 생성한 research 문서 |
-| `document.status` | research 문서 상단 Status=Done |
-| `artifacts.created` | `docs/00-research/R-0001-*.research.md` |
 | `research.source_mix` | 실제 서비스/공식·리서치/사용자 목소리/리스크 기준 출처 비율 확인 |
 | `research.source_quality` | 출처별 신뢰도 A/B/C와 한계 기록 |
 | `research.freshness` | 출처별 최신성 current/stable/old 기록 |
 | `research.duplicate_review` | 기존 research 대비 중복 발견과 새 발견 분리 |
 | `research.evidence_map` | 각 주요 주장에 출처 ID 연결 |
 | `research.visual_capture` | UI/제품/사이트/앱 조사면 실제 서비스/제품 3개 이상 캡처와 `docs/00-research/assets/{Research ID}/` 경로 연결. 비 UI 조사면 `skipped(non-UI research)`, 접근 실패면 실패 사유와 대체 근거 |
-| `research.design_system` | UI 작업에서 `designs/design.md` 첫 non-empty line의 `TBD` 여부를 확인하고, 재사용했거나 생성·보강 후 `TBD` 마커를 제거했는지 확인. 생성·보강한 경우 `design.md` 상단 정밀 토큰 블록, Reference Source Map, Screen Recipes, Component Extraction, Capture-to-Implementation Map에 캡처 ID/경로와 구현 계약이 남았는지 증거 포함 |
+| `research.design_system` | UI 작업에서 `standards/design.md` 첫 non-empty line의 `TBD` 여부를 확인하고, 재사용했거나 생성·보강 후 `TBD` 마커를 제거했는지 확인. 생성·보강한 경우 `design.md` 상단 정밀 토큰 블록, Reference Source Map, Screen Recipes, Component Extraction, Capture-to-Implementation Map에 캡처 ID/경로와 구현 계약이 남았는지 증거 포함 |
 | `research.design_tokens` | UI 작업이면 `design.md` 상단 `---` 토큰 블록에 colors, typography, spacing, rounded, elevation, components가 참조 기반 값으로 채워졌는지 확인 |
 | `research.screen_recipe` | UI 작업이면 캡처 기반 화면별 구조 계약, 섹션 순서, 비례·밀도, 금지 drift가 research 문서와 `design.md`에 기록됐는지 확인 |
 | `research.component_extraction` | UI 작업이면 nav/button/card/filter/form/media 등 컴포넌트 외형 계약이 캡처 ID와 연결돼 기록됐는지 확인 |

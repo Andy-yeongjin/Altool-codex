@@ -1,0 +1,2 @@
+PASS CSS custom property validation: 44 files, 2406 definitions, 8649 references
+PASS CSS text contrast validation: 44 files, 298 explicit pairs, 300 ambiguous rules, minimum 4.5:1

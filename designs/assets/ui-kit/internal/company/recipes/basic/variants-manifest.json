@@ -1,0 +1,2362 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "pattern.identity-input",
+      "kind": "pattern",
+      "meaning": "개인 식별 정보 입력",
+      "defaultVariant": "name",
+      "variants": {
+        "name": {
+          "path": "ui-kit/internal/company/recipes/basic/identity.html",
+          "preview": "ui-kit/internal/company/recipes/basic/identity.html#person-name",
+          "selector": "#person-name",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/identity.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "valid",
+            "invalid"
+          ],
+          "sourcePages": [
+            553,
+            572
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "birth-single": {
+          "path": "ui-kit/internal/company/recipes/basic/identity.html",
+          "preview": "ui-kit/internal/company/recipes/basic/identity.html#person-birth",
+          "selector": "#person-birth",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/identity.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "valid",
+            "invalid",
+            "focusout-validation"
+          ],
+          "sourcePages": [
+            553,
+            572
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "birth-multiple": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#identity-dates",
+          "selector": "#identity-dates",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "valid",
+            "invalid"
+          ],
+          "sourcePages": [
+            553,
+            572
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "gender": {
+          "path": "ui-kit/internal/company/recipes/basic/identity.html",
+          "preview": "ui-kit/internal/company/recipes/basic/identity.html",
+          "selector": "fieldset",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/identity.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unselected",
+            "female",
+            "male",
+            "decline"
+          ],
+          "sourcePages": [
+            553,
+            572
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "telephone": {
+          "path": "ui-kit/internal/company/recipes/basic/identity.html",
+          "preview": "ui-kit/internal/company/recipes/basic/identity.html#person-phone",
+          "selector": "#person-phone",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/identity.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "valid",
+            "invalid",
+            "flexible-separators"
+          ],
+          "sourcePages": [
+            553,
+            572
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "country-code": {
+          "path": "ui-kit/internal/company/recipes/basic/identity.html",
+          "preview": "ui-kit/internal/company/recipes/basic/identity.html#country-code",
+          "selector": "#country-code",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/identity.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "suggestions",
+            "selected"
+          ],
+          "sourcePages": [
+            553,
+            572
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "multiple-telephone": {
+          "path": "ui-kit/internal/company/recipes/basic/identity.html",
+          "preview": "ui-kit/internal/company/recipes/basic/identity.html#office-phone",
+          "selector": "#office-phone",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/identity.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "primary-selected",
+            "missing-primary-error"
+          ],
+          "sourcePages": [
+            553,
+            572
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.help",
+      "kind": "pattern",
+      "meaning": "도움",
+      "defaultVariant": "fixed",
+      "variants": {
+        "fixed": {
+          "path": "ui-kit/internal/company/recipes/basic/help.html",
+          "preview": "ui-kit/internal/company/recipes/basic/help.html",
+          "selector": ".notice",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/help.md",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "visible"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "label-inline-placeholder": {
+          "path": "ui-kit/internal/company/recipes/basic/help.html",
+          "preview": "ui-kit/internal/company/recipes/basic/help.html#tour-title",
+          "selector": "#tour-title",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/help.md",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "input",
+            "hint-visible"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "tooltip": {
+          "path": "ui-kit/internal/company/recipes/basic/help.html",
+          "preview": "ui-kit/internal/company/recipes/basic/help.html#tooltip-toggle",
+          "selector": "#tooltip-toggle",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/help.md",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "hidden",
+            "focus-visible",
+            "hover-visible",
+            "dismissed"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "contextual": {
+          "path": "ui-kit/internal/company/recipes/basic/help.html",
+          "preview": "ui-kit/internal/company/recipes/basic/help.html",
+          "selector": "details",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/help.md",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "collapsed",
+            "expanded"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "panel": {
+          "path": "ui-kit/internal/company/recipes/basic/help.html",
+          "preview": "ui-kit/internal/company/recipes/basic/help.html#help-panel",
+          "selector": "#help-panel",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/help.md",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "closed",
+            "open"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "coachmark": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#help-tours",
+          "selector": "#help-tours",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "idle",
+            "topic-selected",
+            "step",
+            "previous",
+            "next",
+            "completed",
+            "dismissed"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "walkthrough": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#help-tours",
+          "selector": "#help-tours",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "idle",
+            "topic-selected",
+            "step",
+            "previous",
+            "next",
+            "completed",
+            "dismissed"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "faq": {
+          "path": "ui-kit/internal/company/recipes/basic/help.html",
+          "preview": "ui-kit/internal/company/recipes/basic/help.html#help-faq",
+          "selector": "#help-faq",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/help.md",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "collapsed",
+            "expanded",
+            "new-tab"
+          ],
+          "sourcePages": [
+            573,
+            589
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.consent",
+      "kind": "pattern",
+      "meaning": "동의",
+      "defaultVariant": "radio",
+      "variants": {
+        "radio": {
+          "path": "ui-kit/internal/company/recipes/basic/consent.html",
+          "preview": "ui-kit/internal/company/recipes/basic/consent.html#consent-form",
+          "selector": "#consent-form",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/consent.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unselected",
+            "agree",
+            "decline",
+            "required-error",
+            "optional-declined-valid"
+          ],
+          "sourcePages": [
+            590,
+            596
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "checkbox": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#consent-checks",
+          "selector": "#consent-checks",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unchecked",
+            "checked",
+            "mixed",
+            "required-error",
+            "valid"
+          ],
+          "sourcePages": [
+            590,
+            596
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "bulk": {
+          "path": "ui-kit/internal/company/recipes/basic/consent.html",
+          "preview": "ui-kit/internal/company/recipes/basic/consent.html#consent-all",
+          "selector": "#consent-all",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/consent.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "all-selected",
+            "all-declined",
+            "individual-change"
+          ],
+          "sourcePages": [
+            590,
+            596
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.list",
+      "kind": "pattern",
+      "meaning": "목록 탐색",
+      "defaultVariant": "structured",
+      "variants": {
+        "structured": {
+          "path": "ui-kit/internal/company/recipes/basic/list.html",
+          "preview": "ui-kit/internal/company/recipes/basic/list.html#list-results",
+          "selector": "#list-results",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/list.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "populated",
+            "empty",
+            "search",
+            "pagination",
+            "important-first"
+          ],
+          "sourcePages": [
+            597,
+            601
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "table": {
+          "path": "ui-kit/internal/company/recipes/basic/list.html",
+          "preview": "ui-kit/internal/company/recipes/basic/list.html#list-view",
+          "selector": "#list-view",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/list.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "populated",
+            "empty",
+            "search",
+            "pagination"
+          ],
+          "sourcePages": [
+            597,
+            601
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "accordion": {
+          "path": "ui-kit/internal/company/recipes/basic/list.html",
+          "preview": "ui-kit/internal/company/recipes/basic/list.html#list-view",
+          "selector": "#list-view",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/list.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "collapsed",
+            "expanded",
+            "empty",
+            "pagination"
+          ],
+          "sourcePages": [
+            597,
+            601
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "detail-return": {
+          "path": "ui-kit/internal/company/recipes/basic/list.html",
+          "preview": "ui-kit/internal/company/recipes/basic/list.html#list-results",
+          "selector": "#list-results",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/list.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "search-preserved",
+            "view-preserved",
+            "page-preserved",
+            "scroll-preserved",
+            "focus-preserved",
+            "expanded-preserved"
+          ],
+          "sourcePages": [
+            597,
+            601
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "request-states": {
+          "path": "ui-kit/internal/company/recipes/basic/state-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/state-variants.html#retry-state",
+          "selector": "#retry-state",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/shared-messages.js",
+            "messages/ko.json",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "idle",
+            "loading",
+            "success",
+            "empty",
+            "error",
+            "retry",
+            "cancelled"
+          ],
+          "sourcePages": [
+            597,
+            601
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다.",
+        "목록 복귀용 상태는 비민감 검색·필터·보기·페이지·스크롤·초점만 URL fragment에 기록한다. 개인정보·입력폼·평가 내용은 기록하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.feedback",
+      "kind": "pattern",
+      "meaning": "사용자 피드백",
+      "defaultVariant": "sentiment",
+      "variants": {
+        "sentiment": {
+          "path": "ui-kit/internal/company/recipes/basic/feedback.html",
+          "preview": "ui-kit/internal/company/recipes/basic/feedback.html#feedback-area",
+          "selector": "#feedback-area",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/feedback.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unselected",
+            "selected",
+            "extra-questions",
+            "skipped",
+            "completed"
+          ],
+          "sourcePages": [
+            602,
+            611
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "stars": {
+          "path": "ui-kit/internal/company/recipes/basic/feedback.html",
+          "preview": "ui-kit/internal/company/recipes/basic/feedback.html",
+          "selector": ".rating[aria-label]",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/feedback.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unselected",
+            "1-to-5",
+            "completed"
+          ],
+          "sourcePages": [
+            602,
+            611
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "immediate": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#late-feedback",
+          "selector": "#late-feedback",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unselected",
+            "completed"
+          ],
+          "sourcePages": [
+            602,
+            611
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "after-completion": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#feedback-layouts",
+          "selector": "#feedback-layouts",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "task-in-progress",
+            "task-completed",
+            "rating",
+            "completed"
+          ],
+          "sourcePages": [
+            602,
+            611
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "aside": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#feedback-layout",
+          "selector": "#feedback-layout",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "desktop-aside",
+            "mobile-bottom"
+          ],
+          "sourcePages": [
+            602,
+            611
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "bottom": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#feedback-layout",
+          "selector": "#feedback-layout",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "bottom",
+            "hidden",
+            "visible"
+          ],
+          "sourcePages": [
+            602,
+            611
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.detail",
+      "kind": "pattern",
+      "meaning": "상세 정보 확인",
+      "defaultVariant": "single",
+      "variants": {
+        "single": {
+          "path": "ui-kit/internal/company/recipes/basic/detail.html",
+          "preview": "ui-kit/internal/company/recipes/basic/detail.html",
+          "selector": ".detail-body",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/detail.md",
+            "ui-kit/internal/company/recipes/basic/attachments.html",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/recipes/basic/list.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "summary",
+            "content",
+            "metadata",
+            "history"
+          ],
+          "sourcePages": [
+            612,
+            625
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "tabs": {
+          "path": "ui-kit/internal/company/recipes/basic/detail-tabs.html",
+          "preview": "ui-kit/internal/company/recipes/basic/detail-tabs.html",
+          "selector": ".variant-tabs",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/variants.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/detail.html",
+            "ui-kit/internal/company/recipes/basic/attachments.html",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/recipes/basic/detail.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "selected",
+            "unselected",
+            "keyboard-navigation"
+          ],
+          "sourcePages": [
+            612,
+            625
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "contents": {
+          "path": "ui-kit/internal/company/recipes/basic/detail.html",
+          "preview": "ui-kit/internal/company/recipes/basic/detail.html",
+          "selector": ".contents",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/detail.md",
+            "ui-kit/internal/company/recipes/basic/attachments.html",
+            "ui-kit/internal/company/recipes/basic/help.html",
+            "ui-kit/internal/company/recipes/basic/list.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "desktop-sticky",
+            "mobile-inline",
+            "anchor-navigation"
+          ],
+          "sourcePages": [
+            612,
+            625
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "image": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#media-player",
+          "selector": "#media-player",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "file-selected",
+            "alt-required",
+            "loaded",
+            "error",
+            "cleared"
+          ],
+          "sourcePages": [
+            612,
+            625
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "video": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#media-player",
+          "selector": "#media-player",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "loaded",
+            "paused",
+            "playing",
+            "native-controls",
+            "captions",
+            "error",
+            "cleared"
+          ],
+          "sourcePages": [
+            612,
+            625
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "audio": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#media-player",
+          "selector": "#media-player",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "loaded",
+            "paused",
+            "playing",
+            "native-controls",
+            "error",
+            "cleared"
+          ],
+          "sourcePages": [
+            612,
+            625
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "transcript": {
+          "path": "ui-kit/internal/company/recipes/basic/content-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/content-variants.html#media-transcript",
+          "selector": "#media-transcript",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "editable",
+            "expanded",
+            "collapsed"
+          ],
+          "sourcePages": [
+            612,
+            625
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "collapsible-contents": {
+          "path": "ui-kit/internal/company/recipes/basic/precision-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/precision-variants.html#long-contents",
+          "selector": "#long-contents",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/precision.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "desktop-open",
+            "mobile-closed",
+            "expanded",
+            "collapsed",
+            "target-focus"
+          ],
+          "sourcePages": [
+            621,
+            622
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다.",
+        "미디어는 사용 권한이 있는 실제 파일을 연결해야 재생 가능하다. 자막·대본의 정확성은 실제 콘텐츠와 대조한다."
+      ]
+    },
+    {
+      "id": "pattern.error",
+      "kind": "pattern",
+      "meaning": "오류",
+      "defaultVariant": "inline",
+      "variants": {
+        "inline": {
+          "path": "ui-kit/internal/company/recipes/basic/error.html",
+          "preview": "ui-kit/internal/company/recipes/basic/error.html#error-form",
+          "selector": "#error-form",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/error.md",
+            "ui-kit/internal/company/recipes/basic/shared-messages.js",
+            "messages/ko.json",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "invalid",
+            "input-preserved",
+            "focus-error",
+            "corrected"
+          ],
+          "sourcePages": [
+            626,
+            630
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "modal": {
+          "path": "ui-kit/internal/company/recipes/basic/error.html",
+          "preview": "ui-kit/internal/company/recipes/basic/error.html#error-dialog",
+          "selector": "#error-dialog",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/error.md",
+            "ui-kit/internal/company/recipes/basic/shared-messages.js",
+            "messages/ko.json",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "closed",
+            "open",
+            "dismissed",
+            "input-focus-restored"
+          ],
+          "sourcePages": [
+            626,
+            630
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "retry": {
+          "path": "ui-kit/internal/company/recipes/basic/state-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/state-variants.html#retry-state",
+          "selector": "#retry-state",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/shared-messages.js",
+            "messages/ko.json",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "error",
+            "input-preserved",
+            "retry-loading",
+            "recovered",
+            "cancelled"
+          ],
+          "sourcePages": [
+            626,
+            630
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.form",
+      "kind": "pattern",
+      "meaning": "입력폼",
+      "defaultVariant": "single",
+      "variants": {
+        "single": {
+          "path": "ui-kit/internal/company/recipes/basic/form.html",
+          "preview": "ui-kit/internal/company/recipes/basic/form.html#request-form",
+          "selector": "#request-form",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/form.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "invalid",
+            "valid",
+            "busy",
+            "completed",
+            "draft",
+            "restored"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "modal": {
+          "path": "ui-kit/internal/company/recipes/basic/form.html",
+          "preview": "ui-kit/internal/company/recipes/basic/form.html#note-dialog",
+          "selector": "#note-dialog",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/form.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "closed",
+            "open",
+            "invalid",
+            "saved",
+            "cancelled"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "steps": {
+          "path": "ui-kit/internal/company/recipes/basic/form.html",
+          "preview": "ui-kit/internal/company/recipes/basic/form.html#wizard-first",
+          "selector": "#wizard-first",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/form.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "first-step",
+            "invalid",
+            "second-step",
+            "back-preserved",
+            "completed"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "progressive": {
+          "path": "ui-kit/internal/company/recipes/basic/form.html",
+          "preview": "ui-kit/internal/company/recipes/basic/form.html",
+          "selector": "details",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/form.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "collapsed",
+            "expanded"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "required-text": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#form-options",
+          "selector": "#form-options",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "required",
+            "optional"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "required-asterisk": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#form-options",
+          "selector": "#form-options",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "asterisk",
+            "description",
+            "programmatic-required"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "all-required": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#form-options",
+          "selector": "#form-options",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "all-required",
+            "missing-error",
+            "complete"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "left-actions": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#options-actions",
+          "selector": "#options-actions",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "primary-first",
+            "secondary",
+            "tertiary"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "right-actions": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#options-actions",
+          "selector": "#options-actions",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "tertiary",
+            "secondary",
+            "primary-last"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "disabled-submit": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#options-submit",
+          "selector": "#options-submit",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "incomplete-disabled",
+            "complete-enabled"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "live-validation": {
+          "path": "ui-kit/internal/company/recipes/basic/field-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/field-variants.html#options-code",
+          "selector": "#options-code",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "typing-invalid",
+            "typing-valid"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "focusout-validation": {
+          "path": "ui-kit/internal/company/recipes/basic/form.html",
+          "preview": "ui-kit/internal/company/recipes/basic/form.html#request-count",
+          "selector": "#request-count",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/form.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "invalid",
+            "corrected",
+            "input-preserved"
+          ],
+          "sourcePages": [
+            631,
+            650
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.attachment",
+      "kind": "pattern",
+      "meaning": "첨부파일",
+      "defaultVariant": "list",
+      "variants": {
+        "inline": {
+          "path": "ui-kit/internal/company/recipes/basic/attachments.html",
+          "preview": "ui-kit/internal/company/recipes/basic/attachments.html",
+          "selector": "p a[download]",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/attachments.md",
+            "ui-kit/internal/company/recipes/basic/sample-guide.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "download-ready"
+          ],
+          "sourcePages": [
+            651,
+            655
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "list": {
+          "path": "ui-kit/internal/company/recipes/basic/attachments.html",
+          "preview": "ui-kit/internal/company/recipes/basic/attachments.html",
+          "selector": ".list",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/attachments.md",
+            "ui-kit/internal/company/recipes/basic/sample-guide.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "download-ready",
+            "preview-new-tab",
+            "file-metadata"
+          ],
+          "sourcePages": [
+            651,
+            655
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "icon": {
+          "path": "ui-kit/internal/company/recipes/basic/attachments.html",
+          "preview": "ui-kit/internal/company/recipes/basic/attachments.html",
+          "selector": "a[aria-label]",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/attachments.md",
+            "ui-kit/internal/company/recipes/basic/sample-guide.txt",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "named-icon",
+            "download-ready"
+          ],
+          "sourcePages": [
+            651,
+            655
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.filter",
+      "kind": "pattern",
+      "meaning": "필터링·정렬",
+      "defaultVariant": "aside",
+      "variants": {
+        "text": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-keyword",
+          "selector": "#filter-keyword",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "applied",
+            "no-results",
+            "cleared"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "scope": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-scope",
+          "selector": "#filter-scope",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "all",
+            "title"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "single-selection": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-category",
+          "selector": "#filter-category",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "all",
+            "selected",
+            "cleared"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "multiple-selection": {
+          "path": "ui-kit/internal/company/recipes/basic/state-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/state-variants.html#numeric-range",
+          "selector": "#numeric-range",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/shared-messages.js",
+            "messages/ko.json",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "none-means-all",
+            "single",
+            "multiple",
+            "cleared"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "date-range": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-from",
+          "selector": "#filter-from",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "empty",
+            "valid",
+            "reversed-error",
+            "applied"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "numeric-range": {
+          "path": "ui-kit/internal/company/recipes/basic/state-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/state-variants.html#numeric-range",
+          "selector": "#numeric-range",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/extended-core.js",
+            "ui-kit/internal/company/recipes/basic/extended.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/shared-messages.js",
+            "messages/ko.json",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "full",
+            "slider",
+            "numeric",
+            "reversed-error",
+            "applied",
+            "reset"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "query": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-operator",
+          "selector": "#filter-operator",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "AND",
+            "OR",
+            "NOT",
+            "empty-first-condition"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "relationship": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-region",
+          "selector": "#filter-region",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "all",
+            "parent-selected",
+            "child-options",
+            "child-selected"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "instant": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-mode",
+          "selector": "#filter-mode",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "changed",
+            "results-updated",
+            "focus-retained"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "batch": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-mode",
+          "selector": "#filter-mode",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "draft",
+            "applied",
+            "focus-retained"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "bar": {
+          "path": "ui-kit/internal/company/recipes/basic/filter-layouts.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter-layouts.html#variant-bar-host",
+          "selector": "#variant-bar-host",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/variants.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "expanded",
+            "applied",
+            "reset"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "inline-sort": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-title-head",
+          "selector": "#filter-title-head",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "none",
+            "ascending",
+            "descending"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "aside": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-panel",
+          "selector": "#filter-panel",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "expanded",
+            "collapsed",
+            "selected",
+            "applied"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "modal": {
+          "path": "ui-kit/internal/company/recipes/basic/filter-layouts.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter-layouts.html#variant-dialog",
+          "selector": "#variant-dialog",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/variants.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "closed",
+            "open",
+            "draft",
+            "cancel-restored",
+            "applied",
+            "focus-returned"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "applied-chips": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-chips",
+          "selector": "#filter-chips",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "none",
+            "multiple",
+            "individual-clear",
+            "all-clear"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "detail-return": {
+          "path": "ui-kit/internal/company/recipes/basic/filter.html",
+          "preview": "ui-kit/internal/company/recipes/basic/filter.html#filter-results",
+          "selector": "#filter-results",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic-navigation.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/filter.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "filters-preserved",
+            "sort-preserved",
+            "page-preserved",
+            "mode-preserved",
+            "scroll-preserved",
+            "focus-preserved"
+          ],
+          "sourcePages": [
+            656,
+            676
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "month-range": {
+          "path": "ui-kit/internal/company/recipes/basic/precision-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/precision-variants.html#month-range",
+          "selector": "#month-range",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/precision.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unbounded",
+            "inclusive-range",
+            "same-period",
+            "invalid-preserved",
+            "empty",
+            "paginated",
+            "reset"
+          ],
+          "sourcePages": [
+            671,
+            672
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "time-range": {
+          "path": "ui-kit/internal/company/recipes/basic/precision-variants.html",
+          "preview": "ui-kit/internal/company/recipes/basic/precision-variants.html#time-range",
+          "selector": "#time-range",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/precision.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "unbounded",
+            "inclusive-range",
+            "same-period",
+            "invalid-preserved",
+            "empty",
+            "paginated",
+            "reset"
+          ],
+          "sourcePages": [
+            671,
+            672
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다.",
+        "목록 복귀용 상태는 비민감 검색·필터·보기·페이지·스크롤·초점만 URL fragment에 기록한다. 개인정보·입력폼·평가 내용은 기록하지 않는다."
+      ]
+    },
+    {
+      "id": "pattern.confirmation",
+      "kind": "pattern",
+      "meaning": "확인",
+      "defaultVariant": "destructive",
+      "variants": {
+        "destructive": {
+          "path": "ui-kit/internal/company/recipes/basic/confirm.html",
+          "preview": "ui-kit/internal/company/recipes/basic/confirm.html#confirm-dialog",
+          "selector": "#confirm-dialog",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/confirm.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "closed",
+            "open",
+            "cancelled",
+            "confirmed",
+            "empty",
+            "reset"
+          ],
+          "sourcePages": [
+            677,
+            681
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        },
+        "context-change": {
+          "path": "ui-kit/internal/company/recipes/basic/confirm.html",
+          "preview": "ui-kit/internal/company/recipes/basic/confirm.html#leave-dialog",
+          "selector": "#leave-dialog",
+          "dependencies": [
+            "ui-kit/internal/company/recipes/basic/basic-core.js",
+            "ui-kit/internal/company/recipes/basic/basic.js",
+            "ui-kit/internal/company/recipes/basic/index.html",
+            "ui-kit/internal/company/recipes/basic/confirm.md",
+            "ui-kit/internal/company/dist/company.css",
+            "ui-kit/internal/company/recipes/recipes.css",
+            "ui-kit/internal/company/dist/assets/icons/file-text.svg"
+          ],
+          "states": [
+            "closed",
+            "open",
+            "stay",
+            "leave"
+          ],
+          "sourcePages": [
+            677,
+            681
+          ],
+          "verification": "company-v27-migration; real-browser-pending",
+          "tests": [
+            "tests/test_krds_basic.cjs",
+            "tests/test_krds_basic.py"
+          ]
+        }
+      },
+      "constraints": [
+        "실제 개인정보·동의 증거·인증·외부 서버 데이터를 수집하지 않는 프런트 자산이다.",
+        "실제 서비스에는 선택한 variant와 해당 계약만 적용하며 예제의 모든 필드를 강제하지 않는다."
+      ]
+    }
+  ]
+}

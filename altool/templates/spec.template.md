@@ -1,4 +1,4 @@
-> 지침: 모든 내용은 반드시 한글로 작성합니다 (헌법 제0조).
+> 지침: 모든 내용은 반드시 한글로 작성합니다 (헌법의 언어 원칙).
 
 # {기능명} — 구현 명세서 (Spec)
 
@@ -22,10 +22,20 @@
 | **SUCCESS** | {Plan에서 복사} |
 | **SCOPE** | {Plan에서 복사} |
 
+## 표준 적용
+
+> `altool/standards.md`에 따라 작업 의미 태그와 requires를 선택한다. 원문은 이 표로 대체하지 않는다. 표준이 없는 legacy 프로젝트는 해당 사실을 기록한다.
+
+| 규칙 ID/항목 | 원문 경로 | 이 기능의 적용 방식 또는 비적용/예외 근거 | 코드·테스트/검증 |
+| --- | --- | --- | --- |
+| {규칙} | {standards/*.md#anchor} | {구체적인 계약} | {테스트·관찰 증거} |
+
+UI는 과업 태그→화면/패턴 지침→의미 ID·release·허용 변형→회사 적용 지침/검증 기준을 위 표에 연결한다. `altool/standards.md`의 UI 적용 증거 절차를 따르고 구현 후 `.altool/asset-usage/{기능명}.json`과 실제 화면을 대조한다. 회사 계약과 참고 KRDS 원문/catalog를 혼동하지 않는다.
+
 ## Design System Anchor
 
-> 디자인 기준 우선순위는 `designs/` 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `designs/design.md` → Research가 생성한 디자인 시스템 → AI 자체 판단 순서다. `constitution.md`의 디자인 품질 원칙은 위 우선순위와 별개로 항상 적용한다.
-> `designs/design.md`는 UI 구현의 단일 디자인 원천이다. 이 기능에서 사용할 Screen Recipes, Component Extraction, Capture-to-Implementation Map, 핵심 시각 값, 컴포넌트 계약, 미디어 규칙을 미리 잠근다.
+> 디자인 기준 우선순위는 `designs/claude-design/**/*.html` → 기타 사용자 디자인 입력(`.pen`, Stitch, 스크린샷, 디자인 문서) → `standards/design.md` → Research → AI 자체 판단 순서다. `constitution.md`의 디자인 품질 원칙은 모든 원천에 적용한다.
+> `standards/design.md`는 정규화된 구현 디자인 계약이다. Claude 디자인 HTML이 있으면 HTML이 최상위 원천이고 `design.md`는 미정 영역을 보완한다. 이 기능에서 사용할 Screen Recipes, Component Extraction, Capture-to-Implementation Map, 핵심 시각 값, 컴포넌트 계약, 미디어 규칙을 미리 잠근다.
 > 이 파일이 없거나 비어 있거나 첫 non-empty line에 `TBD`가 있으면 Research 또는 design_source 단계에서 먼저 생성한다. Spec은 Research의 시각 관찰값을 직접 CSS 값으로 확정하지 않는다.
 > `design.md`에 없는 값이 필요하면 §6 "디자인 시스템 보강"에 명시하고 design.md를 보강한 뒤 사용한다.
 
@@ -33,7 +43,7 @@
 
 | 항목 | 감지 경로 | Spec 적용 |
 |------|-----------|-----------|
-| `.pen` | {designs/*.pen 또는 없음} | {화면 구조/컴포넌트/시각 값 반영 방식} |
+| `.pen` | {designs/**/*.pen 또는 없음} | {화면 구조/컴포넌트/시각 값 반영 방식} |
 | Stitch | {designs/stitch/ 또는 없음} | {구조/디자인 의도 반영 방식} |
 | 스크린샷 | {designs/*.{png,jpg,jpeg,webp} 또는 없음} | {레이아웃/밀도/시각 위계 반영 방식} |
 | 디자인 문서 | {designs/*.{md,pdf} 또는 없음} | {규칙/브랜드/컴포넌트 기준 반영 방식} |
@@ -75,7 +85,7 @@
 
 ## 1. 설계 목표·원칙
 
-- {기술 목표 1 — 예: 도메인 로직을 프레임워크와 격리 (헌법 제3조)}
+- {기술 목표 1 — 예: 필요한 핵심 도메인 로직을 프레임워크와 격리 (헌법의 DDD·ADR 원칙)}
 - {원칙 — 예: 응답 계약을 단일 타입 파일로 공유해 Contract 갭 원천 차단}
 
 ---
@@ -110,10 +120,11 @@
 
 ## 3. 데이터 모델
 
-### 3.1 타입 정의 (TypeScript Strict, `any` 금지 — 헌법 제6조)
+### 3.1 타입 정의 (선택한 기술 스택의 엄격한 타입·스키마 계약)
 
 ```typescript
-// 보편 언어 (헌법 제2조) — 기획·코드·DB 동일 용어
+// TypeScript를 선택한 경우의 기본 예시. 다른 스택이면 해당 언어의 타입·스키마로 대체한다.
+// 보편 언어 (헌법의 DDD·ADR 원칙) — 기획·코드·DB 동일 용어
 interface {엔티티} {
   id: string;
 }
@@ -144,7 +155,7 @@ interface {엔티티} {
 - 요청: `{ … }`
 - **{2xx}**: `{ "data": … }`
 - **400** ({조건}): `{ "error": { "code": "VALIDATION_ERROR", "message": "{한국어 사용자 안내}" } }`
-- **404 / 500**: {조건과 메시지 — 사용자 안내와 개발자 로그 분리 (헌법 제13조·제14조)}
+- **404 / 500**: {조건과 메시지 — 사용자 안내와 개발자 로그 분리 (헌법의 보안·예외 처리·관측 가능성)}
 
 ---
 
@@ -153,7 +164,7 @@ interface {엔티티} {
 ### 5.1 화면 레이아웃
 
 ```
-{ASCII 레이아웃 — 실제 배치 기준. .pen/Stitch가 있으면 그 구조를 따른다 (헌법 제17조)}
+{ASCII 레이아웃 — 실제 배치 기준. 디자인 원천이 있으면 헌법의 디자인 권위 순서에 따라 그 구조를 따른다}
 ```
 
 ### 5.2 사용자 흐름
@@ -179,7 +190,7 @@ interface {엔티티} {
 - [ ] {요소 유형}: {설명 (구체적 필드·옵션·디자인 규칙·접근 가능한 조작 영역·aria 속성)}
 - [ ] {상태}: 로딩 표시 후 데이터로 교체 (영구 스켈레톤 금지)
 - [ ] {상태}: 빈 데이터 안내 문구
-- [ ] {상태}: 오류 시 `role="alert"` 한국어 안내 (헌법 제13조)
+- [ ] {상태}: 오류 시 `role="alert"` 한국어 안내 (헌법의 UI 품질·예외 처리 원칙)
 
 ---
 
@@ -197,17 +208,24 @@ interface {엔티티} {
 
 | 상황 | 서버/도메인 처리 | 사용자 표시 |
 |------|----------------|------------|
-| {검증 실패 등} | {로그 — JSON 구조화, 민감정보 제외 (제14조)} | {한국어 안내} |
+| {검증 실패 등} | {필요한 경우 구조화 로그, 민감정보 제외} | {한국어 안내} |
 
 - [ ] 입력 검증 (XSS·Injection 차단)
-- [ ] 비밀 정보 하드코딩 없음, `.env` 격리 (제11조)
+- [ ] 비밀 정보 하드코딩 없음, `.env` 또는 승인된 Secret Manager로 격리
 - [ ] 인증 필요 여부: {필요(방식) / 불필요(사유 — ADR로 기록)}
 
 ---
 
 ## 8. 테스트 플랜 (analyze의 Runtime 검증 기준)
 
-> 시나리오는 여기서 정의하고, 테스트 코드는 run에서 구현과 한 세트로 작성하며(헌법 제8조), analyze가 실행한다.
+### UI 실측 계약 (UI 기능만)
+
+- 계약: `.altool/ui/{기능명}.contracts.json` 및 sha256.
+- 원천: `{디자인 계약/Spec 경로와 hash}`. 구현 fingerprint 범위: `{앱·CSS·공통 배포 파일/디렉터리}`.
+- 대상: `{페이지·상태·desktop/mobile·selector·기대값·출처}`. 글자 모음은 expectedCount도 고정한다.
+- 원시 관찰과 Step Check 연결은 `standards/tooling/README.md#ui`를 따른다. 비UI는 기능 범위와 비적용 근거를 기록한다.
+
+> 시나리오는 여기서 정의하고, 변경 위험을 증명하는 테스트 코드는 run에서 구현과 한 세트로 작성하며, analyze가 실행한다 (헌법의 완료 품질 게이트).
 
 ### 8.1 L1 — API 시나리오 (curl) {API 없으면 "N/A"}
 
@@ -243,7 +261,7 @@ interface {엔티티} {
 | 레이어 | 책임 | 위치 |
 |--------|------|------|
 | Presentation | 페이지·컴포넌트·훅 | src/app/, src/components/, src/hooks/ |
-| Domain | 비즈니스 규칙 (프레임워크 비의존 — 헌법 제3조) | src/lib/{도메인}.ts |
+| Domain | 분리 가치가 있는 핵심 비즈니스 규칙 (프레임워크 비의존 — 헌법의 DDD 원칙) | src/lib/{도메인}.ts |
 | Infrastructure | DB·외부 API·브라우저 API 격리 | src/lib/{어댑터}.ts |
 
 ### 9.2 의존 규칙 (analyze가 import를 검사한다)
@@ -286,4 +304,3 @@ Infrastructure ─▶ Domain                ← 외부 세계 접근은 Infrastr
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
 | 0.1 | YYYY-MM-DD | 최초 작성 — Option {X} 선택 | Altool |
-

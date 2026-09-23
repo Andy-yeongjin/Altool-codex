@@ -1,0 +1,74 @@
+/* Approved B site navigation; page shell dimensions are not prescribed. */
+.altool-ui .ui-site-header { display:flex;align-items:center;flex-wrap:wrap;gap:22px;min-height:48px;padding:8px 14px;border-bottom:1px solid var(--company-field-border);background:#F1F3F5;color:#30363D;font-family:var(--company-button-font); }
+.altool-ui .ui-site-brand { font-size:16px;font-weight:500;overflow-wrap:anywhere; }
+.altool-ui .ui-site-nav { display:flex;align-items:center;flex-wrap:wrap;gap:6px;min-width:0; }
+.altool-ui .ui-site-user { margin-inline-start:auto;color:#454C55;font-size:12px;font-weight:400; }
+.altool-ui .ui-sidebar { min-width:0;padding:10px 8px;border-inline-end:1px solid var(--company-table-line);background:#F1F3F5;color:#30363D;font-family:var(--company-button-font); }
+.altool-ui .ui-sidebar-heading { margin:0;padding:4px 10px 8px;color:#59616B;font-size:12px;font-weight:400; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item { display:flex;align-items:center;justify-content:flex-start;gap:8px;min-width:0;min-height:34px;padding:6px 10px;border:1px solid transparent;border-radius:var(--company-button-radius);background:transparent;color:#454C55;font-family:var(--company-button-font);font-size:14px;font-weight:400;line-height:1.4;text-align:start;text-decoration:none;white-space:normal;overflow-wrap:anywhere;box-shadow:none;transform:none;cursor:pointer; }
+.altool-ui .ui-site-nav :is(button,a).ui-nav-item { min-height:32px;padding:4px 10px;font-weight:500; }
+.altool-ui .ui-sidebar :is(button,a).ui-nav-item { width:100%;margin-bottom:3px; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) .ui-nav-item > .ui-icon { flex:none;width:16px;height:16px; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:hover { background:var(--company-brand-soft);color:#30363D; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:is([aria-current="page"],[aria-pressed="true"]) { background:var(--company-brand-primary);color:var(--company-brand-on-primary);font-weight:500;border-color:transparent; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:focus-visible { outline:2px solid var(--company-brand-focus);outline-offset:2px; }
+.altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item:is(:disabled,[aria-disabled="true"]) { background:transparent;color:var(--company-button-disabled-text);cursor:not-allowed;opacity:1; }
+@media(pointer:coarse) { .altool-ui :is(.ui-site-nav,.ui-sidebar) :is(button,a).ui-nav-item { min-height:44px; } }
+
+/* Header color aligned with budget-dashboard .app-header. */
+.altool-ui .ui-site-header { background:var(--company-brand-header);color:var(--company-brand-on-header);border-bottom-color:var(--company-brand-header); }
+.altool-ui .ui-site-header a.ui-site-brand { color:var(--company-brand-on-header);text-decoration:none; }
+.altool-ui .ui-site-header a.ui-site-brand:focus-visible { outline:2px solid var(--company-brand-on-header);outline-offset:2px; }
+.altool-ui .ui-site-header .ui-site-user { color:var(--company-brand-header-muted); }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item { color:var(--company-brand-on-header); }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:hover { background:var(--company-brand-header-hover);color:var(--company-brand-on-header); }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:is([aria-current="page"],[aria-pressed="true"]) { background:var(--company-brand-primary);color:var(--company-brand-on-primary); }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:focus-visible { outline-color:var(--company-brand-on-header); }
+.altool-ui .ui-site-header .ui-site-nav :is(button,a).ui-nav-item:is(:disabled,[aria-disabled="true"]) { background:transparent;color:var(--company-brand-header-disabled); }
+
+.ui-app-shell { display:grid;grid-template-columns:210px minmax(0,1fr);min-height:calc(100vh - 49px); }
+.ui-app-shell > main { min-width:0; }
+.ui-responsive-navigation > summary { display:none; }
+@media(max-width:760px) {
+  .ui-app-shell { grid-template-columns:minmax(0,1fr);min-height:0; }
+  .altool-ui .ui-app-shell > .ui-responsive-sidebar { display:none; }
+  .altool-ui .ui-responsive-header { position:relative;justify-content:flex-start;gap:16px; }
+  .ui-responsive-navigation { margin-inline-start:auto; }
+  .ui-responsive-navigation > summary { display:flex;align-items:center;justify-content:center;cursor:pointer;width:44px;height:44px;box-sizing:border-box;border:0;border-radius:4px;color:var(--company-brand-on-header);list-style:none; }
+  .ui-responsive-navigation > summary::-webkit-details-marker { display:none; }
+  .ui-responsive-navigation > summary svg { width:22px;height:22px; }
+  .ui-responsive-navigation > summary:hover { background:var(--company-brand-header-hover); }
+  .ui-responsive-navigation > summary:focus-visible { outline:2px solid var(--company-brand-on-header);outline-offset:2px; }
+  .ui-responsive-navigation nav { position:absolute;z-index:20;top:calc(100% + 7px);left:12px;right:12px;padding:8px;border:1px solid var(--company-table-line);border-radius:4px;background:#F1F3F5;box-shadow:0 8px 20px var(--company-brand-menu-shadow); }
+  .altool-ui .ui-responsive-navigation a.ui-nav-item { display:flex;align-items:center;min-height:44px;padding:6px 10px;box-sizing:border-box;border-radius:4px;color:#454C55;text-decoration:none; }
+  .altool-ui .ui-responsive-navigation a.ui-nav-item:hover { background:var(--company-brand-soft); }
+  .altool-ui .ui-responsive-navigation a.ui-nav-item[aria-current="page"] { background:var(--company-brand-primary);color:var(--company-brand-on-primary);font-weight:500; }
+  .altool-ui .ui-responsive-navigation a.ui-nav-item:focus-visible { outline:2px solid var(--company-brand-focus);outline-offset:2px; }
+}
+
+.ui-shell-main { display:flex;flex-direction:column;min-width:0; }
+.ui-company-frame { display:flex;flex-direction:column;min-height:100dvh; }
+.ui-company-frame > .ui-app-shell { flex:1;min-height:0; }
+.ui-shell-main > main { flex:1;min-width:0; }
+.altool-ui .ui-company-footer { display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 20px;padding:16px 0;border-top:1px solid var(--company-table-line);color:#59616B;font-size:13px; }
+.ui-company-footer-actions { display:flex;gap:16px; }
+.ui-company-footer-contact { margin:4px 0 0;line-height:1.6; }
+.altool-ui .ui-company-footer :is(button,a) { display:inline-flex;align-items:center;padding:4px 0;min-height:34px;border:0;background:transparent;color:#59616B;font-size:13px;box-shadow:none;text-decoration:none; }
+.altool-ui .ui-company-footer :is(button,a):hover { color:var(--company-brand-foreground);text-decoration:underline; }
+.altool-ui .ui-company-footer :is(button,a):focus-visible { outline:2px solid var(--company-brand-focus);outline-offset:2px; }
+@media(pointer:coarse) { .altool-ui .ui-company-footer :is(button,a) { min-height:44px; } }
+@media(max-width:760px) { .ui-shell-main { min-height:calc(100dvh - 61px); } .altool-ui .ui-company-footer { align-items:flex-start;flex-direction:column;gap:4px; } }
+.ui-company-frame .ui-shell-main { min-height:0; }
+.ui-company-ci { display:block;width:127.5px;height:34px;object-fit:contain;flex:none; }
+.ui-page-title-row { display:flex;align-items:center;gap:8px; }
+.altool-ui .ui-page-title-row .ui-page-title { margin:0; }
+.altool-ui .ui-sidebar-toggle { display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;color:#454C55;flex:none; }
+.altool-ui .ui-sidebar-toggle:hover { background:var(--company-brand-soft); }
+.altool-ui .ui-sidebar-toggle:focus-visible { outline:2px solid var(--company-brand-focus);outline-offset:2px; }
+.ui-sidebar-toggle svg { width:16px;height:16px; }
+@media(min-width:761px) {
+  .altool-ui .ui-site-header { justify-content:flex-start;gap:12px; }
+  .ui-app-shell.ui-sidebar-collapsed { grid-template-columns:minmax(0,1fr); }
+  .ui-sidebar-collapsed > .ui-sidebar { display:none; }
+}
+@media(max-width:760px) { .altool-ui .ui-sidebar-toggle { display:none; } }

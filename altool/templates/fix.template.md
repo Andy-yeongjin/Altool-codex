@@ -1,4 +1,4 @@
-> 지침: 모든 내용은 반드시 한글로 작성합니다 (헌법 제0조).
+> 지침: 모든 내용은 반드시 한글로 작성합니다 (헌법의 언어 원칙).
 
 # {기능명} — 개선 이력 보고서 (Fix)
 
@@ -32,8 +32,8 @@
 ### {N}회차
 
 - **대상 갭**: {#번호들}
-- **수정**: {무엇을 어떻게 — 설계가 틀렸던 경우 "설계 문서 먼저 수정 (제9조)" 명기}
-- **빌드/테스트**: {npm run build ✅ / 검증 스크립트 결과}
+- **수정**: {무엇을 어떻게 — 설계가 틀렸던 경우 "설계 문서 먼저 수정 (헌법의 명세 주도 개발·추적성)" 명기}
+- **빌드/테스트**: {프로젝트 build 명령과 테스트 결과 / skipped(no build step) + 정적 검사 결과}
 - **재분석 결과**: Overall {이전}% → {이후}%
 
 ## 4. 잔여 갭 (자동 수정 불가)
@@ -48,6 +48,15 @@
 
 - {갭 0건: `$altool browser` 진행}
 - {갭 잔존 + 한도 도달: 선택 A — 잔여 갭 직접 확인 후 개별 지시 / 선택 B — 이대로 browser 진행}
+
+## 6. 자동 품질 게이트
+
+| Step Check 키 | 결과 | 증거 |
+|---|---|---|
+| `visual.contrast` | done / skipped(no css files) | `check.py contrast --root .` 출력과 `ambiguousRules` 후속 browser 대조 대상 |
+| `accessibility.live_region` | done / skipped(no live-region contract) | `check.py a11y-contracts --root .` 출력 |
+| `functional.time_precision` | done / skipped(not time-based UI) | 반복 clock 결과와 허용 오차 |
+| `analysis.semantic_consistency` | done | `check.py analyze-sync --root .` 출력 |
 
 ---
 

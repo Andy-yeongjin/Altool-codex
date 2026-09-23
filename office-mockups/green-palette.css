@@ -1,0 +1,33 @@
+/* Isolated green company palette; shared default remains blue. */
+.krds-2024-tokens {
+  --company-brand-primary:#216B4A;
+  --company-brand-hover:#19563B;
+  --company-brand-active:#12432D;
+  --company-brand-on-primary:#FFFFFF;
+  --company-brand-soft:#EAF5EE;
+  --company-brand-row-hover:#F0F8F3;
+  --company-brand-row-selected:#DCEFE2;
+  --company-brand-header:#193A2D;
+  --company-brand-header-hover:#285440;
+  --company-brand-on-header:#FFFFFF;
+  --company-brand-header-muted:#DAE9E0;
+  --company-brand-header-disabled:#AEC6B8;
+  --company-brand-menu-shadow:rgba(25,58,45,.56);
+  --company-brand-primary-5:#F3FAF5;
+  --company-brand-primary-10:#EAF5EE;
+  --company-brand-primary-20:#DCEFE2;
+  --company-brand-primary-30:#A8D6B8;
+  --company-brand-primary-40:#61A97C;
+  --company-brand-primary-80:#103523;
+  --company-brand-primary-90:#0A2418;
+  --company-brand-secondary-5:#F2F7F4;
+  --company-brand-secondary-10:#DDEBE2;
+  --company-brand-secondary-20:#BDD5C6;
+  --company-brand-secondary-30:#8BB09A;
+  --company-brand-secondary-40:#527E64;
+  --company-brand-secondary-50:#285440;
+  --company-brand-secondary-60:#214735;
+  --company-brand-secondary-70:#193A2D;
+  --company-brand-secondary-80:#122B21;
+  --company-brand-secondary-90:#0C1E17;
+}
